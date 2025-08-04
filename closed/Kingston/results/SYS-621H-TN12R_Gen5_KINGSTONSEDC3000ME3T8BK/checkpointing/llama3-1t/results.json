@@ -1,0 +1,1102 @@
+[
+  {
+    "run_id": "/home/sped/perf/mlperfv2/submission/Closed/Kingston_Digital/results/KINGSTONSEDC3000ME3T8BK/checkpointing/llama3-1t/run_8_20250703_135644/checkpointing/llama3-1t/20250703_140303",
+    "benchmark_type": "checkpointing",
+    "model": "llama_1t",
+    "command": null,
+    "parameters": {
+      "model": {
+        "name": "llama_1t",
+        "type": "transformer",
+        "num_layers": 128,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "tensor": 8,
+          "pipeline": 64,
+          "zero_stage": 1,
+          "data": 2
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 25872,
+          "ffn_hidden_size": 98304,
+          "num_attention_heads": 192,
+          "num_kv_heads": 32
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/KINGSTONSEDC3000ME3T8BK/checkpoints/llama3-1t",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 0,
+        "num_checkpoints_read": 10,
+        "fsync": true,
+        "mode": "subset"
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270115676160.0,
+      "total_cores": 48
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": NaN,
+      "save_checkpoint_io_stdev_GB_per_second": NaN,
+      "save_checkpoint_duration_mean_seconds": NaN,
+      "save_checkpoint_duration_stdev_seconds": NaN,
+      "load_checkpoint_io_mean_GB_per_second": 10.66132595497692,
+      "load_checkpoint_io_stdev_GB_per_second": 0.9572193467570502,
+      "load_checkpoint_duration_mean_seconds": 13.6148405,
+      "load_checkpoint_duration_stdev_seconds": 1.499275622822785,
+      "checkpoint_size_GB": 143.72388169169426
+    }
+  },
+  {
+    "run_id": "/home/sped/perf/mlperfv2/submission/Closed/Kingston_Digital/results/KINGSTONSEDC3000ME3T8BK/checkpointing/llama3-1t/run_8_20250703_135644/checkpointing/llama3-1t/20250703_135644",
+    "benchmark_type": "checkpointing",
+    "model": "llama_1t",
+    "command": null,
+    "parameters": {
+      "model": {
+        "name": "llama_1t",
+        "type": "transformer",
+        "num_layers": 128,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "tensor": 8,
+          "pipeline": 64,
+          "zero_stage": 1,
+          "data": 2
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 25872,
+          "ffn_hidden_size": 98304,
+          "num_attention_heads": 192,
+          "num_kv_heads": 32
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/KINGSTONSEDC3000ME3T8BK/checkpoints/llama3-1t",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 10,
+        "num_checkpoints_read": 0,
+        "fsync": true,
+        "mode": "subset"
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270115676160.0,
+      "total_cores": 48
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 5.892935308970714,
+      "save_checkpoint_io_stdev_GB_per_second": 0.43903012071682695,
+      "save_checkpoint_duration_mean_seconds": 24.5170225,
+      "save_checkpoint_duration_stdev_seconds": 1.71945833605582,
+      "checkpoint_size_GB": 143.72388169169426
+    }
+  },
+  {
+    "run_id": "/home/sped/perf/mlperfv2/submission/Closed/Kingston_Digital/results/KINGSTONSEDC3000ME3T8BK/checkpointing/llama3-1t/run_1_20250703_124601/checkpointing/llama3-1t/20250703_124601",
+    "benchmark_type": "checkpointing",
+    "model": "llama_1t",
+    "command": null,
+    "parameters": {
+      "model": {
+        "name": "llama_1t",
+        "type": "transformer",
+        "num_layers": 128,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "tensor": 8,
+          "pipeline": 64,
+          "zero_stage": 1,
+          "data": 2
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 25872,
+          "ffn_hidden_size": 98304,
+          "num_attention_heads": 192,
+          "num_kv_heads": 32
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/KINGSTONSEDC3000ME3T8BK/checkpoints/llama3-1t",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 10,
+        "num_checkpoints_read": 0,
+        "fsync": true,
+        "mode": "subset"
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270115676160.0,
+      "total_cores": 48
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 5.901785398358206,
+      "save_checkpoint_io_stdev_GB_per_second": 0.09519315388784315,
+      "save_checkpoint_duration_mean_seconds": 24.358833599999997,
+      "save_checkpoint_duration_stdev_seconds": 0.3859277954522587,
+      "checkpoint_size_GB": 143.72388169169426
+    }
+  },
+  {
+    "run_id": "/home/sped/perf/mlperfv2/submission/Closed/Kingston_Digital/results/KINGSTONSEDC3000ME3T8BK/checkpointing/llama3-1t/run_1_20250703_124601/checkpointing/llama3-1t/20250703_125203",
+    "benchmark_type": "checkpointing",
+    "model": "llama_1t",
+    "command": null,
+    "parameters": {
+      "model": {
+        "name": "llama_1t",
+        "type": "transformer",
+        "num_layers": 128,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "tensor": 8,
+          "pipeline": 64,
+          "zero_stage": 1,
+          "data": 2
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 25872,
+          "ffn_hidden_size": 98304,
+          "num_attention_heads": 192,
+          "num_kv_heads": 32
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/KINGSTONSEDC3000ME3T8BK/checkpoints/llama3-1t",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 0,
+        "num_checkpoints_read": 10,
+        "fsync": true,
+        "mode": "subset"
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270115676160.0,
+      "total_cores": 48
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": NaN,
+      "save_checkpoint_io_stdev_GB_per_second": NaN,
+      "save_checkpoint_duration_mean_seconds": NaN,
+      "save_checkpoint_duration_stdev_seconds": NaN,
+      "load_checkpoint_io_mean_GB_per_second": 10.646783981635574,
+      "load_checkpoint_io_stdev_GB_per_second": 0.8619679544907883,
+      "load_checkpoint_duration_mean_seconds": 13.603508099999999,
+      "load_checkpoint_duration_stdev_seconds": 1.2934852270813497,
+      "checkpoint_size_GB": 143.72388169169426
+    }
+  },
+  {
+    "run_id": "/home/sped/perf/mlperfv2/submission/Closed/Kingston_Digital/results/KINGSTONSEDC3000ME3T8BK/checkpointing/llama3-1t/run_5_20250703_132627/checkpointing/llama3-1t/20250703_133242",
+    "benchmark_type": "checkpointing",
+    "model": "llama_1t",
+    "command": null,
+    "parameters": {
+      "model": {
+        "name": "llama_1t",
+        "type": "transformer",
+        "num_layers": 128,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "tensor": 8,
+          "pipeline": 64,
+          "zero_stage": 1,
+          "data": 2
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 25872,
+          "ffn_hidden_size": 98304,
+          "num_attention_heads": 192,
+          "num_kv_heads": 32
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/KINGSTONSEDC3000ME3T8BK/checkpoints/llama3-1t",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 0,
+        "num_checkpoints_read": 10,
+        "fsync": true,
+        "mode": "subset"
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270115676160.0,
+      "total_cores": 48
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": NaN,
+      "save_checkpoint_io_stdev_GB_per_second": NaN,
+      "save_checkpoint_duration_mean_seconds": NaN,
+      "save_checkpoint_duration_stdev_seconds": NaN,
+      "load_checkpoint_io_mean_GB_per_second": 10.94722784903745,
+      "load_checkpoint_io_stdev_GB_per_second": 0.9532455483000404,
+      "load_checkpoint_duration_mean_seconds": 13.255494500000001,
+      "load_checkpoint_duration_stdev_seconds": 1.4578526001557393,
+      "checkpoint_size_GB": 143.72388169169426
+    }
+  },
+  {
+    "run_id": "/home/sped/perf/mlperfv2/submission/Closed/Kingston_Digital/results/KINGSTONSEDC3000ME3T8BK/checkpointing/llama3-1t/run_5_20250703_132627/checkpointing/llama3-1t/20250703_132628",
+    "benchmark_type": "checkpointing",
+    "model": "llama_1t",
+    "command": null,
+    "parameters": {
+      "model": {
+        "name": "llama_1t",
+        "type": "transformer",
+        "num_layers": 128,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "tensor": 8,
+          "pipeline": 64,
+          "zero_stage": 1,
+          "data": 2
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 25872,
+          "ffn_hidden_size": 98304,
+          "num_attention_heads": 192,
+          "num_kv_heads": 32
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/KINGSTONSEDC3000ME3T8BK/checkpoints/llama3-1t",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 10,
+        "num_checkpoints_read": 0,
+        "fsync": true,
+        "mode": "subset"
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270115676160.0,
+      "total_cores": 48
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 5.964291688339271,
+      "save_checkpoint_io_stdev_GB_per_second": 0.43493241132870053,
+      "save_checkpoint_duration_mean_seconds": 24.221595399999998,
+      "save_checkpoint_duration_stdev_seconds": 1.706675321969483,
+      "checkpoint_size_GB": 143.72388169169426
+    }
+  },
+  {
+    "run_id": "/home/sped/perf/mlperfv2/submission/Closed/Kingston_Digital/results/KINGSTONSEDC3000ME3T8BK/checkpointing/llama3-1t/run_2_20250703_125556/checkpointing/llama3-1t/20250703_125556",
+    "benchmark_type": "checkpointing",
+    "model": "llama_1t",
+    "command": null,
+    "parameters": {
+      "model": {
+        "name": "llama_1t",
+        "type": "transformer",
+        "num_layers": 128,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "tensor": 8,
+          "pipeline": 64,
+          "zero_stage": 1,
+          "data": 2
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 25872,
+          "ffn_hidden_size": 98304,
+          "num_attention_heads": 192,
+          "num_kv_heads": 32
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/KINGSTONSEDC3000ME3T8BK/checkpoints/llama3-1t",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 10,
+        "num_checkpoints_read": 0,
+        "fsync": true,
+        "mode": "subset"
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270115676160.0,
+      "total_cores": 48
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 5.843879069465896,
+      "save_checkpoint_io_stdev_GB_per_second": 0.4591866949981255,
+      "save_checkpoint_duration_mean_seconds": 24.731017,
+      "save_checkpoint_duration_stdev_seconds": 1.7504721045496265,
+      "checkpoint_size_GB": 143.72388169169426
+    }
+  },
+  {
+    "run_id": "/home/sped/perf/mlperfv2/submission/Closed/Kingston_Digital/results/KINGSTONSEDC3000ME3T8BK/checkpointing/llama3-1t/run_2_20250703_125556/checkpointing/llama3-1t/20250703_130215",
+    "benchmark_type": "checkpointing",
+    "model": "llama_1t",
+    "command": null,
+    "parameters": {
+      "model": {
+        "name": "llama_1t",
+        "type": "transformer",
+        "num_layers": 128,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "tensor": 8,
+          "pipeline": 64,
+          "zero_stage": 1,
+          "data": 2
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 25872,
+          "ffn_hidden_size": 98304,
+          "num_attention_heads": 192,
+          "num_kv_heads": 32
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/KINGSTONSEDC3000ME3T8BK/checkpoints/llama3-1t",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 0,
+        "num_checkpoints_read": 10,
+        "fsync": true,
+        "mode": "subset"
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270115676160.0,
+      "total_cores": 48
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": NaN,
+      "save_checkpoint_io_stdev_GB_per_second": NaN,
+      "save_checkpoint_duration_mean_seconds": NaN,
+      "save_checkpoint_duration_stdev_seconds": NaN,
+      "load_checkpoint_io_mean_GB_per_second": 10.762585942400523,
+      "load_checkpoint_io_stdev_GB_per_second": 1.0166341823307918,
+      "load_checkpoint_duration_mean_seconds": 13.4987272,
+      "load_checkpoint_duration_stdev_seconds": 1.5354187979993474,
+      "checkpoint_size_GB": 143.72388169169426
+    }
+  },
+  {
+    "run_id": "/home/sped/perf/mlperfv2/submission/Closed/Kingston_Digital/results/KINGSTONSEDC3000ME3T8BK/checkpointing/llama3-1t/run_10_20250703_141705/checkpointing/llama3-1t/20250703_142318",
+    "benchmark_type": "checkpointing",
+    "model": "llama_1t",
+    "command": null,
+    "parameters": {
+      "model": {
+        "name": "llama_1t",
+        "type": "transformer",
+        "num_layers": 128,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "tensor": 8,
+          "pipeline": 64,
+          "zero_stage": 1,
+          "data": 2
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 25872,
+          "ffn_hidden_size": 98304,
+          "num_attention_heads": 192,
+          "num_kv_heads": 32
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/KINGSTONSEDC3000ME3T8BK/checkpoints/llama3-1t",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 0,
+        "num_checkpoints_read": 10,
+        "fsync": true,
+        "mode": "subset"
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270115676160.0,
+      "total_cores": 48
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": NaN,
+      "save_checkpoint_io_stdev_GB_per_second": NaN,
+      "save_checkpoint_duration_mean_seconds": NaN,
+      "save_checkpoint_duration_stdev_seconds": NaN,
+      "load_checkpoint_io_mean_GB_per_second": 10.859729495021078,
+      "load_checkpoint_io_stdev_GB_per_second": 1.0209930138581798,
+      "load_checkpoint_duration_mean_seconds": 13.378093100000001,
+      "load_checkpoint_duration_stdev_seconds": 1.5303586574397163,
+      "checkpoint_size_GB": 143.72388169169426
+    }
+  },
+  {
+    "run_id": "/home/sped/perf/mlperfv2/submission/Closed/Kingston_Digital/results/KINGSTONSEDC3000ME3T8BK/checkpointing/llama3-1t/run_10_20250703_141705/checkpointing/llama3-1t/20250703_141705",
+    "benchmark_type": "checkpointing",
+    "model": "llama_1t",
+    "command": null,
+    "parameters": {
+      "model": {
+        "name": "llama_1t",
+        "type": "transformer",
+        "num_layers": 128,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "tensor": 8,
+          "pipeline": 64,
+          "zero_stage": 1,
+          "data": 2
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 25872,
+          "ffn_hidden_size": 98304,
+          "num_attention_heads": 192,
+          "num_kv_heads": 32
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/KINGSTONSEDC3000ME3T8BK/checkpoints/llama3-1t",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 10,
+        "num_checkpoints_read": 0,
+        "fsync": true,
+        "mode": "subset"
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270115676160.0,
+      "total_cores": 48
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 6.219468508686778,
+      "save_checkpoint_io_stdev_GB_per_second": 0.6291176483964385,
+      "save_checkpoint_duration_mean_seconds": 23.340821000000002,
+      "save_checkpoint_duration_stdev_seconds": 2.2981271131652834,
+      "checkpoint_size_GB": 143.72388169169426
+    }
+  },
+  {
+    "run_id": "/home/sped/perf/mlperfv2/submission/Closed/Kingston_Digital/results/KINGSTONSEDC3000ME3T8BK/checkpointing/llama3-1t/run_4_20250703_131619/checkpointing/llama3-1t/20250703_132236",
+    "benchmark_type": "checkpointing",
+    "model": "llama_1t",
+    "command": null,
+    "parameters": {
+      "model": {
+        "name": "llama_1t",
+        "type": "transformer",
+        "num_layers": 128,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "tensor": 8,
+          "pipeline": 64,
+          "zero_stage": 1,
+          "data": 2
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 25872,
+          "ffn_hidden_size": 98304,
+          "num_attention_heads": 192,
+          "num_kv_heads": 32
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/KINGSTONSEDC3000ME3T8BK/checkpoints/llama3-1t",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 0,
+        "num_checkpoints_read": 10,
+        "fsync": true,
+        "mode": "subset"
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270115676160.0,
+      "total_cores": 48
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": NaN,
+      "save_checkpoint_io_stdev_GB_per_second": NaN,
+      "save_checkpoint_duration_mean_seconds": NaN,
+      "save_checkpoint_duration_stdev_seconds": NaN,
+      "load_checkpoint_io_mean_GB_per_second": 10.79276555274361,
+      "load_checkpoint_io_stdev_GB_per_second": 0.9417104922975418,
+      "load_checkpoint_duration_mean_seconds": 13.441283700000003,
+      "load_checkpoint_duration_stdev_seconds": 1.4335439146624043,
+      "checkpoint_size_GB": 143.72388169169426
+    }
+  },
+  {
+    "run_id": "/home/sped/perf/mlperfv2/submission/Closed/Kingston_Digital/results/KINGSTONSEDC3000ME3T8BK/checkpointing/llama3-1t/run_4_20250703_131619/checkpointing/llama3-1t/20250703_131620",
+    "benchmark_type": "checkpointing",
+    "model": "llama_1t",
+    "command": null,
+    "parameters": {
+      "model": {
+        "name": "llama_1t",
+        "type": "transformer",
+        "num_layers": 128,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "tensor": 8,
+          "pipeline": 64,
+          "zero_stage": 1,
+          "data": 2
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 25872,
+          "ffn_hidden_size": 98304,
+          "num_attention_heads": 192,
+          "num_kv_heads": 32
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/KINGSTONSEDC3000ME3T8BK/checkpoints/llama3-1t",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 10,
+        "num_checkpoints_read": 0,
+        "fsync": true,
+        "mode": "subset"
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270115676160.0,
+      "total_cores": 48
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 5.895034027706363,
+      "save_checkpoint_io_stdev_GB_per_second": 0.5035742273376971,
+      "save_checkpoint_duration_mean_seconds": 24.5483358,
+      "save_checkpoint_duration_stdev_seconds": 1.968274389590882,
+      "checkpoint_size_GB": 143.72388169169426
+    }
+  },
+  {
+    "run_id": "/home/sped/perf/mlperfv2/submission/Closed/Kingston_Digital/results/KINGSTONSEDC3000ME3T8BK/checkpointing/llama3-1t/run_9_20250703_140655/checkpointing/llama3-1t/20250703_140655",
+    "benchmark_type": "checkpointing",
+    "model": "llama_1t",
+    "command": null,
+    "parameters": {
+      "model": {
+        "name": "llama_1t",
+        "type": "transformer",
+        "num_layers": 128,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "tensor": 8,
+          "pipeline": 64,
+          "zero_stage": 1,
+          "data": 2
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 25872,
+          "ffn_hidden_size": 98304,
+          "num_attention_heads": 192,
+          "num_kv_heads": 32
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/KINGSTONSEDC3000ME3T8BK/checkpoints/llama3-1t",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 10,
+        "num_checkpoints_read": 0,
+        "fsync": true,
+        "mode": "subset"
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270115676160.0,
+      "total_cores": 48
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 5.782327663038837,
+      "save_checkpoint_io_stdev_GB_per_second": 0.36884606138428483,
+      "save_checkpoint_duration_mean_seconds": 24.948425800000003,
+      "save_checkpoint_duration_stdev_seconds": 1.455979129776578,
+      "checkpoint_size_GB": 143.72388169169426
+    }
+  },
+  {
+    "run_id": "/home/sped/perf/mlperfv2/submission/Closed/Kingston_Digital/results/KINGSTONSEDC3000ME3T8BK/checkpointing/llama3-1t/run_9_20250703_140655/checkpointing/llama3-1t/20250703_141312",
+    "benchmark_type": "checkpointing",
+    "model": "llama_1t",
+    "command": null,
+    "parameters": {
+      "model": {
+        "name": "llama_1t",
+        "type": "transformer",
+        "num_layers": 128,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "tensor": 8,
+          "pipeline": 64,
+          "zero_stage": 1,
+          "data": 2
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 25872,
+          "ffn_hidden_size": 98304,
+          "num_attention_heads": 192,
+          "num_kv_heads": 32
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/KINGSTONSEDC3000ME3T8BK/checkpoints/llama3-1t",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 0,
+        "num_checkpoints_read": 10,
+        "fsync": true,
+        "mode": "subset"
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270115676160.0,
+      "total_cores": 48
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": NaN,
+      "save_checkpoint_io_stdev_GB_per_second": NaN,
+      "save_checkpoint_duration_mean_seconds": NaN,
+      "save_checkpoint_duration_stdev_seconds": NaN,
+      "load_checkpoint_io_mean_GB_per_second": 10.444025510098635,
+      "load_checkpoint_io_stdev_GB_per_second": 0.7844945249238682,
+      "load_checkpoint_duration_mean_seconds": 13.858000200000001,
+      "load_checkpoint_duration_stdev_seconds": 1.2877756073595115,
+      "checkpoint_size_GB": 143.72388169169426
+    }
+  },
+  {
+    "run_id": "/home/sped/perf/mlperfv2/submission/Closed/Kingston_Digital/results/KINGSTONSEDC3000ME3T8BK/checkpointing/llama3-1t/run_6_20250703_133632/checkpointing/llama3-1t/20250703_133632",
+    "benchmark_type": "checkpointing",
+    "model": "llama_1t",
+    "command": null,
+    "parameters": {
+      "model": {
+        "name": "llama_1t",
+        "type": "transformer",
+        "num_layers": 128,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "tensor": 8,
+          "pipeline": 64,
+          "zero_stage": 1,
+          "data": 2
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 25872,
+          "ffn_hidden_size": 98304,
+          "num_attention_heads": 192,
+          "num_kv_heads": 32
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/KINGSTONSEDC3000ME3T8BK/checkpoints/llama3-1t",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 10,
+        "num_checkpoints_read": 0,
+        "fsync": true,
+        "mode": "subset"
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270115676160.0,
+      "total_cores": 48
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 6.18739317725411,
+      "save_checkpoint_io_stdev_GB_per_second": 0.4433638983012433,
+      "save_checkpoint_duration_mean_seconds": 23.3448256,
+      "save_checkpoint_duration_stdev_seconds": 1.6265525114611699,
+      "checkpoint_size_GB": 143.72388169169426
+    }
+  },
+  {
+    "run_id": "/home/sped/perf/mlperfv2/submission/Closed/Kingston_Digital/results/KINGSTONSEDC3000ME3T8BK/checkpointing/llama3-1t/run_6_20250703_133632/checkpointing/llama3-1t/20250703_134243",
+    "benchmark_type": "checkpointing",
+    "model": "llama_1t",
+    "command": null,
+    "parameters": {
+      "model": {
+        "name": "llama_1t",
+        "type": "transformer",
+        "num_layers": 128,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "tensor": 8,
+          "pipeline": 64,
+          "zero_stage": 1,
+          "data": 2
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 25872,
+          "ffn_hidden_size": 98304,
+          "num_attention_heads": 192,
+          "num_kv_heads": 32
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/KINGSTONSEDC3000ME3T8BK/checkpoints/llama3-1t",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 0,
+        "num_checkpoints_read": 10,
+        "fsync": true,
+        "mode": "subset"
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270115676160.0,
+      "total_cores": 48
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": NaN,
+      "save_checkpoint_io_stdev_GB_per_second": NaN,
+      "save_checkpoint_duration_mean_seconds": NaN,
+      "save_checkpoint_duration_stdev_seconds": NaN,
+      "load_checkpoint_io_mean_GB_per_second": 10.381565603729737,
+      "load_checkpoint_io_stdev_GB_per_second": 0.8039919793431999,
+      "load_checkpoint_duration_mean_seconds": 13.9452632,
+      "load_checkpoint_duration_stdev_seconds": 1.3080451946427387,
+      "checkpoint_size_GB": 143.72388169169426
+    }
+  },
+  {
+    "run_id": "/home/sped/perf/mlperfv2/submission/Closed/Kingston_Digital/results/KINGSTONSEDC3000ME3T8BK/checkpointing/llama3-1t/run_7_20250703_134637/checkpointing/llama3-1t/20250703_135253",
+    "benchmark_type": "checkpointing",
+    "model": "llama_1t",
+    "command": null,
+    "parameters": {
+      "model": {
+        "name": "llama_1t",
+        "type": "transformer",
+        "num_layers": 128,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "tensor": 8,
+          "pipeline": 64,
+          "zero_stage": 1,
+          "data": 2
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 25872,
+          "ffn_hidden_size": 98304,
+          "num_attention_heads": 192,
+          "num_kv_heads": 32
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/KINGSTONSEDC3000ME3T8BK/checkpoints/llama3-1t",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 0,
+        "num_checkpoints_read": 10,
+        "fsync": true,
+        "mode": "subset"
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270115676160.0,
+      "total_cores": 48
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": NaN,
+      "save_checkpoint_io_stdev_GB_per_second": NaN,
+      "save_checkpoint_duration_mean_seconds": NaN,
+      "save_checkpoint_duration_stdev_seconds": NaN,
+      "load_checkpoint_io_mean_GB_per_second": 10.915924541623232,
+      "load_checkpoint_io_stdev_GB_per_second": 0.9317345158933277,
+      "load_checkpoint_duration_mean_seconds": 13.2870687,
+      "load_checkpoint_duration_stdev_seconds": 1.4162080160111399,
+      "checkpoint_size_GB": 143.72388169169426
+    }
+  },
+  {
+    "run_id": "/home/sped/perf/mlperfv2/submission/Closed/Kingston_Digital/results/KINGSTONSEDC3000ME3T8BK/checkpointing/llama3-1t/run_7_20250703_134637/checkpointing/llama3-1t/20250703_134637",
+    "benchmark_type": "checkpointing",
+    "model": "llama_1t",
+    "command": null,
+    "parameters": {
+      "model": {
+        "name": "llama_1t",
+        "type": "transformer",
+        "num_layers": 128,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "tensor": 8,
+          "pipeline": 64,
+          "zero_stage": 1,
+          "data": 2
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 25872,
+          "ffn_hidden_size": 98304,
+          "num_attention_heads": 192,
+          "num_kv_heads": 32
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/KINGSTONSEDC3000ME3T8BK/checkpoints/llama3-1t",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 10,
+        "num_checkpoints_read": 0,
+        "fsync": true,
+        "mode": "subset"
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270115676160.0,
+      "total_cores": 48
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 5.82433302667749,
+      "save_checkpoint_io_stdev_GB_per_second": 0.43433705782384613,
+      "save_checkpoint_duration_mean_seconds": 24.7992567,
+      "save_checkpoint_duration_stdev_seconds": 1.6502018685845103,
+      "checkpoint_size_GB": 143.72388169169426
+    }
+  },
+  {
+    "run_id": "/home/sped/perf/mlperfv2/submission/Closed/Kingston_Digital/results/KINGSTONSEDC3000ME3T8BK/checkpointing/llama3-1t/run_3_20250703_130606/checkpointing/llama3-1t/20250703_130607",
+    "benchmark_type": "checkpointing",
+    "model": "llama_1t",
+    "command": null,
+    "parameters": {
+      "model": {
+        "name": "llama_1t",
+        "type": "transformer",
+        "num_layers": 128,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "tensor": 8,
+          "pipeline": 64,
+          "zero_stage": 1,
+          "data": 2
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 25872,
+          "ffn_hidden_size": 98304,
+          "num_attention_heads": 192,
+          "num_kv_heads": 32
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/KINGSTONSEDC3000ME3T8BK/checkpoints/llama3-1t",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 10,
+        "num_checkpoints_read": 0,
+        "fsync": true,
+        "mode": "subset"
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270115676160.0,
+      "total_cores": 48
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 5.724355695332466,
+      "save_checkpoint_io_stdev_GB_per_second": 0.41832357272317117,
+      "save_checkpoint_duration_mean_seconds": 25.225737000000002,
+      "save_checkpoint_duration_stdev_seconds": 1.6213031834423808,
+      "checkpoint_size_GB": 143.72388169169426
+    }
+  },
+  {
+    "run_id": "/home/sped/perf/mlperfv2/submission/Closed/Kingston_Digital/results/KINGSTONSEDC3000ME3T8BK/checkpointing/llama3-1t/run_3_20250703_130606/checkpointing/llama3-1t/20250703_131226",
+    "benchmark_type": "checkpointing",
+    "model": "llama_1t",
+    "command": null,
+    "parameters": {
+      "model": {
+        "name": "llama_1t",
+        "type": "transformer",
+        "num_layers": 128,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "tensor": 8,
+          "pipeline": 64,
+          "zero_stage": 1,
+          "data": 2
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 25872,
+          "ffn_hidden_size": 98304,
+          "num_attention_heads": 192,
+          "num_kv_heads": 32
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/KINGSTONSEDC3000ME3T8BK/checkpoints/llama3-1t",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 0,
+        "num_checkpoints_read": 10,
+        "fsync": true,
+        "mode": "subset"
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270115676160.0,
+      "total_cores": 48
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": NaN,
+      "save_checkpoint_io_stdev_GB_per_second": NaN,
+      "save_checkpoint_duration_mean_seconds": NaN,
+      "save_checkpoint_duration_stdev_seconds": NaN,
+      "load_checkpoint_io_mean_GB_per_second": 10.48304988998852,
+      "load_checkpoint_io_stdev_GB_per_second": 0.8095424426782531,
+      "load_checkpoint_duration_mean_seconds": 13.8014545,
+      "load_checkpoint_duration_stdev_seconds": 1.1881135970555385,
+      "checkpoint_size_GB": 143.72388169169426
+    }
+  }
+]

@@ -1,0 +1,907 @@
+[
+  {
+    "run_id": "micron_9550_15TB/checkpointing/llama3-70b/20250709_181020",
+    "benchmark_type": "checkpointing",
+    "model": "llama3-70b",
+    "command": null,
+    "num_processes": 8,
+    "parameters": {
+      "model": {
+        "name": "llama_70b",
+        "type": "transformer",
+        "num_layers": 80,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "tensor": 8,
+          "pipeline": 1,
+          "zero_stage": 3,
+          "data": 8
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 8192,
+          "ffn_hidden_size": 28672,
+          "num_attention_heads": 128,
+          "num_kv_heads": 8
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/nvme/llama3-70b",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 10,
+        "num_checkpoints_read": 10,
+        "fsync": true,
+        "mode": "subset"
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 267814907904.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "num_save_ops": 10,
+      "save_mean_of_min_throughput": 10.834292899318605,
+      "num_load_ops": 10,
+      "load_mean_of_min_throughput": 10.939778178449357
+    }
+  },
+  {
+    "run_id": "micron_9550_15TB/checkpointing/llama3-8b/20250709_152700",
+    "benchmark_type": "checkpointing",
+    "model": "llama3-8b",
+    "command": null,
+    "num_processes": 8,
+    "parameters": {
+      "model": {
+        "name": "llama_8b",
+        "type": "transformer",
+        "num_layers": 32,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "pipeline": 1,
+          "tensor": 1,
+          "zero_stage": 3
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 4096,
+          "ffn_hidden_size": 14336,
+          "num_attention_heads": 32,
+          "num_kv_heads": 8
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/nvme/llama3-8b",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 10,
+        "num_checkpoints_read": 10,
+        "fsync": true
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 267814907904.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "num_save_ops": 10,
+      "save_mean_of_min_throughput": 10.989187762387708,
+      "num_load_ops": 10,
+      "load_mean_of_min_throughput": 10.685340495214442
+    }
+  },
+  {
+    "run_id": "micron_9550_15TB/checkpointing/llama3-405b/20250709_190138",
+    "benchmark_type": "checkpointing",
+    "model": "llama3-405b",
+    "command": null,
+    "num_processes": 8,
+    "parameters": {
+      "model": {
+        "name": "llama_405b",
+        "type": "transformer",
+        "num_layers": 126,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "tensor": 8,
+          "pipeline": 32,
+          "zero_stage": 1,
+          "data": 2
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 16384,
+          "ffn_hidden_size": 53248,
+          "num_attention_heads": 128,
+          "num_kv_heads": 8
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/nvme/llama3-405b",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 10,
+        "num_checkpoints_read": 10,
+        "fsync": true,
+        "mode": "subset"
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 267814907904.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "num_save_ops": 10,
+      "save_mean_of_min_throughput": 10.586249037910457,
+      "num_load_ops": 10,
+      "load_mean_of_min_throughput": 10.50550692764413
+    }
+  },
+  {
+    "run_id": "micron_9550_15TB/checkpointing/llama3-1t/20250710_013627",
+    "benchmark_type": "checkpointing",
+    "model": "llama3-1t",
+    "command": null,
+    "num_processes": 8,
+    "parameters": {
+      "model": {
+        "name": "llama_1t",
+        "type": "transformer",
+        "num_layers": 128,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "tensor": 8,
+          "pipeline": 64,
+          "zero_stage": 1,
+          "data": 2
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 25872,
+          "ffn_hidden_size": 98304,
+          "num_attention_heads": 192,
+          "num_kv_heads": 32
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/nvme/llama3-1t",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 10,
+        "num_checkpoints_read": 0,
+        "fsync": true,
+        "mode": "subset"
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 811236909056.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "num_save_ops": 10,
+      "save_mean_of_min_throughput": 13.477955117141812,
+      "num_load_ops": 0
+    }
+  },
+  {
+    "run_id": "micron_9550_15TB/checkpointing/llama3-1t/20250710_013939",
+    "benchmark_type": "checkpointing",
+    "model": "llama3-1t",
+    "command": null,
+    "num_processes": 8,
+    "parameters": {
+      "model": {
+        "name": "llama_1t",
+        "type": "transformer",
+        "num_layers": 128,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "tensor": 8,
+          "pipeline": 64,
+          "zero_stage": 1,
+          "data": 2
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 25872,
+          "ffn_hidden_size": 98304,
+          "num_attention_heads": 192,
+          "num_kv_heads": 32
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/nvme/llama3-1t",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 0,
+        "num_checkpoints_read": 10,
+        "fsync": true,
+        "mode": "subset"
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 811236909056.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "num_save_ops": 0,
+      "num_load_ops": 10,
+      "load_mean_of_min_throughput": 13.071864665009205
+    }
+  },
+  {
+    "run_id": "micron_9550_15TB/training/resnet50/run/20250710_200624",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 72,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 24620,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/mnt/nvme/resnet50",
+        "format": "tfrecord",
+        "num_subfolders_train": 10
+      },
+      "train": {
+        "computation_time": 0.224,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 8,
+        "computation_threads": 8,
+        "batch_size": 400
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 265700970496.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "train_au_mean_percentage": 93.81783346630581,
+      "train_au_meet_expectation": "success",
+      "train_throughput_samples_per_second": [
+        124874.51850032424,
+        120953.22016163384,
+        114811.6893243438,
+        118986.09665987216,
+        122210.54938558162
+      ],
+      "train_io_mean_MB_per_second": 13161.958003426798,
+      "num_accelerators": 72
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "micron_9550_15TB/training/resnet50/run/20250710_202907",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 72,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 24620,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/mnt/nvme/resnet50",
+        "format": "tfrecord",
+        "num_subfolders_train": 10
+      },
+      "train": {
+        "computation_time": 0.224,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 8,
+        "computation_threads": 8,
+        "batch_size": 400
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 265700970496.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "train_au_mean_percentage": 93.75618474581401,
+      "train_au_meet_expectation": "success",
+      "train_throughput_samples_per_second": [
+        118742.2302495772,
+        119443.67533833892,
+        121653.56546694158,
+        119984.18393236659,
+        121600.60537830146
+      ],
+      "train_io_mean_MB_per_second": 13152.951773301966,
+      "num_accelerators": 72
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "micron_9550_15TB/training/resnet50/run/20250710_205143",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 72,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 24620,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/mnt/nvme/resnet50",
+        "format": "tfrecord",
+        "num_subfolders_train": 10
+      },
+      "train": {
+        "computation_time": 0.224,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 8,
+        "computation_threads": 8,
+        "batch_size": 400
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 265700970496.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "train_au_mean_percentage": 93.34852951479391,
+      "train_au_meet_expectation": "success",
+      "train_throughput_samples_per_second": [
+        120774.16853348303,
+        119185.50403553323,
+        119901.8251998156,
+        119306.1005352253,
+        119640.79037063394
+      ],
+      "train_io_mean_MB_per_second": 13095.743515401324,
+      "num_accelerators": 72
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "micron_9550_15TB/training/resnet50/run/20250710_211425",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 72,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 24620,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/mnt/nvme/resnet50",
+        "format": "tfrecord",
+        "num_subfolders_train": 10
+      },
+      "train": {
+        "computation_time": 0.224,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 8,
+        "computation_threads": 8,
+        "batch_size": 400
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 265700970496.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "train_au_mean_percentage": 93.70939203946071,
+      "train_au_meet_expectation": "success",
+      "train_throughput_samples_per_second": [
+        121661.18051529114,
+        117991.93293886635,
+        122458.77396055988,
+        120991.56624439482,
+        118039.13183060946
+      ],
+      "train_io_mean_MB_per_second": 13146.791635939115,
+      "num_accelerators": 72
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "micron_9550_15TB/training/resnet50/run/20250710_213701",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 72,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 24620,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/mnt/nvme/resnet50",
+        "format": "tfrecord",
+        "num_subfolders_train": 10
+      },
+      "train": {
+        "computation_time": 0.224,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 8,
+        "computation_threads": 8,
+        "batch_size": 400
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 265700970496.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "train_au_mean_percentage": 93.66892302717888,
+      "train_au_meet_expectation": "success",
+      "train_throughput_samples_per_second": [
+        119782.57492843093,
+        122161.11940591638,
+        119013.96285271234,
+        118417.6404767614,
+        121667.49539832002
+      ],
+      "train_io_mean_MB_per_second": 13144.609208202479,
+      "num_accelerators": 72
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "micron_9550_15TB/training/cosmoflow/run/20250710_141022",
+    "benchmark_type": "training",
+    "model": "cosmoflow",
+    "command": "run_benchmark",
+    "num_processes": 26,
+    "parameters": {
+      "model": {
+        "name": "cosmoflow"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "data_folder": "/mnt/nvme/cosmoflow",
+        "num_files_train": 485600,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 2828486,
+        "record_length_bytes_stdev": 71311,
+        "format": "tfrecord",
+        "num_subfolders_train": 400
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "batch_size": 1,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed",
+        "shuffle_size": 2
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.0035
+      },
+      "metric": {
+        "au": 0.7
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 265700966400.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "train_au_mean_percentage": 72.269646953065,
+      "train_au_meet_expectation": "success",
+      "train_throughput_samples_per_second": [
+        5274.589712845936,
+        5165.184908321541,
+        5273.131225238538,
+        5274.267245198838,
+        5272.811819531219
+      ],
+      "train_io_mean_MB_per_second": 14167.022644302298,
+      "num_accelerators": 26
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "micron_9550_15TB/training/cosmoflow/run/20250710_142219",
+    "benchmark_type": "training",
+    "model": "cosmoflow",
+    "command": "run_benchmark",
+    "num_processes": 26,
+    "parameters": {
+      "model": {
+        "name": "cosmoflow"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "data_folder": "/mnt/nvme/cosmoflow",
+        "num_files_train": 485600,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 2828486,
+        "record_length_bytes_stdev": 71311,
+        "format": "tfrecord",
+        "num_subfolders_train": 400
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "batch_size": 1,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed",
+        "shuffle_size": 2
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.0035
+      },
+      "metric": {
+        "au": 0.7
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 265700966400.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "train_au_mean_percentage": 72.51515293021531,
+      "train_au_meet_expectation": "success",
+      "train_throughput_samples_per_second": [
+        5272.786176535796,
+        5272.806843961964,
+        5271.2863022800575,
+        5272.921851003334,
+        5273.287212837673
+      ],
+      "train_io_mean_MB_per_second": 14222.646030104434,
+      "num_accelerators": 26
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "micron_9550_15TB/training/cosmoflow/run/20250710_143012",
+    "benchmark_type": "training",
+    "model": "cosmoflow",
+    "command": "run_benchmark",
+    "num_processes": 26,
+    "parameters": {
+      "model": {
+        "name": "cosmoflow"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "data_folder": "/mnt/nvme/cosmoflow",
+        "num_files_train": 485600,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 2828486,
+        "record_length_bytes_stdev": 71311,
+        "format": "tfrecord",
+        "num_subfolders_train": 400
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "batch_size": 1,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed",
+        "shuffle_size": 2
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.0035
+      },
+      "metric": {
+        "au": 0.7
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 265700966400.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "train_au_mean_percentage": 72.51977645427947,
+      "train_au_meet_expectation": "success",
+      "train_throughput_samples_per_second": [
+        5274.0356335919005,
+        5271.782037564404,
+        5272.399679654036,
+        5272.948897475713,
+        5271.625336741028
+      ],
+      "train_io_mean_MB_per_second": 14222.485908349403,
+      "num_accelerators": 26
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "micron_9550_15TB/training/cosmoflow/run/20250710_143805",
+    "benchmark_type": "training",
+    "model": "cosmoflow",
+    "command": "run_benchmark",
+    "num_processes": 26,
+    "parameters": {
+      "model": {
+        "name": "cosmoflow"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "data_folder": "/mnt/nvme/cosmoflow",
+        "num_files_train": 485600,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 2828486,
+        "record_length_bytes_stdev": 71311,
+        "format": "tfrecord",
+        "num_subfolders_train": 400
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "batch_size": 1,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed",
+        "shuffle_size": 2
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.0035
+      },
+      "metric": {
+        "au": 0.7
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 265700966400.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "train_au_mean_percentage": 72.54678743510331,
+      "train_au_meet_expectation": "success",
+      "train_throughput_samples_per_second": [
+        5266.275512391176,
+        5270.304437496303,
+        5272.384671298614,
+        5273.188798649596,
+        5272.620548847599
+      ],
+      "train_io_mean_MB_per_second": 14218.160477368376,
+      "num_accelerators": 26
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "micron_9550_15TB/training/cosmoflow/run/20250710_144558",
+    "benchmark_type": "training",
+    "model": "cosmoflow",
+    "command": "run_benchmark",
+    "num_processes": 26,
+    "parameters": {
+      "model": {
+        "name": "cosmoflow"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "data_folder": "/mnt/nvme/cosmoflow",
+        "num_files_train": 485600,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 2828486,
+        "record_length_bytes_stdev": 71311,
+        "format": "tfrecord",
+        "num_subfolders_train": 400
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "batch_size": 1,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed",
+        "shuffle_size": 2
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.0035
+      },
+      "metric": {
+        "au": 0.7
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 265700966400.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "train_au_mean_percentage": 72.51279300484323,
+      "train_au_meet_expectation": "success",
+      "train_throughput_samples_per_second": [
+        5271.992941041173,
+        5271.937264435725,
+        5273.035149358313,
+        5272.532290035304,
+        5272.424591464948
+      ],
+      "train_io_mean_MB_per_second": 14222.016902649602,
+      "num_accelerators": 26
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "micron_9550_15TB/training/cosmoflow/run/20250710_145351",
+    "benchmark_type": "training",
+    "model": "cosmoflow",
+    "command": "run_benchmark",
+    "num_processes": 26,
+    "parameters": {
+      "model": {
+        "name": "cosmoflow"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "data_folder": "/mnt/nvme/cosmoflow",
+        "num_files_train": 485600,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 2828486,
+        "record_length_bytes_stdev": 71311,
+        "format": "tfrecord",
+        "num_subfolders_train": 400
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "batch_size": 1,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed",
+        "shuffle_size": 2
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.0035
+      },
+      "metric": {
+        "au": 0.7
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 265700966400.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "train_au_mean_percentage": 72.51449132459841,
+      "train_au_meet_expectation": "success",
+      "train_throughput_samples_per_second": [
+        5273.634954981426,
+        5271.632563539559,
+        5272.490540912908,
+        5272.4920134904905,
+        5272.890431650678
+      ],
+      "train_io_mean_MB_per_second": 14222.674147267056,
+      "num_accelerators": 26
+    },
+    "accelerator": "h100"
+  }
+]

@@ -1,0 +1,337 @@
+[
+  {
+    "run_id": "/home/noctarius/.results/resnet50-1/run4/training/resnet50/run/20250701_074809",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 44,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 13174,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/media/benchmark/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.224,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 8,
+        "computation_threads": 8,
+        "batch_size": 400
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 371920015360.0,
+      "total_cores": 88
+    },
+    "metrics": {
+      "train_au_percentage": [
+        95.86304052861846,
+        96.91713278510953,
+        96.19127425814821,
+        96.55402170106758,
+        95.67444639121233
+      ],
+      "train_au_mean_percentage": 96.23998313283121,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.4519827344899538,
+      "train_throughput_samples_per_second": [
+        75148.79347245891,
+        75974.69179596509,
+        75398.83241270068,
+        75684.98940236957,
+        74997.03036319828
+      ],
+      "train_throughput_mean_samples_per_second": 75440.8674893385,
+      "train_throughput_stdev_samples_per_second": 354.5784743358903,
+      "train_io_mean_MB_per_second": 8249.335429371145,
+      "train_io_stdev_MB_per_second": 38.7725760343994
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "/home/noctarius/.results/resnet50-1/run5/training/resnet50/run/20250701_080855",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 44,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 13174,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/media/benchmark/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.224,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 8,
+        "computation_threads": 8,
+        "batch_size": 400
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 371920015360.0,
+      "total_cores": 88
+    },
+    "metrics": {
+      "train_au_percentage": [
+        95.16445323159085,
+        97.05174372850435,
+        95.5568313563315,
+        96.91732547511116,
+        94.73822769065518
+      ],
+      "train_au_mean_percentage": 95.88571629643862,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.9347677019235207,
+      "train_throughput_samples_per_second": [
+        74600.90439502626,
+        76075.50786663662,
+        74899.9824411978,
+        75970.92153541169,
+        74265.62774789693
+      ],
+      "train_throughput_mean_samples_per_second": 75162.58879723385,
+      "train_throughput_stdev_samples_per_second": 731.5481710496887,
+      "train_io_mean_MB_per_second": 8218.906109687852,
+      "train_io_stdev_MB_per_second": 79.9935956010144
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "/home/noctarius/.results/resnet50-1/run1/training/resnet50/run/20250701_064553",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 44,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 13174,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/media/benchmark/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.224,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 8,
+        "computation_threads": 8,
+        "batch_size": 400
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 371920015360.0,
+      "total_cores": 88
+    },
+    "metrics": {
+      "train_au_percentage": [
+        96.2918540675881,
+        95.97812941132224,
+        96.72066511927716,
+        97.30645974438966,
+        95.36640411315635
+      ],
+      "train_au_mean_percentage": 96.3327024911467,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.6572429394096773,
+      "train_throughput_samples_per_second": [
+        75481.3108111012,
+        75228.99941748312,
+        75810.4241847694,
+        76274.78711003602,
+        74752.164482295
+      ],
+      "train_throughput_mean_samples_per_second": 75509.53720113695,
+      "train_throughput_stdev_samples_per_second": 515.6068293549588,
+      "train_io_mean_MB_per_second": 8256.844350004165,
+      "train_io_stdev_MB_per_second": 56.38076319343341
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "/home/noctarius/.results/resnet50-1/run3/training/resnet50/run/20250701_072722",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 44,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 13174,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/media/benchmark/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.224,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 8,
+        "computation_threads": 8,
+        "batch_size": 400
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 371920015360.0,
+      "total_cores": 88
+    },
+    "metrics": {
+      "train_au_percentage": [
+        95.55914506292143,
+        96.53180716786211,
+        95.36317390541716,
+        96.78816537110866,
+        96.66026559215925
+      ],
+      "train_au_mean_percentage": 96.18051141989373,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.5961464341790071,
+      "train_throughput_samples_per_second": [
+        74908.92160447317,
+        75671.27708217343,
+        74755.24401517327,
+        75873.25750504583,
+        75769.33361230942
+      ],
+      "train_throughput_mean_samples_per_second": 75395.60676383502,
+      "train_throughput_stdev_samples_per_second": 467.06380859136,
+      "train_io_mean_MB_per_second": 8244.386243089482,
+      "train_io_stdev_MB_per_second": 51.07266329531855
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "/home/noctarius/.results/resnet50-1/run2/training/resnet50/run/20250701_070636",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 44,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 13174,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/media/benchmark/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.224,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 8,
+        "computation_threads": 8,
+        "batch_size": 400
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 371920015360.0,
+      "total_cores": 88
+    },
+    "metrics": {
+      "train_au_percentage": [
+        94.86828752885685,
+        96.36629843420424,
+        96.95493414957078,
+        95.76862839061555,
+        95.68191832597503
+      ],
+      "train_au_mean_percentage": 95.92801336584448,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.7008060053613044,
+      "train_throughput_samples_per_second": [
+        74367.00106684072,
+        75537.33023006273,
+        76003.04649070722,
+        75070.98457570515,
+        74997.47278615236
+      ],
+      "train_throughput_mean_samples_per_second": 75195.16702989364,
+      "train_throughput_stdev_samples_per_second": 549.5649255639355,
+      "train_io_mean_MB_per_second": 8222.468486127183,
+      "train_io_stdev_MB_per_second": 60.09402545424045
+    },
+    "accelerator": "h100"
+  }
+]

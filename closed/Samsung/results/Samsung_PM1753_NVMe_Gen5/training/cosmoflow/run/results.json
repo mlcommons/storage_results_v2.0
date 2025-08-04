@@ -1,0 +1,342 @@
+[
+  {
+    "run_id": "/root/origin/mlpstorage_results/Samsung_Storage/Closed/Samsung/results/Samsung_PM1753_NVMe_Gen5/training/cosmoflow/run/20250625_183915",
+    "benchmark_type": "training",
+    "model": "cosmoflow",
+    "command": "run_benchmark",
+    "num_processes": 16,
+    "parameters": {
+      "model": {
+        "name": "cosmoflow"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "data_folder": "/mnt/default/1/cosmoflow",
+        "num_files_train": 485909,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 2828486,
+        "record_length_bytes_stdev": 71311,
+        "format": "tfrecord"
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "batch_size": 1,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed",
+        "shuffle_size": 2
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.0035
+      },
+      "metric": {
+        "au": 0.7
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269651869696.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "train_au_percentage": [
+        93.71095701646104,
+        94.29076791549838,
+        94.53536956722172,
+        94.36441587502412,
+        94.21261255146997
+      ],
+      "train_au_mean_percentage": 94.22282458513504,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.27729459022227276,
+      "train_throughput_samples_per_second": [
+        4194.796518100381,
+        4231.012357152651,
+        4241.405256614576,
+        4235.547053829728,
+        4230.58758824902
+      ],
+      "train_throughput_mean_samples_per_second": 4226.669754789271,
+      "train_throughput_stdev_samples_per_second": 16.40763409896754,
+      "train_io_mean_MB_per_second": 11401.249149365316,
+      "train_io_stdev_MB_per_second": 44.258845655491164
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "/root/origin/mlpstorage_results/Samsung_Storage/Closed/Samsung/results/Samsung_PM1753_NVMe_Gen5/training/cosmoflow/run/20250625_194807",
+    "benchmark_type": "training",
+    "model": "cosmoflow",
+    "command": "run_benchmark",
+    "num_processes": 16,
+    "parameters": {
+      "model": {
+        "name": "cosmoflow"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "data_folder": "/mnt/default/1/cosmoflow",
+        "num_files_train": 485909,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 2828486,
+        "record_length_bytes_stdev": 71311,
+        "format": "tfrecord"
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "batch_size": 1,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed",
+        "shuffle_size": 2
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.0035
+      },
+      "metric": {
+        "au": 0.7
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269651869696.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "train_au_percentage": [
+        93.14620484877531,
+        93.86988720803646,
+        94.15475546621914,
+        94.05011117973245,
+        94.25737707879046
+      ],
+      "train_au_mean_percentage": 93.89566715631076,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.39602326519322417,
+      "train_throughput_samples_per_second": [
+        4176.208694212017,
+        4213.945211660135,
+        4222.680014039456,
+        4215.509821088376,
+        4232.374421729613
+      ],
+      "train_throughput_mean_samples_per_second": 4212.14363254592,
+      "train_throughput_stdev_samples_per_second": 19.111236860244862,
+      "train_io_mean_MB_per_second": 11362.065596242217,
+      "train_io_stdev_MB_per_second": 51.55169096172957
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "/root/origin/mlpstorage_results/Samsung_Storage/Closed/Samsung/results/Samsung_PM1753_NVMe_Gen5/training/cosmoflow/run/20250625_162356",
+    "benchmark_type": "training",
+    "model": "cosmoflow",
+    "command": "run_benchmark",
+    "num_processes": 16,
+    "parameters": {
+      "model": {
+        "name": "cosmoflow"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "data_folder": "/mnt/default/1/cosmoflow",
+        "num_files_train": 485909,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 2828486,
+        "record_length_bytes_stdev": 71311,
+        "format": "tfrecord"
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "batch_size": 1,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed",
+        "shuffle_size": 2
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.0035
+      },
+      "metric": {
+        "au": 0.7
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269651869696.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "train_au_percentage": [
+        94.82409034148361,
+        94.35044916181074,
+        93.90401915079636,
+        94.2540145718884,
+        94.22629297292909
+      ],
+      "train_au_mean_percentage": 94.31177323978163,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.29694140043561146,
+      "train_throughput_samples_per_second": [
+        4253.1044498368865,
+        4228.785295357448,
+        4211.3901371652,
+        4230.325496708537,
+        4224.289971638516
+      ],
+      "train_throughput_mean_samples_per_second": 4229.579070141318,
+      "train_throughput_stdev_samples_per_second": 13.516231476491317,
+      "train_io_mean_MB_per_second": 11409.096895015464,
+      "train_io_stdev_MB_per_second": 36.459418777480145
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "/root/origin/mlpstorage_results/Samsung_Storage/Closed/Samsung/results/Samsung_PM1753_NVMe_Gen5/training/cosmoflow/run/20250625_205641",
+    "benchmark_type": "training",
+    "model": "cosmoflow",
+    "command": "run_benchmark",
+    "num_processes": 16,
+    "parameters": {
+      "model": {
+        "name": "cosmoflow"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "data_folder": "/mnt/default/1/cosmoflow",
+        "num_files_train": 485909,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 2828486,
+        "record_length_bytes_stdev": 71311,
+        "format": "tfrecord"
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "batch_size": 1,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed",
+        "shuffle_size": 2
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.0035
+      },
+      "metric": {
+        "au": 0.7
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269651869696.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "train_au_percentage": [
+        94.55743323933905,
+        94.42599692542467,
+        94.31893350123536,
+        93.82297216770702,
+        94.37876108857904
+      ],
+      "train_au_mean_percentage": 94.30081938445703,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.25149993252641084,
+      "train_throughput_samples_per_second": [
+        4240.532892121938,
+        4236.055060696799,
+        4233.821379119832,
+        4211.134577665725,
+        4238.32299395383
+      ],
+      "train_throughput_mean_samples_per_second": 4231.9733807116245,
+      "train_throughput_stdev_samples_per_second": 10.657520780301208,
+      "train_io_mean_MB_per_second": 11415.55543872404,
+      "train_io_stdev_MB_per_second": 28.748176881590886
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "/root/origin/mlpstorage_results/Samsung_Storage/Closed/Samsung/results/Samsung_PM1753_NVMe_Gen5/training/cosmoflow/run/20250625_173105",
+    "benchmark_type": "training",
+    "model": "cosmoflow",
+    "command": "run_benchmark",
+    "num_processes": 16,
+    "parameters": {
+      "model": {
+        "name": "cosmoflow"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "data_folder": "/mnt/default/1/cosmoflow",
+        "num_files_train": 485909,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 2828486,
+        "record_length_bytes_stdev": 71311,
+        "format": "tfrecord"
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "batch_size": 1,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed",
+        "shuffle_size": 2
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.0035
+      },
+      "metric": {
+        "au": 0.7
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269651869696.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "train_au_percentage": [
+        94.63995538290197,
+        93.59106195998851,
+        94.83099789487584,
+        94.05553725182965,
+        94.15485772340575
+      ],
+      "train_au_mean_percentage": 94.25448204260036,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.44058834863639074,
+      "train_throughput_samples_per_second": [
+        4247.366797866519,
+        4192.403278156025,
+        4258.230890859385,
+        4223.212604418348,
+        4222.195227875614
+      ],
+      "train_throughput_mean_samples_per_second": 4228.681759835179,
+      "train_throughput_stdev_samples_per_second": 22.84905591615944,
+      "train_io_mean_MB_per_second": 11406.676441334883,
+      "train_io_stdev_MB_per_second": 61.63428761680045
+    },
+    "accelerator": "h100"
+  }
+]

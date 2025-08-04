@@ -1,0 +1,110 @@
+[
+  {
+    "run_id": "/tmp/ANL_MLPerf_Storage_v2.0/Closed/ANL/results/checkpointing/flare_n128x8/llama3-1t/20250620_022740",
+    "benchmark_type": "checkpointing",
+    "model": "llama3-1t",
+    "command": null,
+    "num_processes": 1024,
+    "parameters": {
+      "model": {
+        "name": "llama_1t",
+        "type": "transformer",
+        "num_layers": 128,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "tensor": 8,
+          "pipeline": 64,
+          "zero_stage": 1
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 25872,
+          "ffn_hidden_size": 98304,
+          "num_attention_heads": 192,
+          "num_kv_heads": 32
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": ".//checkpoints/n128x8/llama3-1t",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 0,
+        "num_checkpoints_read": 10,
+        "fsync": true
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 155906047627264.0,
+      "total_cores": 26624
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": NaN,
+      "save_checkpoint_io_stdev_GB_per_second": NaN,
+      "save_checkpoint_duration_mean_seconds": NaN,
+      "save_checkpoint_duration_stdev_seconds": NaN,
+      "load_checkpoint_io_mean_GB_per_second": 318.900328971856,
+      "load_checkpoint_io_stdev_GB_per_second": 62.950935738569456,
+      "load_checkpoint_duration_mean_seconds": 50.3972285,
+      "load_checkpoint_duration_stdev_seconds": 10.572891469863436,
+      "checkpoint_size_GB": 15426.589264154434
+    }
+  },
+  {
+    "run_id": "/tmp/ANL_MLPerf_Storage_v2.0/Closed/ANL/results/checkpointing/flare_n128x8/llama3-1t/20250620_015909",
+    "benchmark_type": "checkpointing",
+    "model": "llama3-1t",
+    "command": null,
+    "num_processes": 1024,
+    "parameters": {
+      "model": {
+        "name": "llama_1t",
+        "type": "transformer",
+        "num_layers": 128,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "tensor": 8,
+          "pipeline": 64,
+          "zero_stage": 1
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 25872,
+          "ffn_hidden_size": 98304,
+          "num_attention_heads": 192,
+          "num_kv_heads": 32
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": ".//checkpoints/n128x8/llama3-1t",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 10,
+        "num_checkpoints_read": 0,
+        "fsync": true
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 155906047815680.0,
+      "total_cores": 26624
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 433.8289632191012,
+      "save_checkpoint_io_stdev_GB_per_second": 72.61538972360508,
+      "save_checkpoint_duration_mean_seconds": 36.6548169,
+      "save_checkpoint_duration_stdev_seconds": 6.697700647121973,
+      "checkpoint_size_GB": 15426.589264154434
+    }
+  }
+]

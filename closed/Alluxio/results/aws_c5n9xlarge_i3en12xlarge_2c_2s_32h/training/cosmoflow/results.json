@@ -1,0 +1,337 @@
+[
+  {
+    "run_id": "mlps_results/training/cosmoflow/run/20250627_073327",
+    "benchmark_type": "training",
+    "model": "cosmoflow",
+    "command": "run_benchmark",
+    "parameters": {
+      "model": {
+        "name": "cosmoflow"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "data_folder": "/mnt/alluxio/alluxio-fuse/gemini/cosmoflow_379617_1000GB/cosmoflow",
+        "num_files_train": 379617,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 2828486,
+        "record_length_bytes_stdev": 71311,
+        "format": "tfrecord",
+        "num_subfolders_train": 38
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "batch_size": 1,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed",
+        "shuffle_size": 2
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.0035
+      },
+      "metric": {
+        "au": 0.7
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 198174601216.0,
+      "total_cores": 72
+    },
+    "metrics": {
+      "train_au_percentage": [
+        65.5993871808255,
+        73.16343604807219,
+        75.74239159931227,
+        75.41881447355114,
+        75.89696130700702
+      ],
+      "train_au_mean_percentage": 73.16419812175363,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 3.9095968150421103,
+      "train_throughput_samples_per_second": [
+        1461.7889029100097,
+        1630.9913146833096,
+        1688.487402851325,
+        1681.4669534231343,
+        1692.625835167115
+      ],
+      "train_throughput_mean_samples_per_second": 1631.0720818069788,
+      "train_throughput_stdev_samples_per_second": 87.50066046533148,
+      "train_io_mean_MB_per_second": 4399.742649442572,
+      "train_io_stdev_MB_per_second": 236.02904617018086
+    }
+  },
+  {
+    "run_id": "mlps_results/training/cosmoflow/run/20250627_070408",
+    "benchmark_type": "training",
+    "model": "cosmoflow",
+    "command": "run_benchmark",
+    "parameters": {
+      "model": {
+        "name": "cosmoflow"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "data_folder": "/mnt/alluxio/alluxio-fuse/gemini/cosmoflow_379617_1000GB/cosmoflow",
+        "num_files_train": 379617,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 2828486,
+        "record_length_bytes_stdev": 71311,
+        "format": "tfrecord",
+        "num_subfolders_train": 38
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "batch_size": 1,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed",
+        "shuffle_size": 2
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.0035
+      },
+      "metric": {
+        "au": 0.7
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 198174601216.0,
+      "total_cores": 72
+    },
+    "metrics": {
+      "train_au_percentage": [
+        65.03144834509095,
+        75.56693590777418,
+        75.57450714375338,
+        75.7992173422188,
+        75.39031143089218
+      ],
+      "train_au_mean_percentage": 73.4724840339459,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 4.222512596044558,
+      "train_throughput_samples_per_second": [
+        1449.464521664894,
+        1685.1422572155227,
+        1685.0152939112409,
+        1690.5286842650921,
+        1681.1511651376215
+      ],
+      "train_throughput_mean_samples_per_second": 1638.260384438874,
+      "train_throughput_stdev_samples_per_second": 94.445120139749,
+      "train_io_mean_MB_per_second": 4419.132768383,
+      "train_io_stdev_MB_per_second": 254.76140983924682
+    }
+  },
+  {
+    "run_id": "mlps_results/training/cosmoflow/run/20250627_063450",
+    "benchmark_type": "training",
+    "model": "cosmoflow",
+    "command": "run_benchmark",
+    "parameters": {
+      "model": {
+        "name": "cosmoflow"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "data_folder": "/mnt/alluxio/alluxio-fuse/gemini/cosmoflow_379617_1000GB/cosmoflow",
+        "num_files_train": 379617,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 2828486,
+        "record_length_bytes_stdev": 71311,
+        "format": "tfrecord",
+        "num_subfolders_train": 38
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "batch_size": 1,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed",
+        "shuffle_size": 2
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.0035
+      },
+      "metric": {
+        "au": 0.7
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 198174601216.0,
+      "total_cores": 72
+    },
+    "metrics": {
+      "train_au_percentage": [
+        66.79016199483766,
+        75.45824909774313,
+        75.13966192422805,
+        75.06810568281023,
+        75.03680946393186
+      ],
+      "train_au_mean_percentage": 73.49859763271017,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 3.3575552337323704,
+      "train_throughput_samples_per_second": [
+        1487.521574742343,
+        1682.3714731338073,
+        1675.0359609410166,
+        1673.7412594831058,
+        1672.7520760550976
+      ],
+      "train_throughput_mean_samples_per_second": 1638.2844688710743,
+      "train_throughput_stdev_samples_per_second": 75.45725452969762,
+      "train_io_mean_MB_per_second": 4419.197735041876,
+      "train_io_stdev_MB_per_second": 203.54250720566398
+    }
+  },
+  {
+    "run_id": "mlps_results/training/cosmoflow/run/20250627_080246",
+    "benchmark_type": "training",
+    "model": "cosmoflow",
+    "command": "run_benchmark",
+    "parameters": {
+      "model": {
+        "name": "cosmoflow"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "data_folder": "/mnt/alluxio/alluxio-fuse/gemini/cosmoflow_379617_1000GB/cosmoflow",
+        "num_files_train": 379617,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 2828486,
+        "record_length_bytes_stdev": 71311,
+        "format": "tfrecord",
+        "num_subfolders_train": 38
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "batch_size": 1,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed",
+        "shuffle_size": 2
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.0035
+      },
+      "metric": {
+        "au": 0.7
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 198174601216.0,
+      "total_cores": 72
+    },
+    "metrics": {
+      "train_au_percentage": [
+        67.42788618454807,
+        75.42701123273986,
+        75.60758500390573,
+        75.52291990270325,
+        75.31443739201438
+      ],
+      "train_au_mean_percentage": 73.85996794318226,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 3.217525645874314,
+      "train_throughput_samples_per_second": [
+        1502.1799328794461,
+        1681.5967889386502,
+        1685.7060834399385,
+        1683.7625036280904,
+        1679.3390902258632
+      ],
+      "train_throughput_mean_samples_per_second": 1646.5168798223974,
+      "train_throughput_stdev_samples_per_second": 72.19983648878792,
+      "train_io_mean_MB_per_second": 4441.404288617452,
+      "train_io_stdev_MB_per_second": 194.75577040751057
+    }
+  },
+  {
+    "run_id": "mlps_results/training/cosmoflow/run/20250627_060544",
+    "benchmark_type": "training",
+    "model": "cosmoflow",
+    "command": "run_benchmark",
+    "parameters": {
+      "model": {
+        "name": "cosmoflow"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "data_folder": "/mnt/alluxio/alluxio-fuse/gemini/cosmoflow_379617_1000GB/cosmoflow",
+        "num_files_train": 379617,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 2828486,
+        "record_length_bytes_stdev": 71311,
+        "format": "tfrecord",
+        "num_subfolders_train": 38
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "batch_size": 1,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed",
+        "shuffle_size": 2
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.0035
+      },
+      "metric": {
+        "au": 0.7
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 198174601216.0,
+      "total_cores": 72
+    },
+    "metrics": {
+      "train_au_percentage": [
+        66.77653504737555,
+        75.25010342061933,
+        74.9755057811123,
+        74.95191027838166,
+        74.6289961622149
+      ],
+      "train_au_mean_percentage": 73.31661013794074,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 3.275957168381918,
+      "train_throughput_samples_per_second": [
+        1487.847242347339,
+        1677.855906607495,
+        1671.598948556057,
+        1671.051408825544,
+        1664.0038743321882
+      ],
+      "train_throughput_mean_samples_per_second": 1634.4714761337248,
+      "train_throughput_stdev_samples_per_second": 73.4432814742639,
+      "train_io_mean_MB_per_second": 4408.912360805106,
+      "train_io_stdev_MB_per_second": 198.10990662003974
+    }
+  }
+]

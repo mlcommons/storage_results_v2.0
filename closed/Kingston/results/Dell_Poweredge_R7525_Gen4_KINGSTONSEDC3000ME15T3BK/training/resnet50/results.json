@@ -1,0 +1,327 @@
+[
+  {
+    "run_id": "/home/sped/perf/mlperfv2/submission/Closed/Kingston_Digital/results/KINGSTONSEDC3000ME15T3BK/training/resnet50/run_2_20250705_005138/training/resnet50/run/20250705_005138",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 9394,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/mnt/KINGSTONSEDC3000ME15T3BK/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.224,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "computation_threads": 8,
+        "batch_size": 400
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "train_au_percentage": [
+        92.11732223417026,
+        92.81297286470812,
+        92.08060651889042,
+        92.45497616837577,
+        91.86436603125505
+      ],
+      "train_au_mean_percentage": 92.26604876347992,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.33246863334500515,
+      "train_throughput_samples_per_second": [
+        59042.62428786793,
+        59501.67331013113,
+        59023.713437584076,
+        59268.42797173918,
+        58881.92771314803
+      ],
+      "train_throughput_mean_samples_per_second": 59143.67334409407,
+      "train_throughput_stdev_samples_per_second": 217.64179702200087,
+      "train_io_mean_MB_per_second": 6467.263913813554,
+      "train_io_stdev_MB_per_second": 23.798774415462887
+    }
+  },
+  {
+    "run_id": "/home/sped/perf/mlperfv2/submission/Closed/Kingston_Digital/results/KINGSTONSEDC3000ME15T3BK/training/resnet50/run_3_20250705_010851/training/resnet50/run/20250705_010851",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 9394,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/mnt/KINGSTONSEDC3000ME15T3BK/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.224,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "computation_threads": 8,
+        "batch_size": 400
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "train_au_percentage": [
+        92.57668171274987,
+        92.30895698798741,
+        92.55688049333412,
+        92.44401050362637,
+        92.51193180031011
+      ],
+      "train_au_mean_percentage": 92.47969229960157,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.09677611907540018,
+      "train_throughput_samples_per_second": [
+        59343.7372126887,
+        59173.5151379326,
+        59335.05705373519,
+        59262.68829961377,
+        59306.24188236568
+      ],
+      "train_throughput_mean_samples_per_second": 59284.24791726719,
+      "train_throughput_stdev_samples_per_second": 62.1785246715451,
+      "train_io_mean_MB_per_second": 6482.635513392649,
+      "train_io_stdev_MB_per_second": 6.799119941078271
+    }
+  },
+  {
+    "run_id": "/home/sped/perf/mlperfv2/submission/Closed/Kingston_Digital/results/KINGSTONSEDC3000ME15T3BK/training/resnet50/run_4_20250705_012603/training/resnet50/run/20250705_012603",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 9394,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/mnt/KINGSTONSEDC3000ME15T3BK/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.224,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "computation_threads": 8,
+        "batch_size": 400
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "train_au_percentage": [
+        92.01585209253932,
+        92.48842222978767,
+        92.03140849468487,
+        92.11895549284102,
+        92.1359289623263
+      ],
+      "train_au_mean_percentage": 92.15811345443583,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.1717101200482926,
+      "train_throughput_samples_per_second": [
+        58981.63969832468,
+        59292.55461603658,
+        58990.538616037265,
+        59050.306349222636,
+        59058.08211533119
+      ],
+      "train_throughput_mean_samples_per_second": 59074.62427899047,
+      "train_throughput_stdev_samples_per_second": 113.20350493480859,
+      "train_io_mean_MB_per_second": 6459.713511517284,
+      "train_io_stdev_MB_per_second": 12.378618049688816
+    }
+  },
+  {
+    "run_id": "/home/sped/perf/mlperfv2/submission/Closed/Kingston_Digital/results/KINGSTONSEDC3000ME15T3BK/training/resnet50/run_1_20250705_002358/training/resnet50/run/20250705_003426",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 9394,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/mnt/KINGSTONSEDC3000ME15T3BK/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.224,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "computation_threads": 8,
+        "batch_size": 400
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "train_au_percentage": [
+        91.42669357846563,
+        91.86973317141766,
+        92.43584273870027,
+        92.67101514588974,
+        92.64233743354272
+      ],
+      "train_au_mean_percentage": 92.2091244136032,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.4857575928790929,
+      "train_throughput_samples_per_second": [
+        58609.0141469372,
+        58893.402926580144,
+        59258.06975271757,
+        59408.35274106309,
+        59388.28949092083
+      ],
+      "train_throughput_mean_samples_per_second": 59111.42581164377,
+      "train_throughput_stdev_samples_per_second": 311.8573401462816,
+      "train_io_mean_MB_per_second": 6463.737698901064,
+      "train_io_stdev_MB_per_second": 34.101089907824004
+    }
+  },
+  {
+    "run_id": "/home/sped/perf/mlperfv2/submission/Closed/Kingston_Digital/results/KINGSTONSEDC3000ME15T3BK/training/resnet50/run_5_20250705_014316/training/resnet50/run/20250705_014316",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 9394,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/mnt/KINGSTONSEDC3000ME15T3BK/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.224,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "computation_threads": 8,
+        "batch_size": 400
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "train_au_percentage": [
+        92.32873281354533,
+        92.58529935709076,
+        92.76229782659394,
+        92.44821001630794,
+        92.64716047034165
+      ],
+      "train_au_mean_percentage": 92.55434009677592,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.15164613754792056,
+      "train_throughput_samples_per_second": [
+        59183.2459140833,
+        59352.8841684888,
+        59468.816517447034,
+        59264.93691660957,
+        59395.4376744039
+      ],
+      "train_throughput_mean_samples_per_second": 59333.06423820652,
+      "train_throughput_stdev_samples_per_second": 99.7986159117661,
+      "train_io_mean_MB_per_second": 6487.973498217828,
+      "train_io_stdev_MB_per_second": 10.912815367075172
+    }
+  }
+]

@@ -1,0 +1,342 @@
+[
+  {
+    "run_id": "Solidigm_D5-P5336_Gen4_NVMe/training/resnet50/a100/run/20250701_134808",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 72,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 15347,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/P5336/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.435,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 2,
+        "computation_threads": 8,
+        "batch_size": 400,
+        "dont_use_mmap": true
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269407956992.0,
+      "total_cores": 256
+    },
+    "metrics": {
+      "train_au_percentage": [
+        89.65345041653485,
+        90.28005343923695,
+        90.31161085488876,
+        90.27109348913157,
+        90.21847626765316
+      ],
+      "train_au_mean_percentage": 90.14693689348906,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.24855549623732887,
+      "train_throughput_samples_per_second": [
+        59239.80087205416,
+        59653.668406557226,
+        59674.70972237179,
+        59648.25229716411,
+        59613.50483471528
+      ],
+      "train_throughput_mean_samples_per_second": 59565.98722657251,
+      "train_throughput_stdev_samples_per_second": 164.27511875713589,
+      "train_io_mean_MB_per_second": 6513.443245904838,
+      "train_io_stdev_MB_per_second": 17.96321546168472
+    },
+    "accelerator": "a100"
+  },
+  {
+    "run_id": "Solidigm_D5-P5336_Gen4_NVMe/training/resnet50/a100/run/20250701_141924",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 72,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 15347,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/P5336/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.435,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 2,
+        "computation_threads": 8,
+        "batch_size": 400,
+        "dont_use_mmap": true
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269407956992.0,
+      "total_cores": 256
+    },
+    "metrics": {
+      "train_au_percentage": [
+        90.46167418946601,
+        90.26796438291571,
+        90.37339825801314,
+        90.22598297021618,
+        90.44972524570636
+      ],
+      "train_au_mean_percentage": 90.35574900926348,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.094771871682876,
+      "train_throughput_samples_per_second": [
+        59774.3972824338,
+        59646.32892107427,
+        59716.19341660457,
+        59619.20511382621,
+        59766.58911035581
+      ],
+      "train_throughput_mean_samples_per_second": 59704.54276885893,
+      "train_throughput_stdev_samples_per_second": 62.50840998329811,
+      "train_io_mean_MB_per_second": 6528.594067759856,
+      "train_io_stdev_MB_per_second": 6.8351923601852995
+    },
+    "accelerator": "a100"
+  },
+  {
+    "run_id": "Solidigm_D5-P5336_Gen4_NVMe/training/resnet50/a100/run/20250701_144930",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 72,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 15347,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/P5336/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.435,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 2,
+        "computation_threads": 8,
+        "batch_size": 400,
+        "dont_use_mmap": true
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269407956992.0,
+      "total_cores": 256
+    },
+    "metrics": {
+      "train_au_percentage": [
+        90.54395942726393,
+        90.45613535178562,
+        90.58428340758687,
+        90.55326044740309,
+        90.37688946058262
+      ],
+      "train_au_mean_percentage": 90.50290561892442,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.0760406450121831,
+      "train_throughput_samples_per_second": [
+        59827.761633488684,
+        59771.51770842334,
+        59854.99998215526,
+        59834.98142005384,
+        59719.22519482709
+      ],
+      "train_throughput_mean_samples_per_second": 59801.69718778964,
+      "train_throughput_stdev_samples_per_second": 49.68060775037867,
+      "train_io_mean_MB_per_second": 6539.217744513287,
+      "train_io_stdev_MB_per_second": 5.432493173886262
+    },
+    "accelerator": "a100"
+  },
+  {
+    "run_id": "Solidigm_D5-P5336_Gen4_NVMe/training/resnet50/a100/run/20250701_151938",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 72,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 15347,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/P5336/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.435,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 2,
+        "computation_threads": 8,
+        "batch_size": 400,
+        "dont_use_mmap": true
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269407956992.0,
+      "total_cores": 256
+    },
+    "metrics": {
+      "train_au_percentage": [
+        90.38158149307866,
+        90.42165309483151,
+        90.33633737754855,
+        90.55796139563465,
+        90.50099828405558
+      ],
+      "train_au_mean_percentage": 90.43970632902979,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.08016298457305535,
+      "train_throughput_samples_per_second": [
+        59721.67029792579,
+        59748.31914483516,
+        59691.84760335873,
+        59838.735008042946,
+        59800.450256169606
+      ],
+      "train_throughput_mean_samples_per_second": 59760.204462066446,
+      "train_throughput_stdev_samples_per_second": 53.07649818602468,
+      "train_io_mean_MB_per_second": 6534.680582842685,
+      "train_io_stdev_MB_per_second": 5.803828236927474
+    },
+    "accelerator": "a100"
+  },
+  {
+    "run_id": "Solidigm_D5-P5336_Gen4_NVMe/training/resnet50/a100/run/20250701_154943",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 72,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 15347,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/P5336/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.435,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 2,
+        "computation_threads": 8,
+        "batch_size": 400,
+        "dont_use_mmap": true
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269407956992.0,
+      "total_cores": 256
+    },
+    "metrics": {
+      "train_au_percentage": [
+        90.38858068334966,
+        90.41223929124246,
+        90.35996924565248,
+        90.40479848850555,
+        90.41281365083563
+      ],
+      "train_au_mean_percentage": 90.39568027191716,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.019882541198935,
+      "train_throughput_samples_per_second": [
+        59726.42167209822,
+        59742.31546521782,
+        59707.239127867506,
+        59737.54725650922,
+        59742.54103733712
+      ],
+      "train_throughput_mean_samples_per_second": 59731.212911805975,
+      "train_throughput_stdev_samples_per_second": 13.337281112710514,
+      "train_io_mean_MB_per_second": 6531.510404255464,
+      "train_io_stdev_MB_per_second": 1.4584098682337432
+    },
+    "accelerator": "a100"
+  }
+]

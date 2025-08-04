@@ -1,0 +1,582 @@
+[
+  {
+    "run_id": "/root/origin/mlpstorage_results/Samsung_Storage/Closed/Samsung/results/Samsung_PM1753_NVMe_Gen5/checkpointing/llama3-405b/20250624_152416",
+    "benchmark_type": "checkpointing",
+    "model": "llama3-405b",
+    "command": null,
+    "num_processes": 8,
+    "parameters": {
+      "model": {
+        "name": "llama_405b",
+        "type": "transformer",
+        "num_layers": 126,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "tensor": 8,
+          "pipeline": 32,
+          "zero_stage": 1,
+          "data": 2
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 16384,
+          "ffn_hidden_size": 53248,
+          "num_attention_heads": 128,
+          "num_kv_heads": 8
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/default/1/llama3-405b",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 10,
+        "num_checkpoints_read": 10,
+        "fsync": true,
+        "mode": "subset"
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269651869696.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 11.923703419926277,
+      "save_checkpoint_io_stdev_GB_per_second": 0.9824631528508412,
+      "save_checkpoint_duration_mean_seconds": 8.3135242,
+      "save_checkpoint_duration_stdev_seconds": 0.595302717262033,
+      "load_checkpoint_io_mean_GB_per_second": 8.176669072899772,
+      "load_checkpoint_io_stdev_GB_per_second": 0.49919106415551906,
+      "load_checkpoint_duration_mean_seconds": 12.1049282,
+      "load_checkpoint_duration_stdev_seconds": 0.8690226946976473,
+      "checkpoint_size_GB": 98.54466915130615
+    }
+  },
+  {
+    "run_id": "/root/origin/mlpstorage_results/Samsung_Storage/Closed/Samsung/results/Samsung_PM1753_NVMe_Gen5/checkpointing/llama3-405b/20250624_190237",
+    "benchmark_type": "checkpointing",
+    "model": "llama3-405b",
+    "command": null,
+    "num_processes": 8,
+    "parameters": {
+      "model": {
+        "name": "llama_405b",
+        "type": "transformer",
+        "num_layers": 126,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "tensor": 8,
+          "pipeline": 32,
+          "zero_stage": 1,
+          "data": 2
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 16384,
+          "ffn_hidden_size": 53248,
+          "num_attention_heads": 128,
+          "num_kv_heads": 8
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/default/1/llama3-405b",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 10,
+        "num_checkpoints_read": 10,
+        "fsync": true,
+        "mode": "subset"
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269651869696.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 12.016953188932131,
+      "save_checkpoint_io_stdev_GB_per_second": 0.7908469149251179,
+      "save_checkpoint_duration_mean_seconds": 8.2330573,
+      "save_checkpoint_duration_stdev_seconds": 0.4959386146010513,
+      "load_checkpoint_io_mean_GB_per_second": 8.14245867790036,
+      "load_checkpoint_io_stdev_GB_per_second": 0.4672295265792481,
+      "load_checkpoint_duration_mean_seconds": 12.1494899,
+      "load_checkpoint_duration_stdev_seconds": 0.8180015734261699,
+      "checkpoint_size_GB": 98.54466915130615
+    }
+  },
+  {
+    "run_id": "/root/origin/mlpstorage_results/Samsung_Storage/Closed/Samsung/results/Samsung_PM1753_NVMe_Gen5/checkpointing/llama3-405b/20250624_160015",
+    "benchmark_type": "checkpointing",
+    "model": "llama3-405b",
+    "command": null,
+    "num_processes": 8,
+    "parameters": {
+      "model": {
+        "name": "llama_405b",
+        "type": "transformer",
+        "num_layers": 126,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "tensor": 8,
+          "pipeline": 32,
+          "zero_stage": 1,
+          "data": 2
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 16384,
+          "ffn_hidden_size": 53248,
+          "num_attention_heads": 128,
+          "num_kv_heads": 8
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/default/1/llama3-405b",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 10,
+        "num_checkpoints_read": 10,
+        "fsync": true,
+        "mode": "subset"
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269651869696.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 12.070465277983654,
+      "save_checkpoint_io_stdev_GB_per_second": 0.9570468854048735,
+      "save_checkpoint_duration_mean_seconds": 8.2104604,
+      "save_checkpoint_duration_stdev_seconds": 0.5868705718974501,
+      "load_checkpoint_io_mean_GB_per_second": 8.042755948910878,
+      "load_checkpoint_io_stdev_GB_per_second": 0.44380509618392505,
+      "load_checkpoint_duration_mean_seconds": 12.2964305,
+      "load_checkpoint_duration_stdev_seconds": 0.7943853113354064,
+      "checkpoint_size_GB": 98.54466915130615
+    }
+  },
+  {
+    "run_id": "/root/origin/mlpstorage_results/Samsung_Storage/Closed/Samsung/results/Samsung_PM1753_NVMe_Gen5/checkpointing/llama3-405b/20250624_171253",
+    "benchmark_type": "checkpointing",
+    "model": "llama3-405b",
+    "command": null,
+    "num_processes": 8,
+    "parameters": {
+      "model": {
+        "name": "llama_405b",
+        "type": "transformer",
+        "num_layers": 126,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "tensor": 8,
+          "pipeline": 32,
+          "zero_stage": 1,
+          "data": 2
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 16384,
+          "ffn_hidden_size": 53248,
+          "num_attention_heads": 128,
+          "num_kv_heads": 8
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/default/1/llama3-405b",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 10,
+        "num_checkpoints_read": 10,
+        "fsync": true,
+        "mode": "subset"
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269651869696.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 12.063906263266551,
+      "save_checkpoint_io_stdev_GB_per_second": 1.0358303381138059,
+      "save_checkpoint_duration_mean_seconds": 8.2218359,
+      "save_checkpoint_duration_stdev_seconds": 0.6223337680621952,
+      "load_checkpoint_io_mean_GB_per_second": 8.132935578497877,
+      "load_checkpoint_io_stdev_GB_per_second": 0.48556429910877097,
+      "load_checkpoint_duration_mean_seconds": 12.1680034,
+      "load_checkpoint_duration_stdev_seconds": 0.8589553351610547,
+      "checkpoint_size_GB": 98.54466915130615
+    }
+  },
+  {
+    "run_id": "/root/origin/mlpstorage_results/Samsung_Storage/Closed/Samsung/results/Samsung_PM1753_NVMe_Gen5/checkpointing/llama3-405b/20250624_193837",
+    "benchmark_type": "checkpointing",
+    "model": "llama3-405b",
+    "command": null,
+    "num_processes": 8,
+    "parameters": {
+      "model": {
+        "name": "llama_405b",
+        "type": "transformer",
+        "num_layers": 126,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "tensor": 8,
+          "pipeline": 32,
+          "zero_stage": 1,
+          "data": 2
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 16384,
+          "ffn_hidden_size": 53248,
+          "num_attention_heads": 128,
+          "num_kv_heads": 8
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/default/1/llama3-405b",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 10,
+        "num_checkpoints_read": 10,
+        "fsync": true,
+        "mode": "subset"
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269651869696.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 12.191935337908237,
+      "save_checkpoint_io_stdev_GB_per_second": 0.7740456592561188,
+      "save_checkpoint_duration_mean_seconds": 8.112103999999999,
+      "save_checkpoint_duration_stdev_seconds": 0.4631072065578337,
+      "load_checkpoint_io_mean_GB_per_second": 8.03368337576019,
+      "load_checkpoint_io_stdev_GB_per_second": 0.5013974782835173,
+      "load_checkpoint_duration_mean_seconds": 12.322741599999999,
+      "load_checkpoint_duration_stdev_seconds": 0.9031718537445904,
+      "checkpoint_size_GB": 98.54466915130615
+    }
+  },
+  {
+    "run_id": "/root/origin/mlpstorage_results/Samsung_Storage/Closed/Samsung/results/Samsung_PM1753_NVMe_Gen5/checkpointing/llama3-405b/20250624_141008",
+    "benchmark_type": "checkpointing",
+    "model": "llama3-405b",
+    "command": null,
+    "num_processes": 8,
+    "parameters": {
+      "model": {
+        "name": "llama_405b",
+        "type": "transformer",
+        "num_layers": 126,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "tensor": 8,
+          "pipeline": 32,
+          "zero_stage": 1,
+          "data": 2
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 16384,
+          "ffn_hidden_size": 53248,
+          "num_attention_heads": 128,
+          "num_kv_heads": 8
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/default/1/llama3-405b",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 10,
+        "num_checkpoints_read": 10,
+        "fsync": true,
+        "mode": "subset"
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269651869696.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 11.99374134703152,
+      "save_checkpoint_io_stdev_GB_per_second": 0.7574505862133434,
+      "save_checkpoint_duration_mean_seconds": 8.2459073,
+      "save_checkpoint_duration_stdev_seconds": 0.4691812932713857,
+      "load_checkpoint_io_mean_GB_per_second": 8.212667633026667,
+      "load_checkpoint_io_stdev_GB_per_second": 0.4929281746264028,
+      "load_checkpoint_duration_mean_seconds": 12.0492977,
+      "load_checkpoint_duration_stdev_seconds": 0.8377142628889699,
+      "checkpoint_size_GB": 98.54466915130615
+    }
+  },
+  {
+    "run_id": "/root/origin/mlpstorage_results/Samsung_Storage/Closed/Samsung/results/Samsung_PM1753_NVMe_Gen5/checkpointing/llama3-405b/20250624_163655",
+    "benchmark_type": "checkpointing",
+    "model": "llama3-405b",
+    "command": null,
+    "num_processes": 8,
+    "parameters": {
+      "model": {
+        "name": "llama_405b",
+        "type": "transformer",
+        "num_layers": 126,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "tensor": 8,
+          "pipeline": 32,
+          "zero_stage": 1,
+          "data": 2
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 16384,
+          "ffn_hidden_size": 53248,
+          "num_attention_heads": 128,
+          "num_kv_heads": 8
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/default/1/llama3-405b",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 10,
+        "num_checkpoints_read": 10,
+        "fsync": true,
+        "mode": "subset"
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269651869696.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 11.989339041929687,
+      "save_checkpoint_io_stdev_GB_per_second": 0.9460203806951264,
+      "save_checkpoint_duration_mean_seconds": 8.2654128,
+      "save_checkpoint_duration_stdev_seconds": 0.5850915558616103,
+      "load_checkpoint_io_mean_GB_per_second": 8.134659573120102,
+      "load_checkpoint_io_stdev_GB_per_second": 0.5088467922313333,
+      "load_checkpoint_duration_mean_seconds": 12.1711536,
+      "load_checkpoint_duration_stdev_seconds": 0.9111075998202627,
+      "checkpoint_size_GB": 98.54466915130615
+    }
+  },
+  {
+    "run_id": "/root/origin/mlpstorage_results/Samsung_Storage/Closed/Samsung/results/Samsung_PM1753_NVMe_Gen5/checkpointing/llama3-405b/20250624_174935",
+    "benchmark_type": "checkpointing",
+    "model": "llama3-405b",
+    "command": null,
+    "num_processes": 8,
+    "parameters": {
+      "model": {
+        "name": "llama_405b",
+        "type": "transformer",
+        "num_layers": 126,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "tensor": 8,
+          "pipeline": 32,
+          "zero_stage": 1,
+          "data": 2
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 16384,
+          "ffn_hidden_size": 53248,
+          "num_attention_heads": 128,
+          "num_kv_heads": 8
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/default/1/llama3-405b",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 10,
+        "num_checkpoints_read": 10,
+        "fsync": true,
+        "mode": "subset"
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269651869696.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 11.94171943488146,
+      "save_checkpoint_io_stdev_GB_per_second": 1.0481693995993717,
+      "save_checkpoint_duration_mean_seconds": 8.308054100000001,
+      "save_checkpoint_duration_stdev_seconds": 0.6389885709028683,
+      "load_checkpoint_io_mean_GB_per_second": 8.139918490582271,
+      "load_checkpoint_io_stdev_GB_per_second": 0.5368081222578492,
+      "load_checkpoint_duration_mean_seconds": 12.1697972,
+      "load_checkpoint_duration_stdev_seconds": 0.9629236104049791,
+      "checkpoint_size_GB": 98.54466915130615
+    }
+  },
+  {
+    "run_id": "/root/origin/mlpstorage_results/Samsung_Storage/Closed/Samsung/results/Samsung_PM1753_NVMe_Gen5/checkpointing/llama3-405b/20250624_182720",
+    "benchmark_type": "checkpointing",
+    "model": "llama3-405b",
+    "command": null,
+    "num_processes": 8,
+    "parameters": {
+      "model": {
+        "name": "llama_405b",
+        "type": "transformer",
+        "num_layers": 126,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "tensor": 8,
+          "pipeline": 32,
+          "zero_stage": 1,
+          "data": 2
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 16384,
+          "ffn_hidden_size": 53248,
+          "num_attention_heads": 128,
+          "num_kv_heads": 8
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/default/1/llama3-405b",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 10,
+        "num_checkpoints_read": 10,
+        "fsync": true,
+        "mode": "subset"
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269651869696.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 12.372433612757186,
+      "save_checkpoint_io_stdev_GB_per_second": 0.8158754396444523,
+      "save_checkpoint_duration_mean_seconds": 7.9983433,
+      "save_checkpoint_duration_stdev_seconds": 0.509058893683442,
+      "load_checkpoint_io_mean_GB_per_second": 8.08282726446247,
+      "load_checkpoint_io_stdev_GB_per_second": 0.4885676651116259,
+      "load_checkpoint_duration_mean_seconds": 12.245096700000001,
+      "load_checkpoint_duration_stdev_seconds": 0.8809023905859318,
+      "checkpoint_size_GB": 98.54466915130615
+    }
+  },
+  {
+    "run_id": "/root/origin/mlpstorage_results/Samsung_Storage/Closed/Samsung/results/Samsung_PM1753_NVMe_Gen5/checkpointing/llama3-405b/20250624_144711",
+    "benchmark_type": "checkpointing",
+    "model": "llama3-405b",
+    "command": null,
+    "num_processes": 8,
+    "parameters": {
+      "model": {
+        "name": "llama_405b",
+        "type": "transformer",
+        "num_layers": 126,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "tensor": 8,
+          "pipeline": 32,
+          "zero_stage": 1,
+          "data": 2
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 16384,
+          "ffn_hidden_size": 53248,
+          "num_attention_heads": 128,
+          "num_kv_heads": 8
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/default/1/llama3-405b",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 10,
+        "num_checkpoints_read": 10,
+        "fsync": true,
+        "mode": "subset"
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269651869696.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 12.528577158907337,
+      "save_checkpoint_io_stdev_GB_per_second": 1.3117548402568815,
+      "save_checkpoint_duration_mean_seconds": 7.944600299999999,
+      "save_checkpoint_duration_stdev_seconds": 0.756893703176219,
+      "load_checkpoint_io_mean_GB_per_second": 8.192978431867987,
+      "load_checkpoint_io_stdev_GB_per_second": 0.5350926743595871,
+      "load_checkpoint_duration_mean_seconds": 12.0902339,
+      "load_checkpoint_duration_stdev_seconds": 0.9539284950605521,
+      "checkpoint_size_GB": 98.54466915130615
+    }
+  }
+]

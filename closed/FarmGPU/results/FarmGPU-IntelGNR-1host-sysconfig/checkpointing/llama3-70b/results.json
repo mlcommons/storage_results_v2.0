@@ -1,0 +1,114 @@
+[
+  {
+    "run_id": "/home/fgpu/Closed/FarmGPU/results/FarmGPU-IntelGNR-1host-sysconfig/checkpointing/llama3-70b/20250710_072059",
+    "benchmark_type": "checkpointing",
+    "model": "llama3-70b",
+    "command": null,
+    "num_processes": 8,
+    "parameters": {
+      "model": {
+        "name": "llama_70b",
+        "type": "transformer",
+        "num_layers": 80,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "tensor": 8,
+          "pipeline": 1,
+          "zero_stage": 3,
+          "data": 8
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 8192,
+          "ffn_hidden_size": 28672,
+          "num_attention_heads": 128,
+          "num_kv_heads": 8
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/ssd/llama3-70b",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 10,
+        "num_checkpoints_read": 0,
+        "fsync": true,
+        "mode": "subset"
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269977591808.0,
+      "total_cores": 80
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 11.582398533914489,
+      "save_checkpoint_io_stdev_GB_per_second": 0.0545605617385993,
+      "save_checkpoint_duration_mean_seconds": 9.8342359,
+      "save_checkpoint_duration_stdev_seconds": 0.04625202766030888,
+      "checkpoint_size_GB": 113.90151596069336
+    }
+  },
+  {
+    "run_id": "/home/fgpu/Closed/FarmGPU/results/FarmGPU-IntelGNR-1host-sysconfig/checkpointing/llama3-70b/20250710_072350",
+    "benchmark_type": "checkpointing",
+    "model": "llama3-70b",
+    "command": null,
+    "num_processes": 8,
+    "parameters": {
+      "model": {
+        "name": "llama_70b",
+        "type": "transformer",
+        "num_layers": 80,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "tensor": 8,
+          "pipeline": 1,
+          "zero_stage": 3,
+          "data": 8
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 8192,
+          "ffn_hidden_size": 28672,
+          "num_attention_heads": 128,
+          "num_kv_heads": 8
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/ssd/llama3-70b",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 0,
+        "num_checkpoints_read": 10,
+        "fsync": true,
+        "mode": "subset"
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269977591808.0,
+      "total_cores": 80
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": NaN,
+      "save_checkpoint_io_stdev_GB_per_second": NaN,
+      "save_checkpoint_duration_mean_seconds": NaN,
+      "save_checkpoint_duration_stdev_seconds": NaN,
+      "load_checkpoint_io_mean_GB_per_second": 22.15212563817243,
+      "load_checkpoint_io_stdev_GB_per_second": 3.378430472862903,
+      "load_checkpoint_duration_mean_seconds": 5.306549500000001,
+      "load_checkpoint_duration_stdev_seconds": 1.0992056929611715,
+      "checkpoint_size_GB": 113.90151596069336
+    }
+  }
+]

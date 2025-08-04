@@ -1,0 +1,4913 @@
+[
+  {
+    "run_id": "/mnt/c/Users/hawadallah/Downloads/submissions_storage_v2.0-main/Kingston_Digital/Dell_R7525_Gen4/Closed/Kingston/results/KINGSTONSEDC3000ME15T3BK/checkpointing/llama3-405b/run_10_20250708_020334/checkpointing/llama3-405b/20250708_020334",
+    "benchmark_type": "checkpointing",
+    "model": "llama3-405b",
+    "command": null,
+    "num_processes": 8,
+    "parameters": {
+      "model": {
+        "name": "llama_405b",
+        "type": "transformer",
+        "num_layers": 126,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "tensor": 8,
+          "pipeline": 32,
+          "zero_stage": 1,
+          "data": 2
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 16384,
+          "ffn_hidden_size": 53248,
+          "num_attention_heads": 128,
+          "num_kv_heads": 8
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/KINGSTONSEDC3000ME15T3BK/checkpoints/llama3-405b",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 10,
+        "num_checkpoints_read": 0,
+        "fsync": true,
+        "mode": "subset"
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 3.5998364289993914,
+      "save_checkpoint_io_stdev_GB_per_second": 0.6102344925066988,
+      "save_checkpoint_duration_mean_seconds": 27.9731629,
+      "save_checkpoint_duration_stdev_seconds": 3.576750865059585,
+      "checkpoint_size_GB": 98.54466915130615
+    }
+  },
+  {
+    "run_id": "/mnt/c/Users/hawadallah/Downloads/submissions_storage_v2.0-main/Kingston_Digital/Dell_R7525_Gen4/Closed/Kingston/results/KINGSTONSEDC3000ME15T3BK/checkpointing/llama3-405b/run_10_20250708_020334/checkpointing/llama3-405b/20250708_021140",
+    "benchmark_type": "checkpointing",
+    "model": "llama3-405b",
+    "command": null,
+    "num_processes": 8,
+    "parameters": {
+      "model": {
+        "name": "llama_405b",
+        "type": "transformer",
+        "num_layers": 126,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "tensor": 8,
+          "pipeline": 32,
+          "zero_stage": 1,
+          "data": 2
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 16384,
+          "ffn_hidden_size": 53248,
+          "num_attention_heads": 128,
+          "num_kv_heads": 8
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/KINGSTONSEDC3000ME15T3BK/checkpoints/llama3-405b",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 0,
+        "num_checkpoints_read": 10,
+        "fsync": true,
+        "mode": "subset"
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": NaN,
+      "save_checkpoint_io_stdev_GB_per_second": NaN,
+      "save_checkpoint_duration_mean_seconds": NaN,
+      "save_checkpoint_duration_stdev_seconds": NaN,
+      "load_checkpoint_io_mean_GB_per_second": 6.175843980769551,
+      "load_checkpoint_io_stdev_GB_per_second": 0.12347395285291603,
+      "load_checkpoint_duration_mean_seconds": 15.962954400000001,
+      "load_checkpoint_duration_stdev_seconds": 0.32437448742254676,
+      "checkpoint_size_GB": 98.54466915130615
+    }
+  },
+  {
+    "run_id": "/mnt/c/Users/hawadallah/Downloads/submissions_storage_v2.0-main/Kingston_Digital/Dell_R7525_Gen4/Closed/Kingston/results/KINGSTONSEDC3000ME15T3BK/checkpointing/llama3-70b/run_2_20250707_214614/checkpointing/llama3-70b/20250707_214614",
+    "benchmark_type": "checkpointing",
+    "model": "llama3-70b",
+    "command": null,
+    "num_processes": 8,
+    "parameters": {
+      "model": {
+        "name": "llama_70b",
+        "type": "transformer",
+        "num_layers": 80,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "tensor": 8,
+          "pipeline": 1,
+          "zero_stage": 3,
+          "data": 8
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 8192,
+          "ffn_hidden_size": 28672,
+          "num_attention_heads": 128,
+          "num_kv_heads": 8
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/KINGSTONSEDC3000ME15T3BK/checkpoints/llama3-70b",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 10,
+        "num_checkpoints_read": 0,
+        "fsync": true,
+        "mode": "subset"
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 2.7131699921833357,
+      "save_checkpoint_io_stdev_GB_per_second": 0.47205909607698704,
+      "save_checkpoint_duration_mean_seconds": 42.87744,
+      "save_checkpoint_duration_stdev_seconds": 5.164917936207195,
+      "checkpoint_size_GB": 113.90151596069336
+    }
+  },
+  {
+    "run_id": "/mnt/c/Users/hawadallah/Downloads/submissions_storage_v2.0-main/Kingston_Digital/Dell_R7525_Gen4/Closed/Kingston/results/KINGSTONSEDC3000ME15T3BK/checkpointing/llama3-70b/run_2_20250707_214614/checkpointing/llama3-70b/20250707_215659",
+    "benchmark_type": "checkpointing",
+    "model": "llama3-70b",
+    "command": null,
+    "num_processes": 8,
+    "parameters": {
+      "model": {
+        "name": "llama_70b",
+        "type": "transformer",
+        "num_layers": 80,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "tensor": 8,
+          "pipeline": 1,
+          "zero_stage": 3,
+          "data": 8
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 8192,
+          "ffn_hidden_size": 28672,
+          "num_attention_heads": 128,
+          "num_kv_heads": 8
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/KINGSTONSEDC3000ME15T3BK/checkpoints/llama3-70b",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 0,
+        "num_checkpoints_read": 10,
+        "fsync": true,
+        "mode": "subset"
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": NaN,
+      "save_checkpoint_io_stdev_GB_per_second": NaN,
+      "save_checkpoint_duration_mean_seconds": NaN,
+      "save_checkpoint_duration_stdev_seconds": NaN,
+      "load_checkpoint_io_mean_GB_per_second": 5.942477356452466,
+      "load_checkpoint_io_stdev_GB_per_second": 0.07652497641647854,
+      "load_checkpoint_duration_mean_seconds": 19.170507199999996,
+      "load_checkpoint_duration_stdev_seconds": 0.24553784878417367,
+      "checkpoint_size_GB": 113.90151596069336
+    }
+  },
+  {
+    "run_id": "/mnt/c/Users/hawadallah/Downloads/submissions_storage_v2.0-main/Kingston_Digital/Dell_R7525_Gen4/Closed/Kingston/results/KINGSTONSEDC3000ME15T3BK/checkpointing/llama3-8b/run_2_20250707_191934/checkpointing/llama3-8b/20250707_191934",
+    "benchmark_type": "checkpointing",
+    "model": "llama3-8b",
+    "command": null,
+    "num_processes": 8,
+    "parameters": {
+      "model": {
+        "name": "llama_8b",
+        "type": "transformer",
+        "num_layers": 32,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "pipeline": 1,
+          "tensor": 1,
+          "zero_stage": 3
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 4096,
+          "ffn_hidden_size": 14336,
+          "num_attention_heads": 32,
+          "num_kv_heads": 8
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/KINGSTONSEDC3000ME15T3BK/checkpoints/llama3-8b",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 10,
+        "num_checkpoints_read": 0,
+        "fsync": true
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 2.9329018221857703,
+      "save_checkpoint_io_stdev_GB_per_second": 0.2838288583431362,
+      "save_checkpoint_duration_mean_seconds": 36.0026952,
+      "save_checkpoint_duration_stdev_seconds": 3.1453575027773173,
+      "checkpoint_size_GB": 104.70452117919922
+    }
+  },
+  {
+    "run_id": "/mnt/c/Users/hawadallah/Downloads/submissions_storage_v2.0-main/Kingston_Digital/Dell_R7525_Gen4/Closed/Kingston/results/KINGSTONSEDC3000ME15T3BK/checkpointing/llama3-8b/run_2_20250707_191934/checkpointing/llama3-8b/20250707_192912",
+    "benchmark_type": "checkpointing",
+    "model": "llama3-8b",
+    "command": null,
+    "num_processes": 8,
+    "parameters": {
+      "model": {
+        "name": "llama_8b",
+        "type": "transformer",
+        "num_layers": 32,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "pipeline": 1,
+          "tensor": 1,
+          "zero_stage": 3
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 4096,
+          "ffn_hidden_size": 14336,
+          "num_attention_heads": 32,
+          "num_kv_heads": 8
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/KINGSTONSEDC3000ME15T3BK/checkpoints/llama3-8b",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 0,
+        "num_checkpoints_read": 10,
+        "fsync": true
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": NaN,
+      "save_checkpoint_io_stdev_GB_per_second": NaN,
+      "save_checkpoint_duration_mean_seconds": NaN,
+      "save_checkpoint_duration_stdev_seconds": NaN,
+      "load_checkpoint_io_mean_GB_per_second": 6.251246506977343,
+      "load_checkpoint_io_stdev_GB_per_second": 0.23133469259037806,
+      "load_checkpoint_duration_mean_seconds": 16.773151199999997,
+      "load_checkpoint_duration_stdev_seconds": 0.6425978771586163,
+      "checkpoint_size_GB": 104.70452117919922
+    }
+  },
+  {
+    "run_id": "/mnt/c/Users/hawadallah/Downloads/submissions_storage_v2.0-main/Kingston_Digital/Dell_R7525_Gen4/Closed/Kingston/results/KINGSTONSEDC3000ME15T3BK/training/resnet50/run_1_20250705_002358/training/resnet50/run/20250705_003426",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 36,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 9394,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/mnt/KINGSTONSEDC3000ME15T3BK/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.224,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "computation_threads": 8,
+        "batch_size": 400
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "train_au_percentage": [
+        91.42669357846563,
+        91.86973317141766,
+        92.43584273870027,
+        92.67101514588974,
+        92.64233743354272
+      ],
+      "train_au_mean_percentage": 92.2091244136032,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.4857575928790929,
+      "train_throughput_samples_per_second": [
+        58609.0141469372,
+        58893.402926580144,
+        59258.06975271757,
+        59408.35274106309,
+        59388.28949092083
+      ],
+      "train_throughput_mean_samples_per_second": 59111.42581164377,
+      "train_throughput_stdev_samples_per_second": 311.8573401462816,
+      "train_io_mean_MB_per_second": 6463.737698901064,
+      "train_io_stdev_MB_per_second": 34.101089907824004
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "/mnt/c/Users/hawadallah/Downloads/submissions_storage_v2.0-main/Kingston_Digital/Dell_R7525_Gen4/Closed/Kingston/results/KINGSTONSEDC3000ME15T3BK/training/resnet50/run_1_20250713_031327/training/resnet50/run/20250713_032609",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 71,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 11350,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/mnt/KINGSTONSEDC3000ME15T3BK/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.435,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "computation_threads": 8,
+        "batch_size": 400,
+        "dont_use_mmap": true
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "train_au_percentage": [
+        88.7460691883198,
+        90.81889019484623,
+        90.84351377795933,
+        91.0771707166278,
+        90.62687796301351
+      ],
+      "train_au_mean_percentage": 90.42250436815333,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.8503131367952268,
+      "train_throughput_samples_per_second": [
+        57674.518603785495,
+        59021.880130950114,
+        59038.8319483336,
+        59188.33707060605,
+        58896.57096689168
+      ],
+      "train_throughput_mean_samples_per_second": 58764.027744113395,
+      "train_throughput_stdev_samples_per_second": 552.5651964005048,
+      "train_io_mean_MB_per_second": 6425.750288602814,
+      "train_io_stdev_MB_per_second": 60.42210016140521
+    },
+    "accelerator": "a100"
+  },
+  {
+    "run_id": "/mnt/c/Users/hawadallah/Downloads/submissions_storage_v2.0-main/Kingston_Digital/Dell_R7525_Gen4/Closed/Kingston/results/KINGSTONSEDC3000ME15T3BK/training/resnet50/run_2_20250705_005138/training/resnet50/run/20250705_005138",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 36,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 9394,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/mnt/KINGSTONSEDC3000ME15T3BK/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.224,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "computation_threads": 8,
+        "batch_size": 400
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "train_au_percentage": [
+        92.11732223417026,
+        92.81297286470812,
+        92.08060651889042,
+        92.45497616837577,
+        91.86436603125505
+      ],
+      "train_au_mean_percentage": 92.26604876347992,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.33246863334500515,
+      "train_throughput_samples_per_second": [
+        59042.62428786793,
+        59501.67331013113,
+        59023.713437584076,
+        59268.42797173918,
+        58881.92771314803
+      ],
+      "train_throughput_mean_samples_per_second": 59143.67334409407,
+      "train_throughput_stdev_samples_per_second": 217.64179702200087,
+      "train_io_mean_MB_per_second": 6467.263913813554,
+      "train_io_stdev_MB_per_second": 23.798774415462887
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "/mnt/c/Users/hawadallah/Downloads/submissions_storage_v2.0-main/Kingston_Digital/Dell_R7525_Gen4/Closed/Kingston/results/KINGSTONSEDC3000ME15T3BK/training/resnet50/run_2_20250713_034827/training/resnet50/run/20250713_034827",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 71,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 11350,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/mnt/KINGSTONSEDC3000ME15T3BK/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.435,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "computation_threads": 8,
+        "batch_size": 400,
+        "dont_use_mmap": true
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "train_au_percentage": [
+        91.15738948360669,
+        91.13529876627979,
+        91.45082340186381,
+        91.45080685164967,
+        91.10752147862253
+      ],
+      "train_au_mean_percentage": 91.26036799640448,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.15630045647781987,
+      "train_throughput_samples_per_second": [
+        59241.23313419138,
+        59227.48027088762,
+        59433.484642320596,
+        59432.598055441755,
+        59207.65463408134
+      ],
+      "train_throughput_mean_samples_per_second": 59308.49014738454,
+      "train_throughput_stdev_samples_per_second": 102.25488082579609,
+      "train_io_mean_MB_per_second": 6485.286361592695,
+      "train_io_stdev_MB_per_second": 11.181403916671217
+    },
+    "accelerator": "a100"
+  },
+  {
+    "run_id": "/mnt/c/Users/hawadallah/Downloads/submissions_storage_v2.0-main/Kingston_Digital/Dell_R7525_Gen4/Closed/Kingston/results/KINGSTONSEDC3000ME15T3BK/training/resnet50/run_3_20250705_010851/training/resnet50/run/20250705_010851",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 36,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 9394,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/mnt/KINGSTONSEDC3000ME15T3BK/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.224,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "computation_threads": 8,
+        "batch_size": 400
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "train_au_percentage": [
+        92.57668171274987,
+        92.30895698798741,
+        92.55688049333412,
+        92.44401050362637,
+        92.51193180031011
+      ],
+      "train_au_mean_percentage": 92.47969229960157,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.09677611907540018,
+      "train_throughput_samples_per_second": [
+        59343.7372126887,
+        59173.5151379326,
+        59335.05705373519,
+        59262.68829961377,
+        59306.24188236568
+      ],
+      "train_throughput_mean_samples_per_second": 59284.24791726719,
+      "train_throughput_stdev_samples_per_second": 62.1785246715451,
+      "train_io_mean_MB_per_second": 6482.635513392649,
+      "train_io_stdev_MB_per_second": 6.799119941078271
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "/mnt/c/Users/hawadallah/Downloads/submissions_storage_v2.0-main/Kingston_Digital/Dell_R7525_Gen4/Closed/Kingston/results/KINGSTONSEDC3000ME15T3BK/training/resnet50/run_3_20250713_041044/training/resnet50/run/20250713_041044",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 71,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 11350,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/mnt/KINGSTONSEDC3000ME15T3BK/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.435,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "computation_threads": 8,
+        "batch_size": 400,
+        "dont_use_mmap": true
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "train_au_percentage": [
+        91.14842001278517,
+        91.01189570378696,
+        90.91356106740633,
+        91.05364598979126,
+        91.0740970551019
+      ],
+      "train_au_mean_percentage": 91.04032396577432,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.07730440058403155,
+      "train_throughput_samples_per_second": [
+        59236.93189562856,
+        59147.588322267606,
+        59081.49144093394,
+        59173.82553498927,
+        59188.03333892325
+      ],
+      "train_throughput_mean_samples_per_second": 59165.57410654853,
+      "train_throughput_stdev_samples_per_second": 51.103464355401115,
+      "train_io_mean_MB_per_second": 6469.658726355593,
+      "train_io_stdev_MB_per_second": 5.588080215676114
+    },
+    "accelerator": "a100"
+  },
+  {
+    "run_id": "/mnt/c/Users/hawadallah/Downloads/submissions_storage_v2.0-main/Kingston_Digital/Dell_R7525_Gen4/Closed/Kingston/results/KINGSTONSEDC3000ME15T3BK/training/resnet50/run_4_20250705_012603/training/resnet50/run/20250705_012603",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 36,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 9394,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/mnt/KINGSTONSEDC3000ME15T3BK/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.224,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "computation_threads": 8,
+        "batch_size": 400
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "train_au_percentage": [
+        92.01585209253932,
+        92.48842222978767,
+        92.03140849468487,
+        92.11895549284102,
+        92.1359289623263
+      ],
+      "train_au_mean_percentage": 92.15811345443583,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.1717101200482926,
+      "train_throughput_samples_per_second": [
+        58981.63969832468,
+        59292.55461603658,
+        58990.538616037265,
+        59050.306349222636,
+        59058.08211533119
+      ],
+      "train_throughput_mean_samples_per_second": 59074.62427899047,
+      "train_throughput_stdev_samples_per_second": 113.20350493480859,
+      "train_io_mean_MB_per_second": 6459.713511517284,
+      "train_io_stdev_MB_per_second": 12.378618049688816
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "/mnt/c/Users/hawadallah/Downloads/submissions_storage_v2.0-main/Kingston_Digital/Dell_R7525_Gen4/Closed/Kingston/results/KINGSTONSEDC3000ME15T3BK/training/resnet50/run_4_20250713_043302/training/resnet50/run/20250713_043302",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 71,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 11350,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/mnt/KINGSTONSEDC3000ME15T3BK/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.435,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "computation_threads": 8,
+        "batch_size": 400,
+        "dont_use_mmap": true
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "train_au_percentage": [
+        90.93808213412187,
+        91.32229467978473,
+        90.95540323794486,
+        90.93304649575315,
+        90.85990065622435
+      ],
+      "train_au_mean_percentage": 91.00174544076579,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.16357990032899114,
+      "train_throughput_samples_per_second": [
+        59097.70228713586,
+        59347.702993094266,
+        59112.96662627571,
+        59095.26381628201,
+        59046.98220308359
+      ],
+      "train_throughput_mean_samples_per_second": 59140.12358517429,
+      "train_throughput_stdev_samples_per_second": 106.12633363979639,
+      "train_io_mean_MB_per_second": 6466.87575348352,
+      "train_io_stdev_MB_per_second": 11.604740947706613
+    },
+    "accelerator": "a100"
+  },
+  {
+    "run_id": "/mnt/c/Users/hawadallah/Downloads/submissions_storage_v2.0-main/Kingston_Digital/Dell_R7525_Gen4/Closed/Kingston/results/KINGSTONSEDC3000ME15T3BK/training/resnet50/run_5_20250705_014316/training/resnet50/run/20250705_014316",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 36,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 9394,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/mnt/KINGSTONSEDC3000ME15T3BK/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.224,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "computation_threads": 8,
+        "batch_size": 400
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "train_au_percentage": [
+        92.32873281354533,
+        92.58529935709076,
+        92.76229782659394,
+        92.44821001630794,
+        92.64716047034165
+      ],
+      "train_au_mean_percentage": 92.55434009677592,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.15164613754792056,
+      "train_throughput_samples_per_second": [
+        59183.2459140833,
+        59352.8841684888,
+        59468.816517447034,
+        59264.93691660957,
+        59395.4376744039
+      ],
+      "train_throughput_mean_samples_per_second": 59333.06423820652,
+      "train_throughput_stdev_samples_per_second": 99.7986159117661,
+      "train_io_mean_MB_per_second": 6487.973498217828,
+      "train_io_stdev_MB_per_second": 10.912815367075172
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "/mnt/c/Users/hawadallah/Downloads/submissions_storage_v2.0-main/Kingston_Digital/Dell_R7525_Gen4/Closed/Kingston/results/KINGSTONSEDC3000ME15T3BK/training/resnet50/run_5_20250713_045519/training/resnet50/run/20250713_045519",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 71,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 11350,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/mnt/KINGSTONSEDC3000ME15T3BK/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.435,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "computation_threads": 8,
+        "batch_size": 400,
+        "dont_use_mmap": true
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "train_au_percentage": [
+        91.07573531519827,
+        91.07485215689424,
+        90.86653610918655,
+        90.9266327253984,
+        90.68897283925371
+      ],
+      "train_au_mean_percentage": 90.92654582918624,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.14442601508429279,
+      "train_throughput_samples_per_second": [
+        59186.79320693125,
+        59186.04923039845,
+        59053.354741833784,
+        59087.444032339314,
+        58935.56543150694
+      ],
+      "train_throughput_mean_samples_per_second": 59089.84132860195,
+      "train_throughput_stdev_samples_per_second": 93.58813765376091,
+      "train_io_mean_MB_per_second": 6461.377470995324,
+      "train_io_stdev_MB_per_second": 10.233709730672706
+    },
+    "accelerator": "a100"
+  },
+  {
+    "run_id": "/mnt/c/Users/hawadallah/Downloads/submissions_storage_v2.0-main/Kingston_Digital/Dell_R7525_Gen4/Closed/Kingston/results/KINGSTONSEDC3000ME15T3BK/training/unet3d/run_1_20250710_103959/training/unet3d/run/20250710_105524",
+    "benchmark_type": "training",
+    "model": "unet3d",
+    "command": "run_benchmark",
+    "num_processes": 4,
+    "parameters": {
+      "model": {
+        "name": "unet3d",
+        "type": "cnn",
+        "model_size": 499153191
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": true,
+        "checkpoint": true
+      },
+      "dataset": {
+        "data_folder": "/mnt/KINGSTONSEDC3000ME15T3BK/unet3d",
+        "format": "npz",
+        "num_files_train": 14000,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 146600628,
+        "record_length_bytes_stdev": 68341808,
+        "record_length_bytes_resize": 2097152
+      },
+      "reader": {
+        "data_loader": "pytorch",
+        "batch_size": 7,
+        "read_threads": 16,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed"
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.636
+      },
+      "checkpoint": {
+        "checkpoint_folder": "checkpoints/unet3d",
+        "checkpoint_after_epoch": 5,
+        "epochs_between_checkpoints": 2
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 0.0025451676445322926,
+      "save_checkpoint_io_stdev_GB_per_second": 0.0,
+      "save_checkpoint_duration_mean_seconds": 0.003747,
+      "save_checkpoint_duration_stdev_seconds": 0.0,
+      "checkpoint_size_GB": 9.5367431640625e-06,
+      "train_au_percentage": [
+        98.08577072304425,
+        98.6407124528732,
+        98.89886372918275,
+        98.89250292900506,
+        98.64018352992503
+      ],
+      "train_au_mean_percentage": 98.63160667280604,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.2958332477740923,
+      "train_throughput_samples_per_second": [
+        43.04918058972885,
+        43.292913578235755,
+        43.40617646078844,
+        43.40355571285987,
+        43.29257413151074
+      ],
+      "train_throughput_mean_samples_per_second": 43.28888009462473,
+      "train_throughput_stdev_samples_per_second": 0.129918976657537,
+      "train_io_mean_MB_per_second": 6052.186019219098,
+      "train_io_stdev_MB_per_second": 18.163875167000068
+    },
+    "accelerator": "a100"
+  },
+  {
+    "run_id": "/mnt/c/Users/hawadallah/Downloads/submissions_storage_v2.0-main/Kingston_Digital/Dell_R7525_Gen4/Closed/Kingston/results/KINGSTONSEDC3000ME15T3BK/training/unet3d/run_2_20250710_112314/training/unet3d/run/20250710_112314",
+    "benchmark_type": "training",
+    "model": "unet3d",
+    "command": "run_benchmark",
+    "num_processes": 4,
+    "parameters": {
+      "model": {
+        "name": "unet3d",
+        "type": "cnn",
+        "model_size": 499153191
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": true,
+        "checkpoint": true
+      },
+      "dataset": {
+        "data_folder": "/mnt/KINGSTONSEDC3000ME15T3BK/unet3d",
+        "format": "npz",
+        "num_files_train": 14000,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 146600628,
+        "record_length_bytes_stdev": 68341808,
+        "record_length_bytes_resize": 2097152
+      },
+      "reader": {
+        "data_loader": "pytorch",
+        "batch_size": 7,
+        "read_threads": 16,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed"
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.636
+      },
+      "checkpoint": {
+        "checkpoint_folder": "checkpoints/unet3d",
+        "checkpoint_after_epoch": 5,
+        "epochs_between_checkpoints": 2
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 0.0026228666567828657,
+      "save_checkpoint_io_stdev_GB_per_second": 0.0,
+      "save_checkpoint_duration_mean_seconds": 0.003636,
+      "save_checkpoint_duration_stdev_seconds": 0.0,
+      "checkpoint_size_GB": 9.5367431640625e-06,
+      "train_au_percentage": [
+        98.94866600498939,
+        98.77209357260391,
+        98.6647891215964,
+        98.81036904406979,
+        98.82975560828936
+      ],
+      "train_au_mean_percentage": 98.80513467030977,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.09167706416747137,
+      "train_throughput_samples_per_second": [
+        43.42841972914461,
+        43.350512354626986,
+        43.303582916038266,
+        43.367262751597856,
+        43.376015898423915
+      ],
+      "train_throughput_mean_samples_per_second": 43.365158729966325,
+      "train_throughput_stdev_samples_per_second": 0.040324573655429664,
+      "train_io_mean_MB_per_second": 6062.850478298898,
+      "train_io_stdev_MB_per_second": 5.637748548238988
+    },
+    "accelerator": "a100"
+  },
+  {
+    "run_id": "/mnt/c/Users/hawadallah/Downloads/submissions_storage_v2.0-main/Kingston_Digital/Dell_R7525_Gen4/Closed/Kingston/results/KINGSTONSEDC3000ME15T3BK/training/unet3d/run_3_20250710_115058/training/unet3d/run/20250710_115058",
+    "benchmark_type": "training",
+    "model": "unet3d",
+    "command": "run_benchmark",
+    "num_processes": 4,
+    "parameters": {
+      "model": {
+        "name": "unet3d",
+        "type": "cnn",
+        "model_size": 499153191
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": true,
+        "checkpoint": true
+      },
+      "dataset": {
+        "data_folder": "/mnt/KINGSTONSEDC3000ME15T3BK/unet3d",
+        "format": "npz",
+        "num_files_train": 14000,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 146600628,
+        "record_length_bytes_stdev": 68341808,
+        "record_length_bytes_resize": 2097152
+      },
+      "reader": {
+        "data_loader": "pytorch",
+        "batch_size": 7,
+        "read_threads": 16,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed"
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.636
+      },
+      "checkpoint": {
+        "checkpoint_folder": "checkpoints/unet3d",
+        "checkpoint_after_epoch": 5,
+        "epochs_between_checkpoints": 2
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 0.0028925517634402487,
+      "save_checkpoint_io_stdev_GB_per_second": 0.0,
+      "save_checkpoint_duration_mean_seconds": 0.003297,
+      "save_checkpoint_duration_stdev_seconds": 0.0,
+      "checkpoint_size_GB": 9.5367431640625e-06,
+      "train_au_percentage": [
+        98.86133962496848,
+        98.88222522335315,
+        98.73672023694981,
+        98.91696103073602,
+        98.88353393169066
+      ],
+      "train_au_mean_percentage": 98.8561560095396,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.06231882344187542,
+      "train_throughput_samples_per_second": [
+        43.389856083321405,
+        43.3982567325595,
+        43.33507471934098,
+        43.41433096460915,
+        43.39961405718803
+      ],
+      "train_throughput_mean_samples_per_second": 43.38742651140382,
+      "train_throughput_stdev_samples_per_second": 0.02733602939965699,
+      "train_io_mean_MB_per_second": 6065.963720203064,
+      "train_io_stdev_MB_per_second": 3.821829869285753
+    },
+    "accelerator": "a100"
+  },
+  {
+    "run_id": "/mnt/c/Users/hawadallah/Downloads/submissions_storage_v2.0-main/Kingston_Digital/Dell_R7525_Gen4/Closed/Kingston/results/KINGSTONSEDC3000ME15T3BK/training/unet3d/run_4_20250710_121841/training/unet3d/run/20250710_121841",
+    "benchmark_type": "training",
+    "model": "unet3d",
+    "command": "run_benchmark",
+    "num_processes": 4,
+    "parameters": {
+      "model": {
+        "name": "unet3d",
+        "type": "cnn",
+        "model_size": 499153191
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": true,
+        "checkpoint": true
+      },
+      "dataset": {
+        "data_folder": "/mnt/KINGSTONSEDC3000ME15T3BK/unet3d",
+        "format": "npz",
+        "num_files_train": 14000,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 146600628,
+        "record_length_bytes_stdev": 68341808,
+        "record_length_bytes_resize": 2097152
+      },
+      "reader": {
+        "data_loader": "pytorch",
+        "batch_size": 7,
+        "read_threads": 16,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed"
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.636
+      },
+      "checkpoint": {
+        "checkpoint_folder": "checkpoints/unet3d",
+        "checkpoint_after_epoch": 5,
+        "epochs_between_checkpoints": 2
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 0.0028107112184092248,
+      "save_checkpoint_io_stdev_GB_per_second": 0.0,
+      "save_checkpoint_duration_mean_seconds": 0.003393,
+      "save_checkpoint_duration_stdev_seconds": 0.0,
+      "checkpoint_size_GB": 9.5367431640625e-06,
+      "train_au_percentage": [
+        98.89327430061385,
+        98.91551141063566,
+        98.9242636239969,
+        98.87361376030165,
+        98.8865860265588
+      ],
+      "train_au_mean_percentage": 98.89864982442137,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.018663417693647037,
+      "train_throughput_samples_per_second": [
+        43.40408264946568,
+        43.41353763468156,
+        43.41770429445584,
+        43.39501410917248,
+        43.40077349609001
+      ],
+      "train_throughput_mean_samples_per_second": 43.40622243677311,
+      "train_throughput_stdev_samples_per_second": 0.008309529808337738,
+      "train_io_mean_MB_per_second": 6068.591564501408,
+      "train_io_stdev_MB_per_second": 1.1617491610403368
+    },
+    "accelerator": "a100"
+  },
+  {
+    "run_id": "/mnt/c/Users/hawadallah/Downloads/submissions_storage_v2.0-main/Kingston_Digital/Dell_R7525_Gen4/Closed/Kingston/results/KINGSTONSEDC3000ME15T3BK/training/unet3d/run_5_20250710_124623/training/unet3d/run/20250710_124624",
+    "benchmark_type": "training",
+    "model": "unet3d",
+    "command": "run_benchmark",
+    "num_processes": 4,
+    "parameters": {
+      "model": {
+        "name": "unet3d",
+        "type": "cnn",
+        "model_size": 499153191
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": true,
+        "checkpoint": true
+      },
+      "dataset": {
+        "data_folder": "/mnt/KINGSTONSEDC3000ME15T3BK/unet3d",
+        "format": "npz",
+        "num_files_train": 14000,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 146600628,
+        "record_length_bytes_stdev": 68341808,
+        "record_length_bytes_resize": 2097152
+      },
+      "reader": {
+        "data_loader": "pytorch",
+        "batch_size": 7,
+        "read_threads": 16,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed"
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.636
+      },
+      "checkpoint": {
+        "checkpoint_folder": "checkpoints/unet3d",
+        "checkpoint_after_epoch": 5,
+        "epochs_between_checkpoints": 2
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 0.0029765115992704434,
+      "save_checkpoint_io_stdev_GB_per_second": 0.0,
+      "save_checkpoint_duration_mean_seconds": 0.003204,
+      "save_checkpoint_duration_stdev_seconds": 0.0,
+      "checkpoint_size_GB": 9.5367431640625e-06,
+      "train_au_percentage": [
+        98.8955545774509,
+        98.80020674783893,
+        98.99618759532352,
+        98.92508684300071,
+        98.9411183128388
+      ],
+      "train_au_mean_percentage": 98.91163081529058,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.06461299323430118,
+      "train_throughput_samples_per_second": [
+        43.40502457801567,
+        43.362921890408046,
+        43.448852020718284,
+        43.41784788844119,
+        43.42468686574834
+      ],
+      "train_throughput_mean_samples_per_second": 43.411866648666305,
+      "train_throughput_stdev_samples_per_second": 0.028321208423533827,
+      "train_io_mean_MB_per_second": 6069.380677553879,
+      "train_io_stdev_MB_per_second": 3.959567013367604
+    },
+    "accelerator": "a100"
+  },
+  {
+    "run_id": "/mnt/c/Users/hawadallah/Downloads/submissions_storage_v2.0-main/Kingston_Digital/Dell_R7525_Gen4/Closed/Kingston/results/KINGSTONSEDC3000ME3T8BK/checkpointing/llama3-405b/run_8_20250708_211142/checkpointing/llama3-405b/20250708_211142",
+    "benchmark_type": "checkpointing",
+    "model": "llama3-405b",
+    "command": null,
+    "num_processes": 8,
+    "parameters": {
+      "model": {
+        "name": "llama_405b",
+        "type": "transformer",
+        "num_layers": 126,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "tensor": 8,
+          "pipeline": 32,
+          "zero_stage": 1,
+          "data": 2
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 16384,
+          "ffn_hidden_size": 53248,
+          "num_attention_heads": 128,
+          "num_kv_heads": 8
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/KINGSTONSEDC3000ME3T8BK/checkpoints/llama3-405b",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 10,
+        "num_checkpoints_read": 0,
+        "fsync": true,
+        "mode": "subset"
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 3.591244863672974,
+      "save_checkpoint_io_stdev_GB_per_second": 0.8072675750908085,
+      "save_checkpoint_duration_mean_seconds": 28.3566282,
+      "save_checkpoint_duration_stdev_seconds": 4.102011237160566,
+      "checkpoint_size_GB": 98.54466915130615
+    }
+  },
+  {
+    "run_id": "/mnt/c/Users/hawadallah/Downloads/submissions_storage_v2.0-main/Kingston_Digital/Dell_R7525_Gen4/Closed/Kingston/results/KINGSTONSEDC3000ME3T8BK/checkpointing/llama3-405b/run_8_20250708_211142/checkpointing/llama3-405b/20250708_211944",
+    "benchmark_type": "checkpointing",
+    "model": "llama3-405b",
+    "command": null,
+    "num_processes": 8,
+    "parameters": {
+      "model": {
+        "name": "llama_405b",
+        "type": "transformer",
+        "num_layers": 126,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "tensor": 8,
+          "pipeline": 32,
+          "zero_stage": 1,
+          "data": 2
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 16384,
+          "ffn_hidden_size": 53248,
+          "num_attention_heads": 128,
+          "num_kv_heads": 8
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/KINGSTONSEDC3000ME3T8BK/checkpoints/llama3-405b",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 0,
+        "num_checkpoints_read": 10,
+        "fsync": true,
+        "mode": "subset"
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": NaN,
+      "save_checkpoint_io_stdev_GB_per_second": NaN,
+      "save_checkpoint_duration_mean_seconds": NaN,
+      "save_checkpoint_duration_stdev_seconds": NaN,
+      "load_checkpoint_io_mean_GB_per_second": 6.02859421913201,
+      "load_checkpoint_io_stdev_GB_per_second": 0.056581279842434884,
+      "load_checkpoint_duration_mean_seconds": 16.3476438,
+      "load_checkpoint_duration_stdev_seconds": 0.1527395176362692,
+      "checkpoint_size_GB": 98.54466915130615
+    }
+  },
+  {
+    "run_id": "/mnt/c/Users/hawadallah/Downloads/submissions_storage_v2.0-main/Kingston_Digital/Dell_R7525_Gen4/Closed/Kingston/results/KINGSTONSEDC3000ME3T8BK/checkpointing/llama3-70b/run_2_20250708_172029/checkpointing/llama3-70b/20250708_172029",
+    "benchmark_type": "checkpointing",
+    "model": "llama3-70b",
+    "command": null,
+    "num_processes": 8,
+    "parameters": {
+      "model": {
+        "name": "llama_70b",
+        "type": "transformer",
+        "num_layers": 80,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "tensor": 8,
+          "pipeline": 1,
+          "zero_stage": 3,
+          "data": 8
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 8192,
+          "ffn_hidden_size": 28672,
+          "num_attention_heads": 128,
+          "num_kv_heads": 8
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/KINGSTONSEDC3000ME3T8BK/checkpoints/llama3-70b",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 10,
+        "num_checkpoints_read": 0,
+        "fsync": true,
+        "mode": "subset"
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 2.767847939065727,
+      "save_checkpoint_io_stdev_GB_per_second": 0.15493943855504072,
+      "save_checkpoint_duration_mean_seconds": 41.276841999999995,
+      "save_checkpoint_duration_stdev_seconds": 2.240822295447723,
+      "checkpoint_size_GB": 113.90151596069336
+    }
+  },
+  {
+    "run_id": "/mnt/c/Users/hawadallah/Downloads/submissions_storage_v2.0-main/Kingston_Digital/Dell_R7525_Gen4/Closed/Kingston/results/KINGSTONSEDC3000ME3T8BK/checkpointing/llama3-70b/run_2_20250708_172029/checkpointing/llama3-70b/20250708_173104",
+    "benchmark_type": "checkpointing",
+    "model": "llama3-70b",
+    "command": null,
+    "num_processes": 8,
+    "parameters": {
+      "model": {
+        "name": "llama_70b",
+        "type": "transformer",
+        "num_layers": 80,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "tensor": 8,
+          "pipeline": 1,
+          "zero_stage": 3,
+          "data": 8
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 8192,
+          "ffn_hidden_size": 28672,
+          "num_attention_heads": 128,
+          "num_kv_heads": 8
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/KINGSTONSEDC3000ME3T8BK/checkpoints/llama3-70b",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 0,
+        "num_checkpoints_read": 10,
+        "fsync": true,
+        "mode": "subset"
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": NaN,
+      "save_checkpoint_io_stdev_GB_per_second": NaN,
+      "save_checkpoint_duration_mean_seconds": NaN,
+      "save_checkpoint_duration_stdev_seconds": NaN,
+      "load_checkpoint_io_mean_GB_per_second": 5.9119517647010795,
+      "load_checkpoint_io_stdev_GB_per_second": 0.042126932628512824,
+      "load_checkpoint_duration_mean_seconds": 19.2672879,
+      "load_checkpoint_duration_stdev_seconds": 0.13675340118435808,
+      "checkpoint_size_GB": 113.90151596069336
+    }
+  },
+  {
+    "run_id": "/mnt/c/Users/hawadallah/Downloads/submissions_storage_v2.0-main/Kingston_Digital/Dell_R7525_Gen4/Closed/Kingston/results/KINGSTONSEDC3000ME3T8BK/checkpointing/llama3-8b/run_4_20250708_152421/checkpointing/llama3-8b/20250708_152421",
+    "benchmark_type": "checkpointing",
+    "model": "llama3-8b",
+    "command": null,
+    "num_processes": 8,
+    "parameters": {
+      "model": {
+        "name": "llama_8b",
+        "type": "transformer",
+        "num_layers": 32,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "pipeline": 1,
+          "tensor": 1,
+          "zero_stage": 3
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 4096,
+          "ffn_hidden_size": 14336,
+          "num_attention_heads": 32,
+          "num_kv_heads": 8
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/KINGSTONSEDC3000ME3T8BK/checkpoints/llama3-8b",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 10,
+        "num_checkpoints_read": 0,
+        "fsync": true
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 2.892398025703636,
+      "save_checkpoint_io_stdev_GB_per_second": 0.3753122848049604,
+      "save_checkpoint_duration_mean_seconds": 36.6911432,
+      "save_checkpoint_duration_stdev_seconds": 3.8080886542532015,
+      "checkpoint_size_GB": 104.70452117919922
+    }
+  },
+  {
+    "run_id": "/mnt/c/Users/hawadallah/Downloads/submissions_storage_v2.0-main/Kingston_Digital/Dell_R7525_Gen4/Closed/Kingston/results/KINGSTONSEDC3000ME3T8BK/checkpointing/llama3-8b/run_4_20250708_152421/checkpointing/llama3-8b/20250708_153358",
+    "benchmark_type": "checkpointing",
+    "model": "llama3-8b",
+    "command": null,
+    "num_processes": 8,
+    "parameters": {
+      "model": {
+        "name": "llama_8b",
+        "type": "transformer",
+        "num_layers": 32,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "pipeline": 1,
+          "tensor": 1,
+          "zero_stage": 3
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 4096,
+          "ffn_hidden_size": 14336,
+          "num_attention_heads": 32,
+          "num_kv_heads": 8
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/KINGSTONSEDC3000ME3T8BK/checkpoints/llama3-8b",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 0,
+        "num_checkpoints_read": 10,
+        "fsync": true
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": NaN,
+      "save_checkpoint_io_stdev_GB_per_second": NaN,
+      "save_checkpoint_duration_mean_seconds": NaN,
+      "save_checkpoint_duration_stdev_seconds": NaN,
+      "load_checkpoint_io_mean_GB_per_second": 5.948153582838257,
+      "load_checkpoint_io_stdev_GB_per_second": 0.04506641697798954,
+      "load_checkpoint_duration_mean_seconds": 17.60388,
+      "load_checkpoint_duration_stdev_seconds": 0.13448932018268278,
+      "checkpoint_size_GB": 104.70452117919922
+    }
+  },
+  {
+    "run_id": "/mnt/c/Users/hawadallah/Downloads/submissions_storage_v2.0-main/Kingston_Digital/Dell_R7525_Gen4/Closed/Kingston/results/KINGSTONSEDC3000ME3T8BK/training/resnet50/run_1_20250705_142504/training/resnet50/run/20250705_143525",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 36,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 9394,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/mnt/KINGSTONSEDC3000ME3T8BK/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.224,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "computation_threads": 8,
+        "batch_size": 400
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "train_au_percentage": [
+        90.96869926094135,
+        91.91037427488585,
+        92.31042343979593,
+        92.60502539199193,
+        92.44859934674312
+      ],
+      "train_au_mean_percentage": 92.04862434287163,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.58710342567809,
+      "train_throughput_samples_per_second": [
+        58320.626894532696,
+        58918.9950260324,
+        59178.69221299622,
+        59369.84831831091,
+        59264.80055483984
+      ],
+      "train_throughput_mean_samples_per_second": 59010.59260134242,
+      "train_throughput_stdev_samples_per_second": 375.8687605029633,
+      "train_io_mean_MB_per_second": 6452.711752330211,
+      "train_io_stdev_MB_per_second": 41.100633993227966
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "/mnt/c/Users/hawadallah/Downloads/submissions_storage_v2.0-main/Kingston_Digital/Dell_R7525_Gen4/Closed/Kingston/results/KINGSTONSEDC3000ME3T8BK/training/resnet50/run_1_20250717_215708/training/resnet50/run/20250717_220946",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 71,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 11350,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/mnt/KINGSTONSEDC3000ME3T8BK/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.435,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "computation_threads": 8,
+        "batch_size": 400,
+        "dont_use_mmap": true
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "train_au_percentage": [
+        88.88440888196719,
+        90.88677125909194,
+        91.22093634665757,
+        91.03933302003034,
+        91.04180244683829
+      ],
+      "train_au_mean_percentage": 90.61465039091705,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.8715712616494258,
+      "train_throughput_samples_per_second": [
+        57763.755706561766,
+        59065.92743214336,
+        59280.23935191917,
+        59163.706642104575,
+        59163.21187503556
+      ],
+      "train_throughput_mean_samples_per_second": 58887.36820155289,
+      "train_throughput_stdev_samples_per_second": 565.8955459174977,
+      "train_io_mean_MB_per_second": 6439.237365823583,
+      "train_io_stdev_MB_per_second": 61.879752070988175
+    },
+    "accelerator": "a100"
+  },
+  {
+    "run_id": "/mnt/c/Users/hawadallah/Downloads/submissions_storage_v2.0-main/Kingston_Digital/Dell_R7525_Gen4/Closed/Kingston/results/KINGSTONSEDC3000ME3T8BK/training/resnet50/run_2_20250705_145239/training/resnet50/run/20250705_145239",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 36,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 9394,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/mnt/KINGSTONSEDC3000ME3T8BK/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.224,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "computation_threads": 8,
+        "batch_size": 400
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "train_au_percentage": [
+        92.32260437437431,
+        92.411382578158,
+        92.66162306786968,
+        92.50100040244598,
+        92.66381213756368
+      ],
+      "train_au_mean_percentage": 92.51208451208234,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.13531408764024463,
+      "train_throughput_samples_per_second": [
+        59189.113758059,
+        59244.80340534266,
+        59406.24450306541,
+        59300.34793005748,
+        59409.38575895339
+      ],
+      "train_throughput_mean_samples_per_second": 59309.9790710956,
+      "train_throughput_stdev_samples_per_second": 87.29006033067049,
+      "train_io_mean_MB_per_second": 6485.449172964437,
+      "train_io_stdev_MB_per_second": 9.54502527982607
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "/mnt/c/Users/hawadallah/Downloads/submissions_storage_v2.0-main/Kingston_Digital/Dell_R7525_Gen4/Closed/Kingston/results/KINGSTONSEDC3000ME3T8BK/training/resnet50/run_2_20250717_223205/training/resnet50/run/20250717_223205",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 71,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 11350,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/mnt/KINGSTONSEDC3000ME3T8BK/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.435,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "computation_threads": 8,
+        "batch_size": 400,
+        "dont_use_mmap": true
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "train_au_percentage": [
+        91.18706262639208,
+        91.31966568137464,
+        90.93041913051363,
+        91.15089641394508,
+        91.12590330520742
+      ],
+      "train_au_mean_percentage": 91.14278943148658,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.12545703066966468,
+      "train_throughput_samples_per_second": [
+        59260.82725651035,
+        59345.40849622514,
+        59090.92156460912,
+        59235.7358544861,
+        59221.49118315362
+      ],
+      "train_throughput_mean_samples_per_second": 59230.876870996864,
+      "train_throughput_stdev_samples_per_second": 82.11419781348977,
+      "train_io_mean_MB_per_second": 6476.799476804621,
+      "train_io_stdev_MB_per_second": 8.97905318192347
+    },
+    "accelerator": "a100"
+  },
+  {
+    "run_id": "/mnt/c/Users/hawadallah/Downloads/submissions_storage_v2.0-main/Kingston_Digital/Dell_R7525_Gen4/Closed/Kingston/results/KINGSTONSEDC3000ME3T8BK/training/resnet50/run_3_20250705_150951/training/resnet50/run/20250705_150951",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 36,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 9394,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/mnt/KINGSTONSEDC3000ME3T8BK/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.224,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "computation_threads": 8,
+        "batch_size": 400
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "train_au_percentage": [
+        92.14224461665657,
+        92.46895703801043,
+        92.5596813103821,
+        92.5470030165412,
+        92.38322729870971
+      ],
+      "train_au_mean_percentage": 92.42022265606002,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.15266791601984708,
+      "train_throughput_samples_per_second": [
+        59074.65571432925,
+        59281.76948962873,
+        59342.76839215038,
+        59330.54605104627,
+        59227.239385201
+      ],
+      "train_throughput_mean_samples_per_second": 59251.39580647113,
+      "train_throughput_stdev_samples_per_second": 97.32097833198561,
+      "train_io_mean_MB_per_second": 6479.043188827216,
+      "train_io_stdev_MB_per_second": 10.641889751447634
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "/mnt/c/Users/hawadallah/Downloads/submissions_storage_v2.0-main/Kingston_Digital/Dell_R7525_Gen4/Closed/Kingston/results/KINGSTONSEDC3000ME3T8BK/training/resnet50/run_3_20250717_225422/training/resnet50/run/20250717_225423",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 71,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 11350,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/mnt/KINGSTONSEDC3000ME3T8BK/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.435,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "computation_threads": 8,
+        "batch_size": 400,
+        "dont_use_mmap": true
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "train_au_percentage": [
+        90.8933315076952,
+        90.98243552661323,
+        91.34227275356488,
+        90.90417995631486,
+        91.40512478564318
+      ],
+      "train_au_mean_percentage": 91.10546890596626,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.22204793982132248,
+      "train_throughput_samples_per_second": [
+        59072.227303770844,
+        59129.66099757669,
+        59359.960131039516,
+        59081.243897088505,
+        59404.03039282817
+      ],
+      "train_throughput_mean_samples_per_second": 59209.424544460744,
+      "train_throughput_stdev_samples_per_second": 142.9321403118517,
+      "train_io_mean_MB_per_second": 6474.453699996555,
+      "train_io_stdev_MB_per_second": 15.629395688444841
+    },
+    "accelerator": "a100"
+  },
+  {
+    "run_id": "/mnt/c/Users/hawadallah/Downloads/submissions_storage_v2.0-main/Kingston_Digital/Dell_R7525_Gen4/Closed/Kingston/results/KINGSTONSEDC3000ME3T8BK/training/resnet50/run_4_20250705_152704/training/resnet50/run/20250705_152704",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 36,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 9394,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/mnt/KINGSTONSEDC3000ME3T8BK/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.224,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "computation_threads": 8,
+        "batch_size": 400
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "train_au_percentage": [
+        92.25332114879717,
+        92.30570194610925,
+        92.59270024042718,
+        92.35561755634434,
+        92.31782175730521
+      ],
+      "train_au_mean_percentage": 92.36503252979662,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.11844799367958077,
+      "train_throughput_samples_per_second": [
+        59143.19640887733,
+        59173.85855793652,
+        59361.9461458173,
+        59210.92519086748,
+        59187.14837278493
+      ],
+      "train_throughput_mean_samples_per_second": 59215.41493525672,
+      "train_throughput_stdev_samples_per_second": 76.46306307674514,
+      "train_io_mean_MB_per_second": 6475.108739429074,
+      "train_io_stdev_MB_per_second": 8.361110844415679
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "/mnt/c/Users/hawadallah/Downloads/submissions_storage_v2.0-main/Kingston_Digital/Dell_R7525_Gen4/Closed/Kingston/results/KINGSTONSEDC3000ME3T8BK/training/resnet50/run_4_20250717_231640/training/resnet50/run/20250717_231640",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 71,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 11350,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/mnt/KINGSTONSEDC3000ME3T8BK/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.435,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "computation_threads": 8,
+        "batch_size": 400,
+        "dont_use_mmap": true
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "train_au_percentage": [
+        91.31330065203468,
+        91.11097643089451,
+        91.26924494003916,
+        91.24020663553448,
+        91.14752716754414
+      ],
+      "train_au_mean_percentage": 91.2162511652094,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.07563936166100152,
+      "train_throughput_samples_per_second": [
+        59339.22852854737,
+        59210.23433070193,
+        59312.45905449122,
+        59298.23425919397,
+        59235.70607104706
+      ],
+      "train_throughput_mean_samples_per_second": 59279.172448796315,
+      "train_throughput_stdev_samples_per_second": 48.41461260905643,
+      "train_io_mean_MB_per_second": 6482.080519219453,
+      "train_io_stdev_MB_per_second": 5.294058676507276
+    },
+    "accelerator": "a100"
+  },
+  {
+    "run_id": "/mnt/c/Users/hawadallah/Downloads/submissions_storage_v2.0-main/Kingston_Digital/Dell_R7525_Gen4/Closed/Kingston/results/KINGSTONSEDC3000ME3T8BK/training/resnet50/run_5_20250705_154416/training/resnet50/run/20250705_154417",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 36,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 9394,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/mnt/KINGSTONSEDC3000ME3T8BK/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.224,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "computation_threads": 8,
+        "batch_size": 400
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "train_au_percentage": [
+        91.91191824781498,
+        92.64409420402859,
+        92.784763491746,
+        92.47957761300898,
+        92.69361933497203
+      ],
+      "train_au_mean_percentage": 92.50279457831411,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.31162798511836665,
+      "train_throughput_samples_per_second": [
+        58913.66401012144,
+        59397.13857890884,
+        59485.852669816726,
+        59289.2220274772,
+        59426.58510611331
+      ],
+      "train_throughput_mean_samples_per_second": 59302.492478487504,
+      "train_throughput_stdev_samples_per_second": 204.61745135850165,
+      "train_io_mean_MB_per_second": 6484.630526311732,
+      "train_io_stdev_MB_per_second": 22.37458352659931
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "/mnt/c/Users/hawadallah/Downloads/submissions_storage_v2.0-main/Kingston_Digital/Dell_R7525_Gen4/Closed/Kingston/results/KINGSTONSEDC3000ME3T8BK/training/resnet50/run_5_20250717_233858/training/resnet50/run/20250717_233858",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 71,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 11350,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/mnt/KINGSTONSEDC3000ME3T8BK/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.435,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "computation_threads": 8,
+        "batch_size": 400,
+        "dont_use_mmap": true
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "train_au_percentage": [
+        91.25035544922113,
+        91.29956914767928,
+        91.20511894712973,
+        91.38345857210732,
+        91.34355665655595
+      ],
+      "train_au_mean_percentage": 91.2964117545387,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.06366367773008322,
+      "train_throughput_samples_per_second": [
+        59295.87034653304,
+        59333.243276605775,
+        59272.06904147672,
+        59386.700361734984,
+        59360.11303655266
+      ],
+      "train_throughput_mean_samples_per_second": 59329.59921258064,
+      "train_throughput_stdev_samples_per_second": 41.598728064363584,
+      "train_io_mean_MB_per_second": 6487.594603334847,
+      "train_io_stdev_MB_per_second": 4.548752853175062
+    },
+    "accelerator": "a100"
+  },
+  {
+    "run_id": "/mnt/c/Users/hawadallah/Downloads/submissions_storage_v2.0-main/Kingston_Digital/Dell_R7525_Gen4/Closed/Kingston/results/KINGSTONSEDC3000ME3T8BK/training/unet3d/run_1_20250710_131435/training/unet3d/run/20250710_133005",
+    "benchmark_type": "training",
+    "model": "unet3d",
+    "command": "run_benchmark",
+    "num_processes": 4,
+    "parameters": {
+      "model": {
+        "name": "unet3d",
+        "type": "cnn",
+        "model_size": 499153191
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": true,
+        "checkpoint": true
+      },
+      "dataset": {
+        "data_folder": "/mnt/KINGSTONSEDC3000ME3T8BK/unet3d",
+        "format": "npz",
+        "num_files_train": 14000,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 146600628,
+        "record_length_bytes_stdev": 68341808,
+        "record_length_bytes_resize": 2097152
+      },
+      "reader": {
+        "data_loader": "pytorch",
+        "batch_size": 7,
+        "read_threads": 16,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed"
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.636
+      },
+      "checkpoint": {
+        "checkpoint_folder": "checkpoints/unet3d",
+        "checkpoint_after_epoch": 5,
+        "epochs_between_checkpoints": 2
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 0.002583783030090084,
+      "save_checkpoint_io_stdev_GB_per_second": 0.0,
+      "save_checkpoint_duration_mean_seconds": 0.003691,
+      "save_checkpoint_duration_stdev_seconds": 0.0,
+      "checkpoint_size_GB": 9.5367431640625e-06,
+      "train_au_percentage": [
+        98.18147170809118,
+        98.90270504096951,
+        98.92653356745583,
+        98.94501187263253,
+        98.90509885294773
+      ],
+      "train_au_mean_percentage": 98.77216420841937,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.29574866784349463,
+      "train_throughput_samples_per_second": [
+        43.09143370801657,
+        43.408192419684084,
+        43.41838450968605,
+        43.426577426449015,
+        43.409238717138436
+      ],
+      "train_throughput_mean_samples_per_second": 43.35076535619483,
+      "train_throughput_stdev_samples_per_second": 0.12983814941918206,
+      "train_io_mean_MB_per_second": 6060.838151453786,
+      "train_io_stdev_MB_per_second": 18.15257477112763
+    },
+    "accelerator": "a100"
+  },
+  {
+    "run_id": "/mnt/c/Users/hawadallah/Downloads/submissions_storage_v2.0-main/Kingston_Digital/Dell_R7525_Gen4/Closed/Kingston/results/KINGSTONSEDC3000ME3T8BK/training/unet3d/run_2_20250710_135755/training/unet3d/run/20250710_135755",
+    "benchmark_type": "training",
+    "model": "unet3d",
+    "command": "run_benchmark",
+    "num_processes": 4,
+    "parameters": {
+      "model": {
+        "name": "unet3d",
+        "type": "cnn",
+        "model_size": 499153191
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": true,
+        "checkpoint": true
+      },
+      "dataset": {
+        "data_folder": "/mnt/KINGSTONSEDC3000ME3T8BK/unet3d",
+        "format": "npz",
+        "num_files_train": 14000,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 146600628,
+        "record_length_bytes_stdev": 68341808,
+        "record_length_bytes_resize": 2097152
+      },
+      "reader": {
+        "data_loader": "pytorch",
+        "batch_size": 7,
+        "read_threads": 16,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed"
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.636
+      },
+      "checkpoint": {
+        "checkpoint_folder": "checkpoints/unet3d",
+        "checkpoint_after_epoch": 5,
+        "epochs_between_checkpoints": 2
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 0.002800805628212188,
+      "save_checkpoint_io_stdev_GB_per_second": 0.0,
+      "save_checkpoint_duration_mean_seconds": 0.003405,
+      "save_checkpoint_duration_stdev_seconds": 0.0,
+      "checkpoint_size_GB": 9.5367431640625e-06,
+      "train_au_percentage": [
+        99.06863024241765,
+        98.96536711332884,
+        98.96646506196309,
+        98.96660752408089,
+        99.01078941023533
+      ],
+      "train_au_mean_percentage": 98.99557187040516,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.04041674466187085,
+      "train_throughput_samples_per_second": [
+        43.480917896645565,
+        43.435402382303636,
+        43.43613981171049,
+        43.43609647768723,
+        43.455700290726895
+      ],
+      "train_throughput_mean_samples_per_second": 43.44885137181476,
+      "train_throughput_stdev_samples_per_second": 0.017778166994091044,
+      "train_io_mean_MB_per_second": 6074.551484095293,
+      "train_io_stdev_MB_per_second": 2.485552259466762
+    },
+    "accelerator": "a100"
+  },
+  {
+    "run_id": "/mnt/c/Users/hawadallah/Downloads/submissions_storage_v2.0-main/Kingston_Digital/Dell_R7525_Gen4/Closed/Kingston/results/KINGSTONSEDC3000ME3T8BK/training/unet3d/run_3_20250710_142537/training/unet3d/run/20250710_142537",
+    "benchmark_type": "training",
+    "model": "unet3d",
+    "command": "run_benchmark",
+    "num_processes": 4,
+    "parameters": {
+      "model": {
+        "name": "unet3d",
+        "type": "cnn",
+        "model_size": 499153191
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": true,
+        "checkpoint": true
+      },
+      "dataset": {
+        "data_folder": "/mnt/KINGSTONSEDC3000ME3T8BK/unet3d",
+        "format": "npz",
+        "num_files_train": 14000,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 146600628,
+        "record_length_bytes_stdev": 68341808,
+        "record_length_bytes_resize": 2097152
+      },
+      "reader": {
+        "data_loader": "pytorch",
+        "batch_size": 7,
+        "read_threads": 16,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed"
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.636
+      },
+      "checkpoint": {
+        "checkpoint_folder": "checkpoints/unet3d",
+        "checkpoint_after_epoch": 5,
+        "epochs_between_checkpoints": 2
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 0.0027499259411944924,
+      "save_checkpoint_io_stdev_GB_per_second": 0.0,
+      "save_checkpoint_duration_mean_seconds": 0.003468,
+      "save_checkpoint_duration_stdev_seconds": 0.0,
+      "checkpoint_size_GB": 9.5367431640625e-06,
+      "train_au_percentage": [
+        98.82156915322095,
+        98.90301338298667,
+        99.02850482805431,
+        99.05453637416663,
+        98.97583315179352
+      ],
+      "train_au_mean_percentage": 98.95669137804441,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.08513115195438682,
+      "train_throughput_samples_per_second": [
+        43.37226554782603,
+        43.408117769987996,
+        43.46326948571715,
+        43.47467879114253,
+        43.440068734855984
+      ],
+      "train_throughput_mean_samples_per_second": 43.43168006590594,
+      "train_throughput_stdev_samples_per_second": 0.03742303656927494,
+      "train_io_mean_MB_per_second": 6072.150776631252,
+      "train_io_stdev_MB_per_second": 5.232086813662216
+    },
+    "accelerator": "a100"
+  },
+  {
+    "run_id": "/mnt/c/Users/hawadallah/Downloads/submissions_storage_v2.0-main/Kingston_Digital/Dell_R7525_Gen4/Closed/Kingston/results/KINGSTONSEDC3000ME3T8BK/training/unet3d/run_4_20250710_145320/training/unet3d/run/20250710_145320",
+    "benchmark_type": "training",
+    "model": "unet3d",
+    "command": "run_benchmark",
+    "num_processes": 4,
+    "parameters": {
+      "model": {
+        "name": "unet3d",
+        "type": "cnn",
+        "model_size": 499153191
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": true,
+        "checkpoint": true
+      },
+      "dataset": {
+        "data_folder": "/mnt/KINGSTONSEDC3000ME3T8BK/unet3d",
+        "format": "npz",
+        "num_files_train": 14000,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 146600628,
+        "record_length_bytes_stdev": 68341808,
+        "record_length_bytes_resize": 2097152
+      },
+      "reader": {
+        "data_loader": "pytorch",
+        "batch_size": 7,
+        "read_threads": 16,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed"
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.636
+      },
+      "checkpoint": {
+        "checkpoint_folder": "checkpoints/unet3d",
+        "checkpoint_after_epoch": 5,
+        "epochs_between_checkpoints": 2
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 0.0027085325657661176,
+      "save_checkpoint_io_stdev_GB_per_second": 0.0,
+      "save_checkpoint_duration_mean_seconds": 0.003521,
+      "save_checkpoint_duration_stdev_seconds": 0.0,
+      "checkpoint_size_GB": 9.5367431640625e-06,
+      "train_au_percentage": [
+        98.96817490114853,
+        98.83802634801273,
+        98.95305738840756,
+        98.88642999035125,
+        98.95926136485248
+      ],
+      "train_au_mean_percentage": 98.9209899985545,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.05059010077344327,
+      "train_throughput_samples_per_second": [
+        43.43671049828275,
+        43.37961942722135,
+        43.43004395875903,
+        43.40091066560197,
+        43.43279626572881
+      ],
+      "train_throughput_mean_samples_per_second": 43.41601616311878,
+      "train_throughput_stdev_samples_per_second": 0.022178840552310813,
+      "train_io_mean_MB_per_second": 6069.960818072666,
+      "train_io_stdev_MB_per_second": 3.100807145386345
+    },
+    "accelerator": "a100"
+  },
+  {
+    "run_id": "/mnt/c/Users/hawadallah/Downloads/submissions_storage_v2.0-main/Kingston_Digital/Dell_R7525_Gen4/Closed/Kingston/results/KINGSTONSEDC3000ME3T8BK/training/unet3d/run_5_20250710_152102/training/unet3d/run/20250710_152102",
+    "benchmark_type": "training",
+    "model": "unet3d",
+    "command": "run_benchmark",
+    "num_processes": 4,
+    "parameters": {
+      "model": {
+        "name": "unet3d",
+        "type": "cnn",
+        "model_size": 499153191
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": true,
+        "checkpoint": true
+      },
+      "dataset": {
+        "data_folder": "/mnt/KINGSTONSEDC3000ME3T8BK/unet3d",
+        "format": "npz",
+        "num_files_train": 14000,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 146600628,
+        "record_length_bytes_stdev": 68341808,
+        "record_length_bytes_resize": 2097152
+      },
+      "reader": {
+        "data_loader": "pytorch",
+        "batch_size": 7,
+        "read_threads": 16,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed"
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.636
+      },
+      "checkpoint": {
+        "checkpoint_folder": "checkpoints/unet3d",
+        "checkpoint_after_epoch": 5,
+        "epochs_between_checkpoints": 2
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 0.0027388693750897476,
+      "save_checkpoint_io_stdev_GB_per_second": 0.0,
+      "save_checkpoint_duration_mean_seconds": 0.003482,
+      "save_checkpoint_duration_stdev_seconds": 0.0,
+      "checkpoint_size_GB": 9.5367431640625e-06,
+      "train_au_percentage": [
+        98.93599286583384,
+        98.76065227835807,
+        98.93046673984796,
+        98.97413695145066,
+        99.01382679411097
+      ],
+      "train_au_mean_percentage": 98.9230151259203,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.08653998229377718,
+      "train_throughput_samples_per_second": [
+        43.42261729700915,
+        43.345619373975886,
+        43.420254773832035,
+        43.43922835881894,
+        43.45681315193808
+      ],
+      "train_throughput_mean_samples_per_second": 43.416906591114824,
+      "train_throughput_stdev_samples_per_second": 0.0379907481550703,
+      "train_io_mean_MB_per_second": 6070.08530814626,
+      "train_io_stdev_MB_per_second": 5.311458146784923
+    },
+    "accelerator": "a100"
+  },
+  {
+    "run_id": "/mnt/c/Users/hawadallah/Downloads/submissions_storage_v2.0-main/Kingston_Digital/Dell_R7525_Gen4/Closed/Kingston/results/KINGSTONSEDC3000ME7T6BK/checkpointing/llama3-405b/run_6_20250707_050917/checkpointing/llama3-405b/20250707_050917",
+    "benchmark_type": "checkpointing",
+    "model": "llama3-405b",
+    "command": null,
+    "num_processes": 8,
+    "parameters": {
+      "model": {
+        "name": "llama_405b",
+        "type": "transformer",
+        "num_layers": 126,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "tensor": 8,
+          "pipeline": 32,
+          "zero_stage": 1,
+          "data": 2
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 16384,
+          "ffn_hidden_size": 53248,
+          "num_attention_heads": 128,
+          "num_kv_heads": 8
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/KINGSTONSEDC3000ME7T6BK/checkpoints/llama3-405b",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 10,
+        "num_checkpoints_read": 0,
+        "fsync": true,
+        "mode": "subset"
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 3.515552391101123,
+      "save_checkpoint_io_stdev_GB_per_second": 0.5253335322019753,
+      "save_checkpoint_duration_mean_seconds": 28.5031947,
+      "save_checkpoint_duration_stdev_seconds": 3.1762607777171277,
+      "checkpoint_size_GB": 98.54466915130615
+    }
+  },
+  {
+    "run_id": "/mnt/c/Users/hawadallah/Downloads/submissions_storage_v2.0-main/Kingston_Digital/Dell_R7525_Gen4/Closed/Kingston/results/KINGSTONSEDC3000ME7T6BK/checkpointing/llama3-405b/run_6_20250707_050917/checkpointing/llama3-405b/20250707_051726",
+    "benchmark_type": "checkpointing",
+    "model": "llama3-405b",
+    "command": null,
+    "num_processes": 8,
+    "parameters": {
+      "model": {
+        "name": "llama_405b",
+        "type": "transformer",
+        "num_layers": 126,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "tensor": 8,
+          "pipeline": 32,
+          "zero_stage": 1,
+          "data": 2
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 16384,
+          "ffn_hidden_size": 53248,
+          "num_attention_heads": 128,
+          "num_kv_heads": 8
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/KINGSTONSEDC3000ME7T6BK/checkpoints/llama3-405b",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 0,
+        "num_checkpoints_read": 10,
+        "fsync": true,
+        "mode": "subset"
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": NaN,
+      "save_checkpoint_io_stdev_GB_per_second": NaN,
+      "save_checkpoint_duration_mean_seconds": NaN,
+      "save_checkpoint_duration_stdev_seconds": NaN,
+      "load_checkpoint_io_mean_GB_per_second": 6.172904646490958,
+      "load_checkpoint_io_stdev_GB_per_second": 0.2787016296544928,
+      "load_checkpoint_duration_mean_seconds": 15.9955637,
+      "load_checkpoint_duration_stdev_seconds": 0.6982376941033834,
+      "checkpoint_size_GB": 98.54466915130615
+    }
+  },
+  {
+    "run_id": "/mnt/c/Users/hawadallah/Downloads/submissions_storage_v2.0-main/Kingston_Digital/Dell_R7525_Gen4/Closed/Kingston/results/KINGSTONSEDC3000ME7T6BK/checkpointing/llama3-70b/run_4_20250707_021526/checkpointing/llama3-70b/20250707_021526",
+    "benchmark_type": "checkpointing",
+    "model": "llama3-70b",
+    "command": null,
+    "num_processes": 8,
+    "parameters": {
+      "model": {
+        "name": "llama_70b",
+        "type": "transformer",
+        "num_layers": 80,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "tensor": 8,
+          "pipeline": 1,
+          "zero_stage": 3,
+          "data": 8
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 8192,
+          "ffn_hidden_size": 28672,
+          "num_attention_heads": 128,
+          "num_kv_heads": 8
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/KINGSTONSEDC3000ME7T6BK/checkpoints/llama3-70b",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 10,
+        "num_checkpoints_read": 0,
+        "fsync": true,
+        "mode": "subset"
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 2.8111226470681467,
+      "save_checkpoint_io_stdev_GB_per_second": 0.49310896330838677,
+      "save_checkpoint_duration_mean_seconds": 41.4149082,
+      "save_checkpoint_duration_stdev_seconds": 5.14219506706268,
+      "checkpoint_size_GB": 113.90151596069336
+    }
+  },
+  {
+    "run_id": "/mnt/c/Users/hawadallah/Downloads/submissions_storage_v2.0-main/Kingston_Digital/Dell_R7525_Gen4/Closed/Kingston/results/KINGSTONSEDC3000ME7T6BK/checkpointing/llama3-70b/run_4_20250707_021526/checkpointing/llama3-70b/20250707_022604",
+    "benchmark_type": "checkpointing",
+    "model": "llama3-70b",
+    "command": null,
+    "num_processes": 8,
+    "parameters": {
+      "model": {
+        "name": "llama_70b",
+        "type": "transformer",
+        "num_layers": 80,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "tensor": 8,
+          "pipeline": 1,
+          "zero_stage": 3,
+          "data": 8
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 8192,
+          "ffn_hidden_size": 28672,
+          "num_attention_heads": 128,
+          "num_kv_heads": 8
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/KINGSTONSEDC3000ME7T6BK/checkpoints/llama3-70b",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 0,
+        "num_checkpoints_read": 10,
+        "fsync": true,
+        "mode": "subset"
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": NaN,
+      "save_checkpoint_io_stdev_GB_per_second": NaN,
+      "save_checkpoint_duration_mean_seconds": NaN,
+      "save_checkpoint_duration_stdev_seconds": NaN,
+      "load_checkpoint_io_mean_GB_per_second": 6.0069430873118375,
+      "load_checkpoint_io_stdev_GB_per_second": 0.07226979870172692,
+      "load_checkpoint_duration_mean_seconds": 18.964411700000003,
+      "load_checkpoint_duration_stdev_seconds": 0.23007887610167524,
+      "checkpoint_size_GB": 113.90151596069336
+    }
+  },
+  {
+    "run_id": "/mnt/c/Users/hawadallah/Downloads/submissions_storage_v2.0-main/Kingston_Digital/Dell_R7525_Gen4/Closed/Kingston/results/KINGSTONSEDC3000ME7T6BK/checkpointing/llama3-8b/run_6_20250707_001611/checkpointing/llama3-8b/20250707_001612",
+    "benchmark_type": "checkpointing",
+    "model": "llama3-8b",
+    "command": null,
+    "num_processes": 8,
+    "parameters": {
+      "model": {
+        "name": "llama_8b",
+        "type": "transformer",
+        "num_layers": 32,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "pipeline": 1,
+          "tensor": 1,
+          "zero_stage": 3
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 4096,
+          "ffn_hidden_size": 14336,
+          "num_attention_heads": 32,
+          "num_kv_heads": 8
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/KINGSTONSEDC3000ME7T6BK/checkpoints/llama3-8b",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 10,
+        "num_checkpoints_read": 0,
+        "fsync": true
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 2.8636119530835424,
+      "save_checkpoint_io_stdev_GB_per_second": 0.26086773172136607,
+      "save_checkpoint_duration_mean_seconds": 36.835961,
+      "save_checkpoint_duration_stdev_seconds": 3.0054572836509594,
+      "checkpoint_size_GB": 104.70452117919922
+    }
+  },
+  {
+    "run_id": "/mnt/c/Users/hawadallah/Downloads/submissions_storage_v2.0-main/Kingston_Digital/Dell_R7525_Gen4/Closed/Kingston/results/KINGSTONSEDC3000ME7T6BK/checkpointing/llama3-8b/run_6_20250707_001611/checkpointing/llama3-8b/20250707_002549",
+    "benchmark_type": "checkpointing",
+    "model": "llama3-8b",
+    "command": null,
+    "num_processes": 8,
+    "parameters": {
+      "model": {
+        "name": "llama_8b",
+        "type": "transformer",
+        "num_layers": 32,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "pipeline": 1,
+          "tensor": 1,
+          "zero_stage": 3
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 4096,
+          "ffn_hidden_size": 14336,
+          "num_attention_heads": 32,
+          "num_kv_heads": 8
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/KINGSTONSEDC3000ME7T6BK/checkpoints/llama3-8b",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 0,
+        "num_checkpoints_read": 10,
+        "fsync": true
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": NaN,
+      "save_checkpoint_io_stdev_GB_per_second": NaN,
+      "save_checkpoint_duration_mean_seconds": NaN,
+      "save_checkpoint_duration_stdev_seconds": NaN,
+      "load_checkpoint_io_mean_GB_per_second": 5.934322704368404,
+      "load_checkpoint_io_stdev_GB_per_second": 0.023002286414945228,
+      "load_checkpoint_duration_mean_seconds": 17.644153,
+      "load_checkpoint_duration_stdev_seconds": 0.06854060957563789,
+      "checkpoint_size_GB": 104.70452117919922
+    }
+  },
+  {
+    "run_id": "/mnt/c/Users/hawadallah/Downloads/submissions_storage_v2.0-main/Kingston_Digital/Dell_R7525_Gen4/Closed/Kingston/results/KINGSTONSEDC3000ME7T6BK/training/cosmoflow/run_1_20250710_154913/training/cosmoflow/run/20250710_162800",
+    "benchmark_type": "training",
+    "model": "cosmoflow",
+    "command": "run_benchmark",
+    "num_processes": 18,
+    "parameters": {
+      "model": {
+        "name": "cosmoflow"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "data_folder": "/mnt/KINGSTONSEDC3000ME7T6BK/cosmoflow",
+        "num_files_train": 476419,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 2828486,
+        "record_length_bytes_stdev": 71311,
+        "format": "tfrecord"
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 16,
+        "batch_size": 1,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed",
+        "shuffle_size": 2
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.00551
+      },
+      "metric": {
+        "au": 0.7
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "train_au_percentage": [
+        69.29598431935779,
+        71.32749276413492,
+        71.18567320100442,
+        70.8639773800287,
+        70.9499230112627
+      ],
+      "train_au_mean_percentage": 70.7246101351577,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.7331040114011201,
+      "train_throughput_samples_per_second": [
+        2172.169321697527,
+        2254.651512715184,
+        2250.6924711970714,
+        2238.8672304561856,
+        2240.4285120240165
+      ],
+      "train_throughput_mean_samples_per_second": 2231.361809617997,
+      "train_throughput_stdev_samples_per_second": 30.193945777696765,
+      "train_io_mean_MB_per_second": 6018.996848525209,
+      "train_io_stdev_MB_per_second": 81.446793477034
+    },
+    "accelerator": "a100"
+  },
+  {
+    "run_id": "/mnt/c/Users/hawadallah/Downloads/submissions_storage_v2.0-main/Kingston_Digital/Dell_R7525_Gen4/Closed/Kingston/results/KINGSTONSEDC3000ME7T6BK/training/cosmoflow/run_2_20250710_164804/training/cosmoflow/run/20250710_164805",
+    "benchmark_type": "training",
+    "model": "cosmoflow",
+    "command": "run_benchmark",
+    "num_processes": 18,
+    "parameters": {
+      "model": {
+        "name": "cosmoflow"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "data_folder": "/mnt/KINGSTONSEDC3000ME7T6BK/cosmoflow",
+        "num_files_train": 476419,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 2828486,
+        "record_length_bytes_stdev": 71311,
+        "format": "tfrecord"
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 16,
+        "batch_size": 1,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed",
+        "shuffle_size": 2
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.00551
+      },
+      "metric": {
+        "au": 0.7
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "train_au_percentage": [
+        71.05680794634728,
+        71.20818927483036,
+        71.28734051745154,
+        71.2684105778611,
+        70.90919471313909
+      ],
+      "train_au_mean_percentage": 71.14598860592587,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.14343009657713374,
+      "train_throughput_samples_per_second": [
+        2242.884029722613,
+        2249.729321929448,
+        2254.0266899707776,
+        2254.5536261275865,
+        2240.0131442637608
+      ],
+      "train_throughput_mean_samples_per_second": 2248.241362402837,
+      "train_throughput_stdev_samples_per_second": 5.864013968994535,
+      "train_io_mean_MB_per_second": 6064.528673341131,
+      "train_io_stdev_MB_per_second": 15.817910590272405
+    },
+    "accelerator": "a100"
+  },
+  {
+    "run_id": "/mnt/c/Users/hawadallah/Downloads/submissions_storage_v2.0-main/Kingston_Digital/Dell_R7525_Gen4/Closed/Kingston/results/KINGSTONSEDC3000ME7T6BK/training/cosmoflow/run_3_20250710_170759/training/cosmoflow/run/20250710_170759",
+    "benchmark_type": "training",
+    "model": "cosmoflow",
+    "command": "run_benchmark",
+    "num_processes": 18,
+    "parameters": {
+      "model": {
+        "name": "cosmoflow"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "data_folder": "/mnt/KINGSTONSEDC3000ME7T6BK/cosmoflow",
+        "num_files_train": 476419,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 2828486,
+        "record_length_bytes_stdev": 71311,
+        "format": "tfrecord"
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 16,
+        "batch_size": 1,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed",
+        "shuffle_size": 2
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.00551
+      },
+      "metric": {
+        "au": 0.7
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "train_au_percentage": [
+        70.80807776021264,
+        71.10085351448164,
+        70.87211471402628,
+        71.12714356533542,
+        70.75526965084367
+      ],
+      "train_au_mean_percentage": 70.93269184097993,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.15281800452034416,
+      "train_throughput_samples_per_second": [
+        2233.2174842256363,
+        2245.807324308077,
+        2238.9829172200252,
+        2247.8890153667053,
+        2231.8026793717468
+      ],
+      "train_throughput_mean_samples_per_second": 2239.539884098438,
+      "train_throughput_stdev_samples_per_second": 6.467396523395551,
+      "train_io_mean_MB_per_second": 6041.0568319454715,
+      "train_io_stdev_MB_per_second": 17.445507548211086
+    },
+    "accelerator": "a100"
+  },
+  {
+    "run_id": "/mnt/c/Users/hawadallah/Downloads/submissions_storage_v2.0-main/Kingston_Digital/Dell_R7525_Gen4/Closed/Kingston/results/KINGSTONSEDC3000ME7T6BK/training/cosmoflow/run_4_20250710_172846/training/cosmoflow/run/20250710_172846",
+    "benchmark_type": "training",
+    "model": "cosmoflow",
+    "command": "run_benchmark",
+    "num_processes": 18,
+    "parameters": {
+      "model": {
+        "name": "cosmoflow"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "data_folder": "/mnt/KINGSTONSEDC3000ME7T6BK/cosmoflow",
+        "num_files_train": 476419,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 2828486,
+        "record_length_bytes_stdev": 71311,
+        "format": "tfrecord"
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 16,
+        "batch_size": 1,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed",
+        "shuffle_size": 2
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.00551
+      },
+      "metric": {
+        "au": 0.7
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "train_au_percentage": [
+        71.03441868335264,
+        70.57929753118933,
+        70.15202726506294,
+        70.4404342283142,
+        70.65730483321431
+      ],
+      "train_au_mean_percentage": 70.57269650822668,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.2880435494837591,
+      "train_throughput_samples_per_second": [
+        2241.8862121620746,
+        2225.1658893113504,
+        2211.6815956033147,
+        2220.885344732914,
+        2228.288420151496
+      ],
+      "train_throughput_mean_samples_per_second": 2225.58149239223,
+      "train_throughput_stdev_samples_per_second": 9.885393306980577,
+      "train_io_mean_MB_per_second": 6003.404706087616,
+      "train_io_stdev_MB_per_second": 26.66539819077326
+    },
+    "accelerator": "a100"
+  },
+  {
+    "run_id": "/mnt/c/Users/hawadallah/Downloads/submissions_storage_v2.0-main/Kingston_Digital/Dell_R7525_Gen4/Closed/Kingston/results/KINGSTONSEDC3000ME7T6BK/training/cosmoflow/run_5_20250710_174935/training/cosmoflow/run/20250710_174935",
+    "benchmark_type": "training",
+    "model": "cosmoflow",
+    "command": "run_benchmark",
+    "num_processes": 18,
+    "parameters": {
+      "model": {
+        "name": "cosmoflow"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "data_folder": "/mnt/KINGSTONSEDC3000ME7T6BK/cosmoflow",
+        "num_files_train": 476419,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 2828486,
+        "record_length_bytes_stdev": 71311,
+        "format": "tfrecord"
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 16,
+        "batch_size": 1,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed",
+        "shuffle_size": 2
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.00551
+      },
+      "metric": {
+        "au": 0.7
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "train_au_percentage": [
+        69.63000298096449,
+        70.41365859582746,
+        70.5467420573338,
+        69.94388343101929,
+        70.60844739709113
+      ],
+      "train_au_mean_percentage": 70.22854689244723,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.37924319357357045,
+      "train_throughput_samples_per_second": [
+        2189.8368306645298,
+        2218.032637424482,
+        2225.134270997497,
+        2205.0552941058704,
+        2228.2255781284416
+      ],
+      "train_throughput_mean_samples_per_second": 2213.256922264164,
+      "train_throughput_stdev_samples_per_second": 14.168323271234609,
+      "train_io_mean_MB_per_second": 5970.159739520337,
+      "train_io_stdev_MB_per_second": 38.218406692658704
+    },
+    "accelerator": "a100"
+  },
+  {
+    "run_id": "/mnt/c/Users/hawadallah/Downloads/submissions_storage_v2.0-main/Kingston_Digital/Dell_R7525_Gen4/Closed/Kingston/results/KINGSTONSEDC3000ME7T6BK/training/resnet50/run_1_20250704_103543/training/resnet50/run/20250704_104604",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 36,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 9394,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/mnt/KINGSTONSEDC3000ME7T6BK/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.224,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "computation_threads": 8,
+        "batch_size": 400
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "train_au_percentage": [
+        91.01936036257216,
+        92.65653755358373,
+        92.15558433507312,
+        92.22850191306091,
+        92.07991224891
+      ],
+      "train_au_mean_percentage": 92.02797928263996,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.5425102825926112,
+      "train_throughput_samples_per_second": [
+        58343.32803541796,
+        59400.60362480293,
+        59076.64689223145,
+        59124.81153659872,
+        59028.13895291298
+      ],
+      "train_throughput_mean_samples_per_second": 58994.705808392806,
+      "train_throughput_stdev_samples_per_second": 350.37284637292464,
+      "train_io_mean_MB_per_second": 6450.9745575139295,
+      "train_io_stdev_MB_per_second": 38.31269749757651
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "/mnt/c/Users/hawadallah/Downloads/submissions_storage_v2.0-main/Kingston_Digital/Dell_R7525_Gen4/Closed/Kingston/results/KINGSTONSEDC3000ME7T6BK/training/resnet50/run_1_20250706_145720/training/resnet50/run/20250706_151345",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 64,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 14110,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/mnt/KINGSTONSEDC3000ME7T6BK/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.224,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "computation_threads": 8,
+        "batch_size": 400
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 405418868736.0,
+      "total_cores": 96
+    },
+    "metrics": {
+      "train_au_percentage": [
+        85.28060209481797,
+        94.48069939012437,
+        94.32013611170139,
+        93.45825494490612,
+        92.78007816027036
+      ],
+      "train_au_mean_percentage": 92.06395414036405,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 3.446789462942998,
+      "train_throughput_samples_per_second": [
+        97010.32386432726,
+        107555.7977426302,
+        107327.2019662641,
+        106333.01870460196,
+        105634.90403039081
+      ],
+      "train_throughput_mean_samples_per_second": 104772.24926164288,
+      "train_throughput_stdev_samples_per_second": 3942.1716311309833,
+      "train_io_mean_MB_per_second": 11456.674036405011,
+      "train_io_stdev_MB_per_second": 431.0700179839065
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "/mnt/c/Users/hawadallah/Downloads/submissions_storage_v2.0-main/Kingston_Digital/Dell_R7525_Gen4/Closed/Kingston/results/KINGSTONSEDC3000ME7T6BK/training/resnet50/run_1_20250711_032630/training/resnet50/run/20250711_033911",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 71,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 11350,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/mnt/KINGSTONSEDC3000ME7T6BK/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.435,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "computation_threads": 8,
+        "batch_size": 400,
+        "dont_use_mmap": true
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "train_au_percentage": [
+        89.21228598863978,
+        91.47075490201324,
+        91.21915486992393,
+        91.44202546215612,
+        91.35341358970234
+      ],
+      "train_au_mean_percentage": 90.93952696248707,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.868051053158161,
+      "train_throughput_samples_per_second": [
+        57977.40019841284,
+        59447.80782680196,
+        59283.54134550349,
+        59426.60680547463,
+        59368.04812397654
+      ],
+      "train_throughput_mean_samples_per_second": 59100.6808600339,
+      "train_throughput_stdev_samples_per_second": 564.5188231963959,
+      "train_io_mean_MB_per_second": 6462.562756022594,
+      "train_io_stdev_MB_per_second": 61.72920969392432
+    },
+    "accelerator": "a100"
+  },
+  {
+    "run_id": "/mnt/c/Users/hawadallah/Downloads/submissions_storage_v2.0-main/Kingston_Digital/Dell_R7525_Gen4/Closed/Kingston/results/KINGSTONSEDC3000ME7T6BK/training/resnet50/run_2_20250704_110317/training/resnet50/run/20250704_110317",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 36,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 9394,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/mnt/KINGSTONSEDC3000ME7T6BK/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.224,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "computation_threads": 8,
+        "batch_size": 400
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "train_au_percentage": [
+        92.24894328728057,
+        92.32673964521135,
+        92.59792624413885,
+        92.55359074328703,
+        92.53339570472716
+      ],
+      "train_au_mean_percentage": 92.45211912492898,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.1379583435001811,
+      "train_throughput_samples_per_second": [
+        59138.205713905685,
+        59191.31645293547,
+        59365.212536071296,
+        59337.46211633056,
+        59323.41265105689
+      ],
+      "train_throughput_mean_samples_per_second": 59271.12189405998,
+      "train_throughput_stdev_samples_per_second": 89.46956650415575,
+      "train_io_mean_MB_per_second": 6481.200204230738,
+      "train_io_stdev_MB_per_second": 9.783350713955073
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "/mnt/c/Users/hawadallah/Downloads/submissions_storage_v2.0-main/Kingston_Digital/Dell_R7525_Gen4/Closed/Kingston/results/KINGSTONSEDC3000ME7T6BK/training/resnet50/run_2_20250706_153057/training/resnet50/run/20250706_153057",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 64,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 14110,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/mnt/KINGSTONSEDC3000ME7T6BK/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.224,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "computation_threads": 8,
+        "batch_size": 400
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 405418868736.0,
+      "total_cores": 96
+    },
+    "metrics": {
+      "train_au_percentage": [
+        92.97861088562775,
+        96.57053264356821,
+        94.95077384743126,
+        95.55990381443684,
+        95.71544544747793
+      ],
+      "train_au_mean_percentage": 95.15505332770839,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 1.2050026346762326,
+      "train_throughput_samples_per_second": [
+        105612.0646361156,
+        109913.86615861313,
+        108025.10006497466,
+        108739.42316205984,
+        108919.86463531893
+      ],
+      "train_throughput_mean_samples_per_second": 108242.06373141645,
+      "train_throughput_stdev_samples_per_second": 1446.7668988472772,
+      "train_io_mean_MB_per_second": 11836.092571629211,
+      "train_io_stdev_MB_per_second": 158.20159329940006
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "/mnt/c/Users/hawadallah/Downloads/submissions_storage_v2.0-main/Kingston_Digital/Dell_R7525_Gen4/Closed/Kingston/results/KINGSTONSEDC3000ME7T6BK/training/resnet50/run_2_20250711_040128/training/resnet50/run/20250711_040128",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 71,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 11350,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/mnt/KINGSTONSEDC3000ME7T6BK/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.435,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "computation_threads": 8,
+        "batch_size": 400,
+        "dont_use_mmap": true
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "train_au_percentage": [
+        91.6247046801735,
+        91.7759686651717,
+        91.46938580683641,
+        91.29846954627098,
+        91.70639674786769
+      ],
+      "train_au_mean_percentage": 91.57498508926406,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.1718996878925455,
+      "train_throughput_samples_per_second": [
+        59548.48200592975,
+        59644.07236174687,
+        59446.71368492227,
+        59332.2396390152,
+        59599.435293335824
+      ],
+      "train_throughput_mean_samples_per_second": 59514.18859698998,
+      "train_throughput_stdev_samples_per_second": 112.22398722970674,
+      "train_io_mean_MB_per_second": 6507.779150508951,
+      "train_io_stdev_MB_per_second": 12.271509391248017
+    },
+    "accelerator": "a100"
+  },
+  {
+    "run_id": "/mnt/c/Users/hawadallah/Downloads/submissions_storage_v2.0-main/Kingston_Digital/Dell_R7525_Gen4/Closed/Kingston/results/KINGSTONSEDC3000ME7T6BK/training/resnet50/run_3_20250704_112029/training/resnet50/run/20250704_112029",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 36,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 9394,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/mnt/KINGSTONSEDC3000ME7T6BK/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.224,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "computation_threads": 8,
+        "batch_size": 400
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "train_au_percentage": [
+        92.6382026540809,
+        92.41329566994763,
+        92.41263251301608,
+        92.52277519899677,
+        92.17380580782716
+      ],
+      "train_au_mean_percentage": 92.4321423687737,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.1537197204948894,
+      "train_throughput_samples_per_second": [
+        59389.50459304457,
+        59244.462903656844,
+        59242.93380615315,
+        59316.07984172337,
+        59089.53003599041
+      ],
+      "train_throughput_mean_samples_per_second": 59256.50223611367,
+      "train_throughput_stdev_samples_per_second": 99.44634882283188,
+      "train_io_mean_MB_per_second": 6479.601568553878,
+      "train_io_stdev_MB_per_second": 10.874295537252733
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "/mnt/c/Users/hawadallah/Downloads/submissions_storage_v2.0-main/Kingston_Digital/Dell_R7525_Gen4/Closed/Kingston/results/KINGSTONSEDC3000ME7T6BK/training/resnet50/run_3_20250706_154808/training/resnet50/run/20250706_154808",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 64,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 14110,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/mnt/KINGSTONSEDC3000ME7T6BK/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.224,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "computation_threads": 8,
+        "batch_size": 400
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 405418868736.0,
+      "total_cores": 96
+    },
+    "metrics": {
+      "train_au_percentage": [
+        93.40821466393582,
+        93.31564355167393,
+        96.50710893884275,
+        96.00201007472731,
+        95.44856274090748
+      ],
+      "train_au_mean_percentage": 94.93630799401747,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 1.3286958959010395,
+      "train_throughput_samples_per_second": [
+        106143.9566068062,
+        105958.39162499661,
+        109846.55076709724,
+        109268.78365256386,
+        108676.88069496454
+      ],
+      "train_throughput_mean_samples_per_second": 107978.9126692857,
+      "train_throughput_stdev_samples_per_second": 1617.9349569383457,
+      "train_io_mean_MB_per_second": 11807.317433532891,
+      "train_io_stdev_MB_per_second": 176.91854039954922
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "/mnt/c/Users/hawadallah/Downloads/submissions_storage_v2.0-main/Kingston_Digital/Dell_R7525_Gen4/Closed/Kingston/results/KINGSTONSEDC3000ME7T6BK/training/resnet50/run_3_20250711_042346/training/resnet50/run/20250711_042346",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 71,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 11350,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/mnt/KINGSTONSEDC3000ME7T6BK/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.435,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "computation_threads": 8,
+        "batch_size": 400,
+        "dont_use_mmap": true
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "train_au_percentage": [
+        91.83383232304818,
+        91.8041721631391,
+        91.75124727941207,
+        91.3246589050613,
+        91.50774476136822
+      ],
+      "train_au_mean_percentage": 91.64433108640578,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.19684363771279603,
+      "train_throughput_samples_per_second": [
+        59680.46021049626,
+        59664.93490563572,
+        59630.510020047885,
+        59350.48523447869,
+        59469.514634584324
+      ],
+      "train_throughput_mean_samples_per_second": 59559.18100104858,
+      "train_throughput_stdev_samples_per_second": 128.5101896272652,
+      "train_io_mean_MB_per_second": 6512.6989962796215,
+      "train_io_stdev_MB_per_second": 14.052378977180005
+    },
+    "accelerator": "a100"
+  },
+  {
+    "run_id": "/mnt/c/Users/hawadallah/Downloads/submissions_storage_v2.0-main/Kingston_Digital/Dell_R7525_Gen4/Closed/Kingston/results/KINGSTONSEDC3000ME7T6BK/training/resnet50/run_4_20250704_113742/training/resnet50/run/20250704_113742",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 36,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 9394,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/mnt/KINGSTONSEDC3000ME7T6BK/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.224,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "computation_threads": 8,
+        "batch_size": 400
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "train_au_percentage": [
+        92.40938639876339,
+        92.04467248341966,
+        92.46429415532573,
+        92.19364120894181,
+        92.36743564259704
+      ],
+      "train_au_mean_percentage": 92.29588597780953,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.15487106047717195,
+      "train_throughput_samples_per_second": [
+        59241.3864431475,
+        59003.07571466958,
+        59277.53447449173,
+        59101.35105647639,
+        59216.04441897662
+      ],
+      "train_throughput_mean_samples_per_second": 59167.87842155236,
+      "train_throughput_stdev_samples_per_second": 101.32488834712744,
+      "train_io_mean_MB_per_second": 6469.910699431118,
+      "train_io_stdev_MB_per_second": 11.079710760711496
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "/mnt/c/Users/hawadallah/Downloads/submissions_storage_v2.0-main/Kingston_Digital/Dell_R7525_Gen4/Closed/Kingston/results/KINGSTONSEDC3000ME7T6BK/training/resnet50/run_4_20250706_160519/training/resnet50/run/20250706_160520",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 64,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 14110,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/mnt/KINGSTONSEDC3000ME7T6BK/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.224,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "computation_threads": 8,
+        "batch_size": 400
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 405418868736.0,
+      "total_cores": 96
+    },
+    "metrics": {
+      "train_au_percentage": [
+        93.1155086228779,
+        95.86522757334126,
+        94.26193282524824,
+        94.95163806563511,
+        93.22397040140827
+      ],
+      "train_au_mean_percentage": 94.28365549770214,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 1.042644948241854,
+      "train_throughput_samples_per_second": [
+        105795.37031091932,
+        109122.59264357766,
+        107227.41177526592,
+        108039.55927813491,
+        106010.18339937623
+      ],
+      "train_throughput_mean_samples_per_second": 107239.02348145479,
+      "train_throughput_stdev_samples_per_second": 1247.6383775843974,
+      "train_io_mean_MB_per_second": 11726.411761393785,
+      "train_io_stdev_MB_per_second": 136.42721529818863
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "/mnt/c/Users/hawadallah/Downloads/submissions_storage_v2.0-main/Kingston_Digital/Dell_R7525_Gen4/Closed/Kingston/results/KINGSTONSEDC3000ME7T6BK/training/resnet50/run_4_20250711_044603/training/resnet50/run/20250711_044603",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 71,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 11350,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/mnt/KINGSTONSEDC3000ME7T6BK/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.435,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "computation_threads": 8,
+        "batch_size": 400,
+        "dont_use_mmap": true
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "train_au_percentage": [
+        91.54069377997165,
+        91.85974092818947,
+        91.77693873981818,
+        91.34213385578377,
+        91.53009305227609
+      ],
+      "train_au_mean_percentage": 91.60992007120784,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.18610738070715988,
+      "train_throughput_samples_per_second": [
+        59492.251242055245,
+        59701.229160402654,
+        59647.59434713456,
+        59363.41454706986,
+        59485.37381338572
+      ],
+      "train_throughput_mean_samples_per_second": 59537.97262200961,
+      "train_throughput_stdev_samples_per_second": 121.65296603676069,
+      "train_io_mean_MB_per_second": 6510.379894731242,
+      "train_io_stdev_MB_per_second": 13.302552796824077
+    },
+    "accelerator": "a100"
+  },
+  {
+    "run_id": "/mnt/c/Users/hawadallah/Downloads/submissions_storage_v2.0-main/Kingston_Digital/Dell_R7525_Gen4/Closed/Kingston/results/KINGSTONSEDC3000ME7T6BK/training/resnet50/run_5_20250704_115455/training/resnet50/run/20250704_115455",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 36,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 9394,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/mnt/KINGSTONSEDC3000ME7T6BK/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.224,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "computation_threads": 8,
+        "batch_size": 400
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "train_au_percentage": [
+        92.36297389733284,
+        92.42925205600334,
+        92.33289664262001,
+        92.49704129013759,
+        92.37789841163789
+      ],
+      "train_au_mean_percentage": 92.40001245954633,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.05768009544774029,
+      "train_throughput_samples_per_second": [
+        59210.293676178895,
+        59255.63876260248,
+        59188.96155736461,
+        59299.42307130356,
+        59220.00914912252
+      ],
+      "train_throughput_mean_samples_per_second": 59234.865243314416,
+      "train_throughput_stdev_samples_per_second": 38.80944753072318,
+      "train_io_mean_MB_per_second": 6477.235598792075,
+      "train_io_stdev_MB_per_second": 4.243749590429352
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "/mnt/c/Users/hawadallah/Downloads/submissions_storage_v2.0-main/Kingston_Digital/Dell_R7525_Gen4/Closed/Kingston/results/KINGSTONSEDC3000ME7T6BK/training/resnet50/run_5_20250706_162231/training/resnet50/run/20250706_162231",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 64,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 14110,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/mnt/KINGSTONSEDC3000ME7T6BK/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.224,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "computation_threads": 8,
+        "batch_size": 400
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 405418868736.0,
+      "total_cores": 96
+    },
+    "metrics": {
+      "train_au_percentage": [
+        91.34170471591594,
+        94.8503961473584,
+        95.8606075268292,
+        95.03764423578144,
+        95.80707246819969
+      ],
+      "train_au_mean_percentage": 94.57948501881694,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 1.668218800033647,
+      "train_throughput_samples_per_second": [
+        103592.93698542021,
+        107926.4231034623,
+        109144.13690196205,
+        108137.10641288178,
+        109013.82415694409
+      ],
+      "train_throughput_mean_samples_per_second": 107562.88551213409,
+      "train_throughput_stdev_samples_per_second": 2040.978169249139,
+      "train_io_mean_MB_per_second": 11761.825544570238,
+      "train_io_stdev_MB_per_second": 223.17762351472678
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "/mnt/c/Users/hawadallah/Downloads/submissions_storage_v2.0-main/Kingston_Digital/Dell_R7525_Gen4/Closed/Kingston/results/KINGSTONSEDC3000ME7T6BK/training/resnet50/run_5_20250711_050820/training/resnet50/run/20250711_050821",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 71,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 11350,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/mnt/KINGSTONSEDC3000ME7T6BK/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.435,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "computation_threads": 8,
+        "batch_size": 400,
+        "dont_use_mmap": true
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "train_au_percentage": [
+        91.83182661303425,
+        91.97824266405618,
+        91.9805011977503,
+        91.98562055681039,
+        91.83905168839755
+      ],
+      "train_au_mean_percentage": 91.92304854400973,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.07160917195316627,
+      "train_throughput_samples_per_second": [
+        59679.39860709806,
+        59774.28089133594,
+        59777.6302336977,
+        59778.8228829036,
+        59684.20438124555
+      ],
+      "train_throughput_mean_samples_per_second": 59738.867399256174,
+      "train_throughput_stdev_samples_per_second": 46.64267618286773,
+      "train_io_mean_MB_per_second": 6532.347409934455,
+      "train_io_stdev_MB_per_second": 5.100300327410648
+    },
+    "accelerator": "a100"
+  },
+  {
+    "run_id": "/mnt/c/Users/hawadallah/Downloads/submissions_storage_v2.0-main/Kingston_Digital/Dell_R7525_Gen4/Closed/Kingston/results/KINGSTONSEDC3000ME7T6BK/training/unet3d/run_1_20250702_040440/training/unet3d/run/20250702_042030",
+    "benchmark_type": "training",
+    "model": "unet3d",
+    "command": "run_benchmark",
+    "num_processes": 4,
+    "parameters": {
+      "model": {
+        "name": "unet3d",
+        "type": "cnn",
+        "model_size": 499153191
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": true,
+        "checkpoint": true
+      },
+      "dataset": {
+        "data_folder": "/mnt/KINGSTONSEDC3000ME7T6BK/unet3d",
+        "format": "npz",
+        "num_files_train": 14000,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 146600628,
+        "record_length_bytes_stdev": 68341808,
+        "record_length_bytes_resize": 2097152
+      },
+      "reader": {
+        "data_loader": "pytorch",
+        "batch_size": 7,
+        "read_threads": 16,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed"
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.636
+      },
+      "checkpoint": {
+        "checkpoint_folder": "checkpoints/unet3d",
+        "checkpoint_after_epoch": 5,
+        "epochs_between_checkpoints": 2
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 0.002870783613504666,
+      "save_checkpoint_io_stdev_GB_per_second": 0.0,
+      "save_checkpoint_duration_mean_seconds": 0.003322,
+      "save_checkpoint_duration_stdev_seconds": 0.0,
+      "checkpoint_size_GB": 9.5367431640625e-06,
+      "train_au_percentage": [
+        98.49017174800574,
+        98.83398997955952,
+        98.9359199508869,
+        99.04460366001868,
+        98.94666880102389
+      ],
+      "train_au_mean_percentage": 98.85027082789892,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.1920052106029769,
+      "train_throughput_samples_per_second": [
+        43.226777058952095,
+        43.37775345018244,
+        43.42247428446413,
+        43.4703394020925,
+        43.42732383219206
+      ],
+      "train_throughput_mean_samples_per_second": 43.38493360557665,
+      "train_throughput_stdev_samples_per_second": 0.08433911528352099,
+      "train_io_mean_MB_per_second": 6065.615188899842,
+      "train_io_stdev_MB_per_second": 11.791388764885497
+    },
+    "accelerator": "a100"
+  },
+  {
+    "run_id": "/mnt/c/Users/hawadallah/Downloads/submissions_storage_v2.0-main/Kingston_Digital/Dell_R7525_Gen4/Closed/Kingston/results/KINGSTONSEDC3000ME7T6BK/training/unet3d/run_2_20250702_044818/training/unet3d/run/20250702_044818",
+    "benchmark_type": "training",
+    "model": "unet3d",
+    "command": "run_benchmark",
+    "num_processes": 4,
+    "parameters": {
+      "model": {
+        "name": "unet3d",
+        "type": "cnn",
+        "model_size": 499153191
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": true,
+        "checkpoint": true
+      },
+      "dataset": {
+        "data_folder": "/mnt/KINGSTONSEDC3000ME7T6BK/unet3d",
+        "format": "npz",
+        "num_files_train": 14000,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 146600628,
+        "record_length_bytes_stdev": 68341808,
+        "record_length_bytes_resize": 2097152
+      },
+      "reader": {
+        "data_loader": "pytorch",
+        "batch_size": 7,
+        "read_threads": 16,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed"
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.636
+      },
+      "checkpoint": {
+        "checkpoint_folder": "checkpoints/unet3d",
+        "checkpoint_after_epoch": 5,
+        "epochs_between_checkpoints": 2
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 0.0029271771528736955,
+      "save_checkpoint_io_stdev_GB_per_second": 0.0,
+      "save_checkpoint_duration_mean_seconds": 0.003258,
+      "save_checkpoint_duration_stdev_seconds": 0.0,
+      "checkpoint_size_GB": 9.5367431640625e-06,
+      "train_au_percentage": [
+        99.00343349074511,
+        98.90729718426915,
+        98.96474531846249,
+        99.05293026798046,
+        98.95925535541497
+      ],
+      "train_au_mean_percentage": 98.97753232337443,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.04855151972806643,
+      "train_throughput_samples_per_second": [
+        43.45218859599153,
+        43.410021384353556,
+        43.43532835166223,
+        43.47395791771329,
+        43.43268364663167
+      ],
+      "train_throughput_mean_samples_per_second": 43.44083597927046,
+      "train_throughput_stdev_samples_per_second": 0.021317966421981135,
+      "train_io_mean_MB_per_second": 6073.43085804562,
+      "train_io_stdev_MB_per_second": 2.9804489757016634
+    },
+    "accelerator": "a100"
+  },
+  {
+    "run_id": "/mnt/c/Users/hawadallah/Downloads/submissions_storage_v2.0-main/Kingston_Digital/Dell_R7525_Gen4/Closed/Kingston/results/KINGSTONSEDC3000ME7T6BK/training/unet3d/run_3_20250702_051600/training/unet3d/run/20250702_051600",
+    "benchmark_type": "training",
+    "model": "unet3d",
+    "command": "run_benchmark",
+    "num_processes": 4,
+    "parameters": {
+      "model": {
+        "name": "unet3d",
+        "type": "cnn",
+        "model_size": 499153191
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": true,
+        "checkpoint": true
+      },
+      "dataset": {
+        "data_folder": "/mnt/KINGSTONSEDC3000ME7T6BK/unet3d",
+        "format": "npz",
+        "num_files_train": 14000,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 146600628,
+        "record_length_bytes_stdev": 68341808,
+        "record_length_bytes_resize": 2097152
+      },
+      "reader": {
+        "data_loader": "pytorch",
+        "batch_size": 7,
+        "read_threads": 16,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed"
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.636
+      },
+      "checkpoint": {
+        "checkpoint_folder": "checkpoints/unet3d",
+        "checkpoint_after_epoch": 5,
+        "epochs_between_checkpoints": 2
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 0.0029407163626464696,
+      "save_checkpoint_io_stdev_GB_per_second": 0.0,
+      "save_checkpoint_duration_mean_seconds": 0.003243,
+      "save_checkpoint_duration_stdev_seconds": 0.0,
+      "checkpoint_size_GB": 9.5367431640625e-06,
+      "train_au_percentage": [
+        98.9245728026341,
+        98.8360485681911,
+        98.99276276897878,
+        98.94800940874751,
+        98.82791388710388
+      ],
+      "train_au_mean_percentage": 98.90586148713108,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.0642309355562136,
+      "train_throughput_samples_per_second": [
+        43.41763814626206,
+        43.378735081527644,
+        43.4473995633816,
+        43.42799202880526,
+        43.37516876154872
+      ],
+      "train_throughput_mean_samples_per_second": 43.40938671630505,
+      "train_throughput_stdev_samples_per_second": 0.02817662660669185,
+      "train_io_mean_MB_per_second": 6069.033960061243,
+      "train_io_stdev_MB_per_second": 3.9393531374574033
+    },
+    "accelerator": "a100"
+  },
+  {
+    "run_id": "/mnt/c/Users/hawadallah/Downloads/submissions_storage_v2.0-main/Kingston_Digital/Dell_R7525_Gen4/Closed/Kingston/results/KINGSTONSEDC3000ME7T6BK/training/unet3d/run_4_20250702_054343/training/unet3d/run/20250702_054344",
+    "benchmark_type": "training",
+    "model": "unet3d",
+    "command": "run_benchmark",
+    "num_processes": 4,
+    "parameters": {
+      "model": {
+        "name": "unet3d",
+        "type": "cnn",
+        "model_size": 499153191
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": true,
+        "checkpoint": true
+      },
+      "dataset": {
+        "data_folder": "/mnt/KINGSTONSEDC3000ME7T6BK/unet3d",
+        "format": "npz",
+        "num_files_train": 14000,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 146600628,
+        "record_length_bytes_stdev": 68341808,
+        "record_length_bytes_resize": 2097152
+      },
+      "reader": {
+        "data_loader": "pytorch",
+        "batch_size": 7,
+        "read_threads": 16,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed"
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.636
+      },
+      "checkpoint": {
+        "checkpoint_folder": "checkpoints/unet3d",
+        "checkpoint_after_epoch": 5,
+        "epochs_between_checkpoints": 2
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 0.0029407163626464696,
+      "save_checkpoint_io_stdev_GB_per_second": 0.0,
+      "save_checkpoint_duration_mean_seconds": 0.003243,
+      "save_checkpoint_duration_stdev_seconds": 0.0,
+      "checkpoint_size_GB": 9.5367431640625e-06,
+      "train_au_percentage": [
+        98.80524718695081,
+        98.92862342419264,
+        98.77994970223561,
+        98.92971079855333,
+        98.84569562342985
+      ],
+      "train_au_mean_percentage": 98.85784534707246,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.06189683842443342,
+      "train_throughput_samples_per_second": [
+        43.365145235007304,
+        43.419094293467126,
+        43.35392779980543,
+        43.4200779969607,
+        43.38309875602148
+      ],
+      "train_throughput_mean_samples_per_second": 43.3882688162524,
+      "train_throughput_stdev_samples_per_second": 0.02721311803468888,
+      "train_io_mean_MB_per_second": 6066.081482215327,
+      "train_io_stdev_MB_per_second": 3.8046457230792194
+    },
+    "accelerator": "a100"
+  },
+  {
+    "run_id": "/mnt/c/Users/hawadallah/Downloads/submissions_storage_v2.0-main/Kingston_Digital/Dell_R7525_Gen4/Closed/Kingston/results/KINGSTONSEDC3000ME7T6BK/training/unet3d/run_5_20250702_061128/training/unet3d/run/20250702_061128",
+    "benchmark_type": "training",
+    "model": "unet3d",
+    "command": "run_benchmark",
+    "num_processes": 4,
+    "parameters": {
+      "model": {
+        "name": "unet3d",
+        "type": "cnn",
+        "model_size": 499153191
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": true,
+        "checkpoint": true
+      },
+      "dataset": {
+        "data_folder": "/mnt/KINGSTONSEDC3000ME7T6BK/unet3d",
+        "format": "npz",
+        "num_files_train": 14000,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 146600628,
+        "record_length_bytes_stdev": 68341808,
+        "record_length_bytes_resize": 2097152
+      },
+      "reader": {
+        "data_loader": "pytorch",
+        "batch_size": 7,
+        "read_threads": 16,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed"
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.636
+      },
+      "checkpoint": {
+        "checkpoint_folder": "checkpoints/unet3d",
+        "checkpoint_after_epoch": 5,
+        "epochs_between_checkpoints": 2
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 0.002882933241856862,
+      "save_checkpoint_io_stdev_GB_per_second": 0.0,
+      "save_checkpoint_duration_mean_seconds": 0.003308,
+      "save_checkpoint_duration_stdev_seconds": 0.0,
+      "checkpoint_size_GB": 9.5367431640625e-06,
+      "train_au_percentage": [
+        98.90992074872409,
+        99.05815260900795,
+        98.75765101039372,
+        98.80221632077021,
+        99.01577934030425
+      ],
+      "train_au_mean_percentage": 98.90874400584002,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.1165831198823782,
+      "train_throughput_samples_per_second": [
+        43.41139195665267,
+        43.47629936437011,
+        43.34447615332728,
+        43.363863494781,
+        43.45780293276782
+      ],
+      "train_throughput_mean_samples_per_second": 43.410766780379774,
+      "train_throughput_stdev_samples_per_second": 0.05118920877737187,
+      "train_io_mean_MB_per_second": 6069.226905789578,
+      "train_io_stdev_MB_per_second": 7.15672507628043
+    },
+    "accelerator": "a100"
+  }
+]

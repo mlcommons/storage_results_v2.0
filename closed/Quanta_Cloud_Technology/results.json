@@ -1,0 +1,4332 @@
+[
+  {
+    "run_id": "./results/Solidigm_D5-P5336_Gen4_NVMe/training/unet3d/a100/run/20250702_043443",
+    "benchmark_type": "training",
+    "model": "unet3d",
+    "command": "run_benchmark",
+    "num_processes": 4,
+    "parameters": {
+      "model": {
+        "name": "unet3d",
+        "type": "cnn",
+        "model_size": 499153191
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": true,
+        "checkpoint": true
+      },
+      "dataset": {
+        "data_folder": "/P5336/unet3d",
+        "format": "npz",
+        "num_files_train": 28000,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 146600628,
+        "record_length_bytes_stdev": 68341808,
+        "record_length_bytes_resize": 2097152
+      },
+      "reader": {
+        "data_loader": "pytorch",
+        "batch_size": 7,
+        "read_threads": 28,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed"
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.636
+      },
+      "checkpoint": {
+        "checkpoint_folder": "checkpoints/unet3d",
+        "checkpoint_after_epoch": 5,
+        "epochs_between_checkpoints": 2
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269407956992.0,
+      "total_cores": 256
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 0.0025795897116750064,
+      "save_checkpoint_io_stdev_GB_per_second": 0.0,
+      "save_checkpoint_duration_mean_seconds": 0.003697,
+      "save_checkpoint_duration_stdev_seconds": 0.0,
+      "checkpoint_size_GB": 9.5367431640625e-06,
+      "train_au_percentage": [
+        99.14533853106619,
+        99.06869864495917,
+        99.00740501724694,
+        99.03824614088911,
+        99.00526132457676
+      ],
+      "train_au_mean_percentage": 99.05298993174763,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.051668967878694134,
+      "train_throughput_samples_per_second": [
+        43.5963362627496,
+        43.56258764224711,
+        43.53564336072585,
+        43.54923798884085,
+        43.534738404884166
+      ],
+      "train_throughput_mean_samples_per_second": 43.55570873188951,
+      "train_throughput_stdev_samples_per_second": 0.022725139919234565,
+      "train_io_mean_MB_per_second": 6089.4911318589075,
+      "train_io_stdev_MB_per_second": 3.1771848521687094
+    },
+    "accelerator": "a100"
+  },
+  {
+    "run_id": "./results/Solidigm_D5-P5336_Gen4_NVMe/training/unet3d/a100/run/20250702_053249",
+    "benchmark_type": "training",
+    "model": "unet3d",
+    "command": "run_benchmark",
+    "num_processes": 4,
+    "parameters": {
+      "model": {
+        "name": "unet3d",
+        "type": "cnn",
+        "model_size": 499153191
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": true,
+        "checkpoint": true
+      },
+      "dataset": {
+        "data_folder": "/P5336/unet3d",
+        "format": "npz",
+        "num_files_train": 28000,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 146600628,
+        "record_length_bytes_stdev": 68341808,
+        "record_length_bytes_resize": 2097152
+      },
+      "reader": {
+        "data_loader": "pytorch",
+        "batch_size": 7,
+        "read_threads": 28,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed"
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.636
+      },
+      "checkpoint": {
+        "checkpoint_folder": "checkpoints/unet3d",
+        "checkpoint_after_epoch": 5,
+        "epochs_between_checkpoints": 2
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269407956992.0,
+      "total_cores": 256
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 0.004169979520796896,
+      "save_checkpoint_io_stdev_GB_per_second": 0.0,
+      "save_checkpoint_duration_mean_seconds": 0.002287,
+      "save_checkpoint_duration_stdev_seconds": 0.0,
+      "checkpoint_size_GB": 9.5367431640625e-06,
+      "train_au_percentage": [
+        99.01737021704864,
+        98.96171207028902,
+        98.9229439117682,
+        99.09430512769515,
+        98.92898437252312
+      ],
+      "train_au_mean_percentage": 98.98506313986483,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.06407254987512426,
+      "train_throughput_samples_per_second": [
+        43.540025121729556,
+        43.51565272816478,
+        43.49879002183924,
+        43.57401962295404,
+        43.50131691567522
+      ],
+      "train_throughput_mean_samples_per_second": 43.52596088207257,
+      "train_throughput_stdev_samples_per_second": 0.02813995087003879,
+      "train_io_mean_MB_per_second": 6085.332107177041,
+      "train_io_stdev_MB_per_second": 3.934225530087312
+    },
+    "accelerator": "a100"
+  },
+  {
+    "run_id": "./results/Solidigm_D5-P5336_Gen4_NVMe/training/unet3d/a100/run/20250702_063054",
+    "benchmark_type": "training",
+    "model": "unet3d",
+    "command": "run_benchmark",
+    "num_processes": 4,
+    "parameters": {
+      "model": {
+        "name": "unet3d",
+        "type": "cnn",
+        "model_size": 499153191
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": true,
+        "checkpoint": true
+      },
+      "dataset": {
+        "data_folder": "/P5336/unet3d",
+        "format": "npz",
+        "num_files_train": 28000,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 146600628,
+        "record_length_bytes_stdev": 68341808,
+        "record_length_bytes_resize": 2097152
+      },
+      "reader": {
+        "data_loader": "pytorch",
+        "batch_size": 7,
+        "read_threads": 28,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed"
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.636
+      },
+      "checkpoint": {
+        "checkpoint_folder": "checkpoints/unet3d",
+        "checkpoint_after_epoch": 5,
+        "epochs_between_checkpoints": 2
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269407956992.0,
+      "total_cores": 256
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 0.003995284107273775,
+      "save_checkpoint_io_stdev_GB_per_second": 0.0,
+      "save_checkpoint_duration_mean_seconds": 0.002387,
+      "save_checkpoint_duration_stdev_seconds": 0.0,
+      "checkpoint_size_GB": 9.5367431640625e-06,
+      "train_au_percentage": [
+        99.05163863084402,
+        98.83511423401254,
+        99.05260077554279,
+        99.0290123357625,
+        99.04954950007752
+      ],
+      "train_au_mean_percentage": 99.00358309524788,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.08467984569538611,
+      "train_throughput_samples_per_second": [
+        43.555069931625894,
+        43.45986305662178,
+        43.555473691611475,
+        43.54522547385989,
+        43.554333808839786
+      ],
+      "train_throughput_mean_samples_per_second": 43.533993192511765,
+      "train_throughput_stdev_samples_per_second": 0.03725808002893542,
+      "train_io_mean_MB_per_second": 6086.455098504972,
+      "train_io_stdev_MB_per_second": 5.20902436286563
+    },
+    "accelerator": "a100"
+  },
+  {
+    "run_id": "./results/Solidigm_D5-P5336_Gen4_NVMe/training/unet3d/a100/run/20250702_072900",
+    "benchmark_type": "training",
+    "model": "unet3d",
+    "command": "run_benchmark",
+    "num_processes": 4,
+    "parameters": {
+      "model": {
+        "name": "unet3d",
+        "type": "cnn",
+        "model_size": 499153191
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": true,
+        "checkpoint": true
+      },
+      "dataset": {
+        "data_folder": "/P5336/unet3d",
+        "format": "npz",
+        "num_files_train": 28000,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 146600628,
+        "record_length_bytes_stdev": 68341808,
+        "record_length_bytes_resize": 2097152
+      },
+      "reader": {
+        "data_loader": "pytorch",
+        "batch_size": 7,
+        "read_threads": 28,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed"
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.636
+      },
+      "checkpoint": {
+        "checkpoint_folder": "checkpoints/unet3d",
+        "checkpoint_after_epoch": 5,
+        "epochs_between_checkpoints": 2
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269407956992.0,
+      "total_cores": 256
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 0.0039229712727529824,
+      "save_checkpoint_io_stdev_GB_per_second": 0.0,
+      "save_checkpoint_duration_mean_seconds": 0.002431,
+      "save_checkpoint_duration_stdev_seconds": 0.0,
+      "checkpoint_size_GB": 9.5367431640625e-06,
+      "train_au_percentage": [
+        98.86230917675888,
+        98.84229945964537,
+        98.85803863537667,
+        98.98801415202257,
+        98.92852488182675
+      ],
+      "train_au_mean_percentage": 98.89583726112605,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.05474344618249631,
+      "train_throughput_samples_per_second": [
+        43.47204466129358,
+        43.46308565558639,
+        43.470012406052845,
+        43.52732415479842,
+        43.50103349957949
+      ],
+      "train_throughput_mean_samples_per_second": 43.48670007546214,
+      "train_throughput_stdev_samples_per_second": 0.024110840589587575,
+      "train_io_mean_MB_per_second": 6079.843083105466,
+      "train_io_stdev_MB_per_second": 3.3709186287321367
+    },
+    "accelerator": "a100"
+  },
+  {
+    "run_id": "./results/Solidigm_D5-P5336_Gen4_NVMe/training/unet3d/a100/run/20250702_082707",
+    "benchmark_type": "training",
+    "model": "unet3d",
+    "command": "run_benchmark",
+    "num_processes": 4,
+    "parameters": {
+      "model": {
+        "name": "unet3d",
+        "type": "cnn",
+        "model_size": 499153191
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": true,
+        "checkpoint": true
+      },
+      "dataset": {
+        "data_folder": "/P5336/unet3d",
+        "format": "npz",
+        "num_files_train": 28000,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 146600628,
+        "record_length_bytes_stdev": 68341808,
+        "record_length_bytes_resize": 2097152
+      },
+      "reader": {
+        "data_loader": "pytorch",
+        "batch_size": 7,
+        "read_threads": 28,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed"
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.636
+      },
+      "checkpoint": {
+        "checkpoint_folder": "checkpoints/unet3d",
+        "checkpoint_after_epoch": 5,
+        "epochs_between_checkpoints": 2
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269407956992.0,
+      "total_cores": 256
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 0.0032482095245444484,
+      "save_checkpoint_io_stdev_GB_per_second": 0.0,
+      "save_checkpoint_duration_mean_seconds": 0.002936,
+      "save_checkpoint_duration_stdev_seconds": 0.0,
+      "checkpoint_size_GB": 9.5367431640625e-06,
+      "train_au_percentage": [
+        98.9740658921409,
+        98.93956403179511,
+        98.92894129417157,
+        98.9176871506021,
+        98.93715454284715
+      ],
+      "train_au_mean_percentage": 98.93948258231137,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.018908153371337756,
+      "train_throughput_samples_per_second": [
+        43.52108388262429,
+        43.50598110545529,
+        43.50121809327737,
+        43.49630510275443,
+        43.50482494480957
+      ],
+      "train_throughput_mean_samples_per_second": 43.505882625784196,
+      "train_throughput_stdev_samples_per_second": 0.008314967320454744,
+      "train_io_mean_MB_per_second": 6082.524981149914,
+      "train_io_stdev_MB_per_second": 1.1625093755513598
+    },
+    "accelerator": "a100"
+  },
+  {
+    "run_id": "./results/Solidigm_D5-P5336_Gen4_NVMe/training/unet3d/h100/run/20250625_174202",
+    "benchmark_type": "training",
+    "model": "unet3d",
+    "command": "run_benchmark",
+    "num_processes": 2,
+    "parameters": {
+      "model": {
+        "name": "unet3d",
+        "type": "cnn",
+        "model_size": 499153191
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": true,
+        "checkpoint": true
+      },
+      "dataset": {
+        "data_folder": "/P5336/unet3d",
+        "format": "npz",
+        "num_files_train": 14000,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 146600628,
+        "record_length_bytes_stdev": 68341808,
+        "record_length_bytes_resize": 2097152
+      },
+      "reader": {
+        "data_loader": "pytorch",
+        "batch_size": 7,
+        "read_threads": 28,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed"
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.323
+      },
+      "checkpoint": {
+        "checkpoint_folder": "checkpoints/unet3d",
+        "checkpoint_after_epoch": 5,
+        "epochs_between_checkpoints": 2
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269407981568.0,
+      "total_cores": 256
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 0.004166336026239625,
+      "save_checkpoint_io_stdev_GB_per_second": 0.0,
+      "save_checkpoint_duration_mean_seconds": 0.002289,
+      "save_checkpoint_duration_stdev_seconds": 0.0,
+      "checkpoint_size_GB": 9.5367431640625e-06,
+      "train_au_percentage": [
+        98.25047265743947,
+        98.52471317902271,
+        98.54814975094864,
+        98.27340289416694,
+        98.48279375314337
+      ],
+      "train_au_mean_percentage": 98.41590644694422,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.12765320943418038,
+      "train_throughput_samples_per_second": [
+        42.5271311943404,
+        42.64577428088804,
+        42.65595806522061,
+        42.53672323931197,
+        42.62739207184006
+      ],
+      "train_throughput_mean_samples_per_second": 42.598595770320216,
+      "train_throughput_stdev_samples_per_second": 0.05528266894823684,
+      "train_io_mean_MB_per_second": 5955.677883002365,
+      "train_io_stdev_MB_per_second": 7.7290286877895555
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "./results/Solidigm_D5-P5336_Gen4_NVMe/training/unet3d/h100/run/20250625_181309",
+    "benchmark_type": "training",
+    "model": "unet3d",
+    "command": "run_benchmark",
+    "num_processes": 2,
+    "parameters": {
+      "model": {
+        "name": "unet3d",
+        "type": "cnn",
+        "model_size": 499153191
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": true,
+        "checkpoint": true
+      },
+      "dataset": {
+        "data_folder": "/P5336/unet3d",
+        "format": "npz",
+        "num_files_train": 14000,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 146600628,
+        "record_length_bytes_stdev": 68341808,
+        "record_length_bytes_resize": 2097152
+      },
+      "reader": {
+        "data_loader": "pytorch",
+        "batch_size": 7,
+        "read_threads": 28,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed"
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.323
+      },
+      "checkpoint": {
+        "checkpoint_folder": "checkpoints/unet3d",
+        "checkpoint_after_epoch": 5,
+        "epochs_between_checkpoints": 2
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269407981568.0,
+      "total_cores": 256
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 0.003634429559475038,
+      "save_checkpoint_io_stdev_GB_per_second": 0.0,
+      "save_checkpoint_duration_mean_seconds": 0.002624,
+      "save_checkpoint_duration_stdev_seconds": 0.0,
+      "checkpoint_size_GB": 9.5367431640625e-06,
+      "train_au_percentage": [
+        98.38378057879116,
+        98.43182511364876,
+        98.49821980766365,
+        98.51508193288906,
+        98.52747475021732
+      ],
+      "train_au_mean_percentage": 98.471276436642,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.05479972485176019,
+      "train_throughput_samples_per_second": [
+        42.584726513753765,
+        42.60566019639569,
+        42.633744717474855,
+        42.6414947411223,
+        42.646930004968155
+      ],
+      "train_throughput_mean_samples_per_second": 42.62251123474296,
+      "train_throughput_stdev_samples_per_second": 0.023640996686542855,
+      "train_io_mean_MB_per_second": 5959.02148623502,
+      "train_io_stdev_MB_per_second": 3.305230103295423
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "./results/Solidigm_D5-P5336_Gen4_NVMe/training/unet3d/h100/run/20250625_184418",
+    "benchmark_type": "training",
+    "model": "unet3d",
+    "command": "run_benchmark",
+    "num_processes": 2,
+    "parameters": {
+      "model": {
+        "name": "unet3d",
+        "type": "cnn",
+        "model_size": 499153191
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": true,
+        "checkpoint": true
+      },
+      "dataset": {
+        "data_folder": "/P5336/unet3d",
+        "format": "npz",
+        "num_files_train": 14000,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 146600628,
+        "record_length_bytes_stdev": 68341808,
+        "record_length_bytes_resize": 2097152
+      },
+      "reader": {
+        "data_loader": "pytorch",
+        "batch_size": 7,
+        "read_threads": 28,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed"
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.323
+      },
+      "checkpoint": {
+        "checkpoint_folder": "checkpoints/unet3d",
+        "checkpoint_after_epoch": 5,
+        "epochs_between_checkpoints": 2
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269407981568.0,
+      "total_cores": 256
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 0.003935923716080272,
+      "save_checkpoint_io_stdev_GB_per_second": 0.0,
+      "save_checkpoint_duration_mean_seconds": 0.002423,
+      "save_checkpoint_duration_stdev_seconds": 0.0,
+      "checkpoint_size_GB": 9.5367431640625e-06,
+      "train_au_percentage": [
+        98.52294049898725,
+        98.52999824962487,
+        98.51846068182151,
+        98.5219340136662,
+        98.4374731748368
+      ],
+      "train_au_mean_percentage": 98.50616132378732,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.03454809260753047,
+      "train_throughput_samples_per_second": [
+        42.644763385350814,
+        42.6476258748431,
+        42.64304779148618,
+        42.64422610140805,
+        42.60793473549121
+      ],
+      "train_throughput_mean_samples_per_second": 42.63751957771588,
+      "train_throughput_stdev_samples_per_second": 0.014868836455202886,
+      "train_io_mean_MB_per_second": 5961.1197914652275,
+      "train_io_stdev_MB_per_second": 2.0788009280796405
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "./results/Solidigm_D5-P5336_Gen4_NVMe/training/unet3d/h100/run/20250625_163946",
+    "benchmark_type": "training",
+    "model": "unet3d",
+    "command": "run_benchmark",
+    "num_processes": 2,
+    "parameters": {
+      "model": {
+        "name": "unet3d",
+        "type": "cnn",
+        "model_size": 499153191
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": true,
+        "checkpoint": true
+      },
+      "dataset": {
+        "data_folder": "/P5336/unet3d",
+        "format": "npz",
+        "num_files_train": 14000,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 146600628,
+        "record_length_bytes_stdev": 68341808,
+        "record_length_bytes_resize": 2097152
+      },
+      "reader": {
+        "data_loader": "pytorch",
+        "batch_size": 7,
+        "read_threads": 28,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed"
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.323
+      },
+      "checkpoint": {
+        "checkpoint_folder": "checkpoints/unet3d",
+        "checkpoint_after_epoch": 5,
+        "epochs_between_checkpoints": 2
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269407981568.0,
+      "total_cores": 256
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 0.0026264784257952352,
+      "save_checkpoint_io_stdev_GB_per_second": 0.0,
+      "save_checkpoint_duration_mean_seconds": 0.003631,
+      "save_checkpoint_duration_stdev_seconds": 0.0,
+      "checkpoint_size_GB": 9.5367431640625e-06,
+      "train_au_percentage": [
+        98.36787550103853,
+        98.36845794353428,
+        98.27909887816963,
+        98.58026069912631,
+        98.39705324628909
+      ],
+      "train_au_mean_percentage": 98.39854925363156,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.09913228102012554,
+      "train_throughput_samples_per_second": [
+        42.57754626923295,
+        42.577834539155106,
+        42.539080947910904,
+        42.669449004431385,
+        42.5901146567126
+      ],
+      "train_throughput_mean_samples_per_second": 42.59080508348859,
+      "train_throughput_stdev_samples_per_second": 0.042906317407628965,
+      "train_io_mean_MB_per_second": 5954.588672890682,
+      "train_io_stdev_MB_per_second": 5.998700215459574
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "./results/Solidigm_D5-P5336_Gen4_NVMe/training/unet3d/h100/run/20250625_171054",
+    "benchmark_type": "training",
+    "model": "unet3d",
+    "command": "run_benchmark",
+    "num_processes": 2,
+    "parameters": {
+      "model": {
+        "name": "unet3d",
+        "type": "cnn",
+        "model_size": 499153191
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": true,
+        "checkpoint": true
+      },
+      "dataset": {
+        "data_folder": "/P5336/unet3d",
+        "format": "npz",
+        "num_files_train": 14000,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 146600628,
+        "record_length_bytes_stdev": 68341808,
+        "record_length_bytes_resize": 2097152
+      },
+      "reader": {
+        "data_loader": "pytorch",
+        "batch_size": 7,
+        "read_threads": 28,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed"
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.323
+      },
+      "checkpoint": {
+        "checkpoint_folder": "checkpoints/unet3d",
+        "checkpoint_after_epoch": 5,
+        "epochs_between_checkpoints": 2
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269407981568.0,
+      "total_cores": 256
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 0.0035664708915716156,
+      "save_checkpoint_io_stdev_GB_per_second": 0.0,
+      "save_checkpoint_duration_mean_seconds": 0.002674,
+      "save_checkpoint_duration_stdev_seconds": 0.0,
+      "checkpoint_size_GB": 9.5367431640625e-06,
+      "train_au_percentage": [
+        98.50175216592744,
+        98.58087934820603,
+        98.59310682206069,
+        98.39418730954955,
+        98.3046544481578
+      ],
+      "train_au_mean_percentage": 98.4749160187803,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.11083645508735232,
+      "train_throughput_samples_per_second": [
+        42.635676556878764,
+        42.66979887728875,
+        42.67486594846278,
+        42.58888505492991,
+        42.550105860404486
+      ],
+      "train_throughput_mean_samples_per_second": 42.62386645959293,
+      "train_throughput_stdev_samples_per_second": 0.047988619323973594,
+      "train_io_mean_MB_per_second": 5959.210959209881,
+      "train_io_stdev_MB_per_second": 6.709253053424324
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "./results/Solidigm_D5-P5336_Gen4_NVMe/training/resnet50/a100/run/20250701_134808",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 72,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 15347,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/P5336/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.435,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 2,
+        "computation_threads": 8,
+        "batch_size": 400,
+        "dont_use_mmap": true
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269407956992.0,
+      "total_cores": 256
+    },
+    "metrics": {
+      "train_au_percentage": [
+        89.65345041653485,
+        90.28005343923695,
+        90.31161085488876,
+        90.27109348913157,
+        90.21847626765316
+      ],
+      "train_au_mean_percentage": 90.14693689348906,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.24855549623732887,
+      "train_throughput_samples_per_second": [
+        59239.80087205416,
+        59653.668406557226,
+        59674.70972237179,
+        59648.25229716411,
+        59613.50483471528
+      ],
+      "train_throughput_mean_samples_per_second": 59565.98722657251,
+      "train_throughput_stdev_samples_per_second": 164.27511875713589,
+      "train_io_mean_MB_per_second": 6513.443245904838,
+      "train_io_stdev_MB_per_second": 17.96321546168472
+    },
+    "accelerator": "a100"
+  },
+  {
+    "run_id": "./results/Solidigm_D5-P5336_Gen4_NVMe/training/resnet50/a100/run/20250701_141924",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 72,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 15347,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/P5336/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.435,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 2,
+        "computation_threads": 8,
+        "batch_size": 400,
+        "dont_use_mmap": true
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269407956992.0,
+      "total_cores": 256
+    },
+    "metrics": {
+      "train_au_percentage": [
+        90.46167418946601,
+        90.26796438291571,
+        90.37339825801314,
+        90.22598297021618,
+        90.44972524570636
+      ],
+      "train_au_mean_percentage": 90.35574900926348,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.094771871682876,
+      "train_throughput_samples_per_second": [
+        59774.3972824338,
+        59646.32892107427,
+        59716.19341660457,
+        59619.20511382621,
+        59766.58911035581
+      ],
+      "train_throughput_mean_samples_per_second": 59704.54276885893,
+      "train_throughput_stdev_samples_per_second": 62.50840998329811,
+      "train_io_mean_MB_per_second": 6528.594067759856,
+      "train_io_stdev_MB_per_second": 6.8351923601852995
+    },
+    "accelerator": "a100"
+  },
+  {
+    "run_id": "./results/Solidigm_D5-P5336_Gen4_NVMe/training/resnet50/a100/run/20250701_144930",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 72,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 15347,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/P5336/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.435,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 2,
+        "computation_threads": 8,
+        "batch_size": 400,
+        "dont_use_mmap": true
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269407956992.0,
+      "total_cores": 256
+    },
+    "metrics": {
+      "train_au_percentage": [
+        90.54395942726393,
+        90.45613535178562,
+        90.58428340758687,
+        90.55326044740309,
+        90.37688946058262
+      ],
+      "train_au_mean_percentage": 90.50290561892442,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.0760406450121831,
+      "train_throughput_samples_per_second": [
+        59827.761633488684,
+        59771.51770842334,
+        59854.99998215526,
+        59834.98142005384,
+        59719.22519482709
+      ],
+      "train_throughput_mean_samples_per_second": 59801.69718778964,
+      "train_throughput_stdev_samples_per_second": 49.68060775037867,
+      "train_io_mean_MB_per_second": 6539.217744513287,
+      "train_io_stdev_MB_per_second": 5.432493173886262
+    },
+    "accelerator": "a100"
+  },
+  {
+    "run_id": "./results/Solidigm_D5-P5336_Gen4_NVMe/training/resnet50/a100/run/20250701_151938",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 72,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 15347,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/P5336/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.435,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 2,
+        "computation_threads": 8,
+        "batch_size": 400,
+        "dont_use_mmap": true
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269407956992.0,
+      "total_cores": 256
+    },
+    "metrics": {
+      "train_au_percentage": [
+        90.38158149307866,
+        90.42165309483151,
+        90.33633737754855,
+        90.55796139563465,
+        90.50099828405558
+      ],
+      "train_au_mean_percentage": 90.43970632902979,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.08016298457305535,
+      "train_throughput_samples_per_second": [
+        59721.67029792579,
+        59748.31914483516,
+        59691.84760335873,
+        59838.735008042946,
+        59800.450256169606
+      ],
+      "train_throughput_mean_samples_per_second": 59760.204462066446,
+      "train_throughput_stdev_samples_per_second": 53.07649818602468,
+      "train_io_mean_MB_per_second": 6534.680582842685,
+      "train_io_stdev_MB_per_second": 5.803828236927474
+    },
+    "accelerator": "a100"
+  },
+  {
+    "run_id": "./results/Solidigm_D5-P5336_Gen4_NVMe/training/resnet50/a100/run/20250701_154943",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 72,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 15347,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/P5336/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.435,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 2,
+        "computation_threads": 8,
+        "batch_size": 400,
+        "dont_use_mmap": true
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269407956992.0,
+      "total_cores": 256
+    },
+    "metrics": {
+      "train_au_percentage": [
+        90.38858068334966,
+        90.41223929124246,
+        90.35996924565248,
+        90.40479848850555,
+        90.41281365083563
+      ],
+      "train_au_mean_percentage": 90.39568027191716,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.019882541198935,
+      "train_throughput_samples_per_second": [
+        59726.42167209822,
+        59742.31546521782,
+        59707.239127867506,
+        59737.54725650922,
+        59742.54103733712
+      ],
+      "train_throughput_mean_samples_per_second": 59731.212911805975,
+      "train_throughput_stdev_samples_per_second": 13.337281112710514,
+      "train_io_mean_MB_per_second": 6531.510404255464,
+      "train_io_stdev_MB_per_second": 1.4584098682337432
+    },
+    "accelerator": "a100"
+  },
+  {
+    "run_id": "./results/Solidigm_D5-P5336_Gen4_NVMe/training/resnet50/h100/run/20250626_233203",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 36,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 15347,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/P5336/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.224,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 2,
+        "computation_threads": 8,
+        "batch_size": 400
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269407981568.0,
+      "total_cores": 256
+    },
+    "metrics": {
+      "train_au_percentage": [
+        94.07885879481523,
+        93.97200997905114,
+        94.08388673345159,
+        93.87039725965313,
+        94.00405408255432
+      ],
+      "train_au_mean_percentage": 94.00184136990508,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.07853086974782031,
+      "train_throughput_samples_per_second": [
+        60382.80012826978,
+        60315.52907523912,
+        60387.41966833091,
+        60249.346592118585,
+        60335.67351165863
+      ],
+      "train_throughput_mean_samples_per_second": 60334.15379512341,
+      "train_throughput_stdev_samples_per_second": 50.48795972855819,
+      "train_io_mean_MB_per_second": 6597.441003360383,
+      "train_io_stdev_MB_per_second": 5.520775791772521
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "./results/Solidigm_D5-P5336_Gen4_NVMe/training/resnet50/h100/run/20250627_000159",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 36,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 15347,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/P5336/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.224,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 2,
+        "computation_threads": 8,
+        "batch_size": 400
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269407981568.0,
+      "total_cores": 256
+    },
+    "metrics": {
+      "train_au_percentage": [
+        94.10000512832772,
+        93.91551842767308,
+        93.92379701836097,
+        93.9621377383246,
+        93.88884893629194
+      ],
+      "train_au_mean_percentage": 93.95806144979566,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.07475152977933357,
+      "train_throughput_samples_per_second": [
+        60396.39720033207,
+        60279.40032183424,
+        60285.162913789354,
+        60309.27062439601,
+        60262.23125060092
+      ],
+      "train_throughput_mean_samples_per_second": 60306.49246219052,
+      "train_throughput_stdev_samples_per_second": 47.41005944101241,
+      "train_io_mean_MB_per_second": 6594.416281861532,
+      "train_io_stdev_MB_per_second": 5.184212431154865
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "./results/Solidigm_D5-P5336_Gen4_NVMe/training/resnet50/h100/run/20250626_220230",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 36,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 15347,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/P5336/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.224,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 2,
+        "computation_threads": 8,
+        "batch_size": 400
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269407981568.0,
+      "total_cores": 256
+    },
+    "metrics": {
+      "train_au_percentage": [
+        93.66673825834056,
+        93.94008460871412,
+        93.85209028489469,
+        93.82517838039314,
+        93.9036168617726
+      ],
+      "train_au_mean_percentage": 93.83754167882303,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.09425423471406974,
+      "train_throughput_samples_per_second": [
+        60118.62733166424,
+        60293.335216836495,
+        60237.30424189963,
+        60219.51161714853,
+        60270.59427508169
+      ],
+      "train_throughput_mean_samples_per_second": 60227.87453652612,
+      "train_throughput_stdev_samples_per_second": 60.3388535904257,
+      "train_io_mean_MB_per_second": 6585.819540318778,
+      "train_io_stdev_MB_per_second": 6.5979549182872415
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "./results/Solidigm_D5-P5336_Gen4_NVMe/training/resnet50/h100/run/20250626_223225",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 36,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 15347,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/P5336/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.224,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 2,
+        "computation_threads": 8,
+        "batch_size": 400
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269407981568.0,
+      "total_cores": 256
+    },
+    "metrics": {
+      "train_au_percentage": [
+        93.94293419551978,
+        94.04127647744855,
+        93.98616896355753,
+        93.99810516525574,
+        94.03856070481486
+      ],
+      "train_au_mean_percentage": 94.0014091013193,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.036420163982316546,
+      "train_throughput_samples_per_second": [
+        60295.58059423669,
+        60359.51487325812,
+        60324.23510288187,
+        60330.95068029947,
+        60357.27047155149
+      ],
+      "train_throughput_mean_samples_per_second": 60333.51034444553,
+      "train_throughput_stdev_samples_per_second": 23.54581532402758,
+      "train_io_mean_MB_per_second": 6597.370643081521,
+      "train_io_stdev_MB_per_second": 2.5746963818169357
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "./results/Solidigm_D5-P5336_Gen4_NVMe/training/resnet50/h100/run/20250626_230215",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 36,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 15347,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/P5336/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.224,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 2,
+        "computation_threads": 8,
+        "batch_size": 400
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269407981568.0,
+      "total_cores": 256
+    },
+    "metrics": {
+      "train_au_percentage": [
+        93.87216861295595,
+        93.9975829682471,
+        93.8552368478901,
+        93.94277253201915,
+        93.9512911288677
+      ],
+      "train_au_mean_percentage": 93.92381041799601,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.05277565907434217,
+      "train_throughput_samples_per_second": [
+        60250.264001110074,
+        60330.99480023885,
+        60240.35759315562,
+        60296.97075768119,
+        60302.1128202521
+      ],
+      "train_throughput_mean_samples_per_second": 60284.13999448756,
+      "train_throughput_stdev_samples_per_second": 33.904292842609685,
+      "train_io_mean_MB_per_second": 6591.972076089614,
+      "train_io_stdev_MB_per_second": 3.707378950723768
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "./results/Solidigm_D5-P5336_Gen4_NVMe/training/cosmoflow/a100/run/20250627_134058",
+    "benchmark_type": "training",
+    "model": "cosmoflow",
+    "command": "run_benchmark",
+    "num_processes": 19,
+    "parameters": {
+      "model": {
+        "name": "cosmoflow"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "data_folder": "/P5336/cosmoflow",
+        "num_files_train": 485909,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 2828486,
+        "record_length_bytes_stdev": 71311,
+        "format": "tfrecord"
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "batch_size": 1,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed",
+        "shuffle_size": 2
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.00551
+      },
+      "metric": {
+        "au": 0.7
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269407956992.0,
+      "total_cores": 256
+    },
+    "metrics": {
+      "train_au_percentage": [
+        71.7609877138583,
+        71.91862241877561,
+        71.80397500582436,
+        71.90494634945405,
+        71.8349068012737
+      ],
+      "train_au_mean_percentage": 71.8446876578372,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.05976006124745981,
+      "train_throughput_samples_per_second": [
+        2420.0970620526696,
+        2425.476856965759,
+        2421.582050265573,
+        2424.4557797413972,
+        2422.161428241646
+      ],
+      "train_throughput_mean_samples_per_second": 2422.754635453409,
+      "train_throughput_stdev_samples_per_second": 1.9541713870586865,
+      "train_io_mean_MB_per_second": 6535.270278754301,
+      "train_io_stdev_MB_per_second": 5.27128830899818
+    },
+    "accelerator": "a100"
+  },
+  {
+    "run_id": "./results/Solidigm_D5-P5336_Gen4_NVMe/training/cosmoflow/a100/run/20250627_140110",
+    "benchmark_type": "training",
+    "model": "cosmoflow",
+    "command": "run_benchmark",
+    "num_processes": 19,
+    "parameters": {
+      "model": {
+        "name": "cosmoflow"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "data_folder": "/P5336/cosmoflow",
+        "num_files_train": 485909,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 2828486,
+        "record_length_bytes_stdev": 71311,
+        "format": "tfrecord"
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "batch_size": 1,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed",
+        "shuffle_size": 2
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.00551
+      },
+      "metric": {
+        "au": 0.7
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269407956992.0,
+      "total_cores": 256
+    },
+    "metrics": {
+      "train_au_percentage": [
+        71.91981735928648,
+        71.8438706563197,
+        71.76383361672947,
+        71.86310667707747,
+        71.78754724651819
+      ],
+      "train_au_mean_percentage": 71.83563511118628,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.05545639614315117,
+      "train_throughput_samples_per_second": [
+        2425.188900931677,
+        2422.852684195853,
+        2419.7448661837752,
+        2423.414208512812,
+        2420.859995837871
+      ],
+      "train_throughput_mean_samples_per_second": 2422.4121311323975,
+      "train_throughput_stdev_samples_per_second": 1.9200063997243637,
+      "train_io_mean_MB_per_second": 6534.346388948584,
+      "train_io_stdev_MB_per_second": 5.179129811793104
+    },
+    "accelerator": "a100"
+  },
+  {
+    "run_id": "./results/Solidigm_D5-P5336_Gen4_NVMe/training/cosmoflow/a100/run/20250627_142114",
+    "benchmark_type": "training",
+    "model": "cosmoflow",
+    "command": "run_benchmark",
+    "num_processes": 19,
+    "parameters": {
+      "model": {
+        "name": "cosmoflow"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "data_folder": "/P5336/cosmoflow",
+        "num_files_train": 485909,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 2828486,
+        "record_length_bytes_stdev": 71311,
+        "format": "tfrecord"
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "batch_size": 1,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed",
+        "shuffle_size": 2
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.00551
+      },
+      "metric": {
+        "au": 0.7
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269407956992.0,
+      "total_cores": 256
+    },
+    "metrics": {
+      "train_au_percentage": [
+        71.82566388478494,
+        71.87908092993784,
+        71.80216909218063,
+        71.89130211103787,
+        71.87022842362572
+      ],
+      "train_au_mean_percentage": 71.8536888883134,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.03397868963411457,
+      "train_throughput_samples_per_second": [
+        2422.130620811,
+        2423.418936790609,
+        2420.664309050902,
+        2423.664631986201,
+        2423.1034141521804
+      ],
+      "train_throughput_mean_samples_per_second": 2422.5963825581784,
+      "train_throughput_stdev_samples_per_second": 1.0976953480571325,
+      "train_io_mean_MB_per_second": 6534.843398777439,
+      "train_io_stdev_MB_per_second": 2.960983204121329
+    },
+    "accelerator": "a100"
+  },
+  {
+    "run_id": "./results/Solidigm_D5-P5336_Gen4_NVMe/training/cosmoflow/a100/run/20250627_144118",
+    "benchmark_type": "training",
+    "model": "cosmoflow",
+    "command": "run_benchmark",
+    "num_processes": 19,
+    "parameters": {
+      "model": {
+        "name": "cosmoflow"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "data_folder": "/P5336/cosmoflow",
+        "num_files_train": 485909,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 2828486,
+        "record_length_bytes_stdev": 71311,
+        "format": "tfrecord"
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "batch_size": 1,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed",
+        "shuffle_size": 2
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.00551
+      },
+      "metric": {
+        "au": 0.7
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269407956992.0,
+      "total_cores": 256
+    },
+    "metrics": {
+      "train_au_percentage": [
+        71.85036998488985,
+        71.88398258818872,
+        71.8466847277689,
+        71.79283505951788,
+        71.77153350613199
+      ],
+      "train_au_mean_percentage": 71.82908117329946,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.040994581950343355,
+      "train_throughput_samples_per_second": [
+        2422.6548935745714,
+        2423.75435105035,
+        2422.9488610848393,
+        2420.7685727662974,
+        2420.126418455692
+      ],
+      "train_throughput_mean_samples_per_second": 2422.0506193863503,
+      "train_throughput_stdev_samples_per_second": 1.3726528901295454,
+      "train_io_mean_MB_per_second": 6533.371227479573,
+      "train_io_stdev_MB_per_second": 3.702668650237043
+    },
+    "accelerator": "a100"
+  },
+  {
+    "run_id": "./results/Solidigm_D5-P5336_Gen4_NVMe/training/cosmoflow/a100/run/20250627_150121",
+    "benchmark_type": "training",
+    "model": "cosmoflow",
+    "command": "run_benchmark",
+    "num_processes": 19,
+    "parameters": {
+      "model": {
+        "name": "cosmoflow"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "data_folder": "/P5336/cosmoflow",
+        "num_files_train": 485909,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 2828486,
+        "record_length_bytes_stdev": 71311,
+        "format": "tfrecord"
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "batch_size": 1,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed",
+        "shuffle_size": 2
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.00551
+      },
+      "metric": {
+        "au": 0.7
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269407956992.0,
+      "total_cores": 256
+    },
+    "metrics": {
+      "train_au_percentage": [
+        71.84835460493672,
+        71.75311334111022,
+        71.85907086516174,
+        71.93848011999704,
+        71.80203129180046
+      ],
+      "train_au_mean_percentage": 71.84021004460124,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.06184258251075041,
+      "train_throughput_samples_per_second": [
+        2423.379146587541,
+        2420.375699437303,
+        2423.873824937064,
+        2426.3898368418395,
+        2421.776721945695
+      ],
+      "train_throughput_mean_samples_per_second": 2423.1590459498884,
+      "train_throughput_stdev_samples_per_second": 2.032496029044473,
+      "train_io_mean_MB_per_second": 6536.361157648674,
+      "train_io_stdev_MB_per_second": 5.482565463264356
+    },
+    "accelerator": "a100"
+  },
+  {
+    "run_id": "./results/Solidigm_D5-P5336_Gen4_NVMe/training/cosmoflow/h100/run/20250627_041203",
+    "benchmark_type": "training",
+    "model": "cosmoflow",
+    "command": "run_benchmark",
+    "num_processes": 12,
+    "parameters": {
+      "model": {
+        "name": "cosmoflow"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "data_folder": "/P5336/cosmoflow",
+        "num_files_train": 485909,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 2828486,
+        "record_length_bytes_stdev": 71311,
+        "format": "tfrecord"
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "batch_size": 1,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed",
+        "shuffle_size": 2
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.0035
+      },
+      "metric": {
+        "au": 0.7
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269407981568.0,
+      "total_cores": 256
+    },
+    "metrics": {
+      "train_au_percentage": [
+        74.63482020836236,
+        74.61880852765334,
+        74.63885608639036,
+        74.71411338472262,
+        74.60530268062293
+      ],
+      "train_au_mean_percentage": 74.64238017755032,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.03780367395139707,
+      "train_throughput_samples_per_second": [
+        2466.5580745225498,
+        2466.4837972379546,
+        2466.977578952238,
+        2468.856162235136,
+        2465.906222234047
+      ],
+      "train_throughput_mean_samples_per_second": 2466.956367036385,
+      "train_throughput_stdev_samples_per_second": 1.009399325283474,
+      "train_io_mean_MB_per_second": 6654.502436421658,
+      "train_io_stdev_MB_per_second": 2.722808704351189
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "./results/Solidigm_D5-P5336_Gen4_NVMe/training/cosmoflow/h100/run/20250627_043145",
+    "benchmark_type": "training",
+    "model": "cosmoflow",
+    "command": "run_benchmark",
+    "num_processes": 12,
+    "parameters": {
+      "model": {
+        "name": "cosmoflow"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "data_folder": "/P5336/cosmoflow",
+        "num_files_train": 485909,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 2828486,
+        "record_length_bytes_stdev": 71311,
+        "format": "tfrecord"
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "batch_size": 1,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed",
+        "shuffle_size": 2
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.0035
+      },
+      "metric": {
+        "au": 0.7
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269407981568.0,
+      "total_cores": 256
+    },
+    "metrics": {
+      "train_au_percentage": [
+        74.6322042757763,
+        74.62784388004839,
+        74.60361715299945,
+        74.68699285240142,
+        74.64956503427582
+      ],
+      "train_au_mean_percentage": 74.64004463910028,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.027684162326457342,
+      "train_throughput_samples_per_second": [
+        2466.7177789413845,
+        2467.038155900338,
+        2467.1764159725817,
+        2468.586215791205,
+        2467.1902098747487
+      ],
+      "train_throughput_mean_samples_per_second": 2467.341755296052,
+      "train_throughput_stdev_samples_per_second": 0.6450587748201706,
+      "train_io_mean_MB_per_second": 6655.542003698643,
+      "train_io_stdev_MB_per_second": 1.7400166642723132
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "./results/Solidigm_D5-P5336_Gen4_NVMe/training/cosmoflow/h100/run/20250627_031247",
+    "benchmark_type": "training",
+    "model": "cosmoflow",
+    "command": "run_benchmark",
+    "num_processes": 12,
+    "parameters": {
+      "model": {
+        "name": "cosmoflow"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "data_folder": "/P5336/cosmoflow",
+        "num_files_train": 485909,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 2828486,
+        "record_length_bytes_stdev": 71311,
+        "format": "tfrecord"
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "batch_size": 1,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed",
+        "shuffle_size": 2
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.0035
+      },
+      "metric": {
+        "au": 0.7
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269407981568.0,
+      "total_cores": 256
+    },
+    "metrics": {
+      "train_au_percentage": [
+        74.52369014217025,
+        74.5526668804925,
+        74.57662409098525,
+        74.64044645792188,
+        74.62257639143759
+      ],
+      "train_au_mean_percentage": 74.5832007926015,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.04323099418068872,
+      "train_throughput_samples_per_second": [
+        2464.7025250150864,
+        2465.0474078424295,
+        2465.448260349036,
+        2468.02393638565,
+        2467.1957894097395
+      ],
+      "train_throughput_mean_samples_per_second": 2466.0835838003886,
+      "train_throughput_stdev_samples_per_second": 1.2951130718785402,
+      "train_io_mean_MB_per_second": 6652.14814339564,
+      "train_io_stdev_MB_per_second": 3.493508522248692
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "./results/Solidigm_D5-P5336_Gen4_NVMe/training/cosmoflow/h100/run/20250627_033237",
+    "benchmark_type": "training",
+    "model": "cosmoflow",
+    "command": "run_benchmark",
+    "num_processes": 12,
+    "parameters": {
+      "model": {
+        "name": "cosmoflow"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "data_folder": "/P5336/cosmoflow",
+        "num_files_train": 485909,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 2828486,
+        "record_length_bytes_stdev": 71311,
+        "format": "tfrecord"
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "batch_size": 1,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed",
+        "shuffle_size": 2
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.0035
+      },
+      "metric": {
+        "au": 0.7
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269407981568.0,
+      "total_cores": 256
+    },
+    "metrics": {
+      "train_au_percentage": [
+        74.58396227343722,
+        74.51169279578129,
+        74.62852938415209,
+        74.52629232639687,
+        74.60649730572469
+      ],
+      "train_au_mean_percentage": 74.57139481709842,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.04528366247517959,
+      "train_throughput_samples_per_second": [
+        2465.21406100293,
+        2464.569258220691,
+        2467.56733376596,
+        2465.4384574131473,
+        2466.497680151523
+      ],
+      "train_throughput_mean_samples_per_second": 2465.8573581108503,
+      "train_throughput_stdev_samples_per_second": 1.0566493597652908,
+      "train_io_mean_MB_per_second": 6651.537909902121,
+      "train_io_stdev_MB_per_second": 2.8502635202456363
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "./results/Solidigm_D5-P5336_Gen4_NVMe/training/cosmoflow/h100/run/20250627_035220",
+    "benchmark_type": "training",
+    "model": "cosmoflow",
+    "command": "run_benchmark",
+    "num_processes": 12,
+    "parameters": {
+      "model": {
+        "name": "cosmoflow"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "data_folder": "/P5336/cosmoflow",
+        "num_files_train": 485909,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 2828486,
+        "record_length_bytes_stdev": 71311,
+        "format": "tfrecord"
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "batch_size": 1,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed",
+        "shuffle_size": 2
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.0035
+      },
+      "metric": {
+        "au": 0.7
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269407981568.0,
+      "total_cores": 256
+    },
+    "metrics": {
+      "train_au_percentage": [
+        74.5647439829035,
+        74.72540340332657,
+        74.6477675315425,
+        74.62995759261999,
+        74.6245008099069
+      ],
+      "train_au_mean_percentage": 74.63847466405988,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.05166620858187809,
+      "train_throughput_samples_per_second": [
+        2464.6264519627175,
+        2468.9897325041197,
+        2467.7537317322835,
+        2466.3833618377703,
+        2466.781421479828
+      ],
+      "train_throughput_mean_samples_per_second": 2466.906939903344,
+      "train_throughput_stdev_samples_per_second": 1.4522806569075801,
+      "train_io_mean_MB_per_second": 6654.369108981562,
+      "train_io_stdev_MB_per_second": 3.9174609242762504
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "./results/Solidigm_D7-PS1010_Gen5_NVMe/training/unet3d/a100/run/20250702_010420",
+    "benchmark_type": "training",
+    "model": "unet3d",
+    "command": "run_benchmark",
+    "num_processes": 8,
+    "parameters": {
+      "model": {
+        "name": "unet3d",
+        "type": "cnn",
+        "model_size": 499153191
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": true,
+        "checkpoint": true
+      },
+      "dataset": {
+        "data_folder": "/PS1010/unet3d",
+        "format": "npz",
+        "num_files_train": 35000,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 146600628,
+        "record_length_bytes_stdev": 68341808,
+        "record_length_bytes_resize": 2097152
+      },
+      "reader": {
+        "data_loader": "pytorch",
+        "batch_size": 7,
+        "read_threads": 7,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed"
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.636
+      },
+      "checkpoint": {
+        "checkpoint_folder": "checkpoints/unet3d",
+        "checkpoint_after_epoch": 5,
+        "epochs_between_checkpoints": 2
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269407956992.0,
+      "total_cores": 256
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 0.0021999407529555938,
+      "save_checkpoint_io_stdev_GB_per_second": 0.0,
+      "save_checkpoint_duration_mean_seconds": 0.004335,
+      "save_checkpoint_duration_stdev_seconds": 0.0,
+      "checkpoint_size_GB": 9.5367431640625e-06,
+      "train_au_percentage": [
+        98.98310818085346,
+        98.95856997529535,
+        98.96636968196074,
+        98.8958412338177,
+        98.95120518617725
+      ],
+      "train_au_mean_percentage": 98.95101885162089,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.0295533305685419,
+      "train_throughput_samples_per_second": [
+        86.99732548794569,
+        86.97548594438243,
+        86.98239788323104,
+        86.92038486339311,
+        86.96956257602946
+      ],
+      "train_throughput_mean_samples_per_second": 86.96903135099635,
+      "train_throughput_stdev_samples_per_second": 0.026029395312363854,
+      "train_io_mean_MB_per_second": 12159.075367553474,
+      "train_io_stdev_MB_per_second": 3.639150332691953
+    },
+    "accelerator": "a100"
+  },
+  {
+    "run_id": "./results/Solidigm_D7-PS1010_Gen5_NVMe/training/unet3d/a100/run/20250702_014121",
+    "benchmark_type": "training",
+    "model": "unet3d",
+    "command": "run_benchmark",
+    "num_processes": 8,
+    "parameters": {
+      "model": {
+        "name": "unet3d",
+        "type": "cnn",
+        "model_size": 499153191
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": true,
+        "checkpoint": true
+      },
+      "dataset": {
+        "data_folder": "/PS1010/unet3d",
+        "format": "npz",
+        "num_files_train": 35000,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 146600628,
+        "record_length_bytes_stdev": 68341808,
+        "record_length_bytes_resize": 2097152
+      },
+      "reader": {
+        "data_loader": "pytorch",
+        "batch_size": 7,
+        "read_threads": 7,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed"
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.636
+      },
+      "checkpoint": {
+        "checkpoint_folder": "checkpoints/unet3d",
+        "checkpoint_after_epoch": 5,
+        "epochs_between_checkpoints": 2
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269407956992.0,
+      "total_cores": 256
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 0.0037384332277783225,
+      "save_checkpoint_io_stdev_GB_per_second": 0.0,
+      "save_checkpoint_duration_mean_seconds": 0.002551,
+      "save_checkpoint_duration_stdev_seconds": 0.0,
+      "checkpoint_size_GB": 9.5367431640625e-06,
+      "train_au_percentage": [
+        98.91488471023601,
+        98.91565248026767,
+        98.90101020774551,
+        98.92177616114166,
+        98.91918464864628
+      ],
+      "train_au_mean_percentage": 98.91450164160742,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.0071880337815902985,
+      "train_throughput_samples_per_second": [
+        86.93658227886785,
+        86.93768623127252,
+        86.924765052327,
+        86.94444438019876,
+        86.94066293978275
+      ],
+      "train_throughput_mean_samples_per_second": 86.93682817648978,
+      "train_throughput_stdev_samples_per_second": 0.0066185747206939,
+      "train_io_mean_MB_per_second": 12154.57306575918,
+      "train_io_stdev_MB_per_second": 0.9253379922091011
+    },
+    "accelerator": "a100"
+  },
+  {
+    "run_id": "./results/Solidigm_D7-PS1010_Gen5_NVMe/training/unet3d/a100/run/20250702_021824",
+    "benchmark_type": "training",
+    "model": "unet3d",
+    "command": "run_benchmark",
+    "num_processes": 8,
+    "parameters": {
+      "model": {
+        "name": "unet3d",
+        "type": "cnn",
+        "model_size": 499153191
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": true,
+        "checkpoint": true
+      },
+      "dataset": {
+        "data_folder": "/PS1010/unet3d",
+        "format": "npz",
+        "num_files_train": 35000,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 146600628,
+        "record_length_bytes_stdev": 68341808,
+        "record_length_bytes_resize": 2097152
+      },
+      "reader": {
+        "data_loader": "pytorch",
+        "batch_size": 7,
+        "read_threads": 7,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed"
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.636
+      },
+      "checkpoint": {
+        "checkpoint_folder": "checkpoints/unet3d",
+        "checkpoint_after_epoch": 5,
+        "epochs_between_checkpoints": 2
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269407956992.0,
+      "total_cores": 256
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 0.0039836019900010445,
+      "save_checkpoint_io_stdev_GB_per_second": 0.0,
+      "save_checkpoint_duration_mean_seconds": 0.002394,
+      "save_checkpoint_duration_stdev_seconds": 0.0,
+      "checkpoint_size_GB": 9.5367431640625e-06,
+      "train_au_percentage": [
+        98.85984327302056,
+        98.91321176705938,
+        98.87767262505295,
+        98.54395966081314,
+        98.85845165801851
+      ],
+      "train_au_mean_percentage": 98.8106277967929,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.1347884709474911,
+      "train_throughput_samples_per_second": [
+        86.88903536939671,
+        86.93552303778672,
+        86.90510861987178,
+        86.61086045468333,
+        86.8877728711274
+      ],
+      "train_throughput_mean_samples_per_second": 86.84566007057319,
+      "train_throughput_stdev_samples_per_second": 0.11865517016186002,
+      "train_io_mean_MB_per_second": 12141.82692091041,
+      "train_io_stdev_MB_per_second": 16.589090787101306
+    },
+    "accelerator": "a100"
+  },
+  {
+    "run_id": "./results/Solidigm_D7-PS1010_Gen5_NVMe/training/unet3d/a100/run/20250702_025534",
+    "benchmark_type": "training",
+    "model": "unet3d",
+    "command": "run_benchmark",
+    "num_processes": 8,
+    "parameters": {
+      "model": {
+        "name": "unet3d",
+        "type": "cnn",
+        "model_size": 499153191
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": true,
+        "checkpoint": true
+      },
+      "dataset": {
+        "data_folder": "/PS1010/unet3d",
+        "format": "npz",
+        "num_files_train": 35000,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 146600628,
+        "record_length_bytes_stdev": 68341808,
+        "record_length_bytes_resize": 2097152
+      },
+      "reader": {
+        "data_loader": "pytorch",
+        "batch_size": 7,
+        "read_threads": 7,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed"
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.636
+      },
+      "checkpoint": {
+        "checkpoint_folder": "checkpoints/unet3d",
+        "checkpoint_after_epoch": 5,
+        "epochs_between_checkpoints": 2
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269407956992.0,
+      "total_cores": 256
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 0.004082509916122645,
+      "save_checkpoint_io_stdev_GB_per_second": 0.0,
+      "save_checkpoint_duration_mean_seconds": 0.002336,
+      "save_checkpoint_duration_stdev_seconds": 0.0,
+      "checkpoint_size_GB": 9.5367431640625e-06,
+      "train_au_percentage": [
+        98.53917224794205,
+        98.31904425836795,
+        98.51665961082966,
+        98.85039354873166,
+        98.83922437847505
+      ],
+      "train_au_mean_percentage": 98.61289880886928,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.20429150779975122,
+      "train_throughput_samples_per_second": [
+        86.60629337556347,
+        86.41322854882287,
+        86.58812314698719,
+        86.88040737373447,
+        86.87064095174537
+      ],
+      "train_throughput_mean_samples_per_second": 86.67173867937068,
+      "train_throughput_stdev_samples_per_second": 0.17955883192165387,
+      "train_io_mean_MB_per_second": 12117.511101005202,
+      "train_io_stdev_MB_per_second": 25.10398628488627
+    },
+    "accelerator": "a100"
+  },
+  {
+    "run_id": "./results/Solidigm_D7-PS1010_Gen5_NVMe/training/unet3d/a100/run/20250702_033246",
+    "benchmark_type": "training",
+    "model": "unet3d",
+    "command": "run_benchmark",
+    "num_processes": 8,
+    "parameters": {
+      "model": {
+        "name": "unet3d",
+        "type": "cnn",
+        "model_size": 499153191
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": true,
+        "checkpoint": true
+      },
+      "dataset": {
+        "data_folder": "/PS1010/unet3d",
+        "format": "npz",
+        "num_files_train": 35000,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 146600628,
+        "record_length_bytes_stdev": 68341808,
+        "record_length_bytes_resize": 2097152
+      },
+      "reader": {
+        "data_loader": "pytorch",
+        "batch_size": 7,
+        "read_threads": 7,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed"
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.636
+      },
+      "checkpoint": {
+        "checkpoint_folder": "checkpoints/unet3d",
+        "checkpoint_after_epoch": 5,
+        "epochs_between_checkpoints": 2
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269407956992.0,
+      "total_cores": 256
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 0.0038973204593635066,
+      "save_checkpoint_io_stdev_GB_per_second": 0.0,
+      "save_checkpoint_duration_mean_seconds": 0.002447,
+      "save_checkpoint_duration_stdev_seconds": 0.0,
+      "checkpoint_size_GB": 9.5367431640625e-06,
+      "train_au_percentage": [
+        98.33085211300661,
+        98.44722496163185,
+        98.36253452523155,
+        98.11247276430801,
+        98.18602121309999
+      ],
+      "train_au_mean_percentage": 98.2878211154556,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.12161711301963675,
+      "train_throughput_samples_per_second": [
+        86.42372125212839,
+        86.52609885967138,
+        86.45205905016901,
+        86.23196474386259,
+        86.2966050271365
+      ],
+      "train_throughput_mean_samples_per_second": 86.38608978659357,
+      "train_throughput_stdev_samples_per_second": 0.10689496007858236,
+      "train_io_mean_MB_per_second": 12077.574742487912,
+      "train_io_stdev_MB_per_second": 14.94490459208975
+    },
+    "accelerator": "a100"
+  },
+  {
+    "run_id": "./results/Solidigm_D7-PS1010_Gen5_NVMe/training/unet3d/h100/run/20250625_155319",
+    "benchmark_type": "training",
+    "model": "unet3d",
+    "command": "run_benchmark",
+    "num_processes": 4,
+    "parameters": {
+      "model": {
+        "name": "unet3d",
+        "type": "cnn",
+        "model_size": 499153191
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": true,
+        "checkpoint": true
+      },
+      "dataset": {
+        "data_folder": "/PS1010/unet3d",
+        "format": "npz",
+        "num_files_train": 14000,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 146600628,
+        "record_length_bytes_stdev": 68341808,
+        "record_length_bytes_resize": 2097152
+      },
+      "reader": {
+        "data_loader": "pytorch",
+        "batch_size": 7,
+        "read_threads": 7,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed"
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.323
+      },
+      "checkpoint": {
+        "checkpoint_folder": "checkpoints/unet3d",
+        "checkpoint_after_epoch": 5,
+        "epochs_between_checkpoints": 2
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269407981568.0,
+      "total_cores": 256
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 0.0038423622739977843,
+      "save_checkpoint_io_stdev_GB_per_second": 0.0,
+      "save_checkpoint_duration_mean_seconds": 0.002482,
+      "save_checkpoint_duration_stdev_seconds": 0.0,
+      "checkpoint_size_GB": 9.5367431640625e-06,
+      "train_au_percentage": [
+        97.93425711612626,
+        97.64126297626807,
+        97.80818759458538,
+        97.8927755931611,
+        98.04277559292902
+      ],
+      "train_au_mean_percentage": 97.86385177461398,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.13450019051330395,
+      "train_throughput_samples_per_second": [
+        84.69863194137648,
+        84.44498206168424,
+        84.58963929976525,
+        84.66340855195503,
+        84.7929878368719
+      ],
+      "train_throughput_mean_samples_per_second": 84.63792993833059,
+      "train_throughput_stdev_samples_per_second": 0.11656561560034409,
+      "train_io_mean_MB_per_second": 11833.165818766847,
+      "train_io_stdev_MB_per_second": 16.296951723305742
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "./results/Solidigm_D7-PS1010_Gen5_NVMe/training/unet3d/h100/run/20250625_144514",
+    "benchmark_type": "training",
+    "model": "unet3d",
+    "command": "run_benchmark",
+    "num_processes": 4,
+    "parameters": {
+      "model": {
+        "name": "unet3d",
+        "type": "cnn",
+        "model_size": 499153191
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": true,
+        "checkpoint": true
+      },
+      "dataset": {
+        "data_folder": "/PS1010/unet3d",
+        "format": "npz",
+        "num_files_train": 14000,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 146600628,
+        "record_length_bytes_stdev": 68341808,
+        "record_length_bytes_resize": 2097152
+      },
+      "reader": {
+        "data_loader": "pytorch",
+        "batch_size": 7,
+        "read_threads": 7,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed"
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.323
+      },
+      "checkpoint": {
+        "checkpoint_folder": "checkpoints/unet3d",
+        "checkpoint_after_epoch": 5,
+        "epochs_between_checkpoints": 2
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269407981568.0,
+      "total_cores": 256
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 0.0036413681420628106,
+      "save_checkpoint_io_stdev_GB_per_second": 0.0,
+      "save_checkpoint_duration_mean_seconds": 0.002619,
+      "save_checkpoint_duration_stdev_seconds": 0.0,
+      "checkpoint_size_GB": 9.5367431640625e-06,
+      "train_au_percentage": [
+        98.52683344192143,
+        98.45943262738595,
+        98.51460864029835,
+        98.4475051715446,
+        98.31632575886164
+      ],
+      "train_au_mean_percentage": 98.45294112800238,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.07483101549678885,
+      "train_throughput_samples_per_second": [
+        85.208862787285,
+        85.15245576530066,
+        85.200330663758,
+        85.14198142518947,
+        85.02883693542256
+      ],
+      "train_throughput_mean_samples_per_second": 85.14649351539113,
+      "train_throughput_stdev_samples_per_second": 0.06432315728059253,
+      "train_io_mean_MB_per_second": 11904.267712930934,
+      "train_io_stdev_MB_per_second": 8.992972614553105
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "./results/Solidigm_D7-PS1010_Gen5_NVMe/training/unet3d/h100/run/20250625_150216",
+    "benchmark_type": "training",
+    "model": "unet3d",
+    "command": "run_benchmark",
+    "num_processes": 4,
+    "parameters": {
+      "model": {
+        "name": "unet3d",
+        "type": "cnn",
+        "model_size": 499153191
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": true,
+        "checkpoint": true
+      },
+      "dataset": {
+        "data_folder": "/PS1010/unet3d",
+        "format": "npz",
+        "num_files_train": 14000,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 146600628,
+        "record_length_bytes_stdev": 68341808,
+        "record_length_bytes_resize": 2097152
+      },
+      "reader": {
+        "data_loader": "pytorch",
+        "batch_size": 7,
+        "read_threads": 7,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed"
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.323
+      },
+      "checkpoint": {
+        "checkpoint_folder": "checkpoints/unet3d",
+        "checkpoint_after_epoch": 5,
+        "epochs_between_checkpoints": 2
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269407981568.0,
+      "total_cores": 256
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 0.004739931990090706,
+      "save_checkpoint_io_stdev_GB_per_second": 0.0,
+      "save_checkpoint_duration_mean_seconds": 0.002012,
+      "save_checkpoint_duration_stdev_seconds": 0.0,
+      "checkpoint_size_GB": 9.5367431640625e-06,
+      "train_au_percentage": [
+        98.39128840714983,
+        98.2441243438496,
+        98.25553931548146,
+        98.17798021200457,
+        98.01850553737953
+      ],
+      "train_au_mean_percentage": 98.217487563173,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.12125911486633636,
+      "train_throughput_samples_per_second": [
+        85.0936314994104,
+        84.96566460537193,
+        84.97587680727895,
+        84.90907970797812,
+        84.7708789677358
+      ],
+      "train_throughput_mean_samples_per_second": 84.94302631755504,
+      "train_throughput_stdev_samples_per_second": 0.10493869629800584,
+      "train_io_mean_MB_per_second": 11875.82111585054,
+      "train_io_stdev_MB_per_second": 14.671400812901432
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "./results/Solidigm_D7-PS1010_Gen5_NVMe/training/unet3d/h100/run/20250625_151916",
+    "benchmark_type": "training",
+    "model": "unet3d",
+    "command": "run_benchmark",
+    "num_processes": 4,
+    "parameters": {
+      "model": {
+        "name": "unet3d",
+        "type": "cnn",
+        "model_size": 499153191
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": true,
+        "checkpoint": true
+      },
+      "dataset": {
+        "data_folder": "/PS1010/unet3d",
+        "format": "npz",
+        "num_files_train": 14000,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 146600628,
+        "record_length_bytes_stdev": 68341808,
+        "record_length_bytes_resize": 2097152
+      },
+      "reader": {
+        "data_loader": "pytorch",
+        "batch_size": 7,
+        "read_threads": 7,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed"
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.323
+      },
+      "checkpoint": {
+        "checkpoint_folder": "checkpoints/unet3d",
+        "checkpoint_after_epoch": 5,
+        "epochs_between_checkpoints": 2
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269407981568.0,
+      "total_cores": 256
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 0.004747010036865356,
+      "save_checkpoint_io_stdev_GB_per_second": 0.0,
+      "save_checkpoint_duration_mean_seconds": 0.002009,
+      "save_checkpoint_duration_stdev_seconds": 0.0,
+      "checkpoint_size_GB": 9.5367431640625e-06,
+      "train_au_percentage": [
+        98.06124065347834,
+        98.21755356916533,
+        98.03449830061444,
+        98.12937628808022,
+        97.9687797033727
+      ],
+      "train_au_mean_percentage": 98.08228970294222,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.08500007132660817,
+      "train_throughput_samples_per_second": [
+        84.80838500060696,
+        84.94378447548938,
+        84.78540881609173,
+        84.86714128660756,
+        84.72830527121863
+      ],
+      "train_throughput_mean_samples_per_second": 84.82660497000285,
+      "train_throughput_stdev_samples_per_second": 0.07357465682267134,
+      "train_io_mean_MB_per_second": 11859.544334135378,
+      "train_io_stdev_MB_per_second": 10.286417861068823
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "./results/Solidigm_D7-PS1010_Gen5_NVMe/training/unet3d/h100/run/20250625_153617",
+    "benchmark_type": "training",
+    "model": "unet3d",
+    "command": "run_benchmark",
+    "num_processes": 4,
+    "parameters": {
+      "model": {
+        "name": "unet3d",
+        "type": "cnn",
+        "model_size": 499153191
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": true,
+        "checkpoint": true
+      },
+      "dataset": {
+        "data_folder": "/PS1010/unet3d",
+        "format": "npz",
+        "num_files_train": 14000,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 146600628,
+        "record_length_bytes_stdev": 68341808,
+        "record_length_bytes_resize": 2097152
+      },
+      "reader": {
+        "data_loader": "pytorch",
+        "batch_size": 7,
+        "read_threads": 7,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed"
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.323
+      },
+      "checkpoint": {
+        "checkpoint_folder": "checkpoints/unet3d",
+        "checkpoint_after_epoch": 5,
+        "epochs_between_checkpoints": 2
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269407981568.0,
+      "total_cores": 256
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 0.004334883256392045,
+      "save_checkpoint_io_stdev_GB_per_second": 0.0,
+      "save_checkpoint_duration_mean_seconds": 0.0022,
+      "save_checkpoint_duration_stdev_seconds": 0.0,
+      "checkpoint_size_GB": 9.5367431640625e-06,
+      "train_au_percentage": [
+        98.07479747738938,
+        97.65819224796097,
+        97.40998674369882,
+        97.8833020606309,
+        98.12082910702334
+      ],
+      "train_au_mean_percentage": 97.82942152734068,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.26581040238186054,
+      "train_throughput_samples_per_second": [
+        84.81978781183196,
+        84.45979060013792,
+        84.24530252033321,
+        84.65477250254906,
+        84.86031588043902
+      ],
+      "train_throughput_mean_samples_per_second": 84.60799386305824,
+      "train_throughput_stdev_samples_per_second": 0.22987846159777356,
+      "train_io_mean_MB_per_second": 11828.980478424533,
+      "train_io_stdev_MB_per_second": 32.139136155993924
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "./results/Solidigm_D7-PS1010_Gen5_NVMe/training/resnet50/a100/run/20250701_090738",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 132,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 21742,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/PS1010/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.435,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 2,
+        "computation_threads": 8,
+        "batch_size": 400,
+        "dont_use_mmap": true
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269407956992.0,
+      "total_cores": 256
+    },
+    "metrics": {
+      "train_au_percentage": [
+        92.48713607182535,
+        91.90813938064218,
+        92.17696280433024,
+        91.82592255443188,
+        92.13018034968704
+      ],
+      "train_au_mean_percentage": 92.10566823218335,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.23172257724056813,
+      "train_throughput_samples_per_second": [
+        111798.60899271788,
+        111149.594160296,
+        111463.94602389436,
+        111048.12957482788,
+        111410.27581190798
+      ],
+      "train_throughput_mean_samples_per_second": 111374.11091272882,
+      "train_throughput_stdev_samples_per_second": 263.15336662404127,
+      "train_io_mean_MB_per_second": 12178.57680648923,
+      "train_io_stdev_MB_per_second": 28.7753900888903
+    },
+    "accelerator": "a100"
+  },
+  {
+    "run_id": "./results/Solidigm_D7-PS1010_Gen5_NVMe/training/resnet50/a100/run/20250701_093253",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 132,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 21742,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/PS1010/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.435,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 2,
+        "computation_threads": 8,
+        "batch_size": 400,
+        "dont_use_mmap": true
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269407956992.0,
+      "total_cores": 256
+    },
+    "metrics": {
+      "train_au_percentage": [
+        93.75867513122544,
+        92.42200939675648,
+        92.35605737435327,
+        92.40877973264678,
+        92.26480504516802
+      ],
+      "train_au_mean_percentage": 92.64206533603,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.5610329945886577,
+      "train_throughput_samples_per_second": [
+        113382.79524509987,
+        111766.93320927754,
+        111692.8883171885,
+        111762.10163312075,
+        111586.06331201809
+      ],
+      "train_throughput_mean_samples_per_second": 112038.15634334095,
+      "train_throughput_stdev_samples_per_second": 675.4879845657182,
+      "train_io_mean_MB_per_second": 12251.189087866227,
+      "train_io_stdev_MB_per_second": 73.86350593038956
+    },
+    "accelerator": "a100"
+  },
+  {
+    "run_id": "./results/Solidigm_D7-PS1010_Gen5_NVMe/training/resnet50/a100/run/20250701_095755",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 132,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 21742,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/PS1010/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.435,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 2,
+        "computation_threads": 8,
+        "batch_size": 400,
+        "dont_use_mmap": true
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269407956992.0,
+      "total_cores": 256
+    },
+    "metrics": {
+      "train_au_percentage": [
+        94.00780550242872,
+        92.42972094735674,
+        92.6027253634486,
+        92.27771193035035,
+        92.02785729866547
+      ],
+      "train_au_mean_percentage": 92.66916420844998,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.6954447710522986,
+      "train_throughput_samples_per_second": [
+        113703.87336619332,
+        111781.6513816999,
+        111995.49997577895,
+        111600.92323524159,
+        111293.61365826982
+      ],
+      "train_throughput_mean_samples_per_second": 112075.11232343673,
+      "train_throughput_stdev_samples_per_second": 846.2760116708007,
+      "train_io_mean_MB_per_second": 12255.230163825148,
+      "train_io_stdev_MB_per_second": 92.53889726399882
+    },
+    "accelerator": "a100"
+  },
+  {
+    "run_id": "./results/Solidigm_D7-PS1010_Gen5_NVMe/training/resnet50/a100/run/20250701_102315",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 132,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 21742,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/PS1010/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.435,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 2,
+        "computation_threads": 8,
+        "batch_size": 400,
+        "dont_use_mmap": true
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269407956992.0,
+      "total_cores": 256
+    },
+    "metrics": {
+      "train_au_percentage": [
+        93.66037934068949,
+        92.85613651188102,
+        92.90534331837057,
+        92.71564684783017,
+        92.42954798364785
+      ],
+      "train_au_mean_percentage": 92.91341080048382,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.4085440575862595,
+      "train_throughput_samples_per_second": [
+        113266.32432832065,
+        112287.93830285633,
+        112356.38298253536,
+        112137.2875349634,
+        111784.94337471171
+      ],
+      "train_throughput_mean_samples_per_second": 112366.57530467748,
+      "train_throughput_stdev_samples_per_second": 491.26460290337866,
+      "train_io_mean_MB_per_second": 12287.101163954345,
+      "train_io_stdev_MB_per_second": 53.71898055784569
+    },
+    "accelerator": "a100"
+  },
+  {
+    "run_id": "./results/Solidigm_D7-PS1010_Gen5_NVMe/training/resnet50/a100/run/20250701_104815",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 132,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 21742,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/PS1010/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.435,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 2,
+        "computation_threads": 8,
+        "batch_size": 400,
+        "dont_use_mmap": true
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269407956992.0,
+      "total_cores": 256
+    },
+    "metrics": {
+      "train_au_percentage": [
+        94.01121850694123,
+        92.69133323922676,
+        92.97909174132825,
+        92.74885212568475,
+        92.36594756588711
+      ],
+      "train_au_mean_percentage": 92.95928863581364,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.5612639060861391,
+      "train_throughput_samples_per_second": [
+        113702.41786049349,
+        112104.09619261224,
+        112446.52863732977,
+        112162.32697775055,
+        111713.09223469108
+      ],
+      "train_throughput_mean_samples_per_second": 112425.69238057542,
+      "train_throughput_stdev_samples_per_second": 679.8597667312703,
+      "train_io_mean_MB_per_second": 12293.565519480939,
+      "train_io_stdev_MB_per_second": 74.34155315741646
+    },
+    "accelerator": "a100"
+  },
+  {
+    "run_id": "./results/Solidigm_D7-PS1010_Gen5_NVMe/training/resnet50/h100/run/20250626_171123",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 70,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 15347,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/PS1010/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.224,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 2,
+        "computation_threads": 8,
+        "batch_size": 400
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269407981568.0,
+      "total_cores": 256
+    },
+    "metrics": {
+      "train_au_percentage": [
+        93.07184973853894,
+        92.23779981944455,
+        92.0045777517905,
+        92.12228958231654,
+        92.06885113630257
+      ],
+      "train_au_mean_percentage": 92.30107360567862,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.3929122580620248,
+      "train_throughput_samples_per_second": [
+        115977.7253830562,
+        114951.18001824463,
+        114659.11964886074,
+        114805.52236432028,
+        114738.72119029467
+      ],
+      "train_throughput_mean_samples_per_second": 115026.4537209553,
+      "train_throughput_stdev_samples_per_second": 485.20488445655815,
+      "train_io_mean_MB_per_second": 12577.954516884323,
+      "train_io_stdev_MB_per_second": 53.056360260134575
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "./results/Solidigm_D7-PS1010_Gen5_NVMe/training/resnet50/h100/run/20250626_173131",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 70,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 15347,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/PS1010/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.224,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 2,
+        "computation_threads": 8,
+        "batch_size": 400
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269407981568.0,
+      "total_cores": 256
+    },
+    "metrics": {
+      "train_au_percentage": [
+        93.31845978285878,
+        92.1058503262551,
+        92.34142821782065,
+        92.03637225151192,
+        92.20100417741196
+      ],
+      "train_au_mean_percentage": 92.40062295117168,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.47017987908843745,
+      "train_throughput_samples_per_second": [
+        116291.42791646598,
+        114778.97628799388,
+        115074.003747253,
+        114694.2257014186,
+        114904.66815722846
+      ],
+      "train_throughput_mean_samples_per_second": 115148.66036207198,
+      "train_throughput_stdev_samples_per_second": 585.5255186525033,
+      "train_io_mean_MB_per_second": 12591.317613145256,
+      "train_io_stdev_MB_per_second": 64.02625747249826
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "./results/Solidigm_D7-PS1010_Gen5_NVMe/training/resnet50/h100/run/20250626_175140",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 70,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 15347,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/PS1010/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.224,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 2,
+        "computation_threads": 8,
+        "batch_size": 400
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269407981568.0,
+      "total_cores": 256
+    },
+    "metrics": {
+      "train_au_percentage": [
+        93.35646524852048,
+        92.11632292805099,
+        92.25799967633854,
+        91.93639833791518,
+        92.16288817479601
+      ],
+      "train_au_mean_percentage": 92.36601487312424,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.5061296512144753,
+      "train_throughput_samples_per_second": [
+        116331.25250389162,
+        114794.67380909329,
+        114968.69757642216,
+        114566.11649895611,
+        114854.72841067103
+      ],
+      "train_throughput_mean_samples_per_second": 115103.09375980683,
+      "train_throughput_stdev_samples_per_second": 627.9472949381234,
+      "train_io_mean_MB_per_second": 12586.334979740157,
+      "train_io_stdev_MB_per_second": 68.66500930205906
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "./results/Solidigm_D7-PS1010_Gen5_NVMe/training/resnet50/h100/run/20250626_181146",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 70,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 15347,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/PS1010/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.224,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 2,
+        "computation_threads": 8,
+        "batch_size": 400
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269407981568.0,
+      "total_cores": 256
+    },
+    "metrics": {
+      "train_au_percentage": [
+        93.306334427747,
+        92.02558785323716,
+        92.31690257416439,
+        92.28523507863183,
+        91.99594832131505
+      ],
+      "train_au_mean_percentage": 92.38600165101909,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.4783263969503174,
+      "train_throughput_samples_per_second": [
+        116269.41976353712,
+        114682.25238583087,
+        115043.26071747174,
+        115001.11024613377,
+        114639.3346166415
+      ],
+      "train_throughput_mean_samples_per_second": 115127.075545923,
+      "train_throughput_stdev_samples_per_second": 593.902576452815,
+      "train_io_mean_MB_per_second": 12588.957348814793,
+      "train_io_stdev_MB_per_second": 64.9422750370599
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "./results/Solidigm_D7-PS1010_Gen5_NVMe/training/resnet50/h100/run/20250626_183154",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 70,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 15347,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/PS1010/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.224,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 2,
+        "computation_threads": 8,
+        "batch_size": 400
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269407981568.0,
+      "total_cores": 256
+    },
+    "metrics": {
+      "train_au_percentage": [
+        93.49594361317254,
+        91.96818533864665,
+        92.32104195501829,
+        91.94109764136356,
+        92.17822166143237
+      ],
+      "train_au_mean_percentage": 92.38089804192668,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.5747596471725317,
+      "train_throughput_samples_per_second": [
+        116511.22848297407,
+        114608.93810707393,
+        115047.1991909885,
+        114574.97261802424,
+        114872.88671911681
+      ],
+      "train_throughput_mean_samples_per_second": 115123.04502363552,
+      "train_throughput_stdev_samples_per_second": 715.5521459516038,
+      "train_io_mean_MB_per_second": 12588.51661779709,
+      "train_io_stdev_MB_per_second": 78.24445642801392
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "./results/Solidigm_D7-PS1010_Gen5_NVMe/training/cosmoflow/a100/run/20250627_181634",
+    "benchmark_type": "training",
+    "model": "cosmoflow",
+    "command": "run_benchmark",
+    "num_processes": 37,
+    "parameters": {
+      "model": {
+        "name": "cosmoflow"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "data_folder": "/PS1010/cosmoflow",
+        "num_files_train": 485909,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 2828486,
+        "record_length_bytes_stdev": 71311,
+        "format": "tfrecord"
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "batch_size": 1,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed",
+        "shuffle_size": 2
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.00551
+      },
+      "metric": {
+        "au": 0.7
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269407956992.0,
+      "total_cores": 256
+    },
+    "metrics": {
+      "train_au_percentage": [
+        71.25042562248818,
+        70.47303070016659,
+        70.39479277849838,
+        70.66744085798689,
+        70.79167338097257
+      ],
+      "train_au_mean_percentage": 70.71547266802253,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.30196091344543285,
+      "train_throughput_samples_per_second": [
+        4469.728155016406,
+        4404.085758937085,
+        4386.344885668511,
+        4406.591693648827,
+        4413.792932641767
+      ],
+      "train_throughput_mean_samples_per_second": 4416.1086851825185,
+      "train_throughput_stdev_samples_per_second": 28.28928383668529,
+      "train_io_mean_MB_per_second": 11912.252035634194,
+      "train_io_stdev_MB_per_second": 76.30905464371742
+    },
+    "accelerator": "a100"
+  },
+  {
+    "run_id": "./results/Solidigm_D7-PS1010_Gen5_NVMe/training/cosmoflow/a100/run/20250627_172526",
+    "benchmark_type": "training",
+    "model": "cosmoflow",
+    "command": "run_benchmark",
+    "num_processes": 37,
+    "parameters": {
+      "model": {
+        "name": "cosmoflow"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "data_folder": "/PS1010/cosmoflow",
+        "num_files_train": 485909,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 2828486,
+        "record_length_bytes_stdev": 71311,
+        "format": "tfrecord"
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "batch_size": 1,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed",
+        "shuffle_size": 2
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.00551
+      },
+      "metric": {
+        "au": 0.7
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269407956992.0,
+      "total_cores": 256
+    },
+    "metrics": {
+      "train_au_percentage": [
+        77.6908558613865,
+        72.40838590718582,
+        70.41934342855434,
+        70.3302943372462,
+        70.45263632593176
+      ],
+      "train_au_mean_percentage": 72.26030317206092,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 2.8246967028073127,
+      "train_throughput_samples_per_second": [
+        5108.136267046062,
+        4579.39483985901,
+        4405.401756180709,
+        4392.656044901814,
+        4388.950992912096
+      ],
+      "train_throughput_mean_samples_per_second": 4574.907980179938,
+      "train_throughput_stdev_samples_per_second": 276.00024160307976,
+      "train_io_mean_MB_per_second": 12340.60590098117,
+      "train_io_stdev_MB_per_second": 744.4980806073462
+    },
+    "accelerator": "a100"
+  },
+  {
+    "run_id": "./results/Solidigm_D7-PS1010_Gen5_NVMe/training/cosmoflow/a100/run/20250627_173758",
+    "benchmark_type": "training",
+    "model": "cosmoflow",
+    "command": "run_benchmark",
+    "num_processes": 37,
+    "parameters": {
+      "model": {
+        "name": "cosmoflow"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "data_folder": "/PS1010/cosmoflow",
+        "num_files_train": 485909,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 2828486,
+        "record_length_bytes_stdev": 71311,
+        "format": "tfrecord"
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "batch_size": 1,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed",
+        "shuffle_size": 2
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.00551
+      },
+      "metric": {
+        "au": 0.7
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269407956992.0,
+      "total_cores": 256
+    },
+    "metrics": {
+      "train_au_percentage": [
+        71.62019490548977,
+        70.50826482220259,
+        70.40804773306668,
+        70.62965385995285,
+        70.6733115038522
+      ],
+      "train_au_mean_percentage": 70.76789456491281,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.4362040036919629,
+      "train_throughput_samples_per_second": [
+        4502.993035857029,
+        4420.508079035621,
+        4402.324353407044,
+        4407.695955992576,
+        4413.002183922739
+      ],
+      "train_throughput_mean_samples_per_second": 4429.304721643001,
+      "train_throughput_stdev_samples_per_second": 37.330953194555995,
+      "train_io_mean_MB_per_second": 11947.84774294007,
+      "train_io_stdev_MB_per_second": 100.69854591127101
+    },
+    "accelerator": "a100"
+  },
+  {
+    "run_id": "./results/Solidigm_D7-PS1010_Gen5_NVMe/training/cosmoflow/a100/run/20250627_175038",
+    "benchmark_type": "training",
+    "model": "cosmoflow",
+    "command": "run_benchmark",
+    "num_processes": 37,
+    "parameters": {
+      "model": {
+        "name": "cosmoflow"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "data_folder": "/PS1010/cosmoflow",
+        "num_files_train": 485909,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 2828486,
+        "record_length_bytes_stdev": 71311,
+        "format": "tfrecord"
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "batch_size": 1,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed",
+        "shuffle_size": 2
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.00551
+      },
+      "metric": {
+        "au": 0.7
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269407956992.0,
+      "total_cores": 256
+    },
+    "metrics": {
+      "train_au_percentage": [
+        71.23197584845019,
+        70.39726964440429,
+        70.37699633753583,
+        70.6965259843494,
+        70.61293336507725
+      ],
+      "train_au_mean_percentage": 70.6631402359634,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.3097659743018957,
+      "train_throughput_samples_per_second": [
+        4472.171516265916,
+        4391.530325223414,
+        4391.302044907218,
+        4409.007757904688,
+        4398.447211095438
+      ],
+      "train_throughput_mean_samples_per_second": 4412.491771079335,
+      "train_throughput_stdev_samples_per_second": 30.526862616710417,
+      "train_io_mean_MB_per_second": 11902.495574582199,
+      "train_io_stdev_MB_per_second": 82.34482148674849
+    },
+    "accelerator": "a100"
+  },
+  {
+    "run_id": "./results/Solidigm_D7-PS1010_Gen5_NVMe/training/cosmoflow/a100/run/20250627_180353",
+    "benchmark_type": "training",
+    "model": "cosmoflow",
+    "command": "run_benchmark",
+    "num_processes": 37,
+    "parameters": {
+      "model": {
+        "name": "cosmoflow"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "data_folder": "/PS1010/cosmoflow",
+        "num_files_train": 485909,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 2828486,
+        "record_length_bytes_stdev": 71311,
+        "format": "tfrecord"
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "batch_size": 1,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed",
+        "shuffle_size": 2
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.00551
+      },
+      "metric": {
+        "au": 0.7
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269407956992.0,
+      "total_cores": 256
+    },
+    "metrics": {
+      "train_au_percentage": [
+        71.2290487061203,
+        70.37144351522309,
+        70.4847639161731,
+        70.5646549631793,
+        70.68188276979714
+      ],
+      "train_au_mean_percentage": 70.66635877409858,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.29905060492803925,
+      "train_throughput_samples_per_second": [
+        4468.916897154785,
+        4393.315215950103,
+        4396.47947641639,
+        4402.433473800798,
+        4410.752383304897
+      ],
+      "train_throughput_mean_samples_per_second": 4414.379489325394,
+      "train_throughput_stdev_samples_per_second": 27.908085253985583,
+      "train_io_mean_MB_per_second": 11907.587608570126,
+      "train_io_stdev_MB_per_second": 75.28078882952181
+    },
+    "accelerator": "a100"
+  },
+  {
+    "run_id": "./results/Solidigm_D7-PS1010_Gen5_NVMe/training/cosmoflow/h100/run/20250627_022356",
+    "benchmark_type": "training",
+    "model": "cosmoflow",
+    "command": "run_benchmark",
+    "num_processes": 25,
+    "parameters": {
+      "model": {
+        "name": "cosmoflow"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "data_folder": "/PS1010/cosmoflow",
+        "num_files_train": 485909,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 2828486,
+        "record_length_bytes_stdev": 71311,
+        "format": "tfrecord"
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "batch_size": 1,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed",
+        "shuffle_size": 2
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.0035
+      },
+      "metric": {
+        "au": 0.7
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269407981568.0,
+      "total_cores": 256
+    },
+    "metrics": {
+      "train_au_percentage": [
+        72.84771544663869,
+        72.46839370451579,
+        72.14546946560084,
+        72.18826155745252,
+        72.4143197507829
+      ],
+      "train_au_mean_percentage": 72.41283198499815,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.2506501693746678,
+      "train_throughput_samples_per_second": [
+        4745.873619535046,
+        4683.5923029685855,
+        4655.274624514792,
+        4651.841167621,
+        4668.846706589502
+      ],
+      "train_throughput_mean_samples_per_second": 4681.085684245785,
+      "train_throughput_stdev_samples_per_second": 34.278287085536085,
+      "train_io_mean_MB_per_second": 12627.015421571374,
+      "train_io_stdev_MB_per_second": 92.46411812345468
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "./results/Solidigm_D7-PS1010_Gen5_NVMe/training/cosmoflow/h100/run/20250627_023600",
+    "benchmark_type": "training",
+    "model": "cosmoflow",
+    "command": "run_benchmark",
+    "num_processes": 25,
+    "parameters": {
+      "model": {
+        "name": "cosmoflow"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "data_folder": "/PS1010/cosmoflow",
+        "num_files_train": 485909,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 2828486,
+        "record_length_bytes_stdev": 71311,
+        "format": "tfrecord"
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "batch_size": 1,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed",
+        "shuffle_size": 2
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.0035
+      },
+      "metric": {
+        "au": 0.7
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269407981568.0,
+      "total_cores": 256
+    },
+    "metrics": {
+      "train_au_percentage": [
+        72.85730233878972,
+        72.42555523857783,
+        72.48127883774,
+        72.56292216795329,
+        72.51910830411083
+      ],
+      "train_au_mean_percentage": 72.56923337743434,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.15094070986667757,
+      "train_throughput_samples_per_second": [
+        4743.807301346595,
+        4677.581058557315,
+        4674.41999200291,
+        4684.480172272907,
+        4682.9917514904155
+      ],
+      "train_throughput_mean_samples_per_second": 4692.656055134028,
+      "train_throughput_stdev_samples_per_second": 25.83216342036941,
+      "train_io_mean_MB_per_second": 12658.225970041109,
+      "train_io_stdev_MB_per_second": 69.6810842363615
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "./results/Solidigm_D7-PS1010_Gen5_NVMe/training/cosmoflow/h100/run/20250627_024802",
+    "benchmark_type": "training",
+    "model": "cosmoflow",
+    "command": "run_benchmark",
+    "num_processes": 25,
+    "parameters": {
+      "model": {
+        "name": "cosmoflow"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "data_folder": "/PS1010/cosmoflow",
+        "num_files_train": 485909,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 2828486,
+        "record_length_bytes_stdev": 71311,
+        "format": "tfrecord"
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "batch_size": 1,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed",
+        "shuffle_size": 2
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.0035
+      },
+      "metric": {
+        "au": 0.7
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269407981568.0,
+      "total_cores": 256
+    },
+    "metrics": {
+      "train_au_percentage": [
+        72.68297280080493,
+        72.27740379813643,
+        72.33713345100034,
+        72.35110233245845,
+        72.5441676725394
+      ],
+      "train_au_mean_percentage": 72.43855601098792,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.15152432640986666,
+      "train_throughput_samples_per_second": [
+        4743.07048858536,
+        4672.318713104269,
+        4678.658387067097,
+        4682.111185125741,
+        4690.0814201076755
+      ],
+      "train_throughput_mean_samples_per_second": 4693.248038798029,
+      "train_throughput_stdev_samples_per_second": 25.562582412911976,
+      "train_io_mean_MB_per_second": 12659.822819011384,
+      "train_io_stdev_MB_per_second": 68.95390174748205
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "./results/Solidigm_D7-PS1010_Gen5_NVMe/training/cosmoflow/h100/run/20250627_030005",
+    "benchmark_type": "training",
+    "model": "cosmoflow",
+    "command": "run_benchmark",
+    "num_processes": 25,
+    "parameters": {
+      "model": {
+        "name": "cosmoflow"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "data_folder": "/PS1010/cosmoflow",
+        "num_files_train": 485909,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 2828486,
+        "record_length_bytes_stdev": 71311,
+        "format": "tfrecord"
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "batch_size": 1,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed",
+        "shuffle_size": 2
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.0035
+      },
+      "metric": {
+        "au": 0.7
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269407981568.0,
+      "total_cores": 256
+    },
+    "metrics": {
+      "train_au_percentage": [
+        72.86596610455362,
+        72.44459375638729,
+        72.4411447126179,
+        72.4436908859746,
+        72.59963663488881
+      ],
+      "train_au_mean_percentage": 72.55900641888445,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.1650178016777042,
+      "train_throughput_samples_per_second": [
+        4754.841356669978,
+        4687.275170169106,
+        4678.156413359282,
+        4679.8521273068145,
+        4692.15054403873
+      ],
+      "train_throughput_mean_samples_per_second": 4698.455122308782,
+      "train_throughput_stdev_samples_per_second": 28.64351748827002,
+      "train_io_mean_MB_per_second": 12673.868689612082,
+      "train_io_stdev_MB_per_second": 77.26458378441517
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "./results/Solidigm_D7-PS1010_Gen5_NVMe/training/cosmoflow/h100/run/20250627_021200",
+    "benchmark_type": "training",
+    "model": "cosmoflow",
+    "command": "run_benchmark",
+    "num_processes": 25,
+    "parameters": {
+      "model": {
+        "name": "cosmoflow"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "data_folder": "/PS1010/cosmoflow",
+        "num_files_train": 485909,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 2828486,
+        "record_length_bytes_stdev": 71311,
+        "format": "tfrecord"
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "batch_size": 1,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed",
+        "shuffle_size": 2
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.0035
+      },
+      "metric": {
+        "au": 0.7
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269407981568.0,
+      "total_cores": 256
+    },
+    "metrics": {
+      "train_au_percentage": [
+        74.63746832097033,
+        74.96649609253562,
+        72.58166492337362,
+        72.26884520238364,
+        72.27859061994542
+      ],
+      "train_au_mean_percentage": 73.34661303184173,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 1.1981426862415698,
+      "train_throughput_samples_per_second": [
+        5187.465448544593,
+        5037.974406091339,
+        4714.896126958993,
+        4670.072984537725,
+        4667.968354204538
+      ],
+      "train_throughput_mean_samples_per_second": 4855.675464067438,
+      "train_throughput_stdev_samples_per_second": 215.7862643078739,
+      "train_io_mean_MB_per_second": 13097.963400514842,
+      "train_io_stdev_MB_per_second": 582.0736194487772
+    },
+    "accelerator": "h100"
+  }
+]

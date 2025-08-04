@@ -1,0 +1,332 @@
+[
+  {
+    "run_id": "/home/sped/perf/mlperfv2/submission/Closed/Kingston_Digital/results/KINGSTONSEDC3000ME7T6BK/training/cosmoflow/run_5_20250710_174935/training/cosmoflow/run/20250710_174935",
+    "benchmark_type": "training",
+    "model": "cosmoflow",
+    "command": "run_benchmark",
+    "parameters": {
+      "model": {
+        "name": "cosmoflow"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "data_folder": "/mnt/KINGSTONSEDC3000ME7T6BK/cosmoflow",
+        "num_files_train": 476419,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 2828486,
+        "record_length_bytes_stdev": 71311,
+        "format": "tfrecord"
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 16,
+        "batch_size": 1,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed",
+        "shuffle_size": 2
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.00551
+      },
+      "metric": {
+        "au": 0.7
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "train_au_percentage": [
+        69.63000298096449,
+        70.41365859582746,
+        70.5467420573338,
+        69.94388343101929,
+        70.60844739709113
+      ],
+      "train_au_mean_percentage": 70.22854689244723,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.37924319357357045,
+      "train_throughput_samples_per_second": [
+        2189.8368306645298,
+        2218.032637424482,
+        2225.134270997497,
+        2205.0552941058704,
+        2228.2255781284416
+      ],
+      "train_throughput_mean_samples_per_second": 2213.256922264164,
+      "train_throughput_stdev_samples_per_second": 14.168323271234609,
+      "train_io_mean_MB_per_second": 5970.159739520337,
+      "train_io_stdev_MB_per_second": 38.218406692658704
+    }
+  },
+  {
+    "run_id": "/home/sped/perf/mlperfv2/submission/Closed/Kingston_Digital/results/KINGSTONSEDC3000ME7T6BK/training/cosmoflow/run_4_20250710_172846/training/cosmoflow/run/20250710_172846",
+    "benchmark_type": "training",
+    "model": "cosmoflow",
+    "command": "run_benchmark",
+    "parameters": {
+      "model": {
+        "name": "cosmoflow"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "data_folder": "/mnt/KINGSTONSEDC3000ME7T6BK/cosmoflow",
+        "num_files_train": 476419,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 2828486,
+        "record_length_bytes_stdev": 71311,
+        "format": "tfrecord"
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 16,
+        "batch_size": 1,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed",
+        "shuffle_size": 2
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.00551
+      },
+      "metric": {
+        "au": 0.7
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "train_au_percentage": [
+        71.03441868335264,
+        70.57929753118933,
+        70.15202726506294,
+        70.4404342283142,
+        70.65730483321431
+      ],
+      "train_au_mean_percentage": 70.57269650822668,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.2880435494837591,
+      "train_throughput_samples_per_second": [
+        2241.8862121620746,
+        2225.1658893113504,
+        2211.6815956033147,
+        2220.885344732914,
+        2228.288420151496
+      ],
+      "train_throughput_mean_samples_per_second": 2225.58149239223,
+      "train_throughput_stdev_samples_per_second": 9.885393306980577,
+      "train_io_mean_MB_per_second": 6003.404706087616,
+      "train_io_stdev_MB_per_second": 26.66539819077326
+    }
+  },
+  {
+    "run_id": "/home/sped/perf/mlperfv2/submission/Closed/Kingston_Digital/results/KINGSTONSEDC3000ME7T6BK/training/cosmoflow/run_1_20250710_154913/training/cosmoflow/run/20250710_162800",
+    "benchmark_type": "training",
+    "model": "cosmoflow",
+    "command": "run_benchmark",
+    "parameters": {
+      "model": {
+        "name": "cosmoflow"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "data_folder": "/mnt/KINGSTONSEDC3000ME7T6BK/cosmoflow",
+        "num_files_train": 476419,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 2828486,
+        "record_length_bytes_stdev": 71311,
+        "format": "tfrecord"
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 16,
+        "batch_size": 1,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed",
+        "shuffle_size": 2
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.00551
+      },
+      "metric": {
+        "au": 0.7
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "train_au_percentage": [
+        69.29598431935779,
+        71.32749276413492,
+        71.18567320100442,
+        70.8639773800287,
+        70.9499230112627
+      ],
+      "train_au_mean_percentage": 70.7246101351577,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.7331040114011201,
+      "train_throughput_samples_per_second": [
+        2172.169321697527,
+        2254.651512715184,
+        2250.6924711970714,
+        2238.8672304561856,
+        2240.4285120240165
+      ],
+      "train_throughput_mean_samples_per_second": 2231.361809617997,
+      "train_throughput_stdev_samples_per_second": 30.193945777696765,
+      "train_io_mean_MB_per_second": 6018.996848525209,
+      "train_io_stdev_MB_per_second": 81.446793477034
+    }
+  },
+  {
+    "run_id": "/home/sped/perf/mlperfv2/submission/Closed/Kingston_Digital/results/KINGSTONSEDC3000ME7T6BK/training/cosmoflow/run_2_20250710_164804/training/cosmoflow/run/20250710_164805",
+    "benchmark_type": "training",
+    "model": "cosmoflow",
+    "command": "run_benchmark",
+    "parameters": {
+      "model": {
+        "name": "cosmoflow"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "data_folder": "/mnt/KINGSTONSEDC3000ME7T6BK/cosmoflow",
+        "num_files_train": 476419,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 2828486,
+        "record_length_bytes_stdev": 71311,
+        "format": "tfrecord"
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 16,
+        "batch_size": 1,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed",
+        "shuffle_size": 2
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.00551
+      },
+      "metric": {
+        "au": 0.7
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "train_au_percentage": [
+        71.05680794634728,
+        71.20818927483036,
+        71.28734051745154,
+        71.2684105778611,
+        70.90919471313909
+      ],
+      "train_au_mean_percentage": 71.14598860592587,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.14343009657713374,
+      "train_throughput_samples_per_second": [
+        2242.884029722613,
+        2249.729321929448,
+        2254.0266899707776,
+        2254.5536261275865,
+        2240.0131442637608
+      ],
+      "train_throughput_mean_samples_per_second": 2248.241362402837,
+      "train_throughput_stdev_samples_per_second": 5.864013968994535,
+      "train_io_mean_MB_per_second": 6064.528673341131,
+      "train_io_stdev_MB_per_second": 15.817910590272405
+    }
+  },
+  {
+    "run_id": "/home/sped/perf/mlperfv2/submission/Closed/Kingston_Digital/results/KINGSTONSEDC3000ME7T6BK/training/cosmoflow/run_3_20250710_170759/training/cosmoflow/run/20250710_170759",
+    "benchmark_type": "training",
+    "model": "cosmoflow",
+    "command": "run_benchmark",
+    "parameters": {
+      "model": {
+        "name": "cosmoflow"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "data_folder": "/mnt/KINGSTONSEDC3000ME7T6BK/cosmoflow",
+        "num_files_train": 476419,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 2828486,
+        "record_length_bytes_stdev": 71311,
+        "format": "tfrecord"
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 16,
+        "batch_size": 1,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed",
+        "shuffle_size": 2
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.00551
+      },
+      "metric": {
+        "au": 0.7
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 270015365120.0,
+      "total_cores": 64
+    },
+    "metrics": {
+      "train_au_percentage": [
+        70.80807776021264,
+        71.10085351448164,
+        70.87211471402628,
+        71.12714356533542,
+        70.75526965084367
+      ],
+      "train_au_mean_percentage": 70.93269184097993,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.15281800452034416,
+      "train_throughput_samples_per_second": [
+        2233.2174842256363,
+        2245.807324308077,
+        2238.9829172200252,
+        2247.8890153667053,
+        2231.8026793717468
+      ],
+      "train_throughput_mean_samples_per_second": 2239.539884098438,
+      "train_throughput_stdev_samples_per_second": 6.467396523395551,
+      "train_io_mean_MB_per_second": 6041.0568319454715,
+      "train_io_stdev_MB_per_second": 17.445507548211086
+    }
+  }
+]

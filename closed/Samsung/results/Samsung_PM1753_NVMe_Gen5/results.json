@@ -1,0 +1,2802 @@
+[
+  {
+    "run_id": "//root/origin/mlpstorage_results/Samsung_Storage/Closed/Samsung Electronics/results/Samsung_PM1753_NVMe_Gen5/training/cosmoflow/run/20250625_183915",
+    "benchmark_type": "training",
+    "model": "cosmoflow",
+    "command": "run_benchmark",
+    "num_processes": 16,
+    "parameters": {
+      "model": {
+        "name": "cosmoflow"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "data_folder": "/mnt/default/1/cosmoflow",
+        "num_files_train": 485909,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 2828486,
+        "record_length_bytes_stdev": 71311,
+        "format": "tfrecord"
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "batch_size": 1,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed",
+        "shuffle_size": 2
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.0035
+      },
+      "metric": {
+        "au": 0.7
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269651869696.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "train_au_percentage": [
+        93.71095701646104,
+        94.29076791549838,
+        94.53536956722172,
+        94.36441587502412,
+        94.21261255146997
+      ],
+      "train_au_mean_percentage": 94.22282458513504,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.27729459022227276,
+      "train_throughput_samples_per_second": [
+        4194.796518100381,
+        4231.012357152651,
+        4241.405256614576,
+        4235.547053829728,
+        4230.58758824902
+      ],
+      "train_throughput_mean_samples_per_second": 4226.669754789271,
+      "train_throughput_stdev_samples_per_second": 16.40763409896754,
+      "train_io_mean_MB_per_second": 11401.249149365316,
+      "train_io_stdev_MB_per_second": 44.258845655491164
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "//root/origin/mlpstorage_results/Samsung_Storage/Closed/Samsung Electronics/results/Samsung_PM1753_NVMe_Gen5/training/cosmoflow/run/20250625_194807",
+    "benchmark_type": "training",
+    "model": "cosmoflow",
+    "command": "run_benchmark",
+    "num_processes": 16,
+    "parameters": {
+      "model": {
+        "name": "cosmoflow"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "data_folder": "/mnt/default/1/cosmoflow",
+        "num_files_train": 485909,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 2828486,
+        "record_length_bytes_stdev": 71311,
+        "format": "tfrecord"
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "batch_size": 1,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed",
+        "shuffle_size": 2
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.0035
+      },
+      "metric": {
+        "au": 0.7
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269651869696.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "train_au_percentage": [
+        93.14620484877531,
+        93.86988720803646,
+        94.15475546621914,
+        94.05011117973245,
+        94.25737707879046
+      ],
+      "train_au_mean_percentage": 93.89566715631076,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.39602326519322417,
+      "train_throughput_samples_per_second": [
+        4176.208694212017,
+        4213.945211660135,
+        4222.680014039456,
+        4215.509821088376,
+        4232.374421729613
+      ],
+      "train_throughput_mean_samples_per_second": 4212.14363254592,
+      "train_throughput_stdev_samples_per_second": 19.111236860244862,
+      "train_io_mean_MB_per_second": 11362.065596242217,
+      "train_io_stdev_MB_per_second": 51.55169096172957
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "//root/origin/mlpstorage_results/Samsung_Storage/Closed/Samsung Electronics/results/Samsung_PM1753_NVMe_Gen5/training/cosmoflow/run/20250625_162356",
+    "benchmark_type": "training",
+    "model": "cosmoflow",
+    "command": "run_benchmark",
+    "num_processes": 16,
+    "parameters": {
+      "model": {
+        "name": "cosmoflow"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "data_folder": "/mnt/default/1/cosmoflow",
+        "num_files_train": 485909,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 2828486,
+        "record_length_bytes_stdev": 71311,
+        "format": "tfrecord"
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "batch_size": 1,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed",
+        "shuffle_size": 2
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.0035
+      },
+      "metric": {
+        "au": 0.7
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269651869696.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "train_au_percentage": [
+        94.82409034148361,
+        94.35044916181074,
+        93.90401915079636,
+        94.2540145718884,
+        94.22629297292909
+      ],
+      "train_au_mean_percentage": 94.31177323978163,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.29694140043561146,
+      "train_throughput_samples_per_second": [
+        4253.1044498368865,
+        4228.785295357448,
+        4211.3901371652,
+        4230.325496708537,
+        4224.289971638516
+      ],
+      "train_throughput_mean_samples_per_second": 4229.579070141318,
+      "train_throughput_stdev_samples_per_second": 13.516231476491317,
+      "train_io_mean_MB_per_second": 11409.096895015464,
+      "train_io_stdev_MB_per_second": 36.459418777480145
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "//root/origin/mlpstorage_results/Samsung_Storage/Closed/Samsung Electronics/results/Samsung_PM1753_NVMe_Gen5/training/cosmoflow/run/20250625_205641",
+    "benchmark_type": "training",
+    "model": "cosmoflow",
+    "command": "run_benchmark",
+    "num_processes": 16,
+    "parameters": {
+      "model": {
+        "name": "cosmoflow"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "data_folder": "/mnt/default/1/cosmoflow",
+        "num_files_train": 485909,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 2828486,
+        "record_length_bytes_stdev": 71311,
+        "format": "tfrecord"
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "batch_size": 1,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed",
+        "shuffle_size": 2
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.0035
+      },
+      "metric": {
+        "au": 0.7
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269651869696.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "train_au_percentage": [
+        94.55743323933905,
+        94.42599692542467,
+        94.31893350123536,
+        93.82297216770702,
+        94.37876108857904
+      ],
+      "train_au_mean_percentage": 94.30081938445703,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.25149993252641084,
+      "train_throughput_samples_per_second": [
+        4240.532892121938,
+        4236.055060696799,
+        4233.821379119832,
+        4211.134577665725,
+        4238.32299395383
+      ],
+      "train_throughput_mean_samples_per_second": 4231.9733807116245,
+      "train_throughput_stdev_samples_per_second": 10.657520780301208,
+      "train_io_mean_MB_per_second": 11415.55543872404,
+      "train_io_stdev_MB_per_second": 28.748176881590886
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "//root/origin/mlpstorage_results/Samsung_Storage/Closed/Samsung Electronics/results/Samsung_PM1753_NVMe_Gen5/training/cosmoflow/run/20250625_173105",
+    "benchmark_type": "training",
+    "model": "cosmoflow",
+    "command": "run_benchmark",
+    "num_processes": 16,
+    "parameters": {
+      "model": {
+        "name": "cosmoflow"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "data_folder": "/mnt/default/1/cosmoflow",
+        "num_files_train": 485909,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 2828486,
+        "record_length_bytes_stdev": 71311,
+        "format": "tfrecord"
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 4,
+        "batch_size": 1,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed",
+        "shuffle_size": 2
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.0035
+      },
+      "metric": {
+        "au": 0.7
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269651869696.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "train_au_percentage": [
+        94.63995538290197,
+        93.59106195998851,
+        94.83099789487584,
+        94.05553725182965,
+        94.15485772340575
+      ],
+      "train_au_mean_percentage": 94.25448204260036,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.44058834863639074,
+      "train_throughput_samples_per_second": [
+        4247.366797866519,
+        4192.403278156025,
+        4258.230890859385,
+        4223.212604418348,
+        4222.195227875614
+      ],
+      "train_throughput_mean_samples_per_second": 4228.681759835179,
+      "train_throughput_stdev_samples_per_second": 22.84905591615944,
+      "train_io_mean_MB_per_second": 11406.676441334883,
+      "train_io_stdev_MB_per_second": 61.63428761680045
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "//root/origin/mlpstorage_results/Samsung_Storage/Closed/Samsung Electronics/results/Samsung_PM1753_NVMe_Gen5/training/resnet50/run/20250625_163942",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 64,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 10231,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/mnt/default/1/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.224,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 8,
+        "computation_threads": 8,
+        "batch_size": 400
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269651869696.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "train_au_percentage": [
+        92.06593638474,
+        92.72722158422089,
+        91.26072721148435,
+        91.60194844279388,
+        92.38543887715365
+      ],
+      "train_au_mean_percentage": 92.00825450007855,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.5265720428558588,
+      "train_throughput_samples_per_second": [
+        104534.77015728594,
+        105140.07109844688,
+        103487.00683061311,
+        103939.38206822462,
+        104932.6361760144
+      ],
+      "train_throughput_mean_samples_per_second": 104406.773266117,
+      "train_throughput_stdev_samples_per_second": 615.6404052368844,
+      "train_io_mean_MB_per_second": 11416.70983425818,
+      "train_io_stdev_MB_per_second": 67.31927104882196
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "//root/origin/mlpstorage_results/Samsung_Storage/Closed/Samsung Electronics/results/Samsung_PM1753_NVMe_Gen5/training/resnet50/run/20250625_200356",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 64,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 10231,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/mnt/default/1/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.224,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 8,
+        "computation_threads": 8,
+        "batch_size": 400
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269651869696.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "train_au_percentage": [
+        92.41994280431902,
+        93.26844935061965,
+        93.28786699509375,
+        93.09697938208606,
+        93.48095086140765
+      ],
+      "train_au_mean_percentage": 93.11083787870523,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.3662491954483667,
+      "train_throughput_samples_per_second": [
+        105001.52680483504,
+        105940.94574285376,
+        105946.25293475809,
+        105589.92304374065,
+        106204.32659879379
+      ],
+      "train_throughput_mean_samples_per_second": 105736.59502499625,
+      "train_throughput_stdev_samples_per_second": 416.25147171346237,
+      "train_io_mean_MB_per_second": 11562.123667838785,
+      "train_io_stdev_MB_per_second": 45.51641739298689
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "//root/origin/mlpstorage_results/Samsung_Storage/Closed/Samsung Electronics/results/Samsung_PM1753_NVMe_Gen5/training/resnet50/run/20250625_185501",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 64,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 10231,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/mnt/default/1/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.224,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 8,
+        "computation_threads": 8,
+        "batch_size": 400
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269651869696.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "train_au_percentage": [
+        90.96020853190566,
+        93.19479217955617,
+        93.00129558970494,
+        92.79158347509491,
+        92.48160691386673
+      ],
+      "train_au_mean_percentage": 92.4858973380257,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.7986683929439391,
+      "train_throughput_samples_per_second": [
+        103380.03137980204,
+        105875.18632551197,
+        105650.76250865727,
+        105229.50609580186,
+        104942.41114183747
+      ],
+      "train_throughput_mean_samples_per_second": 105015.57949032211,
+      "train_throughput_stdev_samples_per_second": 879.6041381740225,
+      "train_io_mean_MB_per_second": 11483.281798792743,
+      "train_io_stdev_MB_per_second": 96.1832733681899
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "//root/origin/mlpstorage_results/Samsung_Storage/Closed/Samsung Electronics/results/Samsung_PM1753_NVMe_Gen5/training/resnet50/run/20250625_174651",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 64,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 10231,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/mnt/default/1/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.224,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 8,
+        "computation_threads": 8,
+        "batch_size": 400
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269651869696.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "train_au_percentage": [
+        93.13252912433464,
+        93.6627637510155,
+        92.42170932605097,
+        92.60859271261619,
+        91.78603296113178
+      ],
+      "train_au_mean_percentage": 92.72232557502983,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.6375954935061076,
+      "train_throughput_samples_per_second": [
+        105635.35477465062,
+        106307.99570729153,
+        104872.15333277395,
+        105084.08944031734,
+        104141.91280480823
+      ],
+      "train_throughput_mean_samples_per_second": 105208.30121196834,
+      "train_throughput_stdev_samples_per_second": 729.014529933771,
+      "train_io_mean_MB_per_second": 11504.35560373819,
+      "train_io_stdev_MB_per_second": 79.71654609033898
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "//root/origin/mlpstorage_results/Samsung_Storage/Closed/Samsung Electronics/results/Samsung_PM1753_NVMe_Gen5/training/resnet50/run/20250625_211227",
+    "benchmark_type": "training",
+    "model": "resnet50",
+    "command": "run_benchmark",
+    "num_processes": 64,
+    "parameters": {
+      "model": {
+        "name": "resnet50",
+        "type": "cnn"
+      },
+      "framework": "tensorflow",
+      "workflow": {
+        "generate_data": false,
+        "train": true
+      },
+      "dataset": {
+        "num_files_train": 10231,
+        "num_samples_per_file": 1251,
+        "record_length_bytes": 114660.07,
+        "record_length_bytes_resize": 150528,
+        "data_folder": "/mnt/default/1/resnet50",
+        "format": "tfrecord"
+      },
+      "train": {
+        "computation_time": 0.224,
+        "epochs": 5
+      },
+      "reader": {
+        "data_loader": "tensorflow",
+        "read_threads": 8,
+        "computation_threads": 8,
+        "batch_size": 400
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269651869696.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "train_au_percentage": [
+        92.10447396798352,
+        93.93732535493938,
+        92.8258620949303,
+        92.59548626572723,
+        92.7332990821159
+      ],
+      "train_au_mean_percentage": 92.83928935313926,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.6027422145091561,
+      "train_throughput_samples_per_second": [
+        104543.21723217341,
+        106711.45862981137,
+        105346.05314247336,
+        105171.49791746472,
+        105200.71650118512
+      ],
+      "train_throughput_mean_samples_per_second": 105394.58868462159,
+      "train_throughput_stdev_samples_per_second": 713.9595808364156,
+      "train_io_mean_MB_per_second": 11524.725834083481,
+      "train_io_stdev_MB_per_second": 78.07031203830154
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "//root/origin/mlpstorage_results/Samsung_Storage/Closed/Samsung Electronics/results/Samsung_PM1753_NVMe_Gen5/training/unet3d/run/20250630_145642",
+    "benchmark_type": "training",
+    "model": "unet3d",
+    "command": "run_benchmark",
+    "num_processes": 4,
+    "parameters": {
+      "model": {
+        "name": "unet3d",
+        "type": "cnn",
+        "model_size": 499153191
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": true,
+        "checkpoint": true
+      },
+      "dataset": {
+        "data_folder": "/mnt/default/1/unet3d",
+        "format": "npz",
+        "num_files_train": 14000,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 146600628,
+        "record_length_bytes_stdev": 68341808,
+        "record_length_bytes_resize": 2097152
+      },
+      "reader": {
+        "data_loader": "pytorch",
+        "batch_size": 7,
+        "read_threads": 8,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed"
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.323
+      },
+      "checkpoint": {
+        "checkpoint_folder": "checkpoints/unet3d",
+        "checkpoint_after_epoch": 5,
+        "epochs_between_checkpoints": 2
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269651869696.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 0.00344286756825361,
+      "save_checkpoint_io_stdev_GB_per_second": 0.0,
+      "save_checkpoint_duration_mean_seconds": 0.00277,
+      "save_checkpoint_duration_stdev_seconds": 0.0,
+      "checkpoint_size_GB": 9.5367431640625e-06,
+      "train_au_percentage": [
+        88.2192365908873,
+        96.93432342371045,
+        97.86197529985898,
+        97.40632106413177,
+        97.87297625751657
+      ],
+      "train_au_mean_percentage": 95.65896652722101,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 3.7358921653288926,
+      "train_throughput_samples_per_second": [
+        76.30376632234544,
+        83.84174572244723,
+        84.64383678961332,
+        84.24981212667433,
+        84.65354912349845
+      ],
+      "train_throughput_mean_samples_per_second": 82.73854201691576,
+      "train_throughput_stdev_samples_per_second": 3.2312454066230205,
+      "train_io_mean_MB_per_second": 11567.61381100105,
+      "train_io_stdev_MB_per_second": 451.75800879769344
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "//root/origin/mlpstorage_results/Samsung_Storage/Closed/Samsung Electronics/results/Samsung_PM1753_NVMe_Gen5/training/unet3d/run/20250630_140644",
+    "benchmark_type": "training",
+    "model": "unet3d",
+    "command": "run_benchmark",
+    "num_processes": 4,
+    "parameters": {
+      "model": {
+        "name": "unet3d",
+        "type": "cnn",
+        "model_size": 499153191
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": true,
+        "checkpoint": true
+      },
+      "dataset": {
+        "data_folder": "/mnt/default/1/unet3d",
+        "format": "npz",
+        "num_files_train": 14000,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 146600628,
+        "record_length_bytes_stdev": 68341808,
+        "record_length_bytes_resize": 2097152
+      },
+      "reader": {
+        "data_loader": "pytorch",
+        "batch_size": 7,
+        "read_threads": 8,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed"
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.323
+      },
+      "checkpoint": {
+        "checkpoint_folder": "checkpoints/unet3d",
+        "checkpoint_after_epoch": 5,
+        "epochs_between_checkpoints": 2
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269651869696.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 0.003452839668378892,
+      "save_checkpoint_io_stdev_GB_per_second": 0.0,
+      "save_checkpoint_duration_mean_seconds": 0.002762,
+      "save_checkpoint_duration_stdev_seconds": 0.0,
+      "checkpoint_size_GB": 9.5367431640625e-06,
+      "train_au_percentage": [
+        86.44962823025728,
+        97.92872014084861,
+        97.87684778730508,
+        97.6670981039722,
+        97.99199249931893
+      ],
+      "train_au_mean_percentage": 95.58285735234043,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 4.567917035189106,
+      "train_throughput_samples_per_second": [
+        74.77319252610694,
+        84.70181693806342,
+        84.65694056399659,
+        84.47492889852451,
+        84.75593382670111
+      ],
+      "train_throughput_mean_samples_per_second": 82.6725625506785,
+      "train_throughput_stdev_samples_per_second": 3.95081350051264,
+      "train_io_mean_MB_per_second": 11558.38927106738,
+      "train_io_stdev_MB_per_second": 552.3602869854273
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "//root/origin/mlpstorage_results/Samsung_Storage/Closed/Samsung Electronics/results/Samsung_PM1753_NVMe_Gen5/training/unet3d/run/20250630_154630",
+    "benchmark_type": "training",
+    "model": "unet3d",
+    "command": "run_benchmark",
+    "num_processes": 4,
+    "parameters": {
+      "model": {
+        "name": "unet3d",
+        "type": "cnn",
+        "model_size": 499153191
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": true,
+        "checkpoint": true
+      },
+      "dataset": {
+        "data_folder": "/mnt/default/1/unet3d",
+        "format": "npz",
+        "num_files_train": 14000,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 146600628,
+        "record_length_bytes_stdev": 68341808,
+        "record_length_bytes_resize": 2097152
+      },
+      "reader": {
+        "data_loader": "pytorch",
+        "batch_size": 7,
+        "read_threads": 8,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed"
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.323
+      },
+      "checkpoint": {
+        "checkpoint_folder": "checkpoints/unet3d",
+        "checkpoint_after_epoch": 5,
+        "epochs_between_checkpoints": 2
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269651869696.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 0.003459101619173921,
+      "save_checkpoint_io_stdev_GB_per_second": 0.0,
+      "save_checkpoint_duration_mean_seconds": 0.002757,
+      "save_checkpoint_duration_stdev_seconds": 0.0,
+      "checkpoint_size_GB": 9.5367431640625e-06,
+      "train_au_percentage": [
+        86.78549188725583,
+        97.67563129511804,
+        97.86553505914577,
+        97.98334174972008,
+        98.02696292698097
+      ],
+      "train_au_mean_percentage": 95.66739258364413,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 4.442616476590624,
+      "train_throughput_samples_per_second": [
+        75.06350567374479,
+        84.48258827042238,
+        84.64690810075392,
+        84.74878115379518,
+        84.78641200162669
+      ],
+      "train_throughput_mean_samples_per_second": 82.7456390400686,
+      "train_throughput_stdev_samples_per_second": 3.8425075754341216,
+      "train_io_mean_MB_per_second": 11568.606040511488,
+      "train_io_stdev_MB_per_second": 537.21811642971
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "//root/origin/mlpstorage_results/Samsung_Storage/Closed/Samsung Electronics/results/Samsung_PM1753_NVMe_Gen5/training/unet3d/run/20250630_143138",
+    "benchmark_type": "training",
+    "model": "unet3d",
+    "command": "run_benchmark",
+    "num_processes": 4,
+    "parameters": {
+      "model": {
+        "name": "unet3d",
+        "type": "cnn",
+        "model_size": 499153191
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": true,
+        "checkpoint": true
+      },
+      "dataset": {
+        "data_folder": "/mnt/default/1/unet3d",
+        "format": "npz",
+        "num_files_train": 14000,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 146600628,
+        "record_length_bytes_stdev": 68341808,
+        "record_length_bytes_resize": 2097152
+      },
+      "reader": {
+        "data_loader": "pytorch",
+        "batch_size": 7,
+        "read_threads": 8,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed"
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.323
+      },
+      "checkpoint": {
+        "checkpoint_folder": "checkpoints/unet3d",
+        "checkpoint_after_epoch": 5,
+        "epochs_between_checkpoints": 2
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269651869696.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 0.002474505231983005,
+      "save_checkpoint_io_stdev_GB_per_second": 0.0,
+      "save_checkpoint_duration_mean_seconds": 0.003854,
+      "save_checkpoint_duration_stdev_seconds": 0.0,
+      "checkpoint_size_GB": 9.5367431640625e-06,
+      "train_au_percentage": [
+        87.26484397524389,
+        96.68019902168356,
+        97.44225651361401,
+        97.72236821572581,
+        98.1168255047154
+      ],
+      "train_au_mean_percentage": 95.44529864619652,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 4.11715338226288,
+      "train_throughput_samples_per_second": [
+        75.47814153796301,
+        83.62197217338442,
+        84.28125080989733,
+        84.52335183722533,
+        84.86424228342838
+      ],
+      "train_throughput_mean_samples_per_second": 82.5537917283797,
+      "train_throughput_stdev_samples_per_second": 3.5611037263251046,
+      "train_io_mean_MB_per_second": 11541.784011041325,
+      "train_io_stdev_MB_per_second": 497.87525429954576
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "//root/origin/mlpstorage_results/Samsung_Storage/Closed/Samsung Electronics/results/Samsung_PM1753_NVMe_Gen5/training/unet3d/run/20250630_152137",
+    "benchmark_type": "training",
+    "model": "unet3d",
+    "command": "run_benchmark",
+    "num_processes": 4,
+    "parameters": {
+      "model": {
+        "name": "unet3d",
+        "type": "cnn",
+        "model_size": 499153191
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": true,
+        "checkpoint": true
+      },
+      "dataset": {
+        "data_folder": "/mnt/default/1/unet3d",
+        "format": "npz",
+        "num_files_train": 14000,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 146600628,
+        "record_length_bytes_stdev": 68341808,
+        "record_length_bytes_resize": 2097152
+      },
+      "reader": {
+        "data_loader": "pytorch",
+        "batch_size": 7,
+        "read_threads": 8,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed"
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.323
+      },
+      "checkpoint": {
+        "checkpoint_folder": "checkpoints/unet3d",
+        "checkpoint_after_epoch": 5,
+        "epochs_between_checkpoints": 2
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269651869696.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 0.0032660079328981164,
+      "save_checkpoint_io_stdev_GB_per_second": 0.0,
+      "save_checkpoint_duration_mean_seconds": 0.00292,
+      "save_checkpoint_duration_stdev_seconds": 0.0,
+      "checkpoint_size_GB": 9.5367431640625e-06,
+      "train_au_percentage": [
+        87.01945931668165,
+        97.68957206923513,
+        97.8823918136967,
+        97.90549457888554,
+        97.86290992786446
+      ],
+      "train_au_mean_percentage": 95.67196554127268,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 4.3269267070539446,
+      "train_throughput_samples_per_second": [
+        75.26578901351685,
+        84.49474855332069,
+        84.66158893975359,
+        84.68150600038342,
+        84.64465923659736
+      ],
+      "train_throughput_mean_samples_per_second": 82.74965834871439,
+      "train_throughput_stdev_samples_per_second": 3.7425173973626578,
+      "train_io_mean_MB_per_second": 11569.167977053616,
+      "train_io_stdev_MB_per_second": 523.2385642569458
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "//root/origin/mlpstorage_results/Samsung_Storage/Closed/Samsung Electronics/results/Samsung_PM1753_NVMe_Gen5/checkpointing/llama3-8b/20250624_150605",
+    "benchmark_type": "checkpointing",
+    "model": "llama3-8b",
+    "command": null,
+    "num_processes": 8,
+    "parameters": {
+      "model": {
+        "name": "llama_8b",
+        "type": "transformer",
+        "num_layers": 32,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "pipeline": 1,
+          "tensor": 1,
+          "zero_stage": 3
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 4096,
+          "ffn_hidden_size": 14336,
+          "num_attention_heads": 32,
+          "num_kv_heads": 8
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/default/1/llama3-8b",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 10,
+        "num_checkpoints_read": 10,
+        "fsync": true
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269651869696.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 11.793490940538257,
+      "save_checkpoint_io_stdev_GB_per_second": 0.9597044133070911,
+      "save_checkpoint_duration_mean_seconds": 8.9326511,
+      "save_checkpoint_duration_stdev_seconds": 0.6721397239094637,
+      "load_checkpoint_io_mean_GB_per_second": 7.888250500953225,
+      "load_checkpoint_io_stdev_GB_per_second": 0.5297901670564217,
+      "load_checkpoint_duration_mean_seconds": 13.346286000000001,
+      "load_checkpoint_duration_stdev_seconds": 1.0845493105667439,
+      "checkpoint_size_GB": 104.70452117919922
+    }
+  },
+  {
+    "run_id": "//root/origin/mlpstorage_results/Samsung_Storage/Closed/Samsung Electronics/results/Samsung_PM1753_NVMe_Gen5/checkpointing/llama3-8b/20250624_184426",
+    "benchmark_type": "checkpointing",
+    "model": "llama3-8b",
+    "command": null,
+    "num_processes": 8,
+    "parameters": {
+      "model": {
+        "name": "llama_8b",
+        "type": "transformer",
+        "num_layers": 32,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "pipeline": 1,
+          "tensor": 1,
+          "zero_stage": 3
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 4096,
+          "ffn_hidden_size": 14336,
+          "num_attention_heads": 32,
+          "num_kv_heads": 8
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/default/1/llama3-8b",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 10,
+        "num_checkpoints_read": 10,
+        "fsync": true
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269651869696.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 11.804656449449327,
+      "save_checkpoint_io_stdev_GB_per_second": 0.5267714662072057,
+      "save_checkpoint_duration_mean_seconds": 8.8874801,
+      "save_checkpoint_duration_stdev_seconds": 0.39751575524787697,
+      "load_checkpoint_io_mean_GB_per_second": 7.8130802985290115,
+      "load_checkpoint_io_stdev_GB_per_second": 0.5153355408120226,
+      "load_checkpoint_duration_mean_seconds": 13.4714322,
+      "load_checkpoint_duration_stdev_seconds": 1.0657902403096775,
+      "checkpoint_size_GB": 104.70452117919922
+    }
+  },
+  {
+    "run_id": "//root/origin/mlpstorage_results/Samsung_Storage/Closed/Samsung Electronics/results/Samsung_PM1753_NVMe_Gen5/checkpointing/llama3-8b/20250624_165442",
+    "benchmark_type": "checkpointing",
+    "model": "llama3-8b",
+    "command": null,
+    "num_processes": 8,
+    "parameters": {
+      "model": {
+        "name": "llama_8b",
+        "type": "transformer",
+        "num_layers": 32,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "pipeline": 1,
+          "tensor": 1,
+          "zero_stage": 3
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 4096,
+          "ffn_hidden_size": 14336,
+          "num_attention_heads": 32,
+          "num_kv_heads": 8
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/default/1/llama3-8b",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 10,
+        "num_checkpoints_read": 10,
+        "fsync": true
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269651869696.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 11.672215798174296,
+      "save_checkpoint_io_stdev_GB_per_second": 0.479764281465963,
+      "save_checkpoint_duration_mean_seconds": 8.9845312,
+      "save_checkpoint_duration_stdev_seconds": 0.3439706247838032,
+      "load_checkpoint_io_mean_GB_per_second": 7.909051601619924,
+      "load_checkpoint_io_stdev_GB_per_second": 0.5054201344524796,
+      "load_checkpoint_duration_mean_seconds": 13.302578500000001,
+      "load_checkpoint_duration_stdev_seconds": 1.002663052470096,
+      "checkpoint_size_GB": 104.70452117919922
+    }
+  },
+  {
+    "run_id": "//root/origin/mlpstorage_results/Samsung_Storage/Closed/Samsung Electronics/results/Samsung_PM1753_NVMe_Gen5/checkpointing/llama3-8b/20250624_192026",
+    "benchmark_type": "checkpointing",
+    "model": "llama3-8b",
+    "command": null,
+    "num_processes": 8,
+    "parameters": {
+      "model": {
+        "name": "llama_8b",
+        "type": "transformer",
+        "num_layers": 32,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "pipeline": 1,
+          "tensor": 1,
+          "zero_stage": 3
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 4096,
+          "ffn_hidden_size": 14336,
+          "num_attention_heads": 32,
+          "num_kv_heads": 8
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/default/1/llama3-8b",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 10,
+        "num_checkpoints_read": 10,
+        "fsync": true
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269651869696.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 11.753192193240077,
+      "save_checkpoint_io_stdev_GB_per_second": 0.5931636332121883,
+      "save_checkpoint_duration_mean_seconds": 8.9307335,
+      "save_checkpoint_duration_stdev_seconds": 0.4389471024470372,
+      "load_checkpoint_io_mean_GB_per_second": 7.852033436799256,
+      "load_checkpoint_io_stdev_GB_per_second": 0.49206488389371933,
+      "load_checkpoint_duration_mean_seconds": 13.3971003,
+      "load_checkpoint_duration_stdev_seconds": 0.996435322036915,
+      "checkpoint_size_GB": 104.70452117919922
+    }
+  },
+  {
+    "run_id": "//root/origin/mlpstorage_results/Samsung_Storage/Closed/Samsung Electronics/results/Samsung_PM1753_NVMe_Gen5/checkpointing/llama3-8b/20250624_154207",
+    "benchmark_type": "checkpointing",
+    "model": "llama3-8b",
+    "command": null,
+    "num_processes": 8,
+    "parameters": {
+      "model": {
+        "name": "llama_8b",
+        "type": "transformer",
+        "num_layers": 32,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "pipeline": 1,
+          "tensor": 1,
+          "zero_stage": 3
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 4096,
+          "ffn_hidden_size": 14336,
+          "num_attention_heads": 32,
+          "num_kv_heads": 8
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/default/1/llama3-8b",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 10,
+        "num_checkpoints_read": 10,
+        "fsync": true
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269651869696.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 11.676629747128633,
+      "save_checkpoint_io_stdev_GB_per_second": 0.6016135432404315,
+      "save_checkpoint_duration_mean_seconds": 8.9901982,
+      "save_checkpoint_duration_stdev_seconds": 0.45016304651643735,
+      "load_checkpoint_io_mean_GB_per_second": 7.957809296778305,
+      "load_checkpoint_io_stdev_GB_per_second": 0.47000734801516014,
+      "load_checkpoint_duration_mean_seconds": 13.2111073,
+      "load_checkpoint_duration_stdev_seconds": 0.9091173566441298,
+      "checkpoint_size_GB": 104.70452117919922
+    }
+  },
+  {
+    "run_id": "//root/origin/mlpstorage_results/Samsung_Storage/Closed/Samsung Electronics/results/Samsung_PM1753_NVMe_Gen5/checkpointing/llama3-8b/20250624_135159",
+    "benchmark_type": "checkpointing",
+    "model": "llama3-8b",
+    "command": null,
+    "num_processes": 8,
+    "parameters": {
+      "model": {
+        "name": "llama_8b",
+        "type": "transformer",
+        "num_layers": 32,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "pipeline": 1,
+          "tensor": 1,
+          "zero_stage": 3
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 4096,
+          "ffn_hidden_size": 14336,
+          "num_attention_heads": 32,
+          "num_kv_heads": 8
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/default/1/llama3-8b",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 10,
+        "num_checkpoints_read": 10,
+        "fsync": true
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269651869696.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 11.88392480276256,
+      "save_checkpoint_io_stdev_GB_per_second": 0.6722066947372457,
+      "save_checkpoint_duration_mean_seconds": 8.8382327,
+      "save_checkpoint_duration_stdev_seconds": 0.48908943336245775,
+      "load_checkpoint_io_mean_GB_per_second": 7.9754365519091,
+      "load_checkpoint_io_stdev_GB_per_second": 0.49720140183452294,
+      "load_checkpoint_duration_mean_seconds": 13.1891142,
+      "load_checkpoint_duration_stdev_seconds": 0.9749637198848785,
+      "checkpoint_size_GB": 104.70452117919922
+    }
+  },
+  {
+    "run_id": "//root/origin/mlpstorage_results/Samsung_Storage/Closed/Samsung Electronics/results/Samsung_PM1753_NVMe_Gen5/checkpointing/llama3-8b/20250624_173119",
+    "benchmark_type": "checkpointing",
+    "model": "llama3-8b",
+    "command": null,
+    "num_processes": 8,
+    "parameters": {
+      "model": {
+        "name": "llama_8b",
+        "type": "transformer",
+        "num_layers": 32,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "pipeline": 1,
+          "tensor": 1,
+          "zero_stage": 3
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 4096,
+          "ffn_hidden_size": 14336,
+          "num_attention_heads": 32,
+          "num_kv_heads": 8
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/default/1/llama3-8b",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 10,
+        "num_checkpoints_read": 10,
+        "fsync": true
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269651869696.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 11.391886098479935,
+      "save_checkpoint_io_stdev_GB_per_second": 0.34047178713113596,
+      "save_checkpoint_duration_mean_seconds": 9.1993508,
+      "save_checkpoint_duration_stdev_seconds": 0.2745485100417775,
+      "load_checkpoint_io_mean_GB_per_second": 7.774336240731628,
+      "load_checkpoint_io_stdev_GB_per_second": 0.48694979826943613,
+      "load_checkpoint_duration_mean_seconds": 13.530820499999999,
+      "load_checkpoint_duration_stdev_seconds": 1.0041907411285222,
+      "checkpoint_size_GB": 104.70452117919922
+    }
+  },
+  {
+    "run_id": "//root/origin/mlpstorage_results/Samsung_Storage/Closed/Samsung Electronics/results/Samsung_PM1753_NVMe_Gen5/checkpointing/llama3-8b/20250624_161843",
+    "benchmark_type": "checkpointing",
+    "model": "llama3-8b",
+    "command": null,
+    "num_processes": 8,
+    "parameters": {
+      "model": {
+        "name": "llama_8b",
+        "type": "transformer",
+        "num_layers": 32,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "pipeline": 1,
+          "tensor": 1,
+          "zero_stage": 3
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 4096,
+          "ffn_hidden_size": 14336,
+          "num_attention_heads": 32,
+          "num_kv_heads": 8
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/default/1/llama3-8b",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 10,
+        "num_checkpoints_read": 10,
+        "fsync": true
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269651869696.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 11.75179733648377,
+      "save_checkpoint_io_stdev_GB_per_second": 0.6763128226138173,
+      "save_checkpoint_duration_mean_seconds": 8.9361695,
+      "save_checkpoint_duration_stdev_seconds": 0.4614775280098156,
+      "load_checkpoint_io_mean_GB_per_second": 7.940120697916728,
+      "load_checkpoint_io_stdev_GB_per_second": 0.47271959799607954,
+      "load_checkpoint_duration_mean_seconds": 13.2422693,
+      "load_checkpoint_duration_stdev_seconds": 0.9325410491064773,
+      "checkpoint_size_GB": 104.70452117919922
+    }
+  },
+  {
+    "run_id": "//root/origin/mlpstorage_results/Samsung_Storage/Closed/Samsung Electronics/results/Samsung_PM1753_NVMe_Gen5/checkpointing/llama3-8b/20250624_142857",
+    "benchmark_type": "checkpointing",
+    "model": "llama3-8b",
+    "command": null,
+    "num_processes": 8,
+    "parameters": {
+      "model": {
+        "name": "llama_8b",
+        "type": "transformer",
+        "num_layers": 32,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "pipeline": 1,
+          "tensor": 1,
+          "zero_stage": 3
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 4096,
+          "ffn_hidden_size": 14336,
+          "num_attention_heads": 32,
+          "num_kv_heads": 8
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/default/1/llama3-8b",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 10,
+        "num_checkpoints_read": 10,
+        "fsync": true
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269651869696.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 11.451841360859307,
+      "save_checkpoint_io_stdev_GB_per_second": 0.6277475019399085,
+      "save_checkpoint_duration_mean_seconds": 9.1696569,
+      "save_checkpoint_duration_stdev_seconds": 0.48667550281156546,
+      "load_checkpoint_io_mean_GB_per_second": 7.877118863787975,
+      "load_checkpoint_io_stdev_GB_per_second": 0.5078386529782853,
+      "load_checkpoint_duration_mean_seconds": 13.358191499999998,
+      "load_checkpoint_duration_stdev_seconds": 1.0239180720644836,
+      "checkpoint_size_GB": 104.70452117919922
+    }
+  },
+  {
+    "run_id": "//root/origin/mlpstorage_results/Samsung_Storage/Closed/Samsung Electronics/results/Samsung_PM1753_NVMe_Gen5/checkpointing/llama3-8b/20250624_180907",
+    "benchmark_type": "checkpointing",
+    "model": "llama3-8b",
+    "command": null,
+    "num_processes": 8,
+    "parameters": {
+      "model": {
+        "name": "llama_8b",
+        "type": "transformer",
+        "num_layers": 32,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "pipeline": 1,
+          "tensor": 1,
+          "zero_stage": 3
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 4096,
+          "ffn_hidden_size": 14336,
+          "num_attention_heads": 32,
+          "num_kv_heads": 8
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/default/1/llama3-8b",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 10,
+        "num_checkpoints_read": 10,
+        "fsync": true
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269651869696.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 11.71640486094324,
+      "save_checkpoint_io_stdev_GB_per_second": 0.5125275142815322,
+      "save_checkpoint_duration_mean_seconds": 8.952889599999999,
+      "save_checkpoint_duration_stdev_seconds": 0.3734720948636458,
+      "load_checkpoint_io_mean_GB_per_second": 8.025353812208916,
+      "load_checkpoint_io_stdev_GB_per_second": 0.5395157395711064,
+      "load_checkpoint_duration_mean_seconds": 13.117876,
+      "load_checkpoint_duration_stdev_seconds": 1.0594099987684658,
+      "checkpoint_size_GB": 104.70452117919922
+    }
+  },
+  {
+    "run_id": "//root/origin/mlpstorage_results/Samsung_Storage/Closed/Samsung Electronics/results/Samsung_PM1753_NVMe_Gen5/checkpointing/llama3-405b/20250624_152416",
+    "benchmark_type": "checkpointing",
+    "model": "llama3-405b",
+    "command": null,
+    "num_processes": 8,
+    "parameters": {
+      "model": {
+        "name": "llama_405b",
+        "type": "transformer",
+        "num_layers": 126,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "tensor": 8,
+          "pipeline": 32,
+          "zero_stage": 1,
+          "data": 2
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 16384,
+          "ffn_hidden_size": 53248,
+          "num_attention_heads": 128,
+          "num_kv_heads": 8
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/default/1/llama3-405b",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 10,
+        "num_checkpoints_read": 10,
+        "fsync": true,
+        "mode": "subset"
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269651869696.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 11.923703419926277,
+      "save_checkpoint_io_stdev_GB_per_second": 0.9824631528508412,
+      "save_checkpoint_duration_mean_seconds": 8.3135242,
+      "save_checkpoint_duration_stdev_seconds": 0.595302717262033,
+      "load_checkpoint_io_mean_GB_per_second": 8.176669072899772,
+      "load_checkpoint_io_stdev_GB_per_second": 0.49919106415551906,
+      "load_checkpoint_duration_mean_seconds": 12.1049282,
+      "load_checkpoint_duration_stdev_seconds": 0.8690226946976473,
+      "checkpoint_size_GB": 98.54466915130615
+    }
+  },
+  {
+    "run_id": "//root/origin/mlpstorage_results/Samsung_Storage/Closed/Samsung Electronics/results/Samsung_PM1753_NVMe_Gen5/checkpointing/llama3-405b/20250624_190237",
+    "benchmark_type": "checkpointing",
+    "model": "llama3-405b",
+    "command": null,
+    "num_processes": 8,
+    "parameters": {
+      "model": {
+        "name": "llama_405b",
+        "type": "transformer",
+        "num_layers": 126,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "tensor": 8,
+          "pipeline": 32,
+          "zero_stage": 1,
+          "data": 2
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 16384,
+          "ffn_hidden_size": 53248,
+          "num_attention_heads": 128,
+          "num_kv_heads": 8
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/default/1/llama3-405b",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 10,
+        "num_checkpoints_read": 10,
+        "fsync": true,
+        "mode": "subset"
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269651869696.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 12.016953188932131,
+      "save_checkpoint_io_stdev_GB_per_second": 0.7908469149251179,
+      "save_checkpoint_duration_mean_seconds": 8.2330573,
+      "save_checkpoint_duration_stdev_seconds": 0.4959386146010513,
+      "load_checkpoint_io_mean_GB_per_second": 8.14245867790036,
+      "load_checkpoint_io_stdev_GB_per_second": 0.4672295265792481,
+      "load_checkpoint_duration_mean_seconds": 12.1494899,
+      "load_checkpoint_duration_stdev_seconds": 0.8180015734261699,
+      "checkpoint_size_GB": 98.54466915130615
+    }
+  },
+  {
+    "run_id": "//root/origin/mlpstorage_results/Samsung_Storage/Closed/Samsung Electronics/results/Samsung_PM1753_NVMe_Gen5/checkpointing/llama3-405b/20250624_160015",
+    "benchmark_type": "checkpointing",
+    "model": "llama3-405b",
+    "command": null,
+    "num_processes": 8,
+    "parameters": {
+      "model": {
+        "name": "llama_405b",
+        "type": "transformer",
+        "num_layers": 126,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "tensor": 8,
+          "pipeline": 32,
+          "zero_stage": 1,
+          "data": 2
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 16384,
+          "ffn_hidden_size": 53248,
+          "num_attention_heads": 128,
+          "num_kv_heads": 8
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/default/1/llama3-405b",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 10,
+        "num_checkpoints_read": 10,
+        "fsync": true,
+        "mode": "subset"
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269651869696.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 12.070465277983654,
+      "save_checkpoint_io_stdev_GB_per_second": 0.9570468854048735,
+      "save_checkpoint_duration_mean_seconds": 8.2104604,
+      "save_checkpoint_duration_stdev_seconds": 0.5868705718974501,
+      "load_checkpoint_io_mean_GB_per_second": 8.042755948910878,
+      "load_checkpoint_io_stdev_GB_per_second": 0.44380509618392505,
+      "load_checkpoint_duration_mean_seconds": 12.2964305,
+      "load_checkpoint_duration_stdev_seconds": 0.7943853113354064,
+      "checkpoint_size_GB": 98.54466915130615
+    }
+  },
+  {
+    "run_id": "//root/origin/mlpstorage_results/Samsung_Storage/Closed/Samsung Electronics/results/Samsung_PM1753_NVMe_Gen5/checkpointing/llama3-405b/20250624_171253",
+    "benchmark_type": "checkpointing",
+    "model": "llama3-405b",
+    "command": null,
+    "num_processes": 8,
+    "parameters": {
+      "model": {
+        "name": "llama_405b",
+        "type": "transformer",
+        "num_layers": 126,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "tensor": 8,
+          "pipeline": 32,
+          "zero_stage": 1,
+          "data": 2
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 16384,
+          "ffn_hidden_size": 53248,
+          "num_attention_heads": 128,
+          "num_kv_heads": 8
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/default/1/llama3-405b",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 10,
+        "num_checkpoints_read": 10,
+        "fsync": true,
+        "mode": "subset"
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269651869696.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 12.063906263266551,
+      "save_checkpoint_io_stdev_GB_per_second": 1.0358303381138059,
+      "save_checkpoint_duration_mean_seconds": 8.2218359,
+      "save_checkpoint_duration_stdev_seconds": 0.6223337680621952,
+      "load_checkpoint_io_mean_GB_per_second": 8.132935578497877,
+      "load_checkpoint_io_stdev_GB_per_second": 0.48556429910877097,
+      "load_checkpoint_duration_mean_seconds": 12.1680034,
+      "load_checkpoint_duration_stdev_seconds": 0.8589553351610547,
+      "checkpoint_size_GB": 98.54466915130615
+    }
+  },
+  {
+    "run_id": "//root/origin/mlpstorage_results/Samsung_Storage/Closed/Samsung Electronics/results/Samsung_PM1753_NVMe_Gen5/checkpointing/llama3-405b/20250624_193837",
+    "benchmark_type": "checkpointing",
+    "model": "llama3-405b",
+    "command": null,
+    "num_processes": 8,
+    "parameters": {
+      "model": {
+        "name": "llama_405b",
+        "type": "transformer",
+        "num_layers": 126,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "tensor": 8,
+          "pipeline": 32,
+          "zero_stage": 1,
+          "data": 2
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 16384,
+          "ffn_hidden_size": 53248,
+          "num_attention_heads": 128,
+          "num_kv_heads": 8
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/default/1/llama3-405b",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 10,
+        "num_checkpoints_read": 10,
+        "fsync": true,
+        "mode": "subset"
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269651869696.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 12.191935337908237,
+      "save_checkpoint_io_stdev_GB_per_second": 0.7740456592561188,
+      "save_checkpoint_duration_mean_seconds": 8.112103999999999,
+      "save_checkpoint_duration_stdev_seconds": 0.4631072065578337,
+      "load_checkpoint_io_mean_GB_per_second": 8.03368337576019,
+      "load_checkpoint_io_stdev_GB_per_second": 0.5013974782835173,
+      "load_checkpoint_duration_mean_seconds": 12.322741599999999,
+      "load_checkpoint_duration_stdev_seconds": 0.9031718537445904,
+      "checkpoint_size_GB": 98.54466915130615
+    }
+  },
+  {
+    "run_id": "//root/origin/mlpstorage_results/Samsung_Storage/Closed/Samsung Electronics/results/Samsung_PM1753_NVMe_Gen5/checkpointing/llama3-405b/20250624_141008",
+    "benchmark_type": "checkpointing",
+    "model": "llama3-405b",
+    "command": null,
+    "num_processes": 8,
+    "parameters": {
+      "model": {
+        "name": "llama_405b",
+        "type": "transformer",
+        "num_layers": 126,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "tensor": 8,
+          "pipeline": 32,
+          "zero_stage": 1,
+          "data": 2
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 16384,
+          "ffn_hidden_size": 53248,
+          "num_attention_heads": 128,
+          "num_kv_heads": 8
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/default/1/llama3-405b",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 10,
+        "num_checkpoints_read": 10,
+        "fsync": true,
+        "mode": "subset"
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269651869696.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 11.99374134703152,
+      "save_checkpoint_io_stdev_GB_per_second": 0.7574505862133434,
+      "save_checkpoint_duration_mean_seconds": 8.2459073,
+      "save_checkpoint_duration_stdev_seconds": 0.4691812932713857,
+      "load_checkpoint_io_mean_GB_per_second": 8.212667633026667,
+      "load_checkpoint_io_stdev_GB_per_second": 0.4929281746264028,
+      "load_checkpoint_duration_mean_seconds": 12.0492977,
+      "load_checkpoint_duration_stdev_seconds": 0.8377142628889699,
+      "checkpoint_size_GB": 98.54466915130615
+    }
+  },
+  {
+    "run_id": "//root/origin/mlpstorage_results/Samsung_Storage/Closed/Samsung Electronics/results/Samsung_PM1753_NVMe_Gen5/checkpointing/llama3-405b/20250624_163655",
+    "benchmark_type": "checkpointing",
+    "model": "llama3-405b",
+    "command": null,
+    "num_processes": 8,
+    "parameters": {
+      "model": {
+        "name": "llama_405b",
+        "type": "transformer",
+        "num_layers": 126,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "tensor": 8,
+          "pipeline": 32,
+          "zero_stage": 1,
+          "data": 2
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 16384,
+          "ffn_hidden_size": 53248,
+          "num_attention_heads": 128,
+          "num_kv_heads": 8
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/default/1/llama3-405b",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 10,
+        "num_checkpoints_read": 10,
+        "fsync": true,
+        "mode": "subset"
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269651869696.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 11.989339041929687,
+      "save_checkpoint_io_stdev_GB_per_second": 0.9460203806951264,
+      "save_checkpoint_duration_mean_seconds": 8.2654128,
+      "save_checkpoint_duration_stdev_seconds": 0.5850915558616103,
+      "load_checkpoint_io_mean_GB_per_second": 8.134659573120102,
+      "load_checkpoint_io_stdev_GB_per_second": 0.5088467922313333,
+      "load_checkpoint_duration_mean_seconds": 12.1711536,
+      "load_checkpoint_duration_stdev_seconds": 0.9111075998202627,
+      "checkpoint_size_GB": 98.54466915130615
+    }
+  },
+  {
+    "run_id": "//root/origin/mlpstorage_results/Samsung_Storage/Closed/Samsung Electronics/results/Samsung_PM1753_NVMe_Gen5/checkpointing/llama3-405b/20250624_174935",
+    "benchmark_type": "checkpointing",
+    "model": "llama3-405b",
+    "command": null,
+    "num_processes": 8,
+    "parameters": {
+      "model": {
+        "name": "llama_405b",
+        "type": "transformer",
+        "num_layers": 126,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "tensor": 8,
+          "pipeline": 32,
+          "zero_stage": 1,
+          "data": 2
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 16384,
+          "ffn_hidden_size": 53248,
+          "num_attention_heads": 128,
+          "num_kv_heads": 8
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/default/1/llama3-405b",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 10,
+        "num_checkpoints_read": 10,
+        "fsync": true,
+        "mode": "subset"
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269651869696.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 11.94171943488146,
+      "save_checkpoint_io_stdev_GB_per_second": 1.0481693995993717,
+      "save_checkpoint_duration_mean_seconds": 8.308054100000001,
+      "save_checkpoint_duration_stdev_seconds": 0.6389885709028683,
+      "load_checkpoint_io_mean_GB_per_second": 8.139918490582271,
+      "load_checkpoint_io_stdev_GB_per_second": 0.5368081222578492,
+      "load_checkpoint_duration_mean_seconds": 12.1697972,
+      "load_checkpoint_duration_stdev_seconds": 0.9629236104049791,
+      "checkpoint_size_GB": 98.54466915130615
+    }
+  },
+  {
+    "run_id": "//root/origin/mlpstorage_results/Samsung_Storage/Closed/Samsung Electronics/results/Samsung_PM1753_NVMe_Gen5/checkpointing/llama3-405b/20250624_182720",
+    "benchmark_type": "checkpointing",
+    "model": "llama3-405b",
+    "command": null,
+    "num_processes": 8,
+    "parameters": {
+      "model": {
+        "name": "llama_405b",
+        "type": "transformer",
+        "num_layers": 126,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "tensor": 8,
+          "pipeline": 32,
+          "zero_stage": 1,
+          "data": 2
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 16384,
+          "ffn_hidden_size": 53248,
+          "num_attention_heads": 128,
+          "num_kv_heads": 8
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/default/1/llama3-405b",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 10,
+        "num_checkpoints_read": 10,
+        "fsync": true,
+        "mode": "subset"
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269651869696.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 12.372433612757186,
+      "save_checkpoint_io_stdev_GB_per_second": 0.8158754396444523,
+      "save_checkpoint_duration_mean_seconds": 7.9983433,
+      "save_checkpoint_duration_stdev_seconds": 0.509058893683442,
+      "load_checkpoint_io_mean_GB_per_second": 8.08282726446247,
+      "load_checkpoint_io_stdev_GB_per_second": 0.4885676651116259,
+      "load_checkpoint_duration_mean_seconds": 12.245096700000001,
+      "load_checkpoint_duration_stdev_seconds": 0.8809023905859318,
+      "checkpoint_size_GB": 98.54466915130615
+    }
+  },
+  {
+    "run_id": "//root/origin/mlpstorage_results/Samsung_Storage/Closed/Samsung Electronics/results/Samsung_PM1753_NVMe_Gen5/checkpointing/llama3-405b/20250624_144711",
+    "benchmark_type": "checkpointing",
+    "model": "llama3-405b",
+    "command": null,
+    "num_processes": 8,
+    "parameters": {
+      "model": {
+        "name": "llama_405b",
+        "type": "transformer",
+        "num_layers": 126,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "tensor": 8,
+          "pipeline": 32,
+          "zero_stage": 1,
+          "data": 2
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 16384,
+          "ffn_hidden_size": 53248,
+          "num_attention_heads": 128,
+          "num_kv_heads": 8
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/default/1/llama3-405b",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 10,
+        "num_checkpoints_read": 10,
+        "fsync": true,
+        "mode": "subset"
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269651869696.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 12.528577158907337,
+      "save_checkpoint_io_stdev_GB_per_second": 1.3117548402568815,
+      "save_checkpoint_duration_mean_seconds": 7.944600299999999,
+      "save_checkpoint_duration_stdev_seconds": 0.756893703176219,
+      "load_checkpoint_io_mean_GB_per_second": 8.192978431867987,
+      "load_checkpoint_io_stdev_GB_per_second": 0.5350926743595871,
+      "load_checkpoint_duration_mean_seconds": 12.0902339,
+      "load_checkpoint_duration_stdev_seconds": 0.9539284950605521,
+      "checkpoint_size_GB": 98.54466915130615
+    }
+  },
+  {
+    "run_id": "//root/origin/mlpstorage_results/Samsung_Storage/Closed/Samsung Electronics/results/Samsung_PM1753_NVMe_Gen5/checkpointing/llama3-70b/20250624_162736",
+    "benchmark_type": "checkpointing",
+    "model": "llama3-70b",
+    "command": null,
+    "num_processes": 8,
+    "parameters": {
+      "model": {
+        "name": "llama_70b",
+        "type": "transformer",
+        "num_layers": 80,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "tensor": 8,
+          "pipeline": 1,
+          "zero_stage": 3,
+          "data": 8
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 8192,
+          "ffn_hidden_size": 28672,
+          "num_attention_heads": 128,
+          "num_kv_heads": 8
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/default/1/llama3-70b",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 10,
+        "num_checkpoints_read": 10,
+        "fsync": true,
+        "mode": "subset"
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269651869696.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 11.72413979051754,
+      "save_checkpoint_io_stdev_GB_per_second": 0.5593400768601285,
+      "save_checkpoint_duration_mean_seconds": 9.7360528,
+      "save_checkpoint_duration_stdev_seconds": 0.4389473295184287,
+      "load_checkpoint_io_mean_GB_per_second": 7.795964913816552,
+      "load_checkpoint_io_stdev_GB_per_second": 0.47573918440081486,
+      "load_checkpoint_duration_mean_seconds": 14.675423799999999,
+      "load_checkpoint_duration_stdev_seconds": 1.0670816258646567,
+      "checkpoint_size_GB": 113.90151596069336
+    }
+  },
+  {
+    "run_id": "//root/origin/mlpstorage_results/Samsung_Storage/Closed/Samsung Electronics/results/Samsung_PM1753_NVMe_Gen5/checkpointing/llama3-70b/20250624_174019",
+    "benchmark_type": "checkpointing",
+    "model": "llama3-70b",
+    "command": null,
+    "num_processes": 8,
+    "parameters": {
+      "model": {
+        "name": "llama_70b",
+        "type": "transformer",
+        "num_layers": 80,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "tensor": 8,
+          "pipeline": 1,
+          "zero_stage": 3,
+          "data": 8
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 8192,
+          "ffn_hidden_size": 28672,
+          "num_attention_heads": 128,
+          "num_kv_heads": 8
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/default/1/llama3-70b",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 10,
+        "num_checkpoints_read": 10,
+        "fsync": true,
+        "mode": "subset"
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269651869696.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 11.766697664722514,
+      "save_checkpoint_io_stdev_GB_per_second": 0.5127853146753676,
+      "save_checkpoint_duration_mean_seconds": 9.6980263,
+      "save_checkpoint_duration_stdev_seconds": 0.41447213527233634,
+      "load_checkpoint_io_mean_GB_per_second": 7.795164142054141,
+      "load_checkpoint_io_stdev_GB_per_second": 0.49068965740573595,
+      "load_checkpoint_duration_mean_seconds": 14.6817046,
+      "load_checkpoint_duration_stdev_seconds": 1.1102602254877185,
+      "checkpoint_size_GB": 113.90151596069336
+    }
+  },
+  {
+    "run_id": "//root/origin/mlpstorage_results/Samsung_Storage/Closed/Samsung Electronics/results/Samsung_PM1753_NVMe_Gen5/checkpointing/llama3-70b/20250624_140052",
+    "benchmark_type": "checkpointing",
+    "model": "llama3-70b",
+    "command": null,
+    "num_processes": 8,
+    "parameters": {
+      "model": {
+        "name": "llama_70b",
+        "type": "transformer",
+        "num_layers": 80,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "tensor": 8,
+          "pipeline": 1,
+          "zero_stage": 3,
+          "data": 8
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 8192,
+          "ffn_hidden_size": 28672,
+          "num_attention_heads": 128,
+          "num_kv_heads": 8
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/default/1/llama3-70b",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 10,
+        "num_checkpoints_read": 10,
+        "fsync": true,
+        "mode": "subset"
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269651869696.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 11.651700294870796,
+      "save_checkpoint_io_stdev_GB_per_second": 0.5070200491580842,
+      "save_checkpoint_duration_mean_seconds": 9.7934432,
+      "save_checkpoint_duration_stdev_seconds": 0.41210356868068954,
+      "load_checkpoint_io_mean_GB_per_second": 7.971622270589952,
+      "load_checkpoint_io_stdev_GB_per_second": 0.5229298124637795,
+      "load_checkpoint_duration_mean_seconds": 14.362158900000003,
+      "load_checkpoint_duration_stdev_seconds": 1.1258806585581307,
+      "checkpoint_size_GB": 113.90151596069336
+    }
+  },
+  {
+    "run_id": "//root/origin/mlpstorage_results/Samsung_Storage/Closed/Samsung Electronics/results/Samsung_PM1753_NVMe_Gen5/checkpointing/llama3-70b/20250624_143751",
+    "benchmark_type": "checkpointing",
+    "model": "llama3-70b",
+    "command": null,
+    "num_processes": 8,
+    "parameters": {
+      "model": {
+        "name": "llama_70b",
+        "type": "transformer",
+        "num_layers": 80,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "tensor": 8,
+          "pipeline": 1,
+          "zero_stage": 3,
+          "data": 8
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 8192,
+          "ffn_hidden_size": 28672,
+          "num_attention_heads": 128,
+          "num_kv_heads": 8
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/default/1/llama3-70b",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 10,
+        "num_checkpoints_read": 10,
+        "fsync": true,
+        "mode": "subset"
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269651869696.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 11.185293564217226,
+      "save_checkpoint_io_stdev_GB_per_second": 0.4138131393044072,
+      "save_checkpoint_duration_mean_seconds": 10.1969484,
+      "save_checkpoint_duration_stdev_seconds": 0.37309071168395525,
+      "load_checkpoint_io_mean_GB_per_second": 7.816199104852106,
+      "load_checkpoint_io_stdev_GB_per_second": 0.5216834977910255,
+      "load_checkpoint_duration_mean_seconds": 14.6517442,
+      "load_checkpoint_duration_stdev_seconds": 1.187529379673093,
+      "checkpoint_size_GB": 113.90151596069336
+    }
+  },
+  {
+    "run_id": "//root/origin/mlpstorage_results/Samsung_Storage/Closed/Samsung Electronics/results/Samsung_PM1753_NVMe_Gen5/checkpointing/llama3-70b/20250624_181802",
+    "benchmark_type": "checkpointing",
+    "model": "llama3-70b",
+    "command": null,
+    "num_processes": 8,
+    "parameters": {
+      "model": {
+        "name": "llama_70b",
+        "type": "transformer",
+        "num_layers": 80,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "tensor": 8,
+          "pipeline": 1,
+          "zero_stage": 3,
+          "data": 8
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 8192,
+          "ffn_hidden_size": 28672,
+          "num_attention_heads": 128,
+          "num_kv_heads": 8
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/default/1/llama3-70b",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 10,
+        "num_checkpoints_read": 10,
+        "fsync": true,
+        "mode": "subset"
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269651869696.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 11.412605692751928,
+      "save_checkpoint_io_stdev_GB_per_second": 0.41795169527045944,
+      "save_checkpoint_duration_mean_seconds": 9.9933426,
+      "save_checkpoint_duration_stdev_seconds": 0.35567885849715625,
+      "load_checkpoint_io_mean_GB_per_second": 7.840894371051173,
+      "load_checkpoint_io_stdev_GB_per_second": 0.5034202884886209,
+      "load_checkpoint_duration_mean_seconds": 14.5988358,
+      "load_checkpoint_duration_stdev_seconds": 1.125491519487624,
+      "checkpoint_size_GB": 113.90151596069336
+    }
+  },
+  {
+    "run_id": "//root/origin/mlpstorage_results/Samsung_Storage/Closed/Samsung Electronics/results/Samsung_PM1753_NVMe_Gen5/checkpointing/llama3-70b/20250624_151501",
+    "benchmark_type": "checkpointing",
+    "model": "llama3-70b",
+    "command": null,
+    "num_processes": 8,
+    "parameters": {
+      "model": {
+        "name": "llama_70b",
+        "type": "transformer",
+        "num_layers": 80,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "tensor": 8,
+          "pipeline": 1,
+          "zero_stage": 3,
+          "data": 8
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 8192,
+          "ffn_hidden_size": 28672,
+          "num_attention_heads": 128,
+          "num_kv_heads": 8
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/default/1/llama3-70b",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 10,
+        "num_checkpoints_read": 10,
+        "fsync": true,
+        "mode": "subset"
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269651869696.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 11.874014649705586,
+      "save_checkpoint_io_stdev_GB_per_second": 0.6858008558671286,
+      "save_checkpoint_duration_mean_seconds": 9.623045300000001,
+      "save_checkpoint_duration_stdev_seconds": 0.5294722066962627,
+      "load_checkpoint_io_mean_GB_per_second": 7.794115981708058,
+      "load_checkpoint_io_stdev_GB_per_second": 0.47044906849975315,
+      "load_checkpoint_duration_mean_seconds": 14.6774835,
+      "load_checkpoint_duration_stdev_seconds": 1.05539111518349,
+      "checkpoint_size_GB": 113.90151596069336
+    }
+  },
+  {
+    "run_id": "//root/origin/mlpstorage_results/Samsung_Storage/Closed/Samsung Electronics/results/Samsung_PM1753_NVMe_Gen5/checkpointing/llama3-70b/20250624_185319",
+    "benchmark_type": "checkpointing",
+    "model": "llama3-70b",
+    "command": null,
+    "num_processes": 8,
+    "parameters": {
+      "model": {
+        "name": "llama_70b",
+        "type": "transformer",
+        "num_layers": 80,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "tensor": 8,
+          "pipeline": 1,
+          "zero_stage": 3,
+          "data": 8
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 8192,
+          "ffn_hidden_size": 28672,
+          "num_attention_heads": 128,
+          "num_kv_heads": 8
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/default/1/llama3-70b",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 10,
+        "num_checkpoints_read": 10,
+        "fsync": true,
+        "mode": "subset"
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269651869696.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 11.32377344828547,
+      "save_checkpoint_io_stdev_GB_per_second": 0.49022556332424266,
+      "save_checkpoint_duration_mean_seconds": 10.076911999999998,
+      "save_checkpoint_duration_stdev_seconds": 0.4232944701642105,
+      "load_checkpoint_io_mean_GB_per_second": 7.823134594518081,
+      "load_checkpoint_io_stdev_GB_per_second": 0.49399707498044026,
+      "load_checkpoint_duration_mean_seconds": 14.6296773,
+      "load_checkpoint_duration_stdev_seconds": 1.1102105445445063,
+      "checkpoint_size_GB": 113.90151596069336
+    }
+  },
+  {
+    "run_id": "//root/origin/mlpstorage_results/Samsung_Storage/Closed/Samsung Electronics/results/Samsung_PM1753_NVMe_Gen5/checkpointing/llama3-70b/20250624_155100",
+    "benchmark_type": "checkpointing",
+    "model": "llama3-70b",
+    "command": null,
+    "num_processes": 8,
+    "parameters": {
+      "model": {
+        "name": "llama_70b",
+        "type": "transformer",
+        "num_layers": 80,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "tensor": 8,
+          "pipeline": 1,
+          "zero_stage": 3,
+          "data": 8
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 8192,
+          "ffn_hidden_size": 28672,
+          "num_attention_heads": 128,
+          "num_kv_heads": 8
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/default/1/llama3-70b",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 10,
+        "num_checkpoints_read": 10,
+        "fsync": true,
+        "mode": "subset"
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269651869696.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 11.55319570893022,
+      "save_checkpoint_io_stdev_GB_per_second": 0.5525173980946181,
+      "save_checkpoint_duration_mean_seconds": 9.8823431,
+      "save_checkpoint_duration_stdev_seconds": 0.4910633264562628,
+      "load_checkpoint_io_mean_GB_per_second": 7.827413947181327,
+      "load_checkpoint_io_stdev_GB_per_second": 0.4676123027497962,
+      "load_checkpoint_duration_mean_seconds": 14.613420299999998,
+      "load_checkpoint_duration_stdev_seconds": 1.0347981737363139,
+      "checkpoint_size_GB": 113.90151596069336
+    }
+  },
+  {
+    "run_id": "//root/origin/mlpstorage_results/Samsung_Storage/Closed/Samsung Electronics/results/Samsung_PM1753_NVMe_Gen5/checkpointing/llama3-70b/20250624_170336",
+    "benchmark_type": "checkpointing",
+    "model": "llama3-70b",
+    "command": null,
+    "num_processes": 8,
+    "parameters": {
+      "model": {
+        "name": "llama_70b",
+        "type": "transformer",
+        "num_layers": 80,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "tensor": 8,
+          "pipeline": 1,
+          "zero_stage": 3,
+          "data": 8
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 8192,
+          "ffn_hidden_size": 28672,
+          "num_attention_heads": 128,
+          "num_kv_heads": 8
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/default/1/llama3-70b",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 10,
+        "num_checkpoints_read": 10,
+        "fsync": true,
+        "mode": "subset"
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269651869696.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 11.378023472814311,
+      "save_checkpoint_io_stdev_GB_per_second": 0.4413941972693782,
+      "save_checkpoint_duration_mean_seconds": 10.0259347,
+      "save_checkpoint_duration_stdev_seconds": 0.39407076307030175,
+      "load_checkpoint_io_mean_GB_per_second": 7.786803059316286,
+      "load_checkpoint_io_stdev_GB_per_second": 0.46163670206901153,
+      "load_checkpoint_duration_mean_seconds": 14.688742699999997,
+      "load_checkpoint_duration_stdev_seconds": 1.0329992167578885,
+      "checkpoint_size_GB": 113.90151596069336
+    }
+  },
+  {
+    "run_id": "//root/origin/mlpstorage_results/Samsung_Storage/Closed/Samsung Electronics/results/Samsung_PM1753_NVMe_Gen5/checkpointing/llama3-70b/20250624_192920",
+    "benchmark_type": "checkpointing",
+    "model": "llama3-70b",
+    "command": null,
+    "num_processes": 8,
+    "parameters": {
+      "model": {
+        "name": "llama_70b",
+        "type": "transformer",
+        "num_layers": 80,
+        "model_datatype": "fp16",
+        "optimizer_datatype": "fp32",
+        "parallelism": {
+          "tensor": 8,
+          "pipeline": 1,
+          "zero_stage": 3,
+          "data": 8
+        },
+        "transformer": {
+          "vocab_size": 128256,
+          "hidden_size": 8192,
+          "ffn_hidden_size": 28672,
+          "num_attention_heads": 128,
+          "num_kv_heads": 8
+        }
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": false,
+        "checkpoint": true
+      },
+      "checkpoint": {
+        "checkpoint_folder": "/mnt/default/1/llama3-70b",
+        "time_between_checkpoints": 5,
+        "num_checkpoints_write": 10,
+        "num_checkpoints_read": 10,
+        "fsync": true,
+        "mode": "subset"
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 269651869696.0,
+      "total_cores": 192
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 11.10361129680329,
+      "save_checkpoint_io_stdev_GB_per_second": 0.41334724606584927,
+      "save_checkpoint_duration_mean_seconds": 10.272319399999999,
+      "save_checkpoint_duration_stdev_seconds": 0.38324669859326893,
+      "load_checkpoint_io_mean_GB_per_second": 7.794881434702459,
+      "load_checkpoint_io_stdev_GB_per_second": 0.4835734550774238,
+      "load_checkpoint_duration_mean_seconds": 14.6799891,
+      "load_checkpoint_duration_stdev_seconds": 1.0903944470651388,
+      "checkpoint_size_GB": 113.90151596069336
+    }
+  }
+]
