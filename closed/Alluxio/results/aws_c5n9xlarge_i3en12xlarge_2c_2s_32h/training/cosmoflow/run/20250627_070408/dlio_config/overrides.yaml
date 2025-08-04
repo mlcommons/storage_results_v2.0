@@ -1,0 +1,5 @@
+- workload=cosmoflow_h100
+- ++workload.dataset.num_files_train=379617
+- ++workload.dataset.num_subfolders_train=38
+- ++workload.reader.read_threads=4
+- ++workload.dataset.data_folder=/mnt/alluxio/alluxio-fuse/gemini/cosmoflow_379617_1000GB/cosmoflow

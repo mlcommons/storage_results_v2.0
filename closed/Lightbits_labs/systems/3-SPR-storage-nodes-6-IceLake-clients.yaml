@@ -1,0 +1,104 @@
+System:
+  name: 3-SPR-storage-nodes-6-IceLake-clients
+  description: Lightbits software-defined NVMe/TCP block storage installed on baremetal servers and 6 clients
+  storage_location: [ remote ]
+  client_software: [ in-box  ]
+  storage_interface: [ block ]
+  required_rack_units:
+  shared_capabilities:
+    multi_host_support: True            # False is used for local storage
+    simultaneous_write_support: False   # Are simultaneous writes by multiple hosts supported in the submitted configuration
+    simultaneous_read__support: True    # Are simultaneous reads by multiple hosts supported in the submitted configuration
+
+PowerRequirements:
+  storage_data_node:
+    quantity: 3 # number of dlio_client nodes
+    psu1_nameplate_power: 2600 # power in watts
+    num_active_psus: 1
+
+  # All storage nodes need to be listed (data, metadata, etc) as well as any required backed switching
+  dlio_client:
+    quantity: 6 # number of storage data nodes
+    psu1_nameplate_power: 1600 # power in watts
+    psu2_nameplate_power: 1600 # power in watts
+    num_active_psus: 2
+    num_passive_psus: 0
+
+
+# All nodes used need to be listed. Clients, Data storage, metadata, front-end, back-end, etc
+Nodes:
+  # Useful name for the client describing it's role in the system under test
+  dlio_client:  # This can be DLIO Client, storage node, storage controller, AwesomeMarketingName_Type1, etc
+    quantity: 6  # How many of this node
+    hardware:
+      model: Supermicro
+      rack_units: 2
+      power_supplies: 2
+      psu_configuration: active/active
+      psu_rating: Titanium 96%+ Efficiency
+      memory_capacity: 512GB
+      memory_configuration: 16x32GB 
+      cpu_qty: 2
+      cpu_model: Intel(R) Xeon(R) Gold 6338 CPU @ 2.00GHz
+      cpu_cores: 32
+    networking:
+      data_network:
+        model: E810-C
+        speed: 100Gbps
+        qty: 2
+        nic_teaming: LACP bonding - mode 802.3ad
+    operating_system:
+      name: Ubuntu
+      version: 22.04.4 LTS
+      release_date: 2023-06-07
+      kernel_version: 5.15.0-143-generic
+      cpu_architecture: x86_64
+    tuning:
+      # All non-default tunings for OS need to be listed
+      additional_installation:
+        nvme_over_tcp_support: 
+          - nvme-cli 1.16
+          - lightbits_discovery_client
+      client_mount_options:
+        lvm:
+          description: striped logical-volume of 6 lightbits volumes (each volume on a different storage instance)
+          lvm_block_size_resnet50: 32k
+          lvm_block_size_unet3d: 128k
+        filesystem: xfs on the logical-volume
+        datagen: single client with write permissions
+        training_run: read-only from all other clients
+      
+  storage_data_node:
+    quantity: 3  # How many of this node
+    hardware:
+      model: SPR
+      rack_units: 2
+      power_supplies: 1
+      psu_configuration: active
+      psu_rating:  N/A
+      memory_capacity: 512GB
+      memory_configuration: 32x16GB
+      cpu_model: Intel Xeon Platinum 8480+
+      cpu_qty: 2
+      cpu_cores: 56
+    networking:
+      data_network:
+        model: Mellonox ConnectX-5
+        speed: 100Gbps
+        qty: 2
+    operating_system:
+      name: Alma Linux
+      version: 9.4
+      release_date: 2024-06-05
+      kernel_version: 5.14.0-427.13.1.el9_4.x86_64
+      cpu_architecture: x86_64
+    storage_solution:
+      type: NVMe/TCP Block Storage
+      software_defined: yes
+      lightbits_version: 3.14.1
+      lightbits_instances_per_server: 2
+      allow_cross_numa: false
+      nvme_drives_per_storage_server: 16x7.68TB Micron 7500 Pro NVMe SSD. (8x per Lightbits instance).
+      volume_compression: false
+      replication-factor: 1
+      storage_volumes: 6 volumes for each model, one volume on each lightbits instance. Available access to all of the clients.

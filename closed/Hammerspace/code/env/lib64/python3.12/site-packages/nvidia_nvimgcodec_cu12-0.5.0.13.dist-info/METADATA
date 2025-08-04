@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: nvidia-nvimgcodec-cu12
+Version: 0.5.0.13
+Summary: NVIDIA nvimgcodec  for CUDA 12. Git SHA: 
+Home-page: https://github.com/NVIDIA/nvImageCodec
+Author: NVIDIA Corporation
+License: Apache License 2.0
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.8, <3.14
+Description-Content-Type: text/x-rst
+License-File: LICENSE.txt
+Provides-Extra: all
+Requires-Dist: nvidia-nvjpeg-cu12; extra == "all"
+Requires-Dist: nvidia-nvjpeg2k-cu12; extra == "all"
+Requires-Dist: nvidia-nvtiff-cu12; extra == "all"
+Requires-Dist: nvidia-nvcomp-cu12; extra == "all"
+Provides-Extra: nvjpeg
+Requires-Dist: nvidia-nvjpeg-cu12; extra == "nvjpeg"
+Provides-Extra: nvjpeg2k
+Requires-Dist: nvidia-nvjpeg2k-cu12; extra == "nvjpeg2k"
+Provides-Extra: nvtiff
+Requires-Dist: nvidia-nvtiff-cu12; extra == "nvtiff"
+Requires-Dist: nvidia-nvcomp-cu12; extra == "nvtiff"
+
+NVIDIA nvimgcodec
+=================
+
+nvImageCodec is a library of accelerated codec with unified interface. It is designed as a framework for extension modules which delivers codec plugins.
+
+You can install the following optional extras:
+
+    - **nvjpeg**: Includes nvjpeg package dependency, needed to run the nvjpeg extension.
+    - **nvjpeg2k**: Includes nvjpeg2k package dependency, needed to run the nvjpeg2k extension.
+    - **nvtiff**: Includes nvtiff and nvcomp package dependency, needed to run the nvtiff extension.
+    - **all**: Includes all optional dependencies.

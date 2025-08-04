@@ -1,0 +1,96 @@
+System:
+  name: AI400X3_24x7TiB_nvme_4xNDR400_1client
+  description: "DDN AI400X3 with EXAScaler parallel filesystem & 1 client. Version: EXA6.3.3-2025032600 - SFAOS12.7.0. Software-defined: no. Hyperconverged: no."
+  storage_location: remote
+  client_software: proprietary
+  storage_interface: file
+  required_rack_units: 2
+  shared_capabilities:
+    multi_host_support: True
+    simultaneous_write_support: True
+    simultaneous_read_support: True
+  max_sequential_read: 140
+  max_sequential_write: 110
+
+  use_local_storage: False
+  num_clients_with_integrated_storage: 0
+
+  system_architecture: shared file
+  useable_capacity: 120
+
+PowerRequirements:
+  dlio_client:
+    quantity: 1
+    psu1_nameplate_power: 2000
+    psu2_nameplate_power: 2000
+    design_power: 2000
+    num_active_psus: 2
+    num_passive_psus: 0
+  storage_data_node:
+    quantity: 1
+    psu1_nameplate_power: 2400
+    psu2_nameplate_power: 2400
+    design_power: 2400
+    num_active_psus: 2
+    num_passive_psus: 0
+
+Nodes:
+  dlio_client:
+    quantity: 1
+    hardware:
+      model: SMC ARS-221GL-NR-01
+      rack_units: 2
+      power_supplies: 2
+      psu_configuration: active/active
+      psu_rating: 2000
+      memory_capacity: 478GiB
+      memory_configuration: 2x240GB
+      cpu_qty: 2
+      cpu_model: Neoverse-V2
+      cpu_cores: 144
+    networking:
+      data:
+        model: "(MT41692 - 900-9D3D4-00EN-HA0) BlueField-3 E-series SuperNIC 400GbE/NDR single port QSFP112, PCIe Gen5.0 x16 8cores HHHL" 
+        speed: 400Gbps
+        qty: 1
+    operating_system:
+      name: Ubuntu
+      version: "22.04.5 LTS (Jammy Jellyfish)"
+      release_date: "NA"
+      kernel_version: "6.8.0-1030-nvidia-64k"
+      cpu_architecture: aarch64
+    tuning:
+      mpi_configuration:
+        environment_variables: ["lctl set_param osc.*.checksums=0"]
+        version: MPICH 4.0-3
+      sysctl_parameters: []
+
+  storage_data_node:
+    quantity: 1
+    hardware:
+      model: AI400X3
+      rack_units: 2
+      power_supplies: 2
+      psu_configuration: active/active
+      psu_rating: 2400
+      memory_capacity: 768GB
+      memory_configuration: 24x32GB
+      cpu_qty: 2
+      cpu_model: AMD EPYC 9454P 48-Core Emb Processor
+      cpu_cores: 96
+    networking:
+      data:
+        model: "(MT4129 - MCX75310AAS-NEAT) NVIDIA ConnectX-7 adapter card, 400Gb/s NDR IB , Single-port OSFP, PCIe 5.0 x16, Secure boot, No Crypto"
+        speed: 400Gbps
+        qty: 4
+    operating_system:
+      name: EXAScaler
+      version: "6.3.3-2025032600 - SFAOS12.7.0"
+      release_date: 2025-03-26
+      kernel_version: "4.18.0-553.40.1.el8_lustre.ddn17.x86_64"
+      cpu_architecture: x86_64
+    tuning:
+      mpi_configuration:
+        environment_variables: ["NA"]
+        version: "NA"
+      sysctl_parameters: []

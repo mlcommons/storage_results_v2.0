@@ -1,0 +1,110 @@
+System:
+  name: HPE Cray Supercomputing Storage Systems E2000
+  description: The HPE Cray E2000 storage system embeds the Lustre open-source parallel file system 
+  storage_location: remote
+  client_software: in-box
+  storage_interface: file
+  required_rack_units: 8U
+  shared_capabilities:
+    multi_host_support: True
+    simultaneous_write_support: True
+    simultaneous_read__support: True
+  max_sequential_read: 368 GiB/s
+  max_sequential_write: 266 GiB/s
+  max_random_read: 
+  max_random_write:    
+
+PowerRequirements:
+  dlio_client:
+    quantity: 32
+    psu1_nameplate_power: 1200 watts
+    psu2_nameplate_power: 1200 watts
+    psu3_nameplate_power: N/A
+    design_power: 1200
+    num_active_psus: 2
+    num_passive_psus: N/A
+
+  # All storage nodes need to be listed (data, metadata, etc) as well as any required backed switching
+  storage_data_node:
+    quantity: 4 
+    psu1_nameplate_power: 2000 watts
+    psu2_nameplate_power: 2000 watts 
+    psu3_nameplate_power: N/A
+    design_power: 2000
+    num_active_psus: 2
+    num_passive_psus: N/A
+  backend_switch:
+    quantity: 1
+    psu1_nameplate_power: 1200 watts
+    psu2_nameplate_power: N/A
+    design_power: 1200
+    num_active_psus: 2
+    num_passive_psus: N/A
+
+
+# All nodes used need to be listed. Clients, Data storage, metadata, front-end, back-end, etc
+Nodes:
+  # Useful name for the client describing it's role in the system under test
+  dlio_client:  # This can be DLIO Client, storage node, storage controller, AwesomeMarketingName_Type1, etc
+    quantity: 33
+    hardware:
+      model: HPE Proliant DL325
+      rack_units: 1
+      power_supplies: 2
+      psu_configuration: active/active
+      psu_rating: 1200
+      memory_capacity: 384 GB
+      memory_configuration: 12x32GB
+      cpu_qty: 1
+      cpu_model: AMD 9555
+      cpu_cores: 32
+    networking:
+      management:
+        model: Broadcom BCM 5719 1 GB 4 Port 
+        speed: 1 Gbps
+        qty: 1
+    operating_system:
+      name: Rocky Linux
+      version: 9.4 (Blue Onyx)
+      release_date: 2024-05-09
+      kernel_version: 5.14.0-427.13.1.el9_4
+      cpu_architecture: x86_64
+    tuning:
+      # All non-default tunings for OS need to be listed
+      mpi_configuration:
+        environment_variables: N/A
+        version: MPICH 4.2.3
+      sysctl_parameters:
+        memlock unlimited
+  storage_data_node: # This can be DLIO Client, storage node, storage controller, AwesomeMarketingName_Type1, etc
+    quantity: 4 
+    hardware:
+      model: E2000
+      rack_units: 2
+      power_supplies: 2
+      psu_configuration: active/active
+      psu_rating: 2000
+      memory_capacity: 384GB
+      memory_configuration: 12x32GB
+      cpu_qty: 1
+      cpu_model: AMD 9555
+      cpu_cores: 32 
+    networking:
+      management:
+        model: Built in 
+        speed: 10 Gbps
+        qty: 2
+    operating_system:
+      name: Rocky Linux 9.6
+      version: 9.6
+      release_date: 2022-04-12
+      kernel_version: 5.14.0-427.42.1.x7.3.000.65
+      cpu_architecture: x86_64
+    tuning:
+      mpi_configuration:
+        environment_variables: N/A
+        version: N/A
+      sysctl_parameters:
+        N/A
+
+

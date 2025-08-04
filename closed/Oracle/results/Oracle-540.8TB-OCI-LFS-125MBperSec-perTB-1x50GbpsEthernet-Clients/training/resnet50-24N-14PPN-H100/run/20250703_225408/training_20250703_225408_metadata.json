@@ -1,0 +1,154 @@
+{
+  "args": {
+    "program": "training",
+    "command": "run",
+    "results_dir": "./Final/Closed/Oracle-540.8T-LFS-125MBperSec-perTB/24N-Resnet50",
+    "loops": 5,
+    "config_file": null,
+    "closed": true,
+    "debug": false,
+    "verbose": false,
+    "stream_log_level": "INFO",
+    "allow_invalid_params": false,
+    "what_if": false,
+    "hosts": [
+      "172.16.4.103",
+      "172.16.4.145",
+      "172.16.4.158",
+      "172.16.4.173",
+      "172.16.4.204",
+      "172.16.4.229",
+      "172.16.5.13",
+      "172.16.5.94",
+      "172.16.5.109",
+      "172.16.5.126",
+      "172.16.5.178",
+      "172.16.5.205",
+      "172.16.5.216",
+      "172.16.5.232",
+      "172.16.6.38",
+      "172.16.6.78",
+      "172.16.6.145",
+      "172.16.6.197",
+      "172.16.4.71",
+      "172.16.6.221",
+      "172.16.6.236",
+      "172.16.7.4",
+      "172.16.7.6",
+      "172.16.7.62"
+    ],
+    "model": "resnet50",
+    "client_host_memory_in_gb": 96,
+    "exec_type": "mpi",
+    "mpi_bin": "mpirun",
+    "oversubscribe": false,
+    "allow_run_as_root": false,
+    "mpi_params": null,
+    "num_accelerators": 336,
+    "accelerator_type": "h100",
+    "num_client_hosts": 24,
+    "data_dir": "/mnt/lustrefs/resnet50-24N/",
+    "params": [
+      "dataset.num_files_train=86688",
+      "reader.prefetch_size=32"
+    ],
+    "dlio_bin_path": null,
+    "num_processes": 336
+  },
+  "debug": null,
+  "run_datetime": "20250703_225408",
+  "run_number": 0,
+  "runtime": 1013.8387849330902,
+  "verification": "closed",
+  "command_output_files": [
+    {
+      "command": "mpirun -n 336 -host 172.16.4.103:14,172.16.4.145:14,172.16.4.158:14,172.16.4.173:14,172.16.4.204:14,172.16.4.229:14,172.16.5.13:14,172.16.5.94:14,172.16.5.109:14,172.16.5.126:14,172.16.5.178:14,172.16.5.205:14,172.16.5.216:14,172.16.5.232:14,172.16.6.38:14,172.16.6.78:14,172.16.6.145:14,172.16.6.197:14,172.16.4.71:14,172.16.6.221:14,172.16.6.236:14,172.16.7.4:14,172.16.7.6:14,172.16.7.62:14 /home/ubuntu/.local/bin/dlio_benchmark workload=resnet50_h100 ++hydra.run.dir=./Final/Closed/Oracle-540.8T-LFS-125MBperSec-perTB/24N-Resnet50/training/resnet50/run/20250703_225408 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=86688 ++workload.reader.prefetch_size=32 ++workload.dataset.data_folder=/mnt/lustrefs/resnet50-24N/resnet50 --config-dir=/mnt/lustrefs/storage/configs/dlio",
+      "stdout": "./Final/Closed/Oracle-540.8T-LFS-125MBperSec-perTB/24N-Resnet50/training/resnet50/run/20250703_225408/training_run.stdout.log",
+      "stderr": "./Final/Closed/Oracle-540.8T-LFS-125MBperSec-perTB/24N-Resnet50/training/resnet50/run/20250703_225408/training_run.stderr.log"
+    }
+  ],
+  "run_result_output": "./Final/Closed/Oracle-540.8T-LFS-125MBperSec-perTB/24N-Resnet50/training/resnet50/run/20250703_225408",
+  "metadata_filename": "training_20250703_225408_metadata.json",
+  "metadata_file_path": "./Final/Closed/Oracle-540.8T-LFS-125MBperSec-perTB/24N-Resnet50/training/resnet50/run/20250703_225408/training_20250703_225408_metadata.json",
+  "_config_name": "resnet50_h100",
+  "base_command": "dlio_benchmark",
+  "base_path": "/home/ubuntu/.local/bin",
+  "base_command_path": "/home/ubuntu/.local/bin/dlio_benchmark",
+  "config_path": "/mnt/lustrefs/storage/configs/dlio",
+  "per_host_mem_kB": null,
+  "total_mem_kB": null,
+  "cluster_information": "<mlpstorage.rules.ClusterInformation object at 0x7efc2a2a0970>",
+  "config_file": "resnet50_h100.yaml",
+  "params_dict": {
+    "dataset.num_files_train": "86688",
+    "reader.prefetch_size": "32",
+    "dataset.data_folder": "/mnt/lustrefs/resnet50-24N/resnet50"
+  },
+  "yaml_params": {
+    "model": {
+      "name": "resnet50",
+      "type": "cnn"
+    },
+    "framework": "tensorflow",
+    "workflow": {
+      "generate_data": false,
+      "train": true
+    },
+    "dataset": {
+      "num_files_train": 1024,
+      "num_samples_per_file": 1251,
+      "record_length_bytes": 114660.07,
+      "record_length_bytes_resize": 150528,
+      "data_folder": "data/resnet50",
+      "format": "tfrecord"
+    },
+    "train": {
+      "computation_time": 0.224,
+      "epochs": 5
+    },
+    "reader": {
+      "data_loader": "tensorflow",
+      "read_threads": 8,
+      "computation_threads": 8,
+      "batch_size": 400
+    },
+    "metric": {
+      "au": 0.9
+    }
+  },
+  "combined_params": {
+    "model": {
+      "name": "resnet50",
+      "type": "cnn"
+    },
+    "framework": "tensorflow",
+    "workflow": {
+      "generate_data": false,
+      "train": true
+    },
+    "dataset": {
+      "num_files_train": "86688",
+      "num_samples_per_file": 1251,
+      "record_length_bytes": 114660.07,
+      "record_length_bytes_resize": 150528,
+      "data_folder": "data/resnet50",
+      "format": "tfrecord"
+    },
+    "train": {
+      "computation_time": 0.224,
+      "epochs": 5
+    },
+    "reader": {
+      "data_loader": "tensorflow",
+      "read_threads": 8,
+      "computation_threads": 8,
+      "batch_size": 400,
+      "prefetch_size": "32"
+    },
+    "metric": {
+      "au": 0.9
+    }
+  },
+  "executed_command": "mpirun -n 336 -host 172.16.4.103:14,172.16.4.145:14,172.16.4.158:14,172.16.4.173:14,172.16.4.204:14,172.16.4.229:14,172.16.5.13:14,172.16.5.94:14,172.16.5.109:14,172.16.5.126:14,172.16.5.178:14,172.16.5.205:14,172.16.5.216:14,172.16.5.232:14,172.16.6.38:14,172.16.6.78:14,172.16.6.145:14,172.16.6.197:14,172.16.4.71:14,172.16.6.221:14,172.16.6.236:14,172.16.7.4:14,172.16.7.6:14,172.16.7.62:14 /home/ubuntu/.local/bin/dlio_benchmark workload=resnet50_h100 ++hydra.run.dir=./Final/Closed/Oracle-540.8T-LFS-125MBperSec-perTB/24N-Resnet50/training/resnet50/run/20250703_225408 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=86688 ++workload.reader.prefetch_size=32 ++workload.dataset.data_folder=/mnt/lustrefs/resnet50-24N/resnet50 --config-dir=/mnt/lustrefs/storage/configs/dlio",
+  "benchmark_type": "training"
+}

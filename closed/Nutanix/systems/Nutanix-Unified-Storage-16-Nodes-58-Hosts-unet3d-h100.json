@@ -1,0 +1,570 @@
+{
+  "networks": [
+	{
+	  "network_name": "client",
+	  "network_type": "Ethernet",
+	  "bitrate": 200,
+	  "protocols": [ "NFSv3", "NFSv4" ]
+	},
+    {
+        "network_name": "Storage",
+        "network_type": "Ethernet",
+        "bitrate": 200,
+        "protocols": [ "ISER" ]
+      }
+  ],
+  "nodes": [
+	{
+  "networks": [
+	{
+	  "network_name": "client",
+	  "network_type": "Ethernet",
+	  "bitrate": 200,
+	  "protocols": [ "NFSv3", "NFSv4" ]
+	},
+    {
+        "network_name": "Storage",
+        "network_type": "Ethernet",
+        "bitrate": 200,
+        "protocols": [ "ISER" ]
+      }
+  ],
+  "nodes": [
+	{
+	  "node_type_name": "File Server Node",
+	  "node_config_type": "NX8170-G9",
+	  "config_options": [ "nconnect=4, vers=4.0, rdma" ],
+	  "CPU": {
+		"vendor_and_model_name": "Intel(R) Xeon(R) Gold 6448H CPU @ 2.80GHz",
+		"cores_per_socket": 64
+	  },
+	  "DRAM": {
+		"capacity_MiB": 1048576
+	  },
+	  "accelerators": [ ],
+	  "nic_ports": [
+	    {
+		  "network_name": "SRIOV",
+		  "bitrate": 200,
+		  "count_of_this_type": 2,
+		  "protocols": [ "NFSv3", "NFSv4" ]
+	    },
+{
+		  "network_name": "storage",
+		  "bitrate": 200,
+		  "count_of_this_type": 1,
+		  "protocols": [  ]
+	    },
+        {
+		  "network_name": "RDMA",
+		  "bitrate": 200,
+		  "count_of_this_type": 1,
+		  "protocols": [ "RDMA" ]
+	    }
+	  ],
+	  "drives": [
+		{
+		  "drive_type": "SSD",
+		  "drive_details": " SAMSUNG MZQL27T6HBLA-00A07 7.68 TB NVMe",
+		  "capacity_GiB": 7680,
+		  "count_of_this_type": 2
+		},
+        {
+		  "drive_type": "SSD",
+		  "drive_details": " SAMSUNG MZQL27T6HBLA-00A07 3.36 TB NVMe",
+		  "capacity_GiB": 3440,
+		  "count_of_this_type": 5
+		},
+        {
+		  "drive_type": "SSD",
+		  "drive_details": " SAMSUNG MZQL27T6HBLA-00A07 2.87 TB NVMe",
+		  "capacity_GiB": 2877,
+		  "count_of_this_type": 2
+		},
+        {
+		  "drive_type": "SSD",
+		  "drive_details": " SAMSUNG MZQL27T6HBLA-00A07 1.68 TB NVMe",
+		  "capacity_GiB": 1670,
+		  "count_of_this_type": 1
+		}
+	  ]
+	},
+	{
+	  "node_type_name": "G8 Client Node",
+	  "node_config_type": "NX8170-G8",
+	  "config_options": [ ],
+	  "CPU": {
+		"vendor_and_model_name": "Intel(R) Xeon(R) Gold 6448H",
+		"cores_per_socket": 64
+	  },
+	  "DRAM": {
+		"capacity_MiB": 1048576
+	  },
+	  "accelerators": [ ],
+	  "nic_ports": [
+	    {
+		  "network_name": "AOS",
+		  "bitrate": 10,
+		  "count_of_this_type": 2,
+		  "protocols": [  ]
+	    },
+        {
+		  "network_name": "SRIOV",
+		  "bitrate": 200,
+		  "count_of_this_type": 2,
+		  "protocols": [ "NFSv3", "NFSv4" ]
+	    }
+	  ],
+	  "drives": [
+		{
+		  "drive_type": "SSD",
+		  "drive_details": "MZQL21T9HCJR-00A07 1.92 TB NVMe",
+		  "capacity_GiB": 1920,
+		  "count_of_this_type": 8
+		}
+	  ]
+	},
+    {
+	  "node_type_name": "G9 Client Node",
+	  "node_config_type": "NX3155-G9",
+	  "config_options": [ ],
+	  "CPU": {
+		"vendor_and_model_name": "INTEL(R) XEON(R) GOLD 6548Y+",
+		"cores_per_socket": 64
+	  },
+	  "DRAM": {
+		"capacity_MiB": 1048576
+	  },
+	  "accelerators": [ ],
+	  "nic_ports": [
+	    {
+		  "network_name": "AOS",
+		  "bitrate": 10,
+		  "count_of_this_type": 2,
+		  "protocols": [  ]
+	    },
+        {
+		  "network_name": "SRIOV",
+		  "bitrate": 200,
+		  "count_of_this_type": 2,
+		  "protocols": [ "NFSv3", "NFSv4" ]
+	    }
+	  ],
+	  "drives": [
+		{
+		  "drive_type": "SSD",
+		  "drive_details": "MZQL21T9HCJR-00A07 1.92 TB NVMe",
+		  "capacity_GiB": 1920,
+		  "count_of_this_type": 2
+		}
+	  ]
+	}
+  ],
+  "number_of_benchmark_hosts": 16,
+  "benchmark_hosts": [
+	{
+	  "node_name": "client01",
+	  "node_type_name": "G8 Client Node",
+	  "benchmark_instances": [
+		{
+		  "mapping_type": "native",
+		  "cpu_cores": 64,
+		  "DRAM_MiB": 1048576
+		}
+	  ]
+	},
+	{
+	  "node_name": "client02",
+	  "node_type_name": "G8 Client Node",
+	  "benchmark_instances": [
+		{
+		  "mapping_type": "native",
+		  "cpu_cores": 64,
+		  "DRAM_MiB": 1048576
+		}
+	  ]
+	},
+	{
+	  "node_name": "client03",
+	  "node_type_name": "G8 Client Node",
+	  "benchmark_instances": [
+		{
+		  "mapping_type": "native",
+		  "cpu_cores": 64,
+		  "DRAM_MiB": 1048576
+		}
+	  ]
+	},
+	{
+	  "node_name": "client04",
+	  "node_type_name": "G8 Client Node",
+	  "benchmark_instances": [
+		{
+		  "mapping_type": "native",
+		  "cpu_cores": 64,
+		  "DRAM_MiB": 1048576
+		}
+	  ]
+	},
+	{
+	  "node_name": "client05",
+	  "node_type_name": "G8 Client Node",
+	  "benchmark_instances": [
+		{
+		  "mapping_type": "native",
+		  "cpu_cores": 64,
+		  "DRAM_MiB": 1048576
+		}
+	  ]
+	},
+	{
+	  "node_name": "client06",
+	  "node_type_name": "G8 Client Node",
+	  "benchmark_instances": [
+		{
+		  "mapping_type": "native",
+		  "cpu_cores": 64,
+		  "DRAM_MiB": 1048576
+		}
+	  ]
+	},
+	{
+	  "node_name": "client07",
+	  "node_type_name": "G8 Client Node",
+	  "benchmark_instances": [
+		{
+		  "mapping_type": "native",
+		  "cpu_cores": 64,
+		  "DRAM_MiB": 1048576
+		}
+	  ]
+	},
+	{
+	  "node_name": "client08",
+	  "node_type_name": "G8 Client Node",
+	  "benchmark_instances": [
+		{
+		  "mapping_type": "native",
+		  "cpu_cores": 64,
+		  "DRAM_MiB": 1048576
+		}
+	  ]
+	},
+	{
+	  "node_name": "client09",
+	  "node_type_name": "G9 Client Node",
+	  "benchmark_instances": [
+		{
+		  "mapping_type": "native",
+		  "cpu_cores": 64,
+		  "DRAM_MiB": 1048576
+		}
+	  ]
+	},
+	{
+	  "node_name": "client10",
+	  "node_type_name": "G9 Client Node",
+	  "benchmark_instances": [
+		{
+		  "mapping_type": "native",
+		  "cpu_cores": 64,
+		  "DRAM_MiB": 1048576
+		}
+	  ]
+	},
+    {
+	  "node_name": "client11",
+	  "node_type_name": "G9 Client Node",
+	  "benchmark_instances": [
+		{
+		  "mapping_type": "native",
+		  "cpu_cores": 64,
+		  "DRAM_MiB": 1048576
+		}
+	  ]
+	},
+    {
+	  "node_name": "client12",
+	  "node_type_name": "G9 Client Node",
+	  "benchmark_instances": [
+		{
+		  "mapping_type": "native",
+		  "cpu_cores": 64,
+		  "DRAM_MiB": 1048576
+		}
+	  ]
+	},
+    {
+	  "node_name": "client13",
+	  "node_type_name": "G9 Client Node",
+	  "benchmark_instances": [
+		{
+		  "mapping_type": "native",
+		  "cpu_cores": 64,
+		  "DRAM_MiB": 1048576
+		}
+	  ]
+	},
+    {
+	  "node_name": "client14",
+	  "node_type_name": "G9 Client Node",
+	  "benchmark_instances": [
+		{
+		  "mapping_type": "native",
+		  "cpu_cores": 64,
+		  "DRAM_MiB": 1048576
+		}
+	  ]
+	},
+    {
+	  "node_name": "client15",
+	  "node_type_name": "G9 Client Node",
+	  "benchmark_instances": [
+		{
+		  "mapping_type": "native",
+		  "cpu_cores": 64,
+		  "DRAM_MiB": 1048576
+		}
+	  ]
+	},
+    {
+	  "node_name": "client16",
+	  "node_type_name": "G9 Client Node",
+	  "benchmark_instances": [
+		{
+		  "mapping_type": "native",
+		  "cpu_cores": 64,
+		  "DRAM_MiB": 1048576
+		}
+	  ]
+	}
+  ],
+  "storage_system": {
+    "vendor_name": "Nutanix with Supermicro",
+    "solution_name": "Nutanix Unified Storage (Files)",
+    "model_name": "NX-8170G9",
+	"version": "5.2",
+    "software_defined": "yes",
+    "hyperconverged": "yes",
+    "solution_type": "Shared File",
+	"client_mount_options": [ "nconnect=4", "vers=4.0", "rdma" ],
+	"solution_config_options": [
+	  "number of nodes : 16",
+	  "node_type_name : File Server Node",
+	  "cpu_core_count_per_node : 64",
+	  "memory_capacity_gigabytes_per_node : 1024",
+	  "network_bandwidth_gbps_per_node : 600",
+	  "number_of_nw_queues : 8",
+	  "directory_distribution_logic : Round Robin",
+	  "share_workload_type : Sequential"
+	],
+    "usable_capacity_GiB": 999997,
+    "raw_capacity_GiB": 999997,
+	"software_components": [
+	  {
+		"component_name": "Protocol Server",
+		"description": "NFS and SMB server",
+		"runnable_node_type_name": [ "File Server Node" ],
+		"connecting_components": [ "File System" ]
+	  },
+	  {
+		"component_name": "File System",
+		"description": "Nutanix Files Distributed File System",
+		"runnable_node_type_name": [ "File Server Node" ],
+		"connecting_components": [ "Protocol Server", "Storage" ]
+	  }
+	]
+  }
+},
+    { 
+	  "node_type_name": "File Server Node",
+	  "node_config_type": "NX8170-G9",
+	  "config_options": [ "nconnect=4, vers=4.0, rdma" ],
+	  "CPU": {
+		"vendor_and_model_name": "Intel(R) Xeon(R) Gold 6448H CPU @ 2.80GHz",
+		"cores_per_socket": 64
+	  },
+	  "DRAM": {
+		"capacity_MiB": 1048576
+	  },
+	  "accelerators": [ ],
+	  "nic_ports": [
+	    {
+		  "network_name": "SRIOV",
+		  "bitrate": 200,
+		  "count_of_this_type": 2,
+		  "protocols": [ "NFSv3", "NFSv4" ]
+	    },
+{
+		  "network_name": "storage",
+		  "bitrate": 200,
+		  "count_of_this_type": 1,
+		  "protocols": [  ]
+	    },
+        {
+		  "network_name": "RDMA",
+		  "bitrate": 200,
+		  "count_of_this_type": 1,
+		  "protocols": [ "RDMA" ]
+	    }
+	  ],
+	  "drives": [
+		{
+		  "drive_type": "SSD",
+		  "drive_details": " SAMSUNG MZQL27T6HBLA-00A07 7.68 TB NVMe",
+		  "capacity_GiB": 7680,
+		  "count_of_this_type": 2
+		},
+        {
+		  "drive_type": "SSD",
+		  "drive_details": " SAMSUNG MZQL27T6HBLA-00A07 3.36 TB NVMe",
+		  "capacity_GiB": 3440,
+		  "count_of_this_type": 5
+		},
+        {
+		  "drive_type": "SSD",
+		  "drive_details": " SAMSUNG MZQL27T6HBLA-00A07 2.87 TB NVMe",
+		  "capacity_GiB": 2877,
+		  "count_of_this_type": 2
+		},
+        {
+		  "drive_type": "SSD",
+		  "drive_details": " SAMSUNG MZQL27T6HBLA-00A07 1.68 TB NVMe",
+		  "capacity_GiB": 1670,
+		  "count_of_this_type": 1
+		}
+	  ]
+	},
+	{
+	  "node_type_name": "G8 Client Node",
+	  "node_config_type": "NX8170-G8",
+	  "config_options": [ ],
+	  "CPU": {
+		"vendor_and_model_name": "Intel(R) Xeon(R) Gold 6448H",
+		"cores_per_socket": 64
+	  },
+	  "DRAM": {
+		"capacity_MiB": 1048576
+	  },
+	  "accelerators": [ ],
+	  "nic_ports": [
+	    {
+		  "network_name": "AOS",
+		  "bitrate": 10,
+		  "count_of_this_type": 2,
+		  "protocols": [  ]
+	    },
+        {
+		  "network_name": "SRIOV",
+		  "bitrate": 200,
+		  "count_of_this_type": 2,
+		  "protocols": [ "NFSv3", "NFSv4" ]
+	    }
+	  ],
+	  "drives": [
+		{
+		  "drive_type": "SSD",
+		  "drive_details": "MZQL21T9HCJR-00A07 1.92 TB NVMe",
+		  "capacity_GiB": 1920,
+		  "count_of_this_type": 8
+		}
+	  ]
+	},
+    {
+	  "node_type_name": "G9 Client Node",
+	  "node_config_type": "NX3155-G9",
+	  "config_options": [ ],
+	  "CPU": {
+		"vendor_and_model_name": "INTEL(R) XEON(R) GOLD 6548Y+",
+		"cores_per_socket": 64
+	  },
+	  "DRAM": {
+		"capacity_MiB": 1048576
+	  },
+	  "accelerators": [ ],
+	  "nic_ports": [
+	    {
+		  "network_name": "AOS",
+		  "bitrate": 10,
+		  "count_of_this_type": 2,
+		  "protocols": [  ]
+	    },
+        {
+		  "network_name": "SRIOV",
+		  "bitrate": 200,
+		  "count_of_this_type": 2,
+		  "protocols": [ "NFSv3", "NFSv4" ]
+	    }
+	  ],
+	  "drives": [
+		{
+		  "drive_type": "SSD",
+		  "drive_details": "MZQL21T9HCJR-00A07 1.92 TB NVMe",
+		  "capacity_GiB": 1920,
+		  "count_of_this_type": 8
+		}
+	  ]
+	}
+  ],
+  "number_of_benchmark_hosts": 2,
+  "benchmark_hosts": [
+	{
+	  "node_name": "client01",
+	  "node_type_name": "G9 Client Node",
+	  "benchmark_instances": [
+		{
+		  "mapping_type": "native",
+		  "cpu_cores": 64,
+		  "DRAM_MiB": 1048576
+		}
+	  ]
+	},
+	{
+	  "node_name": "client02",
+	  "node_type_name": "G9 Client Node",
+	  "benchmark_instances": [
+		{
+		  "mapping_type": "native",
+		  "cpu_cores": 64,
+		  "DRAM_MiB": 1048576
+		}
+	  ]
+	}
+  ],
+  "storage_system": {
+    "vendor_name": "Nutanix with Supermicro",
+    "solution_name": "Nutanix Unified Storage (Files)",
+    "model_name": "NX-8170G9",
+	"version": "5.2",
+    "software_defined": "yes",
+    "hyperconverged": "yes",
+    "solution_type": "Shared File",
+	"client_mount_options": [ "nconnect=4", "vers=4.0", "rdma" ],
+	"solution_config_options": [
+	  "number of nodes : 16",
+	  "node_type_name : File Server Node",
+	  "cpu_core_count_per_node : 64",
+	  "memory_capacity_gigabytes_per_node : 1024",
+	  "network_bandwidth_gbps_per_node : 600",
+	  "number_of_nw_queues : 8",
+	  "directory_distribution_logic : Round Robin",
+	  "share_workload_type : Sequential"
+	],
+    "usable_capacity_GiB": 999997,
+    "raw_capacity_GiB": 999997,
+	"software_components": [
+	  {
+		"component_name": "Protocol Server",
+		"description": "NFS and SMB server",
+		"runnable_node_type_name": [ "File Server Node" ],
+		"connecting_components": [ "File System" ]
+	  },
+	  {
+		"component_name": "File System",
+		"description": "Nutanix Files Distributed File System",
+		"runnable_node_type_name": [ "File Server Node" ],
+		"connecting_components": [ "Protocol Server", "Storage" ]
+	  }
+	]
+  }
+}

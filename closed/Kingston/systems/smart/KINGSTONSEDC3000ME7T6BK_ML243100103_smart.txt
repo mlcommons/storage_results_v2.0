@@ -1,0 +1,76 @@
+smartctl pre-7.5 2025-03-27 r5680 [x86_64-linux-6.5.0-15-generic] (local build)
+Copyright (C) 2002-25, Bruce Allen, Christian Franke, www.smartmontools.org
+
+=== START OF INFORMATION SECTION ===
+Model Number:                       KINGSTON SEDC3000ME7T6BK
+Serial Number:                      ML243100103
+Firmware Version:                   700KS570
+PCI Vendor/Subsystem ID:            0x2646
+IEEE OUI Identifier:                0x0026b7
+Total NVM Capacity:                 7,681,501,126,656 [7.68 TB]
+Unallocated NVM Capacity:           0
+Controller ID:                      1
+NVMe Version:                       2.0
+Number of Namespaces:               128
+Namespace 1 Size/Capacity:          7,681,501,126,656 [7.68 TB]
+Namespace 1 Formatted LBA Size:     512
+Namespace 1 IEEE EUI-64:            0026b7 ae7d69c701
+Local Time is:                      Fri Jul 11 00:29:16 2025 PDT
+Firmware Updates (0x17):            3 Slots, Slot 1 R/O, no Reset required
+Optional Admin Commands (0x065f):   Security Format Frmw_DL NS_Mngmt Self_Test MI_Snd/Rec Get_LBA_Sts Lockdown
+Optional NVM Commands (0x005e):     Wr_Unc DS_Mngmt Wr_Zero Sav/Sel_Feat Timestmp
+Log Page Attributes (0x3a):         Cmd_Eff_Lg Telmtry_Lg Pers_Ev_Lg Log0_FISE_MI
+Maximum Data Transfer Size:         32 Pages
+Warning  Comp. Temp. Threshold:     77 Celsius
+Critical Comp. Temp. Threshold:     85 Celsius
+Namespace 1 Features (0x12):        NA_Fields NP_Fields
+
+Supported Power States
+St Op     Max   Active     Idle   RL RT WL WT  Ent_Lat  Ex_Lat
+ 0 +    25.00W       -        -    0  0  0  0        0       0
+ 1 +    20.00W       -        -    0  0  0  1        0       0
+ 2 +    18.00W       -        -    0  1  0  0        0       0
+ 3 +    15.00W       -        -    0  2  0  2        0       0
+ 4 +    12.00W       -        -    1  1  0  3        0       0
+
+Supported LBA Sizes (NSID 0x1)
+Id Fmt  Data  Metadt  Rel_Perf
+ 0 +     512       0         0
+ 1 -     512       8         1
+ 2 -    4096       0         0
+ 3 -    4096       8         1
+ 4 -    4096      64         2
+
+=== START OF SMART DATA SECTION ===
+SMART overall-health self-assessment test result: PASSED
+
+SMART/Health Information (NVMe Log 0x02, NSID 0xffffffff)
+Critical Warning:                   0x00
+Temperature:                        37 Celsius
+Available Spare:                    100%
+Available Spare Threshold:          5%
+Percentage Used:                    4%
+Data Units Read:                    5,621,822,897 [2.87 PB]
+Data Units Written:                 4,505,460,852 [2.30 PB]
+Host Read Commands:                 99,655,189,284
+Host Write Commands:                115,778,237,860
+Controller Busy Time:               59,738
+Power Cycles:                       14
+Power On Hours:                     2,361
+Unsafe Shutdowns:                   4
+Media and Data Integrity Errors:    0
+Error Information Log Entries:      0
+Warning  Comp. Temperature Time:    0
+Critical Comp. Temperature Time:    0
+Temperature Sensor 1:               48 Celsius
+Temperature Sensor 2:               35 Celsius
+Temperature Sensor 3:               36 Celsius
+Temperature Sensor 4:               50 Celsius
+
+Error Information (NVMe Log 0x01, 16 of 256 entries)
+No Errors Logged
+
+Self-test Log (NVMe Log 0x06, NSID 0xffffffff)
+Self-test status: No self-test in progress
+No Self-tests Logged
+

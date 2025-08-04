@@ -1,0 +1,22 @@
+{
+  "submitter": "Alluxio_Storage",
+  "system_name": "AWS r5n.12xlarge (1 client) + i3en.12xlarge (2 storage)",
+  "number_of_nodes": 3,
+  "host_processor_model_name": "Intel Xeon Platinum 8259CL",
+  "host_processors_per_node": 1,
+  "host_processor_core_count": 48,
+  "host_memory_capacity": "384 GiB (clients), 386 GiB (storage nodes)",
+  "storage_type": "NVMe SSD (ephemeral, i3en.12xlarge), 50GB EBS (r5n.12xlarge)",
+  "accelerator_model_name": "None",
+  "accelerators_per_node": 0,
+  "cooling": "AWS datacenter standard",
+  "network_type": "Elastic Network Adapter (ENA), 50 Gbps",
+  "operating_system": "Ubuntu 22.04",
+  "other_software_stack": [
+    "Alluxio 3.6.0",
+    "Alluxio-FUSE",
+    "Docker"
+  ],
+  "notes": "1x r5n.12xlarge used as FUSE client, 2x i3en.12xlarge used as storage nodes with 30TB local NVMe. Backing store: AWS S3. Benchmark: checkpoint. No GPU used."
+}
+

@@ -1,0 +1,132 @@
+{
+  "args": {
+    "program": "training",
+    "command": "run",
+    "results_dir": "/home/sped/Downloads/mlperfv2/submission/Closed/Kingston_Digital/results/KINGSTONSEDC3000ME7T6BK/training/cosmoflow/run_1_20250625_225411",
+    "loops": 1,
+    "config_file": null,
+    "closed": true,
+    "debug": false,
+    "verbose": false,
+    "stream_log_level": "INFO",
+    "allow_invalid_params": false,
+    "what_if": false,
+    "hosts": [
+      "localhost"
+    ],
+    "model": "cosmoflow",
+    "client_host_memory_in_gb": 251,
+    "checkpoint_folder": null,
+    "exec_type": "mpi",
+    "mpi_bin": "mpirun",
+    "oversubscribe": false,
+    "allow_run_as_root": false,
+    "num_accelerators": 16,
+    "accelerator_type": "h100",
+    "num_client_hosts": 1,
+    "data_dir": "/mnt/KINGSTONSEDC3000ME7T6BK",
+    "params": [
+      "dataset.num_files_train=476419",
+      "reader.read_threads=16"
+    ],
+    "dlio_bin_path": null,
+    "num_processes": 16
+  },
+  "debug": null,
+  "run_datetime": "20250625_232300",
+  "run_number": 0,
+  "runtime": 934.3651206493378,
+  "verification": "closed",
+  "command_output_files": [
+    {
+      "command": "mpirun -n 16 -host localhost:16 /home/sped/Downloads/mlperfv2/venv/bin/dlio_benchmark workload=cosmoflow_h100 ++hydra.run.dir=/home/sped/Downloads/mlperfv2/submission/Closed/Kingston_Digital/results/KINGSTONSEDC3000ME7T6BK/training/cosmoflow/run_1_20250625_225411/training/cosmoflow/run/20250625_232300 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=476419 ++workload.reader.read_threads=16 ++workload.dataset.data_folder=/mnt/KINGSTONSEDC3000ME7T6BK/cosmoflow --config-dir=/home/sped/Downloads/mlperfv2/storage/configs/dlio",
+      "stdout": "/home/sped/Downloads/mlperfv2/submission/Closed/Kingston_Digital/results/KINGSTONSEDC3000ME7T6BK/training/cosmoflow/run_1_20250625_225411/training/cosmoflow/run/20250625_232300/training_run.stdout.log",
+      "stderr": "/home/sped/Downloads/mlperfv2/submission/Closed/Kingston_Digital/results/KINGSTONSEDC3000ME7T6BK/training/cosmoflow/run_1_20250625_225411/training/cosmoflow/run/20250625_232300/training_run.stderr.log"
+    }
+  ],
+  "run_result_output": "/home/sped/Downloads/mlperfv2/submission/Closed/Kingston_Digital/results/KINGSTONSEDC3000ME7T6BK/training/cosmoflow/run_1_20250625_225411/training/cosmoflow/run/20250625_232300",
+  "metadata_filename": "training_20250625_232300_metadata.json",
+  "metadata_file_path": "/home/sped/Downloads/mlperfv2/submission/Closed/Kingston_Digital/results/KINGSTONSEDC3000ME7T6BK/training/cosmoflow/run_1_20250625_225411/training/cosmoflow/run/20250625_232300/training_20250625_232300_metadata.json",
+  "_config_name": "cosmoflow_h100",
+  "base_command": "dlio_benchmark",
+  "base_path": "/home/sped/Downloads/mlperfv2/venv/bin",
+  "base_command_path": "/home/sped/Downloads/mlperfv2/venv/bin/dlio_benchmark",
+  "config_path": "/home/sped/Downloads/mlperfv2/storage/configs/dlio",
+  "per_host_mem_kB": null,
+  "total_mem_kB": null,
+  "cluster_information": "<mlpstorage.rules.ClusterInformation object at 0x7fd304190ac0>",
+  "config_file": "cosmoflow_h100.yaml",
+  "params_dict": {
+    "dataset.num_files_train": "476419",
+    "reader.read_threads": "16",
+    "dataset.data_folder": "/mnt/KINGSTONSEDC3000ME7T6BK/cosmoflow"
+  },
+  "yaml_params": {
+    "model": {
+      "name": "cosmoflow"
+    },
+    "framework": "tensorflow",
+    "workflow": {
+      "generate_data": false,
+      "train": true
+    },
+    "dataset": {
+      "data_folder": "data/cosmoflow",
+      "num_files_train": 524288,
+      "num_samples_per_file": 1,
+      "record_length_bytes": 2828486,
+      "record_length_bytes_stdev": 71311,
+      "format": "tfrecord"
+    },
+    "reader": {
+      "data_loader": "tensorflow",
+      "read_threads": 4,
+      "batch_size": 1,
+      "file_shuffle": "seed",
+      "sample_shuffle": "seed",
+      "shuffle_size": 2
+    },
+    "train": {
+      "epochs": 5,
+      "computation_time": 0.0035
+    },
+    "metric": {
+      "au": 0.7
+    }
+  },
+  "combined_params": {
+    "model": {
+      "name": "cosmoflow"
+    },
+    "framework": "tensorflow",
+    "workflow": {
+      "generate_data": false,
+      "train": true
+    },
+    "dataset": {
+      "data_folder": "data/cosmoflow",
+      "num_files_train": "476419",
+      "num_samples_per_file": 1,
+      "record_length_bytes": 2828486,
+      "record_length_bytes_stdev": 71311,
+      "format": "tfrecord"
+    },
+    "reader": {
+      "data_loader": "tensorflow",
+      "read_threads": "16",
+      "batch_size": 1,
+      "file_shuffle": "seed",
+      "sample_shuffle": "seed",
+      "shuffle_size": 2
+    },
+    "train": {
+      "epochs": 5,
+      "computation_time": 0.0035
+    },
+    "metric": {
+      "au": 0.7
+    }
+  },
+  "executed_command": "mpirun -n 16 -host localhost:16 /home/sped/Downloads/mlperfv2/venv/bin/dlio_benchmark workload=cosmoflow_h100 ++hydra.run.dir=/home/sped/Downloads/mlperfv2/submission/Closed/Kingston_Digital/results/KINGSTONSEDC3000ME7T6BK/training/cosmoflow/run_1_20250625_225411/training/cosmoflow/run/20250625_232300 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=476419 ++workload.reader.read_threads=16 ++workload.dataset.data_folder=/mnt/KINGSTONSEDC3000ME7T6BK/cosmoflow --config-dir=/home/sped/Downloads/mlperfv2/storage/configs/dlio",
+  "benchmark_type": "training"
+}

@@ -1,0 +1,15 @@
+workload:
+  model:
+    name: cosmoflow
+  framework: tensorflow
+  workflow:
+    generate_data: true
+    train: false
+    checkpoint: false
+  dataset:
+    data_folder: cosmoflow_data/cosmoflow
+    num_files_train: 11462540
+    num_samples_per_file: 1
+    record_length_bytes: 2828486
+    record_length_bytes_stdev: 71311
+    format: tfrecord

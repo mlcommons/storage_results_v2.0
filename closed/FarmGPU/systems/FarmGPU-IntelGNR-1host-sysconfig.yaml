@@ -1,0 +1,63 @@
+System:
+  name: FarmGPU-IntelGNR-Storage01
+  description: Intel single socket storage server with Xeon 6781P and 24 U.2 PCIe 5.0 NVMe SSDs
+  storage_location: local
+  client_software: in-box
+  storage_interface: file
+  required_rack_units: 2
+  shared_capabilities:
+    multi_host_support: False
+    simultaneous_write_support: False
+    simultaneous_read__support: False
+  max_sequential_read: 348 GB/s
+  max_sequential_write: 240 GB/s
+  max_random_read: 80M IOPS
+  max_random_write: 9M IOPS
+  use_local_drives: True  # Are drives local to the DLIO processes used in the storage solution
+  num_local_drives: 24   # Total number of local drives used by the solution
+  system_architecture: direct-attached media
+  usable_capacity: 184.32 TB
+
+PowerRequirements:
+   storage_data_node: # single-host submission
+     psu1_nameplate_power: 1600 W
+     psu2_nameplate_power: 1600 W
+     design_power: 1200 #different than PDUs becuase there are two configurations for this server
+     num_active_psus: 2
+     num_passive_psus: 0
+Nodes:      
+  storage_data_node: #single-host submission
+    quantity: 1
+    hardware:
+      model: SYS-212H-TN
+      rack_units: 2
+      power_supplies: 2
+      psu_configuration: active/active
+      psu_rating: 1600
+      memory_capacity: 256GB
+      memory_configuration: 8x 32GB DDR5 at 6400 MT/s
+      cpu_qty: 1
+      cpu_model: Intel(R) Xeon(R) 6781P
+      cpu_cores: 80
+      storage_capacity: 184.32 TB
+      storage_configuration: 24x 7.68TB U.2 PCIe 5.0 NVMe Solidigm D7-PS1010
+    networking:
+      management:
+        model: Intel X710
+        speed: 10Gbps
+        qty: 2
+      high_speed:
+        model: Mellanox ConnectX-7
+        speed: 400Gbps
+        qty: 1
+    operating_system:
+      name: Ubuntu
+      version: 24.04.2 LTS
+      release_date: 2024-04-25
+      kernel_version: 6.15.4-061504-generic
+      cpu_architecture: x86_64
+    tuning:
+      mpi_configuration:
+        environment_variables: []
+        version: Open MPI 4.1.4
+      sysctl_parameters: []

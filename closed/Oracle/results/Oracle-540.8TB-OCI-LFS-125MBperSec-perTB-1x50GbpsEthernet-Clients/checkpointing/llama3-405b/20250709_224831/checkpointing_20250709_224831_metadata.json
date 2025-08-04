@@ -1,0 +1,162 @@
+{
+  "args": {
+    "program": "checkpointing",
+    "command": "run",
+    "results_dir": "/mnt/lustrefs/storage/llama/llama3-405b-32node/",
+    "loops": 1,
+    "config_file": null,
+    "closed": true,
+    "debug": false,
+    "verbose": false,
+    "stream_log_level": "INFO",
+    "allow_invalid_params": false,
+    "what_if": false,
+    "hosts": [
+      "172.16.4.103",
+      "172.16.4.145",
+      "172.16.4.158",
+      "172.16.4.173",
+      "172.16.4.204",
+      "172.16.4.229",
+      "172.16.5.13",
+      "172.16.5.94",
+      "172.16.5.109",
+      "172.16.5.126",
+      "172.16.5.178",
+      "172.16.5.205",
+      "172.16.5.216",
+      "172.16.5.232",
+      "172.16.6.38",
+      "172.16.6.78",
+      "172.16.6.145",
+      "172.16.6.197",
+      "172.16.4.71",
+      "172.16.6.221",
+      "172.16.6.236",
+      "172.16.7.4",
+      "172.16.7.6",
+      "172.16.7.62",
+      "172.16.7.63",
+      "172.16.7.70",
+      "172.16.7.90",
+      "172.16.7.96",
+      "172.16.7.159",
+      "172.16.7.167",
+      "172.16.7.169",
+      "172.16.7.230"
+    ],
+    "client_host_memory_in_gb": 512,
+    "model": "llama3-405b",
+    "num_checkpoints_read": 10,
+    "num_checkpoints_write": 0,
+    "num_processes": 512,
+    "params": null,
+    "checkpoint_folder": "/mnt/lustrefs/llama3-405b-32node",
+    "dlio_bin_path": null,
+    "exec_type": "mpi",
+    "mpi_bin": "mpirun",
+    "oversubscribe": false,
+    "allow_run_as_root": true,
+    "mpi_params": null,
+    "num_client_hosts": 32
+  },
+  "debug": null,
+  "run_datetime": "20250709_224831",
+  "run_number": 0,
+  "runtime": 948.9074809551239,
+  "verification": "closed",
+  "command_output_files": [
+    {
+      "command": "mpirun -n 512 -host 172.16.4.103:16,172.16.4.145:16,172.16.4.158:16,172.16.4.173:16,172.16.4.204:16,172.16.4.229:16,172.16.5.13:16,172.16.5.94:16,172.16.5.109:16,172.16.5.126:16,172.16.5.178:16,172.16.5.205:16,172.16.5.216:16,172.16.5.232:16,172.16.6.38:16,172.16.6.78:16,172.16.6.145:16,172.16.6.197:16,172.16.4.71:16,172.16.6.221:16,172.16.6.236:16,172.16.7.4:16,172.16.7.6:16,172.16.7.62:16,172.16.7.63:16,172.16.7.70:16,172.16.7.90:16,172.16.7.96:16,172.16.7.159:16,172.16.7.167:16,172.16.7.169:16,172.16.7.230:16 --allow-run-as-root /usr/local/bin/dlio_benchmark workload=llama3_405b ++hydra.run.dir=/mnt/lustrefs/storage/llama/llama3-405b-32node/checkpointing/llama3-405b/20250709_224831 ++hydra.output_subdir=dlio_config ++workload.checkpoint.num_checkpoints_read=10 ++workload.checkpoint.num_checkpoints_write=0 ++workload.checkpoint.checkpoint_folder=/mnt/lustrefs/llama3-405b-32node/llama3-405b --config-dir=/mnt/lustrefs/main/storage/configs/dlio",
+      "stdout": "/mnt/lustrefs/storage/llama/llama3-405b-32node/checkpointing/llama3-405b/20250709_224831/checkpointing_run.stdout.log",
+      "stderr": "/mnt/lustrefs/storage/llama/llama3-405b-32node/checkpointing/llama3-405b/20250709_224831/checkpointing_run.stderr.log"
+    }
+  ],
+  "run_result_output": "/mnt/lustrefs/storage/llama/llama3-405b-32node/checkpointing/llama3-405b/20250709_224831",
+  "metadata_filename": "checkpointing_20250709_224831_metadata.json",
+  "metadata_file_path": "/mnt/lustrefs/storage/llama/llama3-405b-32node/checkpointing/llama3-405b/20250709_224831/checkpointing_20250709_224831_metadata.json",
+  "_config_name": "llama3_405b",
+  "base_command": "dlio_benchmark",
+  "base_path": "/usr/local/bin",
+  "base_command_path": "/usr/local/bin/dlio_benchmark",
+  "config_path": "/mnt/lustrefs/main/storage/configs/dlio",
+  "per_host_mem_kB": null,
+  "total_mem_kB": null,
+  "cluster_information": "<mlpstorage.rules.ClusterInformation object at 0x7f1f3ae684c0>",
+  "config_file": "llama3_405b.yaml",
+  "params_dict": {
+    "checkpoint.num_checkpoints_read": 10,
+    "checkpoint.num_checkpoints_write": 0,
+    "checkpoint.checkpoint_folder": "/mnt/lustrefs/llama3-405b-32node/llama3-405b"
+  },
+  "yaml_params": {
+    "model": {
+      "name": "llama_405b",
+      "type": "transformer",
+      "num_layers": 126,
+      "model_datatype": "fp16",
+      "optimizer_datatype": "fp32",
+      "parallelism": {
+        "tensor": 8,
+        "pipeline": 32,
+        "zero_stage": 1
+      },
+      "transformer": {
+        "vocab_size": 128256,
+        "hidden_size": 16384,
+        "ffn_hidden_size": 53248,
+        "num_attention_heads": 128,
+        "num_kv_heads": 8
+      }
+    },
+    "framework": "pytorch",
+    "workflow": {
+      "generate_data": false,
+      "train": false,
+      "checkpoint": true
+    },
+    "checkpoint": {
+      "checkpoint_folder": "checkpoints/llama_405b",
+      "time_between_checkpoints": 5,
+      "num_checkpoints_write": 10,
+      "num_checkpoints_read": 10,
+      "fsync": true
+    }
+  },
+  "combined_params": {
+    "model": {
+      "name": "llama_405b",
+      "type": "transformer",
+      "num_layers": 126,
+      "model_datatype": "fp16",
+      "optimizer_datatype": "fp32",
+      "parallelism": {
+        "tensor": 8,
+        "pipeline": 32,
+        "zero_stage": 1
+      },
+      "transformer": {
+        "vocab_size": 128256,
+        "hidden_size": 16384,
+        "ffn_hidden_size": 53248,
+        "num_attention_heads": 128,
+        "num_kv_heads": 8
+      }
+    },
+    "framework": "pytorch",
+    "workflow": {
+      "generate_data": false,
+      "train": false,
+      "checkpoint": true
+    },
+    "checkpoint": {
+      "checkpoint_folder": "checkpoints/llama_405b",
+      "time_between_checkpoints": 5,
+      "num_checkpoints_write": 10,
+      "num_checkpoints_read": 10,
+      "fsync": true
+    }
+  },
+  "executed_command": "mpirun -n 512 -host 172.16.4.103:16,172.16.4.145:16,172.16.4.158:16,172.16.4.173:16,172.16.4.204:16,172.16.4.229:16,172.16.5.13:16,172.16.5.94:16,172.16.5.109:16,172.16.5.126:16,172.16.5.178:16,172.16.5.205:16,172.16.5.216:16,172.16.5.232:16,172.16.6.38:16,172.16.6.78:16,172.16.6.145:16,172.16.6.197:16,172.16.4.71:16,172.16.6.221:16,172.16.6.236:16,172.16.7.4:16,172.16.7.6:16,172.16.7.62:16,172.16.7.63:16,172.16.7.70:16,172.16.7.90:16,172.16.7.96:16,172.16.7.159:16,172.16.7.167:16,172.16.7.169:16,172.16.7.230:16 --allow-run-as-root /usr/local/bin/dlio_benchmark workload=llama3_405b ++hydra.run.dir=/mnt/lustrefs/storage/llama/llama3-405b-32node/checkpointing/llama3-405b/20250709_224831 ++hydra.output_subdir=dlio_config ++workload.checkpoint.num_checkpoints_read=10 ++workload.checkpoint.num_checkpoints_write=0 ++workload.checkpoint.checkpoint_folder=/mnt/lustrefs/llama3-405b-32node/llama3-405b --config-dir=/mnt/lustrefs/main/storage/configs/dlio",
+  "benchmark_type": "checkpointing"
+}

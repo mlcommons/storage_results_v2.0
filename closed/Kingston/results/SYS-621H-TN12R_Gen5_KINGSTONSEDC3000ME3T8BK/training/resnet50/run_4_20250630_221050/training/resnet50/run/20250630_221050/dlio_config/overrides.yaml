@@ -1,0 +1,4 @@
+- workload=resnet50_a100
+- ++workload.dataset.num_files_train=14068
+- ++workload.reader.read_threads=4
+- ++workload.dataset.data_folder=/mnt/KINGSTONSEDC3000ME3T8BK/resnet50

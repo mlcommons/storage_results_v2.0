@@ -1,0 +1,37 @@
+System:
+  name: JuiceFS Enterprise
+  description: Cloud-Native-Distributed-filesystem
+  storage_location: remote                    #[ remote | local | hyper-converged ]
+  client_software:  proprietary                    # [ in-box | proprietary ]
+  storage_interface: file                    #[ block | file | object ]
+  required_rack_units: 3
+  shared_capabilities:
+    multi_host_support: True            # False is used for local storage
+    simultaneous_write_support: True   # Are simultaneous writes by multiple hosts supported in the submitted configuration
+    simultaneous_read__support: True    # Are simultaneous reads by multiple hosts supported in the submitted configuration
+  max_sequential_read: Inf                 # Optional - GiB/s
+  max_sequential_write: Na            # Optional - GiB/s
+  max_random_read:  Inf                   # Optional - GiB/s
+  max_random_write: Na                   # Optional - GiB/s
+  use_local_storage: False
+  system_architecture: shared file
+  useable_capacity: Inf # data stores in GCS in blocks.
+
+PowerRequirements: Na
+
+# All nodes used need to be listed. Clients, Data storage, metadata, front-end, back-end, etc
+Nodes:
+  # Useful name for the client describing it's role in the system under test
+  dlio_client:  # This can be DLIO Client, storage node, storage controller, AwesomeMarketingName_Type1, etc
+    quantity: 10  # How many of this node
+    instance: GCP - c3-standard-176, (176c 706g)
+    networking: 100gbps
+    operating_system:
+      name: Ubuntu
+      version: 24.04 LTS
+      kernel_version: 6.8.0-1032-gcp
+      cpu_architecture: x86_64
+  remote_cache_node: # This can be DLIO Client, storage node, storage controller, AwesomeMarketingName_Type1, etc
+    quantity: 10  # How many of this node
+    instance: GCP - c3-standard-176
+    networking: 100gbps

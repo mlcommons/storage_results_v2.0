@@ -1,0 +1,58 @@
+System:
+  name: Simplyblock (3 Hosts) + 2 Clients
+  description: Simplyblock Storage Cluster with 3 Storage Hosts (6 Storage Nodes) + 2 Benchmark Clients
+  type: cloud-deployment
+  storage_location: remote
+  client_software: in-box
+  storage_interface: block
+  shared_capabilities:
+    multi_host_support: True
+    simultaneous_write_support: False
+    simultaneous_read__support: True
+  use_local_storage: False
+  system_architecture: fabric-attached block
+  useable_capacity: 2.445
+
+Nodes:
+  dlio_client:
+    quantity: 2
+    hardware:
+      model: c3-standard-88 (GCP Instance Type)
+      memory_capacity: 352 GB
+      cpu_qty: 1
+      cpu_model: Intel Sapphire Rapids
+      cpu_cores: 88
+    networking:
+      management:
+        model: GCP Tier 1 Networking
+        speed: 100Gbps
+        qty: 1
+    operating_system:
+      name: Debian
+      version: 12.11
+      release_date: 2025-05-17
+      kernel_version: 6.1.0-37-cloud-amd64
+      cpu_architecture: x86_64
+    tuning:
+      mpi_configuration:
+        environment_variables: <list>
+        version: Open MPI 4.1.4-3+b1
+  storage_data_node:
+    quantity: 3
+    hardware:
+      model: c4a-standard-64-lssd (GCP Instance Type)
+      memory_capacity: 256GB
+      cpu_qty: 1
+      cpu_model: Google Axion
+      cpu_cores: 64
+    networking:
+      management:
+        model: GCP Tier 1 Networking
+        speed: 175Gbps
+        qty: 1
+    operating_system:
+      name: Rocky Linux
+      version: 9.6
+      release_date: 2025-06-04
+      kernel_version: 5.14.0-570.19.1.el9_6.aarch64
+      cpu_architecture: aarch64

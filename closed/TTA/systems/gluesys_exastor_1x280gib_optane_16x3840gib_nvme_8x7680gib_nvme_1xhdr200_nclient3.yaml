@@ -1,0 +1,119 @@
+System:
+  name: Gluesys ExaStor
+  description: Gluesys ExaStor is a high-performance parallel file system appliance based on Lustre, optimized for HPC and AI workloads. It delivers scalable throughput, low-latency access, and reliable data management for large-scale environments.
+  storage_location: remote
+  client_software: in-box
+  storage_interface: block
+  required_rack_units: 4U
+  shared_capabilities:
+    multi_host_support: True            # False is used for local storage
+    simultaneous_write_support: False   # Are simultaneous writes by multiple hosts supported in the submitted configuration
+    simultaneous_read__support: True    # Are simultaneous reads by multiple hosts supported in the submitted configuration
+  max_sequential_read: # Optional - GiB/s
+  max_sequential_write: # Optional - GiB/s
+  max_random_read: # Optional - GiB/s
+  max_random_write: # Optional - GiB/s
+
+  # The following will be used to generate the "integrated client storage" and "# Clients with local storage" in the
+  # results table.
+  use_local_storage: False
+  integrated_client_storage:  # Describe the storage present PER NODE in client nodes for the solution
+  num_clients_with_integrated_storage:  # Number of clients with integrated storage
+
+  # The following will map to the "Storage System Type" column in the results table. If "use_local_drives" is True,
+  #   then "Local File + " will be prepended to the storage type
+  system_architecture: shared file
+  useable_capacity: 74 # Capacity in TiB that is usable for the storage system. If no unit is provided, assume TiB (not TB)
+
+PowerRequirements:
+  dlio_client:
+    quantity: 3 # number of dlio_client nodes
+    psu1_nameplate_power: 800 # power in watts
+    psu2_nameplate_power: 800 # power in watts
+    psu3_nameplate_power: 0 # power in watts
+    design_power: 800
+    num_active_psus: 1
+    num_passive_psus: 1
+
+  # All storage nodes need to be listed (data, metadata, etc) as well as any required backed switching
+  storage_data_node:
+    quantity: 2 # number of storage data nodes
+    psu1_nameplate_power: 1200# power in watts
+    psu2_nameplate_power: 1200# power in watts
+    psu3_nameplate_power: # power in watts
+    design_power: 1200
+    num_active_psus: 1
+    num_passive_psus: 1
+  backend_switch:
+    quantity: 1
+    psu1_nameplate_power: 1100   # network PSU
+    psu2_nameplate_power: 1100   # network PSU
+    design_power: 1100
+    num_active_psus: 1
+    num_passive_psus: 1
+
+
+# All nodes used need to be listed. Clients, Data storage, metadata, front-end, back-end, etc
+Nodes:
+  # Useful name for the client describing it's role in the system under test
+  dlio_client:  # This can be DLIO Client, storage node, storage controller, AwesomeMarketingName_Type1, etc
+    quantity: 3  # How many of this node
+    hardware:
+      model: KR580S2
+      rack_units: 2
+      power_supplies: 2
+      psu_configuration: active/passive
+      psu_rating: 800
+      memory_capacity: 1024GB
+      memory_configuration: 16x64GB
+      cpu_qty: 2
+      cpu_model: Intel(R) Xeon(R) Platinum 8380
+      cpu_cores: 40
+    networking:
+      management:
+        model: Mellanox MCX653105A-HDAT
+        speed: 200Gbps
+        qty: 1
+    operating_system:
+      name: Rocky Linux
+      version: 8.10(Green Obsidian)
+      release_date: 2024-05-30
+      kernel_version: 4.18.0-553.el8_10.x86_64
+      cpu_architecture: x86_64
+    tuning:
+      # All non-default tunings for OS need to be listed
+      mpi_configuration:
+        environment_variables: None
+        version: MPICH 4.1.1
+      sysctl_parameters: None
+  storage_data_node: # This can be DLIO Client, storage node, storage controller, AwesomeMarketingName_Type1, etc
+    quantity: 2  # How many of this node
+    hardware:
+      model: ExaStor
+      rack_units: 2
+      power_supplies: 2
+      psu_configuration: active/passive
+      psu_rating: 1200
+      memory_capacity: 128GB
+      memory_configuration: 8x16GB
+      cpu_qty: 2
+      cpu_model: Intel(R) Xeon(R) Gold 6330
+      cpu_cores: 28
+    networking:
+      management:
+        model: Mellanox MCX653105A-HDAT
+        speed: 200Gbps
+        qty: 1
+    operating_system:
+      name: Rocky Linux
+      version: 8.10(Green Obsidian)
+      release_date: 2024-05-30
+      kernel_version: 4.18.0-553.5.1.el8_10.x86_64
+      cpu_architecture: x86_64
+    tuning:
+      mpi_configuration:
+        environment_variables: None
+        version: Open MPI 4.1.7
+      sysctl_parameters: None
+
+

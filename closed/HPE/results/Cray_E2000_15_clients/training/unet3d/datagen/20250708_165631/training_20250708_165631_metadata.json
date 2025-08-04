@@ -1,0 +1,105 @@
+{
+  "args": {
+    "program": "training",
+    "command": "datagen",
+    "results_dir": "unet3d_results",
+    "loops": 1,
+    "config_file": null,
+    "closed": false,
+    "debug": false,
+    "verbose": false,
+    "stream_log_level": "INFO",
+    "allow_invalid_params": false,
+    "what_if": false,
+    "hosts": [
+      "c-ftc0001,c-ftc0002,c-ftc0003,c-ftc0004,c-ftc0005,c-ftc0006,c-ftc0007,c-ftc0008,c-ftc0009,c-ftc0010,c-ftc0011,c-ftc0012,c-ftc0013,c-ftc0014,c-ftc0015,c-ftc0016",
+      ",c-ftc0017,c-ftc0018,c-ftc0019,c-ftc0020,c-ftc0021,c-ftc0022,c-ftc0023,c-ftc0024,c-ftc0025,c-ftc0026,c-ftc0027,c-ftc0028,c-ftc0029,c-ftc0030,c-ftc0031,c-ftc0032,c-ftc0033"
+    ],
+    "model": "unet3d",
+    "exec_type": "mpi",
+    "mpi_bin": "mpirun",
+    "oversubscribe": false,
+    "allow_run_as_root": false,
+    "mpi_params": null,
+    "num_processes": 99,
+    "data_dir": "unet3d_data",
+    "params": [
+      "dataset.num_files_train=210000"
+    ],
+    "dlio_bin_path": null,
+    "num_client_hosts": 2
+  },
+  "debug": null,
+  "run_datetime": "20250708_165631",
+  "run_number": 0,
+  "runtime": 1663.3792459964752,
+  "verification": null,
+  "command_output_files": [
+    {
+      "command": "mpirun -n 99 -host c-ftc0001,c-ftc0002,c-ftc0003,c-ftc0004,c-ftc0005,c-ftc0006,c-ftc0007,c-ftc0008,c-ftc0009,c-ftc0010,c-ftc0011,c-ftc0012,c-ftc0013,c-ftc0014,c-ftc0015,c-ftc0016:50,,c-ftc0017,c-ftc0018,c-ftc0019,c-ftc0020,c-ftc0021,c-ftc0022,c-ftc0023,c-ftc0024,c-ftc0025,c-ftc0026,c-ftc0027,c-ftc0028,c-ftc0029,c-ftc0030,c-ftc0031,c-ftc0032,c-ftc0033:49 /mnt/e2kp5/ssamar/flash/mlperf/bin/dlio_benchmark workload=unet3d_datagen ++hydra.run.dir=unet3d_results/training/unet3d/datagen/20250708_165631 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=210000 ++workload.dataset.data_folder=unet3d_data/unet3d --config-dir=/mnt/e2kp5/ssamar/flash/cosmoflow_submission/configs/dlio",
+      "stdout": "unet3d_results/training/unet3d/datagen/20250708_165631/training_datagen.stdout.log",
+      "stderr": "unet3d_results/training/unet3d/datagen/20250708_165631/training_datagen.stderr.log"
+    }
+  ],
+  "run_result_output": "unet3d_results/training/unet3d/datagen/20250708_165631",
+  "metadata_filename": "training_20250708_165631_metadata.json",
+  "metadata_file_path": "unet3d_results/training/unet3d/datagen/20250708_165631/training_20250708_165631_metadata.json",
+  "_config_name": "unet3d_datagen",
+  "base_command": "dlio_benchmark",
+  "base_path": "/mnt/e2kp5/ssamar/flash/mlperf/bin",
+  "base_command_path": "/mnt/e2kp5/ssamar/flash/mlperf/bin/dlio_benchmark",
+  "config_path": "/mnt/e2kp5/ssamar/flash/cosmoflow_submission/configs/dlio",
+  "per_host_mem_kB": null,
+  "total_mem_kB": null,
+  "config_file": "unet3d_datagen.yaml",
+  "params_dict": {
+    "dataset.num_files_train": "210000",
+    "dataset.data_folder": "unet3d_data/unet3d"
+  },
+  "yaml_params": {
+    "model": {
+      "name": "unet3d",
+      "type": "cnn",
+      "model_size": 499153191
+    },
+    "framework": "pytorch",
+    "workflow": {
+      "generate_data": true,
+      "train": false,
+      "checkpoint": false
+    },
+    "dataset": {
+      "data_folder": "data/unet3d/",
+      "format": "npz",
+      "num_files_train": 168,
+      "num_samples_per_file": 1,
+      "record_length_bytes": 146600628,
+      "record_length_bytes_stdev": 68341808,
+      "record_length_bytes_resize": 2097152
+    }
+  },
+  "combined_params": {
+    "model": {
+      "name": "unet3d",
+      "type": "cnn",
+      "model_size": 499153191
+    },
+    "framework": "pytorch",
+    "workflow": {
+      "generate_data": true,
+      "train": false,
+      "checkpoint": false
+    },
+    "dataset": {
+      "data_folder": "data/unet3d/",
+      "format": "npz",
+      "num_files_train": "210000",
+      "num_samples_per_file": 1,
+      "record_length_bytes": 146600628,
+      "record_length_bytes_stdev": 68341808,
+      "record_length_bytes_resize": 2097152
+    }
+  },
+  "executed_command": "mpirun -n 99 -host c-ftc0001,c-ftc0002,c-ftc0003,c-ftc0004,c-ftc0005,c-ftc0006,c-ftc0007,c-ftc0008,c-ftc0009,c-ftc0010,c-ftc0011,c-ftc0012,c-ftc0013,c-ftc0014,c-ftc0015,c-ftc0016:50,,c-ftc0017,c-ftc0018,c-ftc0019,c-ftc0020,c-ftc0021,c-ftc0022,c-ftc0023,c-ftc0024,c-ftc0025,c-ftc0026,c-ftc0027,c-ftc0028,c-ftc0029,c-ftc0030,c-ftc0031,c-ftc0032,c-ftc0033:49 /mnt/e2kp5/ssamar/flash/mlperf/bin/dlio_benchmark workload=unet3d_datagen ++hydra.run.dir=unet3d_results/training/unet3d/datagen/20250708_165631 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=210000 ++workload.dataset.data_folder=unet3d_data/unet3d --config-dir=/mnt/e2kp5/ssamar/flash/cosmoflow_submission/configs/dlio",
+  "benchmark_type": "training"
+}

@@ -1,0 +1,131 @@
+{
+  "args": {
+    "program": "training",
+    "command": "run",
+    "results_dir": "/mnt/mlps-results/",
+    "loops": 5,
+    "config_file": null,
+    "closed": true,
+    "debug": false,
+    "verbose": false,
+    "stream_log_level": "INFO",
+    "allow_invalid_params": false,
+    "what_if": false,
+    "hosts": [
+      "127.0.0.1"
+    ],
+    "model": "resnet50",
+    "client_host_memory_in_gb": 1024,
+    "exec_type": "mpi",
+    "mpi_bin": "mpirun",
+    "oversubscribe": false,
+    "allow_run_as_root": true,
+    "mpi_params": null,
+    "num_accelerators": 52,
+    "accelerator_type": "h100",
+    "num_client_hosts": 1,
+    "data_dir": "/mnt/mlperf-storage/data-20/",
+    "params": [
+      "dataset.num_files_train=75000",
+      "dataset.num_subfolders_train=20"
+    ],
+    "dlio_bin_path": null,
+    "num_processes": 52
+  },
+  "debug": null,
+  "run_datetime": "20250707_094640",
+  "run_number": 0,
+  "runtime": 5668.535358905792,
+  "verification": "closed",
+  "command_output_files": [
+    {
+      "command": "mpirun -n 52 -host 127.0.0.1:52 --allow-run-as-root /mnt/mdl/venv/bin/dlio_benchmark workload=resnet50_h100 ++hydra.run.dir=/mnt/mlps-results/training/resnet50/run/20250707_094640 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=75000 ++workload.dataset.num_subfolders_train=20 ++workload.dataset.data_folder=/mnt/mlperf-storage/data-20/resnet50 --config-dir=/mnt/mdl/venv/lib/python3.10/site-packages/configs/dlio",
+      "stdout": "/mnt/mlps-results/training/resnet50/run/20250707_094640/training_run.stdout.log",
+      "stderr": "/mnt/mlps-results/training/resnet50/run/20250707_094640/training_run.stderr.log"
+    }
+  ],
+  "run_result_output": "/mnt/mlps-results/training/resnet50/run/20250707_094640",
+  "metadata_filename": "training_20250707_094640_metadata.json",
+  "metadata_file_path": "/mnt/mlps-results/training/resnet50/run/20250707_094640/training_20250707_094640_metadata.json",
+  "_config_name": "resnet50_h100",
+  "base_command": "dlio_benchmark",
+  "base_path": "/mnt/mdl/venv/bin",
+  "base_command_path": "/mnt/mdl/venv/bin/dlio_benchmark",
+  "config_path": "/mnt/mdl/venv/lib/python3.10/site-packages/configs/dlio",
+  "per_host_mem_kB": null,
+  "total_mem_kB": null,
+  "cluster_information": "<mlpstorage.rules.ClusterInformation object at 0x7fd39f51dde0>",
+  "config_file": "resnet50_h100.yaml",
+  "params_dict": {
+    "dataset.num_files_train": "75000",
+    "dataset.num_subfolders_train": "20",
+    "dataset.data_folder": "/mnt/mlperf-storage/data-20/resnet50"
+  },
+  "yaml_params": {
+    "model": {
+      "name": "resnet50",
+      "type": "cnn"
+    },
+    "framework": "tensorflow",
+    "workflow": {
+      "generate_data": false,
+      "train": true
+    },
+    "dataset": {
+      "num_files_train": 1024,
+      "num_samples_per_file": 1251,
+      "record_length_bytes": 114660.07,
+      "record_length_bytes_resize": 150528,
+      "data_folder": "data/resnet50",
+      "format": "tfrecord"
+    },
+    "train": {
+      "computation_time": 0.224,
+      "epochs": 5
+    },
+    "reader": {
+      "data_loader": "tensorflow",
+      "read_threads": 8,
+      "computation_threads": 8,
+      "batch_size": 400
+    },
+    "metric": {
+      "au": 0.9
+    }
+  },
+  "combined_params": {
+    "model": {
+      "name": "resnet50",
+      "type": "cnn"
+    },
+    "framework": "tensorflow",
+    "workflow": {
+      "generate_data": false,
+      "train": true
+    },
+    "dataset": {
+      "num_files_train": "75000",
+      "num_samples_per_file": 1251,
+      "record_length_bytes": 114660.07,
+      "record_length_bytes_resize": 150528,
+      "data_folder": "data/resnet50",
+      "format": "tfrecord",
+      "num_subfolders_train": "20"
+    },
+    "train": {
+      "computation_time": 0.224,
+      "epochs": 5
+    },
+    "reader": {
+      "data_loader": "tensorflow",
+      "read_threads": 8,
+      "computation_threads": 8,
+      "batch_size": 400
+    },
+    "metric": {
+      "au": 0.9
+    }
+  },
+  "executed_command": "mpirun -n 52 -host 127.0.0.1:52 --allow-run-as-root /mnt/mdl/venv/bin/dlio_benchmark workload=resnet50_h100 ++hydra.run.dir=/mnt/mlps-results/training/resnet50/run/20250707_094640 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=75000 ++workload.dataset.num_subfolders_train=20 ++workload.dataset.data_folder=/mnt/mlperf-storage/data-20/resnet50 --config-dir=/mnt/mdl/venv/lib/python3.10/site-packages/configs/dlio",
+  "benchmark_type": "training"
+}

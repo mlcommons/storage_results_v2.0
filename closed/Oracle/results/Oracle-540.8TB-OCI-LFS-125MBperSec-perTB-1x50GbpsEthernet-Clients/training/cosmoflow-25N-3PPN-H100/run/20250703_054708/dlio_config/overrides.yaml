@@ -1,0 +1,8 @@
+- workload=cosmoflow_h100
+- ++workload.reader.transfer_size=1048576
+- ++workload.dataset.num_files_train=4555500
+- ++workload.dataset.num_subfolders_train=455
+- ++workload.reader.read_threads=36
+- ++workload.reader.prefetch_size=36
+- ++workload.reader.computation_threads=4
+- ++workload.dataset.data_folder=/mnt/lustrefs/cosmoflow25N/cosmoflow

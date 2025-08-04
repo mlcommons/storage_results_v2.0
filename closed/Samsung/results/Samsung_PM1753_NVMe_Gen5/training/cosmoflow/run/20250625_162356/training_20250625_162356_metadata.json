@@ -1,0 +1,130 @@
+{
+  "args": {
+    "program": "training",
+    "command": "run",
+    "results_dir": "/root/origin/mlpstorage_results",
+    "loops": 1,
+    "config_file": null,
+    "closed": true,
+    "debug": false,
+    "verbose": false,
+    "stream_log_level": "INFO",
+    "allow_invalid_params": false,
+    "what_if": false,
+    "hosts": [
+      "localhost"
+    ],
+    "model": "cosmoflow",
+    "client_host_memory_in_gb": 128,
+    "exec_type": "mpi",
+    "mpi_bin": "mpirun",
+    "oversubscribe": true,
+    "allow_run_as_root": true,
+    "mpi_params": null,
+    "num_accelerators": 16,
+    "accelerator_type": "h100",
+    "num_client_hosts": 1,
+    "data_dir": "/mnt/default/1",
+    "params": [
+      "dataset.num_files_train=485909"
+    ],
+    "dlio_bin_path": null,
+    "num_processes": 16
+  },
+  "debug": null,
+  "run_datetime": "20250625_162356",
+  "run_number": 0,
+  "runtime": 597.0142560005188,
+  "verification": "closed",
+  "command_output_files": [
+    {
+      "command": "mpirun -n 16 -host localhost:16 --oversubscribe --allow-run-as-root /usr/local/bin/dlio_benchmark workload=cosmoflow_h100 ++hydra.run.dir=/root/origin/mlpstorage_results/training/cosmoflow/run/20250625_162356 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=485909 ++workload.dataset.data_folder=/mnt/default/1/cosmoflow --config-dir=/usr/local/lib/python3.11/site-packages/configs/dlio",
+      "stdout": "/root/origin/mlpstorage_results/training/cosmoflow/run/20250625_162356/training_run.stdout.log",
+      "stderr": "/root/origin/mlpstorage_results/training/cosmoflow/run/20250625_162356/training_run.stderr.log"
+    }
+  ],
+  "run_result_output": "/root/origin/mlpstorage_results/training/cosmoflow/run/20250625_162356",
+  "metadata_filename": "training_20250625_162356_metadata.json",
+  "metadata_file_path": "/root/origin/mlpstorage_results/training/cosmoflow/run/20250625_162356/training_20250625_162356_metadata.json",
+  "_config_name": "cosmoflow_h100",
+  "base_command": "dlio_benchmark",
+  "base_path": "/usr/local/bin",
+  "base_command_path": "/usr/local/bin/dlio_benchmark",
+  "config_path": "/usr/local/lib/python3.11/site-packages/configs/dlio",
+  "per_host_mem_kB": null,
+  "total_mem_kB": null,
+  "cluster_information": "<mlpstorage.rules.ClusterInformation object at 0x7f38b30c6490>",
+  "config_file": "cosmoflow_h100.yaml",
+  "params_dict": {
+    "dataset.num_files_train": "485909",
+    "dataset.data_folder": "/mnt/default/1/cosmoflow"
+  },
+  "yaml_params": {
+    "model": {
+      "name": "cosmoflow"
+    },
+    "framework": "tensorflow",
+    "workflow": {
+      "generate_data": false,
+      "train": true
+    },
+    "dataset": {
+      "data_folder": "data/cosmoflow",
+      "num_files_train": 524288,
+      "num_samples_per_file": 1,
+      "record_length_bytes": 2828486,
+      "record_length_bytes_stdev": 71311,
+      "format": "tfrecord"
+    },
+    "reader": {
+      "data_loader": "tensorflow",
+      "read_threads": 4,
+      "batch_size": 1,
+      "file_shuffle": "seed",
+      "sample_shuffle": "seed",
+      "shuffle_size": 2
+    },
+    "train": {
+      "epochs": 5,
+      "computation_time": 0.0035
+    },
+    "metric": {
+      "au": 0.7
+    }
+  },
+  "combined_params": {
+    "model": {
+      "name": "cosmoflow"
+    },
+    "framework": "tensorflow",
+    "workflow": {
+      "generate_data": false,
+      "train": true
+    },
+    "dataset": {
+      "data_folder": "data/cosmoflow",
+      "num_files_train": "485909",
+      "num_samples_per_file": 1,
+      "record_length_bytes": 2828486,
+      "record_length_bytes_stdev": 71311,
+      "format": "tfrecord"
+    },
+    "reader": {
+      "data_loader": "tensorflow",
+      "read_threads": 4,
+      "batch_size": 1,
+      "file_shuffle": "seed",
+      "sample_shuffle": "seed",
+      "shuffle_size": 2
+    },
+    "train": {
+      "epochs": 5,
+      "computation_time": 0.0035
+    },
+    "metric": {
+      "au": 0.7
+    }
+  },
+  "executed_command": "mpirun -n 16 -host localhost:16 --oversubscribe --allow-run-as-root /usr/local/bin/dlio_benchmark workload=cosmoflow_h100 ++hydra.run.dir=/root/origin/mlpstorage_results/training/cosmoflow/run/20250625_162356 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=485909 ++workload.dataset.data_folder=/mnt/default/1/cosmoflow --config-dir=/usr/local/lib/python3.11/site-packages/configs/dlio",
+  "benchmark_type": "training"
+}

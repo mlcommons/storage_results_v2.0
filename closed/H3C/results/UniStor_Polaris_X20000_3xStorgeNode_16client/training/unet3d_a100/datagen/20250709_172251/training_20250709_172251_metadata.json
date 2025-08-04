@@ -1,0 +1,121 @@
+{
+  "args": {
+    "program": "training",
+    "command": "datagen",
+    "results_dir": "/home/shuling/mlperf/",
+    "loops": 1,
+    "config_file": null,
+    "closed": false,
+    "debug": false,
+    "verbose": false,
+    "stream_log_level": "INFO",
+    "allow_invalid_params": false,
+    "what_if": false,
+    "hosts": [
+      "client220",
+      "client221",
+      "client222",
+      "client223",
+      "client224",
+      "client225",
+      "client226",
+      "client227",
+      "client228",
+      "client229",
+      "client230",
+      "client231",
+      "client232",
+      "client233",
+      "client234",
+      "client235"
+    ],
+    "model": "unet3d",
+    "exec_type": "mpi",
+    "mpi_bin": "mpirun",
+    "oversubscribe": false,
+    "allow_run_as_root": false,
+    "num_processes": 320,
+    "data_dir": "/mnt/mlpstore/d1",
+    "params": [
+      "dataset.num_subfolders_train=320",
+      "dataset.num_files_train=1120000"
+    ],
+    "dlio_bin_path": null,
+    "num_client_hosts": 16
+  },
+  "debug": null,
+  "run_datetime": "20250709_172251",
+  "run_number": 0,
+  "runtime": 2061.3492300510406,
+  "verification": null,
+  "command_output_files": [
+    {
+      "command": "mpirun -n 320 -host client220:20,client221:20,client222:20,client223:20,client224:20,client225:20,client226:20,client227:20,client228:20,client229:20,client230:20,client231:20,client232:20,client233:20,client234:20,client235:20 /usr/local/bin/dlio_benchmark workload=unet3d_datagen ++hydra.run.dir=/home/shuling/mlperf/training/unet3d/datagen/20250709_172251 ++hydra.output_subdir=dlio_config ++workload.dataset.num_subfolders_train=320 ++workload.dataset.num_files_train=1120000 ++workload.dataset.data_folder=/mnt/mlpstore/d1/unet3d --config-dir=/usr/local/lib/python3.12/dist-packages/configs/dlio",
+      "stdout": "/home/shuling/mlperf/training/unet3d/datagen/20250709_172251/training_datagen.stdout.log",
+      "stderr": "/home/shuling/mlperf/training/unet3d/datagen/20250709_172251/training_datagen.stderr.log"
+    }
+  ],
+  "run_result_output": "/home/shuling/mlperf/training/unet3d/datagen/20250709_172251",
+  "metadata_filename": "training_20250709_172251_metadata.json",
+  "metadata_file_path": "/home/shuling/mlperf/training/unet3d/datagen/20250709_172251/training_20250709_172251_metadata.json",
+  "_config_name": "unet3d_datagen",
+  "base_command": "dlio_benchmark",
+  "base_path": "/usr/local/bin",
+  "base_command_path": "/usr/local/bin/dlio_benchmark",
+  "config_path": "/usr/local/lib/python3.12/dist-packages/configs/dlio",
+  "per_host_mem_kB": null,
+  "total_mem_kB": null,
+  "config_file": "unet3d_datagen.yaml",
+  "params_dict": {
+    "dataset.num_subfolders_train": "320",
+    "dataset.num_files_train": "1120000",
+    "dataset.data_folder": "/mnt/mlpstore/d1/unet3d"
+  },
+  "yaml_params": {
+    "model": {
+      "name": "unet3d",
+      "type": "cnn",
+      "model_size": 499153191
+    },
+    "framework": "pytorch",
+    "workflow": {
+      "generate_data": true,
+      "train": false,
+      "checkpoint": false
+    },
+    "dataset": {
+      "data_folder": "data/unet3d/",
+      "format": "npz",
+      "num_files_train": 168,
+      "num_samples_per_file": 1,
+      "record_length_bytes": 146600628,
+      "record_length_bytes_stdev": 68341808,
+      "record_length_bytes_resize": 2097152
+    }
+  },
+  "combined_params": {
+    "model": {
+      "name": "unet3d",
+      "type": "cnn",
+      "model_size": 499153191
+    },
+    "framework": "pytorch",
+    "workflow": {
+      "generate_data": true,
+      "train": false,
+      "checkpoint": false
+    },
+    "dataset": {
+      "data_folder": "data/unet3d/",
+      "format": "npz",
+      "num_files_train": "1120000",
+      "num_samples_per_file": 1,
+      "record_length_bytes": 146600628,
+      "record_length_bytes_stdev": 68341808,
+      "record_length_bytes_resize": 2097152,
+      "num_subfolders_train": "320"
+    }
+  },
+  "executed_command": "mpirun -n 320 -host client220:20,client221:20,client222:20,client223:20,client224:20,client225:20,client226:20,client227:20,client228:20,client229:20,client230:20,client231:20,client232:20,client233:20,client234:20,client235:20 /usr/local/bin/dlio_benchmark workload=unet3d_datagen ++hydra.run.dir=/home/shuling/mlperf/training/unet3d/datagen/20250709_172251 ++hydra.output_subdir=dlio_config ++workload.dataset.num_subfolders_train=320 ++workload.dataset.num_files_train=1120000 ++workload.dataset.data_folder=/mnt/mlpstore/d1/unet3d --config-dir=/usr/local/lib/python3.12/dist-packages/configs/dlio",
+  "benchmark_type": "training"
+}

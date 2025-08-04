@@ -1,0 +1,30 @@
+workload:
+  model:
+    name: cosmoflow
+  framework: tensorflow
+  workflow:
+    generate_data: false
+    train: true
+  dataset:
+    data_folder: /mnt/lustrefs/cosmoflow25N/cosmoflow
+    num_files_train: 4555500
+    num_samples_per_file: 1
+    record_length_bytes: 2828486
+    record_length_bytes_stdev: 71311
+    format: tfrecord
+    num_subfolders_train: 455
+  reader:
+    data_loader: tensorflow
+    read_threads: 36
+    batch_size: 1
+    file_shuffle: seed
+    sample_shuffle: seed
+    shuffle_size: 2
+    transfer_size: 1048576
+    prefetch_size: 36
+    computation_threads: 4
+  train:
+    epochs: 5
+    computation_time: 0.0035
+  metric:
+    au: 0.7

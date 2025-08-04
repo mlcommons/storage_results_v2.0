@@ -1,0 +1,119 @@
+System:
+  name: UbiPower18000_16x15.36TB_NVMe_4xNDR400_3xStorageNode_1host2TBMem
+  description: UbiPower 18000 Distributed All-Flash Storage - Engineered for high-performance with low latency and high scalability.
+  storage_location: remote
+  client_software: proprietary
+  storage_interface: file
+  required_rack_units: 6
+  shared_capabilities:
+    multi_host_support: True            # False is used for local storage
+    simultaneous_write_support: True   # Are simultaneous writes by multiple hosts supported in the submitted configuration
+    simultaneous_read_support: True    # Are simultaneous reads by multiple hosts supported in the submitted configuration
+  max_sequential_read:  # Optional - GiB/s
+  max_sequential_write:  # Optional - GiB/s
+  max_random_read: # Optional - GiB/s
+  max_random_write: # Optional - GiB/s
+
+  # The following will be used to generate the "integrated client storage" and "# Clients with local storage" in the
+  # results table.
+  use_local_storage: false
+  integrated_client_storage: ""          # Describe the cumulative integrated client storage for the solution
+  num_clients_with_integrated_storage: 0           # Number of clients with integrated storage
+
+  # The following will map to the "Storage System Type" column in the results table. If "use_local_drives" is True,
+  #   then "Local File + " will be prepended to the storage type
+  system_architecture: shared file
+  useable_capacity: 447.06   # Capacity in TiB that is usable for the storage system. If no unit is provided, assume TiB (not TB)
+
+PowerRequirements:
+  dlio_client:
+    quantity: 16 # number of dlio_client nodes
+    psu1_nameplate_power: 1300 # power in watts
+    psu2_nameplate_power: 1300 # power in watts
+    psu3_nameplate_power: 0 # power in watts
+    design_power: 1300
+    num_active_psus: 1
+    num_passive_psus: 1
+
+  # All storage nodes need to be listed (data, metadata, etc) as well as any required backed switching
+  storage_data_node:
+    quantity: 3 # number of storage data nodes
+    psu1_nameplate_power: 1300 # power in watts
+    psu2_nameplate_power: 1300 # power in watts
+    psu3_nameplate_power: 0 # power in watts
+    design_power: 1300
+    num_active_psus: 1
+    num_passive_psus: 1
+
+# All nodes used need to be listed. Clients, Data storage, metadata, front-end, back-end, etc
+Nodes:
+  # Useful name for the client describing it's role in the system under test
+  dlio_client:  # This can be DLIO Client, storage node, storage controller, AwesomeMarketingName_Type1, etc
+    quantity: 1  # How many of this node
+    hardware:
+      model: Rank Server
+      rack_units: 2
+      power_supplies: 2
+      psu_configuration: active/passive
+      psu_rating: 1300
+      memory_capacity: 2048GB
+      memory_configuration: 32x64GB
+      cpu_qty: 2
+      cpu_model: Intel(R) Xeon(R) Platinum 8468
+      cpu_cores: 48
+    networking:
+      management:
+        model: Intel Corporation Ethernet Controller 10G X550T
+        speed: 10Gbps
+        qty: 2
+      data:
+        model: Mellanox Technologies MT2910 Family [ConnectX-7]
+        speed: 400Gbps
+        qty: 2
+    operating_system:
+      name: Ubuntu
+      version: 22.04.5 LTS
+      release_date: 2022-09-12
+      kernel_version: 5.15.0-119-generic
+      cpu_architecture: x86_64
+    tuning:
+      # All non-default tunings for OS need to be listed
+      mpi_configuration:
+        environment_variables: 
+        - OMPI_MCA_btl_tcp_if_include=bond0
+        version: Open MPI 4.1.2
+      sysctl_parameters:
+  storage_data_node: # This can be DLIO Client, storage node, storage controller, AwesomeMarketingName_Type1, etc
+    quantity: 3  # How many of this node
+    hardware:
+      model: Rank Server
+      rack_units: 2
+      power_supplies: 2
+      psu_configuration: active/passive
+      psu_rating: 1300
+      memory_capacity: 1024GB
+      memory_configuration: 32x32GB
+      cpu_qty: 2
+      cpu_model: INTEL(R) XEON(R) GOLD 5520+
+      cpu_cores: 28
+    networking:
+      management:
+        model: Intel Corporation I350 Gigabit Network Connection
+        speed: 1Gbps
+        qty: 1
+      data:
+        model: Mellanox Technologies MT2910 Family [ConnectX-7]
+        speed: 400Gbps
+        qty: 4
+    operating_system:
+      name: UbiPower OS
+      version: 2.1.0
+      release_date: 2025-4-30
+      kernel_version: 2.1.0
+      cpu_architecture: x86_64
+    tuning:
+      mpi_configuration:
+        environment_variables: 
+        version: 
+      sysctl_parameters:
+

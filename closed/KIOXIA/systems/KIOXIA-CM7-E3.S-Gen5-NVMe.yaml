@@ -1,0 +1,60 @@
+System:
+  name: KIOXIA CM7 E3.S Gen5 NVMe
+  description: Single Drive Direct Attach NVMe
+  storage_location: local
+  client_software: in-box
+  storage_interface: file
+  required_rack_units: 1
+  shared_capabilities:
+    multi_host_support: False     
+    simultaneous_write_support: False   
+    simultaneous_read__support: False    
+  max_sequential_read: 14000
+  max_sequential_write: 6750 
+  max_random_read: 
+  max_random_write: 
+  use_local_storage: True        
+  system_architecture: direct-attached block 
+  useable_capacity: 6.984919 TiB
+
+PowerRequirements:
+  storage_data_node:
+    quantity: 1
+    psu1_nameplate_power: 1400
+    psu2_nameplate_power: 1400
+    psu3_nameplate_power:
+    design_power: 1400
+    num_active_psus: 1
+    num_passive_psus: 1
+
+Nodes:
+  storage_data_node: #Dell Poweredge R6615
+    quantity: 1
+    hardware:
+      model: Dell
+      rack_units: 1
+      power_supplies: 2
+      psu_configuration: active/passive
+      psu_rating: 1400
+      memory_capacity: 384GB
+      memory_configuration: 12x32GB
+      cpu_qty: 1
+      cpu_model: AMD EPYC 9454P 48-Core Processor
+      cpu_cores: 48
+    networking:
+      management:
+        model: Broadcom NetXtreme Gigabit Ethernet (BCM5720)
+        speed: 1Gbps
+        qty: 1
+    operating_system:
+      name: Ubuntu
+      version: 24.04.2 LTS
+      release_date: 2025-02-20
+      kernel_version: 6.8.0-60-generic
+      cpu_architecture: x86_64
+    tuning:
+      mpi_configuration:
+        environment_variables:
+        version: Open MPI 4.1.6
+      sysctl_parameters:
+      filesystem_mount_options: noatime,nodiratime

@@ -1,0 +1,6 @@
+- workload=resnet50_h100
+- ++workload.dataset.num_files_train=114979
+- ++workload.reader.computation_threads=32
+- ++workload.reader.prefetch_size=0
+- ++workload.reader.transfer_size=256
+- ++workload.dataset.data_folder=/home/light/resnet50

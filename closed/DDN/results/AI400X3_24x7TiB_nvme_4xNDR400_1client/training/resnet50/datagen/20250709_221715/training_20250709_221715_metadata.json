@@ -1,0 +1,115 @@
+{
+  "args": {
+    "program": "training",
+    "command": "datagen",
+    "results_dir": "logs_1752099416/result_resnet50_16_40accperclient_h100_1752099416_CREATE",
+    "loops": 1,
+    "config_file": null,
+    "closed": false,
+    "debug": false,
+    "verbose": false,
+    "stream_log_level": "INFO",
+    "allow_invalid_params": false,
+    "what_if": false,
+    "hosts": [
+      "c222",
+      "c226",
+      "c216",
+      "c230",
+      "c223",
+      "c217",
+      "c227",
+      "c231",
+      "c220",
+      "c224",
+      "c228",
+      "c218",
+      "c219",
+      "c225",
+      "c221",
+      "c229"
+    ],
+    "model": "resnet50",
+    "exec_type": "mpi",
+    "mpi_bin": "mpirun",
+    "oversubscribe": false,
+    "allow_run_as_root": false,
+    "mpi_params": null,
+    "num_processes": 256,
+    "data_dir": "/lustre/x3e03/client/datagen_resnet50_h100",
+    "params": [
+      "dataset.num_files_train=120969"
+    ],
+    "dlio_bin_path": null,
+    "num_client_hosts": 16
+  },
+  "debug": null,
+  "run_datetime": "20250709_221715",
+  "run_number": 0,
+  "runtime": 489.0169084072113,
+  "verification": null,
+  "command_output_files": [
+    {
+      "command": "mpirun -n 256 -host c222:16,c226:16,c216:16,c230:16,c223:16,c217:16,c227:16,c231:16,c220:16,c224:16,c228:16,c218:16,c219:16,c225:16,c221:16,c229:16 /home/ldouriez/MLPERFv2/storage/venv/bin/dlio_benchmark workload=resnet50_datagen ++hydra.run.dir=logs_1752099416/result_resnet50_16_40accperclient_h100_1752099416_CREATE/training/resnet50/datagen/20250709_221715 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=120969 ++workload.dataset.data_folder=/lustre/x3e03/client/datagen_resnet50_h100/resnet50 --config-dir=/home/ldouriez/MLPERFv2/storage/configs/dlio",
+      "stdout": "logs_1752099416/result_resnet50_16_40accperclient_h100_1752099416_CREATE/training/resnet50/datagen/20250709_221715/training_datagen.stdout.log",
+      "stderr": "logs_1752099416/result_resnet50_16_40accperclient_h100_1752099416_CREATE/training/resnet50/datagen/20250709_221715/training_datagen.stderr.log"
+    }
+  ],
+  "run_result_output": "logs_1752099416/result_resnet50_16_40accperclient_h100_1752099416_CREATE/training/resnet50/datagen/20250709_221715",
+  "metadata_filename": "training_20250709_221715_metadata.json",
+  "metadata_file_path": "logs_1752099416/result_resnet50_16_40accperclient_h100_1752099416_CREATE/training/resnet50/datagen/20250709_221715/training_20250709_221715_metadata.json",
+  "_config_name": "resnet50_datagen",
+  "base_command": "dlio_benchmark",
+  "base_path": "/home/ldouriez/MLPERFv2/storage/venv/bin",
+  "base_command_path": "/home/ldouriez/MLPERFv2/storage/venv/bin/dlio_benchmark",
+  "config_path": "/home/ldouriez/MLPERFv2/storage/configs/dlio",
+  "per_host_mem_kB": null,
+  "total_mem_kB": null,
+  "config_file": "resnet50_datagen.yaml",
+  "params_dict": {
+    "dataset.num_files_train": "120969",
+    "dataset.data_folder": "/lustre/x3e03/client/datagen_resnet50_h100/resnet50"
+  },
+  "yaml_params": {
+    "model": {
+      "name": "resnet50",
+      "type": "cnn"
+    },
+    "framework": "tensorflow",
+    "workflow": {
+      "generate_data": true,
+      "train": false,
+      "checkpoint": false
+    },
+    "dataset": {
+      "num_files_train": 1024,
+      "num_samples_per_file": 1251,
+      "record_length_bytes": 114660.07,
+      "record_length_bytes_resize": 150528,
+      "data_folder": "data/resnet50",
+      "format": "tfrecord"
+    }
+  },
+  "combined_params": {
+    "model": {
+      "name": "resnet50",
+      "type": "cnn"
+    },
+    "framework": "tensorflow",
+    "workflow": {
+      "generate_data": true,
+      "train": false,
+      "checkpoint": false
+    },
+    "dataset": {
+      "num_files_train": "120969",
+      "num_samples_per_file": 1251,
+      "record_length_bytes": 114660.07,
+      "record_length_bytes_resize": 150528,
+      "data_folder": "data/resnet50",
+      "format": "tfrecord"
+    }
+  },
+  "executed_command": "mpirun -n 256 -host c222:16,c226:16,c216:16,c230:16,c223:16,c217:16,c227:16,c231:16,c220:16,c224:16,c228:16,c218:16,c219:16,c225:16,c221:16,c229:16 /home/ldouriez/MLPERFv2/storage/venv/bin/dlio_benchmark workload=resnet50_datagen ++hydra.run.dir=logs_1752099416/result_resnet50_16_40accperclient_h100_1752099416_CREATE/training/resnet50/datagen/20250709_221715 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=120969 ++workload.dataset.data_folder=/lustre/x3e03/client/datagen_resnet50_h100/resnet50 --config-dir=/home/ldouriez/MLPERFv2/storage/configs/dlio",
+  "benchmark_type": "training"
+}

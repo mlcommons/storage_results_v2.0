@@ -1,0 +1,162 @@
+{
+  "args": {
+    "program": "checkpointing",
+    "command": "run",
+    "results_dir": "llama3-1t_checkpoint_results/32N_1024ACC",
+    "loops": 1,
+    "config_file": null,
+    "closed": true,
+    "debug": false,
+    "verbose": false,
+    "stream_log_level": "INFO",
+    "allow_invalid_params": false,
+    "what_if": false,
+    "hosts": [
+      "p1-r01-n1:32",
+      "p1-r15-n1:32",
+      "p1-r16-n1:32",
+      "p1-r17-n4:32",
+      "p1-r20-n3:32",
+      "p1-r29-n1:32",
+      "p2-r01-n1:32",
+      "p2-r02-n4:32",
+      "p2-r03-n3:32",
+      "p2-r05-n3:32",
+      "p2-r06-n3:32",
+      "p2-r08-n1:32",
+      "p2-r09-n4:32",
+      "p2-r10-n3:32",
+      "p2-r22-n1:32",
+      "p2-r22-n3:32",
+      "p2-r23-n3:32",
+      "p6-r03-n1:32",
+      "p3-r13-n4:32",
+      "p2-r21-n4:32",
+      "p2-r01-n3:32",
+      "p1-r04-n4:32",
+      "p6-r31-n2:32",
+      "p6-r21-n2:32",
+      "p2-r31-n2:32",
+      "p2-r12-n4:32",
+      "p6-r10-n1:32",
+      "p5-r32-n2:32",
+      "p4-r19-n4:32",
+      "p4-r11-n1:32",
+      "p6-r07-n4:32",
+      "p4-r04-n4:32"
+    ],
+    "client_host_memory_in_gb": 2015,
+    "model": "llama3-1t",
+    "num_checkpoints_read": 10,
+    "num_checkpoints_write": 0,
+    "num_processes": 1024,
+    "params": null,
+    "checkpoint_folder": "/gpfs/gpfs0_bench/llama3-1t",
+    "dlio_bin_path": null,
+    "exec_type": "mpi",
+    "mpi_bin": "mpirun",
+    "oversubscribe": false,
+    "allow_run_as_root": false,
+    "mpi_params": null,
+    "num_client_hosts": 32
+  },
+  "debug": null,
+  "run_datetime": "20250711_172548",
+  "run_number": 0,
+  "runtime": 353.23086285591125,
+  "verification": "closed",
+  "command_output_files": [
+    {
+      "command": "mpirun -n 1024 -host p1-r01-n1:32,p1-r15-n1:32,p1-r16-n1:32,p1-r17-n4:32,p1-r20-n3:32,p1-r29-n1:32,p2-r01-n1:32,p2-r02-n4:32,p2-r03-n3:32,p2-r05-n3:32,p2-r06-n3:32,p2-r08-n1:32,p2-r09-n4:32,p2-r10-n3:32,p2-r22-n1:32,p2-r22-n3:32,p2-r23-n3:32,p6-r03-n1:32,p3-r13-n4:32,p2-r21-n4:32,p2-r01-n3:32,p1-r04-n4:32,p6-r31-n2:32,p6-r21-n2:32,p2-r31-n2:32,p2-r12-n4:32,p6-r10-n1:32,p5-r32-n2:32,p4-r19-n4:32,p4-r11-n1:32,p6-r07-n4:32,p4-r04-n4:32 /u/yukioh/miniforge3/envs/mlperf/bin/dlio_benchmark workload=llama3_1t ++hydra.run.dir=llama3-1t_checkpoint_results/32N_1024ACC/checkpointing/llama3-1t/20250711_172548 ++hydra.output_subdir=dlio_config ++workload.checkpoint.num_checkpoints_read=10 ++workload.checkpoint.num_checkpoints_write=0 ++workload.checkpoint.checkpoint_folder=/gpfs/gpfs0_bench/llama3-1t/llama3-1t --config-dir=/u/yukioh/storage/configs/dlio",
+      "stdout": "llama3-1t_checkpoint_results/32N_1024ACC/checkpointing/llama3-1t/20250711_172548/checkpointing_run.stdout.log",
+      "stderr": "llama3-1t_checkpoint_results/32N_1024ACC/checkpointing/llama3-1t/20250711_172548/checkpointing_run.stderr.log"
+    }
+  ],
+  "run_result_output": "llama3-1t_checkpoint_results/32N_1024ACC/checkpointing/llama3-1t/20250711_172548",
+  "metadata_filename": "checkpointing_20250711_172548_metadata.json",
+  "metadata_file_path": "llama3-1t_checkpoint_results/32N_1024ACC/checkpointing/llama3-1t/20250711_172548/checkpointing_20250711_172548_metadata.json",
+  "_config_name": "llama3_1t",
+  "base_command": "dlio_benchmark",
+  "base_path": "/u/yukioh/miniforge3/envs/mlperf/bin",
+  "base_command_path": "/u/yukioh/miniforge3/envs/mlperf/bin/dlio_benchmark",
+  "config_path": "/u/yukioh/storage/configs/dlio",
+  "per_host_mem_kB": null,
+  "total_mem_kB": null,
+  "cluster_information": "<mlpstorage.rules.ClusterInformation object at 0x7ef9545a65d0>",
+  "config_file": "llama3_1t.yaml",
+  "params_dict": {
+    "checkpoint.num_checkpoints_read": 10,
+    "checkpoint.num_checkpoints_write": 0,
+    "checkpoint.checkpoint_folder": "/gpfs/gpfs0_bench/llama3-1t/llama3-1t"
+  },
+  "yaml_params": {
+    "model": {
+      "name": "llama_1t",
+      "type": "transformer",
+      "num_layers": 128,
+      "model_datatype": "fp16",
+      "optimizer_datatype": "fp32",
+      "parallelism": {
+        "tensor": 8,
+        "pipeline": 64,
+        "zero_stage": 1
+      },
+      "transformer": {
+        "vocab_size": 128256,
+        "hidden_size": 25872,
+        "ffn_hidden_size": 98304,
+        "num_attention_heads": 192,
+        "num_kv_heads": 32
+      }
+    },
+    "framework": "pytorch",
+    "workflow": {
+      "generate_data": false,
+      "train": false,
+      "checkpoint": true
+    },
+    "checkpoint": {
+      "checkpoint_folder": "checkpoints/llama_1t",
+      "time_between_checkpoints": 5,
+      "num_checkpoints_write": 10,
+      "num_checkpoints_read": 10,
+      "fsync": true
+    }
+  },
+  "combined_params": {
+    "model": {
+      "name": "llama_1t",
+      "type": "transformer",
+      "num_layers": 128,
+      "model_datatype": "fp16",
+      "optimizer_datatype": "fp32",
+      "parallelism": {
+        "tensor": 8,
+        "pipeline": 64,
+        "zero_stage": 1
+      },
+      "transformer": {
+        "vocab_size": 128256,
+        "hidden_size": 25872,
+        "ffn_hidden_size": 98304,
+        "num_attention_heads": 192,
+        "num_kv_heads": 32
+      }
+    },
+    "framework": "pytorch",
+    "workflow": {
+      "generate_data": false,
+      "train": false,
+      "checkpoint": true
+    },
+    "checkpoint": {
+      "checkpoint_folder": "checkpoints/llama_1t",
+      "time_between_checkpoints": 5,
+      "num_checkpoints_write": 10,
+      "num_checkpoints_read": 10,
+      "fsync": true
+    }
+  },
+  "executed_command": "mpirun -n 1024 -host p1-r01-n1:32,p1-r15-n1:32,p1-r16-n1:32,p1-r17-n4:32,p1-r20-n3:32,p1-r29-n1:32,p2-r01-n1:32,p2-r02-n4:32,p2-r03-n3:32,p2-r05-n3:32,p2-r06-n3:32,p2-r08-n1:32,p2-r09-n4:32,p2-r10-n3:32,p2-r22-n1:32,p2-r22-n3:32,p2-r23-n3:32,p6-r03-n1:32,p3-r13-n4:32,p2-r21-n4:32,p2-r01-n3:32,p1-r04-n4:32,p6-r31-n2:32,p6-r21-n2:32,p2-r31-n2:32,p2-r12-n4:32,p6-r10-n1:32,p5-r32-n2:32,p4-r19-n4:32,p4-r11-n1:32,p6-r07-n4:32,p4-r04-n4:32 /u/yukioh/miniforge3/envs/mlperf/bin/dlio_benchmark workload=llama3_1t ++hydra.run.dir=llama3-1t_checkpoint_results/32N_1024ACC/checkpointing/llama3-1t/20250711_172548 ++hydra.output_subdir=dlio_config ++workload.checkpoint.num_checkpoints_read=10 ++workload.checkpoint.num_checkpoints_write=0 ++workload.checkpoint.checkpoint_folder=/gpfs/gpfs0_bench/llama3-1t/llama3-1t --config-dir=/u/yukioh/storage/configs/dlio",
+  "benchmark_type": "checkpointing"
+}

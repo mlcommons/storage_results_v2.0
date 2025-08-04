@@ -1,0 +1,68 @@
+System:
+  name: Micron 7600 NVMe SSD
+  description: Single Local NVMe
+  storage_location: local
+  client_software: in-box
+  storage_interface: block
+  required_rack_units: NA
+  shared_capabilities:
+    multi_host_support: False            # False is used for local storage
+    simultaneous_write_support: False   # Are simultaneous writes by multiple hosts supported in the submitted configuration
+    simultaneous_read__support: False    # Are simultaneous reads by multiple hosts supported in the submitted configuration
+  max_sequential_read: 14 GB/s
+  max_sequential_write: 14 GB/s
+  max_random_read: # Optional - GiB/s
+  max_random_write: # Optional - GiB/s
+
+  use_local_drives: true
+  num_local_drives: 1
+  system_architecture: direct-attached media
+  useable_capacity: 6.98 TiB
+
+PowerRequirements:
+  dlio_client:
+    quantity: 1
+    psu1_nameplate_power: 1600
+    psu2_nameplate_power: 1600
+    design_power: 3200
+    num_active_psus: 2
+    num_passive_psus: 0
+
+# All nodes used need to be listed. Clients, Data storage, metadata, front-end, back-end, etc
+Nodes:
+  # Useful name for the client describing it's role in the system under test
+  dlio_client:  # This can be DLIO Client, storage node, storage controller, AwesomeMarketingName_Type1, etc
+    quantity: 1  # How many of this node
+    hardware:
+      model: HPE
+      rack_units: 2
+      power_supplies: 2
+      psu_configuration: active/active
+      psu_rating: 1600
+      memory_capacity: 768GB
+      memory_configuration: 12x64GB
+      cpu_qty: 1
+      cpu_model: AMD 9655P
+      cpu_cores: 96
+    networking:
+      management:
+        model: Broadcom 5719
+        speed: 1Gbps
+        qty: 1
+    operating_system:
+      name: Ubuntu
+      version: 24.04.02 LTS
+      release_date: 2025-02-20
+      kernel_version: 6.8.0-63-generic
+      cpu_architecture: x86_64
+    tuning:
+      mpi_configuration:
+        environment_variables: None
+        version: Open MPI 4.1.6
+      sysctl_parameters:
+        vm.swappiness: 1
+    storage:
+      type: NVMe
+      capacity: 7.68 TB
+      interface: NVMe
+      interface_type: E3.S

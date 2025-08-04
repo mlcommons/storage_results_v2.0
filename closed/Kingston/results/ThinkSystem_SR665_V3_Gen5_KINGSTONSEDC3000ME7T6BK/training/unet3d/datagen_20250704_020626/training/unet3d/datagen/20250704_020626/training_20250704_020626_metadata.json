@@ -1,0 +1,103 @@
+{
+  "args": {
+    "program": "training",
+    "command": "datagen",
+    "results_dir": "/home/sped/perf/mlperfv2/submission/Closed/Kingston_Digital/results/KINGSTONSEDC3000ME7T6BK/training/unet3d/datagen_20250704_020626",
+    "loops": 1,
+    "config_file": null,
+    "closed": true,
+    "debug": false,
+    "verbose": false,
+    "stream_log_level": "INFO",
+    "allow_invalid_params": false,
+    "what_if": false,
+    "hosts": [
+      "localhost"
+    ],
+    "model": "unet3d",
+    "exec_type": "mpi",
+    "mpi_bin": "mpirun",
+    "oversubscribe": false,
+    "allow_run_as_root": false,
+    "num_processes": 8,
+    "data_dir": "/mnt/KINGSTONSEDC3000ME7T6BK",
+    "params": [
+      "dataset.num_files_train=14000"
+    ],
+    "dlio_bin_path": null,
+    "num_client_hosts": 1
+  },
+  "debug": null,
+  "run_datetime": "20250704_020626",
+  "run_number": 0,
+  "runtime": 929.8103833198547,
+  "verification": null,
+  "command_output_files": [
+    {
+      "command": "mpirun -n 8 -host localhost:8 /home/sped/perf/mlperfv2/venv/bin/dlio_benchmark workload=unet3d_datagen ++hydra.run.dir=/home/sped/perf/mlperfv2/submission/Closed/Kingston_Digital/results/KINGSTONSEDC3000ME7T6BK/training/unet3d/datagen_20250704_020626/training/unet3d/datagen/20250704_020626 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=14000 ++workload.dataset.data_folder=/mnt/KINGSTONSEDC3000ME7T6BK/unet3d --config-dir=/home/sped/perf/mlperfv2/storage/configs/dlio",
+      "stdout": "/home/sped/perf/mlperfv2/submission/Closed/Kingston_Digital/results/KINGSTONSEDC3000ME7T6BK/training/unet3d/datagen_20250704_020626/training/unet3d/datagen/20250704_020626/training_datagen.stdout.log",
+      "stderr": "/home/sped/perf/mlperfv2/submission/Closed/Kingston_Digital/results/KINGSTONSEDC3000ME7T6BK/training/unet3d/datagen_20250704_020626/training/unet3d/datagen/20250704_020626/training_datagen.stderr.log"
+    }
+  ],
+  "run_result_output": "/home/sped/perf/mlperfv2/submission/Closed/Kingston_Digital/results/KINGSTONSEDC3000ME7T6BK/training/unet3d/datagen_20250704_020626/training/unet3d/datagen/20250704_020626",
+  "metadata_filename": "training_20250704_020626_metadata.json",
+  "metadata_file_path": "/home/sped/perf/mlperfv2/submission/Closed/Kingston_Digital/results/KINGSTONSEDC3000ME7T6BK/training/unet3d/datagen_20250704_020626/training/unet3d/datagen/20250704_020626/training_20250704_020626_metadata.json",
+  "_config_name": "unet3d_datagen",
+  "base_command": "dlio_benchmark",
+  "base_path": "/home/sped/perf/mlperfv2/venv/bin",
+  "base_command_path": "/home/sped/perf/mlperfv2/venv/bin/dlio_benchmark",
+  "config_path": "/home/sped/perf/mlperfv2/storage/configs/dlio",
+  "per_host_mem_kB": null,
+  "total_mem_kB": null,
+  "config_file": "unet3d_datagen.yaml",
+  "params_dict": {
+    "dataset.num_files_train": "14000",
+    "dataset.data_folder": "/mnt/KINGSTONSEDC3000ME7T6BK/unet3d"
+  },
+  "yaml_params": {
+    "model": {
+      "name": "unet3d",
+      "type": "cnn",
+      "model_size": 499153191
+    },
+    "framework": "pytorch",
+    "workflow": {
+      "generate_data": true,
+      "train": false,
+      "checkpoint": false
+    },
+    "dataset": {
+      "data_folder": "data/unet3d/",
+      "format": "npz",
+      "num_files_train": 168,
+      "num_samples_per_file": 1,
+      "record_length_bytes": 146600628,
+      "record_length_bytes_stdev": 68341808,
+      "record_length_bytes_resize": 2097152
+    }
+  },
+  "combined_params": {
+    "model": {
+      "name": "unet3d",
+      "type": "cnn",
+      "model_size": 499153191
+    },
+    "framework": "pytorch",
+    "workflow": {
+      "generate_data": true,
+      "train": false,
+      "checkpoint": false
+    },
+    "dataset": {
+      "data_folder": "data/unet3d/",
+      "format": "npz",
+      "num_files_train": "14000",
+      "num_samples_per_file": 1,
+      "record_length_bytes": 146600628,
+      "record_length_bytes_stdev": 68341808,
+      "record_length_bytes_resize": 2097152
+    }
+  },
+  "executed_command": "mpirun -n 8 -host localhost:8 /home/sped/perf/mlperfv2/venv/bin/dlio_benchmark workload=unet3d_datagen ++hydra.run.dir=/home/sped/perf/mlperfv2/submission/Closed/Kingston_Digital/results/KINGSTONSEDC3000ME7T6BK/training/unet3d/datagen_20250704_020626/training/unet3d/datagen/20250704_020626 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=14000 ++workload.dataset.data_folder=/mnt/KINGSTONSEDC3000ME7T6BK/unet3d --config-dir=/home/sped/perf/mlperfv2/storage/configs/dlio",
+  "benchmark_type": "training"
+}

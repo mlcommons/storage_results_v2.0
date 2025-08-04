@@ -1,0 +1,80 @@
+[OUTPUT] 2025-07-11T03:28:56.164179 Running DLIO [Training & Checkpointing] with 140 process(es)
+[WARNING] Number of files for training in /mnt/hs_test/data/unet3d/train (490150) is more than requested (490000). A subset of files will be used 
+[WARNING] Number of files for training in /mnt/hs_test/data/unet3d/train (490150) is more than requested (490000). A subset of files will be used 
+[WARNING] Number of files for training in /mnt/hs_test/data/unet3d/train (490150) is more than requested (490000). A subset of files will be used 
+[WARNING] Number of files for training in /mnt/hs_test/data/unet3d/train (490150) is more than requested (490000). A subset of files will be used 
+[WARNING] Number of files for training in /mnt/hs_test/data/unet3d/train (490150) is more than requested (490000). A subset of files will be used 
+[WARNING] Number of files for training in /mnt/hs_test/data/unet3d/train (490150) is more than requested (490000). A subset of files will be used 
+[WARNING] Number of files for training in /mnt/hs_test/data/unet3d/train (490150) is more than requested (490000). A subset of files will be used 
+[WARNING] Number of files for training in /mnt/hs_test/data/unet3d/train (490150) is more than requested (490000). A subset of files will be used 
+[WARNING] Number of files for training in /mnt/hs_test/data/unet3d/train (490150) is more than requested (490000). A subset of files will be used 
+[WARNING] Number of files for training in /mnt/hs_test/data/unet3d/train (490150) is more than requested (490000). A subset of files will be used 
+[WARNING] Number of files for training in /mnt/hs_test/data/unet3d/train (490150) is more than requested (490000). A subset of files will be used 
+[WARNING] Number of files for training in /mnt/hs_test/data/unet3d/train (490150) is more than requested (490000). A subset of files will be used 
+[WARNING] Number of files for training in /mnt/hs_test/data/unet3d/train (490150) is more than requested (490000). A subset of files will be used 
+[WARNING] Number of files for training in /mnt/hs_test/data/unet3d/train (490150) is more than requested (490000). A subset of files will be used 
+[WARNING] Number of files for training in /mnt/hs_test/data/unet3d/train (490150) is more than requested (490000). A subset of files will be used 
+[WARNING] Number of files for training in /mnt/hs_test/data/unet3d/train (490150) is more than requested (490000). A subset of files will be used 
+[WARNING] Number of files for training in /mnt/hs_test/data/unet3d/train (490150) is more than requested (490000). A subset of files will be used 
+[WARNING] Number of files for training in /mnt/hs_test/data/unet3d/train (490150) is more than requested (490000). A subset of files will be used 
+[WARNING] Number of files for training in /mnt/hs_test/data/unet3d/train (490150) is more than requested (490000). A subset of files will be used 
+[WARNING] Number of files for training in /mnt/hs_test/data/unet3d/train (490150) is more than requested (490000). A subset of files will be used 
+[WARNING] Number of files for training in /mnt/hs_test/data/unet3d/train (490150) is more than requested (490000). A subset of files will be used 
+[WARNING] Number of files for training in /mnt/hs_test/data/unet3d/train (490150) is more than requested (490000). A subset of files will be used 
+[WARNING] Number of files for training in /mnt/hs_test/data/unet3d/train (490150) is more than requested (490000). A subset of files will be used 
+[WARNING] Number of files for training in /mnt/hs_test/data/unet3d/train (490150) is more than requested (490000). A subset of files will be used 
+[WARNING] Number of files for training in /mnt/hs_test/data/unet3d/train (490150) is more than requested (490000). A subset of files will be used 
+[WARNING] Number of files for training in /mnt/hs_test/data/unet3d/train (490150) is more than requested (490000). A subset of files will be used 
+[WARNING] Number of files for training in /mnt/hs_test/data/unet3d/train (490150) is more than requested (490000). A subset of files will be used 
+[WARNING] Number of files for training in /mnt/hs_test/data/unet3d/train (490150) is more than requested (490000). A subset of files will be used 
+[OUTPUT] 2025-07-11T03:29:04.484102 Model size: 0.000010 GB 
+[OUTPUT] 2025-07-11T03:29:04.484204 Total checkpoint size: 0.000010 GB 
+[OUTPUT] 2025-07-11T03:29:04.500580 Max steps per epoch: 500 = 1 * 490000 / 7 / 140 (samples per file * num files / batch size / comm size)
+[OUTPUT] 2025-07-11T03:29:04.630550 Starting epoch 1: 500 steps expected
+[OUTPUT] 2025-07-11T03:29:04.630835 Starting block 1
+[OUTPUT] 2025-07-11T03:31:57.322631 Ending block 1 - 500 steps completed in 172.69 s
+[OUTPUT] 2025-07-11T03:31:57.327389 Epoch 1 - Block 1 [Training] Accelerator Utilization [AU] (%): 95.0423
+[OUTPUT] 2025-07-11T03:31:57.327435 Epoch 1 - Block 1 [Training] Throughput (samples/second): 2876.6810
+[OUTPUT] 2025-07-11T03:31:57.327458 Epoch 1 - Block 1 [Training] Computation time per step (second): 0.3231+/-0.0003 (set value: {'mean': 0.323})
+[OUTPUT] 2025-07-11T03:31:57.331882 Ending epoch 1 - 500 steps completed in 172.70 s
+[OUTPUT] 2025-07-11T03:31:57.340347 Starting epoch 2: 500 steps expected
+[OUTPUT] 2025-07-11T03:31:57.340550 Starting block 1
+[OUTPUT] 2025-07-11T03:34:49.886677 Ending block 1 - 500 steps completed in 172.55 s
+[OUTPUT] 2025-07-11T03:34:49.888797 Epoch 2 - Block 1 [Training] Accelerator Utilization [AU] (%): 94.2714
+[OUTPUT] 2025-07-11T03:34:49.888835 Epoch 2 - Block 1 [Training] Throughput (samples/second): 2853.5088
+[OUTPUT] 2025-07-11T03:34:49.888855 Epoch 2 - Block 1 [Training] Computation time per step (second): 0.3231+/-0.0002 (set value: {'mean': 0.323})
+[OUTPUT] 2025-07-11T03:34:49.893449 Ending epoch 2 - 500 steps completed in 172.55 s
+[OUTPUT] 2025-07-11T03:34:49.903549 Starting epoch 3: 500 steps expected
+[OUTPUT] 2025-07-11T03:34:49.903737 Starting block 1
+[OUTPUT] 2025-07-11T03:37:42.600859 Ending block 1 - 500 steps completed in 172.70 s
+[OUTPUT] 2025-07-11T03:37:42.603099 Epoch 3 - Block 1 [Training] Accelerator Utilization [AU] (%): 94.4413
+[OUTPUT] 2025-07-11T03:37:42.603139 Epoch 3 - Block 1 [Training] Throughput (samples/second): 2858.6628
+[OUTPUT] 2025-07-11T03:37:42.603160 Epoch 3 - Block 1 [Training] Computation time per step (second): 0.3231+/-0.0002 (set value: {'mean': 0.323})
+[OUTPUT] 2025-07-11T03:37:42.606578 Ending epoch 3 - 500 steps completed in 172.70 s
+[OUTPUT] 2025-07-11T03:37:42.615157 Starting epoch 4: 500 steps expected
+[OUTPUT] 2025-07-11T03:37:42.615337 Starting block 1
+[OUTPUT] 2025-07-11T03:40:35.146931 Ending block 1 - 500 steps completed in 172.53 s
+[OUTPUT] 2025-07-11T03:40:35.149117 Epoch 4 - Block 1 [Training] Accelerator Utilization [AU] (%): 95.3255
+[OUTPUT] 2025-07-11T03:40:35.149156 Epoch 4 - Block 1 [Training] Throughput (samples/second): 2885.1921
+[OUTPUT] 2025-07-11T03:40:35.149177 Epoch 4 - Block 1 [Training] Computation time per step (second): 0.3231+/-0.0004 (set value: {'mean': 0.323})
+[OUTPUT] 2025-07-11T03:40:35.152736 Ending epoch 4 - 500 steps completed in 172.54 s
+[OUTPUT] 2025-07-11T03:40:35.161375 Starting epoch 5: 500 steps expected
+[OUTPUT] 2025-07-11T03:40:35.161564 Starting block 1
+[OUTPUT] 2025-07-11T03:43:27.888103 Ending block 1 - 500 steps completed in 172.73 s
+[OUTPUT] 2025-07-11T03:43:27.890082 Epoch 5 - Block 1 [Training] Accelerator Utilization [AU] (%): 94.4317
+[OUTPUT] 2025-07-11T03:43:27.890121 Epoch 5 - Block 1 [Training] Throughput (samples/second): 2858.1706
+[OUTPUT] 2025-07-11T03:43:27.890142 Epoch 5 - Block 1 [Training] Computation time per step (second): 0.3231+/-0.0003 (set value: {'mean': 0.323})
+[OUTPUT] 2025-07-11T03:43:27.890420 Starting saving checkpoint 1 after total step 500 for epoch 5
+[OUTPUT] 2025-07-11T03:43:28.005150 Finished saving checkpoint 1 for epoch 5 in 0.1147 s; Throughput: 0.0001 GB/s
+[OUTPUT] 2025-07-11T03:43:28.007077 Ending epoch 5 - 500 steps completed in 172.85 s
+[OUTPUT] 2025-07-11T03:43:28.014807 Saved outputs in /mnt/hs_test/Hammerspace_unet3d_5Tier0_H100/run5/training/unet3d/run/20250711_032847
+[OUTPUT] Averaged metric over all steps/epochs
+[METRIC] ==========================================================
+[METRIC] Number of Simulated Accelerators: 140 
+[METRIC] Training Accelerator Utilization [AU] (%): 94.8399 (0.0479)
+[METRIC] Training Throughput (samples/second): 2870.2659 (1.4458)
+[METRIC] Training I/O Throughput (MB/second): 401289.7379 (202.1408)
+[METRIC] train_au_meet_expectation: success
+[METRIC] ==========================================================
+
+[OUTPUT] 2025-07-11T03:43:33.150064 outputs saved in RANKID_output.json

@@ -1,0 +1,5 @@
+- workload=unet3d_datagen
+- ++workload.dataset.num_files_train=955000
+- ++workload.dataset.num_subfolders_train=960
+- ++workload.reader.odirect=true
+- ++workload.dataset.data_folder=/mnt/data/unet3d

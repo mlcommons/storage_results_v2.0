@@ -1,0 +1,124 @@
+{
+  "args": {
+    "program": "training",
+    "command": "datasize",
+    "results_dir": "node2_resnet50_a100_400_results",
+    "loops": 1,
+    "config_file": null,
+    "closed": false,
+    "debug": false,
+    "verbose": false,
+    "stream_log_level": "INFO",
+    "allow_invalid_params": false,
+    "what_if": false,
+    "hosts": [
+      "10.10.225.50",
+      "10.10.226.50"
+    ],
+    "model": "resnet50",
+    "client_host_memory_in_gb": 503,
+    "exec_type": "mpi",
+    "mpi_bin": "mpirun",
+    "oversubscribe": false,
+    "allow_run_as_root": false,
+    "mpi_params": [
+      "--mca plm_base_verbose 100",
+      "--mca plm rsh",
+      "--mca pml_ob1_recv_limits 8388608000",
+      "--map-by node"
+    ],
+    "max_accelerators": 400,
+    "accelerator_type": "a100",
+    "num_client_hosts": 2,
+    "data_dir": null,
+    "params": null,
+    "dlio_bin_path": null,
+    "num_processes": 400
+  },
+  "debug": null,
+  "run_datetime": "20250720_074101",
+  "run_number": 0,
+  "runtime": 0.000152587890625,
+  "verification": null,
+  "command_output_files": [],
+  "run_result_output": "node2_resnet50_a100_400_results/training/resnet50/datasize/20250720_074101",
+  "metadata_filename": "training_20250720_074101_metadata.json",
+  "metadata_file_path": "node2_resnet50_a100_400_results/training/resnet50/datasize/20250720_074101/training_20250720_074101_metadata.json",
+  "_config_name": "resnet50_a100",
+  "base_command": "dlio_benchmark",
+  "base_path": "/root/.venvs/myenv/bin",
+  "base_command_path": "/root/.venvs/myenv/bin/dlio_benchmark",
+  "config_path": "/root/expontech/storage/configs/dlio",
+  "per_host_mem_kB": null,
+  "total_mem_kB": null,
+  "cluster_information": "<mlpstorage.rules.ClusterInformation object at 0x7454acfa7fe0>",
+  "config_file": "resnet50_a100.yaml",
+  "params_dict": {},
+  "yaml_params": {
+    "model": {
+      "name": "resnet50",
+      "type": "cnn"
+    },
+    "framework": "tensorflow",
+    "workflow": {
+      "generate_data": false,
+      "train": true
+    },
+    "dataset": {
+      "num_files_train": 1024,
+      "num_samples_per_file": 1251,
+      "record_length_bytes": 114660.07,
+      "record_length_bytes_resize": 150528,
+      "data_folder": "data/resnet50",
+      "format": "tfrecord"
+    },
+    "train": {
+      "computation_time": 0.435,
+      "epochs": 5
+    },
+    "reader": {
+      "data_loader": "tensorflow",
+      "read_threads": 8,
+      "computation_threads": 8,
+      "batch_size": 400,
+      "dont_use_mmap": true
+    },
+    "metric": {
+      "au": 0.9
+    }
+  },
+  "combined_params": {
+    "model": {
+      "name": "resnet50",
+      "type": "cnn"
+    },
+    "framework": "tensorflow",
+    "workflow": {
+      "generate_data": false,
+      "train": true
+    },
+    "dataset": {
+      "num_files_train": 1024,
+      "num_samples_per_file": 1251,
+      "record_length_bytes": 114660.07,
+      "record_length_bytes_resize": 150528,
+      "data_folder": "data/resnet50",
+      "format": "tfrecord"
+    },
+    "train": {
+      "computation_time": 0.435,
+      "epochs": 5
+    },
+    "reader": {
+      "data_loader": "tensorflow",
+      "read_threads": 8,
+      "computation_threads": 8,
+      "batch_size": 400,
+      "dont_use_mmap": true
+    },
+    "metric": {
+      "au": 0.9
+    }
+  },
+  "benchmark_type": "training"
+}

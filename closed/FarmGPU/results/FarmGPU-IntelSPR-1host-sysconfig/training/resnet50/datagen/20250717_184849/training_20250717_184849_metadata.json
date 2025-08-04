@@ -1,0 +1,100 @@
+{
+  "args": {
+    "program": "training",
+    "command": "datagen",
+    "results_dir": "/home/fgpu/Closed/FarmGPU/results/FADU",
+    "loops": 1,
+    "config_file": null,
+    "closed": false,
+    "debug": false,
+    "verbose": false,
+    "stream_log_level": "INFO",
+    "allow_invalid_params": false,
+    "what_if": false,
+    "hosts": [
+      "127.0.0.1"
+    ],
+    "model": "resnet50",
+    "exec_type": "mpi",
+    "mpi_bin": "mpirun",
+    "oversubscribe": false,
+    "allow_run_as_root": true,
+    "mpi_params": null,
+    "num_processes": 32,
+    "data_dir": "/mnt/ssd/",
+    "params": [
+      "dataset.num_files_train=9581"
+    ],
+    "dlio_bin_path": null,
+    "num_client_hosts": 1
+  },
+  "debug": null,
+  "run_datetime": "20250717_184849",
+  "run_number": 0,
+  "runtime": 144.50010418891907,
+  "verification": null,
+  "command_output_files": [
+    {
+      "command": "mpirun -n 32 -host 127.0.0.1:32 --allow-run-as-root /home/fgpu/.venvs/myenv/bin/dlio_benchmark workload=resnet50_datagen ++hydra.run.dir=/home/fgpu/Closed/FarmGPU/results/FADU/training/resnet50/datagen/20250717_184849 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=9581 ++workload.dataset.data_folder=/mnt/ssd/resnet50 --config-dir=/home/fgpu/storage/configs/dlio",
+      "stdout": "/home/fgpu/Closed/FarmGPU/results/FADU/training/resnet50/datagen/20250717_184849/training_datagen.stdout.log",
+      "stderr": "/home/fgpu/Closed/FarmGPU/results/FADU/training/resnet50/datagen/20250717_184849/training_datagen.stderr.log"
+    }
+  ],
+  "run_result_output": "/home/fgpu/Closed/FarmGPU/results/FADU/training/resnet50/datagen/20250717_184849",
+  "metadata_filename": "training_20250717_184849_metadata.json",
+  "metadata_file_path": "/home/fgpu/Closed/FarmGPU/results/FADU/training/resnet50/datagen/20250717_184849/training_20250717_184849_metadata.json",
+  "_config_name": "resnet50_datagen",
+  "base_command": "dlio_benchmark",
+  "base_path": "/home/fgpu/.venvs/myenv/bin",
+  "base_command_path": "/home/fgpu/.venvs/myenv/bin/dlio_benchmark",
+  "config_path": "/home/fgpu/storage/configs/dlio",
+  "per_host_mem_kB": null,
+  "total_mem_kB": null,
+  "config_file": "resnet50_datagen.yaml",
+  "params_dict": {
+    "dataset.num_files_train": "9581",
+    "dataset.data_folder": "/mnt/ssd/resnet50"
+  },
+  "yaml_params": {
+    "model": {
+      "name": "resnet50",
+      "type": "cnn"
+    },
+    "framework": "tensorflow",
+    "workflow": {
+      "generate_data": true,
+      "train": false,
+      "checkpoint": false
+    },
+    "dataset": {
+      "num_files_train": 1024,
+      "num_samples_per_file": 1251,
+      "record_length_bytes": 114660.07,
+      "record_length_bytes_resize": 150528,
+      "data_folder": "data/resnet50",
+      "format": "tfrecord"
+    }
+  },
+  "combined_params": {
+    "model": {
+      "name": "resnet50",
+      "type": "cnn"
+    },
+    "framework": "tensorflow",
+    "workflow": {
+      "generate_data": true,
+      "train": false,
+      "checkpoint": false
+    },
+    "dataset": {
+      "num_files_train": "9581",
+      "num_samples_per_file": 1251,
+      "record_length_bytes": 114660.07,
+      "record_length_bytes_resize": 150528,
+      "data_folder": "data/resnet50",
+      "format": "tfrecord"
+    }
+  },
+  "executed_command": "mpirun -n 32 -host 127.0.0.1:32 --allow-run-as-root /home/fgpu/.venvs/myenv/bin/dlio_benchmark workload=resnet50_datagen ++hydra.run.dir=/home/fgpu/Closed/FarmGPU/results/FADU/training/resnet50/datagen/20250717_184849 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=9581 ++workload.dataset.data_folder=/mnt/ssd/resnet50 --config-dir=/home/fgpu/storage/configs/dlio",
+  "benchmark_type": "training"
+}

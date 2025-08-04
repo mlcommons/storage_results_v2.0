@@ -1,0 +1,8 @@
+- workload=cosmoflow_h100
+- ++workload.dataset.num_files_train=977548
+- ++workload.storage.storage_type=local_fs
+- ++workload.storage.storage_root=/lustre/x3e03/client
+- ++workload.reader.read_threads=1
+- ++workload.reader.transfer_size=8388608
+- ++workload.checkpoint.checkpoint_folder=/lustre/x3e03/client/checkpoint_cosmoflow_h100
+- ++workload.dataset.data_folder=/lustre/x3e03/client/datagen_cosmoflow_h100/cosmoflow

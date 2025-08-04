@@ -1,0 +1,150 @@
+{
+  "args": {
+    "program": "training",
+    "command": "run",
+    "results_dir": "cosmoflow_h100_16_hosts_80",
+    "loops": 6,
+    "config_file": null,
+    "closed": true,
+    "debug": false,
+    "verbose": false,
+    "stream_log_level": "INFO",
+    "allow_invalid_params": false,
+    "what_if": false,
+    "hosts": [
+      "10.57.205.101",
+      "10.57.205.102",
+      "10.57.205.103",
+      "10.57.205.104",
+      "10.57.205.105",
+      "10.57.205.106",
+      "10.57.205.107",
+      "10.57.205.108",
+      "10.57.205.109",
+      "10.57.205.110",
+      "10.57.205.111",
+      "10.57.205.112",
+      "10.57.205.113",
+      "10.57.205.114",
+      "10.57.205.115",
+      "10.57.205.116"
+    ],
+    "model": "cosmoflow",
+    "client_host_memory_in_gb": 64,
+    "exec_type": "mpi",
+    "mpi_bin": "mpirun",
+    "oversubscribe": false,
+    "allow_run_as_root": true,
+    "mpi_params": null,
+    "num_accelerators": 80,
+    "accelerator_type": "h100",
+    "num_client_hosts": 16,
+    "data_dir": "/mnt/data",
+    "params": [
+      "dataset.num_files_train=1943680",
+      "dataset.num_subfolders_train=1920",
+      "reader.read_threads=24"
+    ],
+    "dlio_bin_path": null,
+    "num_processes": 80
+  },
+  "debug": null,
+  "run_datetime": "20250706_045101",
+  "run_number": 0,
+  "runtime": 823.3039965629578,
+  "verification": "closed",
+  "command_output_files": [
+    {
+      "command": "mpirun -n 80 -host 10.57.205.101:5,10.57.205.102:5,10.57.205.103:5,10.57.205.104:5,10.57.205.105:5,10.57.205.106:5,10.57.205.107:5,10.57.205.108:5,10.57.205.109:5,10.57.205.110:5,10.57.205.111:5,10.57.205.112:5,10.57.205.113:5,10.57.205.114:5,10.57.205.115:5,10.57.205.116:5 --allow-run-as-root /home/nutanix/.venvs/myenv/bin/dlio_benchmark workload=cosmoflow_h100 ++hydra.run.dir=cosmoflow_h100_16_hosts_80/training/cosmoflow/run/20250706_045101 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=1943680 ++workload.dataset.num_subfolders_train=1920 ++workload.reader.read_threads=24 ++workload.dataset.data_folder=/mnt/data/cosmoflow --config-dir=/home/nutanix/storage/configs/dlio",
+      "stdout": "cosmoflow_h100_16_hosts_80/training/cosmoflow/run/20250706_045101/training_run.stdout.log",
+      "stderr": "cosmoflow_h100_16_hosts_80/training/cosmoflow/run/20250706_045101/training_run.stderr.log"
+    }
+  ],
+  "run_result_output": "cosmoflow_h100_16_hosts_80/training/cosmoflow/run/20250706_045101",
+  "metadata_filename": "training_20250706_045101_metadata.json",
+  "metadata_file_path": "cosmoflow_h100_16_hosts_80/training/cosmoflow/run/20250706_045101/training_20250706_045101_metadata.json",
+  "_config_name": "cosmoflow_h100",
+  "base_command": "dlio_benchmark",
+  "base_path": "/home/nutanix/.venvs/myenv/bin",
+  "base_command_path": "/home/nutanix/.venvs/myenv/bin/dlio_benchmark",
+  "config_path": "/home/nutanix/storage/configs/dlio",
+  "per_host_mem_kB": null,
+  "total_mem_kB": null,
+  "cluster_information": "<mlpstorage.rules.ClusterInformation object at 0x78e6805663c0>",
+  "config_file": "cosmoflow_h100.yaml",
+  "params_dict": {
+    "dataset.num_files_train": "1943680",
+    "dataset.num_subfolders_train": "1920",
+    "reader.read_threads": "24",
+    "dataset.data_folder": "/mnt/data/cosmoflow"
+  },
+  "yaml_params": {
+    "model": {
+      "name": "cosmoflow"
+    },
+    "framework": "tensorflow",
+    "workflow": {
+      "generate_data": false,
+      "train": true
+    },
+    "dataset": {
+      "data_folder": "data/cosmoflow",
+      "num_files_train": 524288,
+      "num_samples_per_file": 1,
+      "record_length_bytes": 2828486,
+      "record_length_bytes_stdev": 71311,
+      "format": "tfrecord"
+    },
+    "reader": {
+      "data_loader": "tensorflow",
+      "read_threads": 4,
+      "batch_size": 1,
+      "file_shuffle": "seed",
+      "sample_shuffle": "seed",
+      "shuffle_size": 2
+    },
+    "train": {
+      "epochs": 5,
+      "computation_time": 0.0035
+    },
+    "metric": {
+      "au": 0.7
+    }
+  },
+  "combined_params": {
+    "model": {
+      "name": "cosmoflow"
+    },
+    "framework": "tensorflow",
+    "workflow": {
+      "generate_data": false,
+      "train": true
+    },
+    "dataset": {
+      "data_folder": "data/cosmoflow",
+      "num_files_train": "1943680",
+      "num_samples_per_file": 1,
+      "record_length_bytes": 2828486,
+      "record_length_bytes_stdev": 71311,
+      "format": "tfrecord",
+      "num_subfolders_train": "1920"
+    },
+    "reader": {
+      "data_loader": "tensorflow",
+      "read_threads": "24",
+      "batch_size": 1,
+      "file_shuffle": "seed",
+      "sample_shuffle": "seed",
+      "shuffle_size": 2
+    },
+    "train": {
+      "epochs": 5,
+      "computation_time": 0.0035
+    },
+    "metric": {
+      "au": 0.7
+    }
+  },
+  "executed_command": "mpirun -n 80 -host 10.57.205.101:5,10.57.205.102:5,10.57.205.103:5,10.57.205.104:5,10.57.205.105:5,10.57.205.106:5,10.57.205.107:5,10.57.205.108:5,10.57.205.109:5,10.57.205.110:5,10.57.205.111:5,10.57.205.112:5,10.57.205.113:5,10.57.205.114:5,10.57.205.115:5,10.57.205.116:5 --allow-run-as-root /home/nutanix/.venvs/myenv/bin/dlio_benchmark workload=cosmoflow_h100 ++hydra.run.dir=cosmoflow_h100_16_hosts_80/training/cosmoflow/run/20250706_045101 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=1943680 ++workload.dataset.num_subfolders_train=1920 ++workload.reader.read_threads=24 ++workload.dataset.data_folder=/mnt/data/cosmoflow --config-dir=/home/nutanix/storage/configs/dlio",
+  "benchmark_type": "training"
+}

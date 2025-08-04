@@ -1,0 +1,12 @@
+{
+  "submitter": "Alluxio_Storage",
+  "benchmark": "resnet50",
+  "implementation": "alluxio_storage",
+  "system_id": "aws_c5n9xlarge_i3en12xlarge_1c_2s_16h",
+  "framework": "MLPerf Storage v2.0 reference (storage.git)",
+  "storage_backend": "Alluxio 3.6.0 FUSE with AWS S3",
+  "description": "This implementation uses the MLCommons Storage v2.0 reference code with Alluxio 3.6.0 mounted in FUSE mode pointing to AWS S3. NSystem config: 1 clients, 2 servers, 16 total accelerators. No code modifications were made to the MLPerf scripts.",
+  "run_command": "mlpstorage training run --hosts 127.0.0.1 --num-client-hosts 1 --client-host-memory-in-gb 100 --num-accelerators 16 --accelerator-type H100 --model resnet50  --data-dir /mnt/alluxio/alluxio-fuse/s3/resnet50_3742_499GB --results-dir /mnt/test/mlperf/restnet50_results  --param dataset.num_files_train=3742  --allow-run-as-root --oversubscribe ",
+  "timestamp": "2025-06-26T08:13:40Z"
+}
+

@@ -1,0 +1,54 @@
+[OUTPUT] 2025-07-09T14:36:30.395680 Running DLIO [Training & Checkpointing] with 116 process(es)
+[WARNING] Number of files for training in /mnt/data/unet3d/train (955000) is more than requested (407856). A subset of files will be used 
+[WARNING] Number of files for training in /mnt/data/unet3d/train (955000) is more than requested (407856). A subset of files will be used 
+[OUTPUT] 2025-07-09T14:36:34.482988 Model size: 0.000010 GB 
+[OUTPUT] 2025-07-09T14:36:34.483130 Total checkpoint size: 0.000010 GB 
+[OUTPUT] 2025-07-09T14:36:34.518086 Max steps per epoch: 502 = 1 * 407856 / 7 / 116 (samples per file * num files / batch size / comm size)
+[OUTPUT] 2025-07-09T14:36:34.656038 Starting epoch 1: 502 steps expected
+[OUTPUT] 2025-07-09T14:36:34.656257 Starting block 1
+[OUTPUT] 2025-07-09T14:39:32.339148 Ending block 1 - 502 steps completed in 177.68 s
+[OUTPUT] 2025-07-09T14:39:32.342946 Epoch 1 - Block 1 [Training] Accelerator Utilization [AU] (%): 92.9732
+[OUTPUT] 2025-07-09T14:39:32.342994 Epoch 1 - Block 1 [Training] Throughput (samples/second): 2331.7794
+[OUTPUT] 2025-07-09T14:39:32.343021 Epoch 1 - Block 1 [Training] Computation time per step (second): 0.3231+/-0.0002 (set value: {'mean': 0.323})
+[OUTPUT] 2025-07-09T14:39:32.345849 Ending epoch 1 - 502 steps completed in 177.69 s
+[OUTPUT] 2025-07-09T14:39:32.363807 Starting epoch 2: 502 steps expected
+[OUTPUT] 2025-07-09T14:39:32.364031 Starting block 1
+[OUTPUT] 2025-07-09T14:42:32.975212 Ending block 1 - 502 steps completed in 180.61 s
+[OUTPUT] 2025-07-09T14:42:32.976172 Epoch 2 - Block 1 [Training] Accelerator Utilization [AU] (%): 91.3392
+[OUTPUT] 2025-07-09T14:42:32.976204 Epoch 2 - Block 1 [Training] Throughput (samples/second): 2290.6654
+[OUTPUT] 2025-07-09T14:42:32.976227 Epoch 2 - Block 1 [Training] Computation time per step (second): 0.3231+/-0.0003 (set value: {'mean': 0.323})
+[OUTPUT] 2025-07-09T14:42:32.978766 Ending epoch 2 - 502 steps completed in 180.61 s
+[OUTPUT] 2025-07-09T14:42:32.989013 Starting epoch 3: 502 steps expected
+[OUTPUT] 2025-07-09T14:42:32.989188 Starting block 1
+[OUTPUT] 2025-07-09T14:45:31.304201 Ending block 1 - 502 steps completed in 178.32 s
+[OUTPUT] 2025-07-09T14:45:31.305181 Epoch 3 - Block 1 [Training] Accelerator Utilization [AU] (%): 92.3824
+[OUTPUT] 2025-07-09T14:45:31.305216 Epoch 3 - Block 1 [Training] Throughput (samples/second): 2316.9275
+[OUTPUT] 2025-07-09T14:45:31.305238 Epoch 3 - Block 1 [Training] Computation time per step (second): 0.3231+/-0.0002 (set value: {'mean': 0.323})
+[OUTPUT] 2025-07-09T14:45:31.307258 Ending epoch 3 - 502 steps completed in 178.32 s
+[OUTPUT] 2025-07-09T14:45:31.317203 Starting epoch 4: 502 steps expected
+[OUTPUT] 2025-07-09T14:45:31.317456 Starting block 1
+[OUTPUT] 2025-07-09T14:48:28.023208 Ending block 1 - 502 steps completed in 176.71 s
+[OUTPUT] 2025-07-09T14:48:28.024227 Epoch 4 - Block 1 [Training] Accelerator Utilization [AU] (%): 93.4431
+[OUTPUT] 2025-07-09T14:48:28.024289 Epoch 4 - Block 1 [Training] Throughput (samples/second): 2343.5748
+[OUTPUT] 2025-07-09T14:48:28.024336 Epoch 4 - Block 1 [Training] Computation time per step (second): 0.3231+/-0.0002 (set value: {'mean': 0.323})
+[OUTPUT] 2025-07-09T14:48:28.025699 Ending epoch 4 - 502 steps completed in 176.71 s
+[OUTPUT] 2025-07-09T14:48:28.036892 Starting epoch 5: 502 steps expected
+[OUTPUT] 2025-07-09T14:48:28.037110 Starting block 1
+[OUTPUT] 2025-07-09T14:51:25.272436 Ending block 1 - 502 steps completed in 177.24 s
+[OUTPUT] 2025-07-09T14:51:25.273481 Epoch 5 - Block 1 [Training] Accelerator Utilization [AU] (%): 93.0174
+[OUTPUT] 2025-07-09T14:51:25.273544 Epoch 5 - Block 1 [Training] Throughput (samples/second): 2332.8215
+[OUTPUT] 2025-07-09T14:51:25.273589 Epoch 5 - Block 1 [Training] Computation time per step (second): 0.3231+/-0.0002 (set value: {'mean': 0.323})
+[OUTPUT] 2025-07-09T14:51:25.273970 Starting saving checkpoint 1 after total step 502 for epoch 5
+[OUTPUT] 2025-07-09T14:51:25.275952 Finished saving checkpoint 1 for epoch 5 in 0.0020 s; Throughput: 0.0048 GB/s
+[OUTPUT] 2025-07-09T14:51:25.277892 Ending epoch 5 - 502 steps completed in 177.24 s
+[OUTPUT] 2025-07-09T14:51:25.287354 Saved outputs in /home/nutanix/SUBMISSION/unet3d_h100_58_hosts_116/training/unet3d/run/20250709_143625
+[OUTPUT] Averaged metric over all steps/epochs
+[METRIC] ==========================================================
+[METRIC] Number of Simulated Accelerators: 116 
+[METRIC] Training Accelerator Utilization [AU] (%): 92.8230 (0.7311)
+[METRIC] Training Throughput (samples/second): 2327.8782 (18.3442)
+[METRIC] Training I/O Throughput (MB/second): 325458.9122 (2564.6925)
+[METRIC] train_au_meet_expectation: success
+[METRIC] ==========================================================
+
+[OUTPUT] 2025-07-09T14:51:25.294006 outputs saved in RANKID_output.json

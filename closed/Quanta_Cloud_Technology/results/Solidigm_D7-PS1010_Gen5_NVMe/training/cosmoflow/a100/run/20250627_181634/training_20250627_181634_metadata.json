@@ -1,0 +1,134 @@
+{
+  "args": {
+    "program": "training",
+    "command": "run",
+    "results_dir": "/scratch/mlperf_storage_v2.0/results_PS1010",
+    "loops": 1,
+    "config_file": null,
+    "closed": true,
+    "debug": false,
+    "verbose": false,
+    "stream_log_level": "INFO",
+    "allow_invalid_params": false,
+    "what_if": false,
+    "hosts": [
+      "localhost"
+    ],
+    "model": "cosmoflow",
+    "client_host_memory_in_gb": 256,
+    "exec_type": "mpi",
+    "mpi_bin": "mpirun",
+    "oversubscribe": true,
+    "allow_run_as_root": false,
+    "mpi_params": [
+      "--mca pml ucx --mca btl ^tcp,openib"
+    ],
+    "num_accelerators": 37,
+    "accelerator_type": "a100",
+    "num_client_hosts": null,
+    "data_dir": "/PS1010",
+    "params": [
+      "dataset.num_files_train=485909",
+      "reader.read_threads=4"
+    ],
+    "dlio_bin_path": null,
+    "num_processes": 37
+  },
+  "debug": null,
+  "run_datetime": "20250627_181634",
+  "run_number": 0,
+  "runtime": 579.5226652622223,
+  "verification": "closed",
+  "command_output_files": [
+    {
+      "command": "mpirun -n 37 -host localhost:37 --oversubscribe --mca pml ucx --mca btl ^tcp,openib /scratch/mlperf_storage_v2.0/mlperf_storage_ompi4/bin/dlio_benchmark workload=cosmoflow_a100 ++hydra.run.dir=/scratch/mlperf_storage_v2.0/results_PS1010/training/cosmoflow/run/20250627_181634 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=485909 ++workload.reader.read_threads=4 ++workload.dataset.data_folder=/PS1010/cosmoflow --config-dir=/scratch/mlperf_storage_v2.0/storage/configs/dlio",
+      "stdout": "/scratch/mlperf_storage_v2.0/results_PS1010/training/cosmoflow/run/20250627_181634/training_run.stdout.log",
+      "stderr": "/scratch/mlperf_storage_v2.0/results_PS1010/training/cosmoflow/run/20250627_181634/training_run.stderr.log"
+    }
+  ],
+  "run_result_output": "/scratch/mlperf_storage_v2.0/results_PS1010/training/cosmoflow/run/20250627_181634",
+  "metadata_filename": "training_20250627_181634_metadata.json",
+  "metadata_file_path": "/scratch/mlperf_storage_v2.0/results_PS1010/training/cosmoflow/run/20250627_181634/training_20250627_181634_metadata.json",
+  "_config_name": "cosmoflow_a100",
+  "base_command": "dlio_benchmark",
+  "base_path": "/scratch/mlperf_storage_v2.0/mlperf_storage_ompi4/bin",
+  "base_command_path": "/scratch/mlperf_storage_v2.0/mlperf_storage_ompi4/bin/dlio_benchmark",
+  "config_path": "/scratch/mlperf_storage_v2.0/storage/configs/dlio",
+  "per_host_mem_kB": null,
+  "total_mem_kB": null,
+  "cluster_information": "<mlpstorage.rules.ClusterInformation object at 0x149ded0aa190>",
+  "config_file": "cosmoflow_a100.yaml",
+  "params_dict": {
+    "dataset.num_files_train": "485909",
+    "reader.read_threads": "4",
+    "dataset.data_folder": "/PS1010/cosmoflow"
+  },
+  "yaml_params": {
+    "model": {
+      "name": "cosmoflow"
+    },
+    "framework": "tensorflow",
+    "workflow": {
+      "generate_data": false,
+      "train": true
+    },
+    "dataset": {
+      "data_folder": "data/cosmoflow",
+      "num_files_train": 524288,
+      "num_samples_per_file": 1,
+      "record_length_bytes": 2828486,
+      "record_length_bytes_stdev": 71311,
+      "format": "tfrecord"
+    },
+    "reader": {
+      "data_loader": "tensorflow",
+      "read_threads": 4,
+      "batch_size": 1,
+      "file_shuffle": "seed",
+      "sample_shuffle": "seed",
+      "shuffle_size": 2
+    },
+    "train": {
+      "epochs": 5,
+      "computation_time": 0.00551
+    },
+    "metric": {
+      "au": 0.7
+    }
+  },
+  "combined_params": {
+    "model": {
+      "name": "cosmoflow"
+    },
+    "framework": "tensorflow",
+    "workflow": {
+      "generate_data": false,
+      "train": true
+    },
+    "dataset": {
+      "data_folder": "data/cosmoflow",
+      "num_files_train": "485909",
+      "num_samples_per_file": 1,
+      "record_length_bytes": 2828486,
+      "record_length_bytes_stdev": 71311,
+      "format": "tfrecord"
+    },
+    "reader": {
+      "data_loader": "tensorflow",
+      "read_threads": "4",
+      "batch_size": 1,
+      "file_shuffle": "seed",
+      "sample_shuffle": "seed",
+      "shuffle_size": 2
+    },
+    "train": {
+      "epochs": 5,
+      "computation_time": 0.00551
+    },
+    "metric": {
+      "au": 0.7
+    }
+  },
+  "executed_command": "mpirun -n 37 -host localhost:37 --oversubscribe --mca pml ucx --mca btl ^tcp,openib /scratch/mlperf_storage_v2.0/mlperf_storage_ompi4/bin/dlio_benchmark workload=cosmoflow_a100 ++hydra.run.dir=/scratch/mlperf_storage_v2.0/results_PS1010/training/cosmoflow/run/20250627_181634 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=485909 ++workload.reader.read_threads=4 ++workload.dataset.data_folder=/PS1010/cosmoflow --config-dir=/scratch/mlperf_storage_v2.0/storage/configs/dlio",
+  "benchmark_type": "training"
+}

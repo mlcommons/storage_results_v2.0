@@ -1,0 +1,160 @@
+System:
+  name: Data24_PEAK_48Drive_1Node
+  description: Western Digital Data24-4200 + Peak:AIO Data Server
+  storage_location: remote
+  client_software: in-box
+  storage_interface: block
+  required_rack_units: 8
+  shared_capabilities:
+    multi_host_support: True            # False is used for local storage
+    simultaneous_write_support: False   # Are simultaneous writes by multiple hosts supported in the submitted configuration
+    simultaneous_read_support: True    # Are simultaneous reads by multiple hosts supported in the submitted configuration
+  max_sequential_read: # Optional - GiB/s
+  max_sequential_write: # Optional - GiB/s
+  max_random_read: # Optional - GiB/s
+  max_random_write: # Optional - GiB/s
+
+  use_local_storage: false
+  integrated_client_storage: none                  # Describe the storage present PER NODE in client nodes for the solution
+  num_clients_with_integrated_storage: 0           # Number of clients with integrated storage
+
+  # The following will map to the "Storage System Type" column in the results table. If "use_local_drives" is True,
+  #   then "Local File + " will be prepended to the storage type
+  system_architecture: fabric-attached block         
+  useable_capacity: 670      #   TiB
+
+
+PowerRequirements:
+  peakaio_server:
+    quantity: 1
+    psu1_nameplate_power: 1200
+    design_power: 1200
+    num_active_psus: 1
+
+  # All storage nodes need to be listed (data, metadata, etc) as well as any required backed switching
+  ebof:
+    quantity: 2
+    psu1_nameplate_power: 800
+    psu2_nameplate_power: 800
+    design_power: 800
+    num_active_psus: 2
+    num_passive_psus: 1
+  backend_switch:
+    quantity: 1
+    psu1_nameplate_power: 1100   # network PSU
+    psu2_nameplate_power: 1100   # network PSU
+    design_power: 1100
+    num_active_psus: 2
+    num_passive_psus: 1
+
+# All nodes used need to be listed. Clients, Data storage, metadata, front-end, back-end, etc
+Nodes:
+  # Useful name for the client describing it's role in the system under test
+  dlio_client:  # This can be DLIO Client, storage node, storage controller, AwesomeMarketingName_Type1, etc
+    quantity: 1  # How many of this node
+    hardware:
+      model: SMC 521-GE-TNRT
+      rack_units: 5
+      power_supplies: 2
+      psu_configuration: active/passive
+      psu_rating: 2700
+      memory_capacity: 1024GB
+      memory_configuration: 16x64GB
+      cpu_qty: 2
+      cpu_model: Intel Xeon Platinum 8462Y
+      cpu_cores: 32
+    networking:
+      management:
+        model: intel x710
+        speed: 1Gbps
+        qty: 1
+      fabric:
+        model: Mellanox ConnectX-7
+        speed: 2x 100Gbps
+        qty: 4
+    operating_system:
+      name: Ubuntu
+      version: 22.04 LTS
+      release_date: 2024-04-21
+      kernel_version: 5.15.0-56-generic
+      cpu_architecture: x86_64
+    tuning:
+      # All non-default tunings for OS need to be listed
+      hyperthreads: disabled
+      turbo: enabled
+      mpi_configuration:
+        environment_variables: Defaults
+        version: Open MPI 4.1.2
+      sysctl_parameters:
+        vm.swappiness: 0
+        vm.dirty_bytes: 50000000
+        dev.raid.speed_limit_max: 5000000
+        dev.raid.speed_limit_min: 50000
+        net.ipv4.tcp_timestamps: 0
+        net.ipv4.tcp_sack: 1
+        net.core.netdev_max_backlog: 250000
+        net.core.rmem_max: 268435456
+        net.core.wmem_max: 268435456
+        net.core.rmem_default: 4194304
+        net.core.wmem_default: 4194304
+        net.core.optmem_max: 4194304
+        net.ipv4.tcp_rmem: 4096 87380 134217728
+        net.ipv4.tcp_wmem: 4096 65536 134217728
+        net.ipv4.tcp_low_latency: 1
+        net.ipv4.tcp_adv_win_scale: 1
+        net.ipv4.tcp_mtu_probing: 1
+        net.ipv6.conf.all.disable_ipv6: 1
+        net.ipv6.conf.default.disable_ipv6: 1
+        net.ipv6.conf.lo.disable_ipv6: 1
+        fs.aio-max-nr: 1048576
+
+  peakaio_server:  # This can be DLIO Client, storage node, storage controller, AwesomeMarketingName_Type1, etc
+    quantity: 1  # How many of this node
+    hardware:
+      model: ASUS WS
+      rack_units: 4
+      power_supplies: 1
+      psu_configuration: active
+      psu_rating: 1200
+      memory_capacity: 512GB
+      memory_configuration: 8x64GB
+      cpu_qty: 1
+      cpu_model: Intel W9-3475X
+      cpu_cores: 36
+    networking:
+      management:
+        model: intel igc
+        speed: 1Gbps
+        qty: 1
+      fabric:
+        model: Mellanox ConnectX-7
+        speed: 2x 100Gbps
+        qty: 6
+    operating_system:
+      name: Peak AIO Data Server (Ubuntu based)
+      version: 24.04 LTS
+      release_date: 2024-04-25
+      kernel_version: 6.8.0-62-generic
+      cpu_architecture: x86_64
+
+  ebof: # This can be DLIO Client, storage node, storage controller, AwesomeMarketingName_Type1, etc
+    quantity: 2  # How many of this node
+    hardware:
+      model: WDC OpenFlex Data24-4200
+      rack_units: 2
+      power_supplies: 2
+      psu_configuration: active/passive
+      psu_rating: 800
+    networking:
+      management:
+        model: unknown
+        speed: 1Gbps
+        qty: 2
+      fabric:
+        speed: 100Gbps
+        qty: 12
+    drives:
+      model: Western Digital Corporation SN655 15.36T
+      qty: 24
+
+

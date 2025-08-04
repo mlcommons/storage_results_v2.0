@@ -1,0 +1,132 @@
+{
+  "args": {
+    "program": "training",
+    "command": "run",
+    "results_dir": "node1_resnet50_h100_128_results",
+    "loops": 1,
+    "config_file": null,
+    "closed": true,
+    "debug": false,
+    "verbose": false,
+    "stream_log_level": "INFO",
+    "allow_invalid_params": false,
+    "what_if": false,
+    "hosts": [
+      "10.75.70.226"
+    ],
+    "model": "resnet50",
+    "client_host_memory_in_gb": 503,
+    "exec_type": "mpi",
+    "mpi_bin": "mpirun",
+    "oversubscribe": false,
+    "allow_run_as_root": false,
+    "mpi_params": null,
+    "num_accelerators": 128,
+    "accelerator_type": "h100",
+    "num_client_hosts": 1,
+    "data_dir": "/mnt/mlperfbenchmark",
+    "params": [
+      "dataset.num_files_train=20463",
+      "reader.computation_threads=8",
+      "reader.read_threads=6"
+    ],
+    "dlio_bin_path": null,
+    "num_processes": 128
+  },
+  "debug": null,
+  "run_datetime": "20250710_173014",
+  "run_number": 0,
+  "runtime": 633.2976722717285,
+  "verification": "closed",
+  "command_output_files": [
+    {
+      "command": "mpirun -n 128 -host 10.75.70.226:128 /root/.venvs/myenv/bin/dlio_benchmark workload=resnet50_h100 ++hydra.run.dir=node1_resnet50_h100_128_results/training/resnet50/run/20250710_173014 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=20463 ++workload.reader.computation_threads=8 ++workload.reader.read_threads=6 ++workload.dataset.data_folder=/mnt/mlperfbenchmark/resnet50 --config-dir=/root/expontech/storage/configs/dlio",
+      "stdout": "node1_resnet50_h100_128_results/training/resnet50/run/20250710_173014/training_run.stdout.log",
+      "stderr": "node1_resnet50_h100_128_results/training/resnet50/run/20250710_173014/training_run.stderr.log"
+    }
+  ],
+  "run_result_output": "node1_resnet50_h100_128_results/training/resnet50/run/20250710_173014",
+  "metadata_filename": "training_20250710_173014_metadata.json",
+  "metadata_file_path": "node1_resnet50_h100_128_results/training/resnet50/run/20250710_173014/training_20250710_173014_metadata.json",
+  "_config_name": "resnet50_h100",
+  "base_command": "dlio_benchmark",
+  "base_path": "/root/.venvs/myenv/bin",
+  "base_command_path": "/root/.venvs/myenv/bin/dlio_benchmark",
+  "config_path": "/root/expontech/storage/configs/dlio",
+  "per_host_mem_kB": null,
+  "total_mem_kB": null,
+  "cluster_information": "<mlpstorage.rules.ClusterInformation object at 0x7154013c7cb0>",
+  "config_file": "resnet50_h100.yaml",
+  "params_dict": {
+    "dataset.num_files_train": "20463",
+    "reader.computation_threads": "8",
+    "reader.read_threads": "6",
+    "dataset.data_folder": "/mnt/mlperfbenchmark/resnet50"
+  },
+  "yaml_params": {
+    "model": {
+      "name": "resnet50",
+      "type": "cnn"
+    },
+    "framework": "tensorflow",
+    "workflow": {
+      "generate_data": false,
+      "train": true
+    },
+    "dataset": {
+      "num_files_train": 1024,
+      "num_samples_per_file": 1251,
+      "record_length_bytes": 114660.07,
+      "record_length_bytes_resize": 150528,
+      "data_folder": "data/resnet50",
+      "format": "tfrecord"
+    },
+    "train": {
+      "computation_time": 0.224,
+      "epochs": 5
+    },
+    "reader": {
+      "data_loader": "tensorflow",
+      "read_threads": 8,
+      "computation_threads": 8,
+      "batch_size": 400
+    },
+    "metric": {
+      "au": 0.9
+    }
+  },
+  "combined_params": {
+    "model": {
+      "name": "resnet50",
+      "type": "cnn"
+    },
+    "framework": "tensorflow",
+    "workflow": {
+      "generate_data": false,
+      "train": true
+    },
+    "dataset": {
+      "num_files_train": "20463",
+      "num_samples_per_file": 1251,
+      "record_length_bytes": 114660.07,
+      "record_length_bytes_resize": 150528,
+      "data_folder": "data/resnet50",
+      "format": "tfrecord"
+    },
+    "train": {
+      "computation_time": 0.224,
+      "epochs": 5
+    },
+    "reader": {
+      "data_loader": "tensorflow",
+      "read_threads": "6",
+      "computation_threads": "8",
+      "batch_size": 400
+    },
+    "metric": {
+      "au": 0.9
+    }
+  },
+  "executed_command": "mpirun -n 128 -host 10.75.70.226:128 /root/.venvs/myenv/bin/dlio_benchmark workload=resnet50_h100 ++hydra.run.dir=node1_resnet50_h100_128_results/training/resnet50/run/20250710_173014 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=20463 ++workload.reader.computation_threads=8 ++workload.reader.read_threads=6 ++workload.dataset.data_folder=/mnt/mlperfbenchmark/resnet50 --config-dir=/root/expontech/storage/configs/dlio",
+  "benchmark_type": "training"
+}

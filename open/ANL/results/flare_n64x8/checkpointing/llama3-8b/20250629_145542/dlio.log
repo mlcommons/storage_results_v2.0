@@ -1,0 +1,56 @@
+[OUTPUT] 2025-06-29T14:59:36.341288 Running DLIO [Checkpointing] with 512 process(es)
+[OUTPUT] 2025-06-29T14:59:36.778125 Total number of parameters in the model: 8030261248
+[OUTPUT] 2025-06-29T14:59:37.739028 Model size: 14.957527 GB 
+[OUTPUT] 2025-06-29T14:59:37.739155 Optimizer state size: 89.862350 GB 
+[OUTPUT] 2025-06-29T14:59:37.739197 Total checkpoint size: 104.819878 GB 
+[OUTPUT] 2025-06-29T14:59:37.742960 Checkpointing read started
+[OUTPUT] 2025-06-29T14:59:42.750030 Starting loading checkpoint 1 after total step 1 for epoch 1
+[OUTPUT] 2025-06-29T14:59:45.322195 Loaded model checkpoint in 2.5667 seconds
+[OUTPUT] 2025-06-29T14:59:45.938306 Loaded optimizer checkpoint in 0.6159 seconds
+[OUTPUT] 2025-06-29T14:59:45.938485 Finished loading checkpoint 1 for epoch 1 in 3.1885 s; Throughput: 32.8748 GB/s
+[OUTPUT] 2025-06-29T14:59:51.313675 Starting loading checkpoint 2 after total step 2 for epoch 1
+[OUTPUT] 2025-06-29T14:59:51.531811 Loaded model checkpoint in 0.2142 seconds
+[OUTPUT] 2025-06-29T14:59:52.014650 Loaded optimizer checkpoint in 0.4827 seconds
+[OUTPUT] 2025-06-29T14:59:52.014826 Finished loading checkpoint 2 for epoch 1 in 0.7012 s; Throughput: 149.4969 GB/s
+[OUTPUT] 2025-06-29T14:59:57.413810 Starting loading checkpoint 3 after total step 3 for epoch 1
+[OUTPUT] 2025-06-29T14:59:57.589795 Loaded model checkpoint in 0.1731 seconds
+[OUTPUT] 2025-06-29T14:59:58.067485 Loaded optimizer checkpoint in 0.4775 seconds
+[OUTPUT] 2025-06-29T14:59:58.067665 Finished loading checkpoint 3 for epoch 1 in 0.6539 s; Throughput: 160.3106 GB/s
+[OUTPUT] 2025-06-29T15:00:03.404538 Starting loading checkpoint 4 after total step 4 for epoch 1
+[OUTPUT] 2025-06-29T15:00:03.581817 Loaded model checkpoint in 0.1731 seconds
+[OUTPUT] 2025-06-29T15:00:04.190461 Loaded optimizer checkpoint in 0.6085 seconds
+[OUTPUT] 2025-06-29T15:00:04.190653 Finished loading checkpoint 4 for epoch 1 in 0.7861 s; Throughput: 133.3391 GB/s
+[OUTPUT] 2025-06-29T15:00:14.215475 Starting loading checkpoint 5 after total step 5 for epoch 1
+[OUTPUT] 2025-06-29T15:00:14.392570 Loaded model checkpoint in 0.1724 seconds
+[OUTPUT] 2025-06-29T15:00:15.034732 Loaded optimizer checkpoint in 0.6420 seconds
+[OUTPUT] 2025-06-29T15:00:15.034902 Finished loading checkpoint 5 for epoch 1 in 0.8194 s; Throughput: 127.9185 GB/s
+[OUTPUT] 2025-06-29T15:00:20.431495 Starting loading checkpoint 6 after total step 6 for epoch 1
+[OUTPUT] 2025-06-29T15:00:20.638772 Loaded model checkpoint in 0.2038 seconds
+[OUTPUT] 2025-06-29T15:00:21.187283 Loaded optimizer checkpoint in 0.5483 seconds
+[OUTPUT] 2025-06-29T15:00:21.187461 Finished loading checkpoint 6 for epoch 1 in 0.7560 s; Throughput: 138.6569 GB/s
+[OUTPUT] 2025-06-29T15:00:27.956288 Starting loading checkpoint 7 after total step 7 for epoch 1
+[OUTPUT] 2025-06-29T15:00:28.254812 Loaded model checkpoint in 0.2959 seconds
+[OUTPUT] 2025-06-29T15:00:28.823425 Loaded optimizer checkpoint in 0.5684 seconds
+[OUTPUT] 2025-06-29T15:00:28.823607 Finished loading checkpoint 7 for epoch 1 in 0.8673 s; Throughput: 120.8550 GB/s
+[OUTPUT] 2025-06-29T15:00:34.852774 Starting loading checkpoint 8 after total step 8 for epoch 1
+[OUTPUT] 2025-06-29T15:00:35.080995 Loaded model checkpoint in 0.2256 seconds
+[OUTPUT] 2025-06-29T15:00:35.815014 Loaded optimizer checkpoint in 0.7339 seconds
+[OUTPUT] 2025-06-29T15:00:35.815190 Finished loading checkpoint 8 for epoch 1 in 0.9624 s; Throughput: 108.9133 GB/s
+[OUTPUT] 2025-06-29T15:00:41.297095 Starting loading checkpoint 9 after total step 9 for epoch 1
+[OUTPUT] 2025-06-29T15:00:41.494659 Loaded model checkpoint in 0.1946 seconds
+[OUTPUT] 2025-06-29T15:00:42.153451 Loaded optimizer checkpoint in 0.6586 seconds
+[OUTPUT] 2025-06-29T15:00:42.153625 Finished loading checkpoint 9 for epoch 1 in 0.8565 s; Throughput: 122.3774 GB/s
+[OUTPUT] 2025-06-29T15:00:47.609415 Starting loading checkpoint 10 after total step 10 for epoch 1
+[OUTPUT] 2025-06-29T15:00:47.831942 Loaded model checkpoint in 0.2137 seconds
+[OUTPUT] 2025-06-29T15:00:48.786614 Loaded optimizer checkpoint in 0.9545 seconds
+[OUTPUT] 2025-06-29T15:00:48.786788 Finished loading checkpoint 10 for epoch 1 in 1.1774 s; Throughput: 89.0286 GB/s
+[OUTPUT] 2025-06-29T15:00:48.787761 Checkpointing write started
+[OUTPUT] 2025-06-29T15:00:49.062814 Saved outputs in /lus/flare/projects/Aurora_deployment/hzheng/mlperf_storage/2025/mlperf_storage_v2.0_submission/results/flare/n64x8/checkpointing/llama3-8b/20250629_145542
+[OUTPUT] Averaged metric over all steps/epochs
+[METRIC] ==========================================================
+[METRIC] Number of Simulated Accelerators: 512 
+[METRIC] Checkpoint load duration (seconds): 1.0769 (0.7175)
+[METRIC] Checkpoint load I/O Throughput (GB/second): 118.3771 (34.2589)
+[METRIC] ==========================================================
+
+[OUTPUT] 2025-06-29T15:00:49.108459 outputs saved in RANKID_output.json

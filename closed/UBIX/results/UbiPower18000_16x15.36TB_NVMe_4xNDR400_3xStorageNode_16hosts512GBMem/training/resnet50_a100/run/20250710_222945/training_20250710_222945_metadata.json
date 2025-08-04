@@ -1,0 +1,153 @@
+{
+  "args": {
+    "program": "training",
+    "command": "run",
+    "results_dir": "/root/mlpstorage_test_results/training_resnet50_a100_3120acc",
+    "loops": 5,
+    "config_file": null,
+    "closed": true,
+    "debug": false,
+    "verbose": false,
+    "stream_log_level": "INFO",
+    "allow_invalid_params": false,
+    "what_if": false,
+    "hosts": [
+      "10.20.1.1",
+      "10.20.1.2",
+      "10.20.1.4",
+      "10.20.1.5",
+      "10.20.1.6",
+      "10.20.1.7",
+      "10.20.1.8",
+      "10.20.1.9",
+      "10.20.1.10",
+      "10.20.1.11",
+      "10.20.1.12",
+      "10.20.1.13",
+      "10.20.1.14",
+      "10.20.1.15",
+      "10.20.1.16",
+      "10.20.1.17"
+    ],
+    "model": "resnet50",
+    "client_host_memory_in_gb": 512,
+    "exec_type": "mpi",
+    "mpi_bin": "mpirun",
+    "oversubscribe": true,
+    "allow_run_as_root": true,
+    "mpi_params": null,
+    "num_accelerators": 3120,
+    "accelerator_type": "a100",
+    "num_client_hosts": 16,
+    "data_dir": "/mnt/ubix_mlperf/resnet50_n498801",
+    "params": [
+      "dataset.num_files_train=498801",
+      "reader.read_threads=1",
+      "dataset.num_subfolders_train=49",
+      "reader.transfer_size=1048576"
+    ],
+    "dlio_bin_path": null,
+    "num_processes": 3120
+  },
+  "debug": null,
+  "run_datetime": "20250710_222945",
+  "run_number": 0,
+  "runtime": 1395.7492101192474,
+  "verification": "closed",
+  "command_output_files": [
+    {
+      "command": "mpirun -n 3120 -host 10.20.1.1:195,10.20.1.2:195,10.20.1.4:195,10.20.1.5:195,10.20.1.6:195,10.20.1.7:195,10.20.1.8:195,10.20.1.9:195,10.20.1.10:195,10.20.1.11:195,10.20.1.12:195,10.20.1.13:195,10.20.1.14:195,10.20.1.15:195,10.20.1.16:195,10.20.1.17:195 --oversubscribe --allow-run-as-root /root/.venvs/MLPerfStorageV2/bin/dlio_benchmark workload=resnet50_a100 ++hydra.run.dir=/root/mlpstorage_test_results/training_resnet50_a100_3120acc/training/resnet50/run/20250710_222945 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=498801 ++workload.reader.read_threads=1 ++workload.dataset.num_subfolders_train=49 ++workload.reader.transfer_size=1048576 ++workload.dataset.data_folder=/mnt/ubix_mlperf/resnet50_n498801/resnet50 --config-dir=/root/.venvs/MLPerfStorageV2/lib/python3.10/site-packages/configs/dlio",
+      "stdout": "/root/mlpstorage_test_results/training_resnet50_a100_3120acc/training/resnet50/run/20250710_222945/training_run.stdout.log",
+      "stderr": "/root/mlpstorage_test_results/training_resnet50_a100_3120acc/training/resnet50/run/20250710_222945/training_run.stderr.log"
+    }
+  ],
+  "run_result_output": "/root/mlpstorage_test_results/training_resnet50_a100_3120acc/training/resnet50/run/20250710_222945",
+  "metadata_filename": "training_20250710_222945_metadata.json",
+  "metadata_file_path": "/root/mlpstorage_test_results/training_resnet50_a100_3120acc/training/resnet50/run/20250710_222945/training_20250710_222945_metadata.json",
+  "_config_name": "resnet50_a100",
+  "base_command": "dlio_benchmark",
+  "base_path": "/root/.venvs/MLPerfStorageV2/bin",
+  "base_command_path": "/root/.venvs/MLPerfStorageV2/bin/dlio_benchmark",
+  "config_path": "/root/.venvs/MLPerfStorageV2/lib/python3.10/site-packages/configs/dlio",
+  "per_host_mem_kB": null,
+  "total_mem_kB": null,
+  "cluster_information": "<mlpstorage.rules.ClusterInformation object at 0x152be4639000>",
+  "config_file": "resnet50_a100.yaml",
+  "params_dict": {
+    "dataset.num_files_train": "498801",
+    "reader.read_threads": "1",
+    "dataset.num_subfolders_train": "49",
+    "reader.transfer_size": "1048576",
+    "dataset.data_folder": "/mnt/ubix_mlperf/resnet50_n498801/resnet50"
+  },
+  "yaml_params": {
+    "model": {
+      "name": "resnet50",
+      "type": "cnn"
+    },
+    "framework": "tensorflow",
+    "workflow": {
+      "generate_data": false,
+      "train": true
+    },
+    "dataset": {
+      "num_files_train": 1024,
+      "num_samples_per_file": 1251,
+      "record_length_bytes": 114660.07,
+      "record_length_bytes_resize": 150528,
+      "data_folder": "data/resnet50",
+      "format": "tfrecord"
+    },
+    "train": {
+      "computation_time": 0.435,
+      "epochs": 5
+    },
+    "reader": {
+      "data_loader": "tensorflow",
+      "read_threads": 8,
+      "computation_threads": 8,
+      "batch_size": 400,
+      "dont_use_mmap": true
+    },
+    "metric": {
+      "au": 0.9
+    }
+  },
+  "combined_params": {
+    "model": {
+      "name": "resnet50",
+      "type": "cnn"
+    },
+    "framework": "tensorflow",
+    "workflow": {
+      "generate_data": false,
+      "train": true
+    },
+    "dataset": {
+      "num_files_train": "498801",
+      "num_samples_per_file": 1251,
+      "record_length_bytes": 114660.07,
+      "record_length_bytes_resize": 150528,
+      "data_folder": "data/resnet50",
+      "format": "tfrecord",
+      "num_subfolders_train": "49"
+    },
+    "train": {
+      "computation_time": 0.435,
+      "epochs": 5
+    },
+    "reader": {
+      "data_loader": "tensorflow",
+      "read_threads": "1",
+      "computation_threads": 8,
+      "batch_size": 400,
+      "dont_use_mmap": true,
+      "transfer_size": "1048576"
+    },
+    "metric": {
+      "au": 0.9
+    }
+  },
+  "executed_command": "mpirun -n 3120 -host 10.20.1.1:195,10.20.1.2:195,10.20.1.4:195,10.20.1.5:195,10.20.1.6:195,10.20.1.7:195,10.20.1.8:195,10.20.1.9:195,10.20.1.10:195,10.20.1.11:195,10.20.1.12:195,10.20.1.13:195,10.20.1.14:195,10.20.1.15:195,10.20.1.16:195,10.20.1.17:195 --oversubscribe --allow-run-as-root /root/.venvs/MLPerfStorageV2/bin/dlio_benchmark workload=resnet50_a100 ++hydra.run.dir=/root/mlpstorage_test_results/training_resnet50_a100_3120acc/training/resnet50/run/20250710_222945 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=498801 ++workload.reader.read_threads=1 ++workload.dataset.num_subfolders_train=49 ++workload.reader.transfer_size=1048576 ++workload.dataset.data_folder=/mnt/ubix_mlperf/resnet50_n498801/resnet50 --config-dir=/root/.venvs/MLPerfStorageV2/lib/python3.10/site-packages/configs/dlio",
+  "benchmark_type": "training"
+}

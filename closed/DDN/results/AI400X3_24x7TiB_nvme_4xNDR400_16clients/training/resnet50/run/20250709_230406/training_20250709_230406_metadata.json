@@ -1,0 +1,161 @@
+{
+  "args": {
+    "program": "training",
+    "command": "run",
+    "results_dir": "logs_1752099416/result_resnet50_16_40accperclient_h100_iter2_1752099416",
+    "loops": 1,
+    "config_file": null,
+    "closed": true,
+    "debug": false,
+    "verbose": false,
+    "stream_log_level": "INFO",
+    "allow_invalid_params": false,
+    "what_if": false,
+    "hosts": [
+      "c222",
+      "c226",
+      "c216",
+      "c230",
+      "c223",
+      "c217",
+      "c227",
+      "c231",
+      "c220",
+      "c224",
+      "c228",
+      "c218",
+      "c219",
+      "c225",
+      "c221",
+      "c229"
+    ],
+    "model": "resnet50",
+    "client_host_memory_in_gb": 202,
+    "exec_type": "mpi",
+    "mpi_bin": "mpirun",
+    "oversubscribe": false,
+    "allow_run_as_root": false,
+    "mpi_params": null,
+    "num_accelerators": 640,
+    "accelerator_type": "h100",
+    "num_client_hosts": 16,
+    "data_dir": "/lustre/x3e03/client/datagen_resnet50_h100",
+    "params": [
+      "dataset.num_files_train=120969",
+      "storage.storage_type=local_fs",
+      "storage.storage_root=/lustre/x3e03/client",
+      "reader.read_threads=1",
+      "reader.transfer_size=8388608",
+      "checkpoint.checkpoint_folder=/lustre/x3e03/client/checkpoint_resnet50_h100"
+    ],
+    "dlio_bin_path": null,
+    "num_processes": 640
+  },
+  "debug": null,
+  "run_datetime": "20250709_230406",
+  "run_number": 0,
+  "runtime": 1124.723079919815,
+  "verification": "closed",
+  "command_output_files": [
+    {
+      "command": "mpirun -n 640 -host c222:40,c226:40,c216:40,c230:40,c223:40,c217:40,c227:40,c231:40,c220:40,c224:40,c228:40,c218:40,c219:40,c225:40,c221:40,c229:40 /home/ldouriez/MLPERFv2/storage/venv/bin/dlio_benchmark workload=resnet50_h100 ++hydra.run.dir=logs_1752099416/result_resnet50_16_40accperclient_h100_iter2_1752099416/training/resnet50/run/20250709_230406 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=120969 ++workload.storage.storage_type=local_fs ++workload.storage.storage_root=/lustre/x3e03/client ++workload.reader.read_threads=1 ++workload.reader.transfer_size=8388608 ++workload.checkpoint.checkpoint_folder=/lustre/x3e03/client/checkpoint_resnet50_h100 ++workload.dataset.data_folder=/lustre/x3e03/client/datagen_resnet50_h100/resnet50 --config-dir=/home/ldouriez/MLPERFv2/storage/configs/dlio",
+      "stdout": "logs_1752099416/result_resnet50_16_40accperclient_h100_iter2_1752099416/training/resnet50/run/20250709_230406/training_run.stdout.log",
+      "stderr": "logs_1752099416/result_resnet50_16_40accperclient_h100_iter2_1752099416/training/resnet50/run/20250709_230406/training_run.stderr.log"
+    }
+  ],
+  "run_result_output": "logs_1752099416/result_resnet50_16_40accperclient_h100_iter2_1752099416/training/resnet50/run/20250709_230406",
+  "metadata_filename": "training_20250709_230406_metadata.json",
+  "metadata_file_path": "logs_1752099416/result_resnet50_16_40accperclient_h100_iter2_1752099416/training/resnet50/run/20250709_230406/training_20250709_230406_metadata.json",
+  "_config_name": "resnet50_h100",
+  "base_command": "dlio_benchmark",
+  "base_path": "/home/ldouriez/MLPERFv2/storage/venv/bin",
+  "base_command_path": "/home/ldouriez/MLPERFv2/storage/venv/bin/dlio_benchmark",
+  "config_path": "/home/ldouriez/MLPERFv2/storage/configs/dlio",
+  "per_host_mem_kB": null,
+  "total_mem_kB": null,
+  "cluster_information": "<mlpstorage.rules.ClusterInformation object at 0x7f19176e0620>",
+  "config_file": "resnet50_h100.yaml",
+  "params_dict": {
+    "dataset.num_files_train": "120969",
+    "storage.storage_type": "local_fs",
+    "storage.storage_root": "/lustre/x3e03/client",
+    "reader.read_threads": "1",
+    "reader.transfer_size": "8388608",
+    "checkpoint.checkpoint_folder": "/lustre/x3e03/client/checkpoint_resnet50_h100",
+    "dataset.data_folder": "/lustre/x3e03/client/datagen_resnet50_h100/resnet50"
+  },
+  "yaml_params": {
+    "model": {
+      "name": "resnet50",
+      "type": "cnn"
+    },
+    "framework": "tensorflow",
+    "workflow": {
+      "generate_data": false,
+      "train": true
+    },
+    "dataset": {
+      "num_files_train": 1024,
+      "num_samples_per_file": 1251,
+      "record_length_bytes": 114660.07,
+      "record_length_bytes_resize": 150528,
+      "data_folder": "data/resnet50",
+      "format": "tfrecord"
+    },
+    "train": {
+      "computation_time": 0.224,
+      "epochs": 5
+    },
+    "reader": {
+      "data_loader": "tensorflow",
+      "read_threads": 8,
+      "computation_threads": 8,
+      "batch_size": 400
+    },
+    "metric": {
+      "au": 0.9
+    }
+  },
+  "combined_params": {
+    "model": {
+      "name": "resnet50",
+      "type": "cnn"
+    },
+    "framework": "tensorflow",
+    "workflow": {
+      "generate_data": false,
+      "train": true
+    },
+    "dataset": {
+      "num_files_train": "120969",
+      "num_samples_per_file": 1251,
+      "record_length_bytes": 114660.07,
+      "record_length_bytes_resize": 150528,
+      "data_folder": "data/resnet50",
+      "format": "tfrecord"
+    },
+    "train": {
+      "computation_time": 0.224,
+      "epochs": 5
+    },
+    "reader": {
+      "data_loader": "tensorflow",
+      "read_threads": "1",
+      "computation_threads": 8,
+      "batch_size": 400,
+      "transfer_size": "8388608"
+    },
+    "metric": {
+      "au": 0.9
+    },
+    "storage": {
+      "storage_type": "local_fs",
+      "storage_root": "/lustre/x3e03/client"
+    },
+    "checkpoint": {
+      "checkpoint_folder": "/lustre/x3e03/client/checkpoint_resnet50_h100"
+    }
+  },
+  "executed_command": "mpirun -n 640 -host c222:40,c226:40,c216:40,c230:40,c223:40,c217:40,c227:40,c231:40,c220:40,c224:40,c228:40,c218:40,c219:40,c225:40,c221:40,c229:40 /home/ldouriez/MLPERFv2/storage/venv/bin/dlio_benchmark workload=resnet50_h100 ++hydra.run.dir=logs_1752099416/result_resnet50_16_40accperclient_h100_iter2_1752099416/training/resnet50/run/20250709_230406 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=120969 ++workload.storage.storage_type=local_fs ++workload.storage.storage_root=/lustre/x3e03/client ++workload.reader.read_threads=1 ++workload.reader.transfer_size=8388608 ++workload.checkpoint.checkpoint_folder=/lustre/x3e03/client/checkpoint_resnet50_h100 ++workload.dataset.data_folder=/lustre/x3e03/client/datagen_resnet50_h100/resnet50 --config-dir=/home/ldouriez/MLPERFv2/storage/configs/dlio",
+  "benchmark_type": "training"
+}

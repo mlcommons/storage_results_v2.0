@@ -1,0 +1,118 @@
+{
+  "args": {
+    "program": "training",
+    "command": "datagen",
+    "results_dir": "/root/mlpstorage_test_results/training_resnet50_a100_3120acc",
+    "loops": 1,
+    "config_file": null,
+    "closed": true,
+    "debug": false,
+    "verbose": false,
+    "stream_log_level": "INFO",
+    "allow_invalid_params": false,
+    "what_if": false,
+    "hosts": [
+      "10.20.1.1",
+      "10.20.1.2",
+      "10.20.1.4",
+      "10.20.1.5",
+      "10.20.1.6",
+      "10.20.1.7",
+      "10.20.1.8",
+      "10.20.1.9",
+      "10.20.1.10",
+      "10.20.1.11",
+      "10.20.1.12",
+      "10.20.1.13",
+      "10.20.1.14",
+      "10.20.1.15",
+      "10.20.1.16",
+      "10.20.1.17"
+    ],
+    "model": "resnet50",
+    "exec_type": "mpi",
+    "mpi_bin": "mpirun",
+    "oversubscribe": true,
+    "allow_run_as_root": true,
+    "mpi_params": null,
+    "num_processes": 1152,
+    "data_dir": "/mnt/ubix_mlperf/resnet50_n498801",
+    "params": [
+      "dataset.num_files_train=498801",
+      "dataset.num_subfolders_train=49"
+    ],
+    "dlio_bin_path": null,
+    "num_client_hosts": 16
+  },
+  "debug": null,
+  "run_datetime": "20250710_205622",
+  "run_number": 0,
+  "runtime": 1088.4238965511322,
+  "verification": null,
+  "command_output_files": [
+    {
+      "command": "mpirun -n 1152 -host 10.20.1.1:72,10.20.1.2:72,10.20.1.4:72,10.20.1.5:72,10.20.1.6:72,10.20.1.7:72,10.20.1.8:72,10.20.1.9:72,10.20.1.10:72,10.20.1.11:72,10.20.1.12:72,10.20.1.13:72,10.20.1.14:72,10.20.1.15:72,10.20.1.16:72,10.20.1.17:72 --oversubscribe --allow-run-as-root /root/.venvs/MLPerfStorageV2/bin/dlio_benchmark workload=resnet50_datagen ++hydra.run.dir=/root/mlpstorage_test_results/training_resnet50_a100_3120acc/training/resnet50/datagen/20250710_205622 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=498801 ++workload.dataset.num_subfolders_train=49 ++workload.dataset.data_folder=/mnt/ubix_mlperf/resnet50_n498801/resnet50 --config-dir=/root/.venvs/MLPerfStorageV2/lib/python3.10/site-packages/configs/dlio",
+      "stdout": "/root/mlpstorage_test_results/training_resnet50_a100_3120acc/training/resnet50/datagen/20250710_205622/training_datagen.stdout.log",
+      "stderr": "/root/mlpstorage_test_results/training_resnet50_a100_3120acc/training/resnet50/datagen/20250710_205622/training_datagen.stderr.log"
+    }
+  ],
+  "run_result_output": "/root/mlpstorage_test_results/training_resnet50_a100_3120acc/training/resnet50/datagen/20250710_205622",
+  "metadata_filename": "training_20250710_205622_metadata.json",
+  "metadata_file_path": "/root/mlpstorage_test_results/training_resnet50_a100_3120acc/training/resnet50/datagen/20250710_205622/training_20250710_205622_metadata.json",
+  "_config_name": "resnet50_datagen",
+  "base_command": "dlio_benchmark",
+  "base_path": "/root/.venvs/MLPerfStorageV2/bin",
+  "base_command_path": "/root/.venvs/MLPerfStorageV2/bin/dlio_benchmark",
+  "config_path": "/root/.venvs/MLPerfStorageV2/lib/python3.10/site-packages/configs/dlio",
+  "per_host_mem_kB": null,
+  "total_mem_kB": null,
+  "config_file": "resnet50_datagen.yaml",
+  "params_dict": {
+    "dataset.num_files_train": "498801",
+    "dataset.num_subfolders_train": "49",
+    "dataset.data_folder": "/mnt/ubix_mlperf/resnet50_n498801/resnet50"
+  },
+  "yaml_params": {
+    "model": {
+      "name": "resnet50",
+      "type": "cnn"
+    },
+    "framework": "tensorflow",
+    "workflow": {
+      "generate_data": true,
+      "train": false,
+      "checkpoint": false
+    },
+    "dataset": {
+      "num_files_train": 1024,
+      "num_samples_per_file": 1251,
+      "record_length_bytes": 114660.07,
+      "record_length_bytes_resize": 150528,
+      "data_folder": "data/resnet50",
+      "format": "tfrecord"
+    }
+  },
+  "combined_params": {
+    "model": {
+      "name": "resnet50",
+      "type": "cnn"
+    },
+    "framework": "tensorflow",
+    "workflow": {
+      "generate_data": true,
+      "train": false,
+      "checkpoint": false
+    },
+    "dataset": {
+      "num_files_train": "498801",
+      "num_samples_per_file": 1251,
+      "record_length_bytes": 114660.07,
+      "record_length_bytes_resize": 150528,
+      "data_folder": "data/resnet50",
+      "format": "tfrecord",
+      "num_subfolders_train": "49"
+    }
+  },
+  "executed_command": "mpirun -n 1152 -host 10.20.1.1:72,10.20.1.2:72,10.20.1.4:72,10.20.1.5:72,10.20.1.6:72,10.20.1.7:72,10.20.1.8:72,10.20.1.9:72,10.20.1.10:72,10.20.1.11:72,10.20.1.12:72,10.20.1.13:72,10.20.1.14:72,10.20.1.15:72,10.20.1.16:72,10.20.1.17:72 --oversubscribe --allow-run-as-root /root/.venvs/MLPerfStorageV2/bin/dlio_benchmark workload=resnet50_datagen ++hydra.run.dir=/root/mlpstorage_test_results/training_resnet50_a100_3120acc/training/resnet50/datagen/20250710_205622 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=498801 ++workload.dataset.num_subfolders_train=49 ++workload.dataset.data_folder=/mnt/ubix_mlperf/resnet50_n498801/resnet50 --config-dir=/root/.venvs/MLPerfStorageV2/lib/python3.10/site-packages/configs/dlio",
+  "benchmark_type": "training"
+}

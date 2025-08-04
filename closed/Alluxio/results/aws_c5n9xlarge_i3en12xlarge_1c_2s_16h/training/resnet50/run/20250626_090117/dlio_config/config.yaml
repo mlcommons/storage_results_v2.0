@@ -1,0 +1,25 @@
+workload:
+  model:
+    name: resnet50
+    type: cnn
+  framework: tensorflow
+  workflow:
+    generate_data: false
+    train: true
+  dataset:
+    num_files_train: 3742
+    num_samples_per_file: 1251
+    record_length_bytes: 114660.07
+    record_length_bytes_resize: 150528
+    data_folder: /mnt/alluxio/alluxio-fuse/s3/resnet50_3742_499GB/resnet50
+    format: tfrecord
+  train:
+    computation_time: 0.224
+    epochs: 5
+  reader:
+    data_loader: tensorflow
+    read_threads: 1
+    computation_threads: 8
+    batch_size: 400
+  metric:
+    au: 0.9

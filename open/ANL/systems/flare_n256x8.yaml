@@ -1,0 +1,62 @@
+System:
+  name: Flare
+  description: HPE ClusterStor E1000 platform equipped with 100 Petabytes of usable capacity across 8480 disk drives. This ClusterStor platform provides 160 Object Storage Targets and 40 Metadata Targets with an aggregate data transfer rate of 650GB/s.
+  client_software: open-source
+  storage_interface: POSIX
+  required_rack_units: 1
+  shared_capabilities: 
+    multi_host_support: True            # False is used for local storage
+    simultaneous_write_support: Yes   # Are simultaneous writes by multiple hosts supported in the submitted configuration
+    simultaneous_read_support: Yes    # Are simultaneous reads by multiple hosts supported in the submitted configuration
+  max_sequential_read: 650 # Optional - GiB/s
+  max_sequential_write: 650 # Optional - GiB/s
+  use_local_storage: False
+  integrated_client_storage: 0
+  num_clients_with_integrated_storage: 0
+  system_architecture: shared file
+  usable_capacity: 102400 TiB
+
+# All nodes used need to be listed. Clients, Data storage, metadata, front-end, back-end, etc
+Nodes:
+  # Useful name for the client describing it's role in the system under test
+  dlio_client:  # This can be DLIO Client, storage node, storage controller, AwesomeMarketingName_Type1, etc
+    quantity: 256 # How many of this node
+    hardware:
+      model: Dual Intel Xeon Max (Sapphire Rapids)
+      memory_capacity: 640 GB
+      memory_configuration: 128GB HBM + 512GB DDR4 (cgroup limit to 32GB)
+      cpu_qty: 2
+      cpu_model: Intel Xeon Max (Sapphire Rapids)
+      cpu_cores: 104
+    networking:
+      management:
+        model: Slingshot 11
+        speed: 100Gbps
+        qty: 8 × Slingshot‑11 fabric endpoints per node (200 Gb/s links)  
+    operating_system:
+      name: SUSE Linux Enterprise Server
+      version: 15 SP4
+      release_date: November 2023
+      kernel_version: 5.14.21-150400.24.55-default
+      cpu_architecture: x86_64
+    tuning:
+      # All non-default tunings for OS need to be listed
+      mpi_configuration:
+        environment_variables: --cpu-bind=depth -d 16 
+        version: MPICH 1.4.0
+  OSS:
+    quantity: 40        
+  OST: # This can be DLIO Client, storage node, storage controller, AwesomeMarketingName_Type1, etc
+    quantity: 160  # How many of this node
+    storage_capacity: 54 * 16TB HDD
+  MDS:
+    quantity: 20
+  MDT:
+    quantity: 40
+    storage_capacity: 4TB NVMe
+ 
+  networking:
+    management:
+      model: Slingshot-11
+      speed: 100Gbps
+      qty: 2 × Slingshot‑11 fabric endpoints per node (200 Gb/s links)  

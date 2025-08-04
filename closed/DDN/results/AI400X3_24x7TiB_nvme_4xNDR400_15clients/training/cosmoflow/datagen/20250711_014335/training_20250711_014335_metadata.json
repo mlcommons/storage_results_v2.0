@@ -1,0 +1,113 @@
+{
+  "args": {
+    "program": "training",
+    "command": "datagen",
+    "results_dir": "logs_1752198199/result_cosmoflow_16_9accperclient_h100_1752198199_CREATE",
+    "loops": 1,
+    "config_file": null,
+    "closed": false,
+    "debug": false,
+    "verbose": false,
+    "stream_log_level": "INFO",
+    "allow_invalid_params": false,
+    "what_if": false,
+    "hosts": [
+      "c224",
+      "c228",
+      "c221",
+      "c225",
+      "c222",
+      "c217",
+      "c218",
+      "c229",
+      "c226",
+      "c220",
+      "c230",
+      "c216",
+      "c223",
+      "c219",
+      "c227",
+      "c231"
+    ],
+    "model": "cosmoflow",
+    "exec_type": "mpi",
+    "mpi_bin": "mpirun",
+    "oversubscribe": false,
+    "allow_run_as_root": false,
+    "mpi_params": null,
+    "num_processes": 256,
+    "data_dir": "/lustre/x3e03/client/datagen_cosmoflow_h100",
+    "params": [
+      "dataset.num_files_train=6134688"
+    ],
+    "dlio_bin_path": null,
+    "num_client_hosts": 16
+  },
+  "debug": null,
+  "run_datetime": "20250711_014335",
+  "run_number": 0,
+  "runtime": 19021.988971471786,
+  "verification": null,
+  "command_output_files": [
+    {
+      "command": "mpirun -n 256 -host c224:16,c228:16,c221:16,c225:16,c222:16,c217:16,c218:16,c229:16,c226:16,c220:16,c230:16,c216:16,c223:16,c219:16,c227:16,c231:16 /home/ldouriez/MLPERFv2/storage/venv/bin/dlio_benchmark workload=cosmoflow_datagen ++hydra.run.dir=logs_1752198199/result_cosmoflow_16_9accperclient_h100_1752198199_CREATE/training/cosmoflow/datagen/20250711_014335 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=6134688 ++workload.dataset.data_folder=/lustre/x3e03/client/datagen_cosmoflow_h100/cosmoflow --config-dir=/home/ldouriez/MLPERFv2/storage/configs/dlio",
+      "stdout": "logs_1752198199/result_cosmoflow_16_9accperclient_h100_1752198199_CREATE/training/cosmoflow/datagen/20250711_014335/training_datagen.stdout.log",
+      "stderr": "logs_1752198199/result_cosmoflow_16_9accperclient_h100_1752198199_CREATE/training/cosmoflow/datagen/20250711_014335/training_datagen.stderr.log"
+    }
+  ],
+  "run_result_output": "logs_1752198199/result_cosmoflow_16_9accperclient_h100_1752198199_CREATE/training/cosmoflow/datagen/20250711_014335",
+  "metadata_filename": "training_20250711_014335_metadata.json",
+  "metadata_file_path": "logs_1752198199/result_cosmoflow_16_9accperclient_h100_1752198199_CREATE/training/cosmoflow/datagen/20250711_014335/training_20250711_014335_metadata.json",
+  "_config_name": "cosmoflow_datagen",
+  "base_command": "dlio_benchmark",
+  "base_path": "/home/ldouriez/MLPERFv2/storage/venv/bin",
+  "base_command_path": "/home/ldouriez/MLPERFv2/storage/venv/bin/dlio_benchmark",
+  "config_path": "/home/ldouriez/MLPERFv2/storage/configs/dlio",
+  "per_host_mem_kB": null,
+  "total_mem_kB": null,
+  "config_file": "cosmoflow_datagen.yaml",
+  "params_dict": {
+    "dataset.num_files_train": "6134688",
+    "dataset.data_folder": "/lustre/x3e03/client/datagen_cosmoflow_h100/cosmoflow"
+  },
+  "yaml_params": {
+    "model": {
+      "name": "cosmoflow"
+    },
+    "framework": "tensorflow",
+    "workflow": {
+      "generate_data": true,
+      "train": false,
+      "checkpoint": false
+    },
+    "dataset": {
+      "data_folder": "data/cosmoflow",
+      "num_files_train": 524288,
+      "num_samples_per_file": 1,
+      "record_length_bytes": 2828486,
+      "record_length_bytes_stdev": 71311,
+      "format": "tfrecord"
+    }
+  },
+  "combined_params": {
+    "model": {
+      "name": "cosmoflow"
+    },
+    "framework": "tensorflow",
+    "workflow": {
+      "generate_data": true,
+      "train": false,
+      "checkpoint": false
+    },
+    "dataset": {
+      "data_folder": "data/cosmoflow",
+      "num_files_train": "6134688",
+      "num_samples_per_file": 1,
+      "record_length_bytes": 2828486,
+      "record_length_bytes_stdev": 71311,
+      "format": "tfrecord"
+    }
+  },
+  "executed_command": "mpirun -n 256 -host c224:16,c228:16,c221:16,c225:16,c222:16,c217:16,c218:16,c229:16,c226:16,c220:16,c230:16,c216:16,c223:16,c219:16,c227:16,c231:16 /home/ldouriez/MLPERFv2/storage/venv/bin/dlio_benchmark workload=cosmoflow_datagen ++hydra.run.dir=logs_1752198199/result_cosmoflow_16_9accperclient_h100_1752198199_CREATE/training/cosmoflow/datagen/20250711_014335 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=6134688 ++workload.dataset.data_folder=/lustre/x3e03/client/datagen_cosmoflow_h100/cosmoflow --config-dir=/home/ldouriez/MLPERFv2/storage/configs/dlio",
+  "benchmark_type": "training"
+}

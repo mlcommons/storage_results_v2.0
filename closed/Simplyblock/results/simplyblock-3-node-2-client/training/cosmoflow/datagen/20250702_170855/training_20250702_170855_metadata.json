@@ -1,0 +1,98 @@
+{
+  "args": {
+    "program": "training",
+    "command": "datagen",
+    "results_dir": "/home/noctarius/.results/cosmoflow-2",
+    "loops": 1,
+    "config_file": null,
+    "closed": true,
+    "debug": false,
+    "verbose": false,
+    "stream_log_level": "INFO",
+    "allow_invalid_params": false,
+    "what_if": false,
+    "hosts": [
+      "127.0.0.1"
+    ],
+    "model": "cosmoflow",
+    "exec_type": "mpi",
+    "mpi_bin": "mpirun",
+    "oversubscribe": false,
+    "allow_run_as_root": false,
+    "mpi_params": null,
+    "num_processes": 15,
+    "data_dir": "/media/benchmark",
+    "params": [
+      "dataset.num_files_train=1336252"
+    ],
+    "dlio_bin_path": null,
+    "num_client_hosts": 1
+  },
+  "debug": null,
+  "run_datetime": "20250702_170855",
+  "run_number": 0,
+  "runtime": 3023.1425244808197,
+  "verification": null,
+  "command_output_files": [
+    {
+      "command": "mpirun -n 15 -host 127.0.0.1:15 /home/noctarius/.venvs/myenv/bin/dlio_benchmark workload=cosmoflow_datagen ++hydra.run.dir=/home/noctarius/.results/cosmoflow-2/training/cosmoflow/datagen/20250702_170855 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=1336252 ++workload.dataset.data_folder=/media/benchmark/cosmoflow --config-dir=/home/noctarius/storage/configs/dlio",
+      "stdout": "/home/noctarius/.results/cosmoflow-2/training/cosmoflow/datagen/20250702_170855/training_datagen.stdout.log",
+      "stderr": "/home/noctarius/.results/cosmoflow-2/training/cosmoflow/datagen/20250702_170855/training_datagen.stderr.log"
+    }
+  ],
+  "run_result_output": "/home/noctarius/.results/cosmoflow-2/training/cosmoflow/datagen/20250702_170855",
+  "metadata_filename": "training_20250702_170855_metadata.json",
+  "metadata_file_path": "/home/noctarius/.results/cosmoflow-2/training/cosmoflow/datagen/20250702_170855/training_20250702_170855_metadata.json",
+  "_config_name": "cosmoflow_datagen",
+  "base_command": "dlio_benchmark",
+  "base_path": "/home/noctarius/.venvs/myenv/bin",
+  "base_command_path": "/home/noctarius/.venvs/myenv/bin/dlio_benchmark",
+  "config_path": "/home/noctarius/storage/configs/dlio",
+  "per_host_mem_kB": null,
+  "total_mem_kB": null,
+  "config_file": "cosmoflow_datagen.yaml",
+  "params_dict": {
+    "dataset.num_files_train": "1336252",
+    "dataset.data_folder": "/media/benchmark/cosmoflow"
+  },
+  "yaml_params": {
+    "model": {
+      "name": "cosmoflow"
+    },
+    "framework": "tensorflow",
+    "workflow": {
+      "generate_data": true,
+      "train": false,
+      "checkpoint": false
+    },
+    "dataset": {
+      "data_folder": "data/cosmoflow",
+      "num_files_train": 524288,
+      "num_samples_per_file": 1,
+      "record_length_bytes": 2828486,
+      "record_length_bytes_stdev": 71311,
+      "format": "tfrecord"
+    }
+  },
+  "combined_params": {
+    "model": {
+      "name": "cosmoflow"
+    },
+    "framework": "tensorflow",
+    "workflow": {
+      "generate_data": true,
+      "train": false,
+      "checkpoint": false
+    },
+    "dataset": {
+      "data_folder": "data/cosmoflow",
+      "num_files_train": "1336252",
+      "num_samples_per_file": 1,
+      "record_length_bytes": 2828486,
+      "record_length_bytes_stdev": 71311,
+      "format": "tfrecord"
+    }
+  },
+  "executed_command": "mpirun -n 15 -host 127.0.0.1:15 /home/noctarius/.venvs/myenv/bin/dlio_benchmark workload=cosmoflow_datagen ++hydra.run.dir=/home/noctarius/.results/cosmoflow-2/training/cosmoflow/datagen/20250702_170855 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=1336252 ++workload.dataset.data_folder=/media/benchmark/cosmoflow --config-dir=/home/noctarius/storage/configs/dlio",
+  "benchmark_type": "training"
+}

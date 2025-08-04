@@ -1,0 +1,128 @@
+{
+  "args": {
+    "program": "training",
+    "command": "run",
+    "results_dir": "/root/results",
+    "loops": 1,
+    "config_file": null,
+    "closed": false,
+    "debug": false,
+    "verbose": false,
+    "stream_log_level": "INFO",
+    "allow_invalid_params": false,
+    "what_if": false,
+    "hosts": [
+      "10.148.243.11"
+    ],
+    "model": "resnet50",
+    "client_host_memory_in_gb": 256,
+    "exec_type": "mpi",
+    "mpi_bin": "mpirun",
+    "oversubscribe": false,
+    "allow_run_as_root": true,
+    "mpi_params": null,
+    "num_accelerators": 65,
+    "accelerator_type": "h100",
+    "num_client_hosts": 1,
+    "data_dir": "/mnt/nvme/resnet50",
+    "params": [
+      "dataset.num_files_train=10391"
+    ],
+    "dlio_bin_path": null,
+    "num_processes": 65
+  },
+  "debug": null,
+  "run_datetime": "20250710_204749",
+  "run_number": 0,
+  "runtime": 677.2578008174896,
+  "verification": "closed",
+  "command_output_files": [
+    {
+      "command": "mpirun -n 65 -host 10.148.243.11:65 --allow-run-as-root /usr/local/bin/dlio_benchmark workload=resnet50_h100 ++hydra.run.dir=/root/results/training/resnet50/run/20250710_204749 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=10391 ++workload.dataset.data_folder=/mnt/nvme/resnet50 --config-dir=/root/storage/configs/dlio",
+      "stdout": "/root/results/training/resnet50/run/20250710_204749/training_run.stdout.log",
+      "stderr": "/root/results/training/resnet50/run/20250710_204749/training_run.stderr.log"
+    }
+  ],
+  "run_result_output": "/root/results/training/resnet50/run/20250710_204749",
+  "metadata_filename": "training_20250710_204749_metadata.json",
+  "metadata_file_path": "/root/results/training/resnet50/run/20250710_204749/training_20250710_204749_metadata.json",
+  "_config_name": "resnet50_h100",
+  "base_command": "dlio_benchmark",
+  "base_path": "/usr/local/bin",
+  "base_command_path": "/usr/local/bin/dlio_benchmark",
+  "config_path": "/root/storage/configs/dlio",
+  "per_host_mem_kB": null,
+  "total_mem_kB": null,
+  "cluster_information": "<mlpstorage.rules.ClusterInformation object at 0x73ecf437be60>",
+  "config_file": "resnet50_h100.yaml",
+  "params_dict": {
+    "dataset.num_files_train": "10391",
+    "dataset.data_folder": "/mnt/nvme/resnet50"
+  },
+  "yaml_params": {
+    "model": {
+      "name": "resnet50",
+      "type": "cnn"
+    },
+    "framework": "tensorflow",
+    "workflow": {
+      "generate_data": false,
+      "train": true
+    },
+    "dataset": {
+      "num_files_train": 1024,
+      "num_samples_per_file": 1251,
+      "record_length_bytes": 114660.07,
+      "record_length_bytes_resize": 150528,
+      "data_folder": "data/resnet50",
+      "format": "tfrecord"
+    },
+    "train": {
+      "computation_time": 0.224,
+      "epochs": 5
+    },
+    "reader": {
+      "data_loader": "tensorflow",
+      "read_threads": 8,
+      "computation_threads": 8,
+      "batch_size": 400
+    },
+    "metric": {
+      "au": 0.9
+    }
+  },
+  "combined_params": {
+    "model": {
+      "name": "resnet50",
+      "type": "cnn"
+    },
+    "framework": "tensorflow",
+    "workflow": {
+      "generate_data": false,
+      "train": true
+    },
+    "dataset": {
+      "num_files_train": "10391",
+      "num_samples_per_file": 1251,
+      "record_length_bytes": 114660.07,
+      "record_length_bytes_resize": 150528,
+      "data_folder": "data/resnet50",
+      "format": "tfrecord"
+    },
+    "train": {
+      "computation_time": 0.224,
+      "epochs": 5
+    },
+    "reader": {
+      "data_loader": "tensorflow",
+      "read_threads": 8,
+      "computation_threads": 8,
+      "batch_size": 400
+    },
+    "metric": {
+      "au": 0.9
+    }
+  },
+  "executed_command": "mpirun -n 65 -host 10.148.243.11:65 --allow-run-as-root /usr/local/bin/dlio_benchmark workload=resnet50_h100 ++hydra.run.dir=/root/results/training/resnet50/run/20250710_204749 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=10391 ++workload.dataset.data_folder=/mnt/nvme/resnet50 --config-dir=/root/storage/configs/dlio",
+  "benchmark_type": "training"
+}

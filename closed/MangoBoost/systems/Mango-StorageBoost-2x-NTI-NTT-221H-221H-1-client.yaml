@@ -1,0 +1,123 @@
+System:
+  name: Mango-StorageBoost-2x-NTI-NTT-221H-221H-1-client
+  description:
+  storage_location: remote
+  client_software: in-box
+  storage_interface: block
+  required_rack_units: 2
+  shared_capabilities:
+    multi_host_support: True            # False is used for local storage
+    simultaneous_write_support: False   # Are simultaneous writes by multiple hosts supported in the submitted configuration
+    simultaneous_read__support: True    # Are simultaneous reads by multiple hosts supported in the submitted configuration
+  max_sequential_read: 43 GiB/s # Optional - GiB/s
+  max_sequential_write: 43 GiB/s # Optional - GiB/s
+  max_random_read: 10 MIOPS # Optional - GiB/s
+  max_random_write: 10 MIOPS # Optional - GiB/s
+
+  use_local_storage: false
+  integrated_client_storage:
+  num_clients_with_integrated_storage:
+
+  system_architecture:
+    - fabric-attached block
+
+  useable_capacity: 23.28
+
+PowerRequirements:
+  dlio_client:
+    quantity: 1 # number of dlio_client nodes
+    psu1_nameplate_power: 1200 # power in watts
+    psu2_nameplate_power: 1200 # power in watts
+    design_power: 1200
+    num_active_psus: 1
+    num_passive_psus: 1
+
+  # All storage nodes need to be listed (data, metadata, etc) as well as any required backed switching
+  storage_data_node:
+    quantity: 1 # number of storage data nodes
+    psu1_nameplate_power: 1200 # power in watts
+    psu2_nameplate_power: 1200 # power in watts
+    design_power: 1200
+    num_active_psus: 1
+    num_passive_psus: 1
+  backend_switch:
+    quantity: 1
+    psu1_nameplate_power: 1600   # network PSU
+    psu2_nameplate_power: 1600   # network PSU
+    design_power: 1600
+    num_active_psus: 1
+    num_passive_psus: 1
+
+
+# All nodes used need to be listed. Clients, Data storage, metadata, front-end, back-end, etc
+Nodes:
+  # Useful name for the client describing it's role in the system under test
+  dlio_client:  # This can be DLIO Client, storage node, storage controller, AwesomeMarketingName_Type1, etc
+    quantity: 1  # How many of this node
+    hardware:
+      model: Supermicro Hyper SuperServer SYS-221H-TNR
+      rack_units: 2
+      power_supplies: 2
+      psu_configuration: active/passive
+      psu_rating: 1200
+      memory_capacity: 512GB
+      memory_configuration: 16x32GB
+      cpu_qty: 2
+      cpu_model: Intel Xeon Gold 6438N
+      cpu_cores: 32
+    networking:
+      management:
+        model: Intel i350
+        speed: 1Gbps
+        qty: 1
+      storage:
+        model: Mango StorageBoot™ NVMe/TCP Initiator (NTI)
+        speed: 200Gbps
+        qty: 2
+    operating_system:
+      name: Ubuntu
+      version: 22.04 LTS
+      release_date: 2022-04-21
+      kernel_version: 5.15.0-143-generic
+      cpu_architecture: x86_64
+    tuning:
+      # All non-default tunings for OS need to be listed
+      mpi_configuration:
+        environment_variables:
+          OMPI_MCA_hwloc_base_binding_policy: numa
+        version: Open MPI 4.1.2
+      sysctl_parameters:
+
+  storage_data_node: # This can be DLIO Client, storage node, storage controller, AwesomeMarketingName_Type1, etc
+    quantity: 1  # How many of this node
+    hardware:
+      model: Supermicro Hyper SuperServer SYS-221H-TNR
+      rack_units: 2
+      power_supplies: 2
+      psu_configuration: active/passive
+      psu_rating: 1200
+      memory_capacity: 512GB
+      memory_configuration: 16x32GB
+      cpu_qty: 2
+      cpu_model: Intel Xeon Gold 6438N
+      cpu_cores: 32
+    networking:
+      management:
+        model: Intel I350
+        speed: 1Gbps
+        qty: 1
+      storage:
+        model: Mango StorageBoot™ NVMe/TCP Target (NTT)
+        speed: 200Gbps
+        qty: 2
+    operating_system:
+      name: Ubuntu
+      version: 22.04 LTS
+      release_date: 2022-04-21
+      kernel_version: 5.15.0-143-generic
+      cpu_architecture: x86_64
+    tuning:
+      mpi_configuration:
+        environment_variables:
+        version: Open MPI 4.1.2
+      sysctl_parameters:

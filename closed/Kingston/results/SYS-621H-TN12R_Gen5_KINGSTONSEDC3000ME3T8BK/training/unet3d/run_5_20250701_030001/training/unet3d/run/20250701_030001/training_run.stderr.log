@@ -1,0 +1,80 @@
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1751364002.833071 3108294 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1751364002.833071 3108296 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1751364002.837356 3108294 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+E0000 00:00:1751364002.837357 3108296 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1751364002.849896 3108294 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1751364002.849912 3108294 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1751364002.849914 3108294 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1751364002.849915 3108294 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1751364002.849896 3108296 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1751364002.849912 3108296 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1751364002.849914 3108296 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1751364002.849916 3108296 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1751364002.854769 3108293 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1751364002.854769 3108295 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1751364002.859066 3108295 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+E0000 00:00:1751364002.859062 3108293 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1751364002.871161 3108295 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1751364002.871176 3108295 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1751364002.871178 3108295 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1751364002.871180 3108295 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1751364002.871161 3108293 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1751364002.871175 3108293 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1751364002.871178 3108293 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1751364002.871179 3108293 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+[OUTPUT] 2025-07-01T03:00:06.049113 Running DLIO [Training & Checkpointing] with 4 process(es)
+[OUTPUT] 2025-07-01T03:00:06.104289 Model size: 0.000010 GB 
+[OUTPUT] 2025-07-01T03:00:06.104376 Total checkpoint size: 0.000010 GB 
+[OUTPUT] 2025-07-01T03:00:06.104426 Max steps per epoch: 500 = 1 * 14000 / 7 / 4 (samples per file * num files / batch size / comm size)
+[OUTPUT] 2025-07-01T03:00:06.130329 Starting epoch 1: 500 steps expected
+[OUTPUT] 2025-07-01T03:00:06.130635 Starting block 1
+[OUTPUT] 2025-07-01T03:02:54.311703 Ending block 1 - 500 steps completed in 168.18 s
+[OUTPUT] 2025-07-01T03:02:54.315474 Epoch 1 - Block 1 [Training] Accelerator Utilization [AU] (%): 99.0273
+[OUTPUT] 2025-07-01T03:02:54.315520 Epoch 1 - Block 1 [Training] Throughput (samples/second): 85.5792
+[OUTPUT] 2025-07-01T03:02:54.315546 Epoch 1 - Block 1 [Training] Computation time per step (second): 0.3234+/-0.0000 (set value: {'mean': 0.323})
+[OUTPUT] 2025-07-01T03:02:54.317034 Ending epoch 1 - 500 steps completed in 168.19 s
+[OUTPUT] 2025-07-01T03:02:54.326531 Starting epoch 2: 500 steps expected
+[OUTPUT] 2025-07-01T03:02:54.326759 Starting block 1
+[OUTPUT] 2025-07-01T03:05:42.341630 Ending block 1 - 500 steps completed in 168.01 s
+[OUTPUT] 2025-07-01T03:05:42.343190 Epoch 2 - Block 1 [Training] Accelerator Utilization [AU] (%): 99.0441
+[OUTPUT] 2025-07-01T03:05:42.343230 Epoch 2 - Block 1 [Training] Throughput (samples/second): 85.5942
+[OUTPUT] 2025-07-01T03:05:42.343256 Epoch 2 - Block 1 [Training] Computation time per step (second): 0.3233+/-0.0000 (set value: {'mean': 0.323})
+[OUTPUT] 2025-07-01T03:05:42.344786 Ending epoch 2 - 500 steps completed in 168.02 s
+[OUTPUT] 2025-07-01T03:05:42.353168 Starting epoch 3: 500 steps expected
+[OUTPUT] 2025-07-01T03:05:42.353388 Starting block 1
+[OUTPUT] 2025-07-01T03:08:30.346037 Ending block 1 - 500 steps completed in 167.99 s
+[OUTPUT] 2025-07-01T03:08:30.347606 Epoch 3 - Block 1 [Training] Accelerator Utilization [AU] (%): 99.0376
+[OUTPUT] 2025-07-01T03:08:30.347645 Epoch 3 - Block 1 [Training] Throughput (samples/second): 85.5881
+[OUTPUT] 2025-07-01T03:08:30.347671 Epoch 3 - Block 1 [Training] Computation time per step (second): 0.3234+/-0.0000 (set value: {'mean': 0.323})
+[OUTPUT] 2025-07-01T03:08:30.349197 Ending epoch 3 - 500 steps completed in 168.00 s
+[OUTPUT] 2025-07-01T03:08:30.357523 Starting epoch 4: 500 steps expected
+[OUTPUT] 2025-07-01T03:08:30.357737 Starting block 1
+[OUTPUT] 2025-07-01T03:11:18.234048 Ending block 1 - 500 steps completed in 167.88 s
+[OUTPUT] 2025-07-01T03:11:18.235209 Epoch 4 - Block 1 [Training] Accelerator Utilization [AU] (%): 98.9659
+[OUTPUT] 2025-07-01T03:11:18.235246 Epoch 4 - Block 1 [Training] Throughput (samples/second): 85.5261
+[OUTPUT] 2025-07-01T03:11:18.235270 Epoch 4 - Block 1 [Training] Computation time per step (second): 0.3234+/-0.0000 (set value: {'mean': 0.323})
+[OUTPUT] 2025-07-01T03:11:18.236853 Ending epoch 4 - 500 steps completed in 167.88 s
+[OUTPUT] 2025-07-01T03:11:18.245049 Starting epoch 5: 500 steps expected
+[OUTPUT] 2025-07-01T03:11:18.245242 Starting block 1
+[OUTPUT] 2025-07-01T03:14:06.091526 Ending block 1 - 500 steps completed in 167.85 s
+[OUTPUT] 2025-07-01T03:14:06.093076 Epoch 5 - Block 1 [Training] Accelerator Utilization [AU] (%): 99.0444
+[OUTPUT] 2025-07-01T03:14:06.093116 Epoch 5 - Block 1 [Training] Throughput (samples/second): 85.5939
+[OUTPUT] 2025-07-01T03:14:06.093142 Epoch 5 - Block 1 [Training] Computation time per step (second): 0.3234+/-0.0000 (set value: {'mean': 0.323})
+[OUTPUT] 2025-07-01T03:14:06.093411 Starting saving checkpoint 1 after total step 500 for epoch 5
+[OUTPUT] 2025-07-01T03:14:06.096021 Finished saving checkpoint 1 for epoch 5 in 0.0026 s; Throughput: 0.0037 GB/s
+[OUTPUT] 2025-07-01T03:14:06.098050 Ending epoch 5 - 500 steps completed in 167.85 s
+[OUTPUT] 2025-07-01T03:14:06.106657 Saved outputs in /home/sped/perf/mlperfv2/submission/Closed/Kingston_Digital/results/KINGSTONSEDC3000ME3T8BK/training/unet3d/run_5_20250701_030001/training/unet3d/run/20250701_030001
+[OUTPUT] Averaged metric over all steps/epochs
+[METRIC] ==========================================================
+[METRIC] Number of Simulated Accelerators: 4 
+[METRIC] Training Accelerator Utilization [AU] (%): 98.8940 (0.0476)
+[METRIC] Training Throughput (samples/second): 85.4637 (0.0411)
+[METRIC] Training I/O Throughput (MB/second): 11948.6198 (5.7509)
+[METRIC] train_au_meet_expectation: success
+[METRIC] ==========================================================
+
+[OUTPUT] 2025-07-01T03:14:06.113531 outputs saved in RANKID_output.json

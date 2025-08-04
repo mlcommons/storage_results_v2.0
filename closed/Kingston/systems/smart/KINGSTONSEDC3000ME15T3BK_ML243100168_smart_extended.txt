@@ -1,0 +1,32 @@
+Version: 2
+
+Additional Smart Log for NVMe device: nvme6n1
+
+Id          Key                                 Normalized  Raw
+0xab        program_fail_count                  100         0
+0xac        erase_fail_count                    100         2
+0xad        wear_leveling_count                 97          min: 331, max: 369, avg: 358
+0xb8        end_to_end_error_count              100         0
+0xc7        crc_error_count                     100         0
+0xe2        timed_workload_media_wear           100         0
+0xe3        timed_workload_host_reads           100         65535
+0xe4        timed_workload_timer                100         65535
+0xea        thermal_throttle_status             100         0
+0xf0        lifetime_write_amplification        100         1
+0xf3        pll_lock_loss_count                 100         0
+0xf4        nand_bytes_written                  100         200752233
+0xf5        host_bytes_written                  100         125860956
+0xf6        system_area_life_remaining          100         99
+0xf9        firmware_update_count               100         2
+0xfa        dram_cecc_count                     100         0
+0xfb        dram_uecc_count                     100         0
+0xfc        xor_pass_count                      100         0
+0xfd        xor_fail_count                      100         0
+0xfe        xor_invoked_count                   100         0
+0xe5        inflight_read_io_cmd                100         0
+0xe6        inflight_write_io_cmd               100         0
+0xf8        nand_bytes_read                     100         177216182
+0xe7        temp_since_born                     100         max: 56 °C (329 K), min: 22 °C (295 K), curr: 43 °C (316 K)
+0xe8        power_consumption                   100         max: 22, min: 5, curr: 8
+0xaf        temp_since_bootup                   100         max: 52 °C (325 K), min: 34 °C (307 K), curr: 43 °C (316 K)
+0xeb        thermal_throttle_time               100         0

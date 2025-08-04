@@ -1,0 +1,71 @@
+System:
+  name: DAOS
+  description: DAOS is a distributed object store that provides a scalable, high-performance, and fault-tolerant storage solution for HPC and AI workloads.
+  storage_location: remote 
+  client_software: proprietary
+  storage_interface: Objective store with POSIX container
+  required_rack_units: 2
+  shared_capabilities: 
+    multi_host_support: True            # False is used for local storage
+    simultaneous_write_support: Yes   # Are simultaneous writes by multiple hosts supported in the submitted configuration
+    simultaneous_read__support: Yes    # Are simultaneous reads by multiple hosts supported in the submitted configuration
+  max_sequential_read: 5000 # Optional - GiB/s
+  max_sequential_write: 5000 # Optional - GiB/s
+  max_random_read: 5000 # Optional - GiB/s
+  max_random_write: 5000 # Optional - GiB/s
+  use_local_storage: False
+  integrated_client_storage: 0
+  num_clients_with_integrated_storage: 0
+  system_architecture: shared file
+  usable_capacity: 30000 TiB
+# All nodes used need to be listed. Clients, Data storage, metadata, front-end, back-end, etc
+Nodes:
+  # Useful name for the client describing it's role in the system under test
+  dlio_client:  # This can be DLIO Client, storage node, storage controller, AwesomeMarketingName_Type1, etc
+    quantity: 64 # How many of this node
+    hardware:
+      model: Dual Intel Xeon Max (Sapphire Rapids)
+      memory_capacity: 640 GB
+      memory_configuration: 128GB HBM + 512GB DDR4 (cgroup limit to 32GB)
+      cpu_qty: 2
+      cpu_model: Intel Xeon Max (Sapphire Rapids)
+      cpu_cores: 104
+    networking:
+      management:
+        model: Slingshot 11
+        speed: 100Gbps
+        qty: 8 × Slingshot‑11 fabric endpoints per node (200 Gb/s links)  
+    operating_system:
+      name: SUSE Linux Enterprise Server
+      version: 15 SP4
+      release_date: November 2023
+      kernel_version: 5.14.21-150400.24.55-default
+      cpu_architecture: x86_64
+    tuning:
+      # All non-default tunings for OS need to be listed
+      mpi_configuration:
+        environment_variables: --cpu-bind=depth -d 16 
+        version: MPICH 1.4.0
+  storage_data_node: # This can be DLIO Client, storage node, storage controller, AwesomeMarketingName_Type1, etc
+    quantity: 128  # How many of this node
+    hardware:
+      model: Xeon 5320 CPU (Ice Lake)
+      memory_capacity: 32 GB DDR4 DIMMs 
+      memory_configuration: 32 GB DDR4 DIMMs
+      storage_capacity: 512GB Intel Optane Persistent Memory 200  + 15.3TB Samsung PM1733 NVMe
+      cpu_qty: 2
+      cpu_model: Intel Xeon Max (Sapphire Rapids)
+      cpu_cores: 104
+    networking:
+      management:
+        model: Slingshot-11
+        speed: 100Gbps
+        qty: 2 × Slingshot‑11 fabric endpoints per node (200 Gb/s links)  
+    operating_system:
+      name: SUSE Linux Enterprise Server
+      version: 15 SP4
+      release_date: November 2023
+      kernel_version: 5.14.21-150400.24.55-default
+      cpu_architecture: x86_64
+
+

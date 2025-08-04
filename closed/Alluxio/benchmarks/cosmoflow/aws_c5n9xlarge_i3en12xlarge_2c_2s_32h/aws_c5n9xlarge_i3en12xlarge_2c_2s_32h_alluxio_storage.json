@@ -1,0 +1,12 @@
+{
+  "submitter": "Alluxio_Storage",
+  "benchmark": "cosmoflow",
+  "implementation": "alluxio_storage",
+  "system_id": "aws_c5n9xlarge_i3en12xlarge_2c_2s_32h",
+  "framework": "MLPerf Storage v2.0 reference (storage.git)",
+  "storage_backend": "Alluxio 3.6.0 FUSE with AWS S3",
+  "description": "This implementation uses the MLCommons Storage v2.0 reference code with Alluxio 3.6.0 mounted in FUSE mode pointing to AWS S3. System config: 2 clients, 2 servers, 10 total accelerators.",
+  "run_command": "mlpstorage training run --hosts 127.0.0.1 --num-client-hosts 2 --client-host-memory-in-gb 100 --num-accelerators 10 --accelerator-type H100 --model cosmoflow --data-dir /mnt/alluxio/alluxio-fuse/gemini/cosmoflow_379617_1000GB --results-dir /home/ubuntu/mlps_results  --param dataset.num_files_train=379617 --allow-run-as-root --oversubscribe",  
+  "timestamp": "2025-06-27T06:33:43Z"
+}
+

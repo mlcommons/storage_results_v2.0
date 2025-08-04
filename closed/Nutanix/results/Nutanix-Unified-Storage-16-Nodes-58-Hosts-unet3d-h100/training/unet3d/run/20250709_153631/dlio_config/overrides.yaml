@@ -1,0 +1,6 @@
+- workload=unet3d_h100
+- ++workload.dataset.num_files_train=407856
+- ++workload.dataset.num_subfolders_train=960
+- ++workload.reader.odirect=true
+- ++workload.reader.read_threads=16
+- ++workload.dataset.data_folder=/mnt/data/unet3d

@@ -1,0 +1,130 @@
+{
+  "args": {
+    "program": "training",
+    "command": "run",
+    "results_dir": "/home/sped/perf/mlperfv2/submission/Closed/Kingston_Digital/results/KINGSTONSEDC3000ME3T8BK/training/resnet50/run_3_20250708_021129",
+    "loops": 1,
+    "config_file": null,
+    "closed": true,
+    "debug": false,
+    "verbose": false,
+    "stream_log_level": "INFO",
+    "allow_invalid_params": false,
+    "what_if": false,
+    "hosts": [
+      "localhost"
+    ],
+    "model": "resnet50",
+    "client_host_memory_in_gb": 377,
+    "checkpoint_folder": null,
+    "exec_type": "mpi",
+    "mpi_bin": "mpirun",
+    "oversubscribe": false,
+    "allow_run_as_root": false,
+    "num_accelerators": 65,
+    "accelerator_type": "h100",
+    "num_client_hosts": 1,
+    "data_dir": "/mnt/KINGSTONSEDC3000ME3T8BK",
+    "params": [
+      "dataset.num_files_train=14110",
+      "reader.read_threads=4"
+    ],
+    "dlio_bin_path": null,
+    "num_processes": 65
+  },
+  "debug": null,
+  "run_datetime": "20250708_021129",
+  "run_number": 0,
+  "runtime": 1026.4940702915192,
+  "verification": "closed",
+  "command_output_files": [
+    {
+      "command": "mpirun -n 65 -host localhost:65 /home/sped/perf/mlperfv2/venv/bin/dlio_benchmark workload=resnet50_h100 ++hydra.run.dir=/home/sped/perf/mlperfv2/submission/Closed/Kingston_Digital/results/KINGSTONSEDC3000ME3T8BK/training/resnet50/run_3_20250708_021129/training/resnet50/run/20250708_021129 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=14110 ++workload.reader.read_threads=4 ++workload.dataset.data_folder=/mnt/KINGSTONSEDC3000ME3T8BK/resnet50 --config-dir=/home/sped/perf/mlperfv2/storage/configs/dlio",
+      "stdout": "/home/sped/perf/mlperfv2/submission/Closed/Kingston_Digital/results/KINGSTONSEDC3000ME3T8BK/training/resnet50/run_3_20250708_021129/training/resnet50/run/20250708_021129/training_run.stdout.log",
+      "stderr": "/home/sped/perf/mlperfv2/submission/Closed/Kingston_Digital/results/KINGSTONSEDC3000ME3T8BK/training/resnet50/run_3_20250708_021129/training/resnet50/run/20250708_021129/training_run.stderr.log"
+    }
+  ],
+  "run_result_output": "/home/sped/perf/mlperfv2/submission/Closed/Kingston_Digital/results/KINGSTONSEDC3000ME3T8BK/training/resnet50/run_3_20250708_021129/training/resnet50/run/20250708_021129",
+  "metadata_filename": "training_20250708_021129_metadata.json",
+  "metadata_file_path": "/home/sped/perf/mlperfv2/submission/Closed/Kingston_Digital/results/KINGSTONSEDC3000ME3T8BK/training/resnet50/run_3_20250708_021129/training/resnet50/run/20250708_021129/training_20250708_021129_metadata.json",
+  "_config_name": "resnet50_h100",
+  "base_command": "dlio_benchmark",
+  "base_path": "/home/sped/perf/mlperfv2/venv/bin",
+  "base_command_path": "/home/sped/perf/mlperfv2/venv/bin/dlio_benchmark",
+  "config_path": "/home/sped/perf/mlperfv2/storage/configs/dlio",
+  "per_host_mem_kB": null,
+  "total_mem_kB": null,
+  "cluster_information": "<mlpstorage.rules.ClusterInformation object at 0x7f8975f905b0>",
+  "config_file": "resnet50_h100.yaml",
+  "params_dict": {
+    "dataset.num_files_train": "14110",
+    "reader.read_threads": "4",
+    "dataset.data_folder": "/mnt/KINGSTONSEDC3000ME3T8BK/resnet50"
+  },
+  "yaml_params": {
+    "model": {
+      "name": "resnet50",
+      "type": "cnn"
+    },
+    "framework": "tensorflow",
+    "workflow": {
+      "generate_data": false,
+      "train": true
+    },
+    "dataset": {
+      "num_files_train": 1024,
+      "num_samples_per_file": 1251,
+      "record_length_bytes": 114660.07,
+      "record_length_bytes_resize": 150528,
+      "data_folder": "data/resnet50",
+      "format": "tfrecord"
+    },
+    "train": {
+      "computation_time": 0.224,
+      "epochs": 5
+    },
+    "reader": {
+      "data_loader": "tensorflow",
+      "read_threads": 8,
+      "computation_threads": 8,
+      "batch_size": 400
+    },
+    "metric": {
+      "au": 0.9
+    }
+  },
+  "combined_params": {
+    "model": {
+      "name": "resnet50",
+      "type": "cnn"
+    },
+    "framework": "tensorflow",
+    "workflow": {
+      "generate_data": false,
+      "train": true
+    },
+    "dataset": {
+      "num_files_train": "14110",
+      "num_samples_per_file": 1251,
+      "record_length_bytes": 114660.07,
+      "record_length_bytes_resize": 150528,
+      "data_folder": "data/resnet50",
+      "format": "tfrecord"
+    },
+    "train": {
+      "computation_time": 0.224,
+      "epochs": 5
+    },
+    "reader": {
+      "data_loader": "tensorflow",
+      "read_threads": "4",
+      "computation_threads": 8,
+      "batch_size": 400
+    },
+    "metric": {
+      "au": 0.9
+    }
+  },
+  "executed_command": "mpirun -n 65 -host localhost:65 /home/sped/perf/mlperfv2/venv/bin/dlio_benchmark workload=resnet50_h100 ++hydra.run.dir=/home/sped/perf/mlperfv2/submission/Closed/Kingston_Digital/results/KINGSTONSEDC3000ME3T8BK/training/resnet50/run_3_20250708_021129/training/resnet50/run/20250708_021129 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=14110 ++workload.reader.read_threads=4 ++workload.dataset.data_folder=/mnt/KINGSTONSEDC3000ME3T8BK/resnet50 --config-dir=/home/sped/perf/mlperfv2/storage/configs/dlio",
+  "benchmark_type": "training"
+}

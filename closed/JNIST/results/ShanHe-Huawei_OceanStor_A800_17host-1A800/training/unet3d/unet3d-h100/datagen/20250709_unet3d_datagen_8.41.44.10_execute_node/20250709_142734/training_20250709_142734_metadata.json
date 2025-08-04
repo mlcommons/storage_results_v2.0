@@ -1,0 +1,136 @@
+{
+  "args": {
+    "program": "training",
+    "command": "datagen",
+    "results_dir": "/home/mlperf_storage_results",
+    "loops": 1,
+    "config_file": null,
+    "closed": false,
+    "debug": false,
+    "verbose": false,
+    "stream_log_level": "INFO",
+    "allow_invalid_params": false,
+    "what_if": false,
+    "hosts": [
+      "8.41.42.51",
+      "8.41.42.53",
+      "8.41.42.57",
+      "8.41.42.59",
+      "8.41.44.2",
+      "8.41.44.4",
+      "8.41.44.6",
+      "8.41.44.12",
+      "8.41.44.14",
+      "8.41.44.20",
+      "8.41.44.121",
+      "8.41.44.123",
+      "8.41.44.125",
+      "8.41.44.127",
+      "8.41.44.129",
+      "8.41.42.43",
+      "8.41.42.45",
+      "8.41.42.47",
+      "8.41.42.49",
+      "8.41.43.160",
+      "8.41.43.162",
+      "8.41.43.170",
+      "8.41.43.172",
+      "8.41.43.174",
+      "8.41.44.8",
+      "8.41.44.10",
+      "8.41.44.119",
+      "8.41.44.131",
+      "8.41.44.133",
+      "8.41.44.137"
+    ],
+    "model": "unet3d",
+    "exec_type": "mpi",
+    "mpi_bin": "mpirun",
+    "oversubscribe": false,
+    "allow_run_as_root": false,
+    "mpi_params": null,
+    "num_processes": 720,
+    "data_dir": "/mnt3/mltest/mlperfstorage_008",
+    "params": [
+      "dataset.num_files_train=1800000",
+      "dataset.num_subfolders_train=128"
+    ],
+    "dlio_bin_path": null,
+    "num_client_hosts": 30
+  },
+  "debug": null,
+  "run_datetime": "20250709_142734",
+  "run_number": 0,
+  "runtime": 6435.20957159996,
+  "verification": null,
+  "command_output_files": [
+    {
+      "command": "mpirun -n 720 -host 8.41.42.51:24,8.41.42.53:24,8.41.42.57:24,8.41.42.59:24,8.41.44.2:24,8.41.44.4:24,8.41.44.6:24,8.41.44.12:24,8.41.44.14:24,8.41.44.20:24,8.41.44.121:24,8.41.44.123:24,8.41.44.125:24,8.41.44.127:24,8.41.44.129:24,8.41.42.43:24,8.41.42.45:24,8.41.42.47:24,8.41.42.49:24,8.41.43.160:24,8.41.43.162:24,8.41.43.170:24,8.41.43.172:24,8.41.43.174:24,8.41.44.8:24,8.41.44.10:24,8.41.44.119:24,8.41.44.131:24,8.41.44.133:24,8.41.44.137:24 /home/miniconda3/bin/dlio_benchmark workload=unet3d_datagen ++hydra.run.dir=/home/mlperf_storage_results/training/unet3d/datagen/20250709_142734 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=1800000 ++workload.dataset.num_subfolders_train=128 ++workload.dataset.data_folder=/mnt3/mltest/mlperfstorage_008/unet3d --config-dir=/home/miniconda3/mlperfstorage/storage/configs/dlio",
+      "stdout": "/home/mlperf_storage_results/training/unet3d/datagen/20250709_142734/training_datagen.stdout.log",
+      "stderr": "/home/mlperf_storage_results/training/unet3d/datagen/20250709_142734/training_datagen.stderr.log"
+    }
+  ],
+  "run_result_output": "/home/mlperf_storage_results/training/unet3d/datagen/20250709_142734",
+  "metadata_filename": "training_20250709_142734_metadata.json",
+  "metadata_file_path": "/home/mlperf_storage_results/training/unet3d/datagen/20250709_142734/training_20250709_142734_metadata.json",
+  "_config_name": "unet3d_datagen",
+  "base_command": "dlio_benchmark",
+  "base_path": "/home/miniconda3/bin",
+  "base_command_path": "/home/miniconda3/bin/dlio_benchmark",
+  "config_path": "/home/miniconda3/mlperfstorage/storage/configs/dlio",
+  "per_host_mem_kB": null,
+  "total_mem_kB": null,
+  "config_file": "unet3d_datagen.yaml",
+  "params_dict": {
+    "dataset.num_files_train": "1800000",
+    "dataset.num_subfolders_train": "128",
+    "dataset.data_folder": "/mnt3/mltest/mlperfstorage_008/unet3d"
+  },
+  "yaml_params": {
+    "model": {
+      "name": "unet3d",
+      "type": "cnn",
+      "model_size": 499153191
+    },
+    "framework": "pytorch",
+    "workflow": {
+      "generate_data": true,
+      "train": false,
+      "checkpoint": false
+    },
+    "dataset": {
+      "data_folder": "data/unet3d/",
+      "format": "npz",
+      "num_files_train": 168,
+      "num_samples_per_file": 1,
+      "record_length_bytes": 146600628,
+      "record_length_bytes_stdev": 68341808,
+      "record_length_bytes_resize": 2097152
+    }
+  },
+  "combined_params": {
+    "model": {
+      "name": "unet3d",
+      "type": "cnn",
+      "model_size": 499153191
+    },
+    "framework": "pytorch",
+    "workflow": {
+      "generate_data": true,
+      "train": false,
+      "checkpoint": false
+    },
+    "dataset": {
+      "data_folder": "data/unet3d/",
+      "format": "npz",
+      "num_files_train": "1800000",
+      "num_samples_per_file": 1,
+      "record_length_bytes": 146600628,
+      "record_length_bytes_stdev": 68341808,
+      "record_length_bytes_resize": 2097152,
+      "num_subfolders_train": "128"
+    }
+  },
+  "executed_command": "mpirun -n 720 -host 8.41.42.51:24,8.41.42.53:24,8.41.42.57:24,8.41.42.59:24,8.41.44.2:24,8.41.44.4:24,8.41.44.6:24,8.41.44.12:24,8.41.44.14:24,8.41.44.20:24,8.41.44.121:24,8.41.44.123:24,8.41.44.125:24,8.41.44.127:24,8.41.44.129:24,8.41.42.43:24,8.41.42.45:24,8.41.42.47:24,8.41.42.49:24,8.41.43.160:24,8.41.43.162:24,8.41.43.170:24,8.41.43.172:24,8.41.43.174:24,8.41.44.8:24,8.41.44.10:24,8.41.44.119:24,8.41.44.131:24,8.41.44.133:24,8.41.44.137:24 /home/miniconda3/bin/dlio_benchmark workload=unet3d_datagen ++hydra.run.dir=/home/mlperf_storage_results/training/unet3d/datagen/20250709_142734 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=1800000 ++workload.dataset.num_subfolders_train=128 ++workload.dataset.data_folder=/mnt3/mltest/mlperfstorage_008/unet3d --config-dir=/home/miniconda3/mlperfstorage/storage/configs/dlio",
+  "benchmark_type": "training"
+}

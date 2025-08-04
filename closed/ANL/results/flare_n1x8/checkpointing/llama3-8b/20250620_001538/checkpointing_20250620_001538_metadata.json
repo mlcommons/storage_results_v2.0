@@ -1,0 +1,133 @@
+{
+  "args": {
+    "program": "checkpointing",
+    "command": "run",
+    "results_dir": "./results/flare/n1x8/",
+    "loops": 1,
+    "config_file": null,
+    "closed": true,
+    "debug": false,
+    "verbose": false,
+    "stream_log_level": "INFO",
+    "allow_invalid_params": false,
+    "what_if": false,
+    "hosts": [
+      "127.0.0.1"
+    ],
+    "client_host_memory_in_gb": 128,
+    "model": "llama3-8b",
+    "num_checkpoints_read": 0,
+    "num_checkpoints_write": 10,
+    "num_processes": 8,
+    "params": null,
+    "checkpoint_folder": ".//checkpoints/n1x8/",
+    "dlio_bin_path": "/home/hzheng/flare/mlperf_storage/2025/mlperf_storage_v2.0_submission/pyenvs/2025-06-19/storage/bin",
+    "exec_type": "mpi",
+    "mpi_bin": "mpiexec",
+    "oversubscribe": false,
+    "allow_run_as_root": false,
+    "mpi_params": [
+      "--ppn 8 --cpu-bind depth -d 16"
+    ],
+    "num_client_hosts": 1
+  },
+  "debug": null,
+  "run_datetime": "20250620_001538",
+  "run_number": 0,
+  "runtime": 431.6801121234894,
+  "verification": "closed",
+  "command_output_files": [
+    {
+      "command": "mpiexec -n 8 --ppn 8 --cpu-bind depth -d 16 /home/hzheng/flare/mlperf_storage/2025/mlperf_storage_v2.0_submission/pyenvs/2025-06-19/storage/bin/dlio_benchmark workload=llama3_8b ++hydra.run.dir=./results/flare/n1x8/checkpointing/llama3-8b/20250620_001538 ++hydra.output_subdir=dlio_config ++workload.checkpoint.num_checkpoints_read=0 ++workload.checkpoint.num_checkpoints_write=10 ++workload.checkpoint.checkpoint_folder=.//checkpoints/n1x8/llama3-8b --config-dir=/lus/flare/projects/Aurora_deployment/hzheng/mlperf_storage/2025/mlperf_storage_v2.0_submission/storage/configs/dlio",
+      "stdout": "./results/flare/n1x8/checkpointing/llama3-8b/20250620_001538/checkpointing_run.stdout.log",
+      "stderr": "./results/flare/n1x8/checkpointing/llama3-8b/20250620_001538/checkpointing_run.stderr.log"
+    }
+  ],
+  "run_result_output": "./results/flare/n1x8/checkpointing/llama3-8b/20250620_001538",
+  "metadata_filename": "checkpointing_20250620_001538_metadata.json",
+  "metadata_file_path": "./results/flare/n1x8/checkpointing/llama3-8b/20250620_001538/checkpointing_20250620_001538_metadata.json",
+  "_config_name": "llama3_8b",
+  "base_command": "dlio_benchmark",
+  "base_path": "/home/hzheng/flare/mlperf_storage/2025/mlperf_storage_v2.0_submission/pyenvs/2025-06-19/storage/bin",
+  "base_command_path": "/home/hzheng/flare/mlperf_storage/2025/mlperf_storage_v2.0_submission/pyenvs/2025-06-19/storage/bin/dlio_benchmark",
+  "config_path": "/lus/flare/projects/Aurora_deployment/hzheng/mlperf_storage/2025/mlperf_storage_v2.0_submission/storage/configs/dlio",
+  "per_host_mem_kB": null,
+  "total_mem_kB": null,
+  "cluster_information": "<mlpstorage.rules.ClusterInformation object at 0x153ecd9787d0>",
+  "config_file": "llama3_8b.yaml",
+  "params_dict": {
+    "checkpoint.num_checkpoints_read": 0,
+    "checkpoint.num_checkpoints_write": 10,
+    "checkpoint.checkpoint_folder": ".//checkpoints/n1x8/llama3-8b"
+  },
+  "yaml_params": {
+    "model": {
+      "name": "llama_8b",
+      "type": "transformer",
+      "num_layers": 32,
+      "model_datatype": "fp16",
+      "optimizer_datatype": "fp32",
+      "parallelism": {
+        "pipeline": 1,
+        "tensor": 1,
+        "zero_stage": 3
+      },
+      "transformer": {
+        "vocab_size": 128256,
+        "hidden_size": 4096,
+        "ffn_hidden_size": 14336,
+        "num_attention_heads": 32,
+        "num_kv_heads": 8
+      }
+    },
+    "framework": "pytorch",
+    "workflow": {
+      "generate_data": false,
+      "train": false,
+      "checkpoint": true
+    },
+    "checkpoint": {
+      "checkpoint_folder": "checkpoints/llama_8b",
+      "time_between_checkpoints": 5,
+      "num_checkpoints_write": 10,
+      "num_checkpoints_read": 10,
+      "fsync": true
+    }
+  },
+  "combined_params": {
+    "model": {
+      "name": "llama_8b",
+      "type": "transformer",
+      "num_layers": 32,
+      "model_datatype": "fp16",
+      "optimizer_datatype": "fp32",
+      "parallelism": {
+        "pipeline": 1,
+        "tensor": 1,
+        "zero_stage": 3
+      },
+      "transformer": {
+        "vocab_size": 128256,
+        "hidden_size": 4096,
+        "ffn_hidden_size": 14336,
+        "num_attention_heads": 32,
+        "num_kv_heads": 8
+      }
+    },
+    "framework": "pytorch",
+    "workflow": {
+      "generate_data": false,
+      "train": false,
+      "checkpoint": true
+    },
+    "checkpoint": {
+      "checkpoint_folder": "checkpoints/llama_8b",
+      "time_between_checkpoints": 5,
+      "num_checkpoints_write": 10,
+      "num_checkpoints_read": 10,
+      "fsync": true
+    }
+  },
+  "executed_command": "mpiexec -n 8 --ppn 8 --cpu-bind depth -d 16 /home/hzheng/flare/mlperf_storage/2025/mlperf_storage_v2.0_submission/pyenvs/2025-06-19/storage/bin/dlio_benchmark workload=llama3_8b ++hydra.run.dir=./results/flare/n1x8/checkpointing/llama3-8b/20250620_001538 ++hydra.output_subdir=dlio_config ++workload.checkpoint.num_checkpoints_read=0 ++workload.checkpoint.num_checkpoints_write=10 ++workload.checkpoint.checkpoint_folder=.//checkpoints/n1x8/llama3-8b --config-dir=/lus/flare/projects/Aurora_deployment/hzheng/mlperf_storage/2025/mlperf_storage_v2.0_submission/storage/configs/dlio",
+  "benchmark_type": "checkpointing"
+}

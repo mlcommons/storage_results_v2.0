@@ -1,0 +1,57 @@
+{
+	"nodes": [
+		{
+			"node_type_name": "Localhost",
+			"config_options": [ "mem=256G" ],
+			"CPU": {
+				"vendor_and_model_name": "AMD EPYC 9354",
+				"socket_count": 2,
+				"cores_per_socket": 32, 
+				"threads_per_socket": 64,
+				"base_frequency": "1.5 GHz",
+				"boost_frequency": "3.25 GHz"
+			},
+			"DRAM": {
+				"capacity_MiB": 256,
+				"class": "DDR5",
+				"frequency": 4800
+			},
+			"drives": [
+				{
+					"purpose": [ "Device Under Test" ],
+					"drive_type": "SSD",
+					"capacity_GiB": 15360,
+					"interface": "NVMe",
+					"count_of_this_type": 1,
+					"performance": {
+						"read_bandwidth": {
+							"xfer_size_kilobytes": 1024,
+							"peak_bandwidth": "13700 MB/s"
+						},
+						"write_bandwidth": {
+							"xfer_size_kilobytes": 1024,
+							"peak_bandwidth": "8600 MB/s"
+						},
+						"read_iops": {
+							"xfer_size_kilobytes": 4,
+							"peak_iops": 3300000
+						},
+						"write_iops": {
+							"xfer_size_kilobytes": 4,
+							"peak_iops": 370000
+						},
+						"endurance": [ "1 DWPD" ]
+					}
+				}
+			]
+		}
+	],
+	"benchmark_hosts": [
+		{
+			"node_name": "localhost",
+			"node_type_name": "localhost",
+			"benchmark_instances": [ { "mapping_type": "native" } ]
+		}
+	]
+
+}

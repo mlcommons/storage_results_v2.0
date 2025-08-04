@@ -1,0 +1,155 @@
+System:
+  name: H3C UniStor Polaris X20000
+  description: Where we store and manage the data
+  storage_location: remote
+  client_software: proprietary
+  storage_interface: file
+  required_rack_units: 6
+  shared_capabilities:
+    multi_host_support: True            # False is used for local storage
+    simultaneous_write_support: True    # Are simultaneous writes by multiple hosts supported in the submitted configuration
+    simultaneous_read__support: True    # Are simultaneous reads by multiple hosts supported in the submitted configuration
+  max_sequential_read:                  # Optional - GiB/s
+  max_sequential_write:                 # Optional - GiB/s
+  max_random_read:                      # Optional - GiB/s
+  max_random_write:                     # Optional - GiB/s
+
+# The following will be used to generate the "integrated client storage" and "# Clients with local storage" in the
+# results table.
+use_local_storage: false
+integrated_client_storage: non   # Describe the storage present PER NODE in client nodes for the solution
+num_clients_with_integrated_storage: 0            # Number of clients with integrated storage
+
+# The following will map to the "Storage System Type" column in the results table. If "use_local_drives" is True,
+#   then "Local File + " will be prepended to the storage type
+system_architecture: shared file
+useable_capacity:  180 # Capacity in TiB that is usable for the storage system. If no unit is provided, assume TiB (not TB)
+
+PowerRequirements:
+  dlio_client:
+    quantity: 16
+    psu1_nameplate_power: 1300
+    psu2_nameplate_power: 1300
+    design_power: 
+    num_active_psus: 2
+    num_passive_psus: 0
+
+  # All storage nodes need to be listed (data, metadata, etc) as well as any required backed switching
+  storage_data_node:
+    quantity: 3
+    psu1_nameplate_power: 1600
+    psu2_nameplate_power: 1600
+    design_power: 
+    num_active_psus: 2
+    num_passive_psus: 0
+  backend_switch:
+    quantity: 2
+    psu1_nameplate_power: 350
+    psu2_nameplate_power: 350
+    design_power: 350
+    num_active_psus: 2
+    num_passive_psus: 0
+
+
+# All nodes used need to be listed. Clients, Data storage, metadata, front-end, back-end, etc
+Nodes:
+  # Useful name for the client describing it's role in the system under test
+  dlio_client:  # This can be DLIO Client, storage node, storage controller, AwesomeMarketingName_Type1, etc
+    client1:
+      quantity: 4
+      hardware:
+        model: H3C UniServer R4950 G6
+        rack_units: 2
+        power_supplies: 2
+        psu_configuration: active/active
+        psu_rating: 1300*2
+        memory_capacity: 256GB
+        memory_configuration: 8x32GB
+        cpu_qty: 2
+        cpu_model: AMD EPYC 9654 96-Core Processor
+        cpu_cores: 384
+    client2:
+      quantity: 10
+      hardware:
+        model: H3C UniServer R4900 G6 Ultra
+        rack_units: 2
+        power_supplies: 2
+        psu_configuration: active/active
+        psu_rating: 1300*2
+        memory_capacity: 256GB
+        memory_configuration: 8x32GB
+        cpu_qty: 1
+        cpu_model: INTEL(R) XEON(R) PLATINUM 8592+
+        cpu_cores: 128
+    client3:
+      quantity: 1
+      hardware:
+        model: H3C UniServer R4900 G6 Ultra
+        rack_units: 2
+        power_supplies: 2
+        psu_configuration: active/active
+        psu_rating: 1300*2
+        memory_capacity: 256GB
+        memory_configuration: 12x32GB
+        cpu_qty: 2
+        cpu_model: INTEL(R) XEON(R) PLATINUM 8592+
+        cpu_cores: 256
+    client4:
+      quantity: 1
+      hardware:
+        model: R5500 G6
+        rack_units: 8
+        power_supplies: 6
+        psu_configuration: active/active
+        psu_rating: 3000*4 + 2000*2
+        memory_capacity: 256GB
+        memory_configuration: 8x32GB
+        cpu_qty: 2
+        cpu_model: AMD EPYC 9654 96-Core Processor
+        cpu_cores: 384
+    networking:
+      management:
+        model: intel i350
+        speed: 1Gbps
+        qty: 1
+    operating_system:
+      name: Ubuntu
+      version: 24.04.2 LTS
+      release_date: 2025-02-20
+      kernel_version: 6.8.0-53-generic
+      cpu_architecture: x86_64
+    tuning:
+      # All non-default tunings for OS need to be listed
+      mpi_configuration:
+        environment_variables: OMPI_ALLOW_RUN_AS_ROOT=1, OMPI_ALLOW_RUN_AS_ROOT_CONFIRM=1
+        version: Open MPI 4.1.6
+      sysctl_parameters:
+  storage_data_node: # This can be DLIO Client, storage node, storage controller, AwesomeMarketingName_Type1, etc
+    quantity: 3  # How many of this node
+    hardware:
+      model: H3C UniStor Polaris X20000
+      rack_units: 2
+      power_supplies: 2
+      psu_configuration: active/active
+      psu_rating: 1600
+      memory_capacity: 512GB
+      memory_configuration: 16x32GB
+      cpu_qty: 2
+      cpu_model: INTEL(R) XEON(R) PLATINUM 8592+
+      cpu_cores: 256
+    networking:
+      management:
+        model: intel i350
+        speed: 1Gbps
+        qty: 1
+    operating_system:
+      name: NingOS
+      version: v3 (1.0.2306)
+      release_date: 2023-11-22
+      kernel_version: 5.10.0-136.12.0.86.4.nos1.x86_64
+      cpu_architecture: x86_64
+    tuning:
+      mpi_configuration:
+        environment_variables: non
+        version: non
+      sysctl_parameters:

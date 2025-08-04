@@ -1,0 +1,308 @@
+[pid  4126] fstat(3, {st_mode=S_IFREG|0644, st_size=41997, ...}) = 0
+[pid  4126] fstat(3, {st_mode=S_IFREG|0644, st_size=41997, ...}) = 0
+[pid  4126] read(3, "\313\r\r\n\0\0\0\0004:Shf\225\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\v\0\0"..., 41998) = 41997
+[pid  4126] newfstatat(AT_FDCWD, "/mnt/hs_test/env/lib64/python3.12/site-packages/pandas/io/parsers/c_parser_wrapper.py", {st_mode=S_IFREG|0644, st_size=14199, ...}, 0) = 0
+[pid  4126] newfstatat(AT_FDCWD, "/mnt/hs_test/env/lib64/python3.12/site-packages/pandas/io/parsers/c_parser_wrapper.py", {st_mode=S_IFREG|0644, st_size=14199, ...}, 0) = 0
+[pid  4126] fstat(13, {st_mode=S_IFREG|0644, st_size=14199, ...}) = 0
+[pid  4126] fstat(13, {st_mode=S_IFREG|0644, st_size=14199, ...}) = 0
+[pid  4126] read(13, "\313\r\r\n\0\0\0\0{:Sh\234/\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\5\0\0"..., 14200) = 14199
+[pid  4126] newfstatat(AT_FDCWD, "/mnt/hs_test/env/lib64/python3.12/site-packages/pandas/io/parsers/c_parser_wrapper.py", {st_mode=S_IFREG|0644, st_size=14199, ...}, 0) = 0
+[pid  4126] newfstatat(AT_FDCWD, "/mnt/hs_test/env/lib/python3.12/site-packages/pandas/io/parsers/c_parser_wrapper.py", {st_mode=S_IFREG|0644, st_size=14199, ...}, AT_SYMLINK_NOFOLLOW) = 0
+[pid  4126] <... clone resumed>, child_tidptr=0x7f00be2bfe50) = 4199
+strace: Process 4199 attached
+[pid  4199] set_robust_list(0x7f00be2bfe60, 24) = 0
+[pid  4199] gettid()                    = 4199
+[pid  4199] getrandom( <unfinished ...>
+[pid  4199] <... getrandom resumed>"\x7f\x96\xe3\x16\x7a\x97\xe0\xd0\x30\xce\x33\x37\xe3\x68\xa5\xa2\xcb\xf7\x70\xe7\xa0\x3e\xed\xe3\xb9\xa9\x88\x55\x2c\xf0\x42\x09"..., 2496, GRND_NONBLOCK) = 2496
+[pid  4199] close(30 <unfinished ...>
+[pid  4199] <... close resumed>)        = 0
+[pid  4199] close(33)                   = 0
+[pid  4199] openat(AT_FDCWD, "/dev/null", O_RDONLY|O_CLOEXEC <unfinished ...>
+[pid  4199] <... openat resumed>)       = 30
+[pid  4199] fstat(30,  <unfinished ...>
+[pid  4199] <... fstat resumed>{st_mode=S_IFCHR|0666, st_rdev=makedev(0x1, 0x3), ...}) = 0
+[pid  4199] ioctl(30, TCGETS <unfinished ...>
+[pid  4199] <... ioctl resumed>, 0x7ffdd5289400) = -1 ENOTTY (Inappropriate ioctl for device)
+[pid  4199] lseek(30, 0, SEEK_CUR)      = 0
+[pid  4199] gettid( <unfinished ...>
+[pid  4199] <... gettid resumed>)       = 4199
+[pid  4199] rt_sigaction(SIGBUS, {sa_handler=0x7effb5776d50, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART|SA_NODEFER|SA_SIGINFO|SA_NOCLDSTOP, sa_restorer=0x7f00bd83e730},  <unfinished ...>
+[pid  4199] <... rt_sigaction resumed>NULL, 8) = 0
+[pid  4199] rt_sigaction(SIGSEGV, {sa_handler=0x7effb5776ce0, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART|SA_NODEFER|SA_SIGINFO|SA_NOCLDSTOP, sa_restorer=0x7f00bd83e730},  <unfinished ...>
+[pid  4199] <... rt_sigaction resumed>NULL, 8) = 0
+[pid  4199] rt_sigaction(SIGTERM, {sa_handler=0x7effb5776dc0, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART|SA_NODEFER|SA_SIGINFO|SA_NOCLDSTOP, sa_restorer=0x7f00bd83e730},  <unfinished ...>
+[pid  4199] <... rt_sigaction resumed>NULL, 8) = 0
+[pid  4199] rt_sigaction(SIGFPE, {sa_handler=0x7effb5776c70, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART|SA_NODEFER|SA_SIGINFO|SA_NOCLDSTOP, sa_restorer=0x7f00bd83e730},  <unfinished ...>
+[pid  4199] <... rt_sigaction resumed>NULL, 8) = 0
+[pid  4199] prctl(PR_SET_NAME, "pt_data_worker" <unfinished ...>
+[pid  4199] <... prctl resumed>)        = 0
+[pid  4199] futex(0x7effb4bdbc88, FUTEX_WAKE_PRIVATE, 2147483647 <unfinished ...>
+[pid  4199] <... futex resumed>)        = 0
+[pid  4199] newfstatat(AT_FDCWD, "/mnt/hs_test/env/bin/dlio_benchmark", {st_mode=S_IFREG|0755, st_size=233, ...}, 0) = 0
+[pid  4199] newfstatat(AT_FDCWD, "/mnt/hs_test/env/lib64/python3.12/site-packages/hydra/_internal/hydra.py", {st_mode=S_IFREG|0644, st_size=24147, ...}, 0) = 0
+[pid  4199] newfstatat(AT_FDCWD, "/mnt/hs_test/env/lib64/python3.12/site-packages/hydra/core/utils.py", {st_mode=S_IFREG|0644, st_size=10502, ...}, 0) = 0
+[pid  4199] newfstatat(AT_FDCWD, "/mnt/hs_test/env/lib64/python3.12/site-packages/hydra/main.py", {st_mode=S_IFREG|0644, st_size=3999, ...}, 0) = 0
+[pid  4199] newfstatat(AT_FDCWD, "/mnt/hs_test/env/lib64/python3.12/site-packages/dlio_benchmark/main.py", {st_mode=S_IFREG|0644, st_size=23805, ...}, 0) = 0
+[pid  4199] newfstatat(AT_FDCWD, "/mnt/hs_test/env/lib64/python3.12/site-packages/hydra/_internal/utils.py", {st_mode=S_IFREG|0644, st_size=22368, ...}, 0) = 0
+[pid  4199] newfstatat(AT_FDCWD, "/mnt/hs_test/env/lib64/python3.12/site-packages/torch/xpu/__init__.py", {st_mode=S_IFREG|0644, st_size=17750, ...}, 0) = 0
+[pid  4199] openat(AT_FDCWD, "/mnt/hs_test/env/lib64/python3.12/site-packages/torch/xpu/__init__.py", O_RDONLY|O_CLOEXEC) = 33
+[pid  4199] fstat(33, {st_mode=S_IFREG|0644, st_size=17750, ...}) = 0
+[pid  4199] ioctl(33, TCGETS, 0x7ffdd52894a0) = -1 ENOTTY (Inappropriate ioctl for device)
+[pid  4199] lseek(33, 0, SEEK_CUR)      = 0
+[pid  4199] read(33, "# mypy: allow-untyped-defs\nr\"\"\"\n"..., 1048576) = 17750
+[pid  4199] read(33, "", 8192)          = 0
+[pid  4199] close(33)                   = 0
+[pid  4199] newfstatat(AT_FDCWD, "/mnt/hs_test/env/lib64/python3.12/site-packages/torch/xpu/random.py", {st_mode=S_IFREG|0644, st_size=5239, ...}, 0) = 0
+[pid  4199] openat(AT_FDCWD, "/mnt/hs_test/env/lib64/python3.12/site-packages/torch/xpu/random.py", O_RDONLY|O_CLOEXEC) = 33
+[pid  4199] fstat(33, {st_mode=S_IFREG|0644, st_size=5239, ...}) = 0
+[pid  4199] ioctl(33, TCGETS, 0x7ffdd52894a0) = -1 ENOTTY (Inappropriate ioctl for device)
+[pid  4199] lseek(33, 0, SEEK_CUR)      = 0
+[pid  4199] read(33, "# mypy: allow-untyped-defs\nfrom "..., 1048576) = 5239
+[pid  4199] read(33, "", 8192)          = 0
+[pid  4199] close(33)                   = 0
+[pid  4199] newfstatat(AT_FDCWD, "/mnt/hs_test/env/lib64/python3.12/site-packages/torch/random.py", {st_mode=S_IFREG|0644, st_size=7212, ...}, 0) = 0
+[pid  4199] openat(AT_FDCWD, "/mnt/hs_test/env/lib64/python3.12/site-packages/torch/random.py", O_RDONLY|O_CLOEXEC) = 33
+[pid  4199] fstat(33, {st_mode=S_IFREG|0644, st_size=7212, ...}) = 0
+[pid  4199] ioctl(33, TCGETS, 0x7ffdd52894a0) = -1 ENOTTY (Inappropriate ioctl for device)
+[pid  4199] lseek(33, 0, SEEK_CUR)      = 0
+[pid  4199] read(33, "# mypy: allow-untyped-defs\nimpor"..., 1048576) = 7212
+[pid  4199] read(33, "", 8192)          = 0
+[pid  4199] close(33)                   = 0
+[pid  4199] newfstatat(AT_FDCWD, "/mnt/hs_test/env/lib64/python3.12/site-packages/torch/utils/data/_utils/worker.py", {st_mode=S_IFREG|0644, st_size=13800, ...}, 0) = 0
+[pid  4199] openat(AT_FDCWD, "/mnt/hs_test/env/lib64/python3.12/site-packages/torch/utils/data/_utils/worker.py", O_RDONLY|O_CLOEXEC) = 33
+[pid  4199] fstat(33, {st_mode=S_IFREG|0644, st_size=13800, ...}) = 0
+[pid  4199] ioctl(33, TCGETS, 0x7ffdd52894a0) = -1 ENOTTY (Inappropriate ioctl for device)
+[pid  4199] lseek(33, 0, SEEK_CUR)      = 0
+[pid  4199] read(33, "# mypy: allow-untyped-defs\nr\"\"\"\""..., 1048576) = 13800
+[pid  4199] read(33, "", 8192)          = 0
+[pid  4199] close(33)                   = 0
+[pid  4199] newfstatat(AT_FDCWD, "/usr/lib64/python3.12/multiprocessing/process.py", {st_mode=S_IFREG|0644, st_size=12139, ...}, 0) = 0
+[pid  4199] openat(AT_FDCWD, "/usr/lib64/python3.12/multiprocessing/process.py", O_RDONLY|O_CLOEXEC) = 33
+[pid  4199] fstat(33, {st_mode=S_IFREG|0644, st_size=12139, ...}) = 0
+[pid  4199] ioctl(33, TCGETS, 0x7ffdd52894a0) = -1 ENOTTY (Inappropriate ioctl for device)
+[pid  4199] lseek(33, 0, SEEK_CUR)      = 0
+[pid  4199] read(33, "#\n# Module providing the `Proces"..., 4096) = 4096
+[pid  4199] read(33, "losed()\n        if self is _curr"..., 8192) = 8043
+[pid  4199] read(33, "", 8192)          = 0
+[pid  4199] close(33)                   = 0
+[pid  4199] newfstatat(AT_FDCWD, "/usr/lib64/python3.12/multiprocessing/popen_fork.py", {st_mode=S_IFREG|0644, st_size=2377, ...}, 0) = 0
+[pid  4199] openat(AT_FDCWD, "/usr/lib64/python3.12/multiprocessing/popen_fork.py", O_RDONLY|O_CLOEXEC) = 33
+[pid  4199] fstat(33, {st_mode=S_IFREG|0644, st_size=2377, ...}) = 0
+[pid  4199] ioctl(33, TCGETS, 0x7ffdd52894a0) = -1 ENOTTY (Inappropriate ioctl for device)
+[pid  4199] lseek(33, 0, SEEK_CUR)      = 0
+[pid  4199] read(33, "import os\nimport signal\n\nfrom . "..., 4096) = 2377
+[pid  4199] read(33, "", 8192)          = 0
+[pid  4199] close(33)                   = 0
+[pid  4199] newfstatat(AT_FDCWD, "/usr/lib64/python3.12/multiprocessing/context.py", {st_mode=S_IFREG|0644, st_size=11673, ...}, 0) = 0
+[pid  4199] openat(AT_FDCWD, "/usr/lib64/python3.12/multiprocessing/context.py", O_RDONLY|O_CLOEXEC) = 33
+[pid  4199] fstat(33, {st_mode=S_IFREG|0644, st_size=11673, ...}) = 0
+[pid  4199] ioctl(33, TCGETS, 0x7ffdd52894a0) = -1 ENOTTY (Inappropriate ioctl for device)
+[pid  4199] lseek(33, 0, SEEK_CUR)      = 0
+[pid  4199] read(33, "import os\nimport sys\nimport thre"..., 4096) = 4096
+[pid  4199] read(33, "pecode_or_type, *args, lock=lock"..., 8192) = 7577
+[pid  4199] read(33, "", 8192)          = 0
+[pid  4199] close(33)                   = 0
+[pid  4199] newfstatat(AT_FDCWD, "/mnt/hs_test/env/lib64/python3.12/site-packages/torch/utils/data/dataloader.py", {st_mode=S_IFREG|0644, st_size=79655, ...}, 0) = 0
+[pid  4199] openat(AT_FDCWD, "/mnt/hs_test/env/lib64/python3.12/site-packages/torch/utils/data/dataloader.py", O_RDONLY|O_CLOEXEC) = 33
+[pid  4199] fstat(33, {st_mode=S_IFREG|0644, st_size=79655, ...}) = 0
+[pid  4199] ioctl(33, TCGETS, 0x7ffdd52894a0) = -1 ENOTTY (Inappropriate ioctl for device)
+[pid  4199] lseek(33, 0, SEEK_CUR)      = 0
+[pid  4199] read(33, "# mypy: allow-untyped-defs\nr\"\"\"D"..., 1048576) = 79655
+[pid  4199] read(33, "", 8192)          = 0
+[pid  4199] close(33)                   = 0
+[pid  4199] newfstatat(AT_FDCWD, "/mnt/hs_test/env/lib64/python3.12/site-packages/dlio_benchmark/data_loader/torch_data_loader.py", {st_mode=S_IFREG|0644, st_size=7630, ...}, 0) = 0
+[pid  4199] openat(AT_FDCWD, "/mnt/hs_test/env/lib64/python3.12/site-packages/dlio_benchmark/data_loader/torch_data_loader.py", O_RDONLY|O_CLOEXEC) = 33
+[pid  4199] fstat(33, {st_mode=S_IFREG|0644, st_size=7630, ...}) = 0
+[pid  4199] ioctl(33, TCGETS, 0x7ffdd52894a0) = -1 ENOTTY (Inappropriate ioctl for device)
+[pid  4199] lseek(33, 0, SEEK_CUR)      = 0
+[pid  4199] read(33, "\"\"\"\n   Copyright (c) 2025, UChic"..., 1048576) = 7630
+[pid  4199] read(33, "", 8192)          = 0
+[pid  4199] close(33)                   = 0
+[pid  4199] mmap(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f00ba9b5000
+[pid  4199] mmap(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f00ba8b5000
+[pid  4199] mmap(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+[pid  4199] <... mmap resumed>)         = 0x7f00ba7b5000
+[pid  4199] mmap(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f00ba6b5000
+[pid  4199] mmap(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f00ba5b5000
+[pid  4199] mmap(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f00ba4b5000
+[pid  4199] mmap(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f00ba3b5000
+[pid  4199] mmap(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f00ba2b5000
+[pid  4199] mmap(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f00ba1b5000
+[pid  4199] mmap(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f00ba0b5000
+[pid  4199] mmap(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f00b9fb5000
+[pid  4199] mmap(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f00b9eb5000
+[pid  4199] mmap(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f00b9db5000
+[pid  4199] mmap(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f00b9cb5000
+[pid  4199] mmap(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f00b9bb5000
+[pid  4199] mmap(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f00b79bc000
+[pid  4199] mmap(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f00b78bc000
+[pid  4199] mmap(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f00b77bc000
+[pid  4199] mmap(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f00b76bc000
+[pid  4199] mmap(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f00b75bc000
+[pid  4199] mmap(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+[pid  4199] <... mmap resumed>)         = 0x7f00b74bc000
+[pid  4199] mmap(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f00b73bc000
+[pid  4199] mmap(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f00b72bc000
+[pid  4199] mmap(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f00b51bb000
+[pid  4199] mmap(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f00b50bb000
+[pid  4199] mmap(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f00b4fbb000
+[pid  4199] mmap(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f00b4ebb000
+[pid  4199] mmap(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f00b4dbb000
+[pid  4199] mmap(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f00b4cbb000
+[pid  4199] mmap(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f00b4bbb000
+[pid  4199] mmap(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f00b4abb000
+[pid  4199] mmap(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f00b29ba000
+[pid  4199] mmap(NULL, 1048576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f00b28ba000
+[pid  4199] newfstatat(AT_FDCWD, "/mnt/hs_test/env/lib64/python3.12/site-packages/dlio_benchmark/reader", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0
+[pid  4199] newfstatat(AT_FDCWD, "/mnt/hs_test/env/lib64/python3.12/site-packages/dlio_benchmark/reader/npz_reader.py", {st_mode=S_IFREG|0644, st_size=1896, ...}, 0) = 0
+[pid  4199] newfstatat(AT_FDCWD, "/mnt/hs_test/env/lib64/python3.12/site-packages/dlio_benchmark/reader/npz_reader.py", {st_mode=S_IFREG|0644, st_size=1896, ...}, 0) = 0
+[pid  4199] openat(AT_FDCWD, "/mnt/hs_test/env/lib64/python3.12/site-packages/dlio_benchmark/reader/__pycache__/npz_reader.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 33
+[pid  4199] fstat(33, {st_mode=S_IFREG|0644, st_size=3711, ...}) = 0
+[pid  4199] ioctl(33, TCGETS, 0x7ffdd5288e30) = -1 ENOTTY (Inappropriate ioctl for device)
+[pid  4199] lseek(33, 0, SEEK_CUR)      = 0
+[pid  4199] lseek(33, 0, SEEK_CUR)      = 0
+[pid  4199] fstat(33, {st_mode=S_IFREG|0644, st_size=3711, ...}) = 0
+[pid  4199] read(33, "\313\r\r\n\0\0\0\0\205:Shh\7\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\5\0\0"..., 3712) = 3711
+[pid  4199] read(33, "", 1)             = 0
+[pid  4199] close(33)                   = 0
+[pid  4199] newfstatat(AT_FDCWD, "/mnt/hs_test/env/lib64/python3.12/site-packages/dlio_benchmark/reader", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0
+[pid  4199] newfstatat(AT_FDCWD, "/mnt/hs_test/env/lib64/python3.12/site-packages/dlio_benchmark/reader/reader_handler.py", {st_mode=S_IFREG|0644, st_size=5776, ...}, 0) = 0
+[pid  4199] newfstatat(AT_FDCWD, "/mnt/hs_test/env/lib64/python3.12/site-packages/dlio_benchmark/reader/reader_handler.py", {st_mode=S_IFREG|0644, st_size=5776, ...}, 0) = 0
+[pid  4199] openat(AT_FDCWD, "/mnt/hs_test/env/lib64/python3.12/site-packages/dlio_benchmark/reader/__pycache__/reader_handler.cpython-312.pyc", O_RDONLY|O_CLOEXEC) = 33
+[pid  4199] fstat(33, {st_mode=S_IFREG|0644, st_size=9168, ...}) = 0
+[pid  4199] ioctl(33, TCGETS, 0x7ffdd5288690) = -1 ENOTTY (Inappropriate ioctl for device)
+[pid  4199] lseek(33, 0, SEEK_CUR)      = 0
+[pid  4199] lseek(33, 0, SEEK_CUR)      = 0
+[pid  4199] fstat(33, {st_mode=S_IFREG|0644, st_size=9168, ...}) = 0
+[pid  4199] read(33, "\313\r\r\n\0\0\0\0\205:Sh\220\26\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\5\0\0"..., 9169) = 9168
+[pid  4199] read(33, "", 1)             = 0
+[pid  4199] close(33)                   = 0
+[pid  4199] getppid()                   = 4126
+[pid  4199] getppid()                   = 4126
+[pid  4199] poll([{fd=27, events=POLLIN}], 1, 5000) = 1 ([{fd=27, revents=POLLIN}])
+[pid  4199] read(27, "\0\0\0\"", 4)     = 4
+[pid  4199] read(27, "\200\4\225\27\0\0\0\0\0\0\0K\3]\224(K\25K\26K\27K\30K\31K\32K\33e\206"..., 34) = 34
+[pid  4199] openat(AT_FDCWD, "/mnt/hs_test/mlperf-data/unet3d/train/img_000021_of_225001.npz", O_RDONLY|O_CLOEXEC) = 33
+[pid  4199] write(2, "vastpreload: Injecting O_DIRECT."..., 110vastpreload: Injecting O_DIRECT. fd: 33; path: /mnt/hs_test/mlperf-data/unet3d/train/img_000021_of_225001.npz
+[pid  4199] fcntl(33, F_SETFL, O_RDONLY|O_DIRECT|O_CLOEXEC) = 0
+[pid  4199] fstat(33, {st_mode=S_IFREG|0644, st_size=101405373, ...}) = 0
+[pid  4199] ioctl(33, TCGETS, 0x7ffdd5289170) = -1 ENOTTY (Inappropriate ioctl for device)
+[pid  4199] lseek(33, 0, SEEK_CUR)      = 0
+[pid  4199] read(33,  <unfinished ...>
+[pid  4199] <... read resumed>"PK\3\4-\0\0\0\0\0\0\0!\0\260\337\236K\377\377\377\377\377\377\377\377\5\0\24\0x."..., 1048576) = 1048576
+[pid  4199] lseek(33, 0, SEEK_END <unfinished ...>
+[pid  4199] <... lseek resumed>)        = 101405373
+[pid  4199] lseek(33, 0, SEEK_CUR <unfinished ...>
+[pid  4199] <... lseek resumed>)        = 101405373
+[pid  4199] lseek(33, -22, SEEK_END <unfinished ...>
+[pid  4199] <... lseek resumed>)        = 101405351
+[pid  4199] lseek(33, 0, SEEK_CUR <unfinished ...>
+[pid  4199] <... lseek resumed>)        = 101405351
+[pid  4199] fstat(33,  <unfinished ...>
+[pid  4199] <... fstat resumed>{st_mode=S_IFREG|0644, st_size=101405373, ...}) = 0
+[pid  4199] read(33,  <unfinished ...>
+[pid  4199] <... read resumed>"\261\220\271\16\214\267e\244\361\263\v\365\315\271\332\2440\32\337;\5&", 23) = 22
+[pid  4199] read(33,  <unfinished ...>
+[pid  4199] <... read resumed>"", 1)    = 0
+[pid  4199] lseek(33, 101339815, SEEK_SET) = 101339815
+[pid  4199] lseek(33, 0, SEEK_CUR)      = 101339815
+[pid  4199] fstat(33,  <unfinished ...>
+[pid  4199] <... fstat resumed>{st_mode=S_IFREG|0644, st_size=101405373, ...}) = 0
+[pid  4199] read(33,  <unfinished ...>
+[pid  4199] <... read resumed>"\354\263L\351\202\317(\245\37=`\371\301\223\365[D\10qQ\353BU\212\242_\252\372\274q\243\316"..., 65559) = 65558
+[pid  4199] read(33,  <unfinished ...>
+[pid  4199] <... read resumed>"", 1)    = 0
+[pid  4199] newfstatat(AT_FDCWD, "/mnt/hs_test/env/lib64/python3.12/site-packages/dlio_benchmark/data_loader/torch_data_loader.py", {st_mode=S_IFREG|0644, st_size=7630, ...}, 0) = 0
+[pid  4199] newfstatat(AT_FDCWD, "/mnt/hs_test/env/lib64/python3.12/site-packages/torch/utils/data/_utils/worker.py", {st_mode=S_IFREG|0644, st_size=13800, ...}, 0) = 0
+[pid  4199] newfstatat(AT_FDCWD, "/mnt/hs_test/env/lib64/python3.12/site-packages/torch/utils/data/_utils/fetch.py", {st_mode=S_IFREG|0644, st_size=1953, ...}, 0) = 0
+[pid  4199] openat(AT_FDCWD, "/mnt/hs_test/env/lib64/python3.12/site-packages/torch/utils/data/_utils/fetch.py", O_RDONLY|O_CLOEXEC <unfinished ...>
+[pid  4199] <... openat resumed>)       = 34
+[pid  4199] fstat(34, {st_mode=S_IFREG|0644, st_size=1953, ...}) = 0
+[pid  4199] ioctl(34, TCGETS, 0x7ffdd5288de0) = -1 ENOTTY (Inappropriate ioctl for device)
+[pid  4199] lseek(34, 0, SEEK_CUR)      = 0
+[pid  4199] read(34, "# mypy: allow-untyped-defs\nr\"\"\"C"..., 1048576) = 1953
+[pid  4199] read(34, "", 8192)          = 0
+[pid  4199] close(34 <unfinished ...>
+[pid  4199] <... close resumed>)        = 0
+[pid  4199] newfstatat(AT_FDCWD, "/mnt/hs_test/env/lib64/python3.12/site-packages/dlio_benchmark/reader/npz_reader.py", {st_mode=S_IFREG|0644, st_size=1896, ...}, 0) = 0
+[pid  4199] openat(AT_FDCWD, "/mnt/hs_test/env/lib64/python3.12/site-packages/dlio_benchmark/reader/npz_reader.py", O_RDONLY|O_CLOEXEC <unfinished ...>
+[pid  4199] <... openat resumed>)       = 34
+[pid  4199] fstat(34, {st_mode=S_IFREG|0644, st_size=1896, ...}) = 0
+[pid  4199] ioctl(34, TCGETS, 0x7ffdd5288de0) = -1 ENOTTY (Inappropriate ioctl for device)
+[pid  4199] lseek(34, 0, SEEK_CUR)      = 0
+[pid  4199] read(34, "\"\"\"\n   Copyright (c) 2025, UChic"..., 1048576) = 1896
+[pid  4199] read(34, "", 8192)          = 0
+[pid  4199] close(34 <unfinished ...>
+[pid  4199] <... close resumed>)        = 0
+[pid  4199] newfstatat(AT_FDCWD, "/mnt/hs_test/env/lib64/python3.12/site-packages/dlio_benchmark/reader/reader_handler.py", {st_mode=S_IFREG|0644, st_size=5776, ...}, 0) = 0
+[pid  4199] openat(AT_FDCWD, "/mnt/hs_test/env/lib64/python3.12/site-packages/dlio_benchmark/reader/reader_handler.py", O_RDONLY|O_CLOEXEC <unfinished ...>
+[pid  4199] <... openat resumed>)       = 34
+[pid  4199] fstat(34, {st_mode=S_IFREG|0644, st_size=5776, ...}) = 0
+[pid  4199] ioctl(34, TCGETS, 0x7ffdd5288de0) = -1 ENOTTY (Inappropriate ioctl for device)
+[pid  4199] lseek(34, 0, SEEK_CUR)      = 0
+[pid  4199] read(34, "\"\"\"\n   Copyright (c) 2025, UChic"..., 1048576) = 5776
+[pid  4199] read(34, "", 8192)          = 0
+[pid  4199] close(34 <unfinished ...>
+[pid  4199] <... close resumed>)        = 0
+[pid  4199] newfstatat(AT_FDCWD, "/mnt/hs_test/env/lib64/python3.12/site-packages/numpy/lib/_npyio_impl.py", {st_mode=S_IFREG|0644, st_size=98977, ...}, 0) = 0
+[pid  4199] openat(AT_FDCWD, "/mnt/hs_test/env/lib64/python3.12/site-packages/numpy/lib/_npyio_impl.py", O_RDONLY|O_CLOEXEC) = 34
+[pid  4199] fstat(34, {st_mode=S_IFREG|0644, st_size=98977, ...}) = 0
+[pid  4199] ioctl(34, TCGETS, 0x7ffdd5288de0) = -1 ENOTTY (Inappropriate ioctl for device)
+[pid  4199] lseek(34, 0, SEEK_CUR)      = 0
+[pid  4199] read(34, "\"\"\"\nIO related functions.\n\"\"\"\nim"..., 1048576) = 98977
+[pid  4199] read(34, "", 8192)          = 0
+[pid  4199] close(34)                   = 0
+[pid  4199] newfstatat(AT_FDCWD, "/usr/lib64/python3.12/zipfile/__init__.py", {st_mode=S_IFREG|0644, st_size=87706, ...}, 0) = 0
+[pid  4199] openat(AT_FDCWD, "/usr/lib64/python3.12/zipfile/__init__.py", O_RDONLY|O_CLOEXEC) = 34
+[pid  4199] fstat(34, {st_mode=S_IFREG|0644, st_size=87706, ...}) = 0
+[pid  4199] ioctl(34, TCGETS, 0x7ffdd5288de0) = -1 ENOTTY (Inappropriate ioctl for device)
+[pid  4199] lseek(34, 0, SEEK_CUR)      = 0
+[pid  4199] read(34, "\"\"\"\nRead and write ZIP files.\n\nX"..., 4096) = 4096
+[pid  4199] read(34, "K_RESERVED_BIT_14 = 1 << 14\n# _M"..., 8192) = 8192
+[pid  4199] read(34, "and\n        # ensure paths alway"..., 8192) = 8192
+[pid  4199] read(34, " date_time[0] > 2107:\n          "..., 8192) = 8192
+[pid  4199] read(34, "       self.fp.close()\n\n\nclass Z"..., 8192) = 8192
+[pid  4199] read(34, "decompressor.decompress(data)\n  "..., 8192) = 8192
+[pid  4199] read(34, "ks it\n    _windows_illegal_name_"..., 8192) = 8192
+[pid  4199] read(34, "                     + centdir[_"..., 8192) = 8192
+[pid  4199] read(34, "ZMA:\n            # Compressed da"..., 8192) = 8192
+[pid  4199] read(34, "   )\n\n        if compress_type i"..., 8192) = 8192
+[pid  4199] read(34, " if filterfunc and not filterfun"..., 8192) = 8192
+[pid  4199] read(34, " 'r', metadata_encoding=encoding"..., 8192) = 1690
+[pid  4199] read(34, "", 8192)          = 0
+[pid  4199] close(34)                   = 0
+[pid  4199] close(33)                   = 0
+[pid  4199] rt_sigprocmask(SIG_BLOCK, ~[], [], 8) = 0
+[pid  4199] clone3({flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, child_tid=0x7f000f1ff910, parent_tid=0x7f000f1ff910, exit_signal=0, stack=0x7f000e9ff000, stack_size=0x7fff00, tls=0x7f000f1ff640}strace: Process 4207 attached
+[pid  4199] rt_sigprocmask(SIG_SETMASK, [],  <unfinished ...>
+[pid  4199] <... rt_sigprocmask resumed>NULL, 8) = 0
+[pid  4199] futex(0x7f00be256f70, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid  4199] <... futex resumed>)        = 0
+[pid  4199] futex(0x7f00be256f78, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid  4199] <... futex resumed>)        = 0
+[pid  4199] futex(0x56207478e8e0, FUTEX_WAIT_BITSET_PRIVATE|FUTEX_CLOCK_REALTIME, 0, NULL, FUTEX_BITSET_MATCH_ANY <unfinished ...>
+[pid  4199] <... futex resumed>)        = 0
+[pid  4199] futex(0x7f00be256f74, FUTEX_WAIT_BITSET_PRIVATE, 0, {tv_sec=3952, tv_nsec=6574910}, FUTEX_BITSET_MATCH_ANY <unfinished ...>
+[pid  4199] <... futex resumed>)        = -1 EAGAIN (Resource temporarily unavailable)
+[pid  4199] futex(0x7f00be256f78, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid  4199] <... futex resumed>)        = -1 EAGAIN (Resource temporarily unavailable)
+[pid  4199] futex(0x7f00be256f78, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid  4199] <... futex resumed>)        = 0
+[pid  4199] getpid()                    = 4199
+[pid  4199] getpid()                    = 4199
+[pid  4199] futex(0x562073540600, FUTEX_WAKE_PRIVATE, 1) = 1
+[pid  4199] getppid()                   = 4126
+[pid  4199] futex(0x7f00be256f70, FUTEX_WAKE_PRIVATE, 1) = 1
+[pid  4199] poll([{fd=27, events=POLLIN}], 1, 5000 <unfinished ...>
+[pid  4126] wait4(4199,  <unfinished ...>
+[pid  4126] kill(4199, SIGTERM)         = 0
+[pid  4199] <... poll resumed>)         = ? ERESTART_RESTARTBLOCK (Interrupted by signal)
+[pid  4199] --- SIGTERM {si_signo=SIGTERM, si_code=SI_USER, si_pid=4126, si_uid=0} ---
+[pid  4199] getppid( <unfinished ...>
+[pid  4199] <... getppid resumed>)      = 4126
+[pid  4199] exit_group(0 <unfinished ...>
+[pid  4199] <... exit_group resumed>)   = ?
+[pid  4126] wait4(4199,  <unfinished ...>
+[pid  4199] +++ exited with 0 +++
+[pid  4126] waitid(P_PID, 4199, {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=4199, si_uid=0, si_status=0, si_utime=0, si_stime=0}, WNOHANG|WEXITED|WNOWAIT, NULL) = 0
+[pid  4126] wait4(4199, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 4199

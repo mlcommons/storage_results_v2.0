@@ -1,0 +1,108 @@
+{
+  "args": {
+    "program": "training",
+    "command": "datagen",
+    "results_dir": "./Final/Closed/Oracle-540.8T-LFS-125MBperSec-perTB/11N-2PPN-H100",
+    "loops": 1,
+    "config_file": null,
+    "closed": false,
+    "debug": false,
+    "verbose": false,
+    "stream_log_level": "INFO",
+    "allow_invalid_params": false,
+    "what_if": false,
+    "hosts": [
+      "172.16.4.204",
+      "172.16.4.229",
+      "172.16.5.13",
+      "172.16.5.94",
+      "172.16.5.109",
+      "172.16.5.126",
+      "172.16.5.178",
+      "172.16.5.205",
+      "172.16.5.216",
+      "172.16.5.232",
+      "172.16.4.71"
+    ],
+    "model": "unet3d",
+    "exec_type": "mpi",
+    "mpi_bin": "mpirun",
+    "oversubscribe": false,
+    "allow_run_as_root": false,
+    "mpi_params": null,
+    "num_processes": 15,
+    "data_dir": "/mnt/lustrefs/unet3d11N/",
+    "params": [
+      "dataset.num_files_train=154000"
+    ],
+    "dlio_bin_path": null,
+    "num_client_hosts": 11
+  },
+  "debug": null,
+  "run_datetime": "20250703_120932",
+  "run_number": 0,
+  "runtime": 66.25070357322693,
+  "verification": null,
+  "command_output_files": [],
+  "run_result_output": "./Final/Closed/Oracle-540.8T-LFS-125MBperSec-perTB/11N-2PPN-H100/training/unet3d/datagen/20250703_120932",
+  "metadata_filename": "training_20250703_120932_metadata.json",
+  "metadata_file_path": "./Final/Closed/Oracle-540.8T-LFS-125MBperSec-perTB/11N-2PPN-H100/training/unet3d/datagen/20250703_120932/training_20250703_120932_metadata.json",
+  "_config_name": "unet3d_datagen",
+  "base_command": "dlio_benchmark",
+  "base_path": "/home/ubuntu/.local/bin",
+  "base_command_path": "/home/ubuntu/.local/bin/dlio_benchmark",
+  "config_path": "/mnt/lustrefs/storage/configs/dlio",
+  "per_host_mem_kB": null,
+  "total_mem_kB": null,
+  "config_file": "unet3d_datagen.yaml",
+  "params_dict": {
+    "dataset.num_files_train": "154000",
+    "dataset.data_folder": "/mnt/lustrefs/unet3d11N/unet3d"
+  },
+  "yaml_params": {
+    "model": {
+      "name": "unet3d",
+      "type": "cnn",
+      "model_size": 499153191
+    },
+    "framework": "pytorch",
+    "workflow": {
+      "generate_data": true,
+      "train": false,
+      "checkpoint": false
+    },
+    "dataset": {
+      "data_folder": "data/unet3d/",
+      "format": "npz",
+      "num_files_train": 168,
+      "num_samples_per_file": 1,
+      "record_length_bytes": 146600628,
+      "record_length_bytes_stdev": 68341808,
+      "record_length_bytes_resize": 2097152
+    }
+  },
+  "combined_params": {
+    "model": {
+      "name": "unet3d",
+      "type": "cnn",
+      "model_size": 499153191
+    },
+    "framework": "pytorch",
+    "workflow": {
+      "generate_data": true,
+      "train": false,
+      "checkpoint": false
+    },
+    "dataset": {
+      "data_folder": "data/unet3d/",
+      "format": "npz",
+      "num_files_train": "154000",
+      "num_samples_per_file": 1,
+      "record_length_bytes": 146600628,
+      "record_length_bytes_stdev": 68341808,
+      "record_length_bytes_resize": 2097152
+    }
+  },
+  "executed_command": "mpirun -n 15 -host 172.16.4.204:2,172.16.4.229:2,172.16.5.13:2,172.16.5.94:2,172.16.5.109:1,172.16.5.126:1,172.16.5.178:1,172.16.5.205:1,172.16.5.216:1,172.16.5.232:1,172.16.4.71:1 /home/ubuntu/.local/bin/dlio_benchmark workload=unet3d_datagen ++hydra.run.dir=./Final/Closed/Oracle-540.8T-LFS-125MBperSec-perTB/11N-2PPN-H100/training/unet3d/datagen/20250703_120932 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=154000 ++workload.dataset.data_folder=/mnt/lustrefs/unet3d11N/unet3d --config-dir=/mnt/lustrefs/storage/configs/dlio",
+  "benchmark_type": "training"
+}

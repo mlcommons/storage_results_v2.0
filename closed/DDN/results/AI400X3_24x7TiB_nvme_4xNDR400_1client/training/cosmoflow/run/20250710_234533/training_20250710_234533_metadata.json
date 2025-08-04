@@ -1,0 +1,148 @@
+{
+  "args": {
+    "program": "training",
+    "command": "run",
+    "results_dir": "/home/ldouriez/G2MLPERFV2/logs_1752190150/result_cosmoflow_1_52accperclient_h100_iter1_1752190150",
+    "loops": 1,
+    "config_file": null,
+    "closed": true,
+    "debug": false,
+    "verbose": false,
+    "stream_log_level": "INFO",
+    "allow_invalid_params": false,
+    "what_if": false,
+    "hosts": [
+      "g2-01"
+    ],
+    "model": "cosmoflow",
+    "client_host_memory_in_gb": 515,
+    "exec_type": "mpi",
+    "mpi_bin": "mpirun",
+    "oversubscribe": false,
+    "allow_run_as_root": false,
+    "mpi_params": null,
+    "num_accelerators": 52,
+    "accelerator_type": "h100",
+    "num_client_hosts": 1,
+    "data_dir": "/lustre/x3e03/client/datagen_cosmoflow_h100",
+    "params": [
+      "dataset.num_files_train=977548",
+      "storage.storage_type=local_fs",
+      "storage.storage_root=/lustre/x3e03/client",
+      "reader.read_threads=1",
+      "reader.transfer_size=8388608",
+      "checkpoint.checkpoint_folder=/lustre/x3e03/client/checkpoint_cosmoflow_h100"
+    ],
+    "dlio_bin_path": null,
+    "num_processes": 52
+  },
+  "debug": null,
+  "run_datetime": "20250710_234533",
+  "run_number": 0,
+  "runtime": 867.3248319625854,
+  "verification": "closed",
+  "command_output_files": [
+    {
+      "command": "mpirun -n 52 -host g2-01:52 /root/MLPERFv2/storage/venv/bin/dlio_benchmark workload=cosmoflow_h100 ++hydra.run.dir=/home/ldouriez/G2MLPERFV2/logs_1752190150/result_cosmoflow_1_52accperclient_h100_iter1_1752190150/training/cosmoflow/run/20250710_234533 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=977548 ++workload.storage.storage_type=local_fs ++workload.storage.storage_root=/lustre/x3e03/client ++workload.reader.read_threads=1 ++workload.reader.transfer_size=8388608 ++workload.checkpoint.checkpoint_folder=/lustre/x3e03/client/checkpoint_cosmoflow_h100 ++workload.dataset.data_folder=/lustre/x3e03/client/datagen_cosmoflow_h100/cosmoflow --config-dir=/root/MLPERFv2/storage/configs/dlio",
+      "stdout": "/home/ldouriez/G2MLPERFV2/logs_1752190150/result_cosmoflow_1_52accperclient_h100_iter1_1752190150/training/cosmoflow/run/20250710_234533/training_run.stdout.log",
+      "stderr": "/home/ldouriez/G2MLPERFV2/logs_1752190150/result_cosmoflow_1_52accperclient_h100_iter1_1752190150/training/cosmoflow/run/20250710_234533/training_run.stderr.log"
+    }
+  ],
+  "run_result_output": "/home/ldouriez/G2MLPERFV2/logs_1752190150/result_cosmoflow_1_52accperclient_h100_iter1_1752190150/training/cosmoflow/run/20250710_234533",
+  "metadata_filename": "training_20250710_234533_metadata.json",
+  "metadata_file_path": "/home/ldouriez/G2MLPERFV2/logs_1752190150/result_cosmoflow_1_52accperclient_h100_iter1_1752190150/training/cosmoflow/run/20250710_234533/training_20250710_234533_metadata.json",
+  "_config_name": "cosmoflow_h100",
+  "base_command": "dlio_benchmark",
+  "base_path": "/root/MLPERFv2/storage/venv/bin",
+  "base_command_path": "/root/MLPERFv2/storage/venv/bin/dlio_benchmark",
+  "config_path": "/root/MLPERFv2/storage/configs/dlio",
+  "per_host_mem_kB": null,
+  "total_mem_kB": null,
+  "cluster_information": "<mlpstorage.rules.ClusterInformation object at 0xe559fc68e180>",
+  "config_file": "cosmoflow_h100.yaml",
+  "params_dict": {
+    "dataset.num_files_train": "977548",
+    "storage.storage_type": "local_fs",
+    "storage.storage_root": "/lustre/x3e03/client",
+    "reader.read_threads": "1",
+    "reader.transfer_size": "8388608",
+    "checkpoint.checkpoint_folder": "/lustre/x3e03/client/checkpoint_cosmoflow_h100",
+    "dataset.data_folder": "/lustre/x3e03/client/datagen_cosmoflow_h100/cosmoflow"
+  },
+  "yaml_params": {
+    "model": {
+      "name": "cosmoflow"
+    },
+    "framework": "tensorflow",
+    "workflow": {
+      "generate_data": false,
+      "train": true
+    },
+    "dataset": {
+      "data_folder": "data/cosmoflow",
+      "num_files_train": 524288,
+      "num_samples_per_file": 1,
+      "record_length_bytes": 2828486,
+      "record_length_bytes_stdev": 71311,
+      "format": "tfrecord"
+    },
+    "reader": {
+      "data_loader": "tensorflow",
+      "read_threads": 4,
+      "batch_size": 1,
+      "file_shuffle": "seed",
+      "sample_shuffle": "seed",
+      "shuffle_size": 2
+    },
+    "train": {
+      "epochs": 5,
+      "computation_time": 0.0035
+    },
+    "metric": {
+      "au": 0.7
+    }
+  },
+  "combined_params": {
+    "model": {
+      "name": "cosmoflow"
+    },
+    "framework": "tensorflow",
+    "workflow": {
+      "generate_data": false,
+      "train": true
+    },
+    "dataset": {
+      "data_folder": "data/cosmoflow",
+      "num_files_train": "977548",
+      "num_samples_per_file": 1,
+      "record_length_bytes": 2828486,
+      "record_length_bytes_stdev": 71311,
+      "format": "tfrecord"
+    },
+    "reader": {
+      "data_loader": "tensorflow",
+      "read_threads": "1",
+      "batch_size": 1,
+      "file_shuffle": "seed",
+      "sample_shuffle": "seed",
+      "shuffle_size": 2,
+      "transfer_size": "8388608"
+    },
+    "train": {
+      "epochs": 5,
+      "computation_time": 0.0035
+    },
+    "metric": {
+      "au": 0.7
+    },
+    "storage": {
+      "storage_type": "local_fs",
+      "storage_root": "/lustre/x3e03/client"
+    },
+    "checkpoint": {
+      "checkpoint_folder": "/lustre/x3e03/client/checkpoint_cosmoflow_h100"
+    }
+  },
+  "executed_command": "mpirun -n 52 -host g2-01:52 /root/MLPERFv2/storage/venv/bin/dlio_benchmark workload=cosmoflow_h100 ++hydra.run.dir=/home/ldouriez/G2MLPERFV2/logs_1752190150/result_cosmoflow_1_52accperclient_h100_iter1_1752190150/training/cosmoflow/run/20250710_234533 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=977548 ++workload.storage.storage_type=local_fs ++workload.storage.storage_root=/lustre/x3e03/client ++workload.reader.read_threads=1 ++workload.reader.transfer_size=8388608 ++workload.checkpoint.checkpoint_folder=/lustre/x3e03/client/checkpoint_cosmoflow_h100 ++workload.dataset.data_folder=/lustre/x3e03/client/datagen_cosmoflow_h100/cosmoflow --config-dir=/root/MLPERFv2/storage/configs/dlio",
+  "benchmark_type": "training"
+}

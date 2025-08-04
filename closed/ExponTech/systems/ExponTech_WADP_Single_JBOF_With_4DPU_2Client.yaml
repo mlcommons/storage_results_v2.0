@@ -1,0 +1,121 @@
+System:
+  name: WADP 3.6.1
+  description: ExponTech WADP is a next-gen software defined storage platform which provides block, file, object and KV protocols on a unified distributed data engine and management platform
+  storage_location: remote 
+  client_software:  in-box
+  storage_interface: block
+  required_rack_units: 2
+  shared_capabilities:
+    multi_host_support: True            # False is used for local storage
+    simultaneous_write_support: False    # Simultaneous writes by multiple hosts to different volumes is supported. Simultaneous writes by multiple hosts to same volume might cause write conflict.
+    simultaneous_read__support: True    # Simultaneous reads by multiple hosts on same volume is supported in the submitted configuration
+  max_sequential_read: 80   #GiB/s
+  max_sequential_write: 80  
+  max_random_read: 80
+  max_random_write: 80
+  # The following will be used to generate the "integrated client storage" and "# Clients with local storage" in the
+  # results table.
+  use_local_storage: False
+  integrated_client_storage: # Describe the storage present PER NODE in client nodes for the solution
+  num_clients_with_integrated_storage: # Number of clients with integrated storage
+
+  # The following will map to the "Storage System Type" column in the results table. If "use_local_drives" is True,
+  #   then "Local File + " will be prepended to the storage type
+  system_architecture: fabric-attached block
+  useable_capacity: 42 # Capacity in TiB that is usable for the storage system. If no unit is provided, assume TiB (not TB)
+
+PowerRequirements:
+  dlio_client:
+    quantity: 2
+    psu1_nameplate_power: 1000
+    psu2_nameplate_power: 1000
+    psu3_nameplate_power: 0 # power in watts
+    design_power: 1000
+    num_active_psus: 1
+    num_passive_psus: 1
+
+  # All storage nodes need to be listed (data, metadata, etc) as well as any required backed switching
+  storage_data_node:
+    quantity: 1
+    psu1_nameplate_power: 3200
+    psu2_nameplate_power: 3200
+    psu3_nameplate_power: 0 # power in watts
+    design_power: 3200
+    num_active_psus: 1
+    num_passive_psus: 1
+  backend_switch:
+    quantity: 4
+    psu1_nameplate_power: 800   # network PSU
+    psu2_nameplate_power: 800   # network PSU
+    design_power: 800
+    num_active_psus: 1
+    num_passive_psus: 1
+
+
+# All nodes used need to be listed. Clients, Data storage, metadata, front-end, back-end, etc
+Nodes:
+  # Useful name for the client describing it's role in the system under test
+  dlio_client:  # This can be DLIO Client, storage node, storage controller, AwesomeMarketingName_Type1, etc
+    quantity: 2
+    hardware:
+      model: SuperMicro GPU A+ Server AS -4125GS-TNRT2
+      rack_units: 4
+      power_supplies: 2
+      psu_configuration: active/passive
+      psu_rating: 2000
+      memory_capacity: 512GB
+      memory_configuration: 16x32GB
+      cpu_qty: 2
+      cpu_model: AMD EPYC 9654
+      cpu_cores: 96
+    networking:
+      management:
+        model: BlueField-3
+        speed: 2*200Gbps
+        qty: 2
+    operating_system:
+      name: Ubuntu
+      version: 24.04 LTS
+      release_date: 2025-02-20
+      kernel_version: 6.11.0-29-generic
+      cpu_architecture: x86_64
+    tuning:
+      # All non-default tunings for OS need to be listed
+      mpi_configuration:
+        environment_variables: 
+          - OMPI_ALLOW_RUN_AS_ROOT_CONFIRM=1
+          - OMPI_ALLOW_RUN_AS_ROOT=1
+        version: Open MPI 4.1.6
+      sysctl_parameters:
+        #<list all non-default parameters>
+  storage_data_node: # This can be DLIO Client, storage node, storage controller, AwesomeMarketingName_Type1, etc
+    quantity: 1   # Single JBOF with 4 DPUs.  The ExponTech WADP software is running inside the 4 DPUs to form a scalable storage cluster. More JBOFs with DPUs can be added in the cluster.
+    hardware:
+      model: F2026-01-G5
+      rack_units: 2
+      power_supplies: 2
+      psu_configuration: active/passive
+      psu_rating: 1000
+      memory_capacity: 192GB
+      memory_configuration: 4x48GB
+      cpu_qty: 8
+      cpu_model: Cortex-A78AE
+      cpu_cores: 16
+    networking:
+      management:
+        model: BlueField-3
+        speed: 2*200Gbps
+        qty: 4
+    operating_system:
+      name: Ubuntu
+      version: 22.04.5 LTS
+      release_date: 2024-08-15
+      kernel_version: 5.15.0-1060-bluefield
+      cpu_architecture: aarch64
+      mpi_configuration:
+        environment_variables: #<list>
+        version: #Open MPI 4.1.4
+      sysctl_parameters:
+        #<list all non-default parameters>
+
+

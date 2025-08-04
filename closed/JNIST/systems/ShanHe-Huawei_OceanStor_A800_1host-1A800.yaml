@@ -1,0 +1,125 @@
+System:
+  name: ShanHe-Huawei_OceanStor_A800_1host_1A800
+  description: OceanStor A800 is the next-gen high-performance distributed file storage for Artificial Intelligence (AI), fulfilling the end-to-end (E2E) data processing needs for AI training and inference
+  storage_location: remote
+  client_software: proprietary
+  storage_interface: file
+  required_rack_units: 8
+  shared_capabilities:
+    multi_host_support: True            # False is used for local storage
+    simultaneous_write_support: True   # Are simultaneous writes by multiple hosts supported in the submitted configuration
+    simultaneous_read__support: True    # Are simultaneous reads by multiple hosts supported in the submitted configuration
+  max_sequential_read: # Optional - GiB/s
+  max_sequential_write: # Optional - GiB/s
+  max_random_read: # Optional - GiB/s
+  max_random_write: # Optional - GiB/s
+
+  # The following will be used to generate the "integrated client storage" and "# Clients with local storage" in the
+  # results table.
+  use_local_storage: False
+  integrated_client_storage:           # Describe the cumulative integrated client storage for the solution
+  num_clients_with_integrated_storage:           # Number of clients with integrated storage
+
+  # The following will map to the "Storage System Type" column in the results table. If "use_local_drives" is True,
+  #   then "Local File + " will be prepended to the storage type
+  system_architecture: shared file
+  useable_capacity:  355TiB
+
+PowerRequirements:
+  dlio_client:
+    quantity: 1 # number of dlio_client nodes
+    psu1_nameplate_power: 1200W # power in watts
+    psu2_nameplate_power: 1200W # power in watts
+    design_power: 1200W
+    num_active_psus: 1
+    num_passive_psus: 1
+
+  # All storage nodes need to be listed (data, metadata, etc) as well as any required backed switching
+  storage_data_node:
+    quantity: 1 
+    psu1_nameplate_power: 2000W # power in watts
+    psu2_nameplate_power: 2000W # power in watts
+    psu3_nameplate_power: 2000W # power in watts
+    psu4_nameplate_power: 2000W # power in watts
+    psu5_nameplate_power: 2000W # power in watts
+    psu6_nameplate_power: 2000W # power in watts
+    psu7_nameplate_power: 2000W # power in watts
+    psu8_nameplate_power: 2000W # power in watts
+    design_power: 6000W
+    num_active_psus: 8
+    num_passive_psus: 0
+  backend_switch:
+    quantity: 0
+    psu1_nameplate_power:    # network PSU
+    psu2_nameplate_power:    # network PSU
+    design_power: 
+    num_active_psus: 
+    num_passive_psus: 
+
+
+# All nodes used need to be listed. Clients, Data storage, metadata, front-end, back-end, etc
+Nodes:
+  # Useful name for the client describing it's role in the system under test
+  dlio_client:  # This can be DLIO Client, storage node, storage controller, AwesomeMarketingName_Type1, etc
+    quantity: 1  # How many of this node
+    hardware:
+      model: PowerLeader PR2715E
+      rack_units: 2
+      power_supplies: 2
+      psu_configuration: active/passive
+      psu_rating: 1200W
+      memory_capacity: 512GB
+      memory_configuration: 16x32GB
+      cpu_qty: 2
+      cpu_model: Intel(R) Xeon(R) Platinum 8458P
+      cpu_cores: 44
+    networking:
+      management:
+        model: NetXtreme BCM5720 Gigabit Ethernet
+        speed: GE
+        qty: 1
+    operating_system:
+      name: OpenEuler
+      version: 2203sp4
+      release_date: 2024-06-27
+      kernel_version: 5.10.0-216.0.0.115.oe2203sp4.x86_64
+      cpu_architecture: x86_64
+    tuning:
+      # All non-default tunings for OS need to be listed
+      mpi_configuration:
+        environment_variables: <list>
+        version: MPI 3.2.1
+      sysctl_parameters:
+        <list all non-default parameters>
+  storage_data_node: # This can be DLIO Client, storage node, storage controller, AwesomeMarketingName_Type1, etc
+    quantity: 1
+    hardware:
+      model: Huawei OceanStor A800
+      rack_units: 8
+      power_supplies: 8
+      psu_configuration: active/active
+      psu_rating: 2000W
+      memory_capacity: 2TB
+      memory_configuration: 64x32GB
+      cpu_qty: 8
+      cpu_model: HiSilicon Kunpeng-920
+      cpu_cores: 64
+    networking:
+      management:
+        model: Huawei Network controller
+        speed: GE/10GE/25GE/50GE
+        qty: 1
+    operating_system:
+      name: OceanStor OS
+      version: V700R001C10
+      release_date: 2025-06-30
+      kernel_version: 2.0.2.0
+      cpu_architecture: aarch64
+    tuning:
+      mpi_configuration:
+        environment_variables: 
+        version: MPI 3.2.1
+      sysctl_parameters:
+        
+
+

@@ -1,0 +1,4 @@
+- workload=unet3d_datagen
+- ++workload.dataset.num_files_train=672000
+- ++workload.dataset.num_subfolders_train=64
+- ++workload.dataset.data_folder=/data/mlperfstorage/unet3d.subdir64/unet3d

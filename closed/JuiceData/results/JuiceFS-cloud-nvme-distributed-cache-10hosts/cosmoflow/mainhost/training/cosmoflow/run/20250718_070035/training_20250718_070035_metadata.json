@@ -1,0 +1,141 @@
+{
+  "args": {
+    "program": "training",
+    "command": "run",
+    "results_dir": "/root/cosmoflow_10host_results/",
+    "loops": 1,
+    "config_file": null,
+    "closed": true,
+    "debug": false,
+    "verbose": false,
+    "stream_log_level": "INFO",
+    "allow_invalid_params": false,
+    "what_if": false,
+    "hosts": [
+      "10.0.0.20",
+      "10.0.0.21",
+      "10.0.0.22",
+      "10.0.0.23",
+      "10.0.0.24",
+      "10.0.0.25",
+      "10.0.0.26",
+      "10.0.0.27",
+      "10.0.0.28",
+      "10.0.0.29"
+    ],
+    "model": "cosmoflow",
+    "client_host_memory_in_gb": 32,
+    "exec_type": "mpi",
+    "mpi_bin": "mpirun",
+    "oversubscribe": false,
+    "allow_run_as_root": true,
+    "mpi_params": null,
+    "num_accelerators": 100,
+    "accelerator_type": "h100",
+    "num_client_hosts": 10,
+    "data_dir": "../data_10host/cosmoflow",
+    "params": [
+      "dataset.num_files_train=607387",
+      "reader.read_threads=16"
+    ],
+    "dlio_bin_path": null,
+    "num_processes": 100
+  },
+  "debug": null,
+  "run_datetime": "20250718_070035",
+  "run_number": 0,
+  "runtime": 205.7215301990509,
+  "verification": "closed",
+  "command_output_files": [
+    {
+      "command": "cgexec -g memory:memory_mlperf mpirun -mca btl_tcp_if_include ens3 -n 100 -host 10.0.0.20:10,10.0.0.21:10,10.0.0.22:10,10.0.0.23:10,10.0.0.24:10,10.0.0.25:10,10.0.0.26:10,10.0.0.27:10,10.0.0.28:10,10.0.0.29:10 --allow-run-as-root /root/.venvs/myenv/bin/dlio_benchmark workload=cosmoflow_h100 ++hydra.run.dir=/root/cosmoflow_10host_results/training/cosmoflow/run/20250718_070035 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=607387 ++workload.reader.read_threads=16 ++workload.dataset.data_folder=../data_10host/cosmoflow --config-dir=/jfs/mlperf/storage/configs/dlio",
+      "stdout": "/root/cosmoflow_10host_results/training/cosmoflow/run/20250718_070035/training_run.stdout.log",
+      "stderr": "/root/cosmoflow_10host_results/training/cosmoflow/run/20250718_070035/training_run.stderr.log"
+    }
+  ],
+  "run_result_output": "/root/cosmoflow_10host_results/training/cosmoflow/run/20250718_070035",
+  "metadata_filename": "training_20250718_070035_metadata.json",
+  "metadata_file_path": "/root/cosmoflow_10host_results/training/cosmoflow/run/20250718_070035/training_20250718_070035_metadata.json",
+  "_config_name": "cosmoflow_h100",
+  "base_command": "dlio_benchmark",
+  "base_path": "/root/.venvs/myenv/bin",
+  "base_command_path": "/root/.venvs/myenv/bin/dlio_benchmark",
+  "config_path": "/jfs/mlperf/storage/configs/dlio",
+  "per_host_mem_kB": null,
+  "total_mem_kB": null,
+  "cluster_information": "<mlpstorage.rules.ClusterInformation object at 0x7ecaf448c9a0>",
+  "config_file": "cosmoflow_h100.yaml",
+  "params_dict": {
+    "dataset.num_files_train": "607387",
+    "reader.read_threads": "16",
+    "dataset.data_folder": "../data_10host/cosmoflow"
+  },
+  "yaml_params": {
+    "model": {
+      "name": "cosmoflow"
+    },
+    "framework": "tensorflow",
+    "workflow": {
+      "generate_data": false,
+      "train": true
+    },
+    "dataset": {
+      "data_folder": "data/cosmoflow",
+      "num_files_train": 524288,
+      "num_samples_per_file": 1,
+      "record_length_bytes": 2828486,
+      "record_length_bytes_stdev": 71311,
+      "format": "tfrecord"
+    },
+    "reader": {
+      "data_loader": "tensorflow",
+      "read_threads": 4,
+      "batch_size": 1,
+      "file_shuffle": "seed",
+      "sample_shuffle": "seed",
+      "shuffle_size": 2
+    },
+    "train": {
+      "epochs": 5,
+      "computation_time": 0.0035
+    },
+    "metric": {
+      "au": 0.7
+    }
+  },
+  "combined_params": {
+    "model": {
+      "name": "cosmoflow"
+    },
+    "framework": "tensorflow",
+    "workflow": {
+      "generate_data": false,
+      "train": true
+    },
+    "dataset": {
+      "data_folder": "data/cosmoflow",
+      "num_files_train": "607387",
+      "num_samples_per_file": 1,
+      "record_length_bytes": 2828486,
+      "record_length_bytes_stdev": 71311,
+      "format": "tfrecord"
+    },
+    "reader": {
+      "data_loader": "tensorflow",
+      "read_threads": "16",
+      "batch_size": 1,
+      "file_shuffle": "seed",
+      "sample_shuffle": "seed",
+      "shuffle_size": 2
+    },
+    "train": {
+      "epochs": 5,
+      "computation_time": 0.0035
+    },
+    "metric": {
+      "au": 0.7
+    }
+  },
+  "executed_command": "cgexec -g memory:memory_mlperf mpirun -mca btl_tcp_if_include ens3 -n 100 -host 10.0.0.20:10,10.0.0.21:10,10.0.0.22:10,10.0.0.23:10,10.0.0.24:10,10.0.0.25:10,10.0.0.26:10,10.0.0.27:10,10.0.0.28:10,10.0.0.29:10 --allow-run-as-root /root/.venvs/myenv/bin/dlio_benchmark workload=cosmoflow_h100 ++hydra.run.dir=/root/cosmoflow_10host_results/training/cosmoflow/run/20250718_070035 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=607387 ++workload.reader.read_threads=16 ++workload.dataset.data_folder=../data_10host/cosmoflow --config-dir=/jfs/mlperf/storage/configs/dlio",
+  "benchmark_type": "training"
+}

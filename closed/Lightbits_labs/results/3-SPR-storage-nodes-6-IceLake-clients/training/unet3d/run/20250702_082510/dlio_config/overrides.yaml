@@ -1,0 +1,6 @@
+- workload=unet3d_h100
+- ++workload.dataset.num_files_train=93750
+- ++workload.reader.read_threads=25
+- ++workload.reader.prefetch_size=0
+- ++workload.reader.odirect=True
+- ++workload.dataset.data_folder=/home/light/unet3d

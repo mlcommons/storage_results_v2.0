@@ -1,0 +1,62 @@
+System:
+  name: Sandisk SN861 NVMe
+  description: Single Drive Direct Attach NVMe
+  storage_location: local
+  client_software: in-box
+  storage_interface: file
+  required_rack_units: 1
+  shared_capabilities:
+    multi_host_support: False     
+    simultaneous_write_support: False   
+    simultaneous_read__support: False    
+  max_sequential_read: 14000
+  max_sequential_write: 
+  max_random_read: 
+  max_random_write: 
+  use_local_storage: True
+  integrated_client_storage: 1x 15.36TB NVMe per Node 
+  num_clients_with_integrated_storage: 1           
+  system_architecture: direct-attached block 
+  useable_capacity: 15.36 TiB
+
+PowerRequirements:
+  storage_data_node:
+    quantity: 1
+    psu1_nameplate_power: 1600
+    psu2_nameplate_power: 1600
+    psu3_nameplate_power:
+    design_power: 1600
+    num_active_psus: 2
+    num_passive_psus: 0
+
+Nodes:
+  storage_data_node: #Supermicro 2U Hyper A+ Server (AS -2125HS-TNR)
+    quantity: 1
+    hardware:
+      model: Supermicro 2U Hyper A+ Server (AS -2125HS-TNR)
+      rack_units: 2
+      power_supplies: 2
+      psu_configuration: active/passive
+      psu_rating: 1600
+      memory_capacity: 256GB
+      memory_configuration: 8x32GB
+      cpu_qty: 2
+      cpu_model: AMD EPYC 9354 32-Core Processor
+      cpu_cores: 32
+    networking:
+      management:
+        model: Broadcom NetXtreme Gigabit Ethernet (BCM5720)
+        speed: 1Gbps
+        qty: 1
+    operating_system:
+      name: Ubuntu
+      version: 24.04.2 LTS
+      release_date: 2025-02-20
+      kernel_version: 6.8.0-60-generic
+      cpu_architecture: x86_64
+    tuning:
+      mpi_configuration:
+        environment_variables:
+        version: Open MPI 4.1.7
+      sysctl_parameters:
+       vm.swappiness: 1

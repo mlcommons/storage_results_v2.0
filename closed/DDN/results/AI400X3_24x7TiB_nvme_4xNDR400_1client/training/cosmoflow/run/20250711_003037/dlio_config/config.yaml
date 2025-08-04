@@ -1,0 +1,32 @@
+workload:
+  model:
+    name: cosmoflow
+  framework: tensorflow
+  workflow:
+    generate_data: false
+    train: true
+  dataset:
+    data_folder: /lustre/x3e03/client/datagen_cosmoflow_h100/cosmoflow
+    num_files_train: 977548
+    num_samples_per_file: 1
+    record_length_bytes: 2828486
+    record_length_bytes_stdev: 71311
+    format: tfrecord
+  reader:
+    data_loader: tensorflow
+    read_threads: 1
+    batch_size: 1
+    file_shuffle: seed
+    sample_shuffle: seed
+    shuffle_size: 2
+    transfer_size: 8388608
+  train:
+    epochs: 5
+    computation_time: 0.0035
+  metric:
+    au: 0.7
+  storage:
+    storage_type: local_fs
+    storage_root: /lustre/x3e03/client
+  checkpoint:
+    checkpoint_folder: /lustre/x3e03/client/checkpoint_cosmoflow_h100

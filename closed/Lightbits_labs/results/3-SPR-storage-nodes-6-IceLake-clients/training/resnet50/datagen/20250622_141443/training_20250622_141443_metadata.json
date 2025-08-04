@@ -1,0 +1,100 @@
+{
+  "args": {
+    "program": "training",
+    "command": "datagen",
+    "results_dir": "/root/mlperf/gen_results",
+    "loops": 1,
+    "config_file": null,
+    "closed": false,
+    "debug": false,
+    "verbose": false,
+    "stream_log_level": "INFO",
+    "allow_invalid_params": false,
+    "what_if": false,
+    "hosts": [
+      "127.0.0.1"
+    ],
+    "model": "resnet50",
+    "exec_type": "mpi",
+    "mpi_bin": "mpirun",
+    "oversubscribe": false,
+    "allow_run_as_root": true,
+    "mpi_params": null,
+    "num_processes": 64,
+    "data_dir": "/home/light/resnet50",
+    "params": [
+      "dataset.num_files_train=114979"
+    ],
+    "dlio_bin_path": null,
+    "num_client_hosts": 1
+  },
+  "debug": null,
+  "run_datetime": "20250622_141443",
+  "run_number": 0,
+  "runtime": 7092.024243354797,
+  "verification": null,
+  "command_output_files": [
+    {
+      "command": "mpirun -n 64 -host 127.0.0.1:64 --allow-run-as-root /root/.venvs/myenv/bin/dlio_benchmark workload=resnet50_datagen ++hydra.run.dir=/root/mlperf/gen_results/training/resnet50/datagen/20250622_141443 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=114979 ++workload.dataset.data_folder=/home/light/resnet50 --config-dir=/root/mlperf/storage/configs/dlio",
+      "stdout": "/root/mlperf/gen_results/training/resnet50/datagen/20250622_141443/training_datagen.stdout.log",
+      "stderr": "/root/mlperf/gen_results/training/resnet50/datagen/20250622_141443/training_datagen.stderr.log"
+    }
+  ],
+  "run_result_output": "/root/mlperf/gen_results/training/resnet50/datagen/20250622_141443",
+  "metadata_filename": "training_20250622_141443_metadata.json",
+  "metadata_file_path": "/root/mlperf/gen_results/training/resnet50/datagen/20250622_141443/training_20250622_141443_metadata.json",
+  "_config_name": "resnet50_datagen",
+  "base_command": "dlio_benchmark",
+  "base_path": "/root/.venvs/myenv/bin",
+  "base_command_path": "/root/.venvs/myenv/bin/dlio_benchmark",
+  "config_path": "/root/mlperf/storage/configs/dlio",
+  "per_host_mem_kB": null,
+  "total_mem_kB": null,
+  "config_file": "resnet50_datagen.yaml",
+  "params_dict": {
+    "dataset.num_files_train": "114979",
+    "dataset.data_folder": "/home/light/resnet50"
+  },
+  "yaml_params": {
+    "model": {
+      "name": "resnet50",
+      "type": "cnn"
+    },
+    "framework": "tensorflow",
+    "workflow": {
+      "generate_data": true,
+      "train": false,
+      "checkpoint": false
+    },
+    "dataset": {
+      "num_files_train": 1024,
+      "num_samples_per_file": 1251,
+      "record_length_bytes": 114660.07,
+      "record_length_bytes_resize": 150528,
+      "data_folder": "data/resnet50",
+      "format": "tfrecord"
+    }
+  },
+  "combined_params": {
+    "model": {
+      "name": "resnet50",
+      "type": "cnn"
+    },
+    "framework": "tensorflow",
+    "workflow": {
+      "generate_data": true,
+      "train": false,
+      "checkpoint": false
+    },
+    "dataset": {
+      "num_files_train": "114979",
+      "num_samples_per_file": 1251,
+      "record_length_bytes": 114660.07,
+      "record_length_bytes_resize": 150528,
+      "data_folder": "data/resnet50",
+      "format": "tfrecord"
+    }
+  },
+  "executed_command": "mpirun -n 64 -host 127.0.0.1:64 --allow-run-as-root /root/.venvs/myenv/bin/dlio_benchmark workload=resnet50_datagen ++hydra.run.dir=/root/mlperf/gen_results/training/resnet50/datagen/20250622_141443 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=114979 ++workload.dataset.data_folder=/home/light/resnet50 --config-dir=/root/mlperf/storage/configs/dlio",
+  "benchmark_type": "training"
+}

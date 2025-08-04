@@ -1,0 +1,57 @@
+System:
+  name: Solidigm_D7-PS1010_Gen5_NVMe
+  description: Single Solidigm D7-PS1010 NVMe with local disk
+  storage_location: local
+  client_software: in-box
+  storage_interface: block
+  required_rack_units:
+  shared_capabilities:
+    multi_host_support: False           
+    simultaneous_write_support: False   
+    simultaneous_read__support: False   
+  max_sequential_read: 13.5 GiB/s
+  max_sequential_write: 8.7 GiB/s
+  max_random_read: 10.6 GiB/s
+  max_random_write: 1.5 GiB/s
+
+PowerRequirements:
+  dlio_client:
+    quantity: 1
+    psu1_nameplate_power: 1600
+    psu2_nameplate_power: 1600
+    design_power: 1600
+    num_active_psus: 2
+    num_passive_psus: 0
+
+Nodes:
+  dlio_client: #localhost
+    quantity: 1
+    hardware:
+      model: QuantaGrid D54X-1U
+      rack_units: 1
+      power_supplies: 2
+      psu_configuration: balance
+      psu_rating: 1600
+      memory_capacity: 256GB
+      memory_configuration: 4x64GB
+      cpu_qty: 2
+      cpu_model: INTEL(R) XEON(R) PLATINUM 8592+
+      cpu_cores: 64
+    networking:
+      management:
+        model: NVIDIA ConnectX-6
+        speed: 25Gbps
+        qty: 1
+    operating_system:
+      name: Rocky Linux
+      version: 9.5
+      release_date: 2024-12-19
+      kernel_version: 5.14.0-503.14.1.el9_5.x86_64
+      cpu_architecture: x86_64
+    tuning:
+      tuned_adm_profile: "tuned-adm profile throughput-performance"
+      mpi_configuration:
+        environment_variables: "--mca pml ucx --mca btl ^tcp,openib"
+        version: Open MPI 4.1.5
+      sysctl_parameters:
+        - kernel.numa_balancing=0

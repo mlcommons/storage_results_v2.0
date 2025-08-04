@@ -1,0 +1,154 @@
+
+========================= Results Report =========================
+
+------------------------- CLOSED Report -------------------------
+	RunID: /root/origin/mlpstorage_results/Samsung_Storage/Closed/Samsung/results/Samsung_PM1753_NVMe_Gen5/training/unet3d/run/20250630_145642
+	    Benchmark Type: training
+	    Command: run_benchmark
+	    Model: unet3d
+	    Issues:
+		- [CLOSED] Closed parameter override allowed: dataset.num_files_train = 14000 (Parameter: Overrode Parameters)
+		- [CLOSED] Closed parameter override allowed: dataset.data_folder = /mnt/default/1/unet3d (Parameter: Overrode Parameters)
+		- [CLOSED] Unet3D training requires executing a checkpoing (Parameter: workflow.checkpoint, Expected: True, Actual: True)
+	    Metrics:
+		- save_checkpoint_io_mean_GB_per_second: 0.0
+		- save_checkpoint_io_stdev_GB_per_second: 0.0
+		- save_checkpoint_duration_mean_seconds: 0.0
+		- save_checkpoint_duration_stdev_seconds: 0.0
+		- checkpoint_size_GB: 0.0
+		- train_au_percentage: 88.2%, 96.9%, 97.9%, 97.4%, 97.9%
+		- train_au_mean_percentage: 95.7%
+		- train_au_meet_expectation: success
+		- train_au_stdev_percentage: 3.7%
+		- train_throughput_samples_per_second: 76.3, 83.8, 84.6, 84.2, 84.7
+		- train_throughput_mean_samples_per_second: 82.7
+		- train_throughput_stdev_samples_per_second: 3.2
+		- train_io_mean_MB_per_second: 11,567.6
+		- train_io_stdev_MB_per_second: 451.8
+
+
+	RunID: /root/origin/mlpstorage_results/Samsung_Storage/Closed/Samsung/results/Samsung_PM1753_NVMe_Gen5/training/unet3d/run/20250630_140644
+	    Benchmark Type: training
+	    Command: run_benchmark
+	    Model: unet3d
+	    Issues:
+		- [CLOSED] Closed parameter override allowed: dataset.num_files_train = 14000 (Parameter: Overrode Parameters)
+		- [CLOSED] Closed parameter override allowed: dataset.data_folder = /mnt/default/1/unet3d (Parameter: Overrode Parameters)
+		- [CLOSED] Unet3D training requires executing a checkpoing (Parameter: workflow.checkpoint, Expected: True, Actual: True)
+	    Metrics:
+		- save_checkpoint_io_mean_GB_per_second: 0.0
+		- save_checkpoint_io_stdev_GB_per_second: 0.0
+		- save_checkpoint_duration_mean_seconds: 0.0
+		- save_checkpoint_duration_stdev_seconds: 0.0
+		- checkpoint_size_GB: 0.0
+		- train_au_percentage: 86.4%, 97.9%, 97.9%, 97.7%, 98.0%
+		- train_au_mean_percentage: 95.6%
+		- train_au_meet_expectation: success
+		- train_au_stdev_percentage: 4.6%
+		- train_throughput_samples_per_second: 74.8, 84.7, 84.7, 84.5, 84.8
+		- train_throughput_mean_samples_per_second: 82.7
+		- train_throughput_stdev_samples_per_second: 4.0
+		- train_io_mean_MB_per_second: 11,558.4
+		- train_io_stdev_MB_per_second: 552.4
+
+
+	RunID: /root/origin/mlpstorage_results/Samsung_Storage/Closed/Samsung/results/Samsung_PM1753_NVMe_Gen5/training/unet3d/run/20250630_154630
+	    Benchmark Type: training
+	    Command: run_benchmark
+	    Model: unet3d
+	    Issues:
+		- [CLOSED] Closed parameter override allowed: dataset.num_files_train = 14000 (Parameter: Overrode Parameters)
+		- [CLOSED] Closed parameter override allowed: dataset.data_folder = /mnt/default/1/unet3d (Parameter: Overrode Parameters)
+		- [CLOSED] Unet3D training requires executing a checkpoing (Parameter: workflow.checkpoint, Expected: True, Actual: True)
+	    Metrics:
+		- save_checkpoint_io_mean_GB_per_second: 0.0
+		- save_checkpoint_io_stdev_GB_per_second: 0.0
+		- save_checkpoint_duration_mean_seconds: 0.0
+		- save_checkpoint_duration_stdev_seconds: 0.0
+		- checkpoint_size_GB: 0.0
+		- train_au_percentage: 86.8%, 97.7%, 97.9%, 98.0%, 98.0%
+		- train_au_mean_percentage: 95.7%
+		- train_au_meet_expectation: success
+		- train_au_stdev_percentage: 4.4%
+		- train_throughput_samples_per_second: 75.1, 84.5, 84.6, 84.7, 84.8
+		- train_throughput_mean_samples_per_second: 82.7
+		- train_throughput_stdev_samples_per_second: 3.8
+		- train_io_mean_MB_per_second: 11,568.6
+		- train_io_stdev_MB_per_second: 537.2
+
+
+	RunID: /root/origin/mlpstorage_results/Samsung_Storage/Closed/Samsung/results/Samsung_PM1753_NVMe_Gen5/training/unet3d/run/20250630_143138
+	    Benchmark Type: training
+	    Command: run_benchmark
+	    Model: unet3d
+	    Issues:
+		- [CLOSED] Closed parameter override allowed: dataset.num_files_train = 14000 (Parameter: Overrode Parameters)
+		- [CLOSED] Closed parameter override allowed: dataset.data_folder = /mnt/default/1/unet3d (Parameter: Overrode Parameters)
+		- [CLOSED] Unet3D training requires executing a checkpoing (Parameter: workflow.checkpoint, Expected: True, Actual: True)
+	    Metrics:
+		- save_checkpoint_io_mean_GB_per_second: 0.0
+		- save_checkpoint_io_stdev_GB_per_second: 0.0
+		- save_checkpoint_duration_mean_seconds: 0.0
+		- save_checkpoint_duration_stdev_seconds: 0.0
+		- checkpoint_size_GB: 0.0
+		- train_au_percentage: 87.3%, 96.7%, 97.4%, 97.7%, 98.1%
+		- train_au_mean_percentage: 95.4%
+		- train_au_meet_expectation: success
+		- train_au_stdev_percentage: 4.1%
+		- train_throughput_samples_per_second: 75.5, 83.6, 84.3, 84.5, 84.9
+		- train_throughput_mean_samples_per_second: 82.6
+		- train_throughput_stdev_samples_per_second: 3.6
+		- train_io_mean_MB_per_second: 11,541.8
+		- train_io_stdev_MB_per_second: 497.9
+
+
+	RunID: /root/origin/mlpstorage_results/Samsung_Storage/Closed/Samsung/results/Samsung_PM1753_NVMe_Gen5/training/unet3d/run/20250630_152137
+	    Benchmark Type: training
+	    Command: run_benchmark
+	    Model: unet3d
+	    Issues:
+		- [CLOSED] Closed parameter override allowed: dataset.num_files_train = 14000 (Parameter: Overrode Parameters)
+		- [CLOSED] Closed parameter override allowed: dataset.data_folder = /mnt/default/1/unet3d (Parameter: Overrode Parameters)
+		- [CLOSED] Unet3D training requires executing a checkpoing (Parameter: workflow.checkpoint, Expected: True, Actual: True)
+	    Metrics:
+		- save_checkpoint_io_mean_GB_per_second: 0.0
+		- save_checkpoint_io_stdev_GB_per_second: 0.0
+		- save_checkpoint_duration_mean_seconds: 0.0
+		- save_checkpoint_duration_stdev_seconds: 0.0
+		- checkpoint_size_GB: 0.0
+		- train_au_percentage: 87.0%, 97.7%, 97.9%, 97.9%, 97.9%
+		- train_au_mean_percentage: 95.7%
+		- train_au_meet_expectation: success
+		- train_au_stdev_percentage: 4.3%
+		- train_throughput_samples_per_second: 75.3, 84.5, 84.7, 84.7, 84.6
+		- train_throughput_mean_samples_per_second: 82.7
+		- train_throughput_stdev_samples_per_second: 3.7
+		- train_io_mean_MB_per_second: 11,569.2
+		- train_io_stdev_MB_per_second: 523.2
+
+
+
+------------------------- OPEN Report -------------------------
+
+------------------------- INVALID Report -------------------------
+
+========================= Submissions Report =========================
+
+------------------------- CLOSED Report -------------------------
+	WorkloadID: Training - unet3d, Accelerator: h100
+	    Benchmark Type: training
+	    Command: run_benchmark
+	    Runs: 
+		- /root/origin/mlpstorage_results/Samsung_Storage/Closed/Samsung/results/Samsung_PM1753_NVMe_Gen5/training/unet3d/run/20250630_145642 - [CLOSED]
+		- /root/origin/mlpstorage_results/Samsung_Storage/Closed/Samsung/results/Samsung_PM1753_NVMe_Gen5/training/unet3d/run/20250630_140644 - [CLOSED]
+		- /root/origin/mlpstorage_results/Samsung_Storage/Closed/Samsung/results/Samsung_PM1753_NVMe_Gen5/training/unet3d/run/20250630_154630 - [CLOSED]
+		- /root/origin/mlpstorage_results/Samsung_Storage/Closed/Samsung/results/Samsung_PM1753_NVMe_Gen5/training/unet3d/run/20250630_143138 - [CLOSED]
+		- /root/origin/mlpstorage_results/Samsung_Storage/Closed/Samsung/results/Samsung_PM1753_NVMe_Gen5/training/unet3d/run/20250630_152137 - [CLOSED]
+	    Issues:
+		- [CLOSED] All runs satisfy the CLOSED category (Parameter: category, Expected: OPEN or CLOSED, Actual: ['CLOSED'])
+
+
+
+------------------------- OPEN Report -------------------------
+
+------------------------- INVALID Report -------------------------

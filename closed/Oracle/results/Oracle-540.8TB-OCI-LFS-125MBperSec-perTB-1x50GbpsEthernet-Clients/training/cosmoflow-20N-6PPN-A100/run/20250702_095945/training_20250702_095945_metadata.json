@@ -1,0 +1,163 @@
+{
+  "args": {
+    "program": "training",
+    "command": "run",
+    "results_dir": "./Final/Closed/Oracle-540.8T-LFS-125MBperSec-perTB/cosmoflow/20N",
+    "loops": 5,
+    "config_file": null,
+    "closed": true,
+    "debug": false,
+    "verbose": false,
+    "stream_log_level": "INFO",
+    "allow_invalid_params": false,
+    "what_if": false,
+    "hosts": [
+      "172.16.4.103",
+      "172.16.4.145",
+      "172.16.4.158",
+      "172.16.4.173",
+      "172.16.4.204",
+      "172.16.4.229",
+      "172.16.5.13",
+      "172.16.5.94",
+      "172.16.5.109",
+      "172.16.5.126",
+      "172.16.5.178",
+      "172.16.5.205",
+      "172.16.5.216",
+      "172.16.5.232",
+      "172.16.6.38",
+      "172.16.6.78",
+      "172.16.6.145",
+      "172.16.6.197",
+      "172.16.4.71",
+      "172.16.6.221"
+    ],
+    "model": "cosmoflow",
+    "client_host_memory_in_gb": 96,
+    "exec_type": "mpi",
+    "mpi_bin": "mpirun",
+    "oversubscribe": false,
+    "allow_run_as_root": false,
+    "mpi_params": null,
+    "num_accelerators": 120,
+    "accelerator_type": "a100",
+    "num_client_hosts": 20,
+    "data_dir": "/mnt/lustrefs/cosmoflow20N/",
+    "params": [
+      "reader.transfer_size=1048576",
+      "dataset.num_files_train=3650000",
+      "dataset.num_subfolders_train=365",
+      "reader.read_threads=36",
+      "reader.prefetch_size=36",
+      "reader.computation_threads=4"
+    ],
+    "dlio_bin_path": null,
+    "num_processes": 120
+  },
+  "debug": null,
+  "run_datetime": "20250702_095945",
+  "run_number": 0,
+  "runtime": 1911.23286485672,
+  "verification": "closed",
+  "command_output_files": [
+    {
+      "command": "mpirun -n 120 -host 172.16.4.103:6,172.16.4.145:6,172.16.4.158:6,172.16.4.173:6,172.16.4.204:6,172.16.4.229:6,172.16.5.13:6,172.16.5.94:6,172.16.5.109:6,172.16.5.126:6,172.16.5.178:6,172.16.5.205:6,172.16.5.216:6,172.16.5.232:6,172.16.6.38:6,172.16.6.78:6,172.16.6.145:6,172.16.6.197:6,172.16.4.71:6,172.16.6.221:6 /home/ubuntu/.local/bin/dlio_benchmark workload=cosmoflow_a100 ++hydra.run.dir=./Final/Closed/Oracle-540.8T-LFS-125MBperSec-perTB/cosmoflow/20N/training/cosmoflow/run/20250702_095945 ++hydra.output_subdir=dlio_config ++workload.reader.transfer_size=1048576 ++workload.dataset.num_files_train=3650000 ++workload.dataset.num_subfolders_train=365 ++workload.reader.read_threads=36 ++workload.reader.prefetch_size=36 ++workload.reader.computation_threads=4 ++workload.dataset.data_folder=/mnt/lustrefs/cosmoflow20N/cosmoflow --config-dir=/mnt/lustrefs/storage/configs/dlio",
+      "stdout": "./Final/Closed/Oracle-540.8T-LFS-125MBperSec-perTB/cosmoflow/20N/training/cosmoflow/run/20250702_095945/training_run.stdout.log",
+      "stderr": "./Final/Closed/Oracle-540.8T-LFS-125MBperSec-perTB/cosmoflow/20N/training/cosmoflow/run/20250702_095945/training_run.stderr.log"
+    }
+  ],
+  "run_result_output": "./Final/Closed/Oracle-540.8T-LFS-125MBperSec-perTB/cosmoflow/20N/training/cosmoflow/run/20250702_095945",
+  "metadata_filename": "training_20250702_095945_metadata.json",
+  "metadata_file_path": "./Final/Closed/Oracle-540.8T-LFS-125MBperSec-perTB/cosmoflow/20N/training/cosmoflow/run/20250702_095945/training_20250702_095945_metadata.json",
+  "_config_name": "cosmoflow_a100",
+  "base_command": "dlio_benchmark",
+  "base_path": "/home/ubuntu/.local/bin",
+  "base_command_path": "/home/ubuntu/.local/bin/dlio_benchmark",
+  "config_path": "/mnt/lustrefs/storage/configs/dlio",
+  "per_host_mem_kB": null,
+  "total_mem_kB": null,
+  "cluster_information": "<mlpstorage.rules.ClusterInformation object at 0x7f602668c670>",
+  "config_file": "cosmoflow_a100.yaml",
+  "params_dict": {
+    "reader.transfer_size": "1048576",
+    "dataset.num_files_train": "3650000",
+    "dataset.num_subfolders_train": "365",
+    "reader.read_threads": "36",
+    "reader.prefetch_size": "36",
+    "reader.computation_threads": "4",
+    "dataset.data_folder": "/mnt/lustrefs/cosmoflow20N/cosmoflow"
+  },
+  "yaml_params": {
+    "model": {
+      "name": "cosmoflow"
+    },
+    "framework": "tensorflow",
+    "workflow": {
+      "generate_data": false,
+      "train": true
+    },
+    "dataset": {
+      "data_folder": "data/cosmoflow",
+      "num_files_train": 524288,
+      "num_samples_per_file": 1,
+      "record_length_bytes": 2828486,
+      "record_length_bytes_stdev": 71311,
+      "format": "tfrecord"
+    },
+    "reader": {
+      "data_loader": "tensorflow",
+      "read_threads": 4,
+      "batch_size": 1,
+      "file_shuffle": "seed",
+      "sample_shuffle": "seed",
+      "shuffle_size": 2
+    },
+    "train": {
+      "epochs": 5,
+      "computation_time": 0.00551
+    },
+    "metric": {
+      "au": 0.7
+    }
+  },
+  "combined_params": {
+    "model": {
+      "name": "cosmoflow"
+    },
+    "framework": "tensorflow",
+    "workflow": {
+      "generate_data": false,
+      "train": true
+    },
+    "dataset": {
+      "data_folder": "data/cosmoflow",
+      "num_files_train": "3650000",
+      "num_samples_per_file": 1,
+      "record_length_bytes": 2828486,
+      "record_length_bytes_stdev": 71311,
+      "format": "tfrecord",
+      "num_subfolders_train": "365"
+    },
+    "reader": {
+      "data_loader": "tensorflow",
+      "read_threads": "36",
+      "batch_size": 1,
+      "file_shuffle": "seed",
+      "sample_shuffle": "seed",
+      "shuffle_size": 2,
+      "transfer_size": "1048576",
+      "prefetch_size": "36",
+      "computation_threads": "4"
+    },
+    "train": {
+      "epochs": 5,
+      "computation_time": 0.00551
+    },
+    "metric": {
+      "au": 0.7
+    }
+  },
+  "executed_command": "mpirun -n 120 -host 172.16.4.103:6,172.16.4.145:6,172.16.4.158:6,172.16.4.173:6,172.16.4.204:6,172.16.4.229:6,172.16.5.13:6,172.16.5.94:6,172.16.5.109:6,172.16.5.126:6,172.16.5.178:6,172.16.5.205:6,172.16.5.216:6,172.16.5.232:6,172.16.6.38:6,172.16.6.78:6,172.16.6.145:6,172.16.6.197:6,172.16.4.71:6,172.16.6.221:6 /home/ubuntu/.local/bin/dlio_benchmark workload=cosmoflow_a100 ++hydra.run.dir=./Final/Closed/Oracle-540.8T-LFS-125MBperSec-perTB/cosmoflow/20N/training/cosmoflow/run/20250702_095945 ++hydra.output_subdir=dlio_config ++workload.reader.transfer_size=1048576 ++workload.dataset.num_files_train=3650000 ++workload.dataset.num_subfolders_train=365 ++workload.reader.read_threads=36 ++workload.reader.prefetch_size=36 ++workload.reader.computation_threads=4 ++workload.dataset.data_folder=/mnt/lustrefs/cosmoflow20N/cosmoflow --config-dir=/mnt/lustrefs/storage/configs/dlio",
+  "benchmark_type": "training"
+}

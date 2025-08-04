@@ -1,0 +1,78 @@
+[OUTPUT] 2025-07-07T21:48:17.664645 Running DLIO [Training & Checkpointing] with 26 process(es)
+[WARNING] Number of files for training in /data/mlperfstorage/unet3d.subdir64/unet3d/train (672000) is more than requested (93600). A subset of files will be used 
+[WARNING] Number of files for training in /data/mlperfstorage/unet3d.subdir64/unet3d/train (672000) is more than requested (93600). A subset of files will be used 
+[WARNING] Number of files for training in /data/mlperfstorage/unet3d.subdir64/unet3d/train (672000) is more than requested (93600). A subset of files will be used 
+[WARNING] Number of files for training in /data/mlperfstorage/unet3d.subdir64/unet3d/train (672000) is more than requested (93600). A subset of files will be used 
+[WARNING] Number of files for training in /data/mlperfstorage/unet3d.subdir64/unet3d/train (672000) is more than requested (93600). A subset of files will be used 
+[WARNING] Number of files for training in /data/mlperfstorage/unet3d.subdir64/unet3d/train (672000) is more than requested (93600). A subset of files will be used 
+[WARNING] Number of files for training in /data/mlperfstorage/unet3d.subdir64/unet3d/train (672000) is more than requested (93600). A subset of files will be used 
+[WARNING] Number of files for training in /data/mlperfstorage/unet3d.subdir64/unet3d/train (672000) is more than requested (93600). A subset of files will be used 
+[WARNING] Number of files for training in /data/mlperfstorage/unet3d.subdir64/unet3d/train (672000) is more than requested (93600). A subset of files will be used 
+[WARNING] Number of files for training in /data/mlperfstorage/unet3d.subdir64/unet3d/train (672000) is more than requested (93600). A subset of files will be used 
+[WARNING] Number of files for training in /data/mlperfstorage/unet3d.subdir64/unet3d/train (672000) is more than requested (93600). A subset of files will be used 
+[WARNING] Number of files for training in /data/mlperfstorage/unet3d.subdir64/unet3d/train (672000) is more than requested (93600). A subset of files will be used 
+[WARNING] Number of files for training in /data/mlperfstorage/unet3d.subdir64/unet3d/train (672000) is more than requested (93600). A subset of files will be used 
+[WARNING] Number of files for training in /data/mlperfstorage/unet3d.subdir64/unet3d/train (672000) is more than requested (93600). A subset of files will be used 
+[WARNING] Number of files for training in /data/mlperfstorage/unet3d.subdir64/unet3d/train (672000) is more than requested (93600). A subset of files will be used 
+[WARNING] Number of files for training in /data/mlperfstorage/unet3d.subdir64/unet3d/train (672000) is more than requested (93600). A subset of files will be used 
+[WARNING] Number of files for training in /data/mlperfstorage/unet3d.subdir64/unet3d/train (672000) is more than requested (93600). A subset of files will be used 
+[WARNING] Number of files for training in /data/mlperfstorage/unet3d.subdir64/unet3d/train (672000) is more than requested (93600). A subset of files will be used 
+[WARNING] Number of files for training in /data/mlperfstorage/unet3d.subdir64/unet3d/train (672000) is more than requested (93600). A subset of files will be used 
+[WARNING] Number of files for training in /data/mlperfstorage/unet3d.subdir64/unet3d/train (672000) is more than requested (93600). A subset of files will be used 
+[WARNING] Number of files for training in /data/mlperfstorage/unet3d.subdir64/unet3d/train (672000) is more than requested (93600). A subset of files will be used 
+[WARNING] Number of files for training in /data/mlperfstorage/unet3d.subdir64/unet3d/train (672000) is more than requested (93600). A subset of files will be used 
+[WARNING] Number of files for training in /data/mlperfstorage/unet3d.subdir64/unet3d/train (672000) is more than requested (93600). A subset of files will be used 
+[WARNING] Number of files for training in /data/mlperfstorage/unet3d.subdir64/unet3d/train (672000) is more than requested (93600). A subset of files will be used 
+[WARNING] Number of files for training in /data/mlperfstorage/unet3d.subdir64/unet3d/train (672000) is more than requested (93600). A subset of files will be used 
+[WARNING] Number of files for training in /data/mlperfstorage/unet3d.subdir64/unet3d/train (672000) is more than requested (93600). A subset of files will be used 
+[OUTPUT] 2025-07-07T21:49:14.586938 Model size: 0.000010 GB 
+[OUTPUT] 2025-07-07T21:49:14.587287 Total checkpoint size: 0.000010 GB 
+[OUTPUT] 2025-07-07T21:49:14.662670 Max steps per epoch: 514 = 1 * 93600 / 7 / 26 (samples per file * num files / batch size / comm size)
+[OUTPUT] 2025-07-07T21:49:14.693367 Starting epoch 1: 514 steps expected
+[OUTPUT] 2025-07-07T21:49:14.693675 Starting block 1
+[OUTPUT] 2025-07-07T21:52:09.243722 Ending block 1 - 514 steps completed in 174.55 s
+[OUTPUT] 2025-07-07T21:52:09.247618 Epoch 1 - Block 1 [Training] Accelerator Utilization [AU] (%): 97.4987
+[OUTPUT] 2025-07-07T21:52:09.247663 Epoch 1 - Block 1 [Training] Throughput (samples/second): 548.1639
+[OUTPUT] 2025-07-07T21:52:09.247686 Epoch 1 - Block 1 [Training] Computation time per step (second): 0.3231+/-0.0000 (set value: {'mean': 0.323})
+[OUTPUT] 2025-07-07T21:52:09.250655 Ending epoch 1 - 514 steps completed in 174.56 s
+[OUTPUT] 2025-07-07T21:52:09.262590 Starting epoch 2: 514 steps expected
+[OUTPUT] 2025-07-07T21:52:09.262946 Starting block 1
+[OUTPUT] 2025-07-07T21:55:04.037439 Ending block 1 - 514 steps completed in 174.77 s
+[OUTPUT] 2025-07-07T21:55:04.038778 Epoch 2 - Block 1 [Training] Accelerator Utilization [AU] (%): 97.7365
+[OUTPUT] 2025-07-07T21:55:04.038812 Epoch 2 - Block 1 [Training] Throughput (samples/second): 549.5053
+[OUTPUT] 2025-07-07T21:55:04.038834 Epoch 2 - Block 1 [Training] Computation time per step (second): 0.3231+/-0.0000 (set value: {'mean': 0.323})
+[OUTPUT] 2025-07-07T21:55:04.043030 Ending epoch 2 - 514 steps completed in 174.78 s
+[OUTPUT] 2025-07-07T21:55:04.054461 Starting epoch 3: 514 steps expected
+[OUTPUT] 2025-07-07T21:55:04.054775 Starting block 1
+[OUTPUT] 2025-07-07T21:57:58.467765 Ending block 1 - 514 steps completed in 174.41 s
+[OUTPUT] 2025-07-07T21:57:58.469164 Epoch 3 - Block 1 [Training] Accelerator Utilization [AU] (%): 97.4238
+[OUTPUT] 2025-07-07T21:57:58.469199 Epoch 3 - Block 1 [Training] Throughput (samples/second): 547.7489
+[OUTPUT] 2025-07-07T21:57:58.469220 Epoch 3 - Block 1 [Training] Computation time per step (second): 0.3231+/-0.0000 (set value: {'mean': 0.323})
+[OUTPUT] 2025-07-07T21:57:58.472635 Ending epoch 3 - 514 steps completed in 174.42 s
+[OUTPUT] 2025-07-07T21:57:58.484503 Starting epoch 4: 514 steps expected
+[OUTPUT] 2025-07-07T21:57:58.484845 Starting block 1
+[OUTPUT] 2025-07-07T22:00:53.216437 Ending block 1 - 514 steps completed in 174.73 s
+[OUTPUT] 2025-07-07T22:00:53.217743 Epoch 4 - Block 1 [Training] Accelerator Utilization [AU] (%): 97.5452
+[OUTPUT] 2025-07-07T22:00:53.217776 Epoch 4 - Block 1 [Training] Throughput (samples/second): 548.4317
+[OUTPUT] 2025-07-07T22:00:53.217797 Epoch 4 - Block 1 [Training] Computation time per step (second): 0.3231+/-0.0000 (set value: {'mean': 0.323})
+[OUTPUT] 2025-07-07T22:00:53.221290 Ending epoch 4 - 514 steps completed in 174.74 s
+[OUTPUT] 2025-07-07T22:00:53.229222 Starting epoch 5: 514 steps expected
+[OUTPUT] 2025-07-07T22:00:53.229582 Starting block 1
+[OUTPUT] 2025-07-07T22:03:48.044049 Ending block 1 - 514 steps completed in 174.81 s
+[OUTPUT] 2025-07-07T22:03:48.045296 Epoch 5 - Block 1 [Training] Accelerator Utilization [AU] (%): 97.2818
+[OUTPUT] 2025-07-07T22:03:48.045329 Epoch 5 - Block 1 [Training] Throughput (samples/second): 546.9510
+[OUTPUT] 2025-07-07T22:03:48.045351 Epoch 5 - Block 1 [Training] Computation time per step (second): 0.3231+/-0.0000 (set value: {'mean': 0.323})
+[OUTPUT] 2025-07-07T22:03:48.046569 Starting saving checkpoint 1 after total step 514 for epoch 5
+[OUTPUT] 2025-07-07T22:03:48.050125 Finished saving checkpoint 1 for epoch 5 in 0.0036 s; Throughput: 0.0027 GB/s
+[OUTPUT] 2025-07-07T22:03:48.051572 Ending epoch 5 - 514 steps completed in 174.82 s
+[OUTPUT] 2025-07-07T22:03:48.058029 Saved outputs in /home/phost/mlperf-storage/mlperf-storage-A600/results/training/unet3d/run/20250707_214809
+[OUTPUT] Averaged metric over all steps/epochs
+[METRIC] ==========================================================
+[METRIC] Number of Simulated Accelerators: 26 
+[METRIC] Training Accelerator Utilization [AU] (%): 97.3334 (0.0586)
+[METRIC] Training Throughput (samples/second): 547.2200 (0.3306)
+[METRIC] Training I/O Throughput (MB/second): 76506.4218 (46.2249)
+[METRIC] train_au_meet_expectation: success
+[METRIC] ==========================================================
+
+[OUTPUT] 2025-07-07T22:03:48.065619 outputs saved in RANKID_output.json

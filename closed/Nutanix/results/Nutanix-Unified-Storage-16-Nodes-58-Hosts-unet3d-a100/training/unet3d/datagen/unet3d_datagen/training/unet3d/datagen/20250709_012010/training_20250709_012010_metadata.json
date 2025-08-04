@@ -1,0 +1,127 @@
+{
+  "args": {
+    "program": "training",
+    "command": "datagen",
+    "results_dir": "unet3d_datagen_for_submission",
+    "loops": 1,
+    "config_file": null,
+    "closed": false,
+    "debug": false,
+    "verbose": false,
+    "stream_log_level": "INFO",
+    "allow_invalid_params": false,
+    "what_if": false,
+    "hosts": [
+      "10.57.205.101",
+      "10.57.205.102",
+      "10.57.205.103",
+      "10.57.205.104",
+      "10.57.205.105",
+      "10.57.205.106",
+      "10.57.205.107",
+      "10.57.205.108",
+      "10.57.205.109",
+      "10.57.205.110",
+      "10.57.205.111",
+      "10.57.205.112",
+      "10.57.205.113",
+      "10.57.205.114",
+      "10.57.205.115",
+      "10.57.205.116"
+    ],
+    "model": "unet3d",
+    "exec_type": "mpi",
+    "mpi_bin": "mpirun",
+    "oversubscribe": false,
+    "allow_run_as_root": false,
+    "mpi_params": null,
+    "num_processes": 512,
+    "data_dir": "/mnt/data",
+    "params": [
+      "dataset.num_files_train=955000",
+      "dataset.num_subfolders_train=960",
+      "reader.odirect=true"
+    ],
+    "dlio_bin_path": null,
+    "num_client_hosts": 16
+  },
+  "debug": null,
+  "run_datetime": "20250709_012010",
+  "run_number": 0,
+  "runtime": 3028.894590139389,
+  "verification": null,
+  "command_output_files": [
+    {
+      "command": "mpirun -n 512 -host 10.57.205.101:32,10.57.205.102:32,10.57.205.103:32,10.57.205.104:32,10.57.205.105:32,10.57.205.106:32,10.57.205.107:32,10.57.205.108:32,10.57.205.109:32,10.57.205.110:32,10.57.205.111:32,10.57.205.112:32,10.57.205.113:32,10.57.205.114:32,10.57.205.115:32,10.57.205.116:32 /home/nutanix/.venvs/myenv/bin/dlio_benchmark workload=unet3d_datagen ++hydra.run.dir=unet3d_datagen_for_submission/training/unet3d/datagen/20250709_012010 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=955000 ++workload.dataset.num_subfolders_train=960 ++workload.reader.odirect=true ++workload.dataset.data_folder=/mnt/data/unet3d --config-dir=/home/nutanix/storage/configs/dlio",
+      "stdout": "unet3d_datagen_for_submission/training/unet3d/datagen/20250709_012010/training_datagen.stdout.log",
+      "stderr": "unet3d_datagen_for_submission/training/unet3d/datagen/20250709_012010/training_datagen.stderr.log"
+    }
+  ],
+  "run_result_output": "unet3d_datagen_for_submission/training/unet3d/datagen/20250709_012010",
+  "metadata_filename": "training_20250709_012010_metadata.json",
+  "metadata_file_path": "unet3d_datagen_for_submission/training/unet3d/datagen/20250709_012010/training_20250709_012010_metadata.json",
+  "_config_name": "unet3d_datagen",
+  "base_command": "dlio_benchmark",
+  "base_path": "/home/nutanix/.venvs/myenv/bin",
+  "base_command_path": "/home/nutanix/.venvs/myenv/bin/dlio_benchmark",
+  "config_path": "/home/nutanix/storage/configs/dlio",
+  "per_host_mem_kB": null,
+  "total_mem_kB": null,
+  "config_file": "unet3d_datagen.yaml",
+  "params_dict": {
+    "dataset.num_files_train": "955000",
+    "dataset.num_subfolders_train": "960",
+    "reader.odirect": "true",
+    "dataset.data_folder": "/mnt/data/unet3d"
+  },
+  "yaml_params": {
+    "model": {
+      "name": "unet3d",
+      "type": "cnn",
+      "model_size": 499153191
+    },
+    "framework": "pytorch",
+    "workflow": {
+      "generate_data": true,
+      "train": false,
+      "checkpoint": false
+    },
+    "dataset": {
+      "data_folder": "data/unet3d/",
+      "format": "npz",
+      "num_files_train": 168,
+      "num_samples_per_file": 1,
+      "record_length_bytes": 146600628,
+      "record_length_bytes_stdev": 68341808,
+      "record_length_bytes_resize": 2097152
+    }
+  },
+  "combined_params": {
+    "model": {
+      "name": "unet3d",
+      "type": "cnn",
+      "model_size": 499153191
+    },
+    "framework": "pytorch",
+    "workflow": {
+      "generate_data": true,
+      "train": false,
+      "checkpoint": false
+    },
+    "dataset": {
+      "data_folder": "data/unet3d/",
+      "format": "npz",
+      "num_files_train": "955000",
+      "num_samples_per_file": 1,
+      "record_length_bytes": 146600628,
+      "record_length_bytes_stdev": 68341808,
+      "record_length_bytes_resize": 2097152,
+      "num_subfolders_train": "960"
+    },
+    "reader": {
+      "odirect": "true"
+    }
+  },
+  "executed_command": "mpirun -n 512 -host 10.57.205.101:32,10.57.205.102:32,10.57.205.103:32,10.57.205.104:32,10.57.205.105:32,10.57.205.106:32,10.57.205.107:32,10.57.205.108:32,10.57.205.109:32,10.57.205.110:32,10.57.205.111:32,10.57.205.112:32,10.57.205.113:32,10.57.205.114:32,10.57.205.115:32,10.57.205.116:32 /home/nutanix/.venvs/myenv/bin/dlio_benchmark workload=unet3d_datagen ++hydra.run.dir=unet3d_datagen_for_submission/training/unet3d/datagen/20250709_012010 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=955000 ++workload.dataset.num_subfolders_train=960 ++workload.reader.odirect=true ++workload.dataset.data_folder=/mnt/data/unet3d --config-dir=/home/nutanix/storage/configs/dlio",
+  "benchmark_type": "training"
+}

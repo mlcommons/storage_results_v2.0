@@ -1,0 +1,146 @@
+{
+  "args": {
+    "program": "training",
+    "command": "run",
+    "results_dir": "/root/origin/mlpstorage_results",
+    "loops": 1,
+    "config_file": null,
+    "closed": true,
+    "debug": false,
+    "verbose": false,
+    "stream_log_level": "INFO",
+    "allow_invalid_params": false,
+    "what_if": false,
+    "hosts": [
+      "localhost"
+    ],
+    "model": "unet3d",
+    "client_host_memory_in_gb": 128,
+    "exec_type": "mpi",
+    "mpi_bin": "mpirun",
+    "oversubscribe": true,
+    "allow_run_as_root": true,
+    "mpi_params": null,
+    "num_accelerators": 4,
+    "accelerator_type": "h100",
+    "num_client_hosts": 1,
+    "data_dir": "/mnt/default/1",
+    "params": [
+      "dataset.num_files_train=14000"
+    ],
+    "dlio_bin_path": null,
+    "num_processes": 4
+  },
+  "debug": null,
+  "run_datetime": "20250630_154630",
+  "run_number": 0,
+  "runtime": 866.1335406303406,
+  "verification": "closed",
+  "command_output_files": [
+    {
+      "command": "mpirun -n 4 -host localhost:4 --oversubscribe --allow-run-as-root /usr/local/bin/dlio_benchmark workload=unet3d_h100 ++hydra.run.dir=/root/origin/mlpstorage_results/training/unet3d/run/20250630_154630 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=14000 ++workload.dataset.data_folder=/mnt/default/1/unet3d --config-dir=/usr/local/lib/python3.11/site-packages/configs/dlio",
+      "stdout": "/root/origin/mlpstorage_results/training/unet3d/run/20250630_154630/training_run.stdout.log",
+      "stderr": "/root/origin/mlpstorage_results/training/unet3d/run/20250630_154630/training_run.stderr.log"
+    }
+  ],
+  "run_result_output": "/root/origin/mlpstorage_results/training/unet3d/run/20250630_154630",
+  "metadata_filename": "training_20250630_154630_metadata.json",
+  "metadata_file_path": "/root/origin/mlpstorage_results/training/unet3d/run/20250630_154630/training_20250630_154630_metadata.json",
+  "_config_name": "unet3d_h100",
+  "base_command": "dlio_benchmark",
+  "base_path": "/usr/local/bin",
+  "base_command_path": "/usr/local/bin/dlio_benchmark",
+  "config_path": "/usr/local/lib/python3.11/site-packages/configs/dlio",
+  "per_host_mem_kB": null,
+  "total_mem_kB": null,
+  "cluster_information": "<mlpstorage.rules.ClusterInformation object at 0x7f596a81c890>",
+  "config_file": "unet3d_h100.yaml",
+  "params_dict": {
+    "dataset.num_files_train": "14000",
+    "dataset.data_folder": "/mnt/default/1/unet3d"
+  },
+  "yaml_params": {
+    "model": {
+      "name": "unet3d",
+      "type": "cnn",
+      "model_size": 499153191
+    },
+    "framework": "pytorch",
+    "workflow": {
+      "generate_data": false,
+      "train": true,
+      "checkpoint": false
+    },
+    "dataset": {
+      "data_folder": "data/unet3d/",
+      "format": "npz",
+      "num_files_train": 168,
+      "num_samples_per_file": 1,
+      "record_length_bytes": 146600628,
+      "record_length_bytes_stdev": 68341808,
+      "record_length_bytes_resize": 2097152
+    },
+    "reader": {
+      "data_loader": "pytorch",
+      "batch_size": 7,
+      "read_threads": 4,
+      "file_shuffle": "seed",
+      "sample_shuffle": "seed"
+    },
+    "train": {
+      "epochs": 5,
+      "computation_time": 0.323
+    },
+    "checkpoint": {
+      "checkpoint_folder": "checkpoints/unet3d",
+      "checkpoint_after_epoch": 5,
+      "epochs_between_checkpoints": 2
+    },
+    "metric": {
+      "au": 0.9
+    }
+  },
+  "combined_params": {
+    "model": {
+      "name": "unet3d",
+      "type": "cnn",
+      "model_size": 499153191
+    },
+    "framework": "pytorch",
+    "workflow": {
+      "generate_data": false,
+      "train": true,
+      "checkpoint": false
+    },
+    "dataset": {
+      "data_folder": "data/unet3d/",
+      "format": "npz",
+      "num_files_train": "14000",
+      "num_samples_per_file": 1,
+      "record_length_bytes": 146600628,
+      "record_length_bytes_stdev": 68341808,
+      "record_length_bytes_resize": 2097152
+    },
+    "reader": {
+      "data_loader": "pytorch",
+      "batch_size": 7,
+      "read_threads": 4,
+      "file_shuffle": "seed",
+      "sample_shuffle": "seed"
+    },
+    "train": {
+      "epochs": 5,
+      "computation_time": 0.323
+    },
+    "checkpoint": {
+      "checkpoint_folder": "checkpoints/unet3d",
+      "checkpoint_after_epoch": 5,
+      "epochs_between_checkpoints": 2
+    },
+    "metric": {
+      "au": 0.9
+    }
+  },
+  "executed_command": "mpirun -n 4 -host localhost:4 --oversubscribe --allow-run-as-root /usr/local/bin/dlio_benchmark workload=unet3d_h100 ++hydra.run.dir=/root/origin/mlpstorage_results/training/unet3d/run/20250630_154630 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=14000 ++workload.dataset.data_folder=/mnt/default/1/unet3d --config-dir=/usr/local/lib/python3.11/site-packages/configs/dlio",
+  "benchmark_type": "training"
+}

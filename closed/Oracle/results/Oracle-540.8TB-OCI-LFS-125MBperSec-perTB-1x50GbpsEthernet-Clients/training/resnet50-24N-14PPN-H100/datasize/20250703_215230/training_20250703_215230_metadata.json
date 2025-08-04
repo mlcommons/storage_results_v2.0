@@ -1,0 +1,116 @@
+{
+  "args": {
+    "program": "training",
+    "command": "datasize",
+    "results_dir": "./Final/Closed/Oracle-540.8T-LFS-125MBperSec-perTB/24N-Resnet50",
+    "loops": 1,
+    "config_file": null,
+    "closed": false,
+    "debug": false,
+    "verbose": false,
+    "stream_log_level": "INFO",
+    "allow_invalid_params": false,
+    "what_if": false,
+    "hosts": [
+      "127.0.0.1"
+    ],
+    "model": "resnet50",
+    "client_host_memory_in_gb": 96,
+    "exec_type": "mpi",
+    "mpi_bin": "mpirun",
+    "oversubscribe": false,
+    "allow_run_as_root": false,
+    "mpi_params": null,
+    "max_accelerators": 336,
+    "accelerator_type": "h100",
+    "num_client_hosts": 24,
+    "data_dir": null,
+    "params": null,
+    "dlio_bin_path": null,
+    "num_processes": 336
+  },
+  "debug": null,
+  "run_datetime": "20250703_215230",
+  "run_number": 0,
+  "runtime": 0.0001957416534423828,
+  "verification": null,
+  "command_output_files": [],
+  "run_result_output": "./Final/Closed/Oracle-540.8T-LFS-125MBperSec-perTB/24N-Resnet50/training/resnet50/datasize/20250703_215230",
+  "metadata_filename": "training_20250703_215230_metadata.json",
+  "metadata_file_path": "./Final/Closed/Oracle-540.8T-LFS-125MBperSec-perTB/24N-Resnet50/training/resnet50/datasize/20250703_215230/training_20250703_215230_metadata.json",
+  "_config_name": "resnet50_h100",
+  "base_command": "dlio_benchmark",
+  "base_path": "/home/ubuntu/.local/bin",
+  "base_command_path": "/home/ubuntu/.local/bin/dlio_benchmark",
+  "config_path": "/mnt/lustrefs/storage/configs/dlio",
+  "per_host_mem_kB": null,
+  "total_mem_kB": null,
+  "cluster_information": "<mlpstorage.rules.ClusterInformation object at 0x7fa092254790>",
+  "config_file": "resnet50_h100.yaml",
+  "params_dict": {},
+  "yaml_params": {
+    "model": {
+      "name": "resnet50",
+      "type": "cnn"
+    },
+    "framework": "tensorflow",
+    "workflow": {
+      "generate_data": false,
+      "train": true
+    },
+    "dataset": {
+      "num_files_train": 1024,
+      "num_samples_per_file": 1251,
+      "record_length_bytes": 114660.07,
+      "record_length_bytes_resize": 150528,
+      "data_folder": "data/resnet50",
+      "format": "tfrecord"
+    },
+    "train": {
+      "computation_time": 0.224,
+      "epochs": 5
+    },
+    "reader": {
+      "data_loader": "tensorflow",
+      "read_threads": 8,
+      "computation_threads": 8,
+      "batch_size": 400
+    },
+    "metric": {
+      "au": 0.9
+    }
+  },
+  "combined_params": {
+    "model": {
+      "name": "resnet50",
+      "type": "cnn"
+    },
+    "framework": "tensorflow",
+    "workflow": {
+      "generate_data": false,
+      "train": true
+    },
+    "dataset": {
+      "num_files_train": 1024,
+      "num_samples_per_file": 1251,
+      "record_length_bytes": 114660.07,
+      "record_length_bytes_resize": 150528,
+      "data_folder": "data/resnet50",
+      "format": "tfrecord"
+    },
+    "train": {
+      "computation_time": 0.224,
+      "epochs": 5
+    },
+    "reader": {
+      "data_loader": "tensorflow",
+      "read_threads": 8,
+      "computation_threads": 8,
+      "batch_size": 400
+    },
+    "metric": {
+      "au": 0.9
+    }
+  },
+  "benchmark_type": "training"
+}

@@ -1,0 +1,21 @@
+{
+  "submitter": "Alluxio_Storage",
+  "system_name": "AWS c6in.12xlarge (8 clients) + i3en.12xlarge (8 storage)",
+  "number_of_nodes": 16,
+  "host_processor_model_name": "Intel Xeon Platinum 8259CL",
+  "host_processors_per_node": 1,
+  "host_processor_core_count": 48,
+  "host_memory_capacity": "96 GiB",
+  "storage_type": "NVMe SSD (ephemeral, i3en.12xlarge)",
+  "accelerator_model_name": "NVIDIA H100",
+  "accelerators_per_node": 30,
+  "cooling": "AWS datacenter standard",
+  "network_type": "Elastic Network Adapter (ENA)",
+  "operating_system": "Ubuntu 22.04",
+  "other_software_stack": [
+    "FUSE",
+    "Docker"
+  ],
+  "notes": "Used AWS EC2 instances: 8x c6in.12xlarge as clients, 8x i3en.12xlarge as storage nodes, 30x H100 per instance"
+}
+

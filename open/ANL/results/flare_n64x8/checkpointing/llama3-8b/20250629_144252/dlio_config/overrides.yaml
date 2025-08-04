@@ -1,0 +1,4 @@
+- workload=llama3_8b
+- ++workload.checkpoint.num_checkpoints_read=0
+- ++workload.checkpoint.num_checkpoints_write=10
+- ++workload.checkpoint.checkpoint_folder=.//checkpoints/n64x8/llama3-8b

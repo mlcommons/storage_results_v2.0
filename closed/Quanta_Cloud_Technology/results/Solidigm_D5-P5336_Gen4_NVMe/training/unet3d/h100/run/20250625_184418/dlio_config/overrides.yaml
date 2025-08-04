@@ -1,0 +1,4 @@
+- workload=unet3d_h100
+- ++workload.dataset.num_files_train=14000
+- ++workload.reader.read_threads=28
+- ++workload.dataset.data_folder=/P5336/unet3d

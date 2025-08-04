@@ -1,0 +1,56 @@
+{
+  "host_name": "sped",
+  "accelerator_count": 1,
+  "hosts_count": 1,
+  "host_node": {
+    "node_count": 1,
+    "OS_version": "Ubuntu 22.04.5 LTS",
+    "kernel_version": "6.5.0-15-generic",
+    "memory_capacity_gigabytes": "251 GB",
+    "cpu_core_count": 32,
+    "cpu_socket_count": 2,
+    "cpu_frequency_gigahertz": 0,
+    "cpu_model": "AMD EPYC 7302 16-Core Processor",
+    "system": "PowerEdge R7525 Gen4",
+    "bios_version": 2.15
+  },
+  "storage_system": {
+    "category": "commercial",
+    "type": "Local",
+    "Model": "KINGSTON SEDC3000ME",
+    "total_read_bandwidth_sequential_MB_per_sec": 14000,
+    "total_write_bandwidth_sequential_MB_per_sec": 10000,
+    "total_storage_capacity_TB": "26.88TB",
+    "hardware": [
+      {
+        "Count": 1,
+        "Vendor": "KINGSTON",
+        "type": "NVMe SSD",
+        "Model": "KINGSTON SEDC3000ME3T8BK",
+        "protocol": "NVMe",
+        "Disk_capacity": "3.84TB"
+      },
+      {
+        "Count": 1,
+        "Vendor": "KINGSTON",
+        "type": "NVMe SSD",
+        "Model": "KINGSTON SEDC3000ME15T3BK",
+        "protocol": "NVMe",
+        "Disk_capacity": "15.36T"
+      },
+      {
+        "Count": 1,
+        "Vendor": "KINGSTON",
+        "type": "NVMe SSD",
+        "Model": "KINGSTON SEDC3000ME7T6BK",
+        "protocol": "NVMe",
+        "Disk_capacity": "7.68 TB"
+      }
+    ]
+  },
+  "host_to_storage_interconnect": [
+    {
+      "interconnect_type": "PCIe Gen5x4 connected to a Gen4x4 backplane"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+- workload=unet3d_a100
+- ++workload.dataset.num_files_train=28000
+- ++workload.reader.read_threads=16
+- ++workload.dataset.data_folder=/mnt/KINGSTONSEDC3000ME7T6BK/unet3d

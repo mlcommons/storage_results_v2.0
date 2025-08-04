@@ -1,0 +1,5 @@
+- workload=cosmoflow_h100
+- ++workload.dataset.num_files_train=1943680
+- ++workload.dataset.num_subfolders_train=1920
+- ++workload.reader.read_threads=24
+- ++workload.dataset.data_folder=/mnt/data/cosmoflow

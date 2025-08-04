@@ -1,0 +1,18 @@
+model: 
+  name: resnet50
+  type: cnn
+
+framework: tensorflow
+
+workflow:
+  generate_data: True
+  train: False
+  checkpoint: False
+
+dataset:
+ num_files_train: 1024
+ num_samples_per_file: 1251
+ record_length_bytes: 114660.07
+ record_length_bytes_resize: 150528
+ data_folder: data/resnet50
+ format: tfrecord

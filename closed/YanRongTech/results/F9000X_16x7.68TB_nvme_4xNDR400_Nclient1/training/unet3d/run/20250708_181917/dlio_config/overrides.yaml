@@ -1,0 +1,6 @@
+- workload=unet3d_h100
+- ++workload.dataset.num_files_train=105000
+- ++workload.dataset.num_subfolders_train=10
+- ++workload.reader.read_threads=16
+- ++workload.reader.odirect=true
+- ++workload.dataset.data_folder=/mnt/yrfs/mlperf_training_data_single/unet3d

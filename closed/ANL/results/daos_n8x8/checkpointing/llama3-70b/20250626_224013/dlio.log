@@ -1,0 +1,56 @@
+[OUTPUT] 2025-06-26T22:44:04.247451 Running DLIO [Checkpointing] with 64 process(es)
+[OUTPUT] 2025-06-26T22:44:04.741129 Total number of parameters in the model: 69882617856
+[OUTPUT] 2025-06-26T22:44:27.091996 Model size: 130.183716 GB 
+[OUTPUT] 2025-06-26T22:44:27.092247 Optimizer state size: 781.028412 GB 
+[OUTPUT] 2025-06-26T22:44:27.092297 Total checkpoint size: 911.212128 GB 
+[OUTPUT] 2025-06-26T22:44:27.092389 Checkpointing write started
+[OUTPUT] 2025-06-26T22:44:32.236124 Starting saving checkpoint 1 after total step 1 for epoch 1
+[OUTPUT] 2025-06-26T22:44:33.734906 Saved model checkpoint in 1.4571 seconds
+[OUTPUT] 2025-06-26T22:44:39.950527 Saved optimizer checkpoint in 6.2154 seconds
+[OUTPUT] 2025-06-26T22:44:39.950782 Finished saving checkpoint 1 for epoch 1 in 7.7147 s; Throughput: 118.1144 GB/s
+[OUTPUT] 2025-06-26T22:44:45.609939 Starting saving checkpoint 2 after total step 2 for epoch 1
+[OUTPUT] 2025-06-26T22:44:46.903172 Saved model checkpoint in 1.2894 seconds
+[OUTPUT] 2025-06-26T22:44:53.736007 Saved optimizer checkpoint in 6.8326 seconds
+[OUTPUT] 2025-06-26T22:44:53.736252 Finished saving checkpoint 2 for epoch 1 in 8.1263 s; Throughput: 112.1311 GB/s
+[OUTPUT] 2025-06-26T22:44:59.764616 Starting saving checkpoint 3 after total step 3 for epoch 1
+[OUTPUT] 2025-06-26T22:45:01.203105 Saved model checkpoint in 1.4346 seconds
+[OUTPUT] 2025-06-26T22:45:08.985854 Saved optimizer checkpoint in 7.7824 seconds
+[OUTPUT] 2025-06-26T22:45:08.986168 Finished saving checkpoint 3 for epoch 1 in 9.2216 s; Throughput: 98.8133 GB/s
+[OUTPUT] 2025-06-26T22:45:14.150692 Starting saving checkpoint 4 after total step 4 for epoch 1
+[OUTPUT] 2025-06-26T22:45:15.497164 Saved model checkpoint in 1.3420 seconds
+[OUTPUT] 2025-06-26T22:45:21.822726 Saved optimizer checkpoint in 6.3253 seconds
+[OUTPUT] 2025-06-26T22:45:21.822950 Finished saving checkpoint 4 for epoch 1 in 7.6723 s; Throughput: 118.7671 GB/s
+[OUTPUT] 2025-06-26T22:45:27.621178 Starting saving checkpoint 5 after total step 5 for epoch 1
+[OUTPUT] 2025-06-26T22:45:28.851560 Saved model checkpoint in 1.2260 seconds
+[OUTPUT] 2025-06-26T22:45:34.470894 Saved optimizer checkpoint in 5.6191 seconds
+[OUTPUT] 2025-06-26T22:45:34.471159 Finished saving checkpoint 5 for epoch 1 in 6.8500 s; Throughput: 133.0240 GB/s
+[OUTPUT] 2025-06-26T22:45:40.032089 Starting saving checkpoint 6 after total step 6 for epoch 1
+[OUTPUT] 2025-06-26T22:45:41.056081 Saved model checkpoint in 1.0197 seconds
+[OUTPUT] 2025-06-26T22:45:46.372428 Saved optimizer checkpoint in 5.3161 seconds
+[OUTPUT] 2025-06-26T22:45:46.372640 Finished saving checkpoint 6 for epoch 1 in 6.3406 s; Throughput: 143.7118 GB/s
+[OUTPUT] 2025-06-26T22:45:52.108900 Starting saving checkpoint 7 after total step 7 for epoch 1
+[OUTPUT] 2025-06-26T22:45:53.119821 Saved model checkpoint in 1.0067 seconds
+[OUTPUT] 2025-06-26T22:45:58.443060 Saved optimizer checkpoint in 5.3230 seconds
+[OUTPUT] 2025-06-26T22:45:58.443283 Finished saving checkpoint 7 for epoch 1 in 6.3344 s; Throughput: 143.8518 GB/s
+[OUTPUT] 2025-06-26T22:46:04.071611 Starting saving checkpoint 8 after total step 8 for epoch 1
+[OUTPUT] 2025-06-26T22:46:05.078099 Saved model checkpoint in 1.0018 seconds
+[OUTPUT] 2025-06-26T22:46:10.357250 Saved optimizer checkpoint in 5.2789 seconds
+[OUTPUT] 2025-06-26T22:46:10.357490 Finished saving checkpoint 8 for epoch 1 in 6.2859 s; Throughput: 144.9618 GB/s
+[OUTPUT] 2025-06-26T22:46:16.230385 Starting saving checkpoint 9 after total step 9 for epoch 1
+[OUTPUT] 2025-06-26T22:46:17.238898 Saved model checkpoint in 1.0035 seconds
+[OUTPUT] 2025-06-26T22:46:22.600059 Saved optimizer checkpoint in 5.3609 seconds
+[OUTPUT] 2025-06-26T22:46:22.600267 Finished saving checkpoint 9 for epoch 1 in 6.3699 s; Throughput: 143.0501 GB/s
+[OUTPUT] 2025-06-26T22:46:28.499959 Starting saving checkpoint 10 after total step 10 for epoch 1
+[OUTPUT] 2025-06-26T22:46:29.508242 Saved model checkpoint in 1.0039 seconds
+[OUTPUT] 2025-06-26T22:46:34.893441 Saved optimizer checkpoint in 5.3850 seconds
+[OUTPUT] 2025-06-26T22:46:34.893682 Finished saving checkpoint 10 for epoch 1 in 6.3937 s; Throughput: 142.5167 GB/s
+[OUTPUT] 2025-06-26T22:46:34.894620 Checkpointing write finished
+[OUTPUT] 2025-06-26T22:46:35.627878 Saved outputs in /lus/flare/projects/Aurora_deployment/hzheng/mlperf_storage/2025/mlperf_storage_v2.0_submission/results/daos/n8x8/checkpointing/llama3-70b/20250626_224013
+[OUTPUT] Averaged metric over all steps/epochs
+[METRIC] ==========================================================
+[METRIC] Number of Simulated Accelerators: 64 
+[METRIC] Checkpoint save duration (seconds): 7.1309 (0.9576)
+[METRIC] Checkpoint save I/O Throughput (GB/second): 129.8942 (15.8085)
+[METRIC] ==========================================================
+
+[OUTPUT] 2025-06-26T22:46:35.673494 outputs saved in RANKID_output.json

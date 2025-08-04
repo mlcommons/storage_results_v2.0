@@ -1,0 +1,59 @@
+[OUTPUT] 2025-07-18T07:11:11.625168 Running DLIO [Training] with 100 process(es)
+[WARNING] The amount of dataset is smaller than the host memory; data might be cached after the first epoch. Increase the size of dataset to eliminate the caching effect!!!
+[WARNING] Number of files for training in ../data_10host/cosmoflow/train (2429549) is more than requested (607387). A subset of files will be used 
+[WARNING] Number of files for training in ../data_10host/cosmoflow/train (2429549) is more than requested (607387). A subset of files will be used 
+[WARNING] Number of files for training in ../data_10host/cosmoflow/train (2429549) is more than requested (607387). A subset of files will be used 
+[WARNING] Number of files for training in ../data_10host/cosmoflow/train (2429549) is more than requested (607387). A subset of files will be used 
+[WARNING] Number of files for training in ../data_10host/cosmoflow/train (2429549) is more than requested (607387). A subset of files will be used 
+[WARNING] Number of files for training in ../data_10host/cosmoflow/train (2429549) is more than requested (607387). A subset of files will be used 
+[WARNING] Number of files for training in ../data_10host/cosmoflow/train (2429549) is more than requested (607387). A subset of files will be used 
+[WARNING] Number of files for training in ../data_10host/cosmoflow/train (2429549) is more than requested (607387). A subset of files will be used 
+[WARNING] Number of files for training in ../data_10host/cosmoflow/train (2429549) is more than requested (607387). A subset of files will be used 
+[WARNING] Number of files for training in ../data_10host/cosmoflow/train (2429549) is more than requested (607387). A subset of files will be used 
+[OUTPUT] 2025-07-18T07:11:32.864391 Max steps per epoch: 6073 = 1 * 607387 / 1 / 100 (samples per file * num files / batch size / comm size)
+[OUTPUT] 2025-07-18T07:11:52.847718 Starting epoch 1: 6073 steps expected
+[OUTPUT] 2025-07-18T07:11:52.848101 Starting block 1
+[OUTPUT] 2025-07-18T07:12:23.256399 Ending block 1 - 6073 steps completed in 30.41 s
+[OUTPUT] 2025-07-18T07:12:23.264808 Epoch 1 - Block 1 [Training] Accelerator Utilization [AU] (%): 72.4588
+[OUTPUT] 2025-07-18T07:12:23.264902 Epoch 1 - Block 1 [Training] Throughput (samples/second): 19997.2716
+[OUTPUT] 2025-07-18T07:12:23.264935 Epoch 1 - Block 1 [Training] Computation time per step (second): 0.0036+/-0.0004 (set value: {'mean': 0.0035})
+[OUTPUT] 2025-07-18T07:12:23.337882 Ending epoch 1 - 6073 steps completed in 30.49 s
+[OUTPUT] 2025-07-18T07:12:23.474339 Starting epoch 2: 6073 steps expected
+[OUTPUT] 2025-07-18T07:12:23.474621 Starting block 1
+[OUTPUT] 2025-07-18T07:12:52.674863 Ending block 1 - 6073 steps completed in 29.20 s
+[OUTPUT] 2025-07-18T07:12:52.680124 Epoch 2 - Block 1 [Training] Accelerator Utilization [AU] (%): 75.2341
+[OUTPUT] 2025-07-18T07:12:52.680224 Epoch 2 - Block 1 [Training] Throughput (samples/second): 20822.1273
+[OUTPUT] 2025-07-18T07:12:52.680260 Epoch 2 - Block 1 [Training] Computation time per step (second): 0.0036+/-0.0002 (set value: {'mean': 0.0035})
+[OUTPUT] 2025-07-18T07:12:52.751259 Ending epoch 2 - 6073 steps completed in 29.28 s
+[OUTPUT] 2025-07-18T07:12:52.878584 Starting epoch 3: 6073 steps expected
+[OUTPUT] 2025-07-18T07:12:52.878920 Starting block 1
+[OUTPUT] 2025-07-18T07:13:22.074457 Ending block 1 - 6073 steps completed in 29.20 s
+[OUTPUT] 2025-07-18T07:13:22.079897 Epoch 3 - Block 1 [Training] Accelerator Utilization [AU] (%): 75.1961
+[OUTPUT] 2025-07-18T07:13:22.079999 Epoch 3 - Block 1 [Training] Throughput (samples/second): 20826.2138
+[OUTPUT] 2025-07-18T07:13:22.080036 Epoch 3 - Block 1 [Training] Computation time per step (second): 0.0036+/-0.0002 (set value: {'mean': 0.0035})
+[OUTPUT] 2025-07-18T07:13:22.107006 Ending epoch 3 - 6073 steps completed in 29.23 s
+[OUTPUT] 2025-07-18T07:13:22.227166 Starting epoch 4: 6073 steps expected
+[OUTPUT] 2025-07-18T07:13:22.227424 Starting block 1
+[OUTPUT] 2025-07-18T07:13:51.469773 Ending block 1 - 6073 steps completed in 29.24 s
+[OUTPUT] 2025-07-18T07:13:51.475158 Epoch 4 - Block 1 [Training] Accelerator Utilization [AU] (%): 75.0132
+[OUTPUT] 2025-07-18T07:13:51.475306 Epoch 4 - Block 1 [Training] Throughput (samples/second): 20786.4338
+[OUTPUT] 2025-07-18T07:13:51.475344 Epoch 4 - Block 1 [Training] Computation time per step (second): 0.0036+/-0.0002 (set value: {'mean': 0.0035})
+[OUTPUT] 2025-07-18T07:13:51.487148 Ending epoch 4 - 6073 steps completed in 29.26 s
+[OUTPUT] 2025-07-18T07:13:51.618290 Starting epoch 5: 6073 steps expected
+[OUTPUT] 2025-07-18T07:13:51.618562 Starting block 1
+[OUTPUT] 2025-07-18T07:14:20.827186 Ending block 1 - 6073 steps completed in 29.21 s
+[OUTPUT] 2025-07-18T07:14:20.831720 Epoch 5 - Block 1 [Training] Accelerator Utilization [AU] (%): 75.1260
+[OUTPUT] 2025-07-18T07:14:20.831849 Epoch 5 - Block 1 [Training] Throughput (samples/second): 20809.0109
+[OUTPUT] 2025-07-18T07:14:20.831898 Epoch 5 - Block 1 [Training] Computation time per step (second): 0.0036+/-0.0002 (set value: {'mean': 0.0035})
+[OUTPUT] 2025-07-18T07:14:20.839788 Ending epoch 5 - 6073 steps completed in 29.22 s
+[OUTPUT] 2025-07-18T07:14:20.979217 Saved outputs in /root/cosmoflow_10host_results/training/cosmoflow/run/20250718_071106
+[OUTPUT] Averaged metric over all steps/epochs
+[METRIC] ==========================================================
+[METRIC] Number of Simulated Accelerators: 100 
+[METRIC] Training Accelerator Utilization [AU] (%): 74.4552 (1.0166)
+[METRIC] Training Throughput (samples/second): 20661.3402 (297.9782)
+[METRIC] Training I/O Throughput (MB/second): 55733.0241 (803.7827)
+[METRIC] train_au_meet_expectation: success
+[METRIC] ==========================================================
+
+[OUTPUT] 2025-07-18T07:14:21.067036 outputs saved in RANKID_output.json

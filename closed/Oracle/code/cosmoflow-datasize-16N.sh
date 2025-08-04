@@ -1,0 +1,1 @@
+mlpstorage training datasize -m cosmoflow --client-host-memory-in-gb 512 --max-accelerators 512 --num-client-hosts 16 --accelerator-type h100  --results-dir mlperf-storage-results/cosmoflow | tee -a cosmoflow-datasize-16N.log

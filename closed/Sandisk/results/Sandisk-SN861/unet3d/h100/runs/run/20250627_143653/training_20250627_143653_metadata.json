@@ -1,0 +1,148 @@
+{
+  "args": {
+    "program": "training",
+    "command": "run",
+    "results_dir": "/home/techmarketing/unet3d_results/",
+    "loops": 5,
+    "config_file": null,
+    "closed": true,
+    "debug": false,
+    "verbose": false,
+    "stream_log_level": "INFO",
+    "allow_invalid_params": false,
+    "what_if": false,
+    "hosts": [
+      "localhost"
+    ],
+    "model": "unet3d",
+    "client_host_memory_in_gb": 256,
+    "exec_type": "mpi",
+    "mpi_bin": "mpirun",
+    "oversubscribe": true,
+    "allow_run_as_root": true,
+    "mpi_params": null,
+    "num_accelerators": 4,
+    "accelerator_type": "h100",
+    "num_client_hosts": 1,
+    "data_dir": "/mnt/ssd/unet3d_data",
+    "params": [
+      "dataset.num_files_train=14000",
+      "reader.read_threads=256"
+    ],
+    "dlio_bin_path": null,
+    "num_processes": 4
+  },
+  "debug": null,
+  "run_datetime": "20250627_143653",
+  "run_number": 0,
+  "runtime": 1372.4820160865784,
+  "verification": "closed",
+  "command_output_files": [
+    {
+      "command": "mpirun -n 4 -host localhost:4 --oversubscribe --allow-run-as-root /usr/local/bin/dlio_benchmark workload=unet3d_h100 ++hydra.run.dir=/home/techmarketing/unet3d_results/training/unet3d/run/20250627_143653 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=14000 ++workload.reader.read_threads=256 ++workload.dataset.data_folder=/mnt/ssd/unet3d_data/unet3d --config-dir=/home/techmarketing/storage/configs/dlio",
+      "stdout": "/home/techmarketing/unet3d_results/training/unet3d/run/20250627_143653/training_run.stdout.log",
+      "stderr": "/home/techmarketing/unet3d_results/training/unet3d/run/20250627_143653/training_run.stderr.log"
+    }
+  ],
+  "run_result_output": "/home/techmarketing/unet3d_results/training/unet3d/run/20250627_143653",
+  "metadata_filename": "training_20250627_143653_metadata.json",
+  "metadata_file_path": "/home/techmarketing/unet3d_results/training/unet3d/run/20250627_143653/training_20250627_143653_metadata.json",
+  "_config_name": "unet3d_h100",
+  "base_command": "dlio_benchmark",
+  "base_path": "/usr/local/bin",
+  "base_command_path": "/usr/local/bin/dlio_benchmark",
+  "config_path": "/home/techmarketing/storage/configs/dlio",
+  "per_host_mem_kB": null,
+  "total_mem_kB": null,
+  "cluster_information": "<mlpstorage.rules.ClusterInformation object at 0x732ddc37cc20>",
+  "config_file": "unet3d_h100.yaml",
+  "params_dict": {
+    "dataset.num_files_train": "14000",
+    "reader.read_threads": "256",
+    "dataset.data_folder": "/mnt/ssd/unet3d_data/unet3d"
+  },
+  "yaml_params": {
+    "model": {
+      "name": "unet3d",
+      "type": "cnn",
+      "model_size": 499153191
+    },
+    "framework": "pytorch",
+    "workflow": {
+      "generate_data": false,
+      "train": true,
+      "checkpoint": false
+    },
+    "dataset": {
+      "data_folder": "data/unet3d/",
+      "format": "npz",
+      "num_files_train": 168,
+      "num_samples_per_file": 1,
+      "record_length_bytes": 146600628,
+      "record_length_bytes_stdev": 68341808,
+      "record_length_bytes_resize": 2097152
+    },
+    "reader": {
+      "data_loader": "pytorch",
+      "batch_size": 7,
+      "read_threads": 32,
+      "file_shuffle": "seed",
+      "sample_shuffle": "seed"
+    },
+    "train": {
+      "epochs": 5,
+      "computation_time": 0.323
+    },
+    "checkpoint": {
+      "checkpoint_folder": "checkpoints/unet3d",
+      "checkpoint_after_epoch": 5,
+      "epochs_between_checkpoints": 2
+    },
+    "metric": {
+      "au": 0.9
+    }
+  },
+  "combined_params": {
+    "model": {
+      "name": "unet3d",
+      "type": "cnn",
+      "model_size": 499153191
+    },
+    "framework": "pytorch",
+    "workflow": {
+      "generate_data": false,
+      "train": true,
+      "checkpoint": false
+    },
+    "dataset": {
+      "data_folder": "data/unet3d/",
+      "format": "npz",
+      "num_files_train": "14000",
+      "num_samples_per_file": 1,
+      "record_length_bytes": 146600628,
+      "record_length_bytes_stdev": 68341808,
+      "record_length_bytes_resize": 2097152
+    },
+    "reader": {
+      "data_loader": "pytorch",
+      "batch_size": 7,
+      "read_threads": "256",
+      "file_shuffle": "seed",
+      "sample_shuffle": "seed"
+    },
+    "train": {
+      "epochs": 5,
+      "computation_time": 0.323
+    },
+    "checkpoint": {
+      "checkpoint_folder": "checkpoints/unet3d",
+      "checkpoint_after_epoch": 5,
+      "epochs_between_checkpoints": 2
+    },
+    "metric": {
+      "au": 0.9
+    }
+  },
+  "executed_command": "mpirun -n 4 -host localhost:4 --oversubscribe --allow-run-as-root /usr/local/bin/dlio_benchmark workload=unet3d_h100 ++hydra.run.dir=/home/techmarketing/unet3d_results/training/unet3d/run/20250627_143653 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=14000 ++workload.reader.read_threads=256 ++workload.dataset.data_folder=/mnt/ssd/unet3d_data/unet3d --config-dir=/home/techmarketing/storage/configs/dlio",
+  "benchmark_type": "training"
+}

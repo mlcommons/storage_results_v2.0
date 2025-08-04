@@ -1,0 +1,102 @@
+{
+  "args": {
+    "program": "training",
+    "command": "datagen",
+    "results_dir": "/home/mlcommons/submission_resnet50_H100_test_20250706",
+    "loops": 1,
+    "config_file": null,
+    "closed": false,
+    "debug": false,
+    "verbose": false,
+    "stream_log_level": "INFO",
+    "allow_invalid_params": false,
+    "what_if": false,
+    "hosts": [
+      "mlpstorage-driver1",
+      "mlpstorage-driver2",
+      "mlpstorage-driver3"
+    ],
+    "model": "resnet50",
+    "exec_type": "mpi",
+    "mpi_bin": "mpirun",
+    "oversubscribe": false,
+    "allow_run_as_root": false,
+    "mpi_params": null,
+    "num_processes": 150,
+    "data_dir": "/mnt/resnet50_data",
+    "params": [
+      "dataset.num_files_train=115200"
+    ],
+    "dlio_bin_path": null,
+    "num_client_hosts": 3
+  },
+  "debug": null,
+  "run_datetime": "20250707_135351",
+  "run_number": 0,
+  "runtime": 569.6232583522797,
+  "verification": null,
+  "command_output_files": [
+    {
+      "command": "mpirun -n 150 -host mlpstorage-driver1:50,mlpstorage-driver2:50,mlpstorage-driver3:50 /home/mlcommons/envs/adabench_dl/bin/dlio_benchmark workload=resnet50_datagen ++hydra.run.dir=/home/mlcommons/submission_resnet50_H100_test_20250706/training/resnet50/datagen/20250707_135351 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=115200 ++workload.dataset.data_folder=/mnt/resnet50_data/resnet50 --config-dir=/home/mlcommons/envs/adabench_dl/lib/python3.12/site-packages/configs/dlio",
+      "stdout": "/home/mlcommons/submission_resnet50_H100_test_20250706/training/resnet50/datagen/20250707_135351/training_datagen.stdout.log",
+      "stderr": "/home/mlcommons/submission_resnet50_H100_test_20250706/training/resnet50/datagen/20250707_135351/training_datagen.stderr.log"
+    }
+  ],
+  "run_result_output": "/home/mlcommons/submission_resnet50_H100_test_20250706/training/resnet50/datagen/20250707_135351",
+  "metadata_filename": "training_20250707_135351_metadata.json",
+  "metadata_file_path": "/home/mlcommons/submission_resnet50_H100_test_20250706/training/resnet50/datagen/20250707_135351/training_20250707_135351_metadata.json",
+  "_config_name": "resnet50_datagen",
+  "base_command": "dlio_benchmark",
+  "base_path": "/home/mlcommons/envs/adabench_dl/bin",
+  "base_command_path": "/home/mlcommons/envs/adabench_dl/bin/dlio_benchmark",
+  "config_path": "/home/mlcommons/envs/adabench_dl/lib/python3.12/site-packages/configs/dlio",
+  "per_host_mem_kB": null,
+  "total_mem_kB": null,
+  "config_file": "resnet50_datagen.yaml",
+  "params_dict": {
+    "dataset.num_files_train": "115200",
+    "dataset.data_folder": "/mnt/resnet50_data/resnet50"
+  },
+  "yaml_params": {
+    "model": {
+      "name": "resnet50",
+      "type": "cnn"
+    },
+    "framework": "tensorflow",
+    "workflow": {
+      "generate_data": true,
+      "train": false,
+      "checkpoint": false
+    },
+    "dataset": {
+      "num_files_train": 1024,
+      "num_samples_per_file": 1251,
+      "record_length_bytes": 114660.07,
+      "record_length_bytes_resize": 150528,
+      "data_folder": "data/resnet50",
+      "format": "tfrecord"
+    }
+  },
+  "combined_params": {
+    "model": {
+      "name": "resnet50",
+      "type": "cnn"
+    },
+    "framework": "tensorflow",
+    "workflow": {
+      "generate_data": true,
+      "train": false,
+      "checkpoint": false
+    },
+    "dataset": {
+      "num_files_train": "115200",
+      "num_samples_per_file": 1251,
+      "record_length_bytes": 114660.07,
+      "record_length_bytes_resize": 150528,
+      "data_folder": "data/resnet50",
+      "format": "tfrecord"
+    }
+  },
+  "executed_command": "mpirun -n 150 -host mlpstorage-driver1:50,mlpstorage-driver2:50,mlpstorage-driver3:50 /home/mlcommons/envs/adabench_dl/bin/dlio_benchmark workload=resnet50_datagen ++hydra.run.dir=/home/mlcommons/submission_resnet50_H100_test_20250706/training/resnet50/datagen/20250707_135351 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=115200 ++workload.dataset.data_folder=/mnt/resnet50_data/resnet50 --config-dir=/home/mlcommons/envs/adabench_dl/lib/python3.12/site-packages/configs/dlio",
+  "benchmark_type": "training"
+}

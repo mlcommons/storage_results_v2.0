@@ -1,0 +1,98 @@
+{
+  "args": {
+    "program": "training",
+    "command": "datagen",
+    "results_dir": "/home/fgpu/Closed/FarmGPU/results/Solidigm",
+    "loops": 1,
+    "config_file": null,
+    "closed": false,
+    "debug": false,
+    "verbose": false,
+    "stream_log_level": "INFO",
+    "allow_invalid_params": false,
+    "what_if": false,
+    "hosts": [
+      "127.0.0.1"
+    ],
+    "model": "cosmoflow",
+    "exec_type": "mpi",
+    "mpi_bin": "mpirun",
+    "oversubscribe": false,
+    "allow_run_as_root": true,
+    "mpi_params": null,
+    "num_processes": 40,
+    "data_dir": "/mnt/ssd/",
+    "params": [
+      "dataset.num_files_train=485909"
+    ],
+    "dlio_bin_path": null,
+    "num_client_hosts": 1
+  },
+  "debug": null,
+  "run_datetime": "20250717_190402",
+  "run_number": 0,
+  "runtime": 415.88432121276855,
+  "verification": null,
+  "command_output_files": [
+    {
+      "command": "mpirun -n 40 -host 127.0.0.1:40 --allow-run-as-root /home/fgpu/.venvs/myenv/bin/dlio_benchmark workload=cosmoflow_datagen ++hydra.run.dir=/home/fgpu/Closed/FarmGPU/results/Solidigm/training/cosmoflow/datagen/20250717_190402 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=485909 ++workload.dataset.data_folder=/mnt/ssd/cosmoflow --config-dir=/home/fgpu/storage/configs/dlio",
+      "stdout": "/home/fgpu/Closed/FarmGPU/results/Solidigm/training/cosmoflow/datagen/20250717_190402/training_datagen.stdout.log",
+      "stderr": "/home/fgpu/Closed/FarmGPU/results/Solidigm/training/cosmoflow/datagen/20250717_190402/training_datagen.stderr.log"
+    }
+  ],
+  "run_result_output": "/home/fgpu/Closed/FarmGPU/results/Solidigm/training/cosmoflow/datagen/20250717_190402",
+  "metadata_filename": "training_20250717_190402_metadata.json",
+  "metadata_file_path": "/home/fgpu/Closed/FarmGPU/results/Solidigm/training/cosmoflow/datagen/20250717_190402/training_20250717_190402_metadata.json",
+  "_config_name": "cosmoflow_datagen",
+  "base_command": "dlio_benchmark",
+  "base_path": "/home/fgpu/.venvs/myenv/bin",
+  "base_command_path": "/home/fgpu/.venvs/myenv/bin/dlio_benchmark",
+  "config_path": "/home/fgpu/storage/configs/dlio",
+  "per_host_mem_kB": null,
+  "total_mem_kB": null,
+  "config_file": "cosmoflow_datagen.yaml",
+  "params_dict": {
+    "dataset.num_files_train": "485909",
+    "dataset.data_folder": "/mnt/ssd/cosmoflow"
+  },
+  "yaml_params": {
+    "model": {
+      "name": "cosmoflow"
+    },
+    "framework": "tensorflow",
+    "workflow": {
+      "generate_data": true,
+      "train": false,
+      "checkpoint": false
+    },
+    "dataset": {
+      "data_folder": "data/cosmoflow",
+      "num_files_train": 524288,
+      "num_samples_per_file": 1,
+      "record_length_bytes": 2828486,
+      "record_length_bytes_stdev": 71311,
+      "format": "tfrecord"
+    }
+  },
+  "combined_params": {
+    "model": {
+      "name": "cosmoflow"
+    },
+    "framework": "tensorflow",
+    "workflow": {
+      "generate_data": true,
+      "train": false,
+      "checkpoint": false
+    },
+    "dataset": {
+      "data_folder": "data/cosmoflow",
+      "num_files_train": "485909",
+      "num_samples_per_file": 1,
+      "record_length_bytes": 2828486,
+      "record_length_bytes_stdev": 71311,
+      "format": "tfrecord"
+    }
+  },
+  "executed_command": "mpirun -n 40 -host 127.0.0.1:40 --allow-run-as-root /home/fgpu/.venvs/myenv/bin/dlio_benchmark workload=cosmoflow_datagen ++hydra.run.dir=/home/fgpu/Closed/FarmGPU/results/Solidigm/training/cosmoflow/datagen/20250717_190402 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=485909 ++workload.dataset.data_folder=/mnt/ssd/cosmoflow --config-dir=/home/fgpu/storage/configs/dlio",
+  "benchmark_type": "training"
+}

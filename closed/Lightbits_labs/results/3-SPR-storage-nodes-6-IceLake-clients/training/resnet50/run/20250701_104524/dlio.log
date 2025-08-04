@@ -1,0 +1,48 @@
+[OUTPUT] 2025-07-01T10:45:35.563812 Running DLIO [Training] with 240 process(es)
+[OUTPUT] 2025-07-01T10:45:36.130547 Max steps per epoch: 1498 = 1251 * 114979 / 400 / 240 (samples per file * num files / batch size / comm size)
+[OUTPUT] 2025-07-01T10:45:39.011605 Starting epoch 1: 1498 steps expected
+[OUTPUT] 2025-07-01T10:45:39.011946 Starting block 1
+[OUTPUT] 2025-07-01T10:51:48.046964 Ending block 1 - 1498 steps completed in 369.04 s
+[OUTPUT] 2025-07-01T10:51:48.059351 Epoch 1 - Block 1 [Training] Accelerator Utilization [AU] (%): 91.0443
+[OUTPUT] 2025-07-01T10:51:48.059647 Epoch 1 - Block 1 [Training] Throughput (samples/second): 389695.7450
+[OUTPUT] 2025-07-01T10:51:48.059863 Epoch 1 - Block 1 [Training] Computation time per step (second): 0.2241+/-0.0002 (set value: {'mean': 0.224})
+[OUTPUT] 2025-07-01T10:52:01.222998 Ending epoch 1 - 1498 steps completed in 382.21 s
+[OUTPUT] 2025-07-01T10:52:02.911781 Starting epoch 2: 1498 steps expected
+[OUTPUT] 2025-07-01T10:52:02.912085 Starting block 1
+[OUTPUT] 2025-07-01T10:58:06.562217 Ending block 1 - 1498 steps completed in 363.65 s
+[OUTPUT] 2025-07-01T10:58:06.578099 Epoch 2 - Block 1 [Training] Accelerator Utilization [AU] (%): 92.4537
+[OUTPUT] 2025-07-01T10:58:06.578662 Epoch 2 - Block 1 [Training] Throughput (samples/second): 395726.9701
+[OUTPUT] 2025-07-01T10:58:06.578910 Epoch 2 - Block 1 [Training] Computation time per step (second): 0.2241+/-0.0002 (set value: {'mean': 0.224})
+[OUTPUT] 2025-07-01T10:58:24.922934 Ending epoch 2 - 1498 steps completed in 382.01 s
+[OUTPUT] 2025-07-01T10:58:26.603606 Starting epoch 3: 1498 steps expected
+[OUTPUT] 2025-07-01T10:58:26.603935 Starting block 1
+[OUTPUT] 2025-07-01T11:04:29.310243 Ending block 1 - 1498 steps completed in 362.71 s
+[OUTPUT] 2025-07-01T11:04:29.319733 Epoch 3 - Block 1 [Training] Accelerator Utilization [AU] (%): 92.6572
+[OUTPUT] 2025-07-01T11:04:29.319981 Epoch 3 - Block 1 [Training] Throughput (samples/second): 396576.1275
+[OUTPUT] 2025-07-01T11:04:29.320139 Epoch 3 - Block 1 [Training] Computation time per step (second): 0.2241+/-0.0004 (set value: {'mean': 0.224})
+[OUTPUT] 2025-07-01T11:04:48.539630 Ending epoch 3 - 1498 steps completed in 381.94 s
+[OUTPUT] 2025-07-01T11:04:50.681021 Starting epoch 4: 1498 steps expected
+[OUTPUT] 2025-07-01T11:04:50.681367 Starting block 1
+[OUTPUT] 2025-07-01T11:10:54.873550 Ending block 1 - 1498 steps completed in 364.19 s
+[OUTPUT] 2025-07-01T11:10:54.884011 Epoch 4 - Block 1 [Training] Accelerator Utilization [AU] (%): 92.3035
+[OUTPUT] 2025-07-01T11:10:54.884263 Epoch 4 - Block 1 [Training] Throughput (samples/second): 395049.2157
+[OUTPUT] 2025-07-01T11:10:54.884433 Epoch 4 - Block 1 [Training] Computation time per step (second): 0.2242+/-0.0005 (set value: {'mean': 0.224})
+[OUTPUT] 2025-07-01T11:11:12.612861 Ending epoch 4 - 1498 steps completed in 381.93 s
+[OUTPUT] 2025-07-01T11:11:14.282440 Starting epoch 5: 1498 steps expected
+[OUTPUT] 2025-07-01T11:11:14.282855 Starting block 1
+[OUTPUT] 2025-07-01T11:18:03.363521 Ending block 1 - 1498 steps completed in 409.08 s
+[OUTPUT] 2025-07-01T11:18:03.378885 Epoch 5 - Block 1 [Training] Accelerator Utilization [AU] (%): 82.1487
+[OUTPUT] 2025-07-01T11:18:03.379391 Epoch 5 - Block 1 [Training] Throughput (samples/second): 351617.3941
+[OUTPUT] 2025-07-01T11:18:03.379855 Epoch 5 - Block 1 [Training] Computation time per step (second): 0.2241+/-0.0002 (set value: {'mean': 0.224})
+[OUTPUT] 2025-07-01T11:18:36.235734 Ending epoch 5 - 1498 steps completed in 441.95 s
+[OUTPUT] 2025-07-01T11:18:38.749963 Saved outputs in /root/mlperf/run_results/resnet50/h100/6-240-512/training/resnet50/run/20250701_104524
+[OUTPUT] Averaged metric over all steps/epochs
+[METRIC] ==========================================================
+[METRIC] Number of Simulated Accelerators: 240 
+[METRIC] Training Accelerator Utilization [AU] (%): 90.1473 (4.0315)
+[METRIC] Training Throughput (samples/second): 385745.9915 (17241.0415)
+[METRIC] Training I/O Throughput (MB/second): 42180.6930 (1885.2797)
+[METRIC] train_au_meet_expectation: success
+[METRIC] ==========================================================
+
+[OUTPUT] 2025-07-01T11:18:38.780611 outputs saved in RANKID_output.json

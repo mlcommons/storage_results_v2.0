@@ -1,0 +1,4 @@
+- workload=resnet50_h100
+- ++workload.dataset.num_files_train=15347
+- ++workload.reader.read_threads=2
+- ++workload.dataset.data_folder=/PS1010/resnet50

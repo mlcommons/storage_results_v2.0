@@ -1,0 +1,37 @@
+workload:
+  model:
+    name: unet3d
+    type: cnn
+    model_size: 499153191
+  framework: pytorch
+  workflow:
+    generate_data: false
+    train: true
+    checkpoint: true
+  dataset:
+    data_folder: /lustre/x3e03/client/datagen_unet3d_h100/unet3d
+    format: npz
+    num_files_train: 157500
+    num_samples_per_file: 1
+    record_length_bytes: 146600628
+    record_length_bytes_stdev: 68341808
+    record_length_bytes_resize: 2097152
+  reader:
+    data_loader: pytorch
+    batch_size: 7
+    read_threads: 16
+    file_shuffle: seed
+    sample_shuffle: seed
+    odirect: true
+  train:
+    epochs: 5
+    computation_time: 0.323
+  checkpoint:
+    checkpoint_folder: /lustre/x3e03/client/checkpoint_unet3d_h100
+    checkpoint_after_epoch: 5
+    epochs_between_checkpoints: 2
+  metric:
+    au: 0.9
+  storage:
+    storage_type: local_fs
+    storage_root: /lustre/x3e03/client

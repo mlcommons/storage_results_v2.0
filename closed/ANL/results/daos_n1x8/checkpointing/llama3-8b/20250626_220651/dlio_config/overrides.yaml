@@ -1,0 +1,4 @@
+- workload=llama3_8b
+- ++workload.checkpoint.num_checkpoints_read=0
+- ++workload.checkpoint.num_checkpoints_write=10
+- ++workload.checkpoint.checkpoint_folder=/tmp/datascience/mlperf_storage_v2.0_perf//checkpoints/n1x8/llama3-8b

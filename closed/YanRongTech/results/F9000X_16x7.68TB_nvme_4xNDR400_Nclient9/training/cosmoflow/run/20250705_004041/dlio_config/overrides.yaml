@@ -1,0 +1,7 @@
+- workload=cosmoflow_h100
+- ++workload.dataset.num_files_train=4800000
+- ++workload.dataset.num_subfolders_train=600
+- ++workload.reader.read_threads=1
+- ++workload.reader.computation_threads=1
+- ++workload.reader.transfer_size=2900992
+- ++workload.dataset.data_folder=/mnt/yrfs/mlperf_training_data/cosmoflow

@@ -1,0 +1,99 @@
+{
+  "args": {
+    "program": "training",
+    "command": "datagen",
+    "results_dir": "/home/ubuntu/mlps_results",
+    "loops": 1,
+    "config_file": null,
+    "closed": false,
+    "debug": false,
+    "verbose": false,
+    "stream_log_level": "INFO",
+    "allow_invalid_params": false,
+    "what_if": false,
+    "hosts": [
+      "127.0.0.1"
+    ],
+    "model": "resnet50",
+    "exec_type": "mpi",
+    "mpi_bin": "mpirun",
+    "oversubscribe": false,
+    "allow_run_as_root": false,
+    "num_processes": 30,
+    "data_dir": "/mnt/alluxio/alluxio-fuse/s3/resnet50_7485_999GB",
+    "params": [
+      "dataset.num_files_train=7485"
+    ],
+    "dlio_bin_path": null,
+    "num_client_hosts": 1
+  },
+  "debug": null,
+  "run_datetime": "20250625_032735",
+  "run_number": 0,
+  "runtime": 1789.362058877945,
+  "verification": null,
+  "command_output_files": [
+    {
+      "command": "mpirun -n 30 -host 127.0.0.1:30 /home/ubuntu/.venvs/myenv/bin/dlio_benchmark workload=resnet50_datagen ++hydra.run.dir=/home/ubuntu/mlps_results/training/resnet50/datagen/20250625_032735 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=7485 ++workload.dataset.data_folder=/mnt/alluxio/alluxio-fuse/s3/resnet50_7485_999GB/resnet50 --config-dir=/home/ubuntu/storage/configs/dlio",
+      "stdout": "/home/ubuntu/mlps_results/training/resnet50/datagen/20250625_032735/training_datagen.stdout.log",
+      "stderr": "/home/ubuntu/mlps_results/training/resnet50/datagen/20250625_032735/training_datagen.stderr.log"
+    }
+  ],
+  "run_result_output": "/home/ubuntu/mlps_results/training/resnet50/datagen/20250625_032735",
+  "metadata_filename": "training_20250625_032735_metadata.json",
+  "metadata_file_path": "/home/ubuntu/mlps_results/training/resnet50/datagen/20250625_032735/training_20250625_032735_metadata.json",
+  "_config_name": "resnet50_datagen",
+  "base_command": "dlio_benchmark",
+  "base_path": "/home/ubuntu/.venvs/myenv/bin",
+  "base_command_path": "/home/ubuntu/.venvs/myenv/bin/dlio_benchmark",
+  "config_path": "/home/ubuntu/storage/configs/dlio",
+  "per_host_mem_kB": null,
+  "total_mem_kB": null,
+  "config_file": "resnet50_datagen.yaml",
+  "params_dict": {
+    "dataset.num_files_train": "7485",
+    "dataset.data_folder": "/mnt/alluxio/alluxio-fuse/s3/resnet50_7485_999GB/resnet50"
+  },
+  "yaml_params": {
+    "model": {
+      "name": "resnet50",
+      "type": "cnn"
+    },
+    "framework": "tensorflow",
+    "workflow": {
+      "generate_data": true,
+      "train": false,
+      "checkpoint": false
+    },
+    "dataset": {
+      "num_files_train": 1024,
+      "num_samples_per_file": 1251,
+      "record_length_bytes": 114660.07,
+      "record_length_bytes_resize": 150528,
+      "data_folder": "data/resnet50",
+      "format": "tfrecord"
+    }
+  },
+  "combined_params": {
+    "model": {
+      "name": "resnet50",
+      "type": "cnn"
+    },
+    "framework": "tensorflow",
+    "workflow": {
+      "generate_data": true,
+      "train": false,
+      "checkpoint": false
+    },
+    "dataset": {
+      "num_files_train": "7485",
+      "num_samples_per_file": 1251,
+      "record_length_bytes": 114660.07,
+      "record_length_bytes_resize": 150528,
+      "data_folder": "data/resnet50",
+      "format": "tfrecord"
+    }
+  },
+  "executed_command": "mpirun -n 30 -host 127.0.0.1:30 /home/ubuntu/.venvs/myenv/bin/dlio_benchmark workload=resnet50_datagen ++hydra.run.dir=/home/ubuntu/mlps_results/training/resnet50/datagen/20250625_032735 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=7485 ++workload.dataset.data_folder=/mnt/alluxio/alluxio-fuse/s3/resnet50_7485_999GB/resnet50 --config-dir=/home/ubuntu/storage/configs/dlio",
+  "benchmark_type": "training"
+}

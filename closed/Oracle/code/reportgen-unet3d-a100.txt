@@ -1,0 +1,186 @@
+
+========================= Results Report =========================
+
+------------------------- CLOSED Report -------------------------
+	RunID: ./Final/Closed/Oracle-540.8T-LFS-125MBperSec-perTB/11N-4PPN-A100/training/unet3d/run/20250703_163525
+	    Benchmark Type: training
+	    Command: run_benchmark
+	    Model: unet3d
+	    Issues:
+		- [CLOSED] Closed parameter override allowed: dataset.num_files_train = 154000 (Parameter: Overrode Parameters)
+		- [CLOSED] Closed parameter override allowed: reader.read_threads = 32 (Parameter: Overrode Parameters)
+		- [CLOSED] Closed parameter override allowed: dataset.data_folder = /mnt/lustrefs/unet3d11N/unet3d (Parameter: Overrode Parameters)
+		- [CLOSED] Unet3D training requires executing a checkpoing (Parameter: workflow.checkpoint, Expected: True, Actual: True)
+	    Metrics:
+		- save_checkpoint_io_mean_GB_per_second: 0.0
+		- save_checkpoint_io_stdev_GB_per_second: 0.0
+		- save_checkpoint_duration_mean_seconds: 0.0
+		- save_checkpoint_duration_stdev_seconds: 0.0
+		- checkpoint_size_GB: 0.0
+		- train_au_percentage: 90.7%, 90.3%, 90.7%, 90.4%, 90.2%
+		- train_au_mean_percentage: 90.4%
+		- train_au_meet_expectation: success
+		- train_au_stdev_percentage: 0.2%
+		- train_throughput_samples_per_second: 437.6, 435.5, 437.5, 435.9, 435.2
+		- train_throughput_mean_samples_per_second: 436.3
+		- train_throughput_stdev_samples_per_second: 1.0
+		- train_io_mean_MB_per_second: 61,005.0
+		- train_io_stdev_MB_per_second: 141.7
+
+
+	RunID: ./Final/Closed/Oracle-540.8T-LFS-125MBperSec-perTB/11N-4PPN-A100/training/unet3d/run/20250703_184003
+	    Benchmark Type: training
+	    Command: run_benchmark
+	    Model: unet3d
+	    Issues:
+		- [CLOSED] Closed parameter override allowed: dataset.num_files_train = 154000 (Parameter: Overrode Parameters)
+		- [CLOSED] Closed parameter override allowed: reader.read_threads = 32 (Parameter: Overrode Parameters)
+		- [CLOSED] Closed parameter override allowed: dataset.data_folder = /mnt/lustrefs/unet3d11N/unet3d (Parameter: Overrode Parameters)
+		- [CLOSED] Unet3D training requires executing a checkpoing (Parameter: workflow.checkpoint, Expected: True, Actual: True)
+	    Metrics:
+		- save_checkpoint_io_mean_GB_per_second: 0.0
+		- save_checkpoint_io_stdev_GB_per_second: 0.0
+		- save_checkpoint_duration_mean_seconds: 0.0
+		- save_checkpoint_duration_stdev_seconds: 0.0
+		- checkpoint_size_GB: 0.0
+		- train_au_percentage: 90.6%, 90.3%, 90.4%, 90.5%, 90.4%
+		- train_au_mean_percentage: 90.4%
+		- train_au_meet_expectation: success
+		- train_au_stdev_percentage: 0.1%
+		- train_throughput_samples_per_second: 437.0, 435.8, 435.9, 436.4, 436.3
+		- train_throughput_mean_samples_per_second: 436.3
+		- train_throughput_stdev_samples_per_second: 0.5
+		- train_io_mean_MB_per_second: 60,993.5
+		- train_io_stdev_MB_per_second: 63.1
+
+
+	RunID: ./Final/Closed/Oracle-540.8T-LFS-125MBperSec-perTB/11N-4PPN-A100/training/unet3d/run/20250703_180854
+	    Benchmark Type: training
+	    Command: run_benchmark
+	    Model: unet3d
+	    Issues:
+		- [CLOSED] Closed parameter override allowed: dataset.num_files_train = 154000 (Parameter: Overrode Parameters)
+		- [CLOSED] Closed parameter override allowed: reader.read_threads = 32 (Parameter: Overrode Parameters)
+		- [CLOSED] Closed parameter override allowed: dataset.data_folder = /mnt/lustrefs/unet3d11N/unet3d (Parameter: Overrode Parameters)
+		- [CLOSED] Unet3D training requires executing a checkpoing (Parameter: workflow.checkpoint, Expected: True, Actual: True)
+	    Metrics:
+		- save_checkpoint_io_mean_GB_per_second: 0.0
+		- save_checkpoint_io_stdev_GB_per_second: 0.0
+		- save_checkpoint_duration_mean_seconds: 0.0
+		- save_checkpoint_duration_stdev_seconds: 0.0
+		- checkpoint_size_GB: 0.0
+		- train_au_percentage: 90.2%, 90.0%, 90.6%, 90.3%, 90.6%
+		- train_au_mean_percentage: 90.3%
+		- train_au_meet_expectation: success
+		- train_au_stdev_percentage: 0.2%
+		- train_throughput_samples_per_second: 435.2, 434.2, 436.9, 435.4, 437.1
+		- train_throughput_mean_samples_per_second: 435.8
+		- train_throughput_stdev_samples_per_second: 1.1
+		- train_io_mean_MB_per_second: 60,926.7
+		- train_io_stdev_MB_per_second: 151.2
+
+
+	RunID: ./Final/Closed/Oracle-540.8T-LFS-125MBperSec-perTB/11N-4PPN-A100/training/unet3d/run/20250703_173745
+	    Benchmark Type: training
+	    Command: run_benchmark
+	    Model: unet3d
+	    Issues:
+		- [CLOSED] Closed parameter override allowed: dataset.num_files_train = 154000 (Parameter: Overrode Parameters)
+		- [CLOSED] Closed parameter override allowed: reader.read_threads = 32 (Parameter: Overrode Parameters)
+		- [CLOSED] Closed parameter override allowed: dataset.data_folder = /mnt/lustrefs/unet3d11N/unet3d (Parameter: Overrode Parameters)
+		- [CLOSED] Unet3D training requires executing a checkpoing (Parameter: workflow.checkpoint, Expected: True, Actual: True)
+	    Metrics:
+		- save_checkpoint_io_mean_GB_per_second: 0.0
+		- save_checkpoint_io_stdev_GB_per_second: 0.0
+		- save_checkpoint_duration_mean_seconds: 0.0
+		- save_checkpoint_duration_stdev_seconds: 0.0
+		- checkpoint_size_GB: 0.0
+		- train_au_percentage: 90.3%, 90.2%, 90.4%, 90.4%, 90.6%
+		- train_au_mean_percentage: 90.4%
+		- train_au_meet_expectation: success
+		- train_au_stdev_percentage: 0.1%
+		- train_throughput_samples_per_second: 435.6, 435.4, 436.0, 436.0, 436.9
+		- train_throughput_mean_samples_per_second: 436.0
+		- train_throughput_stdev_samples_per_second: 0.5
+		- train_io_mean_MB_per_second: 60,952.4
+		- train_io_stdev_MB_per_second: 72.5
+
+
+	RunID: ./Final/Closed/Oracle-540.8T-LFS-125MBperSec-perTB/11N-4PPN-A100/training/unet3d/run/20250703_191110
+	    Benchmark Type: training
+	    Command: run_benchmark
+	    Model: unet3d
+	    Issues:
+		- [CLOSED] Closed parameter override allowed: dataset.num_files_train = 154000 (Parameter: Overrode Parameters)
+		- [CLOSED] Closed parameter override allowed: reader.read_threads = 32 (Parameter: Overrode Parameters)
+		- [CLOSED] Closed parameter override allowed: dataset.data_folder = /mnt/lustrefs/unet3d11N/unet3d (Parameter: Overrode Parameters)
+		- [CLOSED] Unet3D training requires executing a checkpoing (Parameter: workflow.checkpoint, Expected: True, Actual: True)
+	    Metrics:
+		- save_checkpoint_io_mean_GB_per_second: 0.0
+		- save_checkpoint_io_stdev_GB_per_second: 0.0
+		- save_checkpoint_duration_mean_seconds: 0.0
+		- save_checkpoint_duration_stdev_seconds: 0.0
+		- checkpoint_size_GB: 0.0
+		- train_au_percentage: 90.3%, 90.3%, 90.4%, 90.3%, 90.5%
+		- train_au_mean_percentage: 90.4%
+		- train_au_meet_expectation: success
+		- train_au_stdev_percentage: 0.1%
+		- train_throughput_samples_per_second: 435.5, 435.8, 436.2, 435.5, 436.4
+		- train_throughput_mean_samples_per_second: 435.9
+		- train_throughput_stdev_samples_per_second: 0.4
+		- train_io_mean_MB_per_second: 60,942.3
+		- train_io_stdev_MB_per_second: 52.9
+
+
+	RunID: ./Final/Closed/Oracle-540.8T-LFS-125MBperSec-perTB/11N-4PPN-A100/training/unet3d/run/20250703_170636
+	    Benchmark Type: training
+	    Command: run_benchmark
+	    Model: unet3d
+	    Issues:
+		- [CLOSED] Closed parameter override allowed: dataset.num_files_train = 154000 (Parameter: Overrode Parameters)
+		- [CLOSED] Closed parameter override allowed: reader.read_threads = 32 (Parameter: Overrode Parameters)
+		- [CLOSED] Closed parameter override allowed: dataset.data_folder = /mnt/lustrefs/unet3d11N/unet3d (Parameter: Overrode Parameters)
+		- [CLOSED] Unet3D training requires executing a checkpoing (Parameter: workflow.checkpoint, Expected: True, Actual: True)
+	    Metrics:
+		- save_checkpoint_io_mean_GB_per_second: 0.0
+		- save_checkpoint_io_stdev_GB_per_second: 0.0
+		- save_checkpoint_duration_mean_seconds: 0.0
+		- save_checkpoint_duration_stdev_seconds: 0.0
+		- checkpoint_size_GB: 0.0
+		- train_au_percentage: 90.6%, 90.3%, 90.2%, 90.6%, 90.3%
+		- train_au_mean_percentage: 90.4%
+		- train_au_meet_expectation: success
+		- train_au_stdev_percentage: 0.2%
+		- train_throughput_samples_per_second: 437.1, 435.6, 435.3, 436.9, 435.7
+		- train_throughput_mean_samples_per_second: 436.1
+		- train_throughput_stdev_samples_per_second: 0.7
+		- train_io_mean_MB_per_second: 60,971.3
+		- train_io_stdev_MB_per_second: 101.7
+
+
+
+------------------------- OPEN Report -------------------------
+
+------------------------- INVALID Report -------------------------
+
+========================= Submissions Report =========================
+
+------------------------- CLOSED Report -------------------------
+	WorkloadID: Training - unet3d, Accelerator: a100
+	    Benchmark Type: training
+	    Command: run_benchmark
+	    Runs: 
+		- ./Final/Closed/Oracle-540.8T-LFS-125MBperSec-perTB/11N-4PPN-A100/training/unet3d/run/20250703_163525 - [CLOSED]
+		- ./Final/Closed/Oracle-540.8T-LFS-125MBperSec-perTB/11N-4PPN-A100/training/unet3d/run/20250703_184003 - [CLOSED]
+		- ./Final/Closed/Oracle-540.8T-LFS-125MBperSec-perTB/11N-4PPN-A100/training/unet3d/run/20250703_180854 - [CLOSED]
+		- ./Final/Closed/Oracle-540.8T-LFS-125MBperSec-perTB/11N-4PPN-A100/training/unet3d/run/20250703_173745 - [CLOSED]
+		- ./Final/Closed/Oracle-540.8T-LFS-125MBperSec-perTB/11N-4PPN-A100/training/unet3d/run/20250703_191110 - [CLOSED]
+		- ./Final/Closed/Oracle-540.8T-LFS-125MBperSec-perTB/11N-4PPN-A100/training/unet3d/run/20250703_170636 - [CLOSED]
+	    Issues:
+		- [CLOSED] All runs satisfy the CLOSED category (Parameter: category, Expected: OPEN or CLOSED, Actual: ['CLOSED'])
+
+
+
+------------------------- OPEN Report -------------------------
+
+------------------------- INVALID Report -------------------------

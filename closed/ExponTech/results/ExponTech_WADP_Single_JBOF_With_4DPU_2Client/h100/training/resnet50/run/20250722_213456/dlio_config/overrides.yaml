@@ -1,0 +1,5 @@
+- workload=resnet50_h100
+- ++workload.dataset.num_files_train=38326
+- ++workload.reader.computation_threads=8
+- ++workload.reader.read_threads=2
+- ++workload.dataset.data_folder=/mnt/mlperfbenchmark/resnet50

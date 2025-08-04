@@ -1,0 +1,161 @@
+{
+  "args": {
+    "program": "training",
+    "command": "run",
+    "results_dir": "cosmoflow_results",
+    "loops": 5,
+    "config_file": null,
+    "closed": true,
+    "debug": false,
+    "verbose": false,
+    "stream_log_level": "INFO",
+    "allow_invalid_params": false,
+    "what_if": false,
+    "hosts": [
+      "c-ftc0001",
+      "c-ftc0002",
+      "c-ftc0003",
+      "c-ftc0004",
+      "c-ftc0005",
+      "c-ftc0006",
+      "c-ftc0007",
+      "c-ftc0008",
+      "c-ftc0009",
+      "c-ftc0010",
+      "c-ftc0011",
+      "c-ftc0012",
+      "c-ftc0013",
+      "c-ftc0014",
+      "c-ftc0015",
+      "c-ftc0016",
+      "c-ftc0017",
+      "c-ftc0018",
+      "c-ftc0019",
+      "c-ftc0020",
+      "c-ftc0021",
+      "c-ftc0022",
+      "c-ftc0023",
+      "c-ftc0024",
+      "c-ftc0025",
+      "c-ftc0026",
+      "c-ftc0027",
+      "c-ftc0028",
+      "c-ftc0029",
+      "c-ftc0030",
+      "c-ftc0031",
+      "c-ftc0032"
+    ],
+    "model": "cosmoflow",
+    "client_host_memory_in_gb": 187,
+    "exec_type": "mpi",
+    "mpi_bin": "mpirun",
+    "oversubscribe": false,
+    "allow_run_as_root": false,
+    "mpi_params": null,
+    "num_accelerators": 96,
+    "accelerator_type": "h100",
+    "num_client_hosts": 32,
+    "data_dir": "cosmoflow_data",
+    "params": [
+      "dataset.num_files_train=11358145"
+    ],
+    "dlio_bin_path": null,
+    "num_processes": 96
+  },
+  "debug": null,
+  "run_datetime": "20250709_062502",
+  "run_number": 0,
+  "runtime": 4757.398178577423,
+  "verification": "closed",
+  "command_output_files": [
+    {
+      "command": "mpirun -n 96 -host c-ftc0001:3,c-ftc0002:3,c-ftc0003:3,c-ftc0004:3,c-ftc0005:3,c-ftc0006:3,c-ftc0007:3,c-ftc0008:3,c-ftc0009:3,c-ftc0010:3,c-ftc0011:3,c-ftc0012:3,c-ftc0013:3,c-ftc0014:3,c-ftc0015:3,c-ftc0016:3,c-ftc0017:3,c-ftc0018:3,c-ftc0019:3,c-ftc0020:3,c-ftc0021:3,c-ftc0022:3,c-ftc0023:3,c-ftc0024:3,c-ftc0025:3,c-ftc0026:3,c-ftc0027:3,c-ftc0028:3,c-ftc0029:3,c-ftc0030:3,c-ftc0031:3,c-ftc0032:3 /mnt/e2kp5/ssamar/flash/mlperf/bin/dlio_benchmark workload=cosmoflow_h100 ++hydra.run.dir=cosmoflow_results/training/cosmoflow/run/20250709_062502 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=11358145 ++workload.dataset.data_folder=cosmoflow_data/cosmoflow --config-dir=/mnt/e2kp5/ssamar/flash/cosmoflow_submission/configs/dlio",
+      "stdout": "cosmoflow_results/training/cosmoflow/run/20250709_062502/training_run.stdout.log",
+      "stderr": "cosmoflow_results/training/cosmoflow/run/20250709_062502/training_run.stderr.log"
+    }
+  ],
+  "run_result_output": "cosmoflow_results/training/cosmoflow/run/20250709_062502",
+  "metadata_filename": "training_20250709_062502_metadata.json",
+  "metadata_file_path": "cosmoflow_results/training/cosmoflow/run/20250709_062502/training_20250709_062502_metadata.json",
+  "_config_name": "cosmoflow_h100",
+  "base_command": "dlio_benchmark",
+  "base_path": "/mnt/e2kp5/ssamar/flash/mlperf/bin",
+  "base_command_path": "/mnt/e2kp5/ssamar/flash/mlperf/bin/dlio_benchmark",
+  "config_path": "/mnt/e2kp5/ssamar/flash/cosmoflow_submission/configs/dlio",
+  "per_host_mem_kB": null,
+  "total_mem_kB": null,
+  "cluster_information": "<mlpstorage.rules.ClusterInformation object at 0x7f5f19326960>",
+  "config_file": "cosmoflow_h100.yaml",
+  "params_dict": {
+    "dataset.num_files_train": "11358145",
+    "dataset.data_folder": "cosmoflow_data/cosmoflow"
+  },
+  "yaml_params": {
+    "model": {
+      "name": "cosmoflow"
+    },
+    "framework": "tensorflow",
+    "workflow": {
+      "generate_data": false,
+      "train": true
+    },
+    "dataset": {
+      "data_folder": "data/cosmoflow",
+      "num_files_train": 524288,
+      "num_samples_per_file": 1,
+      "record_length_bytes": 2828486,
+      "record_length_bytes_stdev": 71311,
+      "format": "tfrecord"
+    },
+    "reader": {
+      "data_loader": "tensorflow",
+      "read_threads": 4,
+      "batch_size": 1,
+      "file_shuffle": "seed",
+      "sample_shuffle": "seed",
+      "shuffle_size": 2
+    },
+    "train": {
+      "epochs": 5,
+      "computation_time": 0.0035
+    },
+    "metric": {
+      "au": 0.7
+    }
+  },
+  "combined_params": {
+    "model": {
+      "name": "cosmoflow"
+    },
+    "framework": "tensorflow",
+    "workflow": {
+      "generate_data": false,
+      "train": true
+    },
+    "dataset": {
+      "data_folder": "data/cosmoflow",
+      "num_files_train": "11358145",
+      "num_samples_per_file": 1,
+      "record_length_bytes": 2828486,
+      "record_length_bytes_stdev": 71311,
+      "format": "tfrecord"
+    },
+    "reader": {
+      "data_loader": "tensorflow",
+      "read_threads": 4,
+      "batch_size": 1,
+      "file_shuffle": "seed",
+      "sample_shuffle": "seed",
+      "shuffle_size": 2
+    },
+    "train": {
+      "epochs": 5,
+      "computation_time": 0.0035
+    },
+    "metric": {
+      "au": 0.7
+    }
+  },
+  "executed_command": "mpirun -n 96 -host c-ftc0001:3,c-ftc0002:3,c-ftc0003:3,c-ftc0004:3,c-ftc0005:3,c-ftc0006:3,c-ftc0007:3,c-ftc0008:3,c-ftc0009:3,c-ftc0010:3,c-ftc0011:3,c-ftc0012:3,c-ftc0013:3,c-ftc0014:3,c-ftc0015:3,c-ftc0016:3,c-ftc0017:3,c-ftc0018:3,c-ftc0019:3,c-ftc0020:3,c-ftc0021:3,c-ftc0022:3,c-ftc0023:3,c-ftc0024:3,c-ftc0025:3,c-ftc0026:3,c-ftc0027:3,c-ftc0028:3,c-ftc0029:3,c-ftc0030:3,c-ftc0031:3,c-ftc0032:3 /mnt/e2kp5/ssamar/flash/mlperf/bin/dlio_benchmark workload=cosmoflow_h100 ++hydra.run.dir=cosmoflow_results/training/cosmoflow/run/20250709_062502 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=11358145 ++workload.dataset.data_folder=cosmoflow_data/cosmoflow --config-dir=/mnt/e2kp5/ssamar/flash/cosmoflow_submission/configs/dlio",
+  "benchmark_type": "training"
+}

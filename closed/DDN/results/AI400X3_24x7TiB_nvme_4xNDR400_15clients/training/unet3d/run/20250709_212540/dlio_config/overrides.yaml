@@ -1,0 +1,8 @@
+- workload=unet3d_h100
+- ++workload.dataset.num_files_train=157500
+- ++workload.storage.storage_type=local_fs
+- ++workload.storage.storage_root=/lustre/x3e03/client
+- ++workload.reader.read_threads=16
+- ++workload.reader.odirect=true
+- ++workload.checkpoint.checkpoint_folder=/lustre/x3e03/client/checkpoint_unet3d_h100
+- ++workload.dataset.data_folder=/lustre/x3e03/client/datagen_unet3d_h100/unet3d

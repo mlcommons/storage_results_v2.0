@@ -1,0 +1,1 @@
+mlpstorage training datasize -m resnet50 --client-host-memory-in-gb 96 --max-accelerators 336 --num-client-hosts 28 --accelerator-type h100  --results-dir ./Final/Closed/Oracle-540.8T-LFS-125MBperSec-perTB/28N-Resnet50-H100

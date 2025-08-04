@@ -1,0 +1,106 @@
+{
+  "args": {
+    "program": "training",
+    "command": "datagen",
+    "results_dir": "/scratch/mlperf_storage_v2.0/results_P5336",
+    "loops": 1,
+    "config_file": null,
+    "closed": false,
+    "debug": false,
+    "verbose": false,
+    "stream_log_level": "INFO",
+    "allow_invalid_params": false,
+    "what_if": false,
+    "hosts": [
+      "localhost"
+    ],
+    "model": "unet3d",
+    "exec_type": "mpi",
+    "mpi_bin": "mpirun",
+    "oversubscribe": false,
+    "allow_run_as_root": false,
+    "mpi_params": [
+      "--mca pml ucx --mca btl ^tcp,openib --bind-to core"
+    ],
+    "num_processes": 8,
+    "data_dir": "/P5336",
+    "params": [
+      "dataset.num_files_train=28000"
+    ],
+    "dlio_bin_path": null,
+    "num_client_hosts": 1
+  },
+  "debug": null,
+  "run_datetime": "20250702_041018",
+  "run_number": 0,
+  "runtime": 1228.0573055744171,
+  "verification": null,
+  "command_output_files": [
+    {
+      "command": "mpirun -n 8 -host localhost:8 --mca pml ucx --mca btl ^tcp,openib --bind-to core /scratch/mlperf_storage_v2.0/mlperf_storage_ompi4/bin/dlio_benchmark workload=unet3d_datagen ++hydra.run.dir=/scratch/mlperf_storage_v2.0/results_P5336/training/unet3d/datagen/20250702_041018 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=28000 ++workload.dataset.data_folder=/P5336/unet3d --config-dir=/scratch/mlperf_storage_v2.0/storage/configs/dlio",
+      "stdout": "/scratch/mlperf_storage_v2.0/results_P5336/training/unet3d/datagen/20250702_041018/training_datagen.stdout.log",
+      "stderr": "/scratch/mlperf_storage_v2.0/results_P5336/training/unet3d/datagen/20250702_041018/training_datagen.stderr.log"
+    }
+  ],
+  "run_result_output": "/scratch/mlperf_storage_v2.0/results_P5336/training/unet3d/datagen/20250702_041018",
+  "metadata_filename": "training_20250702_041018_metadata.json",
+  "metadata_file_path": "/scratch/mlperf_storage_v2.0/results_P5336/training/unet3d/datagen/20250702_041018/training_20250702_041018_metadata.json",
+  "_config_name": "unet3d_datagen",
+  "base_command": "dlio_benchmark",
+  "base_path": "/scratch/mlperf_storage_v2.0/mlperf_storage_ompi4/bin",
+  "base_command_path": "/scratch/mlperf_storage_v2.0/mlperf_storage_ompi4/bin/dlio_benchmark",
+  "config_path": "/scratch/mlperf_storage_v2.0/storage/configs/dlio",
+  "per_host_mem_kB": null,
+  "total_mem_kB": null,
+  "config_file": "unet3d_datagen.yaml",
+  "params_dict": {
+    "dataset.num_files_train": "28000",
+    "dataset.data_folder": "/P5336/unet3d"
+  },
+  "yaml_params": {
+    "model": {
+      "name": "unet3d",
+      "type": "cnn",
+      "model_size": 499153191
+    },
+    "framework": "pytorch",
+    "workflow": {
+      "generate_data": true,
+      "train": false,
+      "checkpoint": false
+    },
+    "dataset": {
+      "data_folder": "data/unet3d/",
+      "format": "npz",
+      "num_files_train": 168,
+      "num_samples_per_file": 1,
+      "record_length_bytes": 146600628,
+      "record_length_bytes_stdev": 68341808,
+      "record_length_bytes_resize": 2097152
+    }
+  },
+  "combined_params": {
+    "model": {
+      "name": "unet3d",
+      "type": "cnn",
+      "model_size": 499153191
+    },
+    "framework": "pytorch",
+    "workflow": {
+      "generate_data": true,
+      "train": false,
+      "checkpoint": false
+    },
+    "dataset": {
+      "data_folder": "data/unet3d/",
+      "format": "npz",
+      "num_files_train": "28000",
+      "num_samples_per_file": 1,
+      "record_length_bytes": 146600628,
+      "record_length_bytes_stdev": 68341808,
+      "record_length_bytes_resize": 2097152
+    }
+  },
+  "executed_command": "mpirun -n 8 -host localhost:8 --mca pml ucx --mca btl ^tcp,openib --bind-to core /scratch/mlperf_storage_v2.0/mlperf_storage_ompi4/bin/dlio_benchmark workload=unet3d_datagen ++hydra.run.dir=/scratch/mlperf_storage_v2.0/results_P5336/training/unet3d/datagen/20250702_041018 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=28000 ++workload.dataset.data_folder=/P5336/unet3d --config-dir=/scratch/mlperf_storage_v2.0/storage/configs/dlio",
+  "benchmark_type": "training"
+}

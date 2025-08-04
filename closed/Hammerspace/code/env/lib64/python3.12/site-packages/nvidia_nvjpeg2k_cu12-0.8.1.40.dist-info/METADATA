@@ -1,0 +1,59 @@
+Metadata-Version: 2.1
+Name: nvidia-nvjpeg2k-cu12
+Version: 0.8.1.40
+Summary: NVIDIA nvJPEG2000 native runtime libraries
+Home-page: https://developer.nvidia.com/nvjpeg
+Author: NVIDIA Corporation
+Author-email: cuda_installer@nvidia.com
+License: NVIDIA Proprietary Software
+Keywords: cuda,nvidia,jpeg2000,codec
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: Other/Proprietary License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Environment :: GPU :: NVIDIA CUDA
+Classifier: Environment :: GPU :: NVIDIA CUDA :: 12
+Requires-Python: >=3
+Description-Content-Type: text/x-rst
+License-File: LICENSE.txt
+
+###############################################################
+nvJPEG2000: CUDA accelerated JPEG 2000 Codec Library
+###############################################################
+
+`nvidia_nvjpeg2k_cuXX <https://developer.nvidia.com/nvjpeg>`_ is a high-performance JPEG 2000 CUDA library .
+
+
+Documentation
+=============
+
+Refer to https://docs.nvidia.com/cuda/nvjpeg2000/index.html for documentation.
+
+Installation
+============
+
+
+.. code-block:: bash
+
+   pip install nvidia_nvjpeg2k_cuXX
+
+where XX is the CUDA major version (currently CUDA 11 & 12 are supported).
+

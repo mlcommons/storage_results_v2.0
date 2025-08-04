@@ -1,0 +1,5 @@
+- workload=unet3d_h100
+- ++workload.dataset.num_files_train=14062
+- ++workload.reader.read_threads=64
+- ++workload.reader.odirect=True
+- ++workload.dataset.data_folder=/mnt/mlperf/unet3d

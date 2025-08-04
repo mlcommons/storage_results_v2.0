@@ -1,0 +1,186 @@
+
+========================= Results Report =========================
+
+------------------------- CLOSED Report -------------------------
+	RunID: /home/techmarketing/unet3d_results/training/unet3d/run/20250627_152819
+	    Benchmark Type: training
+	    Command: run_benchmark
+	    Model: unet3d
+	    Issues:
+		- [CLOSED] Closed parameter override allowed: dataset.num_files_train = 14000 (Parameter: Overrode Parameters)
+		- [CLOSED] Closed parameter override allowed: reader.read_threads = 256 (Parameter: Overrode Parameters)
+		- [CLOSED] Closed parameter override allowed: dataset.data_folder = /mnt/ssd/unet3d_data/unet3d (Parameter: Overrode Parameters)
+		- [CLOSED] Unet3D training requires executing a checkpoing (Parameter: workflow.checkpoint, Expected: True, Actual: True)
+	    Metrics:
+		- save_checkpoint_io_mean_GB_per_second: 0.0
+		- save_checkpoint_io_stdev_GB_per_second: 0.0
+		- save_checkpoint_duration_mean_seconds: 0.0
+		- save_checkpoint_duration_stdev_seconds: 0.0
+		- checkpoint_size_GB: 0.0
+		- train_au_percentage: 93.7%, 92.5%, 89.9%, 88.0%, 94.1%
+		- train_au_mean_percentage: 91.7%
+		- train_au_meet_expectation: success
+		- train_au_stdev_percentage: 2.3%
+		- train_throughput_samples_per_second: 80.7, 79.6, 77.4, 75.9, 81.0
+		- train_throughput_mean_samples_per_second: 78.9
+		- train_throughput_stdev_samples_per_second: 2.0
+		- train_io_mean_MB_per_second: 11,033.5
+		- train_io_stdev_MB_per_second: 279.4
+
+
+	RunID: /home/techmarketing/unet3d_results/training/unet3d/run/20250627_143653
+	    Benchmark Type: training
+	    Command: run_benchmark
+	    Model: unet3d
+	    Issues:
+		- [CLOSED] Closed parameter override allowed: dataset.num_files_train = 14000 (Parameter: Overrode Parameters)
+		- [CLOSED] Closed parameter override allowed: reader.read_threads = 256 (Parameter: Overrode Parameters)
+		- [CLOSED] Closed parameter override allowed: dataset.data_folder = /mnt/ssd/unet3d_data/unet3d (Parameter: Overrode Parameters)
+		- [CLOSED] Unet3D training requires executing a checkpoing (Parameter: workflow.checkpoint, Expected: True, Actual: True)
+	    Metrics:
+		- save_checkpoint_io_mean_GB_per_second: 0.0
+		- save_checkpoint_io_stdev_GB_per_second: 0.0
+		- save_checkpoint_duration_mean_seconds: 0.0
+		- save_checkpoint_duration_stdev_seconds: 0.0
+		- checkpoint_size_GB: 0.0
+		- train_au_percentage: 93.3%, 91.9%, 89.9%, 89.0%, 89.7%
+		- train_au_mean_percentage: 90.7%
+		- train_au_meet_expectation: success
+		- train_au_stdev_percentage: 1.6%
+		- train_throughput_samples_per_second: 80.4, 79.2, 77.5, 76.6, 77.2
+		- train_throughput_mean_samples_per_second: 78.2
+		- train_throughput_stdev_samples_per_second: 1.4
+		- train_io_mean_MB_per_second: 10,929.5
+		- train_io_stdev_MB_per_second: 191.7
+
+
+	RunID: /home/techmarketing/unet3d_results/training/unet3d/run/20250627_132830
+	    Benchmark Type: training
+	    Command: run_benchmark
+	    Model: unet3d
+	    Issues:
+		- [CLOSED] Closed parameter override allowed: dataset.num_files_train = 14000 (Parameter: Overrode Parameters)
+		- [CLOSED] Closed parameter override allowed: reader.read_threads = 256 (Parameter: Overrode Parameters)
+		- [CLOSED] Closed parameter override allowed: dataset.data_folder = /mnt/ssd/unet3d_data/unet3d (Parameter: Overrode Parameters)
+		- [CLOSED] Unet3D training requires executing a checkpoing (Parameter: workflow.checkpoint, Expected: True, Actual: True)
+	    Metrics:
+		- save_checkpoint_io_mean_GB_per_second: 0.0
+		- save_checkpoint_io_stdev_GB_per_second: 0.0
+		- save_checkpoint_duration_mean_seconds: 0.0
+		- save_checkpoint_duration_stdev_seconds: 0.0
+		- checkpoint_size_GB: 0.0
+		- train_au_percentage: 89.9%, 92.0%, 93.0%, 93.2%, 92.6%
+		- train_au_mean_percentage: 92.1%
+		- train_au_meet_expectation: success
+		- train_au_stdev_percentage: 1.2%
+		- train_throughput_samples_per_second: 77.4, 79.2, 80.1, 80.2, 79.8
+		- train_throughput_mean_samples_per_second: 79.4
+		- train_throughput_stdev_samples_per_second: 1.0
+		- train_io_mean_MB_per_second: 11,095.8
+		- train_io_stdev_MB_per_second: 142.8
+
+
+	RunID: /home/techmarketing/unet3d_results/training/unet3d/run/20250627_141404
+	    Benchmark Type: training
+	    Command: run_benchmark
+	    Model: unet3d
+	    Issues:
+		- [CLOSED] Closed parameter override allowed: dataset.num_files_train = 14000 (Parameter: Overrode Parameters)
+		- [CLOSED] Closed parameter override allowed: reader.read_threads = 256 (Parameter: Overrode Parameters)
+		- [CLOSED] Closed parameter override allowed: dataset.data_folder = /mnt/ssd/unet3d_data/unet3d (Parameter: Overrode Parameters)
+		- [CLOSED] Unet3D training requires executing a checkpoing (Parameter: workflow.checkpoint, Expected: True, Actual: True)
+	    Metrics:
+		- save_checkpoint_io_mean_GB_per_second: 0.0
+		- save_checkpoint_io_stdev_GB_per_second: 0.0
+		- save_checkpoint_duration_mean_seconds: 0.0
+		- save_checkpoint_duration_stdev_seconds: 0.0
+		- checkpoint_size_GB: 0.0
+		- train_au_percentage: 93.3%, 90.7%, 92.1%, 90.6%, 89.3%
+		- train_au_mean_percentage: 91.2%
+		- train_au_meet_expectation: success
+		- train_au_stdev_percentage: 1.4%
+		- train_throughput_samples_per_second: 80.4, 78.1, 79.3, 78.0, 76.9
+		- train_throughput_mean_samples_per_second: 78.5
+		- train_throughput_stdev_samples_per_second: 1.2
+		- train_io_mean_MB_per_second: 10,981.5
+		- train_io_stdev_MB_per_second: 166.5
+
+
+	RunID: /home/techmarketing/unet3d_results/training/unet3d/run/20250627_125439
+	    Benchmark Type: training
+	    Command: run_benchmark
+	    Model: unet3d
+	    Issues:
+		- [CLOSED] Closed parameter override allowed: dataset.num_files_train = 14000 (Parameter: Overrode Parameters)
+		- [CLOSED] Closed parameter override allowed: reader.read_threads = 256 (Parameter: Overrode Parameters)
+		- [CLOSED] Closed parameter override allowed: dataset.data_folder = /mnt/ssd/unet3d_data/unet3d (Parameter: Overrode Parameters)
+		- [CLOSED] Unet3D training requires executing a checkpoing (Parameter: workflow.checkpoint, Expected: True, Actual: True)
+	    Metrics:
+		- save_checkpoint_io_mean_GB_per_second: 0.0
+		- save_checkpoint_io_stdev_GB_per_second: 0.0
+		- save_checkpoint_duration_mean_seconds: 0.0
+		- save_checkpoint_duration_stdev_seconds: 0.0
+		- checkpoint_size_GB: 0.0
+		- train_au_percentage: 92.9%, 90.7%, 89.5%, 90.3%, 91.1%
+		- train_au_mean_percentage: 90.9%
+		- train_au_meet_expectation: success
+		- train_au_stdev_percentage: 1.1%
+		- train_throughput_samples_per_second: 80.0, 78.2, 77.1, 77.8, 78.4
+		- train_throughput_mean_samples_per_second: 78.3
+		- train_throughput_stdev_samples_per_second: 0.9
+		- train_io_mean_MB_per_second: 10,945.1
+		- train_io_stdev_MB_per_second: 132.8
+
+
+	RunID: /home/techmarketing/unet3d_results/training/unet3d/run/20250627_135119
+	    Benchmark Type: training
+	    Command: run_benchmark
+	    Model: unet3d
+	    Issues:
+		- [CLOSED] Closed parameter override allowed: dataset.num_files_train = 14000 (Parameter: Overrode Parameters)
+		- [CLOSED] Closed parameter override allowed: reader.read_threads = 256 (Parameter: Overrode Parameters)
+		- [CLOSED] Closed parameter override allowed: dataset.data_folder = /mnt/ssd/unet3d_data/unet3d (Parameter: Overrode Parameters)
+		- [CLOSED] Unet3D training requires executing a checkpoing (Parameter: workflow.checkpoint, Expected: True, Actual: True)
+	    Metrics:
+		- save_checkpoint_io_mean_GB_per_second: 0.0
+		- save_checkpoint_io_stdev_GB_per_second: 0.0
+		- save_checkpoint_duration_mean_seconds: 0.0
+		- save_checkpoint_duration_stdev_seconds: 0.0
+		- checkpoint_size_GB: 0.0
+		- train_au_percentage: 92.0%, 93.0%, 93.9%, 92.7%, 88.7%
+		- train_au_mean_percentage: 92.0%
+		- train_au_meet_expectation: success
+		- train_au_stdev_percentage: 1.8%
+		- train_throughput_samples_per_second: 79.3, 80.1, 80.9, 79.8, 76.4
+		- train_throughput_mean_samples_per_second: 79.3
+		- train_throughput_stdev_samples_per_second: 1.5
+		- train_io_mean_MB_per_second: 11,083.9
+		- train_io_stdev_MB_per_second: 214.7
+
+
+
+------------------------- OPEN Report -------------------------
+
+------------------------- INVALID Report -------------------------
+
+========================= Submissions Report =========================
+
+------------------------- CLOSED Report -------------------------
+	WorkloadID: Training - unet3d, Accelerator: h100
+	    Benchmark Type: training
+	    Command: run_benchmark
+	    Runs: 
+		- /home/techmarketing/unet3d_results/training/unet3d/run/20250627_152819 - [CLOSED]
+		- /home/techmarketing/unet3d_results/training/unet3d/run/20250627_143653 - [CLOSED]
+		- /home/techmarketing/unet3d_results/training/unet3d/run/20250627_132830 - [CLOSED]
+		- /home/techmarketing/unet3d_results/training/unet3d/run/20250627_141404 - [CLOSED]
+		- /home/techmarketing/unet3d_results/training/unet3d/run/20250627_125439 - [CLOSED]
+		- /home/techmarketing/unet3d_results/training/unet3d/run/20250627_135119 - [CLOSED]
+	    Issues:
+		- [CLOSED] All runs satisfy the CLOSED category (Parameter: category, Expected: OPEN or CLOSED, Actual: ['CLOSED'])
+
+
+
+------------------------- OPEN Report -------------------------
+
+------------------------- INVALID Report -------------------------

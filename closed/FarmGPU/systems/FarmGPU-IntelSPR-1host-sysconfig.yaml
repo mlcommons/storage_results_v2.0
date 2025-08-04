@@ -1,0 +1,63 @@
+System:
+  name: FarmGPU-IntelSPR-Storage01
+  description: Supermicro SSG-121E-NES24R
+  storage_location: local
+  client_software: in-box
+  storage_interface: file
+  required_rack_units: 1
+  shared_capabilities:
+    multi_host_support: False
+    simultaneous_write_support: False
+    simultaneous_read__support: False
+  max_sequential_read: 324 GB/s
+  max_sequential_write: 180 GB/s
+  max_random_read: 79M IOPS
+  max_random_write: 7.2M IOPS
+  use_local_drives: True  # Are drives local to the DLIO processes used in the storage solution
+  num_local_drives: 24   # Total number of local drives used by the solution
+  system_architecture: direct-attached media
+  usable_capacity: 184.32 TB
+PowerRequirements:
+   storage_data_node: # single-host submission
+     quantity: 1
+     psu1_nameplate_power: 2000 W
+     psu2_nameplate_power: 2000 W
+     design_power: 2000
+     num_active_psus: 2
+     num_passive_psus: 0
+Nodes:      
+  storage_data_node: # As above: single-host serves as storage node and dlio client
+    quantity: 1
+    hardware:
+      model: SSG-121E-NES24R
+      rack_units: 1
+      power_supplies: 2
+      psu_configuration: active/active
+      psu_rating: 2000 W
+      memory_capacity: 256GB
+      memory_configuration: 16x 16GB DDR5 @ 4800 MT/s
+      cpu_qty: 2
+      cpu_model: Intel(R) Xeon(R) Platinum 8450H
+      cpu_cores: 56
+      storage_capacity: 168TB
+      storage_configuration: 24x E1.S PCIe 5.0 NVMe SSD, FADU Echo
+    networking:
+      management:
+        model: Intel Corporation Ethernet Controller X710
+        speed: 10Gbps
+        qty: 2
+      high_speed:
+        model: Mellanox Technologies MT2910 Family [ConnectX-7]
+        speed: 400Gbps
+        qty: 1
+    operating_system:
+      name: Ubuntu
+      version: 24.04.2 LTS
+      release_date: 2024-04-25
+      kernel_version: 6.15.4-061504-generic
+      cpu_architecture: x86_64
+    tuning:
+      mpi_configuration:
+        environment_variables: []
+        version: Open MPI 4.1.4
+      sysctl_parameters: []

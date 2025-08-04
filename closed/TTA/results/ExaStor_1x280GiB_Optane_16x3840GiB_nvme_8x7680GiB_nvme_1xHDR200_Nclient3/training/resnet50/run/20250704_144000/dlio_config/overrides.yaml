@@ -1,0 +1,3 @@
+- workload=resnet50_a100
+- ++workload.dataset.num_files_train=115200
+- ++workload.dataset.data_folder=/mnt/resnet50_data/resnet50

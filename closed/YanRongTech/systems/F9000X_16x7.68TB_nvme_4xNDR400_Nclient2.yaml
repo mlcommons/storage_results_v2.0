@@ -1,0 +1,119 @@
+System:
+  name: YanRongTech_F9000X
+  description: parallel-filesystem
+  storage_location: remote                    #[ remote | local | hyper-converged ]
+  client_software:  proprietary                    # [ in-box | proprietary ]
+  storage_interface: file                    #[ block | file | object ]
+  required_rack_units: 6
+  shared_capabilities: 
+    multi_host_support: True            # False is used for local storage
+    simultaneous_write_support: True   # Are simultaneous writes by multiple hosts supported in the submitted configuration
+    simultaneous_read__support: True    # Are simultaneous reads by multiple hosts supported in the submitted configuration
+  max_sequential_read: 460                 # Optional - GiB/s
+  max_sequential_write:  132             # Optional - GiB/s
+  max_random_read:  460                   # Optional - GiB/s
+  max_random_write: 130                   # Optional - GiB/s
+  # The following will be used to generate the "integrated client storage" and "# Clients with local storage" in the
+  # results table.
+  use_local_storage: false
+  integrated_client_storage: ""          # Describe the cumulative integrated client storage for the solution
+  num_clients_with_integrated_storage: 0           # Number of clients with integrated storage
+
+  # The following will map to the "Storage System Type" column in the results table. If "use_local_drives" is True,
+  #   then "Local File + " will be prepended to the storage type
+  system_architecture: shared file
+  useable_capacity: 154   # Capacity in TiB that is usable for the storage system. If no unit is provided, assume TiB (not TB)
+
+PowerRequirements:
+  dlio_client:
+    quantity: 2                         # number of dlio_client nodes
+    psu1_nameplate_power: 1600          # power in watts
+    psu2_nameplate_power: 1600          # power in watts
+    design_power: 1600
+    num_active_psus: 2
+    num_passive_psus: 0
+
+  # All storage nodes need to be listed (data, metadata, etc) as well as any required backed switching
+  storage_data_node:
+    quantity:  3                        # number of storage data nodes
+    psu1_nameplate_power: 2000               # power in watts
+    psu2_nameplate_power: 2000               # power in watts
+    design_power: 2000
+    num_active_psus: 2
+    num_passive_psus: 0
+  backend_switch:
+    quantity: 1
+    psu1_nameplate_power: 747   # network PSU
+    psu2_nameplate_power: 747   # network PSU
+    design_power: 1720
+    num_active_psus: 1
+    num_passive_psus: 1
+
+
+# All nodes used need to be listed. Clients, Data storage, metadata, front-end, back-end, etc
+Nodes:
+  # Useful name for the client describing it's role in the system under test
+  dlio_client:  # This can be DLIO Client, storage node, storage controller, AwesomeMarketingName_Type1, etc
+    quantity: 2  # How many of this node
+    hardware:
+      model: x86 Servers
+      rack_units: 2
+      power_supplies: 2
+      psu_configuration: active/active
+      psu_rating: 80 PLUS Platinum
+      memory_capacity: 256GB
+      memory_configuration: 16x16GB
+      cpu_qty: 2
+      cpu_model: Intel 8558
+      cpu_cores: 48
+    networking:
+      management:
+        model: intel i210
+        speed: 1Gbps
+        qty: 1
+    operating_system:
+      name: Ubuntu
+      version: 24.04 LTS
+      release_date: 2025-04-15
+      kernel_version: 6.8.0-60-generic
+      cpu_architecture: x86_64
+    tuning:
+      # All non-default tunings for OS need to be listed
+      mpi_configuration:
+        environment_variables:
+          - "OMPI_MCA_hwloc_base_binding_policy=none"
+          - "OMPI_MCA_mca_base_env_list=LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libjemalloc.so.2"
+        version: Open MPI 4.1.7rc1 
+      sysctl_parameters:
+        <list all non-default parameters>
+  storage_data_node: # This can be DLIO Client, storage node, storage controller, AwesomeMarketingName_Type1, etc
+    quantity: 3  # How many of this node
+    hardware:
+      model: x86 Servers
+      rack_units: 2
+      power_supplies: 2
+      psu_configuration: active/active
+      psu_rating: 80 PLUS Platinum
+      memory_capacity: 256GB
+      memory_configuration: 16x16GB
+      cpu_qty: 2
+      cpu_model: Intel 6530
+      cpu_cores: 32
+    networking:
+      management:
+        model: intel  I350
+        speed: 1Gbps
+        qty: 4
+    operating_system:
+      name: CentOS
+      version: CentOS Linux 7
+      release_date: 2025-02-02
+      kernel_version: 5.14.21-20250107.el7.x86_64
+      cpu_architecture: x86_64
+    tuning:
+      mpi_configuration:
+        environment_variables: <list>
+        version: Open MPI 4.1.7rc1
+      sysctl_parameters:
+        <list all non-default parameters>
+

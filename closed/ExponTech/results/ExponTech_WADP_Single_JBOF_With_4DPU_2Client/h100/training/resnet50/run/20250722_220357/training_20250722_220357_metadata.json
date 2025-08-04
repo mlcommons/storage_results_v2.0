@@ -1,0 +1,137 @@
+{
+  "args": {
+    "program": "training",
+    "command": "run",
+    "results_dir": "node2_resnet50_h100_200_results",
+    "loops": 1,
+    "config_file": null,
+    "closed": true,
+    "debug": false,
+    "verbose": false,
+    "stream_log_level": "INFO",
+    "allow_invalid_params": false,
+    "what_if": false,
+    "hosts": [
+      "10.10.225.50",
+      "10.10.226.50"
+    ],
+    "model": "resnet50",
+    "client_host_memory_in_gb": 512,
+    "exec_type": "mpi",
+    "mpi_bin": "mpirun",
+    "oversubscribe": false,
+    "allow_run_as_root": false,
+    "mpi_params": [
+      "--mca btl_tcp_if_include enp195s0f0np0",
+      "--mca pml_ob1_recv_limits 8388608000",
+      "--map-by node"
+    ],
+    "num_accelerators": 200,
+    "accelerator_type": "h100",
+    "num_client_hosts": 2,
+    "data_dir": "/mnt/mlperfbenchmark",
+    "params": [
+      "dataset.num_files_train=38326",
+      "reader.computation_threads=8",
+      "reader.read_threads=2"
+    ],
+    "dlio_bin_path": null,
+    "num_processes": 200
+  },
+  "debug": null,
+  "run_datetime": "20250722_220357",
+  "run_number": 0,
+  "runtime": 778.7510449886322,
+  "verification": "closed",
+  "command_output_files": [
+    {
+      "command": "mpirun -n 200 -host 10.10.225.50:100,10.10.226.50:100 --mca btl_tcp_if_include enp195s0f0np0 --mca pml_ob1_recv_limits 8388608000 --map-by node /root/.venvs/myenv/bin/dlio_benchmark workload=resnet50_h100 ++hydra.run.dir=node2_resnet50_h100_200_results/training/resnet50/run/20250722_220357 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=38326 ++workload.reader.computation_threads=8 ++workload.reader.read_threads=2 ++workload.dataset.data_folder=/mnt/mlperfbenchmark/resnet50 --config-dir=/root/expontech/storage/configs/dlio",
+      "stdout": "node2_resnet50_h100_200_results/training/resnet50/run/20250722_220357/training_run.stdout.log",
+      "stderr": "node2_resnet50_h100_200_results/training/resnet50/run/20250722_220357/training_run.stderr.log"
+    }
+  ],
+  "run_result_output": "node2_resnet50_h100_200_results/training/resnet50/run/20250722_220357",
+  "metadata_filename": "training_20250722_220357_metadata.json",
+  "metadata_file_path": "node2_resnet50_h100_200_results/training/resnet50/run/20250722_220357/training_20250722_220357_metadata.json",
+  "_config_name": "resnet50_h100",
+  "base_command": "dlio_benchmark",
+  "base_path": "/root/.venvs/myenv/bin",
+  "base_command_path": "/root/.venvs/myenv/bin/dlio_benchmark",
+  "config_path": "/root/expontech/storage/configs/dlio",
+  "per_host_mem_kB": null,
+  "total_mem_kB": null,
+  "cluster_information": "<mlpstorage.rules.ClusterInformation object at 0x7f727cdbbd40>",
+  "config_file": "resnet50_h100.yaml",
+  "params_dict": {
+    "dataset.num_files_train": "38326",
+    "reader.computation_threads": "8",
+    "reader.read_threads": "2",
+    "dataset.data_folder": "/mnt/mlperfbenchmark/resnet50"
+  },
+  "yaml_params": {
+    "model": {
+      "name": "resnet50",
+      "type": "cnn"
+    },
+    "framework": "tensorflow",
+    "workflow": {
+      "generate_data": false,
+      "train": true
+    },
+    "dataset": {
+      "num_files_train": 1024,
+      "num_samples_per_file": 1251,
+      "record_length_bytes": 114660.07,
+      "record_length_bytes_resize": 150528,
+      "data_folder": "data/resnet50",
+      "format": "tfrecord"
+    },
+    "train": {
+      "computation_time": 0.224,
+      "epochs": 5
+    },
+    "reader": {
+      "data_loader": "tensorflow",
+      "read_threads": 8,
+      "computation_threads": 8,
+      "batch_size": 400
+    },
+    "metric": {
+      "au": 0.9
+    }
+  },
+  "combined_params": {
+    "model": {
+      "name": "resnet50",
+      "type": "cnn"
+    },
+    "framework": "tensorflow",
+    "workflow": {
+      "generate_data": false,
+      "train": true
+    },
+    "dataset": {
+      "num_files_train": "38326",
+      "num_samples_per_file": 1251,
+      "record_length_bytes": 114660.07,
+      "record_length_bytes_resize": 150528,
+      "data_folder": "data/resnet50",
+      "format": "tfrecord"
+    },
+    "train": {
+      "computation_time": 0.224,
+      "epochs": 5
+    },
+    "reader": {
+      "data_loader": "tensorflow",
+      "read_threads": "2",
+      "computation_threads": "8",
+      "batch_size": 400
+    },
+    "metric": {
+      "au": 0.9
+    }
+  },
+  "executed_command": "mpirun -n 200 -host 10.10.225.50:100,10.10.226.50:100 --mca btl_tcp_if_include enp195s0f0np0 --mca pml_ob1_recv_limits 8388608000 --map-by node /root/.venvs/myenv/bin/dlio_benchmark workload=resnet50_h100 ++hydra.run.dir=node2_resnet50_h100_200_results/training/resnet50/run/20250722_220357 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=38326 ++workload.reader.computation_threads=8 ++workload.reader.read_threads=2 ++workload.dataset.data_folder=/mnt/mlperfbenchmark/resnet50 --config-dir=/root/expontech/storage/configs/dlio",
+  "benchmark_type": "training"
+}

@@ -1,0 +1,56 @@
+{
+  "host_name": "sped",
+  "accelerator_count": 1,
+  "hosts_count": 1,
+  "host_node": {
+    "node_count": 1,
+    "OS_version": "Ubuntu 22.04.5 LTS",
+    "kernel_version": "6.5.0-15-generic",
+    "memory_capacity_gigabytes": "377 GB",
+    "cpu_core_count": 48,
+    "cpu_socket_count": 2,
+    "cpu_frequency_gigahertz": 4.1517568,
+    "cpu_model": "AMD EPYC 9254 24-Core Processor",
+    "system": "ThinkSystem SR665 V3",
+    "bios_version": 128.0
+  },
+  "storage_system": {
+    "category": "commercial",
+    "type": "Local",
+    "Model": "KINGSTON SEDC3000ME",
+    "total_read_bandwidth_sequential_MB_per_sec": 14000,
+    "total_write_bandwidth_sequential_MB_per_sec": 10000,
+    "total_storage_capacity_TB": "3.84TB,7.68TB,15.36TB",
+    "hardware": [
+      {
+        "Count": 1,
+        "Vendor": "KINGSTON",
+        "type": "NVMe SSD",
+        "Model": "KINGSTON SEDC3000ME3T8BK",
+        "protocol": "NVMe",
+        "Disk_capacity": "3.84TB"
+      },
+      {
+        "Count": 1,
+        "Vendor": "KINGSTON",
+        "type": "NVMe SSD",
+        "Model": "KINGSTON SEDC3000ME7T6BK",
+        "protocol": "NVMe",
+        "Disk_capacity": "7.68TB"
+      },
+      {
+        "Count": 1,
+        "Vendor": "KINGSTON",
+        "type": "NVMe SSD",
+        "Model": "KINGSTON SEDC3000ME15T3BK",
+        "protocol": "NVMe",
+        "Disk_capacity": "15.36TB"
+      }
+    ]
+  },
+  "host_to_storage_interconnect": [
+    {
+      "interconnect_type": "PCIe 5.0X4 connected to PCIe 5X4 backplane"
+    }
+  ]
+}

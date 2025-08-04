@@ -1,0 +1,73 @@
+System:
+  name: Samsung_Storage
+  description: samsung-pm1753-server
+  storage_location: local
+  client_software: in-box
+  storage_interface: block
+  required_rack_units: NA
+  shared_capabilities:
+    multi_host_support: False            # False is used for local storage
+    simultaneous_write_support: False   # Are simultaneous writes by multiple hosts supported in the submitted configuration
+    simultaneous_read__support: False    # Are simultaneous reads by multiple hosts supported in the submitted configuration
+  max_sequential_read: 14 GB/s
+  max_sequential_write: 14 GB/s
+  max_random_read: # Optional - GiB/s
+  max_random_write: # Optional - GiB/s
+  use_local_drives: true
+  num_local_drives: 1
+  system_architecture: direct-attached media
+  useable_capacity: 6.98 TiB
+  
+PowerRequirements:
+  dlio_client:
+    quantity: 1
+    psu1_nameplate_power: 1200
+    psu2_nameplate_power: 1200
+    psu3_nameplate_power: 0
+    design_power: 2400
+    num_active_psus: 2
+    num_passive_psus: 1
+    
+Nodes:
+  dlio_client: #mlperf0
+    quantity: 1
+    hardware:
+      model: Gigabyte
+      rack_units: 2
+      power_supplies: 2
+      psu_configuration: active/passive
+      psu_rating: 1200
+      memory_capacity: 256GB
+      memory_configuration: 8x32GB
+      cpu_qty: 2
+      cpu_model: "AMD EPYC 9655 96-Core Processor AMD EPYC 9655 96-Core Processor"
+      cpu_cores: 192
+    networking:
+      management:
+        model: Mellanox ConnectX-6 Dx
+        speed: 100Gbps
+        qty: 2
+    operating_system:
+      name: CentOS 8
+      version: 4.18.0-240.22.1.el8_3.x86_64
+      kernel_version: 4.18.0-240.22.1.el8_3.x86_64
+      release_date: '2022-04-12'
+      cpu_architecture: x86_64
+    tuning:
+      mpi_configuration:
+        environment_variables: []
+        version: mpirun (Open MPI) 3.1.6
+      sysctl_parameters:
+        fs.file-max = 2097152
+        vm.overcommit_memory=1
+        kernel.panic=10
+        kernel.panic_on_oops=1
+        kernel.nmi_watchdog=0
+        net.bridge.bridge-nf-call-iptables = 1
+        net.ipv4.ip_forward = 1
+        net.bridge.bridge-nf-call-ip6tables = 1
+    storage:
+      type: NVMe
+      capacity: 7.68 TB
+      interface: NVMe
+      interface_type: E1.S

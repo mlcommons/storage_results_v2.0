@@ -1,0 +1,150 @@
+
+========================= Results Report =========================
+
+------------------------- CLOSED Report -------------------------
+	RunID: ./Final/Closed/Oracle-540.8T-LFS-125MBperSec-perTB/24N-Resnet50/training/resnet50/run/20250703_220253
+	    Benchmark Type: training
+	    Command: run_benchmark
+	    Model: resnet50
+	    Issues:
+		- [CLOSED] Closed parameter override allowed: dataset.num_files_train = 86688 (Parameter: Overrode Parameters)
+		- [CLOSED] Closed parameter override allowed: reader.prefetch_size = 32 (Parameter: Overrode Parameters)
+		- [CLOSED] Closed parameter override allowed: dataset.data_folder = /mnt/lustrefs/resnet50-24N/resnet50 (Parameter: Overrode Parameters)
+	    Metrics:
+		- train_au_percentage: 90.3%, 91.7%, 93.1%, 93.6%, 92.8%
+		- train_au_mean_percentage: 92.3%
+		- train_au_meet_expectation: success
+		- train_au_stdev_percentage: 1.2%
+		- train_throughput_samples_per_second: 540,197.7, 548,947.7, 557,393.4, 560,428.1, 555,500.6
+		- train_throughput_mean_samples_per_second: 552,493.5
+		- train_throughput_stdev_samples_per_second: 7,207.9
+		- train_io_mean_MB_per_second: 60,414.3
+		- train_io_stdev_MB_per_second: 788.2
+
+
+	RunID: ./Final/Closed/Oracle-540.8T-LFS-125MBperSec-perTB/24N-Resnet50/training/resnet50/run/20250703_232809
+	    Benchmark Type: training
+	    Command: run_benchmark
+	    Model: resnet50
+	    Issues:
+		- [CLOSED] Closed parameter override allowed: dataset.num_files_train = 86688 (Parameter: Overrode Parameters)
+		- [CLOSED] Closed parameter override allowed: reader.prefetch_size = 32 (Parameter: Overrode Parameters)
+		- [CLOSED] Closed parameter override allowed: dataset.data_folder = /mnt/lustrefs/resnet50-24N/resnet50 (Parameter: Overrode Parameters)
+	    Metrics:
+		- train_au_percentage: 93.2%, 93.3%, 92.3%, 92.3%, 93.5%
+		- train_au_mean_percentage: 92.9%
+		- train_au_meet_expectation: success
+		- train_au_stdev_percentage: 0.5%
+		- train_throughput_samples_per_second: 557,678.2, 558,650.9, 552,257.0, 552,151.5, 559,726.1
+		- train_throughput_mean_samples_per_second: 556,092.8
+		- train_throughput_stdev_samples_per_second: 3,240.5
+		- train_io_mean_MB_per_second: 60,807.8
+		- train_io_stdev_MB_per_second: 354.3
+
+
+	RunID: ./Final/Closed/Oracle-540.8T-LFS-125MBperSec-perTB/24N-Resnet50/training/resnet50/run/20250703_225408
+	    Benchmark Type: training
+	    Command: run_benchmark
+	    Model: resnet50
+	    Issues:
+		- [CLOSED] Closed parameter override allowed: dataset.num_files_train = 86688 (Parameter: Overrode Parameters)
+		- [CLOSED] Closed parameter override allowed: reader.prefetch_size = 32 (Parameter: Overrode Parameters)
+		- [CLOSED] Closed parameter override allowed: dataset.data_folder = /mnt/lustrefs/resnet50-24N/resnet50 (Parameter: Overrode Parameters)
+	    Metrics:
+		- train_au_percentage: 92.7%, 93.5%, 93.2%, 93.0%, 92.1%
+		- train_au_mean_percentage: 92.9%
+		- train_au_meet_expectation: success
+		- train_au_stdev_percentage: 0.5%
+		- train_throughput_samples_per_second: 554,993.8, 559,699.5, 557,792.4, 556,579.8, 551,222.8
+		- train_throughput_mean_samples_per_second: 556,057.6
+		- train_throughput_stdev_samples_per_second: 2,865.4
+		- train_io_mean_MB_per_second: 60,804.0
+		- train_io_stdev_MB_per_second: 313.3
+
+
+	RunID: ./Final/Closed/Oracle-540.8T-LFS-125MBperSec-perTB/24N-Resnet50/training/resnet50/run/20250703_231102
+	    Benchmark Type: training
+	    Command: run_benchmark
+	    Model: resnet50
+	    Issues:
+		- [CLOSED] Closed parameter override allowed: dataset.num_files_train = 86688 (Parameter: Overrode Parameters)
+		- [CLOSED] Closed parameter override allowed: reader.prefetch_size = 32 (Parameter: Overrode Parameters)
+		- [CLOSED] Closed parameter override allowed: dataset.data_folder = /mnt/lustrefs/resnet50-24N/resnet50 (Parameter: Overrode Parameters)
+	    Metrics:
+		- train_au_percentage: 92.3%, 93.6%, 92.9%, 92.8%, 91.5%
+		- train_au_mean_percentage: 92.6%
+		- train_au_meet_expectation: success
+		- train_au_stdev_percentage: 0.7%
+		- train_throughput_samples_per_second: 552,449.9, 560,403.6, 556,255.2, 555,569.9, 547,837.4
+		- train_throughput_mean_samples_per_second: 554,503.2
+		- train_throughput_stdev_samples_per_second: 4,187.4
+		- train_io_mean_MB_per_second: 60,634.0
+		- train_io_stdev_MB_per_second: 457.9
+
+
+	RunID: ./Final/Closed/Oracle-540.8T-LFS-125MBperSec-perTB/24N-Resnet50/training/resnet50/run/20250703_223713
+	    Benchmark Type: training
+	    Command: run_benchmark
+	    Model: resnet50
+	    Issues:
+		- [CLOSED] Closed parameter override allowed: dataset.num_files_train = 86688 (Parameter: Overrode Parameters)
+		- [CLOSED] Closed parameter override allowed: reader.prefetch_size = 32 (Parameter: Overrode Parameters)
+		- [CLOSED] Closed parameter override allowed: dataset.data_folder = /mnt/lustrefs/resnet50-24N/resnet50 (Parameter: Overrode Parameters)
+	    Metrics:
+		- train_au_percentage: 92.9%, 92.6%, 91.6%, 92.5%, 92.5%
+		- train_au_mean_percentage: 92.4%
+		- train_au_meet_expectation: success
+		- train_au_stdev_percentage: 0.4%
+		- train_throughput_samples_per_second: 556,040.2, 554,320.9, 548,444.0, 553,458.3, 553,658.6
+		- train_throughput_mean_samples_per_second: 553,184.4
+		- train_throughput_stdev_samples_per_second: 2,538.4
+		- train_io_mean_MB_per_second: 60,489.8
+		- train_io_stdev_MB_per_second: 277.6
+
+
+	RunID: ./Final/Closed/Oracle-540.8T-LFS-125MBperSec-perTB/24N-Resnet50/training/resnet50/run/20250703_222025
+	    Benchmark Type: training
+	    Command: run_benchmark
+	    Model: resnet50
+	    Issues:
+		- [CLOSED] Closed parameter override allowed: dataset.num_files_train = 86688 (Parameter: Overrode Parameters)
+		- [CLOSED] Closed parameter override allowed: reader.prefetch_size = 32 (Parameter: Overrode Parameters)
+		- [CLOSED] Closed parameter override allowed: dataset.data_folder = /mnt/lustrefs/resnet50-24N/resnet50 (Parameter: Overrode Parameters)
+	    Metrics:
+		- train_au_percentage: 93.8%, 92.4%, 92.8%, 92.6%, 93.4%
+		- train_au_mean_percentage: 93.0%
+		- train_au_meet_expectation: success
+		- train_au_stdev_percentage: 0.5%
+		- train_throughput_samples_per_second: 561,362.9, 553,168.8, 555,224.7, 554,352.6, 559,178.4
+		- train_throughput_mean_samples_per_second: 556,657.5
+		- train_throughput_stdev_samples_per_second: 3,099.4
+		- train_io_mean_MB_per_second: 60,869.6
+		- train_io_stdev_MB_per_second: 338.9
+
+
+
+------------------------- OPEN Report -------------------------
+
+------------------------- INVALID Report -------------------------
+
+========================= Submissions Report =========================
+
+------------------------- CLOSED Report -------------------------
+	WorkloadID: Training - resnet50, Accelerator: h100
+	    Benchmark Type: training
+	    Command: run_benchmark
+	    Runs: 
+		- ./Final/Closed/Oracle-540.8T-LFS-125MBperSec-perTB/24N-Resnet50/training/resnet50/run/20250703_220253 - [CLOSED]
+		- ./Final/Closed/Oracle-540.8T-LFS-125MBperSec-perTB/24N-Resnet50/training/resnet50/run/20250703_232809 - [CLOSED]
+		- ./Final/Closed/Oracle-540.8T-LFS-125MBperSec-perTB/24N-Resnet50/training/resnet50/run/20250703_225408 - [CLOSED]
+		- ./Final/Closed/Oracle-540.8T-LFS-125MBperSec-perTB/24N-Resnet50/training/resnet50/run/20250703_231102 - [CLOSED]
+		- ./Final/Closed/Oracle-540.8T-LFS-125MBperSec-perTB/24N-Resnet50/training/resnet50/run/20250703_223713 - [CLOSED]
+		- ./Final/Closed/Oracle-540.8T-LFS-125MBperSec-perTB/24N-Resnet50/training/resnet50/run/20250703_222025 - [CLOSED]
+	    Issues:
+		- [CLOSED] All runs satisfy the CLOSED category (Parameter: category, Expected: OPEN or CLOSED, Actual: ['CLOSED'])
+
+
+
+------------------------- OPEN Report -------------------------
+
+------------------------- INVALID Report -------------------------

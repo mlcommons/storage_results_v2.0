@@ -1,0 +1,112 @@
+{
+	"networks": [
+		{
+			"network_name": "client",
+			"network_type": "Ethernet",
+			"bitrate": 100,
+			"protocols": [ "S3" ]
+		}
+	],
+	"nodes": [
+    {
+			"node_type_name": "Client -- GCP - c3-standard-176",
+			"config_options": [
+				"mkdir /sys/fs/cgroup/memory_mlperf && echo 256G > /sys/fs/cgroup/memory_mlperf/memory.max && echo 256G > /sys/fs/cgroup/memory_mlperf/memory.high",
+				"mkdir /sys/fs/cgroup/memory_mlperf_cosmoflow && echo 32G > /sys/fs/cgroup/memory_mlperf_cosmoflow/memory.max && echo 32G > /sys/fs/cgroup/memory_mlperf_cosmoflow/memory.high"
+			],
+			"nic_ports": [
+				{
+					"network_name": "Client",
+					"bitrate": 100,
+					"count_of_this_type": 1,
+					"protocols": [ "S3", "Proprietary - JuiceFS" ]
+				}
+			],
+			"drives": [
+				{
+					"purpose": [ "Hold the OS" ],
+					"drive_type": "Balanced persistent disk",
+					"capacity_GiB": 100,
+					"count_of_this_type": 1
+				}]
+		},
+		{
+			"node_type_name": "Distributed cache -- GCP - c3-standard-176",
+			"config_options": [],
+			"nic_ports": [
+				{
+					"network_name": "Distributed cache",
+					"bitrate": 100,
+					"count_of_this_type": 1,
+					"protocols": [ "GCS", "Proprietary - JuiceFS" ]
+				}
+			],
+			"drives": [
+				{
+					"purpose": [ "Hold the cache" ],
+					"drive_type": "hyperdisk-extreme",
+					"capacity_GiB": 1000,
+					"interface": "NVMe",
+					"count_of_this_type": 2
+				}
+			]
+		},
+		{
+			"node_type_name": "metadata -- GCP c3-standard-22, 22vCPUs, 88GB RAM",
+			"config_options": [ ],
+			"accelerators": [ ],
+			"nic_ports": [
+				{
+					"network_name": "network",
+					"bitrate": "up to 23gbps",
+					"count_of_this_type": 1,
+					"protocols": []
+				}
+			]
+		}
+	],
+	"benchmark_hosts": [
+		{
+			"node_name": "GCP - c3-standard-176 for benchmark",
+			"node_type_name": "client",
+			"benchmark_instances": [
+				{
+					"mapping_type": "container",
+					"cpu_cores": 176,
+					"DRAM_GiB": "704   We need this instance for the 100gbps network, but the dram is too large so we used cgroup to limit the hostnode memory to be 256GB"
+				}
+			]
+		}
+	],
+	"storage_system": {
+		"vendor_name": "Juicedata",
+		"solution_name": "JuiceFS Cloud with Distributed cache",
+		"model_name": "JuiceFS Enterprise",
+		"version": "v5.2",
+		"software_defined": "yes",
+		"hyperconverged": "no",
+		"solution_type": "Proprietary - JuiceFS",
+		"client_mount_options": [],
+		"solution_config_options": [],
+		"usable_capacity_GiB": "Inf",
+		"raw_capacity_GiB": "Inf",
+		"software_components": [
+			{
+				"component_name": "Object storage",
+				"description": "stores data, we used GCS here"
+			},
+			{
+				"component_name": "Distributed cache",
+				"description": "caches all the data in the distributed cache cluster",
+				"runnable_node_type_name": [ "distributed cache" ],
+				"connecting_components": [ "client", "metadata", "s3" ]
+			},
+			{
+				"component_name": "Metadata engine",
+				"description": "a high availability service built on top of Raft protocol, where all metadata operations are appended as Raft logs",
+				"runnable_node_type_name": [ "metadata" ],
+				"connecting_components": [ "client", "Distributed cache" ]
+			}
+		]
+	}
+}

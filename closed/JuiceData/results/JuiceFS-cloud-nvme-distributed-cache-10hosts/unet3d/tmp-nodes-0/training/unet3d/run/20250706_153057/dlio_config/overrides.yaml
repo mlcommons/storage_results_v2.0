@@ -1,0 +1,4 @@
+- workload=unet3d_h100
+- ++workload.dataset.num_files_train=175000
+- ++workload.reader.read_threads=32
+- ++workload.dataset.data_folder=../data_10host/unet3d

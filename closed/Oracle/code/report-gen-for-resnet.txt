@@ -1,0 +1,152 @@
+========================= Results Report =========================
+
+------------------------- CLOSED Report -------------------------
+	RunID: mlperf-storage-results/resnet50/training/resnet50/run/20250627_000926
+	    Benchmark Type: training
+	    Command: run_benchmark
+	    Model: resnet50
+	    Issues:
+		- [CLOSED] Closed parameter override allowed: dataset.num_files_train = 536572 (Parameter: Overrode Parameters)
+		- [CLOSED] Closed parameter override allowed: reader.prefetch_size = 32 (Parameter: Overrode Parameters)
+		- [CLOSED] Closed parameter override allowed: dataset.data_folder = /mnt/lustrefs/resnet50 (Parameter: Overrode Parameters)
+	    Metrics:
+		- train_au_percentage: 95.5%, 96.0%, 96.0%, 96.1%, 95.8%
+		- train_au_mean_percentage: 95.9%
+		- train_au_meet_expectation: success
+		- train_au_stdev_percentage: 0.2%
+		- train_throughput_samples_per_second: 572,314.6, 575,234.3, 575,042.9, 575,938.1, 574,099.0
+		- train_throughput_mean_samples_per_second: 574,525.8
+		- train_throughput_stdev_samples_per_second: 1,251.8
+		- train_io_mean_MB_per_second: 62,823.5
+		- train_io_stdev_MB_per_second: 136.9
+
+
+	RunID: mlperf-storage-results/resnet50/training/resnet50/run/20250627_015015
+	    Benchmark Type: training
+	    Command: run_benchmark
+	    Model: resnet50
+	    Issues:
+		- [CLOSED] Closed parameter override allowed: dataset.num_files_train = 536572 (Parameter: Overrode Parameters)
+		- [CLOSED] Closed parameter override allowed: reader.prefetch_size = 32 (Parameter: Overrode Parameters)
+		- [CLOSED] Closed parameter override allowed: dataset.data_folder = /mnt/lustrefs/resnet50 (Parameter: Overrode Parameters)
+	    Metrics:
+		- train_au_percentage: 95.7%, 96.0%, 96.0%, 95.8%, 96.2%
+		- train_au_mean_percentage: 95.9%
+		- train_au_meet_expectation: success
+		- train_au_stdev_percentage: 0.2%
+		- train_throughput_samples_per_second: 573,468.5, 574,991.9, 575,327.4, 574,247.1, 576,163.3
+		- train_throughput_mean_samples_per_second: 574,839.6
+		- train_throughput_stdev_samples_per_second: 921.4
+		- train_io_mean_MB_per_second: 62,857.8
+		- train_io_stdev_MB_per_second: 100.7
+
+
+	RunID: mlperf-storage-results/resnet50/training/resnet50/run/20250626_222943
+	    Benchmark Type: training
+	    Command: run_benchmark
+	    Model: resnet50
+	    Issues:
+		- [CLOSED] Closed parameter override allowed: dataset.num_files_train = 536572 (Parameter: Overrode Parameters)
+		- [CLOSED] Closed parameter override allowed: reader.prefetch_size = 32 (Parameter: Overrode Parameters)
+		- [CLOSED] Closed parameter override allowed: dataset.data_folder = /mnt/lustrefs/resnet50 (Parameter: Overrode Parameters)
+	    Metrics:
+		- train_au_percentage: 96.1%, 95.5%, 96.2%, 96.0%, 96.3%
+		- train_au_mean_percentage: 96.0%
+		- train_au_meet_expectation: success
+		- train_au_stdev_percentage: 0.3%
+		- train_throughput_samples_per_second: 575,707.6, 572,444.1, 576,638.3, 574,959.4, 577,029.9
+		- train_throughput_mean_samples_per_second: 575,355.9
+		- train_throughput_stdev_samples_per_second: 1,625.2
+		- train_io_mean_MB_per_second: 62,914.2
+		- train_io_stdev_MB_per_second: 177.7
+
+
+	RunID: mlperf-storage-results/resnet50/training/resnet50/run/20250627_033006
+	    Benchmark Type: training
+	    Command: run_benchmark
+	    Model: resnet50
+	    Issues:
+		- [CLOSED] Closed parameter override allowed: dataset.num_files_train = 536572 (Parameter: Overrode Parameters)
+		- [CLOSED] Closed parameter override allowed: reader.prefetch_size = 32 (Parameter: Overrode Parameters)
+		- [CLOSED] Closed parameter override allowed: dataset.data_folder = /mnt/lustrefs/resnet50 (Parameter: Overrode Parameters)
+	    Metrics:
+		- train_au_percentage: 95.5%, 95.9%, 95.9%, 95.7%, 96.1%
+		- train_au_mean_percentage: 95.8%
+		- train_au_meet_expectation: success
+		- train_au_stdev_percentage: 0.2%
+		- train_throughput_samples_per_second: 572,096.1, 574,405.9, 574,789.2, 573,709.6, 575,694.7
+		- train_throughput_mean_samples_per_second: 574,139.1
+		- train_throughput_stdev_samples_per_second: 1,206.0
+		- train_io_mean_MB_per_second: 62,781.2
+		- train_io_stdev_MB_per_second: 131.9
+
+
+	RunID: mlperf-storage-results/resnet50/training/resnet50/run/20250627_051005
+	    Benchmark Type: training
+	    Command: run_benchmark
+	    Model: resnet50
+	    Issues:
+		- [CLOSED] Closed parameter override allowed: dataset.num_files_train = 536572 (Parameter: Overrode Parameters)
+		- [CLOSED] Closed parameter override allowed: reader.prefetch_size = 32 (Parameter: Overrode Parameters)
+		- [CLOSED] Closed parameter override allowed: dataset.data_folder = /mnt/lustrefs/resnet50 (Parameter: Overrode Parameters)
+	    Metrics:
+		- train_au_percentage: 95.4%, 96.2%, 95.8%, 95.9%, 95.9%
+		- train_au_mean_percentage: 95.8%
+		- train_au_meet_expectation: success
+		- train_au_stdev_percentage: 0.3%
+		- train_throughput_samples_per_second: 571,343.5, 576,393.4, 573,988.7, 574,664.3, 574,434.0
+		- train_throughput_mean_samples_per_second: 574,164.8
+		- train_throughput_stdev_samples_per_second: 1,629.7
+		- train_io_mean_MB_per_second: 62,784.0
+		- train_io_stdev_MB_per_second: 178.2
+
+
+	RunID: mlperf-storage-results/resnet50/training/resnet50/run/20250627_065142
+	    Benchmark Type: training
+	    Command: run_benchmark
+	    Model: resnet50
+	    Issues:
+		- [CLOSED] Closed parameter override allowed: dataset.num_files_train = 536572 (Parameter: Overrode Parameters)
+		- [CLOSED] Closed parameter override allowed: reader.prefetch_size = 32 (Parameter: Overrode Parameters)
+		- [CLOSED] Closed parameter override allowed: dataset.data_folder = /mnt/lustrefs/resnet50 (Parameter: Overrode Parameters)
+	    Metrics:
+		- train_au_percentage: 95.9%, 95.9%, 95.9%, 96.3%, 96.0%
+		- train_au_mean_percentage: 96.0%
+		- train_au_meet_expectation: success
+		- train_au_stdev_percentage: 0.1%
+		- train_throughput_samples_per_second: 574,866.0, 574,886.3, 574,646.6, 576,980.4, 575,318.1
+		- train_throughput_mean_samples_per_second: 575,339.5
+		- train_throughput_stdev_samples_per_second: 848.9
+		- train_io_mean_MB_per_second: 62,912.4
+		- train_io_stdev_MB_per_second: 92.8
+
+
+
+------------------------- OPEN Report -------------------------
+
+------------------------- INVALID Report -------------------------
+
+========================= Submissions Report =========================
+
+------------------------- CLOSED Report -------------------------
+	WorkloadID: Training - resnet50, Accelerator: h100
+	    Benchmark Type: training
+	    Command: run_benchmark
+	    Runs: 
+		- mlperf-storage-results/resnet50/training/resnet50/run/20250627_000926 - [CLOSED]
+		- mlperf-storage-results/resnet50/training/resnet50/run/20250627_015015 - [CLOSED]
+		- mlperf-storage-results/resnet50/training/resnet50/run/20250626_222943 - [CLOSED]
+		- mlperf-storage-results/resnet50/training/resnet50/run/20250627_033006 - [CLOSED]
+		- mlperf-storage-results/resnet50/training/resnet50/run/20250627_051005 - [CLOSED]
+		- mlperf-storage-results/resnet50/training/resnet50/run/20250627_065142 - [CLOSED]
+	    Issues:
+		- [CLOSED] All runs satisfy the CLOSED category (Parameter: category, Expected: OPEN or CLOSED, Actual: ['CLOSED'])
+
+
+
+------------------------- OPEN Report -------------------------
+
+------------------------- INVALID Report -------------------------
+2025-07-01 17:01:33|INFO: Generating reports for mlperf-storage-results/resnet50/
+2025-07-01 17:01:33|INFO: Writing results to mlperf-storage-results/resnet50/results.csv
+2025-07-01 17:01:33|INFO: Writing results to mlperf-storage-results/resnet50/results.json

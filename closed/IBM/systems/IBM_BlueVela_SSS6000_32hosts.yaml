@@ -1,0 +1,153 @@
+System:
+  name: IBM Storage Scale System 6000 - Blue Vela
+  description: 768 compute node AI training cluster with distributed storage cluster powered by IBM Storage Scale (GPFS) with NDR InfiniBand interconnect. Each node has 2 sockets, each with 48 cores and 1 thread per core, for a total of 96 physical cores and 96 logical CPUs, 2048 GB RAM, RHEL 9.5. Only 4% of the nodes (32 nodes) are used for this benchmarking. During benchmarking the rest of the cluster was actively engaged executing AI workloads outside of the scope of the benchmark.
+  storage_location: [ remote ]
+  client_software: [ proprietary ]
+  storage_interface: [ file ]
+  required_rack_units: 254
+  shared_capabilities:
+    multi_host_support: True            # False is used for local storage
+    simultaneous_write_support: True   # Are simultaneous writes by multiple hosts supported in the submitted configuration
+    simultaneous_read__support: True    # Are simultaneous reads by multiple hosts supported in the submitted configuration
+  max_sequential_read: 1320 # Optional - GB/s
+  max_sequential_write: # Optional - GB/s
+  max_random_read: # Optional - GiB/s
+  max_random_write: # Optional - GiB/s
+
+PowerRequirements:
+  dlio_client:
+    quantity: 32 # number of dlio_client nodes
+    psu1_nameplate_power: 2800W # power in watts
+    psu2_nameplate_power: 2800W # power in watts
+    psu3_nameplate_power: 2800W # power in watts
+    psu4_nameplate_power: 2800W # power in watts
+    psu5_nameplate_power: 2800W # power in watts
+    psu6_nameplate_power: 2800W # power in watts
+    design_power: 14000W
+    num_active_psus: 6
+    num_passive_psus: 0
+
+  # All storage nodes need to be listed (data, metadata, etc) as well as any required backed switching
+  storage_data_node:
+    quantity: 8 # number of storage data nodes (IO cannisters)
+    psu1_nameplate_power: 2400W # power in watts (4 PSU per enclosure, 2 IO cannisters per enclosure)
+    psu2_nameplate_power: 2400W # power in watts
+    psu3_nameplate_power: 2400W # power in watts
+    psu4_nameplate_power: 2400W # power in watts
+    design_power: 3200W
+    num_active_psus: 4
+    num_passive_psus: 0
+  storage_management_node:
+    quantity: 2 # number of storage data nodes (IO cannisters)
+    psu1_nameplate_power: 2400W # power in watts (4 PSU per enclosure, 2 IO cannisters per enclosure)
+    psu2_nameplate_power: 2400W # power in watts
+    design_power: 3200W
+    num_active_psus: 2
+    num_passive_psus: 0
+  backend_switch:
+    quantity: 42
+    psu1_nameplate_power: 747W   # network PSU
+    psu2_nameplate_power: 747W   # network PSU
+    design_power: 1720W
+    num_active_psus: 2
+    num_passive_psus: 0
+
+
+# All nodes used need to be listed. Clients, Data storage, metadata, front-end, back-end, etc
+Nodes:
+  # Useful name for the client describing it's role in the system under test
+  dlio_client:  # This can be DLIO Client, storage node, storage controller, AwesomeMarketingName_Type1, etc
+    quantity: 32  # How many of this node
+    hardware:
+      model: PowerEdge XE9680
+      rack_units: 6
+      power_supplies: 6
+      psu_configuration: active/passive
+      psu_rating: 2800
+      memory_capacity: 2048GB
+      memory_configuration: 32x64GB
+      cpu_qty: 2
+      cpu_model: Intel(R) Xeon(R) Platinum 8468
+      cpu_cores: 96
+    networking:
+      management:
+        model: Intel E810-XXVDA2
+        speed: 50Gbps (2x 25Gbps bonded)
+        qty: 1
+    operating_system:
+      name: RHEL
+      version: 9.5
+      release_date: 2024-11-13
+      kernel_version: 5.14.0-503.23.1.el9_5
+      cpu_architecture: x86_64
+    tuning:
+      # All non-default tunings for OS need to be listed
+      mpi_configuration:
+        environment_variables: OMPI_MCA_hwloc_base_binding_policy=core,OMPI_MCA_rmaps_base_mapping_policy=slot:PE=4
+        version: Open MPI 5.0.8
+      sysctl_parameters: 
+        sysctl -w net.ipv4.conf.all.arp_filter=1,sysctl -w net.ipv4.conf.all.rp_filter=1,sysctl -w net.ipv4.neigh.default.gc_thresh1=900 #  (787 compute nodes + 7 storage + 6 'extra'),sysctl -w net.ipv4.neigh.default.gc_thresh2=1024,sysctl -w net.ipv4.neigh.default.gc_thresh3=2048,sysctl -w net.core.netdev_budget=600,sysctl -w net.core.netdev_budget_usecs=4000,sysctl -w net.ipv4.neigh.default.gc_interval=600,sysctl -w net.ipv4.neigh.default.gc_stale_time=600,sysctl -w net.ipv4.neigh.default.mcast_solicit=9,sysctl -w net.ipv4.neigh.${n}.mcast_solicit=9,sysctl -w net.ipv4.neigh.${n}.gc_stale_time=600,sysctl -w net.core.netdev_max_backlog=250000,sysctl -w net.core.rmem_max=134217728,sysctl -w net.core.wmem_max=134217728,sysctl -w net.ipv4.tcp_rmem='4096 131072 67108864',sysctl -w net.ipv4.tcp_wmem='4096 131072 67108864'
+    # There are 4 storage enclosures (storage shelfs), each storage enclosure has 2 IO controllers.
+    # Some of the parameters in the storage_data_node section have to be given by storage enclosure (like the rack_utits, and PSU info).
+    # Some of the parameters in the storage_data_node section are given by IO controller (like quantity, memory).
+    # A comment was added to the parameters to add clarification. 
+  storage_data_node: # This can be DLIO Client, storage node, storage controller, AwesomeMarketingName_Type1, etc
+    quantity: 8  # number of storage data nodes (IO controllers)
+    hardware:
+      model: SSS6000
+      rack_units: 4 # per enclosure
+      power_supplies: 4 # per enclosure
+      psu_configuration: active/active
+      psu_rating: 2400W
+      memory_capacity: 768GB # per IO controller
+      memory_configuration: 24x32GB # per IO controller
+      cpu_qty: 4 # per IO controller
+      cpu_model: AMD EPYC Genoa
+      cpu_cores: 48
+    networking:
+      management:
+        model: NVIDIA CX-7
+        speed: 400Gbps
+        qty: 4 # per IO controller
+    operating_system:
+      name: RHEL
+      version: 9.4
+      release_date: 2024-04-30
+      kernel_version: 5.14.0-427.13.1.el9_4
+      cpu_architecture: x86_64
+    tuning:
+      mpi_configuration:
+        environment_variables: 
+        version: 
+      sysctl_parameters:
+    # In addition to the Storage IO controllers, this storage solution includes a management server, that has different specifications than the Storage Shelf and also different to the IO controllers. This management server is used by the storage solution, although it does not drive any IO. 
+  storage_management_node: # These are nodes used for storage management, these nodes do not drive any IO
+    quantity: 1  # number of storage management nodes
+    hardware:
+      model: x86 Utility Node
+      rack_units: 2 
+      power_supplies: 2 
+      psu_configuration: active/active
+      psu_rating: 2000W
+      memory_capacity: 128GB 
+      memory_configuration: 4x32GB 
+      cpu_qty: 1
+      cpu_model: AMD EPYC 7313
+      cpu_cores: 16
+    networking:
+      management:
+        model: NVIDIA CX-7
+        speed: 200Gbps
+        qty: 1
+    operating_system:
+      name: RHEL
+      version: 9.4
+      release_date: 2024-04-30
+      kernel_version: 5.14.0-427.13.1.el9_4
+      cpu_architecture: x86_64
+    tuning:
+      mpi_configuration:
+        environment_variables: 
+        version: 
+      sysctl_parameters:
+

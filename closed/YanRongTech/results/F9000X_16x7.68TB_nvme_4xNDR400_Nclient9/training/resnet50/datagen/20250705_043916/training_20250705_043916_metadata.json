@@ -1,0 +1,108 @@
+{
+  "args": {
+    "program": "training",
+    "command": "datagen",
+    "results_dir": "/home/user/mlperf_results/",
+    "loops": 1,
+    "config_file": null,
+    "closed": false,
+    "debug": false,
+    "verbose": false,
+    "stream_log_level": "INFO",
+    "allow_invalid_params": false,
+    "what_if": false,
+    "hosts": [
+      "192.168.255.65",
+      "192.168.255.66",
+      "192.168.255.67",
+      "192.168.255.68",
+      "192.168.255.69",
+      "192.168.255.70"
+    ],
+    "model": "resnet50",
+    "exec_type": "mpi",
+    "mpi_bin": "mpirun",
+    "oversubscribe": false,
+    "allow_run_as_root": true,
+    "mpi_params": null,
+    "num_processes": 384,
+    "data_dir": "/mnt/yrfs/mlperf_training_data",
+    "params": [
+      "dataset.num_files_train=260000",
+      "dataset.num_subfolders_train=26"
+    ],
+    "dlio_bin_path": null,
+    "num_client_hosts": 6
+  },
+  "debug": null,
+  "run_datetime": "20250705_043916",
+  "run_number": 0,
+  "runtime": 7756.73058795929,
+  "verification": null,
+  "command_output_files": [
+    {
+      "command": "mpirun -n 384 -host 192.168.255.65:64,192.168.255.66:64,192.168.255.67:64,192.168.255.68:64,192.168.255.69:64,192.168.255.70:64 --allow-run-as-root /home/user/.venvs/mlperf_env/bin/dlio_benchmark workload=resnet50_datagen ++hydra.run.dir=/home/user/mlperf_results/training/resnet50/datagen/20250705_043916 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=260000 ++workload.dataset.num_subfolders_train=26 ++workload.dataset.data_folder=/mnt/yrfs/mlperf_training_data/resnet50 --config-dir=/home/user/storage/configs/dlio",
+      "stdout": "/home/user/mlperf_results/training/resnet50/datagen/20250705_043916/training_datagen.stdout.log",
+      "stderr": "/home/user/mlperf_results/training/resnet50/datagen/20250705_043916/training_datagen.stderr.log"
+    }
+  ],
+  "run_result_output": "/home/user/mlperf_results/training/resnet50/datagen/20250705_043916",
+  "metadata_filename": "training_20250705_043916_metadata.json",
+  "metadata_file_path": "/home/user/mlperf_results/training/resnet50/datagen/20250705_043916/training_20250705_043916_metadata.json",
+  "_config_name": "resnet50_datagen",
+  "base_command": "dlio_benchmark",
+  "base_path": "/home/user/.venvs/mlperf_env/bin",
+  "base_command_path": "/home/user/.venvs/mlperf_env/bin/dlio_benchmark",
+  "config_path": "/home/user/storage/configs/dlio",
+  "per_host_mem_kB": null,
+  "total_mem_kB": null,
+  "config_file": "resnet50_datagen.yaml",
+  "params_dict": {
+    "dataset.num_files_train": "260000",
+    "dataset.num_subfolders_train": "26",
+    "dataset.data_folder": "/mnt/yrfs/mlperf_training_data/resnet50"
+  },
+  "yaml_params": {
+    "model": {
+      "name": "resnet50",
+      "type": "cnn"
+    },
+    "framework": "tensorflow",
+    "workflow": {
+      "generate_data": true,
+      "train": false,
+      "checkpoint": false
+    },
+    "dataset": {
+      "num_files_train": 1024,
+      "num_samples_per_file": 1251,
+      "record_length_bytes": 114660.07,
+      "record_length_bytes_resize": 150528,
+      "data_folder": "data/resnet50",
+      "format": "tfrecord"
+    }
+  },
+  "combined_params": {
+    "model": {
+      "name": "resnet50",
+      "type": "cnn"
+    },
+    "framework": "tensorflow",
+    "workflow": {
+      "generate_data": true,
+      "train": false,
+      "checkpoint": false
+    },
+    "dataset": {
+      "num_files_train": "260000",
+      "num_samples_per_file": 1251,
+      "record_length_bytes": 114660.07,
+      "record_length_bytes_resize": 150528,
+      "data_folder": "data/resnet50",
+      "format": "tfrecord",
+      "num_subfolders_train": "26"
+    }
+  },
+  "executed_command": "mpirun -n 384 -host 192.168.255.65:64,192.168.255.66:64,192.168.255.67:64,192.168.255.68:64,192.168.255.69:64,192.168.255.70:64 --allow-run-as-root /home/user/.venvs/mlperf_env/bin/dlio_benchmark workload=resnet50_datagen ++hydra.run.dir=/home/user/mlperf_results/training/resnet50/datagen/20250705_043916 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=260000 ++workload.dataset.num_subfolders_train=26 ++workload.dataset.data_folder=/mnt/yrfs/mlperf_training_data/resnet50 --config-dir=/home/user/storage/configs/dlio",
+  "benchmark_type": "training"
+}

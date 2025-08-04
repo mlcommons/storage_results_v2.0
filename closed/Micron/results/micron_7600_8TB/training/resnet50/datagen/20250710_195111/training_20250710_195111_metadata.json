@@ -1,0 +1,100 @@
+{
+  "args": {
+    "program": "training",
+    "command": "datagen",
+    "results_dir": "/root/results",
+    "loops": 1,
+    "config_file": null,
+    "closed": false,
+    "debug": false,
+    "verbose": false,
+    "stream_log_level": "INFO",
+    "allow_invalid_params": false,
+    "what_if": false,
+    "hosts": [
+      "10.148.243.11"
+    ],
+    "model": "resnet50",
+    "exec_type": "mpi",
+    "mpi_bin": "mpirun",
+    "oversubscribe": false,
+    "allow_run_as_root": true,
+    "mpi_params": null,
+    "num_processes": 96,
+    "data_dir": "/mnt/nvme/resnet50",
+    "params": [
+      "dataset.num_files_train=10391"
+    ],
+    "dlio_bin_path": null,
+    "num_client_hosts": 1
+  },
+  "debug": null,
+  "run_datetime": "20250710_195111",
+  "run_number": 0,
+  "runtime": 211.64470386505127,
+  "verification": null,
+  "command_output_files": [
+    {
+      "command": "mpirun -n 96 -host 10.148.243.11:96 --allow-run-as-root /usr/local/bin/dlio_benchmark workload=resnet50_datagen ++hydra.run.dir=/root/results/training/resnet50/datagen/20250710_195111 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=10391 ++workload.dataset.data_folder=/mnt/nvme/resnet50 --config-dir=/root/storage/configs/dlio",
+      "stdout": "/root/results/training/resnet50/datagen/20250710_195111/training_datagen.stdout.log",
+      "stderr": "/root/results/training/resnet50/datagen/20250710_195111/training_datagen.stderr.log"
+    }
+  ],
+  "run_result_output": "/root/results/training/resnet50/datagen/20250710_195111",
+  "metadata_filename": "training_20250710_195111_metadata.json",
+  "metadata_file_path": "/root/results/training/resnet50/datagen/20250710_195111/training_20250710_195111_metadata.json",
+  "_config_name": "resnet50_datagen",
+  "base_command": "dlio_benchmark",
+  "base_path": "/usr/local/bin",
+  "base_command_path": "/usr/local/bin/dlio_benchmark",
+  "config_path": "/root/storage/configs/dlio",
+  "per_host_mem_kB": null,
+  "total_mem_kB": null,
+  "config_file": "resnet50_datagen.yaml",
+  "params_dict": {
+    "dataset.num_files_train": "10391",
+    "dataset.data_folder": "/mnt/nvme/resnet50"
+  },
+  "yaml_params": {
+    "model": {
+      "name": "resnet50",
+      "type": "cnn"
+    },
+    "framework": "tensorflow",
+    "workflow": {
+      "generate_data": true,
+      "train": false,
+      "checkpoint": false
+    },
+    "dataset": {
+      "num_files_train": 1024,
+      "num_samples_per_file": 1251,
+      "record_length_bytes": 114660.07,
+      "record_length_bytes_resize": 150528,
+      "data_folder": "data/resnet50",
+      "format": "tfrecord"
+    }
+  },
+  "combined_params": {
+    "model": {
+      "name": "resnet50",
+      "type": "cnn"
+    },
+    "framework": "tensorflow",
+    "workflow": {
+      "generate_data": true,
+      "train": false,
+      "checkpoint": false
+    },
+    "dataset": {
+      "num_files_train": "10391",
+      "num_samples_per_file": 1251,
+      "record_length_bytes": 114660.07,
+      "record_length_bytes_resize": 150528,
+      "data_folder": "data/resnet50",
+      "format": "tfrecord"
+    }
+  },
+  "executed_command": "mpirun -n 96 -host 10.148.243.11:96 --allow-run-as-root /usr/local/bin/dlio_benchmark workload=resnet50_datagen ++hydra.run.dir=/root/results/training/resnet50/datagen/20250710_195111 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=10391 ++workload.dataset.data_folder=/mnt/nvme/resnet50 --config-dir=/root/storage/configs/dlio",
+  "benchmark_type": "training"
+}

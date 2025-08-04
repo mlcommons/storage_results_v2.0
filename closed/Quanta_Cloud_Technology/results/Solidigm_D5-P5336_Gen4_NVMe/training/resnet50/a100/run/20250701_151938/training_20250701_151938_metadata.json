@@ -1,0 +1,134 @@
+{
+  "args": {
+    "program": "training",
+    "command": "run",
+    "results_dir": "/scratch/mlperf_storage_v2.0/results_P5336",
+    "loops": 1,
+    "config_file": null,
+    "closed": true,
+    "debug": false,
+    "verbose": false,
+    "stream_log_level": "INFO",
+    "allow_invalid_params": false,
+    "what_if": false,
+    "hosts": [
+      "localhost"
+    ],
+    "model": "resnet50",
+    "client_host_memory_in_gb": 256,
+    "exec_type": "mpi",
+    "mpi_bin": "mpirun",
+    "oversubscribe": true,
+    "allow_run_as_root": false,
+    "mpi_params": [
+      "--mca pml ucx --mca btl ^tcp,openib"
+    ],
+    "num_accelerators": 72,
+    "accelerator_type": "a100",
+    "num_client_hosts": null,
+    "data_dir": "/P5336",
+    "params": [
+      "dataset.num_files_train=15347",
+      "reader.read_threads=2"
+    ],
+    "dlio_bin_path": null,
+    "num_processes": 72
+  },
+  "debug": null,
+  "run_datetime": "20250701_151938",
+  "run_number": 0,
+  "runtime": 1625.3318083286285,
+  "verification": "closed",
+  "command_output_files": [
+    {
+      "command": "mpirun -n 72 -host localhost:72 --oversubscribe --mca pml ucx --mca btl ^tcp,openib /scratch/mlperf_storage_v2.0/mlperf_storage_ompi4/bin/dlio_benchmark workload=resnet50_a100 ++hydra.run.dir=/scratch/mlperf_storage_v2.0/results_P5336/training/resnet50/run/20250701_151938 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=15347 ++workload.reader.read_threads=2 ++workload.dataset.data_folder=/P5336/resnet50 --config-dir=/scratch/mlperf_storage_v2.0/storage/configs/dlio",
+      "stdout": "/scratch/mlperf_storage_v2.0/results_P5336/training/resnet50/run/20250701_151938/training_run.stdout.log",
+      "stderr": "/scratch/mlperf_storage_v2.0/results_P5336/training/resnet50/run/20250701_151938/training_run.stderr.log"
+    }
+  ],
+  "run_result_output": "/scratch/mlperf_storage_v2.0/results_P5336/training/resnet50/run/20250701_151938",
+  "metadata_filename": "training_20250701_151938_metadata.json",
+  "metadata_file_path": "/scratch/mlperf_storage_v2.0/results_P5336/training/resnet50/run/20250701_151938/training_20250701_151938_metadata.json",
+  "_config_name": "resnet50_a100",
+  "base_command": "dlio_benchmark",
+  "base_path": "/scratch/mlperf_storage_v2.0/mlperf_storage_ompi4/bin",
+  "base_command_path": "/scratch/mlperf_storage_v2.0/mlperf_storage_ompi4/bin/dlio_benchmark",
+  "config_path": "/scratch/mlperf_storage_v2.0/storage/configs/dlio",
+  "per_host_mem_kB": null,
+  "total_mem_kB": null,
+  "cluster_information": "<mlpstorage.rules.ClusterInformation object at 0x1551126c1f50>",
+  "config_file": "resnet50_a100.yaml",
+  "params_dict": {
+    "dataset.num_files_train": "15347",
+    "reader.read_threads": "2",
+    "dataset.data_folder": "/P5336/resnet50"
+  },
+  "yaml_params": {
+    "model": {
+      "name": "resnet50",
+      "type": "cnn"
+    },
+    "framework": "tensorflow",
+    "workflow": {
+      "generate_data": false,
+      "train": true
+    },
+    "dataset": {
+      "num_files_train": 1024,
+      "num_samples_per_file": 1251,
+      "record_length_bytes": 114660.07,
+      "record_length_bytes_resize": 150528,
+      "data_folder": "data/resnet50",
+      "format": "tfrecord"
+    },
+    "train": {
+      "computation_time": 0.435,
+      "epochs": 5
+    },
+    "reader": {
+      "data_loader": "tensorflow",
+      "read_threads": 8,
+      "computation_threads": 8,
+      "batch_size": 400,
+      "dont_use_mmap": true
+    },
+    "metric": {
+      "au": 0.9
+    }
+  },
+  "combined_params": {
+    "model": {
+      "name": "resnet50",
+      "type": "cnn"
+    },
+    "framework": "tensorflow",
+    "workflow": {
+      "generate_data": false,
+      "train": true
+    },
+    "dataset": {
+      "num_files_train": "15347",
+      "num_samples_per_file": 1251,
+      "record_length_bytes": 114660.07,
+      "record_length_bytes_resize": 150528,
+      "data_folder": "data/resnet50",
+      "format": "tfrecord"
+    },
+    "train": {
+      "computation_time": 0.435,
+      "epochs": 5
+    },
+    "reader": {
+      "data_loader": "tensorflow",
+      "read_threads": "2",
+      "computation_threads": 8,
+      "batch_size": 400,
+      "dont_use_mmap": true
+    },
+    "metric": {
+      "au": 0.9
+    }
+  },
+  "executed_command": "mpirun -n 72 -host localhost:72 --oversubscribe --mca pml ucx --mca btl ^tcp,openib /scratch/mlperf_storage_v2.0/mlperf_storage_ompi4/bin/dlio_benchmark workload=resnet50_a100 ++hydra.run.dir=/scratch/mlperf_storage_v2.0/results_P5336/training/resnet50/run/20250701_151938 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=15347 ++workload.reader.read_threads=2 ++workload.dataset.data_folder=/P5336/resnet50 --config-dir=/scratch/mlperf_storage_v2.0/storage/configs/dlio",
+  "benchmark_type": "training"
+}

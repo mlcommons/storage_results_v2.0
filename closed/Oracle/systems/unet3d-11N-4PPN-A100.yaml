@@ -1,0 +1,76 @@
+System:
+  name: Oracle-540.8TB-OCI-LFS-125MBperSec-perTB-1x50GbpsEthernet-Clients
+  description: OCI LFS with 540.8 TB capacity, 125MB/s/TB performance tier rated at 67,600 MB/s
+  storage_location: remote
+  client_software: Lustre Client 2.15.5
+  storage_interface: File (LFS)
+  shared_capabilities:
+    multi_host_support: True            # False is used for local storage
+    simultaneous_write_support: True   # Are simultaneous writes by multiple hosts supported in the submitted configuration
+    simultaneous_read__support: True    # Are simultaneous reads by multiple hosts supported in the submitted configuration
+  use_local_storage: False
+  integrated_client_storage: N/A
+  num_clients_with_integrated_storage: N/A
+  system_architecture: cloud
+  useable_capacity: 540.8 TB
+
+PowerRequirements:
+  dlio_client:
+    quantity: 11
+    psu1_nameplate_power: N/A
+    psu2_nameplate_power: N/A
+    psu3_nameplate_power: N/A
+    design_power: N/A
+    num_active_psus: N/A
+    num_passive_psus: N/A
+
+# All nodes used need to be listed. Clients, Data storage, metadata, front-end, back-end, etc
+Nodes:
+  # Useful name for the client describing it's role in the system under test
+  dlio_client: OCI BM.Optimized3.36 instances
+    quantity: 11  
+    hardware:
+      model: BM.Optimized3.36
+      rack_units: N/A
+      power_supplies: N/A
+      psu_configuration: N/A
+      psu_rating: N/A
+      memory_capacity: 96 GB (Original: 512 GB. Changed to 96 GB via adding mem=96G to the grub file)
+      memory_configuration: Original 16x32GB
+      cpu_qty: 2 (Dual Socket)
+      cpu_model: Intel(R) Xeon(R) Gold 6354 CPU @ 3.00GHz
+      cpu_cores: 36 (SMT enabled: 72)
+    networking:
+      management:
+        model: Mellanox Technologies MT2892 Family [ConnectX-6 Dx]
+        speed: 50Gbps Ethernet
+        qty: 1
+        Lustre_Lnet: tcp(ens300f0np0)
+    operating_system:
+      name: Ubuntu
+      version: 22.04.5 LTS
+      release_date: 2022-04-12
+      kernel_version: 5.15.0-1074-oracle
+      cpu_architecture: x86_64
+    tuning:
+      # All non-default tunings for OS need to be listed
+      mpi_configuration:
+        environment_variables: export OMPI_MCA_btl=self,tcp
+                               export OMPI_MCA_btl_tcp_if_include=ens300f0np0
+                               export OMPI_MCA_pml=ob1
+                               export PATH=$PATH:/home/ubuntu/.local/bin/ 
+        version: Open MPI 4.1.2
+      sysctl_parameters: None
+      Lustre_Tunings: 
+        MDT Striping:
+          lfs setdirstripe –c -1 –D /mnt/lustrefs/${benchmark_directory}
+        LNet Configuration and Tunings:
+          options ksocklnd credits=2048 peer_buffer_credits=1024  tx_buffer_size=65536 rx_buffer_size=65536 keepalive=10 conns_per_peer=16 peer_credits=16
+        Lustre Client Tunings:
+          lctl set_param mdc.*.max_rpcs_in_flight=32
+          lctl set_param *.*.*MDT*.lru_max_age=1000000
+          lctl set_param *.*.*MDT*.lru_size=11000
+
+        For Unet3d benchmark:
+          lfs setstripe –S 20M /mnt/lustrefs/${benchmark_directory}
+

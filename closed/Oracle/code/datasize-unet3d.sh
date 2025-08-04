@@ -1,0 +1,1 @@
+mlpstorage training datasize -m unet3d --client-host-memory-in-gb 96 --max-accelerators 44 --num-client-hosts 11 --accelerator-type a100  --results-dir ./Final/Closed/Oracle-540.8T-LFS-125MBperSec-perTB/11N-4PPN-A100

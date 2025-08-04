@@ -1,0 +1,117 @@
+System:
+  name: Data24_EBOF_24Drive_3Node
+  description: Western Digital Data24-4200 
+  storage_location: remote
+  client_software: in-box
+  storage_interface: block
+  required_rack_units: 2                #  EBOF only, client nodes and switch not included
+  shared_capabilities:
+    multi_host_support: True           # False is used for local storage
+    simultaneous_write_support: True   # Are simultaneous writes by multiple hosts supported in the submitted configuration
+    simultaneous_read_support: True    # Are simultaneous reads by multiple hosts supported in the submitted configuration
+  max_sequential_read: # Optional - GiB/s
+  max_sequential_write: # Optional - GiB/s
+  max_random_read: # Optional - GiB/s
+  max_random_write: # Optional - GiB/s
+
+  # The following will be used to generate the "integrated client storage" and "# Clients with local storage" in the
+  # results table.
+  use_local_storage: false
+  integrated_client_storage: na                    # Describe the storage present PER NODE in client nodes for the solution
+  num_clients_with_integrated_storage: 0           # Number of clients with integrated storage
+
+  # The following will map to the "Storage System Type" column in the results table. If "use_local_drives" is True,
+  #   then "Local File + " will be prepended to the storage type
+  system_architecture: fabric-attached block
+  useable_capacity:  69.8     #  Specified in TiB.  This is 24 drives with 6.4TB each, in RAID 10.
+
+PowerRequirements:
+  # All storage nodes need to be listed (data, metadata, etc) as well as any required backend switching
+  ebof:
+    quantity: 1
+    psu1_nameplate_power: 800
+    psu2_nameplate_power: 800
+    design_power: 800
+    num_active_psus: 2
+    num_passive_psus: 1
+  backend_switch:
+    quantity: 1
+    psu1_nameplate_power: 1100   # network PSU
+    psu2_nameplate_power: 1100   # network PSU
+    design_power: 1100
+    num_active_psus: 2
+    num_passive_psus: 1
+
+
+# All nodes used need to be listed. Clients, Data storage, metadata, front-end, back-end, etc
+Nodes:
+  # Useful name for the client describing it's role in the system under test
+  dlio_client:  # This can be DLIO Client, storage node, storage controller, AwesomeMarketingName_Type1, etc
+    quantity: 3  # How many of this node
+    hardware:
+      model: SMC H12DSU-iN
+      rack_units: 1
+      power_supplies: 2
+      psu_configuration: active/passive
+      psu_rating: 1200
+      memory_capacity: 512GB
+      memory_configuration: 16x32GB
+      cpu_qty: 2
+      cpu_model: AMD 7542
+      cpu_cores: 32
+    networking:
+      management:
+        model: intel x710
+        speed: 1Gbps
+        qty: 1
+      fabric:
+        model: Mellanox ConnectX-6
+        speed: 2x 100Gbps
+        qty: 2
+        mtu: 4500
+    operating_system:
+      name: Ubuntu
+      version: 24.04 LTS
+      release_date: 2024-04-25
+      kernel_version: 6.8.0-62-generic
+      cpu_architecture: x86_64
+    storage:
+      drive_type: Kioxia CM7-V 6.4T
+      protocol: nvme-rdma
+      qty: 8
+      multipath: enabled
+      raid: mdadm RAID 10
+    tuning:
+      # All non-default tunings for OS need to be listed
+      hyperthreads: disabled
+      turbo: enabled
+      mpi_configuration:
+        environment_variables: Defaults
+        version: Open MPI 4.1.6
+      sysctl_parameters:
+        vm.swappiness: 0
+        vm.dirty_bytes: 50000000
+        dev.raid.speed_limit_max: 5000000
+        dev.raid.speed_limit_min: 50000
+
+  ebof: # This can be DLIO Client, storage node, storage controller, AwesomeMarketingName_Type1, etc
+    quantity: 1  # How many of this node
+    hardware:
+      model: WDC OpenFlex Data24-4200
+      rack_units: 2
+      power_supplies: 2
+      psu_configuration: active/passive
+      psu_rating: 800
+    networking:
+      management:
+        model: unknown
+        speed: 1Gbps
+        qty: 1
+      fabric:
+        speed: 100Gbps
+        qty: 12
+    drives:
+      model: Kioxia CM7-V 6.4T
+      qty: 24
+
+

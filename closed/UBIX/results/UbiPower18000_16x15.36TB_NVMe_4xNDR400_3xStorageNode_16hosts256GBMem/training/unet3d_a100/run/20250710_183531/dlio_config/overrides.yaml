@@ -1,0 +1,6 @@
+- workload=unet3d_a100
+- ++workload.dataset.num_files_train=1176000
+- ++workload.reader.read_threads=16
+- ++workload.dataset.num_subfolders_train=117
+- ++workload.reader.odirect=true
+- ++workload.dataset.data_folder=/mnt/ubix_mlperf/unet3d_n1176000/unet3d

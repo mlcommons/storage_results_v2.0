@@ -1,0 +1,112 @@
+{
+  "args": {
+    "program": "training",
+    "command": "datagen",
+    "results_dir": "/home/user/mlperf_results/",
+    "loops": 1,
+    "config_file": null,
+    "closed": false,
+    "debug": false,
+    "verbose": false,
+    "stream_log_level": "INFO",
+    "allow_invalid_params": false,
+    "what_if": false,
+    "hosts": [
+      "192.168.255.65",
+      "192.168.255.66",
+      "192.168.255.67",
+      "192.168.255.68",
+      "192.168.255.69",
+      "192.168.255.70"
+    ],
+    "model": "unet3d",
+    "exec_type": "mpi",
+    "mpi_bin": "mpirun",
+    "oversubscribe": false,
+    "allow_run_as_root": true,
+    "mpi_params": null,
+    "num_processes": 384,
+    "data_dir": "/mnt/yrfs/mlperf_training_data",
+    "params": [
+      "dataset.num_files_train=630000",
+      "dataset.num_subfolders_train=63"
+    ],
+    "dlio_bin_path": null,
+    "num_client_hosts": 6
+  },
+  "debug": null,
+  "run_datetime": "20250702_162955",
+  "run_number": 0,
+  "runtime": 3537.6119232177734,
+  "verification": null,
+  "command_output_files": [
+    {
+      "command": "mpirun -n 384 -host 192.168.255.65:64,192.168.255.66:64,192.168.255.67:64,192.168.255.68:64,192.168.255.69:64,192.168.255.70:64 --allow-run-as-root /home/user/.venvs/mlperf_env/bin/dlio_benchmark workload=unet3d_datagen ++hydra.run.dir=/home/user/mlperf_results/training/unet3d/datagen/20250702_162955 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=630000 ++workload.dataset.num_subfolders_train=63 ++workload.dataset.data_folder=/mnt/yrfs/mlperf_training_data/unet3d --config-dir=/home/user/storage/configs/dlio",
+      "stdout": "/home/user/mlperf_results/training/unet3d/datagen/20250702_162955/training_datagen.stdout.log",
+      "stderr": "/home/user/mlperf_results/training/unet3d/datagen/20250702_162955/training_datagen.stderr.log"
+    }
+  ],
+  "run_result_output": "/home/user/mlperf_results/training/unet3d/datagen/20250702_162955",
+  "metadata_filename": "training_20250702_162955_metadata.json",
+  "metadata_file_path": "/home/user/mlperf_results/training/unet3d/datagen/20250702_162955/training_20250702_162955_metadata.json",
+  "_config_name": "unet3d_datagen",
+  "base_command": "dlio_benchmark",
+  "base_path": "/home/user/.venvs/mlperf_env/bin",
+  "base_command_path": "/home/user/.venvs/mlperf_env/bin/dlio_benchmark",
+  "config_path": "/home/user/storage/configs/dlio",
+  "per_host_mem_kB": null,
+  "total_mem_kB": null,
+  "config_file": "unet3d_datagen.yaml",
+  "params_dict": {
+    "dataset.num_files_train": "630000",
+    "dataset.num_subfolders_train": "63",
+    "dataset.data_folder": "/mnt/yrfs/mlperf_training_data/unet3d"
+  },
+  "yaml_params": {
+    "model": {
+      "name": "unet3d",
+      "type": "cnn",
+      "model_size": 499153191
+    },
+    "framework": "pytorch",
+    "workflow": {
+      "generate_data": true,
+      "train": false,
+      "checkpoint": false
+    },
+    "dataset": {
+      "data_folder": "data/unet3d/",
+      "format": "npz",
+      "num_files_train": 168,
+      "num_samples_per_file": 1,
+      "record_length_bytes": 146600628,
+      "record_length_bytes_stdev": 68341808,
+      "record_length_bytes_resize": 2097152
+    }
+  },
+  "combined_params": {
+    "model": {
+      "name": "unet3d",
+      "type": "cnn",
+      "model_size": 499153191
+    },
+    "framework": "pytorch",
+    "workflow": {
+      "generate_data": true,
+      "train": false,
+      "checkpoint": false
+    },
+    "dataset": {
+      "data_folder": "data/unet3d/",
+      "format": "npz",
+      "num_files_train": "630000",
+      "num_samples_per_file": 1,
+      "record_length_bytes": 146600628,
+      "record_length_bytes_stdev": 68341808,
+      "record_length_bytes_resize": 2097152,
+      "num_subfolders_train": "63"
+    }
+  },
+  "executed_command": "mpirun -n 384 -host 192.168.255.65:64,192.168.255.66:64,192.168.255.67:64,192.168.255.68:64,192.168.255.69:64,192.168.255.70:64 --allow-run-as-root /home/user/.venvs/mlperf_env/bin/dlio_benchmark workload=unet3d_datagen ++hydra.run.dir=/home/user/mlperf_results/training/unet3d/datagen/20250702_162955 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=630000 ++workload.dataset.num_subfolders_train=63 ++workload.dataset.data_folder=/mnt/yrfs/mlperf_training_data/unet3d --config-dir=/home/user/storage/configs/dlio",
+  "benchmark_type": "training"
+}

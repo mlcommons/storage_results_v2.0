@@ -1,0 +1,50 @@
+
+		- [CLOSED] Closed parameter override allowed: reader.read_threads = 32 (Parameter: Overrode Parameters)
+		- [CLOSED] Closed parameter override allowed: dataset.data_folder = /mnt/lustrefs/unet3d11N/unet3d (Parameter: Overrode Parameters)
+		- [CLOSED] Unet3D training requires executing a checkpoing (Parameter: workflow.checkpoint, Expected: True, Actual: True)
+	    Metrics:
+		- save_checkpoint_io_mean_GB_per_second: 0.0
+		- save_checkpoint_io_stdev_GB_per_second: 0.0
+		- save_checkpoint_duration_mean_seconds: 0.0
+		- save_checkpoint_duration_stdev_seconds: 0.0
+		- checkpoint_size_GB: 0.0
+		- train_au_percentage: 91.0%, 90.7%, 90.7%, 90.9%, 90.9%
+		- train_au_mean_percentage: 90.8%
+		- train_au_meet_expectation: success
+		- train_au_stdev_percentage: 0.1%
+		- train_throughput_samples_per_second: 432.9, 431.6, 431.2, 432.2, 432.2
+		- train_throughput_mean_samples_per_second: 432.0
+		- train_throughput_stdev_samples_per_second: 0.6
+		- train_io_mean_MB_per_second: 60,403.1
+		- train_io_stdev_MB_per_second: 77.5
+
+
+
+------------------------- OPEN Report -------------------------
+
+------------------------- INVALID Report -------------------------
+
+========================= Submissions Report =========================
+
+------------------------- CLOSED Report -------------------------
+	WorkloadID: Training - unet3d, Accelerator: h100
+	    Benchmark Type: training
+	    Command: run_benchmark
+	    Runs: 
+		- ./Final/Closed/Oracle-540.8T-LFS-125MBperSec-perTB/11N-2PPN-H100/training/unet3d/run/20250703_141152 - [CLOSED]
+		- ./Final/Closed/Oracle-540.8T-LFS-125MBperSec-perTB/11N-2PPN-H100/training/unet3d/run/20250703_123942 - [CLOSED]
+		- ./Final/Closed/Oracle-540.8T-LFS-125MBperSec-perTB/11N-2PPN-H100/training/unet3d/run/20250703_144231 - [CLOSED]
+		- ./Final/Closed/Oracle-540.8T-LFS-125MBperSec-perTB/11N-2PPN-H100/training/unet3d/run/20250703_131028 - [CLOSED]
+		- ./Final/Closed/Oracle-540.8T-LFS-125MBperSec-perTB/11N-2PPN-H100/training/unet3d/run/20250703_134115 - [CLOSED]
+		- ./Final/Closed/Oracle-540.8T-LFS-125MBperSec-perTB/11N-2PPN-H100/training/unet3d/run/20250703_151306 - [CLOSED]
+	    Issues:
+		- [CLOSED] All runs satisfy the CLOSED category (Parameter: category, Expected: OPEN or CLOSED, Actual: ['CLOSED'])
+
+
+
+------------------------- OPEN Report -------------------------
+
+------------------------- INVALID Report -------------------------
+2025-07-03 15:45:12|INFO: Generating reports for ./Final/Closed/Oracle-540.8T-LFS-125MBperSec-perTB/11N-2PPN-H100
+2025-07-03 15:45:12|INFO: Writing results to ./Final/Closed/Oracle-540.8T-LFS-125MBperSec-perTB/11N-2PPN-H100/results.csv
+2025-07-03 15:45:12|INFO: Writing results to ./Final/Closed/Oracle-540.8T-LFS-125MBperSec-perTB/11N-2PPN-H100/results.json

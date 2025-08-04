@@ -1,0 +1,41 @@
+[OUTPUT] 2025-06-22T17:56:34.473818 Running DLIO [Generating data & Training & Evaluation] with 1 process(es)
+[WARNING] The amount of dataset is smaller than the host memory; data might be cached after the first epoch. Increase the size of dataset to eliminate the caching effect!!!
+[OUTPUT] 2025-06-22T17:56:34.475955 Starting data generation
+[OUTPUT] 2025-06-22T17:56:34.485715 Generation done
+[OUTPUT] 2025-06-22T17:56:34.486539 Max steps per epoch: 16 = 1 * 64 / 4 / 1 (samples per file * num files / batch size / comm size)
+[OUTPUT] 2025-06-22T17:56:34.486606 Steps per eval: 8 = 1 * 8 / 1 / 1 (samples per file * num files / batch size eval / comm size)
+[OUTPUT] 2025-06-22T17:56:34.488265 Starting epoch 1: 16 steps expected
+[OUTPUT] 2025-06-22T17:56:34.488422 Starting block 1
+[OUTPUT] 2025-06-22T17:56:50.531641 Ending block 1 - 16 steps completed in 16.04 s
+[OUTPUT] 2025-06-22T17:56:50.535501 Epoch 1 - Block 1 [Training] Accelerator Utilization [AU] (%): 99.9100
+[OUTPUT] 2025-06-22T17:56:50.535551 Epoch 1 - Block 1 [Training] Throughput (samples/second): 3.7296
+[OUTPUT] 2025-06-22T17:56:50.535577 Epoch 1 - Block 1 [Training] Computation time per step (second): 1.0001+/-0.0000 (set value: {'mean': 1.0})
+[OUTPUT] 2025-06-22T17:56:50.535965 Ending epoch 1 - 16 steps completed in 16.05 s
+[OUTPUT] 2025-06-22T17:56:50.536817 Starting eval - 8 steps expected
+[OUTPUT] 2025-06-22T17:56:54.562787 Ending eval - 8 steps completed in 4.03 s
+[OUTPUT] 2025-06-22T17:56:54.564672 Epoch 1 [Eval] Accelerator Utilization [AU] (%): 99.8931
+[OUTPUT] 2025-06-22T17:56:54.564721 Epoch 1 [Eval] Throughput (samples/second): 1.9872
+[OUTPUT] 2025-06-22T17:56:54.565288 Starting epoch 2: 16 steps expected
+[OUTPUT] 2025-06-22T17:56:54.565493 Starting block 1
+[OUTPUT] 2025-06-22T17:57:10.581539 Ending block 1 - 16 steps completed in 16.02 s
+[OUTPUT] 2025-06-22T17:57:10.582599 Epoch 2 - Block 1 [Training] Accelerator Utilization [AU] (%): 99.9223
+[OUTPUT] 2025-06-22T17:57:10.582640 Epoch 2 - Block 1 [Training] Throughput (samples/second): 3.7301
+[OUTPUT] 2025-06-22T17:57:10.582671 Epoch 2 - Block 1 [Training] Computation time per step (second): 1.0001+/-0.0000 (set value: {'mean': 1.0})
+[OUTPUT] 2025-06-22T17:57:10.582979 Ending epoch 2 - 16 steps completed in 16.02 s
+[OUTPUT] 2025-06-22T17:57:10.583785 Starting eval - 8 steps expected
+[OUTPUT] 2025-06-22T17:57:14.590416 Ending eval - 8 steps completed in 4.01 s
+[OUTPUT] 2025-06-22T17:57:14.591425 Epoch 2 [Eval] Accelerator Utilization [AU] (%): 99.9106
+[OUTPUT] 2025-06-22T17:57:14.591463 Epoch 2 [Eval] Throughput (samples/second): 1.9967
+[OUTPUT] 2025-06-22T17:57:14.591813 Starting epoch 3: 16 steps expected
+[OUTPUT] 2025-06-22T17:57:14.591967 Starting block 1
+[OUTPUT] 2025-06-22T17:57:30.604835 Ending block 1 - 16 steps completed in 16.01 s
+[OUTPUT] 2025-06-22T17:57:30.605921 Epoch 3 - Block 1 [Training] Accelerator Utilization [AU] (%): 99.9483
+[OUTPUT] 2025-06-22T17:57:30.605956 Epoch 3 - Block 1 [Training] Throughput (samples/second): 3.7311
+[OUTPUT] 2025-06-22T17:57:30.605980 Epoch 3 - Block 1 [Training] Computation time per step (second): 1.0001+/-0.0000 (set value: {'mean': 1.0})
+[OUTPUT] 2025-06-22T17:57:30.606191 Ending epoch 3 - 16 steps completed in 16.01 s
+[OUTPUT] 2025-06-22T17:57:30.606906 Starting eval - 8 steps expected
+[OUTPUT] 2025-06-22T17:57:34.619417 Ending eval - 8 steps completed in 4.01 s
+[OUTPUT] 2025-06-22T17:57:34.620727 Epoch 3 [Eval] Accelerator Utilization [AU] (%): 99.7630
+[OUTPUT] 2025-06-22T17:57:34.620764 Epoch 3 [Eval] Throughput (samples/second): 1.9938
+[OUTPUT] 2025-06-22T17:57:34.621201 Starting epoch 4: 16 steps expected
+[OUTPUT] 2025-06-22T17:57:34.621396 Starting block 1

@@ -1,0 +1,6 @@
+- workload=llama3_405b
+- ++workload.checkpoint.mode=subset
+- ++workload.model.parallelism.data=2
+- ++workload.checkpoint.num_checkpoints_read=10
+- ++workload.checkpoint.num_checkpoints_write=10
+- ++workload.checkpoint.checkpoint_folder=/mnt/nvme/llama3-405b

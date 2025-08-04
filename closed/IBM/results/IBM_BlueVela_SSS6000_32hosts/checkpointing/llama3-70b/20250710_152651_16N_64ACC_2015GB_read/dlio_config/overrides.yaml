@@ -1,0 +1,4 @@
+- workload=llama3_70b
+- ++workload.checkpoint.num_checkpoints_read=10
+- ++workload.checkpoint.num_checkpoints_write=0
+- ++workload.checkpoint.checkpoint_folder=/gpfs/gpfs0_bench/llama3-70b/llama3-70b

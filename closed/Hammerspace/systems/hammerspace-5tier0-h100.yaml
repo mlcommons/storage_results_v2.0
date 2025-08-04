@@ -1,0 +1,124 @@
+System:
+  name: Hammerspace_5Tier0_H100
+  description: Hammerspace Tier 0 Configuration with Five Clients
+  storage_location: remote & local
+  client_software: in-box
+  storage_interface: file
+  required_rack_units: 1
+  shared_capabilities:
+    multi_host_support: True                # False is used for local storage
+    simultaneous_write_support: True        # Are simultaneous writes by multiple hosts supported in the submitted configuration
+    simultaneous_read__support: True        # Are simultaneous reads by multiple hosts supported in the submitted configuration
+  max_sequential_read: # Optional - GiB/s
+  max_sequential_write: # Optional - GiB/s
+  max_random_read: # Optional - GiB/s
+  max_random_write: # Optional - GiB/s
+  use_local_storage: True
+  integrated_client_storage: 50x 7.68TB NVMe
+  system_architecture: shared file
+  useable_capacity: 70 TiB
+
+PowerRequirements:
+  dlio_client:
+    quantity: 5                             # number of dlio_client nodes
+    psu1_nameplate_power: 860               # power in watts
+    psu2_nameplate_power: 860               # power in watts
+    design_power: 860
+    num_active_psus: 1
+    num_passive_psus: 1
+
+  # All storage nodes need to be listed (data, metadata, etc) as well as any required backed switching
+  storage_metadata_node:
+    quantity: 1                             # number of storage data nodes
+    psu1_nameplate_power: 1100              # power in watts
+    psu2_nameplate_power: 1100              # power in watts
+    design_power: 1100
+    num_active_psus: 1
+    num_passive_psus: 1
+  backend_switch:
+    quantity: 0
+    psu1_nameplate_power: 0                 # network PSU
+    psu2_nameplate_power: 0                 # network PSU
+    design_power: 0
+    num_active_psus: 0
+    num_passive_psus: 0
+
+
+# All nodes used need to be listed. Clients, Data storage, metadata, front-end, back-end, etc
+Nodes:
+  # Useful name for the client describing it's role in the system under test
+  dlio_client:                              # This can be DLIO Client, storage node, storage controller, AwesomeMarketingName_Type1, etc
+    quantity: 5                             # How many of this node
+    hardware:
+      model: SMC SYS-121C-TN10R
+      rack_units: 1
+      power_supplies: 2
+      psu_configuration: active/passive
+      psu_rating: 860
+      memory_capacity: 1024GB
+      memory_configuration: 16x64GB
+      cpu_qty: 2
+      cpu_model: Intel 6542Y
+      cpu_cores: 48
+    networking:
+      management:
+        model: intel i350
+        speed: 1Gbps
+        qty: 1
+      data_fabric:
+        model: NVIDIA MCX75310AAS-NEAT
+        speed: 400Gbps
+        qty: 2
+    storage:
+      model: ScaleFlux CSD5000 7.68TB CSDU7UVG76
+      qty: 10
+    operating_system:
+      name: Rocky
+      version: 9.5
+      release_date: 2024-11-19
+      kernel_version: 6.12.24-8.hs.91.el9.x86_64
+      cpu_architecture: x86_64
+    tuning:
+      # All non-default tunings for OS need to be listed
+      mpi_configuration:
+        environment_variables: node:OVERSUBSCRIBE
+        version: Open MPI 5.0.8
+      sysctl_parameters: None
+      nfs_parameter:
+        mount: -o nconnect=16
+        nfs_tuning:
+          - "/sys/kernel/debug/nfsd/io_cache_write=2"
+          - "/sys/kernel/debug/nfsd/io_cache_read=2"
+          - "/sys/module/nfs/parameters/localio_async_probe=N"
+          - "/sys/module/nfs/parameters/localio_O_DIRECT_semantics=Y"
+          - "/sys/module/nfs/parameters/localio_enabled=Y"
+          - "/sys/module/nfsv4/parameters/nfs4_files_uncacheable=Y (N for unet3d)"
+  storage_data_node: # This can be DLIO Client, storage node, storage controller, AwesomeMarketingName_Type1, etc
+    quantity: 1                           # How many of this node
+    hardware:
+      model: Lenovo SR630v3
+      rack_units: 1
+      power_supplies: 2
+      psu_configuration: active/passive
+      psu_rating: 1100
+      memory_capacity: 512GB
+      memory_configuration: 16x32GB
+      cpu_qty: 2
+      cpu_model: Intel 6542Y
+      cpu_cores: 48
+    networking:
+      management:
+        model: Broadcom BCM5719
+        speed: 1Gbps
+        qty: 1
+      data_fabric:
+        model: NVIDIA CX755106AS-HEAT
+    storage:
+      model: ScaleFlux CSD5000 7.68TB CSDU7UVG76
+      qty: 2
+    operating_system:
+      name: Hammerspace Anvil
+      version: 5.2.2-39
+      release_date: 2025-07-09
+      kernel_version: 6.12.24-8.hs.91.el8.x86_64
+      cpu_architecture: x86_64

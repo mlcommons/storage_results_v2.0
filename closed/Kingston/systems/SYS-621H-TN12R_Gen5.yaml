@@ -1,0 +1,110 @@
+System:
+  name: SYS-621H-TN12R_Gen5
+  description: SMC621H Gen5 system configuration for MLPerf v2 submission
+  storage_location: [ local ]
+  client_software: [ in-box  ]
+  storage_interface: [ block  ]
+  system_architecture: direct-attached block
+  required_rack_units:
+  shared_capabilities:
+    multi_host_support: False            # False is used for local storage
+    simultaneous_write_support: False   # Are simultaneous writes by multiple hosts supported in the submitted configuration
+    simultaneous_read__support: False   # Are simultaneous reads by multiple hosts supported in the submitted configuration
+  max_sequential_read: 14GB/s
+  max_sequential_write: 10 GB/s
+  max_random_read: 2800K IOPS
+  max_random_write: 500K IOPS
+
+PowerRequirements:
+  # For local submission, client and storage are the same physical system
+  dlio_client:
+    quantity: 1
+    psu1_nameplate_power: 1200
+    psu2_nameplate_power: 1200
+    psu3_nameplate_power: 
+    design_power: 1200
+    num_active_psus: 1
+    num_passive_psus: 1
+
+  # Storage data node is the same as client for local submission
+  storage_data_node:
+    quantity: 0  # Set to 0 since it's the same as dlio_client
+    psu1_nameplate_power: 0
+    psu2_nameplate_power: 0
+    psu3_nameplate_power: 
+    design_power: 0
+    num_active_psus: 0
+    num_passive_psus: 0
+    
+  backend_switch:
+    quantity: 0
+    psu1_nameplate_power: 0
+    psu2_nameplate_power: 0
+    design_power: 0
+    num_active_psus: 0
+    num_passive_psus: 0
+
+
+# All nodes used need to be listed. Clients, Data storage, metadata, front-end, back-end, etc
+Nodes:
+  # Useful name for the client describing it's role in the system under test
+  dlio_client:  # This can be DLIO Client, storage node, storage controller, AwesomeMarketingName_Type1, etc
+    quantity: 1  # How many of this node
+    hardware:
+      model: SYS-621H-TN12R
+      rack_units: 2
+      power_supplies: 2
+      psu_configuration: active/passive
+      psu_rating: 1200
+      memory_capacity: 251GB
+      memory_configuration: 251GB
+      cpu_qty: 2
+      cpu_model: INTEL(R) XEON(R) SILVER 4510
+      cpu_cores: 24
+    networking:
+      management:
+        model: intel i210
+        speed: 1Gbps
+        qty: 1
+    storage:
+      devices:
+        - vendor: KINGSTON
+          model: SEDC3000ME3T8BK
+          type: NVMe SSD
+          protocol: NVMe
+          capacity: 3.84TB
+          count: 1
+        - vendor: KINGSTON
+          model: SEDC3000ME7T6BK
+          type: NVMe SSD
+          protocol: NVMe
+          capacity: 7.68TB
+          count: 1
+        - vendor: KINGSTON
+          model: SEDC3000ME15T3BK
+          type: NVMe SSD
+          protocol: NVMe
+          capacity: 15.36TB
+          count: 1
+      interconnect:
+        type: PCIe Gen5.0x4 connected to a Gen5x4 backplane
+        generation: Gen5
+    operating_system:
+      name: Ubuntu
+      version: 22.04.5 LTS
+      release_date: 2022-04-12
+      kernel_version: 6.5.0-15-generic
+      cpu_architecture: x86_64
+    tuning:
+      mpi_configuration:
+        environment_variables: param reader.read_threads=4 for resnet, reader.read_threads=16 for unet3d, cosmoflow and checkpointing
+        version: Open MPI 4.1.2
+      sysctl_parameters:
+        - "NVMe interrupt coalescing set to feature-id 0x8 = 0x070a (700 µs timeout, 11-I/O threshold) reduces CPU overhead under bursty loads."
+        - "ResNet-50 (random small reads): max_sectors_kb=32, read_ahead_kb=32, nomerges=2, 16 reader threads, optimizes random I/O throughput."
+        - "UNet3D, CosmoFlow, and checkpointing (sequential workloads): max_sectors_kb=128, read_ahead_kb=4096, nomerges=0, leverages large sequential tunables for steady bandwidth."
+        - "System-wide settings: rq_affinity=2 (NUMA-aware interrupt routing), wbt_lat_usec=0 (disable write-back throttling), add_rand (scatter I/O to avoid alignment hotspots)."
+
+        
+
+

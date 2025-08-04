@@ -1,0 +1,139 @@
+{
+  "args": {
+    "program": "training",
+    "command": "datasize",
+    "results_dir": "/mnt/hs_test/Hammerspace_unet3d_5Tier0_H100",
+    "loops": 1,
+    "config_file": null,
+    "closed": false,
+    "debug": false,
+    "verbose": false,
+    "stream_log_level": "INFO",
+    "allow_invalid_params": false,
+    "what_if": false,
+    "hosts": [
+      "127.0.0.1"
+    ],
+    "model": "unet3d",
+    "client_host_memory_in_gb": 1024,
+    "exec_type": "mpi",
+    "mpi_bin": "mpirun",
+    "oversubscribe": false,
+    "allow_run_as_root": false,
+    "mpi_params": null,
+    "max_accelerators": 84,
+    "accelerator_type": "h100",
+    "num_client_hosts": 5,
+    "data_dir": null,
+    "params": [
+      "dataset.num_subfolders_train=100"
+    ],
+    "dlio_bin_path": null,
+    "num_processes": 84
+  },
+  "debug": null,
+  "run_datetime": "20250711_035032",
+  "run_number": 0,
+  "runtime": 0.00014162063598632812,
+  "verification": null,
+  "command_output_files": [],
+  "run_result_output": "/mnt/hs_test/Hammerspace_unet3d_5Tier0_H100/training/unet3d/datasize/20250711_035032",
+  "metadata_filename": "training_20250711_035032_metadata.json",
+  "metadata_file_path": "/mnt/hs_test/Hammerspace_unet3d_5Tier0_H100/training/unet3d/datasize/20250711_035032/training_20250711_035032_metadata.json",
+  "_config_name": "unet3d_h100",
+  "base_command": "dlio_benchmark",
+  "base_path": "/root/env/bin",
+  "base_command_path": "/root/env/bin/dlio_benchmark",
+  "config_path": "/root/save/mlperf/storage/configs/dlio",
+  "per_host_mem_kB": null,
+  "total_mem_kB": null,
+  "cluster_information": "<mlpstorage.rules.ClusterInformation object at 0x7fcb47f78ce0>",
+  "config_file": "unet3d_h100.yaml",
+  "params_dict": {
+    "dataset.num_subfolders_train": "100"
+  },
+  "yaml_params": {
+    "model": {
+      "name": "unet3d",
+      "type": "cnn",
+      "model_size": 499153191
+    },
+    "framework": "pytorch",
+    "workflow": {
+      "generate_data": false,
+      "train": true,
+      "checkpoint": false
+    },
+    "dataset": {
+      "data_folder": "data/unet3d/",
+      "format": "npz",
+      "num_files_train": 168,
+      "num_samples_per_file": 1,
+      "record_length_bytes": 146600628,
+      "record_length_bytes_stdev": 68341808,
+      "record_length_bytes_resize": 2097152
+    },
+    "reader": {
+      "data_loader": "pytorch",
+      "batch_size": 7,
+      "read_threads": 4,
+      "file_shuffle": "seed",
+      "sample_shuffle": "seed"
+    },
+    "train": {
+      "epochs": 5,
+      "computation_time": 0.323
+    },
+    "checkpoint": {
+      "checkpoint_folder": "checkpoints/unet3d",
+      "checkpoint_after_epoch": 5,
+      "epochs_between_checkpoints": 2
+    },
+    "metric": {
+      "au": 0.9
+    }
+  },
+  "combined_params": {
+    "model": {
+      "name": "unet3d",
+      "type": "cnn",
+      "model_size": 499153191
+    },
+    "framework": "pytorch",
+    "workflow": {
+      "generate_data": false,
+      "train": true,
+      "checkpoint": false
+    },
+    "dataset": {
+      "data_folder": "data/unet3d/",
+      "format": "npz",
+      "num_files_train": 168,
+      "num_samples_per_file": 1,
+      "record_length_bytes": 146600628,
+      "record_length_bytes_stdev": 68341808,
+      "record_length_bytes_resize": 2097152,
+      "num_subfolders_train": "100"
+    },
+    "reader": {
+      "data_loader": "pytorch",
+      "batch_size": 7,
+      "read_threads": 4,
+      "file_shuffle": "seed",
+      "sample_shuffle": "seed"
+    },
+    "train": {
+      "epochs": 5,
+      "computation_time": 0.323
+    },
+    "checkpoint": {
+      "checkpoint_folder": "checkpoints/unet3d",
+      "checkpoint_after_epoch": 5,
+      "epochs_between_checkpoints": 2
+    },
+    "metric": {
+      "au": 0.9
+    }
+  },
+  "benchmark_type": "training"
+}

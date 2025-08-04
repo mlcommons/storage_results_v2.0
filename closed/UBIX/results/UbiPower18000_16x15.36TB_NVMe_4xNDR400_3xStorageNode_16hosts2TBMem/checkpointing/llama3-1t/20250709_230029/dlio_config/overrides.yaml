@@ -1,0 +1,4 @@
+- workload=llama3_1t
+- ++workload.checkpoint.num_checkpoints_read=0
+- ++workload.checkpoint.num_checkpoints_write=10
+- ++workload.checkpoint.checkpoint_folder=/mnt/ubix_mlperf/llama3-1t_p1024/llama3-1t

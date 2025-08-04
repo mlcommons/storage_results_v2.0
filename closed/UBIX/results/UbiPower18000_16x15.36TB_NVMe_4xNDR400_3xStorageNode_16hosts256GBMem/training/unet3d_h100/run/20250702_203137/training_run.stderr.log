@@ -1,0 +1,52 @@
+[OUTPUT] 2025-07-02T20:31:49.223016 Running DLIO [Training & Checkpointing] with 176 process(es)
+[OUTPUT] 2025-07-02T20:33:08.537770 Model size: 0.000010 GB 
+[OUTPUT] 2025-07-02T20:33:08.538367 Total checkpoint size: 0.000010 GB 
+[OUTPUT] 2025-07-02T20:33:08.550662 Max steps per epoch: 500 = 1 * 616000 / 7 / 176 (samples per file * num files / batch size / comm size)
+[OUTPUT] 2025-07-02T20:33:08.771183 Starting epoch 1: 500 steps expected
+[OUTPUT] 2025-07-02T20:33:08.771559 Starting block 1
+[OUTPUT] 2025-07-02T20:36:18.047708 Ending block 1 - 500 steps completed in 189.28 s
+[OUTPUT] 2025-07-02T20:36:18.052193 Epoch 1 - Block 1 [Training] Accelerator Utilization [AU] (%): 88.0750
+[OUTPUT] 2025-07-02T20:36:18.052237 Epoch 1 - Block 1 [Training] Throughput (samples/second): 3348.8580
+[OUTPUT] 2025-07-02T20:36:18.052263 Epoch 1 - Block 1 [Training] Computation time per step (second): 0.3234+/-0.0000 (set value: {'mean': 0.323})
+[OUTPUT] 2025-07-02T20:36:18.058258 Ending epoch 1 - 500 steps completed in 189.29 s
+[OUTPUT] 2025-07-02T20:36:18.075992 Starting epoch 2: 500 steps expected
+[OUTPUT] 2025-07-02T20:36:18.076238 Starting block 1
+[OUTPUT] 2025-07-02T20:39:21.948028 Ending block 1 - 500 steps completed in 183.87 s
+[OUTPUT] 2025-07-02T20:39:21.949581 Epoch 2 - Block 1 [Training] Accelerator Utilization [AU] (%): 90.4482
+[OUTPUT] 2025-07-02T20:39:21.949622 Epoch 2 - Block 1 [Training] Throughput (samples/second): 3439.1146
+[OUTPUT] 2025-07-02T20:39:21.949649 Epoch 2 - Block 1 [Training] Computation time per step (second): 0.3234+/-0.0000 (set value: {'mean': 0.323})
+[OUTPUT] 2025-07-02T20:39:21.953193 Ending epoch 2 - 500 steps completed in 183.88 s
+[OUTPUT] 2025-07-02T20:39:21.971245 Starting epoch 3: 500 steps expected
+[OUTPUT] 2025-07-02T20:39:21.971475 Starting block 1
+[OUTPUT] 2025-07-02T20:42:26.076589 Ending block 1 - 500 steps completed in 184.11 s
+[OUTPUT] 2025-07-02T20:42:26.078063 Epoch 3 - Block 1 [Training] Accelerator Utilization [AU] (%): 90.3191
+[OUTPUT] 2025-07-02T20:42:26.078100 Epoch 3 - Block 1 [Training] Throughput (samples/second): 3434.2486
+[OUTPUT] 2025-07-02T20:42:26.078124 Epoch 3 - Block 1 [Training] Computation time per step (second): 0.3234+/-0.0001 (set value: {'mean': 0.323})
+[OUTPUT] 2025-07-02T20:42:26.081818 Ending epoch 3 - 500 steps completed in 184.11 s
+[OUTPUT] 2025-07-02T20:42:26.100429 Starting epoch 4: 500 steps expected
+[OUTPUT] 2025-07-02T20:42:26.100689 Starting block 1
+[OUTPUT] 2025-07-02T20:45:28.726272 Ending block 1 - 500 steps completed in 182.63 s
+[OUTPUT] 2025-07-02T20:45:28.727829 Epoch 4 - Block 1 [Training] Accelerator Utilization [AU] (%): 91.0747
+[OUTPUT] 2025-07-02T20:45:28.727871 Epoch 4 - Block 1 [Training] Throughput (samples/second): 3463.0082
+[OUTPUT] 2025-07-02T20:45:28.727898 Epoch 4 - Block 1 [Training] Computation time per step (second): 0.3234+/-0.0000 (set value: {'mean': 0.323})
+[OUTPUT] 2025-07-02T20:45:28.731013 Ending epoch 4 - 500 steps completed in 182.63 s
+[OUTPUT] 2025-07-02T20:45:28.749566 Starting epoch 5: 500 steps expected
+[OUTPUT] 2025-07-02T20:45:28.749792 Starting block 1
+[OUTPUT] 2025-07-02T20:48:32.188291 Ending block 1 - 500 steps completed in 183.44 s
+[OUTPUT] 2025-07-02T20:48:32.189460 Epoch 5 - Block 1 [Training] Accelerator Utilization [AU] (%): 90.6366
+[OUTPUT] 2025-07-02T20:48:32.189496 Epoch 5 - Block 1 [Training] Throughput (samples/second): 3446.3208
+[OUTPUT] 2025-07-02T20:48:32.189520 Epoch 5 - Block 1 [Training] Computation time per step (second): 0.3234+/-0.0000 (set value: {'mean': 0.323})
+[OUTPUT] 2025-07-02T20:48:32.190837 Starting saving checkpoint 1 after total step 500 for epoch 5
+[OUTPUT] 2025-07-02T20:48:32.193659 Finished saving checkpoint 1 for epoch 5 in 0.0028 s; Throughput: 0.0034 GB/s
+[OUTPUT] 2025-07-02T20:48:32.196072 Ending epoch 5 - 500 steps completed in 183.45 s
+[OUTPUT] 2025-07-02T20:48:32.214106 Saved outputs in /root/mlpstorage_test_results/training_unet3d_h100_176acc/training/unet3d/run/20250702_203137
+[OUTPUT] Averaged metric over all steps/epochs
+[METRIC] ==========================================================
+[METRIC] Number of Simulated Accelerators: 176 
+[METRIC] Training Accelerator Utilization [AU] (%): 90.1093 (1.0573)
+[METRIC] Training Throughput (samples/second): 3426.2529 (40.2139)
+[METRIC] Training I/O Throughput (MB/second): 479021.8602 (5622.2746)
+[METRIC] train_au_meet_expectation: success
+[METRIC] ==========================================================
+
+[OUTPUT] 2025-07-02T20:48:32.221682 outputs saved in RANKID_output.json

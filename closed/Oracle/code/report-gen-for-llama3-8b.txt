@@ -1,0 +1,58 @@
+
+========================= Results Report =========================
+
+------------------------- CLOSED Report -------------------------
+	RunID: /mnt/lustrefs/storage/checkpointing/llama3-8b-1node/checkpointing/llama3-8b/20250705_175027
+	    Benchmark Type: checkpointing
+	    Command: None
+	    Model: llama3-8b
+		- No issues found
+	    Metrics:
+		- save_checkpoint_io_mean_GB_per_second: nan
+		- save_checkpoint_io_stdev_GB_per_second: nan
+		- save_checkpoint_duration_mean_seconds: nan
+		- save_checkpoint_duration_stdev_seconds: nan
+		- load_checkpoint_io_mean_GB_per_second: 5.1
+		- load_checkpoint_io_stdev_GB_per_second: 0.2
+		- load_checkpoint_duration_mean_seconds: 20.7
+		- load_checkpoint_duration_stdev_seconds: 0.8
+		- checkpoint_size_GB: 104.7
+
+
+	RunID: /mnt/lustrefs/storage/checkpointing/llama3-8b-1node/checkpointing/llama3-8b/20250705_174511
+	    Benchmark Type: checkpointing
+	    Command: None
+	    Model: llama3-8b
+		- No issues found
+	    Metrics:
+		- save_checkpoint_io_mean_GB_per_second: 5.0
+		- save_checkpoint_io_stdev_GB_per_second: 0.2
+		- save_checkpoint_duration_mean_seconds: 20.9
+		- save_checkpoint_duration_stdev_seconds: 0.6
+		- checkpoint_size_GB: 104.7
+
+
+
+------------------------- OPEN Report -------------------------
+
+------------------------- INVALID Report -------------------------
+
+========================= Submissions Report =========================
+
+------------------------- CLOSED Report -------------------------
+	WorkloadID: Checkpointing - llama3-8b
+	    Benchmark Type: checkpointing
+	    Runs: 
+		- /mnt/lustrefs/storage/checkpointing/llama3-8b-1node/checkpointing/llama3-8b/20250705_175027 - [CLOSED]
+		- /mnt/lustrefs/storage/checkpointing/llama3-8b-1node/checkpointing/llama3-8b/20250705_174511 - [CLOSED]
+	    Issues:
+		- [CLOSED] Found expected 10 total read operations (Parameter: checkpoint.num_checkpoints_read, Expected: 10, Actual: 10)
+		- [CLOSED] Found expected 10 total write operations (Parameter: checkpoint.num_checkpoints_write, Expected: 10, Actual: 10)
+		- [CLOSED] Found expected 10 total read and write operations (Parameter: checkpoint.num_checkpoints_read, Expected: 10, Actual: 10)
+		- [CLOSED] All runs satisfy the CLOSED category (Parameter: category, Expected: OPEN or CLOSED, Actual: ['CLOSED'])
+
+
+
+------------------------- OPEN Report -------------------------
+
+------------------------- INVALID Report -------------------------

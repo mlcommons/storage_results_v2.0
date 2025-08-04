@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: nvidia-dali-cuda120
+Version: 1.50.0
+Summary: NVIDIA DALI  for CUDA 12.0. Git SHA: d5c7b54f776fcba58944048f984f5645e7d7d1bb
+Home-page: https://github.com/NVIDIA/dali
+Author: NVIDIA Corporation
+License: Apache License 2.0
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.9, <3.14
+Description-Content-Type: text/x-rst
+Requires-Dist: astunparse<=1.6.3,>=1.6.0
+Requires-Dist: gast<=0.6.0,>=0.3.3
+Requires-Dist: six<=1.17,>=1.16
+Requires-Dist: packaging<=24.2
+Requires-Dist: nvidia-nvimgcodec-cu12[all]<0.6.0,>=0.5.0
+Requires-Dist: nvidia-nvcomp-cu12~=4.0
+Requires-Dist: dm-tree<=0.1.8; python_version < "3.10"
+Requires-Dist: dm-tree<=0.1.9; python_version >= "3.10"
+
+NVIDIA DALI
+===========
+
+The NVIDIA Data Loading Library (DALI) is a library for data loading and
+pre-processing to accelerate deep learning applications. It provides a
+collection of highly optimized building blocks for loading and processing
+image, video and audio data. It can be used as a portable drop-in replacement
+for built in data loaders and data iterators in popular deep learning frameworks.
+
+Deep learning applications require complex, multi-stage data processing pipelines
+that include loading, decoding, cropping, resizing, and many other augmentations.
+These data processing pipelines, which are currently executed on the CPU, have become a
+bottleneck, limiting the performance and scalability of training and inference.
+
+DALI addresses the problem of the CPU bottleneck by offloading data preprocessing to the
+GPU. Additionally, DALI relies on its own execution engine, built to maximize the throughput
+of the input pipeline. Features such as prefetching, parallel execution, and batch processing
+are handled transparently for the user.
+
+In addition, the deep learning frameworks have multiple data pre-processing implementations,
+resulting in challenges such as portability of training and inference workflows, and code
+maintainability. Data processing pipelines implemented using DALI are portable because they
+can easily be retargeted to TensorFlow, PyTorch, MXNet and PaddlePaddle.
+
+For more details please check the
+`latest DALI Documentation <https://docs.nvidia.com/deeplearning/dali/user-guide/docs/index.html>`_.
+
+.. image:: https://raw.githubusercontent.com/NVIDIA/DALI/main/dali.png
+    :width: 800
+    :align: center
+    :alt: DALI Diagram
+

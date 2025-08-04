@@ -1,0 +1,169 @@
+{
+  "args": {
+    "program": "training",
+    "command": "run",
+    "results_dir": "/root/mlpstorage_test_results/training_unet3d_a100_336acc",
+    "loops": 5,
+    "config_file": null,
+    "closed": true,
+    "debug": false,
+    "verbose": false,
+    "stream_log_level": "INFO",
+    "allow_invalid_params": false,
+    "what_if": false,
+    "hosts": [
+      "10.20.1.1",
+      "10.20.1.2",
+      "10.20.1.4",
+      "10.20.1.5",
+      "10.20.1.6",
+      "10.20.1.7",
+      "10.20.1.8",
+      "10.20.1.9",
+      "10.20.1.10",
+      "10.20.1.11",
+      "10.20.1.12",
+      "10.20.1.13",
+      "10.20.1.14",
+      "10.20.1.15",
+      "10.20.1.16",
+      "10.20.1.17"
+    ],
+    "model": "unet3d",
+    "client_host_memory_in_gb": 256,
+    "exec_type": "mpi",
+    "mpi_bin": "mpirun",
+    "oversubscribe": true,
+    "allow_run_as_root": true,
+    "mpi_params": null,
+    "num_accelerators": 336,
+    "accelerator_type": "a100",
+    "num_client_hosts": 16,
+    "data_dir": "/mnt/ubix_mlperf/unet3d_n1176000",
+    "params": [
+      "dataset.num_files_train=1176000",
+      "reader.read_threads=16",
+      "dataset.num_subfolders_train=117",
+      "reader.odirect=true"
+    ],
+    "dlio_bin_path": null,
+    "num_processes": 336
+  },
+  "debug": null,
+  "run_datetime": "20250710_183531",
+  "run_number": 0,
+  "runtime": 1834.577800989151,
+  "verification": "closed",
+  "command_output_files": [
+    {
+      "command": "mpirun -n 336 -host 10.20.1.1:21,10.20.1.2:21,10.20.1.4:21,10.20.1.5:21,10.20.1.6:21,10.20.1.7:21,10.20.1.8:21,10.20.1.9:21,10.20.1.10:21,10.20.1.11:21,10.20.1.12:21,10.20.1.13:21,10.20.1.14:21,10.20.1.15:21,10.20.1.16:21,10.20.1.17:21 --oversubscribe --allow-run-as-root /root/.venvs/MLPerfStorageV2/bin/dlio_benchmark workload=unet3d_a100 ++hydra.run.dir=/root/mlpstorage_test_results/training_unet3d_a100_336acc/training/unet3d/run/20250710_183531 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=1176000 ++workload.reader.read_threads=16 ++workload.dataset.num_subfolders_train=117 ++workload.reader.odirect=true ++workload.dataset.data_folder=/mnt/ubix_mlperf/unet3d_n1176000/unet3d --config-dir=/root/.venvs/MLPerfStorageV2/lib/python3.10/site-packages/configs/dlio",
+      "stdout": "/root/mlpstorage_test_results/training_unet3d_a100_336acc/training/unet3d/run/20250710_183531/training_run.stdout.log",
+      "stderr": "/root/mlpstorage_test_results/training_unet3d_a100_336acc/training/unet3d/run/20250710_183531/training_run.stderr.log"
+    }
+  ],
+  "run_result_output": "/root/mlpstorage_test_results/training_unet3d_a100_336acc/training/unet3d/run/20250710_183531",
+  "metadata_filename": "training_20250710_183531_metadata.json",
+  "metadata_file_path": "/root/mlpstorage_test_results/training_unet3d_a100_336acc/training/unet3d/run/20250710_183531/training_20250710_183531_metadata.json",
+  "_config_name": "unet3d_a100",
+  "base_command": "dlio_benchmark",
+  "base_path": "/root/.venvs/MLPerfStorageV2/bin",
+  "base_command_path": "/root/.venvs/MLPerfStorageV2/bin/dlio_benchmark",
+  "config_path": "/root/.venvs/MLPerfStorageV2/lib/python3.10/site-packages/configs/dlio",
+  "per_host_mem_kB": null,
+  "total_mem_kB": null,
+  "cluster_information": "<mlpstorage.rules.ClusterInformation object at 0x153bee79cc70>",
+  "config_file": "unet3d_a100.yaml",
+  "params_dict": {
+    "dataset.num_files_train": "1176000",
+    "reader.read_threads": "16",
+    "dataset.num_subfolders_train": "117",
+    "reader.odirect": "true",
+    "dataset.data_folder": "/mnt/ubix_mlperf/unet3d_n1176000/unet3d"
+  },
+  "yaml_params": {
+    "model": {
+      "name": "unet3d",
+      "type": "cnn",
+      "model_size": 499153191
+    },
+    "framework": "pytorch",
+    "workflow": {
+      "generate_data": false,
+      "train": true,
+      "checkpoint": false
+    },
+    "dataset": {
+      "data_folder": "data/unet3d/",
+      "format": "npz",
+      "num_files_train": 168,
+      "num_samples_per_file": 1,
+      "record_length_bytes": 146600628,
+      "record_length_bytes_stdev": 68341808,
+      "record_length_bytes_resize": 2097152
+    },
+    "reader": {
+      "data_loader": "pytorch",
+      "batch_size": 7,
+      "read_threads": 4,
+      "file_shuffle": "seed",
+      "sample_shuffle": "seed"
+    },
+    "train": {
+      "epochs": 5,
+      "computation_time": 0.636
+    },
+    "checkpoint": {
+      "checkpoint_folder": "checkpoints/unet3d",
+      "checkpoint_after_epoch": 5,
+      "epochs_between_checkpoints": 2
+    },
+    "metric": {
+      "au": 0.9
+    }
+  },
+  "combined_params": {
+    "model": {
+      "name": "unet3d",
+      "type": "cnn",
+      "model_size": 499153191
+    },
+    "framework": "pytorch",
+    "workflow": {
+      "generate_data": false,
+      "train": true,
+      "checkpoint": false
+    },
+    "dataset": {
+      "data_folder": "data/unet3d/",
+      "format": "npz",
+      "num_files_train": "1176000",
+      "num_samples_per_file": 1,
+      "record_length_bytes": 146600628,
+      "record_length_bytes_stdev": 68341808,
+      "record_length_bytes_resize": 2097152,
+      "num_subfolders_train": "117"
+    },
+    "reader": {
+      "data_loader": "pytorch",
+      "batch_size": 7,
+      "read_threads": "16",
+      "file_shuffle": "seed",
+      "sample_shuffle": "seed",
+      "odirect": "true"
+    },
+    "train": {
+      "epochs": 5,
+      "computation_time": 0.636
+    },
+    "checkpoint": {
+      "checkpoint_folder": "checkpoints/unet3d",
+      "checkpoint_after_epoch": 5,
+      "epochs_between_checkpoints": 2
+    },
+    "metric": {
+      "au": 0.9
+    }
+  },
+  "executed_command": "mpirun -n 336 -host 10.20.1.1:21,10.20.1.2:21,10.20.1.4:21,10.20.1.5:21,10.20.1.6:21,10.20.1.7:21,10.20.1.8:21,10.20.1.9:21,10.20.1.10:21,10.20.1.11:21,10.20.1.12:21,10.20.1.13:21,10.20.1.14:21,10.20.1.15:21,10.20.1.16:21,10.20.1.17:21 --oversubscribe --allow-run-as-root /root/.venvs/MLPerfStorageV2/bin/dlio_benchmark workload=unet3d_a100 ++hydra.run.dir=/root/mlpstorage_test_results/training_unet3d_a100_336acc/training/unet3d/run/20250710_183531 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=1176000 ++workload.reader.read_threads=16 ++workload.dataset.num_subfolders_train=117 ++workload.reader.odirect=true ++workload.dataset.data_folder=/mnt/ubix_mlperf/unet3d_n1176000/unet3d --config-dir=/root/.venvs/MLPerfStorageV2/lib/python3.10/site-packages/configs/dlio",
+  "benchmark_type": "training"
+}
