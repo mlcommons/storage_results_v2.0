@@ -1,0 +1,56 @@
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1787917728.699897 1820984 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1787917730.663458 1820984 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+[OUTPUT] 2026-08-28T11:48:53.158457 Running DLIO [Training & Checkpointing] with 1 process(es)
+[OUTPUT] 2026-08-28T11:48:55.335192 Model size: 0.000010 GB 
+[OUTPUT] 2026-08-28T11:48:55.335306 Total checkpoint size: 0.000010 GB 
+[OUTPUT] 2026-08-28T11:48:55.335380 Max steps per epoch: 523 = 1 * 3662 / 7 / 1 (samples per file * num files / batch size / comm size)
+[OUTPUT] 2026-08-28T11:48:55.366354 Starting epoch 1: 523 steps expected
+[OUTPUT] 2026-08-28T11:48:55.366571 Starting block 1
+[OUTPUT] 2026-08-28T11:51:48.635473 Ending block 1 - 523 steps completed in 173.27 s
+[OUTPUT] 2026-08-28T11:51:48.641436 Epoch 1 - Block 1 [Training] Accelerator Utilization [AU] (%): 99.1547
+[OUTPUT] 2026-08-28T11:51:48.641618 Epoch 1 - Block 1 [Training] Throughput (samples/second): 21.4237
+[OUTPUT] 2026-08-28T11:51:48.641747 Epoch 1 - Block 1 [Training] Computation time per step (second): 0.3234+/-0.0001 (set value: {'mean': 0.323})
+[OUTPUT] 2026-08-28T11:51:48.643809 Ending epoch 1 - 523 steps completed in 173.28 s
+[OUTPUT] 2026-08-28T11:51:48.658759 Starting epoch 2: 523 steps expected
+[OUTPUT] 2026-08-28T11:51:48.659097 Starting block 1
+[OUTPUT] 2026-08-28T11:54:42.838007 Ending block 1 - 523 steps completed in 174.18 s
+[OUTPUT] 2026-08-28T11:54:42.840246 Epoch 2 - Block 1 [Training] Accelerator Utilization [AU] (%): 99.1845
+[OUTPUT] 2026-08-28T11:54:42.840455 Epoch 2 - Block 1 [Training] Throughput (samples/second): 21.4296
+[OUTPUT] 2026-08-28T11:54:42.840586 Epoch 2 - Block 1 [Training] Computation time per step (second): 0.3234+/-0.0001 (set value: {'mean': 0.323})
+[OUTPUT] 2026-08-28T11:54:42.842458 Ending epoch 2 - 523 steps completed in 174.18 s
+[OUTPUT] 2026-08-28T11:54:42.855498 Starting epoch 3: 523 steps expected
+[OUTPUT] 2026-08-28T11:54:42.855746 Starting block 1
+[OUTPUT] 2026-08-28T11:57:36.739704 Ending block 1 - 523 steps completed in 173.88 s
+[OUTPUT] 2026-08-28T11:57:36.741620 Epoch 3 - Block 1 [Training] Accelerator Utilization [AU] (%): 99.1673
+[OUTPUT] 2026-08-28T11:57:36.741722 Epoch 3 - Block 1 [Training] Throughput (samples/second): 21.4261
+[OUTPUT] 2026-08-28T11:57:36.741761 Epoch 3 - Block 1 [Training] Computation time per step (second): 0.3234+/-0.0001 (set value: {'mean': 0.323})
+[OUTPUT] 2026-08-28T11:57:36.743352 Ending epoch 3 - 523 steps completed in 173.89 s
+[OUTPUT] 2026-08-28T11:57:36.756222 Starting epoch 4: 523 steps expected
+[OUTPUT] 2026-08-28T11:57:36.756461 Starting block 1
+[OUTPUT] 2026-08-28T12:00:30.527560 Ending block 1 - 523 steps completed in 173.77 s
+[OUTPUT] 2026-08-28T12:00:30.529493 Epoch 4 - Block 1 [Training] Accelerator Utilization [AU] (%): 99.1292
+[OUTPUT] 2026-08-28T12:00:30.529645 Epoch 4 - Block 1 [Training] Throughput (samples/second): 21.4178
+[OUTPUT] 2026-08-28T12:00:30.529764 Epoch 4 - Block 1 [Training] Computation time per step (second): 0.3234+/-0.0001 (set value: {'mean': 0.323})
+[OUTPUT] 2026-08-28T12:00:30.532037 Ending epoch 4 - 523 steps completed in 173.78 s
+[OUTPUT] 2026-08-28T12:00:30.544945 Starting epoch 5: 523 steps expected
+[OUTPUT] 2026-08-28T12:00:30.545196 Starting block 1
+[OUTPUT] 2026-08-28T12:03:24.591087 Ending block 1 - 523 steps completed in 174.05 s
+[OUTPUT] 2026-08-28T12:03:24.593126 Epoch 5 - Block 1 [Training] Accelerator Utilization [AU] (%): 99.1181
+[OUTPUT] 2026-08-28T12:03:24.593218 Epoch 5 - Block 1 [Training] Throughput (samples/second): 21.4154
+[OUTPUT] 2026-08-28T12:03:24.593254 Epoch 5 - Block 1 [Training] Computation time per step (second): 0.3234+/-0.0001 (set value: {'mean': 0.323})
+[OUTPUT] 2026-08-28T12:03:24.593546 Starting saving checkpoint 1 after total step 523 for epoch 5
+[OUTPUT] 2026-08-28T12:03:24.598467 Finished saving checkpoint 1 for epoch 5 in 0.0049 s; Throughput: 0.0019 GB/s
+[OUTPUT] 2026-08-28T12:03:24.601239 Ending epoch 5 - 523 steps completed in 174.06 s
+[OUTPUT] 2026-08-28T12:03:24.614588 Saved outputs in /home/ec2-user/mlps_results_1c/training/unet3d/run/20260828_114846
+[OUTPUT] Averaged metric over all steps/epochs
+[METRIC] ==========================================================
+[METRIC] Number of Simulated Accelerators: 1 
+[METRIC] Training Accelerator Utilization [AU] (%): 99.1504 (0.0248)
+[METRIC] Training Throughput (samples/second): 21.4224 (0.0054)
+[METRIC] Training I/O Throughput (MB/second): 2995.0555 (0.7485)
+[METRIC] train_au_meet_expectation: success
+[METRIC] ==========================================================
+
+[OUTPUT] 2026-08-28T12:03:24.625054 outputs saved in RANKID_output.json

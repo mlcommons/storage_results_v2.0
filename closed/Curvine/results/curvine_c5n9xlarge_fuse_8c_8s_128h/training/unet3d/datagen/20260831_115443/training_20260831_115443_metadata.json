@@ -1,0 +1,111 @@
+{
+  "args": {
+    "program": "training",
+    "command": "datagen",
+    "results_dir": "/home/ec2-user/mlps_results_8c",
+    "loops": 1,
+    "config_file": null,
+    "closed": false,
+    "debug": false,
+    "verbose": false,
+    "stream_log_level": "INFO",
+    "allow_invalid_params": false,
+    "what_if": false,
+    "hosts": [
+      "10.157.230.110",
+      "10.157.228.31",
+      "10.157.228.24",
+      "10.157.230.56",
+      "10.157.229.178",
+      "10.157.228.60",
+      "10.157.228.57",
+      "10.157.231.25"
+    ],
+    "model": "unet3d",
+    "exec_type": "mpi",
+    "mpi_bin": "mpirun",
+    "oversubscribe": false,
+    "allow_run_as_root": false,
+    "mpi_params": null,
+    "num_processes": 128,
+    "data_dir": "/curvine-fuse/unet3d_29304_3999GB",
+    "params": [
+      "dataset.num_files_train=29304"
+    ],
+    "dlio_bin_path": null,
+    "num_client_hosts": 8
+  },
+  "debug": null,
+  "run_datetime": "20260831_115443",
+  "run_number": 0,
+  "runtime": 343.3426504135132,
+  "verification": null,
+  "command_output_files": [
+    {
+      "command": "mpirun -n 128 -host 10.157.230.110:16,10.157.228.31:16,10.157.228.24:16,10.157.230.56:16,10.157.229.178:16,10.157.228.60:16,10.157.228.57:16,10.157.231.25:16 /home/ec2-user/miniconda3/envs/mlperf_py310/bin/dlio_benchmark workload=unet3d_datagen ++hydra.run.dir=/home/ec2-user/mlps_results_8c/training/unet3d/datagen/20260831_115443 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=29304 ++workload.dataset.data_folder=/curvine-fuse/unet3d_29304_3999GB/unet3d --config-dir=/home/ec2-user/storage/configs/dlio",
+      "stdout": "/home/ec2-user/mlps_results_8c/training/unet3d/datagen/20260831_115443/training_datagen.stdout.log",
+      "stderr": "/home/ec2-user/mlps_results_8c/training/unet3d/datagen/20260831_115443/training_datagen.stderr.log"
+    }
+  ],
+  "run_result_output": "/home/ec2-user/mlps_results_8c/training/unet3d/datagen/20260831_115443",
+  "metadata_filename": "training_20260831_115443_metadata.json",
+  "metadata_file_path": "/home/ec2-user/mlps_results_8c/training/unet3d/datagen/20260831_115443/training_20260831_115443_metadata.json",
+  "_config_name": "unet3d_datagen",
+  "base_command": "dlio_benchmark",
+  "base_path": "/home/ec2-user/miniconda3/envs/mlperf_py310/bin",
+  "base_command_path": "/home/ec2-user/miniconda3/envs/mlperf_py310/bin/dlio_benchmark",
+  "config_path": "/home/ec2-user/storage/configs/dlio",
+  "per_host_mem_kB": null,
+  "total_mem_kB": null,
+  "config_file": "unet3d_datagen.yaml",
+  "params_dict": {
+    "dataset.num_files_train": "29304",
+    "dataset.data_folder": "/curvine-fuse/unet3d_29304_3999GB/unet3d"
+  },
+  "yaml_params": {
+    "model": {
+      "name": "unet3d",
+      "type": "cnn",
+      "model_size": 499153191
+    },
+    "framework": "pytorch",
+    "workflow": {
+      "generate_data": true,
+      "train": false,
+      "checkpoint": false
+    },
+    "dataset": {
+      "data_folder": "data/unet3d/",
+      "format": "npz",
+      "num_files_train": 168,
+      "num_samples_per_file": 1,
+      "record_length_bytes": 146600628,
+      "record_length_bytes_stdev": 68341808,
+      "record_length_bytes_resize": 2097152
+    }
+  },
+  "combined_params": {
+    "model": {
+      "name": "unet3d",
+      "type": "cnn",
+      "model_size": 499153191
+    },
+    "framework": "pytorch",
+    "workflow": {
+      "generate_data": true,
+      "train": false,
+      "checkpoint": false
+    },
+    "dataset": {
+      "data_folder": "data/unet3d/",
+      "format": "npz",
+      "num_files_train": "29304",
+      "num_samples_per_file": 1,
+      "record_length_bytes": 146600628,
+      "record_length_bytes_stdev": 68341808,
+      "record_length_bytes_resize": 2097152
+    }
+  },
+  "executed_command": "mpirun -n 128 -host 10.157.230.110:16,10.157.228.31:16,10.157.228.24:16,10.157.230.56:16,10.157.229.178:16,10.157.228.60:16,10.157.228.57:16,10.157.231.25:16 /home/ec2-user/miniconda3/envs/mlperf_py310/bin/dlio_benchmark workload=unet3d_datagen ++hydra.run.dir=/home/ec2-user/mlps_results_8c/training/unet3d/datagen/20260831_115443 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=29304 ++workload.dataset.data_folder=/curvine-fuse/unet3d_29304_3999GB/unet3d --config-dir=/home/ec2-user/storage/configs/dlio",
+  "benchmark_type": "training"
+}

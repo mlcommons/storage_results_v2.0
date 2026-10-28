@@ -1,0 +1,4 @@
+- workload=resnet50_h100
+- ++workload.dataset.num_files_train=7485
+- ++workload.reader.read_threads=1
+- ++workload.dataset.data_folder=/curvine-fuse/resnet50_7485_999GB/resnet50

@@ -1,0 +1,407 @@
+[
+  {
+    "run_id": "results/curvine_c5n9xlarge_fuse_2c_2s_32h/training/unet3d\\run\\20260828_135054",
+    "benchmark_type": "training",
+    "model": "unet3d",
+    "command": "run_benchmark",
+    "num_processes": 2,
+    "parameters": {
+      "model": {
+        "name": "unet3d",
+        "type": "cnn",
+        "model_size": 499153191
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": true,
+        "checkpoint": true
+      },
+      "dataset": {
+        "data_folder": "/curvine-fuse/unet3d_7324_999GB/unet3d",
+        "format": "npz",
+        "num_files_train": 7324,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 146600628,
+        "record_length_bytes_stdev": 68341808,
+        "record_length_bytes_resize": 2097152
+      },
+      "reader": {
+        "data_loader": "pytorch",
+        "batch_size": 7,
+        "read_threads": 16,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed"
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.323
+      },
+      "checkpoint": {
+        "checkpoint_folder": "checkpoints/unet3d",
+        "checkpoint_after_epoch": 5,
+        "epochs_between_checkpoints": 2
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 197101002752.0,
+      "total_cores": 72
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 0.0021339769890495637,
+      "save_checkpoint_io_stdev_GB_per_second": 0.0,
+      "save_checkpoint_duration_mean_seconds": 0.004469,
+      "save_checkpoint_duration_stdev_seconds": 0.0,
+      "checkpoint_size_GB": 9.5367431640625e-06,
+      "train_au_percentage": [
+        90.47877695798638,
+        98.8928760943347,
+        98.74582089518643,
+        98.8534372909069,
+        98.78115729359001
+      ],
+      "train_au_mean_percentage": 97.15041370640088,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 3.336220920464638,
+      "train_throughput_samples_per_second": [
+        39.09806969254018,
+        42.733502698558446,
+        42.67027799985124,
+        42.717161482641586,
+        42.68525428398098
+      ],
+      "train_throughput_mean_samples_per_second": 41.98085323151449,
+      "train_throughput_stdev_samples_per_second": 1.4415657700856195,
+      "train_io_mean_MB_per_second": 5869.311759677747,
+      "train_io_stdev_MB_per_second": 201.54423446450753
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "results/curvine_c5n9xlarge_fuse_2c_2s_32h/training/unet3d\\run\\20260828_140559",
+    "benchmark_type": "training",
+    "model": "unet3d",
+    "command": "run_benchmark",
+    "num_processes": 2,
+    "parameters": {
+      "model": {
+        "name": "unet3d",
+        "type": "cnn",
+        "model_size": 499153191
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": true,
+        "checkpoint": true
+      },
+      "dataset": {
+        "data_folder": "/curvine-fuse/unet3d_7324_999GB/unet3d",
+        "format": "npz",
+        "num_files_train": 7324,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 146600628,
+        "record_length_bytes_stdev": 68341808,
+        "record_length_bytes_resize": 2097152
+      },
+      "reader": {
+        "data_loader": "pytorch",
+        "batch_size": 7,
+        "read_threads": 16,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed"
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.323
+      },
+      "checkpoint": {
+        "checkpoint_folder": "checkpoints/unet3d",
+        "checkpoint_after_epoch": 5,
+        "epochs_between_checkpoints": 2
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 197101002752.0,
+      "total_cores": 72
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 0.0018082561934134433,
+      "save_checkpoint_io_stdev_GB_per_second": 0.0,
+      "save_checkpoint_duration_mean_seconds": 0.005274,
+      "save_checkpoint_duration_stdev_seconds": 0.0,
+      "checkpoint_size_GB": 9.5367431640625e-06,
+      "train_au_percentage": [
+        98.75992642205748,
+        98.74839318795355,
+        98.75107421526954,
+        98.90627793326252,
+        98.81207168842823
+      ],
+      "train_au_mean_percentage": 98.79554868939427,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.06000756792225547,
+      "train_throughput_samples_per_second": [
+        42.675987007546674,
+        42.67094019050725,
+        42.671932186969116,
+        42.73917741968211,
+        42.6979165613771
+      ],
+      "train_throughput_mean_samples_per_second": 42.69119067321645,
+      "train_throughput_stdev_samples_per_second": 0.025923303031062432,
+      "train_io_mean_MB_per_second": 5968.623507272028,
+      "train_io_stdev_MB_per_second": 3.624317650020653
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "results/curvine_c5n9xlarge_fuse_2c_2s_32h/training/unet3d\\run\\20260828_142049",
+    "benchmark_type": "training",
+    "model": "unet3d",
+    "command": "run_benchmark",
+    "num_processes": 2,
+    "parameters": {
+      "model": {
+        "name": "unet3d",
+        "type": "cnn",
+        "model_size": 499153191
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": true,
+        "checkpoint": true
+      },
+      "dataset": {
+        "data_folder": "/curvine-fuse/unet3d_7324_999GB/unet3d",
+        "format": "npz",
+        "num_files_train": 7324,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 146600628,
+        "record_length_bytes_stdev": 68341808,
+        "record_length_bytes_resize": 2097152
+      },
+      "reader": {
+        "data_loader": "pytorch",
+        "batch_size": 7,
+        "read_threads": 16,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed"
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.323
+      },
+      "checkpoint": {
+        "checkpoint_folder": "checkpoints/unet3d",
+        "checkpoint_after_epoch": 5,
+        "epochs_between_checkpoints": 2
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 197101002752.0,
+      "total_cores": 72
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 0.0016545355940427654,
+      "save_checkpoint_io_stdev_GB_per_second": 0.0,
+      "save_checkpoint_duration_mean_seconds": 0.005764,
+      "save_checkpoint_duration_stdev_seconds": 0.0,
+      "checkpoint_size_GB": 9.5367431640625e-06,
+      "train_au_percentage": [
+        98.99634060559853,
+        98.77026980979036,
+        98.83193071090574,
+        98.95064908416148,
+        98.86826075341054
+      ],
+      "train_au_mean_percentage": 98.88349019277334,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.08118460874312776,
+      "train_throughput_samples_per_second": [
+        42.778843067625644,
+        42.67989632699613,
+        42.70676082155663,
+        42.75895681054385,
+        42.723339218794905
+      ],
+      "train_throughput_mean_samples_per_second": 42.72955924910343,
+      "train_throughput_stdev_samples_per_second": 0.035547079471189694,
+      "train_io_mean_MB_per_second": 5973.987789232036,
+      "train_io_stdev_MB_per_second": 4.9698106518195315
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "results/curvine_c5n9xlarge_fuse_2c_2s_32h/training/unet3d\\run\\20260828_143539",
+    "benchmark_type": "training",
+    "model": "unet3d",
+    "command": "run_benchmark",
+    "num_processes": 2,
+    "parameters": {
+      "model": {
+        "name": "unet3d",
+        "type": "cnn",
+        "model_size": 499153191
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": true,
+        "checkpoint": true
+      },
+      "dataset": {
+        "data_folder": "/curvine-fuse/unet3d_7324_999GB/unet3d",
+        "format": "npz",
+        "num_files_train": 7324,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 146600628,
+        "record_length_bytes_stdev": 68341808,
+        "record_length_bytes_resize": 2097152
+      },
+      "reader": {
+        "data_loader": "pytorch",
+        "batch_size": 7,
+        "read_threads": 16,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed"
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.323
+      },
+      "checkpoint": {
+        "checkpoint_folder": "checkpoints/unet3d",
+        "checkpoint_after_epoch": 5,
+        "epochs_between_checkpoints": 2
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 197101002752.0,
+      "total_cores": 72
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 0.0016174937523850915,
+      "save_checkpoint_io_stdev_GB_per_second": 0.0,
+      "save_checkpoint_duration_mean_seconds": 0.005896,
+      "save_checkpoint_duration_stdev_seconds": 0.0,
+      "checkpoint_size_GB": 9.5367431640625e-06,
+      "train_au_percentage": [
+        98.81253520801351,
+        98.63953358057537,
+        98.85740843599693,
+        98.95624389798314,
+        98.9184703538204
+      ],
+      "train_au_mean_percentage": 98.83683829527787,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.11033078638613412,
+      "train_throughput_samples_per_second": [
+        42.69881288048726,
+        42.624226744551976,
+        42.71830945541534,
+        42.760882978516506,
+        42.744758489308495
+      ],
+      "train_throughput_mean_samples_per_second": 42.70939810965591,
+      "train_throughput_stdev_samples_per_second": 0.04763752462971232,
+      "train_io_mean_MB_per_second": 5971.169075372285,
+      "train_io_stdev_MB_per_second": 6.660166766244214
+    },
+    "accelerator": "h100"
+  },
+  {
+    "run_id": "results/curvine_c5n9xlarge_fuse_2c_2s_32h/training/unet3d\\run\\20260828_145030",
+    "benchmark_type": "training",
+    "model": "unet3d",
+    "command": "run_benchmark",
+    "num_processes": 2,
+    "parameters": {
+      "model": {
+        "name": "unet3d",
+        "type": "cnn",
+        "model_size": 499153191
+      },
+      "framework": "pytorch",
+      "workflow": {
+        "generate_data": false,
+        "train": true,
+        "checkpoint": true
+      },
+      "dataset": {
+        "data_folder": "/curvine-fuse/unet3d_7324_999GB/unet3d",
+        "format": "npz",
+        "num_files_train": 7324,
+        "num_samples_per_file": 1,
+        "record_length_bytes": 146600628,
+        "record_length_bytes_stdev": 68341808,
+        "record_length_bytes_resize": 2097152
+      },
+      "reader": {
+        "data_loader": "pytorch",
+        "batch_size": 7,
+        "read_threads": 16,
+        "file_shuffle": "seed",
+        "sample_shuffle": "seed"
+      },
+      "train": {
+        "epochs": 5,
+        "computation_time": 0.323
+      },
+      "checkpoint": {
+        "checkpoint_folder": "checkpoints/unet3d",
+        "checkpoint_after_epoch": 5,
+        "epochs_between_checkpoints": 2
+      },
+      "metric": {
+        "au": 0.9
+      }
+    },
+    "system_info": {
+      "total_memory_bytes": 197101002752.0,
+      "total_cores": 72
+    },
+    "metrics": {
+      "save_checkpoint_io_mean_GB_per_second": 0.001800064772378728,
+      "save_checkpoint_io_stdev_GB_per_second": 0.0,
+      "save_checkpoint_duration_mean_seconds": 0.005298,
+      "save_checkpoint_duration_stdev_seconds": 0.0,
+      "checkpoint_size_GB": 9.5367431640625e-06,
+      "train_au_percentage": [
+        98.89123002935943,
+        98.73563363341302,
+        98.96099002050744,
+        98.92198942794931,
+        98.8752040934992
+      ],
+      "train_au_mean_percentage": 98.87700944094567,
+      "train_au_meet_expectation": "success",
+      "train_au_stdev_percentage": 0.07650952926809117,
+      "train_throughput_samples_per_second": [
+        42.73279874657571,
+        42.66542150555363,
+        42.762525241573094,
+        42.74610108699312,
+        42.72529180434772
+      ],
+      "train_throughput_mean_samples_per_second": 42.72642767700866,
+      "train_throughput_stdev_samples_per_second": 0.03302638617115301,
+      "train_io_mean_MB_per_second": 5973.549966474581,
+      "train_io_stdev_MB_per_second": 4.617394402753398
+    },
+    "accelerator": "h100"
+  }
+]
