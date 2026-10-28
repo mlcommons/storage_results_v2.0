@@ -1,0 +1,131 @@
+{
+  "args": {
+    "program": "training",
+    "command": "run",
+    "results_dir": "/home/ec2-user/mlps_results",
+    "loops": 1,
+    "config_file": null,
+    "closed": true,
+    "debug": false,
+    "verbose": false,
+    "stream_log_level": "INFO",
+    "allow_invalid_params": false,
+    "what_if": false,
+    "hosts": [
+      "10.157.230.110",
+      "10.157.228.31"
+    ],
+    "model": "resnet50",
+    "client_host_memory_in_gb": 100,
+    "exec_type": "mpi",
+    "mpi_bin": "mpirun",
+    "oversubscribe": true,
+    "allow_run_as_root": false,
+    "mpi_params": null,
+    "num_accelerators": 32,
+    "accelerator_type": "h100",
+    "num_client_hosts": 2,
+    "data_dir": "/curvine-fuse/resnet50_7485_999GB/resnet50",
+    "params": [
+      "dataset.num_files_train=7485",
+      "reader.read_threads=1"
+    ],
+    "dlio_bin_path": null,
+    "num_processes": 32
+  },
+  "debug": null,
+  "run_datetime": "20260826_154722",
+  "run_number": 0,
+  "runtime": 1006.3007667064667,
+  "verification": "closed",
+  "command_output_files": [
+    {
+      "command": "mpirun -n 32 -host 10.157.230.110:16,10.157.228.31:16 --oversubscribe /home/ec2-user/miniconda3/envs/mlperf_py310/bin/dlio_benchmark workload=resnet50_h100 ++hydra.run.dir=/home/ec2-user/mlps_results/training/resnet50/run/20260826_154722 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=7485 ++workload.reader.read_threads=1 ++workload.dataset.data_folder=/curvine-fuse/resnet50_7485_999GB/resnet50 --config-dir=/home/ec2-user/storage/configs/dlio",
+      "stdout": "/home/ec2-user/mlps_results/training/resnet50/run/20260826_154722/training_run.stdout.log",
+      "stderr": "/home/ec2-user/mlps_results/training/resnet50/run/20260826_154722/training_run.stderr.log"
+    }
+  ],
+  "run_result_output": "/home/ec2-user/mlps_results/training/resnet50/run/20260826_154722",
+  "metadata_filename": "training_20260826_154722_metadata.json",
+  "metadata_file_path": "/home/ec2-user/mlps_results/training/resnet50/run/20260826_154722/training_20260826_154722_metadata.json",
+  "_config_name": "resnet50_h100",
+  "base_command": "dlio_benchmark",
+  "base_path": "/home/ec2-user/miniconda3/envs/mlperf_py310/bin",
+  "base_command_path": "/home/ec2-user/miniconda3/envs/mlperf_py310/bin/dlio_benchmark",
+  "config_path": "/home/ec2-user/storage/configs/dlio",
+  "per_host_mem_kB": null,
+  "total_mem_kB": null,
+  "cluster_information": "<mlpstorage.rules.ClusterInformation object at 0x7f02083c0190>",
+  "config_file": "resnet50_h100.yaml",
+  "params_dict": {
+    "dataset.num_files_train": "7485",
+    "reader.read_threads": "1",
+    "dataset.data_folder": "/curvine-fuse/resnet50_7485_999GB/resnet50"
+  },
+  "yaml_params": {
+    "model": {
+      "name": "resnet50",
+      "type": "cnn"
+    },
+    "framework": "tensorflow",
+    "workflow": {
+      "generate_data": false,
+      "train": true
+    },
+    "dataset": {
+      "num_files_train": 1024,
+      "num_samples_per_file": 1251,
+      "record_length_bytes": 114660.07,
+      "record_length_bytes_resize": 150528,
+      "data_folder": "data/resnet50",
+      "format": "tfrecord"
+    },
+    "train": {
+      "computation_time": 0.224,
+      "epochs": 5
+    },
+    "reader": {
+      "data_loader": "tensorflow",
+      "read_threads": 8,
+      "computation_threads": 8,
+      "batch_size": 400
+    },
+    "metric": {
+      "au": 0.9
+    }
+  },
+  "combined_params": {
+    "model": {
+      "name": "resnet50",
+      "type": "cnn"
+    },
+    "framework": "tensorflow",
+    "workflow": {
+      "generate_data": false,
+      "train": true
+    },
+    "dataset": {
+      "num_files_train": "7485",
+      "num_samples_per_file": 1251,
+      "record_length_bytes": 114660.07,
+      "record_length_bytes_resize": 150528,
+      "data_folder": "data/resnet50",
+      "format": "tfrecord"
+    },
+    "train": {
+      "computation_time": 0.224,
+      "epochs": 5
+    },
+    "reader": {
+      "data_loader": "tensorflow",
+      "read_threads": "1",
+      "computation_threads": 8,
+      "batch_size": 400
+    },
+    "metric": {
+      "au": 0.9
+    }
+  },
+  "executed_command": "mpirun -n 32 -host 10.157.230.110:16,10.157.228.31:16 --oversubscribe /home/ec2-user/miniconda3/envs/mlperf_py310/bin/dlio_benchmark workload=resnet50_h100 ++hydra.run.dir=/home/ec2-user/mlps_results/training/resnet50/run/20260826_154722 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=7485 ++workload.reader.read_threads=1 ++workload.dataset.data_folder=/curvine-fuse/resnet50_7485_999GB/resnet50 --config-dir=/home/ec2-user/storage/configs/dlio",
+  "benchmark_type": "training"
+}

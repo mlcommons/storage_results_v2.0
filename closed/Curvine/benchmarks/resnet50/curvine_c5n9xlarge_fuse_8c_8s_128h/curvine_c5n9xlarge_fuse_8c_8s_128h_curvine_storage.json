@@ -1,0 +1,11 @@
+{
+  "submitter": "Curvine",
+  "benchmark": "resnet50",
+  "implementation": "curvine_storage",
+  "system_id": "curvine_c5n9xlarge_fuse_8c_8s_128h",
+  "framework": "MLPerf Storage v2.0 reference (storage.git tag v2.0)",
+  "storage_backend": "Curvine v0.2.0 (commit 77320b86) FUSE 3 with AWS S3 UFS",
+  "description": "This implementation uses the MLCommons Storage v2.0 reference code with Curvine v0.2.0 (commit 77320b86) mounted through the Curvine FUSE 3 client; OpenDAL-S3 is used as the underlying file system. System config: 8 clients, 8 storage nodes, 128 simulated H100 accelerators. In this round the Curvine worker service was limited to 16 vCPU / 123 GiB per worker node.",
+  "run_command": "mlpstorage training run --hosts 10.157.230.110,10.157.228.31,10.157.228.24,10.157.230.56,10.157.229.178,10.157.228.60,10.157.228.57,10.157.231.25 --num-client-hosts 8 --client-host-memory-in-gb 100 --num-accelerators 128 --accelerator-type h100 --model resnet50 --data-dir /curvine-fuse/resnet50_29942_3999GB/resnet50 --results-dir /home/ec2-user/mlps_results_8c --param dataset.num_files_train=29942 --param reader.read_threads=1 --allow-run-as-root --oversubscribe",
+  "timestamp": "2026-09-03T12:33:11"
+}
