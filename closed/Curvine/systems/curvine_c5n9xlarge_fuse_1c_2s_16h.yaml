@@ -1,0 +1,127 @@
+System:
+  name: curvine_c5n9xlarge_fuse_1c_2s_16h
+  description: "Curvine v0.2.0 (commit 77320b86) distributed file system, FUSE 3 client, OpenDAL-S3 UFS. 1 AWS c5n.9xlarge FUSE client and 2 AWS i3en.12xlarge Curvine worker nodes; the Curvine master is co-located on a worker node. In this round the Curvine worker service was limited to 16 vCPU / 123 GiB. 16 simulated NVIDIA H100 accelerators (DLIO). MLPerf Storage v2.0 closed division, training benchmark."
+  storage_location: remote
+  client_software: proprietary
+  storage_interface: file
+  required_rack_units: N/A
+  shared_capabilities:
+    multi_host_support: True
+    simultaneous_write_support: True
+    simultaneous_read__support: True
+  max_sequential_read: N/A
+  max_sequential_write: N/A
+  use_local_storage: False
+  num_clients_with_integrated_storage: 0
+  system_architecture: shared file (Curvine FUSE over AWS S3 with worker NVMe cache)
+
+PowerRequirements:
+  dlio_client:
+    quantity: 1
+    psu1_nameplate_power: N/A
+    psu2_nameplate_power: N/A
+    psu3_nameplate_power: N/A
+    design_power: N/A
+    num_active_psus: N/A
+    num_passive_psus: N/A
+  storage_data_node:
+    quantity: 2
+    psu1_nameplate_power: N/A
+    psu2_nameplate_power: N/A
+    psu3_nameplate_power: N/A
+    design_power: N/A
+    num_active_psus: N/A
+    num_passive_psus: N/A
+
+Nodes:
+  dlio_client:
+    quantity: 1
+    hardware:
+      model: AWS EC2 c5n.9xlarge
+      rack_units: N/A
+      power_supplies: N/A
+      psu_configuration: N/A
+      psu_rating: N/A
+      memory_capacity: 96 GiB
+      memory_configuration: N/A
+      cpu_qty: 1
+      cpu_model: Intel Xeon Platinum 8124M @ 3.00GHz
+      cpu_cores: 18
+    networking:
+      data:
+        model: AWS Elastic Network Adapter (ENA)
+        speed: 50Gbps
+        qty: 1
+    operating_system:
+      name: Rocky Linux
+      version: "9"
+      release_date: N/A
+      kernel_version: "5.14.x"
+      cpu_architecture: x86_64
+    tuning:
+      mpi_configuration:
+        environment_variables: ["N/A"]
+        version: Open MPI 4.1+
+        launch_flags: ["--oversubscribe", "--allow-run-as-root (cosmoflow and 8c runs only)"]
+      sysctl_parameters:
+        - fs.file-max=1048576
+        - net.core.rmem_max=134217728
+        - net.core.somaxconn=65535
+        - vm.max_map_count=2621440
+        - vm.swappiness=1
+      fuse_configuration:
+        mount_point: /curvine-fuse
+        direct_io: true
+        attr_timeout_ms: 86400000
+        entry_timeout_ms: 86400000
+        node_cache_ttl: 24h
+        enable_meta_cache: true
+        meta_cache_timeout: 24h
+        max_readahead_kb: 1024
+        read_chunk_size: 1m
+        read_chunk_num: 16
+        client_storage_type: MEM
+  storage_data_node:
+    quantity: 2
+    hardware:
+      model: AWS EC2 i3en.12xlarge
+      rack_units: N/A
+      power_supplies: N/A
+      psu_configuration: N/A
+      psu_rating: N/A
+      memory_capacity: 384 GiB
+      memory_configuration: N/A
+      cpu_qty: 2
+      cpu_model: Intel Xeon Platinum 8175M @ 2.50GHz
+      cpu_cores: 24
+    networking:
+      data:
+        model: AWS Elastic Network Adapter (ENA)
+        speed: 50Gbps
+        qty: 1
+    operating_system:
+      name: Rocky Linux
+      version: "9"
+      release_date: N/A
+      kernel_version: "5.14.x"
+      cpu_architecture: x86_64
+    tuning:
+      mpi_configuration:
+        environment_variables: ["N/A"]
+        version: "N/A"
+      sysctl_parameters:
+        - fs.file-max=1048576
+        - net.core.rmem_max=134217728
+        - net.core.somaxconn=65535
+        - vm.max_map_count=2621440
+        - vm.swappiness=1
+
+Notes:
+  - "Storage software: Curvine v0.2.0 (commit 77320b86), FUSE 3 client mounted on each DLIO client, OpenDAL-S3 as the underlying file system (UFS). Data are stored on the local NVMe devices of the i3en.12xlarge worker nodes; the Curvine master is co-located on one worker node."
+  - "In this round the Curvine worker service was limited to 16 vCPU / 123 GiB per node, whereas a full i3en.12xlarge provides 48 vCPU / 384 GiB; this is the main difference to the Alluxio reference configuration."
+  - "Simulated H100 accelerator counts: 16 (resnet50), 1 (unet3d), 5 (cosmoflow)."
+  - "Client CPU, core count and memory are taken from the run artifacts (summary.json): Intel Xeon Platinum 8124M, 18 cores / 36 threads, 91.78 GiB available out of 96 GiB."
+  - "OS release, kernel and MPI version are the values declared at test time; they were not captured from the run hosts."
+  - "Accelerators are simulated by the MLPerf Storage reference benchmark (DLIO); no physical GPU was used."
+  - "Datagen was executed once per dataset before the measured runs; five consecutive runs were measured per model."
+  - "AWS does not publish per-instance power data, therefore the power fields are N/A."

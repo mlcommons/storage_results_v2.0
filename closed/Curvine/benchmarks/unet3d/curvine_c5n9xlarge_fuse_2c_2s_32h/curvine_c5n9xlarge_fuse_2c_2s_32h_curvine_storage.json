@@ -1,0 +1,11 @@
+{
+  "submitter": "Curvine",
+  "benchmark": "unet3d",
+  "implementation": "curvine_storage",
+  "system_id": "curvine_c5n9xlarge_fuse_2c_2s_32h",
+  "framework": "MLPerf Storage v2.0 reference (storage.git tag v2.0)",
+  "storage_backend": "Curvine v0.2.0 (commit 77320b86) FUSE 3 with AWS S3 UFS",
+  "description": "This implementation uses the MLCommons Storage v2.0 reference code with Curvine v0.2.0 (commit 77320b86) mounted through the Curvine FUSE 3 client; OpenDAL-S3 is used as the underlying file system. System config: 2 clients, 2 storage nodes, 32 simulated H100 accelerators. In this round the Curvine worker service was limited to 16 vCPU / 123 GiB per worker node.",
+  "run_command": "mlpstorage training run --hosts 10.157.230.110,10.157.228.31 --num-client-hosts 2 --client-host-memory-in-gb 100 --num-accelerators 2 --accelerator-type h100 --model unet3d --data-dir /curvine-fuse/unet3d_7324_999GB/unet3d --results-dir /home/ec2-user/mlps_results_2c --param dataset.num_files_train=7324 --param reader.read_threads=16 --oversubscribe",
+  "timestamp": "2026-08-28T13:51:02"
+}

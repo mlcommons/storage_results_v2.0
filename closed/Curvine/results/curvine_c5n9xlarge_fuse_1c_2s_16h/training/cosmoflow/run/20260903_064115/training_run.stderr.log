@@ -1,0 +1,68 @@
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1788417679.893450 1212891 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1788417679.893463 1212931 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1788417679.893450 1212972 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1788417679.893449 1212853 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1788417679.893475 1212854 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1788417681.355164 1212853 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1788417681.355362 1212931 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1788417681.355365 1212854 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1788417681.361523 1212891 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1788417681.361721 1212972 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+[OUTPUT] 2026-09-03T06:41:21.762971 Running DLIO [Training] with 5 process(es)
+[OUTPUT] 2026-09-03T07:03:55.074847 Max steps per epoch: 37961 = 1 * 189808 / 1 / 5 (samples per file * num files / batch size / comm size)
+[OUTPUT] 2026-09-03T07:03:56.428816 Starting epoch 1: 37961 steps expected
+[OUTPUT] 2026-09-03T07:03:56.429069 Starting block 1
+[OUTPUT] 2026-09-03T07:06:57.621189 Ending block 1 - 37961 steps completed in 181.19 s
+[OUTPUT] 2026-09-03T07:06:57.625576 Epoch 1 - Block 1 [Training] Accelerator Utilization [AU] (%): 75.1990
+[OUTPUT] 2026-09-03T07:06:57.625729 Epoch 1 - Block 1 [Training] Throughput (samples/second): 1047.8159
+[OUTPUT] 2026-09-03T07:06:57.625806 Epoch 1 - Block 1 [Training] Computation time per step (second): 0.0036+/-0.0008 (set value: {'mean': 0.0035})
+[OUTPUT] 2026-09-03T07:06:57.641727 Ending epoch 1 - 37961 steps completed in 181.21 s
+[OUTPUT] 2026-09-03T07:06:57.783801 Starting epoch 2: 37961 steps expected
+[OUTPUT] 2026-09-03T07:06:57.784098 Starting block 1
+[OUTPUT] 2026-09-03T07:09:59.072238 Ending block 1 - 37961 steps completed in 181.29 s
+[OUTPUT] 2026-09-03T07:09:59.074637 Epoch 2 - Block 1 [Training] Accelerator Utilization [AU] (%): 75.0432
+[OUTPUT] 2026-09-03T07:09:59.074729 Epoch 2 - Block 1 [Training] Throughput (samples/second): 1047.2167
+[OUTPUT] 2026-09-03T07:09:59.074794 Epoch 2 - Block 1 [Training] Computation time per step (second): 0.0036+/-0.0000 (set value: {'mean': 0.0035})
+[OUTPUT] 2026-09-03T07:09:59.091995 Ending epoch 2 - 37961 steps completed in 181.31 s
+[OUTPUT] 2026-09-03T07:09:59.240273 Starting epoch 3: 37961 steps expected
+[OUTPUT] 2026-09-03T07:09:59.240540 Starting block 1
+[OUTPUT] 2026-09-03T07:13:00.972191 Ending block 1 - 37961 steps completed in 181.73 s
+[OUTPUT] 2026-09-03T07:13:00.973961 Epoch 3 - Block 1 [Training] Accelerator Utilization [AU] (%): 74.8527
+[OUTPUT] 2026-09-03T07:13:00.974026 Epoch 3 - Block 1 [Training] Throughput (samples/second): 1044.6358
+[OUTPUT] 2026-09-03T07:13:00.974061 Epoch 3 - Block 1 [Training] Computation time per step (second): 0.0036+/-0.0000 (set value: {'mean': 0.0035})
+[OUTPUT] 2026-09-03T07:13:00.994342 Ending epoch 3 - 37961 steps completed in 181.75 s
+[OUTPUT] 2026-09-03T07:13:01.143878 Starting epoch 4: 37961 steps expected
+[OUTPUT] 2026-09-03T07:13:01.144167 Starting block 1
+[OUTPUT] 2026-09-03T07:16:02.803265 Ending block 1 - 37961 steps completed in 181.66 s
+[OUTPUT] 2026-09-03T07:16:02.805412 Epoch 4 - Block 1 [Training] Accelerator Utilization [AU] (%): 74.8869
+[OUTPUT] 2026-09-03T07:16:02.805504 Epoch 4 - Block 1 [Training] Throughput (samples/second): 1045.0593
+[OUTPUT] 2026-09-03T07:16:02.805588 Epoch 4 - Block 1 [Training] Computation time per step (second): 0.0036+/-0.0000 (set value: {'mean': 0.0035})
+[OUTPUT] 2026-09-03T07:16:02.827936 Ending epoch 4 - 37961 steps completed in 181.68 s
+[OUTPUT] 2026-09-03T07:16:03.003534 Starting epoch 5: 37961 steps expected
+[OUTPUT] 2026-09-03T07:16:03.003803 Starting block 1
+[OUTPUT] 2026-09-03T07:19:04.428488 Ending block 1 - 37961 steps completed in 181.42 s
+[OUTPUT] 2026-09-03T07:19:04.430706 Epoch 5 - Block 1 [Training] Accelerator Utilization [AU] (%): 74.9907
+[OUTPUT] 2026-09-03T07:19:04.430791 Epoch 5 - Block 1 [Training] Throughput (samples/second): 1046.4079
+[OUTPUT] 2026-09-03T07:19:04.430836 Epoch 5 - Block 1 [Training] Computation time per step (second): 0.0036+/-0.0000 (set value: {'mean': 0.0035})
+[OUTPUT] 2026-09-03T07:19:04.449361 Ending epoch 5 - 37961 steps completed in 181.45 s
+[OUTPUT] 2026-09-03T07:19:04.597257 Saved outputs in /home/ec2-user/mlps_results_1c/training/cosmoflow/run/20260903_064115
+[OUTPUT] Averaged metric over all steps/epochs
+[METRIC] ==========================================================
+[METRIC] Number of Simulated Accelerators: 5 
+[METRIC] Training Accelerator Utilization [AU] (%): 74.9895 (0.1140)
+[METRIC] Training Throughput (samples/second): 1046.2178 (1.2173)
+[METRIC] Training I/O Throughput (MB/second): 2822.1248 (3.2836)
+[METRIC] train_au_meet_expectation: success
+[METRIC] ==========================================================
+
+[OUTPUT] 2026-09-03T07:19:05.250281 outputs saved in RANKID_output.json

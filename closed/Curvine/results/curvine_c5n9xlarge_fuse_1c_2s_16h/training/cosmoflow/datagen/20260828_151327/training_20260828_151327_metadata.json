@@ -1,0 +1,102 @@
+{
+  "args": {
+    "program": "training",
+    "command": "datagen",
+    "results_dir": "/home/ec2-user/mlps_results_1c",
+    "loops": 1,
+    "config_file": null,
+    "closed": false,
+    "debug": false,
+    "verbose": false,
+    "stream_log_level": "INFO",
+    "allow_invalid_params": false,
+    "what_if": false,
+    "hosts": [
+      "10.157.230.110",
+      "10.157.228.31"
+    ],
+    "model": "cosmoflow",
+    "exec_type": "mpi",
+    "mpi_bin": "mpirun",
+    "oversubscribe": false,
+    "allow_run_as_root": false,
+    "mpi_params": null,
+    "num_processes": 64,
+    "data_dir": "/curvine-fuse/cosmoflow_189808_500GB",
+    "params": [
+      "dataset.num_files_train=189808",
+      "dataset.num_subfolders_train=19"
+    ],
+    "dlio_bin_path": null,
+    "num_client_hosts": 2
+  },
+  "debug": null,
+  "run_datetime": "20260828_151327",
+  "run_number": 0,
+  "runtime": 17009.873204231262,
+  "verification": null,
+  "command_output_files": [
+    {
+      "command": "mpirun -n 64 -host 10.157.230.110:32,10.157.228.31:32 /home/ec2-user/miniconda3/envs/mlperf_py310/bin/dlio_benchmark workload=cosmoflow_datagen ++hydra.run.dir=/home/ec2-user/mlps_results_1c/training/cosmoflow/datagen/20260828_151327 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=189808 ++workload.dataset.num_subfolders_train=19 ++workload.dataset.data_folder=/curvine-fuse/cosmoflow_189808_500GB/cosmoflow --config-dir=/home/ec2-user/storage/configs/dlio",
+      "stdout": "/home/ec2-user/mlps_results_1c/training/cosmoflow/datagen/20260828_151327/training_datagen.stdout.log",
+      "stderr": "/home/ec2-user/mlps_results_1c/training/cosmoflow/datagen/20260828_151327/training_datagen.stderr.log"
+    }
+  ],
+  "run_result_output": "/home/ec2-user/mlps_results_1c/training/cosmoflow/datagen/20260828_151327",
+  "metadata_filename": "training_20260828_151327_metadata.json",
+  "metadata_file_path": "/home/ec2-user/mlps_results_1c/training/cosmoflow/datagen/20260828_151327/training_20260828_151327_metadata.json",
+  "_config_name": "cosmoflow_datagen",
+  "base_command": "dlio_benchmark",
+  "base_path": "/home/ec2-user/miniconda3/envs/mlperf_py310/bin",
+  "base_command_path": "/home/ec2-user/miniconda3/envs/mlperf_py310/bin/dlio_benchmark",
+  "config_path": "/home/ec2-user/storage/configs/dlio",
+  "per_host_mem_kB": null,
+  "total_mem_kB": null,
+  "config_file": "cosmoflow_datagen.yaml",
+  "params_dict": {
+    "dataset.num_files_train": "189808",
+    "dataset.num_subfolders_train": "19",
+    "dataset.data_folder": "/curvine-fuse/cosmoflow_189808_500GB/cosmoflow"
+  },
+  "yaml_params": {
+    "model": {
+      "name": "cosmoflow"
+    },
+    "framework": "tensorflow",
+    "workflow": {
+      "generate_data": true,
+      "train": false,
+      "checkpoint": false
+    },
+    "dataset": {
+      "data_folder": "data/cosmoflow",
+      "num_files_train": 524288,
+      "num_samples_per_file": 1,
+      "record_length_bytes": 2828486,
+      "record_length_bytes_stdev": 71311,
+      "format": "tfrecord"
+    }
+  },
+  "combined_params": {
+    "model": {
+      "name": "cosmoflow"
+    },
+    "framework": "tensorflow",
+    "workflow": {
+      "generate_data": true,
+      "train": false,
+      "checkpoint": false
+    },
+    "dataset": {
+      "data_folder": "data/cosmoflow",
+      "num_files_train": "189808",
+      "num_samples_per_file": 1,
+      "record_length_bytes": 2828486,
+      "record_length_bytes_stdev": 71311,
+      "format": "tfrecord",
+      "num_subfolders_train": "19"
+    }
+  },
+  "executed_command": "mpirun -n 64 -host 10.157.230.110:32,10.157.228.31:32 /home/ec2-user/miniconda3/envs/mlperf_py310/bin/dlio_benchmark workload=cosmoflow_datagen ++hydra.run.dir=/home/ec2-user/mlps_results_1c/training/cosmoflow/datagen/20260828_151327 ++hydra.output_subdir=dlio_config ++workload.dataset.num_files_train=189808 ++workload.dataset.num_subfolders_train=19 ++workload.dataset.data_folder=/curvine-fuse/cosmoflow_189808_500GB/cosmoflow --config-dir=/home/ec2-user/storage/configs/dlio",
+  "benchmark_type": "training"
+}

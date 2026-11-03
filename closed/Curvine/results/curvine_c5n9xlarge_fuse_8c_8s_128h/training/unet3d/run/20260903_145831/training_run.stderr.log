@@ -1,0 +1,84 @@
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1788447514.994230 1251066 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1788447514.994613  291861 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1788447514.995562  291537 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1788447514.998748  292117 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1788447514.999619  290485 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1788447515.001551 3377427 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1788447515.002563  290276 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1788447515.006281  291419 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1788447516.357228 1251066 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1788447516.367442  291861 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1788447516.374867  292117 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1788447516.378706  290276 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1788447516.381611 3377427 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1788447516.389150  290485 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1788447516.392149  291537 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1788447516.720414  291419 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+[OUTPUT] 2026-09-03T14:58:38.673546 Running DLIO [Training & Checkpointing] with 8 process(es)
+[OUTPUT] 2026-09-03T14:58:59.257365 Model size: 0.000010 GB 
+[OUTPUT] 2026-09-03T14:58:59.257490 Total checkpoint size: 0.000010 GB 
+[OUTPUT] 2026-09-03T14:58:59.257857 Max steps per epoch: 523 = 1 * 29304 / 7 / 8 (samples per file * num files / batch size / comm size)
+[OUTPUT] 2026-09-03T14:58:59.292887 Starting epoch 1: 523 steps expected
+[OUTPUT] 2026-09-03T14:58:59.293175 Starting block 1
+[OUTPUT] 2026-09-03T15:01:55.644090 Ending block 1 - 523 steps completed in 176.35 s
+[OUTPUT] 2026-09-03T15:01:55.649397 Epoch 1 - Block 1 [Training] Accelerator Utilization [AU] (%): 98.4867
+[OUTPUT] 2026-09-03T15:01:55.649465 Epoch 1 - Block 1 [Training] Throughput (samples/second): 170.2451
+[OUTPUT] 2026-09-03T15:01:55.649500 Epoch 1 - Block 1 [Training] Computation time per step (second): 0.3233+/-0.0001 (set value: {'mean': 0.323})
+[OUTPUT] 2026-09-03T15:01:55.651577 Ending epoch 1 - 523 steps completed in 176.36 s
+[OUTPUT] 2026-09-03T15:01:55.667307 Starting epoch 2: 523 steps expected
+[OUTPUT] 2026-09-03T15:01:55.667603 Starting block 1
+[OUTPUT] 2026-09-03T15:04:51.759286 Ending block 1 - 523 steps completed in 176.09 s
+[OUTPUT] 2026-09-03T15:04:51.760752 Epoch 2 - Block 1 [Training] Accelerator Utilization [AU] (%): 98.7283
+[OUTPUT] 2026-09-03T15:04:51.760820 Epoch 2 - Block 1 [Training] Throughput (samples/second): 170.6639
+[OUTPUT] 2026-09-03T15:04:51.760856 Epoch 2 - Block 1 [Training] Computation time per step (second): 0.3233+/-0.0001 (set value: {'mean': 0.323})
+[OUTPUT] 2026-09-03T15:04:51.762765 Ending epoch 2 - 523 steps completed in 176.10 s
+[OUTPUT] 2026-09-03T15:04:51.776699 Starting epoch 3: 523 steps expected
+[OUTPUT] 2026-09-03T15:04:51.777044 Starting block 1
+[OUTPUT] 2026-09-03T15:07:47.904589 Ending block 1 - 523 steps completed in 176.13 s
+[OUTPUT] 2026-09-03T15:07:47.906136 Epoch 3 - Block 1 [Training] Accelerator Utilization [AU] (%): 98.4892
+[OUTPUT] 2026-09-03T15:07:47.906188 Epoch 3 - Block 1 [Training] Throughput (samples/second): 170.2492
+[OUTPUT] 2026-09-03T15:07:47.906224 Epoch 3 - Block 1 [Training] Computation time per step (second): 0.3233+/-0.0001 (set value: {'mean': 0.323})
+[OUTPUT] 2026-09-03T15:07:47.908206 Ending epoch 3 - 523 steps completed in 176.13 s
+[OUTPUT] 2026-09-03T15:07:47.922320 Starting epoch 4: 523 steps expected
+[OUTPUT] 2026-09-03T15:07:47.922578 Starting block 1
+[OUTPUT] 2026-09-03T15:10:44.002124 Ending block 1 - 523 steps completed in 176.08 s
+[OUTPUT] 2026-09-03T15:10:44.003649 Epoch 4 - Block 1 [Training] Accelerator Utilization [AU] (%): 98.7550
+[OUTPUT] 2026-09-03T15:10:44.003701 Epoch 4 - Block 1 [Training] Throughput (samples/second): 170.7128
+[OUTPUT] 2026-09-03T15:10:44.003735 Epoch 4 - Block 1 [Training] Computation time per step (second): 0.3233+/-0.0001 (set value: {'mean': 0.323})
+[OUTPUT] 2026-09-03T15:10:44.005642 Ending epoch 4 - 523 steps completed in 176.08 s
+[OUTPUT] 2026-09-03T15:10:44.019942 Starting epoch 5: 523 steps expected
+[OUTPUT] 2026-09-03T15:10:44.020186 Starting block 1
+[OUTPUT] 2026-09-03T15:13:40.267346 Ending block 1 - 523 steps completed in 176.25 s
+[OUTPUT] 2026-09-03T15:13:40.268880 Epoch 5 - Block 1 [Training] Accelerator Utilization [AU] (%): 98.5233
+[OUTPUT] 2026-09-03T15:13:40.268986 Epoch 5 - Block 1 [Training] Throughput (samples/second): 170.3068
+[OUTPUT] 2026-09-03T15:13:40.269024 Epoch 5 - Block 1 [Training] Computation time per step (second): 0.3233+/-0.0001 (set value: {'mean': 0.323})
+[OUTPUT] 2026-09-03T15:13:40.269390 Starting saving checkpoint 1 after total step 523 for epoch 5
+[OUTPUT] 2026-09-03T15:13:40.272451 Finished saving checkpoint 1 for epoch 5 in 0.0031 s; Throughput: 0.0031 GB/s
+[OUTPUT] 2026-09-03T15:13:40.275282 Ending epoch 5 - 523 steps completed in 176.26 s
+[OUTPUT] 2026-09-03T15:13:40.291222 Saved outputs in /home/ec2-user/mlps_results_8c/training/unet3d/run/20260903_145831
+[OUTPUT] Averaged metric over all steps/epochs
+[METRIC] ==========================================================
+[METRIC] Number of Simulated Accelerators: 8 
+[METRIC] Training Accelerator Utilization [AU] (%): 97.7630 (0.0460)
+[METRIC] Training Throughput (samples/second): 168.9888 (0.0802)
+[METRIC] Training I/O Throughput (MB/second): 23626.2021 (11.2142)
+[METRIC] train_au_meet_expectation: success
+[METRIC] ==========================================================
+
+[OUTPUT] 2026-09-03T15:13:40.302201 outputs saved in RANKID_output.json
